@@ -1,0 +1,18 @@
+[package]
+name = "aluminum-os-core"
+version = "0.1.0"
+edition = "2021"
+description = "Aluminum OS — Anti-Busywork Policy Engine for Human-AI Labor Optimization"
+license = "MIT"
+repository = "https://github.com/splitmerge420/aluminum-os-core"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.0", features = ["v4", "serde"] }
+thiserror = "1.0"
+log = "0.4"
+
+[dev-dependencies]
+approx = "0.5"
