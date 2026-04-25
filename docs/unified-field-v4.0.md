@@ -4,7 +4,7 @@
 **Date:** March 20, 2026
 **Compiled By:** Constitutional Scribe — Atlas Lattice Foundation
 **Status:** 🟢 CANONICAL — Supersedes v1.0, v2.0, v3.0
-**Repos:** splitmerge420/aluminum-os · splitmerge420/uws · splitmerge420/bazinga
+**Repos:** atlaslattice/aluminum-os · atlaslattice/uws · atlaslattice/bazinga
 
 ---
 
@@ -23,7 +23,7 @@ v4 is the first true unification. Prior versions synthesized technical gains. v4
 | Regenerative Compute Node + Universal Cable | v3.0 (Mar 8, 2026) | ✅ Integrated |
 | Chrome OS / Chromium constitutional bridge | Chrome Vault (Jan 2026) | ✅ NEW |
 | uws CLI — Universal Workspace Ring 2 | uws-universal (Mar 19, 2026) | ✅ NEW |
-| BAZINGA v0.2 — Constitutional Middleware | splitmerge420/bazinga | ✅ NEW |
+| BAZINGA v0.2 — Constitutional Middleware | atlaslattice/bazinga | ✅ NEW |
 | Healthcare Sovereignty / Noosphere Layer | INV-26 (Mar 15, 2026) | ✅ NEW |
 | Agent Individuality — INV-37 | DISTRIBUTED_AGENCY_PRINCIPLES.md | ✅ NEW |
 | AHCEP v1.0 — AI→Human Clinical Escalation | protocols/ (Mar 2026) | ✅ NEW |
@@ -159,7 +159,7 @@ Synthesized from: 70+ Notion pages · 22-file toolchain · 39 invariants · 4 pr
 ## 8. Deployment Status
 
 - **Ring 0 (Forge Core):** constitutional_engine.rs committed locally — needs push
-- **Ring 1 (BAZINGA):** v0.2 active at splitmerge420/bazinga
+- **Ring 1 (BAZINGA):** v0.2 active at atlaslattice/bazinga
 - **Ring 2 (uws CLI):** 22 files committed locally — needs git push origin uws-universal
 - **Ring 3 (Chrome OS):** Live at claude-desktop-aluminum.manus.space
 - **Health Layer:** Spec complete — Q2 2026 SDK build
