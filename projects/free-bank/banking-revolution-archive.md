@@ -47,7 +47,7 @@ Complete multi-angle attack on traditional banking system created autonomously. 
 **This is not a pitch. This is alignment.**
 ## Archive Locations
 **Google Drive:** [https://drive.google.com/open?id=1f8Hx2xygr0y2iTXAZudC3yY5E8hGkl5l](https://drive.google.com/open?id=1f8Hx2xygr0y2iTXAZudC3yY5E8hGkl5l)
-**GitHub:** [https://github.com/splitmerge420/banking-revolution-archive](https://github.com/splitmerge420/banking-revolution-archive) (private)
+**GitHub:** [https://github.com/atlaslattice/banking-revolution-archive](https://github.com/atlaslattice/banking-revolution-archive) (private)
 **Local:** /home/ubuntu/banking_revolution_archive/
 ## Impact Projections
 **Economic Impact:**
