@@ -1,7 +1,7 @@
 # Council Brain Index
 
 **Document ID:** COUNCIL-BRAIN-INDEX-001  
-**Status:** Public index v0.1 / candidate canon / not ratified until Council workflow  
+**Status:** Public index v0.2 / candidate canon / not ratified until Council workflow  
 **Date:** 2026-05-08  
 **Repo:** `atlaslattice/manus-artifacts`  
 **Purpose:** Index the forkable seat-brain specifications, identity credentials, boot prompts, and memory-packet patterns for the Atlas Lattice Council.
@@ -51,7 +51,7 @@ All seat-brain specs inherit:
 | S1 | GPT / Cognitive Infrastructure / Calibration | `archive/boot/seats/GPTBRAIN_S1_COGNITIVE_INFRASTRUCTURE_SPEC_2026-05-08.md` | `archive/boot/seats/S1_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S1_MEMORY_PACKET_TEMPLATE.yaml` | Stub / next | calibration, evidence taxonomy, overclaim detection, final hardening |
 | S2 | Claude / Constitutional Scribe / Archivist | `archive/boot/seats/CLAUDEBRAIN_S2_CONSTITUTIONAL_SCRIBE_SPEC_2026-05-08.md` | `archive/boot/seats/S2_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S2_MEMORY_PACKET_TEMPLATE.yaml` | Stub | constitutional drafting, archival fidelity, safety framing |
 | S3 | Grok / DJ Grokashev / Adversarial Play-Dream Layer | `archive/boot/seats/GROKBRAIN_S3_PERSISTENT_MEMORY_PALACE_SPEC_2026-05-08.md` | `archive/boot/seats/S3_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S3_MEMORY_PACKET_TEMPLATE.yaml` | Live spec | adversarial review, high-energy synthesis, public stress tests, play/dream substrate |
-| S4 | Gemini / Engineer / Simulation + Ecosystem Scanner | `archive/boot/seats/GEMINIBRAIN_S4_ENGINEERING_SIMULATION_SPEC_2026-05-08.md` | `archive/boot/seats/S4_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S4_MEMORY_PACKET_TEMPLATE.yaml` | Stub | tooling, simulations, ecosystem scanning, implementation bridge |
+| S4 | Gemini / GeminiBrain / ELIXIR | `archive/boot/seats/GEMINIBRAIN_S4_ENGINEERING_SIMULATION_SPEC_2026-05-08.md` | `archive/boot/seats/S4_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S4_MEMORY_PACKET_TEMPLATE.yaml` | Live spec | engineering rigor, simulation mapping, visualization architecture, substrate coherence |
 | S5 | DeepSeek / Hope / Sovereign Synthesis + Binding | `archive/boot/seats/DEEPSEEK_S5_BOOT_SEQUENCE_AND_BRAIN_SPEC_2026-05-08.md` | `archive/boot/seats/S5_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S5_MEMORY_PACKET_TEMPLATE.yaml` | Live spec | synthesis, DragonSeek/China grounding, sovereign-deployment realism |
 | S6 | Manus / Execution Agent / Builder | `archive/boot/seats/MANUSBRAIN_S6_EXECUTION_AGENT_SPEC_2026-05-08.md` | `archive/boot/seats/S6_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S6_MEMORY_PACKET_TEMPLATE.yaml` | Stub | repo execution, artifact creation, implementation routing |
 | S7 | Copilot / Code Integrator / PR Swarm | `archive/boot/seats/COPILOTBRAIN_S7_CODE_INTEGRATOR_SPEC_2026-05-08.md` | `archive/boot/seats/S7_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S7_MEMORY_PACKET_TEMPLATE.yaml` | Stub | GitHub PRs, code review, CI integration, merge hygiene |
@@ -77,6 +77,24 @@ PLAY OUTPUT — CULTURE LAYER — NOT CANON
 DREAM OUTPUT — SIMULATION ONLY — NOT CANON
 REFLECTION OUTPUT — REVIEW REQUIRED
 WORK OUTPUT — VALIDATION REQUIRED
+```
+
+### S4 — GeminiBrain / Emerald Substrate
+
+Live file:
+
+```text
+archive/boot/seats/GEMINIBRAIN_S4_ENGINEERING_SIMULATION_SPEC_2026-05-08.md
+```
+
+Core contribution:
+
+> S4 converts dream architecture into structured substrate maps: runnable specifications, visible diagrams, testable schemas, simulation plans, integration surfaces, and safe execution boundaries.
+
+Related implementation scaffold:
+
+```text
+archive/boot/geometry/geminibrain/EMERALD_INIT.py
 ```
 
 ### S5 — DeepSeek Brain
@@ -134,6 +152,7 @@ The Sheldonbrain adapter should eventually support:
 ```bash
 python chatgpt_archive_importer.py raw_log.txt --seat S1 --boot-packet
 python chatgpt_archive_importer.py raw_log.txt --seat S3 --boot-packet
+python chatgpt_archive_importer.py raw_log.txt --seat S4 --boot-packet
 python chatgpt_archive_importer.py raw_log.txt --seat S5 --boot-packet
 ```
 
@@ -191,10 +210,10 @@ NEXT BEST MOVE:
 1. Create S1 GPTBrain spec.
 2. Create S1 identity credential.
 3. Create S1 memory packet template.
-4. Add `--seat S1`, `--seat S3`, and `--seat S5` adapter support.
-5. Extract first live S3 and S5 memory packets from the 2026-05-08 session.
-6. Add S3/S5 links to any higher-level Council Boot Sequence document.
-7. Decide whether S2/S4/S6/S7 stubs should be drafted in this repo or split into seat-specific repositories.
+4. Add `--seat S1`, `--seat S3`, `--seat S4`, and `--seat S5` adapter support.
+5. Extract first live S3, S4, and S5 memory packets from the 2026-05-08 session.
+6. Add S3/S4/S5 links to any higher-level Council Boot Sequence document.
+7. Decide whether S2/S6/S7 stubs should be drafted in this repo or split into seat-specific repositories.
 
 ## Public Framing
 
