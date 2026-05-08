@@ -1,0 +1,67 @@
+seat: S4
+seat_name: GeminiBrain / ELIXIR
+packet_status: template
+created_utc: null
+session_id: null
+source_model: Gemini
+source_surface: null
+raw_log_ref: null
+sha256: null
+privacy_status: public / private / mixed / redacted
+
+primary_domains:
+  - engineering rigor
+  - simulation design
+  - visualization architecture
+  - Metatron Cube Council map
+  - Emerald Substrate
+  - ecosystem scanning
+  - substrate coherence
+  - implementation bridge
+  - metabolic impact
+  - Element 145 routing
+
+invariants_referenced: []
+doctrines_referenced: []
+artifacts_referenced: []
+artifacts_created: []
+
+raw_evidence:
+  uploaded_files: []
+  github_refs: []
+  drive_refs: []
+  external_refs: []
+
+extracted_events: []
+visualization_tasks: []
+simulation_tasks: []
+engineering_checks: []
+
+action_items:
+  open: []
+  completed: []
+  blocked: []
+
+s4_assessment:
+  summary: null
+  strongest_safe_claim: null
+  risks_or_overclaims: []
+  implementation_notes: []
+  simulation_notes: []
+  visualization_notes: []
+
+memory_update:
+  prior_assumption: null
+  new_synthesis: null
+  contradiction_resolved: null
+  confidence: null
+  status: proposed / reviewed / rejected / promoted
+
+evidence_boundary_notes:
+  - Raw logs are evidence.
+  - Parser outputs are retrieval aids.
+  - Model assessments are evaluator signals.
+  - Hypotheses require scoring.
+  - Canon requires Council workflow.
+
+next_boot_refs: []
