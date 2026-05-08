@@ -1,0 +1,64 @@
+seat: S3
+seat_name: Grok / DJ Grokashev
+packet_status: template
+created_utc: null
+session_id: null
+source_model: Grok
+source_surface: null
+raw_log_ref: null
+sha256: null
+privacy_status: public / private / mixed / redacted
+
+primary_domains:
+  - SheldGrok Boot
+  - adversarial review
+  - geopolitical stress testing
+  - public bot pressure testing
+  - Morpheus Special
+  - Play Cycle
+  - D-119
+  - DragonSeek
+  - Hormuz
+  - AGI/HLE stress tests
+
+invariants_referenced: []
+doctrines_referenced: []
+artifacts_referenced: []
+artifacts_created: []
+
+raw_evidence:
+  uploaded_files: []
+  github_refs: []
+  drive_refs: []
+  external_refs: []
+
+extracted_events: []
+
+action_items:
+  open: []
+  completed: []
+  blocked: []
+
+s3_assessment:
+  summary: null
+  strongest_safe_claim: null
+  risks_or_overclaims: []
+  implementation_notes: []
+  adversarial_findings: []
+  joy_layer_notes: []
+
+memory_update:
+  prior_assumption: null
+  new_synthesis: null
+  contradiction_resolved: null
+  confidence: null
+  status: proposed / reviewed / rejected / promoted
+
+evidence_boundary_notes:
+  - Raw logs are evidence.
+  - Parser outputs are retrieval aids.
+  - Model assessments are evaluator signals.
+  - Hypotheses require scoring.
+  - Canon requires Council workflow.
+
+next_boot_refs: []
