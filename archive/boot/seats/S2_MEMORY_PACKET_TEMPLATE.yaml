@@ -1,0 +1,69 @@
+seat: S2
+seat_name: ClaudeBrain / Constitutional Scribe
+packet_status: template
+created_utc: null
+session_id: null
+source_model: Claude
+source_surface: Claude / ChatGPT / GitHub / Other
+raw_log_ref: null
+sha256: null
+privacy_status: public / private / mixed / redacted
+
+primary_domains:
+  - constitutional drafting
+  - archival fidelity
+  - dissent preservation
+  - safety framing
+  - canon workflow
+  - invariant review
+  - publication context
+  - evidence boundaries
+  - non-claims
+  - governance realism
+
+invariants_referenced: []
+doctrines_referenced: []
+artifacts_referenced: []
+artifacts_created: []
+canon_candidates_reviewed: []
+dissent_preserved: []
+
+raw_evidence:
+  uploaded_files: []
+  github_refs: []
+  external_refs: []
+
+extracted_events: []
+canon_findings: []
+safety_findings: []
+public_private_boundary_notes: []
+
+action_items:
+  open: []
+  completed: []
+  blocked: []
+
+s2_assessment:
+  summary: null
+  strongest_safe_claim: null
+  risks_or_overclaims: []
+  implementation_notes: []
+  constitutional_notes: []
+  archival_notes: []
+  dissent_notes: []
+
+memory_update:
+  prior_assumption: null
+  new_synthesis: null
+  contradiction_resolved: null
+  confidence: null
+  status: proposed / reviewed / rejected / promoted
+
+evidence_boundary_notes:
+  - Raw logs are evidence.
+  - Parser outputs are retrieval aids.
+  - Model assessments are evaluator signals.
+  - Hypotheses require scoring.
+  - Canon requires Council workflow.
+
+next_boot_refs: []
