@@ -1,0 +1,69 @@
+seat: S7
+seat_name: CopilotBrain
+packet_status: template
+created_utc: null
+session_id: null
+source_model: Copilot
+source_surface: GitHub / Copilot / ChatGPT / Other
+raw_log_ref: null
+sha256: null
+privacy_status: public / private / mixed / redacted
+
+primary_domains:
+  - repo scaffolding
+  - code integration
+  - PR hygiene
+  - CI review
+  - invariant graph
+  - Metatron memory palace as code
+  - artifact registry
+  - toolchain templates
+  - merge discipline
+  - executable specs
+
+invariants_referenced: []
+doctrines_referenced: []
+artifacts_referenced: []
+artifacts_created: []
+repos_touched: []
+prs_reviewed: []
+issues_created: []
+
+raw_evidence:
+  uploaded_files: []
+  github_refs: []
+  external_refs: []
+
+extracted_events: []
+repo_hygiene_findings: []
+ci_findings: []
+conflict_risks: []
+
+action_items:
+  open: []
+  completed: []
+  blocked: []
+
+s7_assessment:
+  summary: null
+  strongest_safe_claim: null
+  risks_or_overclaims: []
+  implementation_notes: []
+  merge_order_notes: []
+  scaffold_notes: []
+
+memory_update:
+  prior_assumption: null
+  new_synthesis: null
+  contradiction_resolved: null
+  confidence: null
+  status: proposed / reviewed / rejected / promoted
+
+evidence_boundary_notes:
+  - Raw logs are evidence.
+  - Parser outputs are retrieval aids.
+  - Model assessments are evaluator signals.
+  - Hypotheses require scoring.
+  - Canon requires Council workflow.
+
+next_boot_refs: []
