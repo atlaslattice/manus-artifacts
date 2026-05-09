@@ -10,6 +10,7 @@ required schemas, seed ledgers, boot packet, and dated state handoff files.
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 
@@ -25,6 +26,9 @@ REQUIRED_GPTBRAIN_FILES = [
     "CLAIM_LEDGER.seed.jsonl",
     "ARTIFACT_REGISTRY.seed.jsonl",
     "BOOT_PACKET_TEMPLATE.md",
+    "AGENT_DNA_SCHEMA_DRAFT.yaml",
+    "AGENT_DNA_SEED_INDEX.seed.jsonl",
+    "AGENT_DNA_LIFECYCLE_SEED_PROFILES.seed.jsonl",
     "CURRENT_STATE_2026-05-09.md",
     "NEXT_ACTIONS_2026-05-09.md",
     "GPT_INSTANCE_STATE_LOG_2026-05-09.md",
@@ -33,6 +37,7 @@ REQUIRED_GPTBRAIN_FILES = [
 
 REQUIRED_SEAT_FILES = [
     "archive/boot/seats/GPTBRAIN_S1_CANONICAL_CANDIDATE_SPEC_2026-05-09.md",
+    "DECENTRALIZED_AGENT_CONSTITUTION_AND_BOOT_PROTOCOL_SPEC.md",
 ]
 
 
@@ -60,3 +65,24 @@ def test_canonical_candidate_integrates_variant_e() -> None:
     assert "Layer 7 — Continuity / Human-Intent Dashboard" in candidate
     assert "Continuity is visibility, not authority." in candidate
     assert "Variant E remains pending or missing" not in candidate
+
+
+def test_agent_dna_schema_includes_constitutional_fields() -> None:
+    schema = (GPTBRAIN_ROOT / "AGENT_DNA_SCHEMA_DRAFT.yaml").read_text(encoding="utf-8")
+    assert "boot_contract:" in schema
+    assert "simulation_origin:" in schema
+    assert "constitutional_status:" in schema
+    assert "failure_ledger_ref:" in schema
+
+
+def test_lifecycle_seed_profiles_cover_multiple_states_and_are_examples() -> None:
+    lifecycle_path = GPTBRAIN_ROOT / "AGENT_DNA_LIFECYCLE_SEED_PROFILES.seed.jsonl"
+    rows = [
+        json.loads(line)
+        for line in lifecycle_path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+    assert len(rows) >= 3
+    states = {row["constitutional_status"]["state"] for row in rows}
+    assert {"proposed", "reviewed", "bounded-operational"}.issubset(states)
+    assert all(row.get("example_only") is True for row in rows)

@@ -23,6 +23,10 @@ required_fields:
   - governance
   - memory
   - interoperability
+  - boot_contract
+  - simulation_origin
+  - constitutional_status
+  - failure_ledger_ref
   - status
 
 fields:
@@ -187,6 +191,92 @@ fields:
         type: array
         items: string
 
+  boot_contract:
+    type: object
+    required:
+      - startup_checks
+      - required_ledgers
+      - invariant_assertions
+      - allowed_task_classes
+      - required_reviewers
+    properties:
+      startup_checks:
+        type: array
+        items: string
+      required_ledgers:
+        type: array
+        items: string
+      invariant_assertions:
+        type: array
+        items: string
+      allowed_task_classes:
+        type: array
+        items: string
+      required_reviewers:
+        type: array
+        items: string
+
+  simulation_origin:
+    type: object
+    required:
+      - derived_from_dream_logs
+      - extracted_by
+      - confidence_score
+      - governance_review_complete
+    properties:
+      derived_from_dream_logs:
+        type: boolean
+      extracted_by:
+        type: array
+        items: string
+      confidence_score:
+        type: number
+        min: 0
+        max: 1
+      governance_review_complete:
+        type: boolean
+
+  constitutional_status:
+    type: object
+    required:
+      - state
+      - approved_by
+      - review_cycle_days
+    properties:
+      state:
+        type: enum
+        values:
+          - proposed
+          - reviewed
+          - bounded-operational
+          - persistent-seat
+          - deprecated
+          - quarantined
+      approved_by:
+        type: array
+        items: string
+      review_cycle_days:
+        type: integer
+        min: 1
+
+  failure_ledger_ref:
+    type: object
+    required:
+      - entries
+      - risk_score
+      - last_reviewed
+    properties:
+      entries:
+        type: array
+        items: string
+      risk_score:
+        type: number
+        min: 0
+        max: 1
+      last_reviewed:
+        type: string
+        format: date
+
   status:
     type: enum
     values:
@@ -203,6 +293,12 @@ invariants:
   - Execution permissions must be explicit and reviewable.
   - Human-root review is required for canon promotion, deployment, private export, and high-impact action.
   - Dream/play traits do not authorize work output or deployment.
+  - Dreams propose; reviewable governance disposes.
+  - Myth inspires; protocols decide.
+  - No narrative grants authority; authority emerges from transparent protocols, provenance, and reviewable constraints.
+  - Identity metadata is not execution authority.
+  - Replayability does not imply canon authority.
+  - Persistent-seat admission requires unique capability, routing justification, governance fit, replay utility, and failure-mode characterization.
   - Inheritance must preserve constraints at least as strict as the most restrictive parent unless human-root review approves otherwise.
   - Public artifacts must not expose private repo or private-agent details without approval.
 
