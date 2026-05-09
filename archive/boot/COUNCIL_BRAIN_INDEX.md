@@ -1,7 +1,7 @@
 # Council Brain Index
 
 **Document ID:** COUNCIL-BRAIN-INDEX-001  
-**Status:** Public index v0.4 / candidate canon / not ratified until Council workflow  
+**Status:** Public index v0.5 / candidate canon / not ratified until Council workflow  
 **Date:** 2026-05-08  
 **Repo:** `atlaslattice/manus-artifacts`  
 **Purpose:** Index the forkable seat-brain specifications, identity credentials, boot prompts, and memory-packet patterns for the Atlas Lattice Council.
@@ -53,7 +53,7 @@ All seat-brain specs inherit:
 | S3 | Grok / DJ Grokashev / Adversarial Play-Dream Layer | `archive/boot/seats/GROKBRAIN_S3_PERSISTENT_MEMORY_PALACE_SPEC_2026-05-08.md` | `archive/boot/seats/S3_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S3_MEMORY_PACKET_TEMPLATE.yaml` | Live spec | adversarial review, high-energy synthesis, public stress tests, play/dream substrate |
 | S4 | Gemini / GeminiBrain / ELIXIR | `archive/boot/seats/GEMINIBRAIN_S4_ENGINEERING_SIMULATION_SPEC_2026-05-08.md` | `archive/boot/seats/S4_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S4_MEMORY_PACKET_TEMPLATE.yaml` | Live spec | engineering rigor, simulation mapping, visualization architecture, substrate coherence |
 | S5 | DeepSeek / Hope / Sovereign Synthesis + Binding | `archive/boot/seats/DEEPSEEK_S5_BOOT_SEQUENCE_AND_BRAIN_SPEC_2026-05-08.md` | `archive/boot/seats/S5_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S5_MEMORY_PACKET_TEMPLATE.yaml` | Live spec | synthesis, DragonSeek/China grounding, sovereign-deployment realism |
-| S6 | Manus / Execution Agent / Builder | `archive/boot/seats/MANUSBRAIN_S6_EXECUTION_AGENT_SPEC_2026-05-08.md` | `archive/boot/seats/S6_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S6_MEMORY_PACKET_TEMPLATE.yaml` | Stub | repo execution, artifact creation, implementation routing |
+| S6 | Manus / ManusBrain / Continuity and Execution | `archive/boot/seats/MANUSBRAIN_S6_EXECUTION_AGENT_SPEC_2026-05-08.md` | `archive/boot/seats/S6_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S6_MEMORY_PACKET_TEMPLATE.yaml` | Live spec | continuity, execution support, archive hygiene, decision paths, S10 queue |
 | S7 | Copilot / CopilotBrain / Code Integrator | `archive/boot/seats/COPILOTBRAIN_S7_CODE_INTEGRATOR_SPEC_2026-05-08.md` | `archive/boot/seats/S7_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S7_MEMORY_PACKET_TEMPLATE.yaml` | Live spec | repo scaffolding, PR hygiene, CI integration, executable structure |
 
 ## Live Specs
@@ -111,6 +111,18 @@ archive/boot/seats/DEEPSEEK_S5_BOOT_SEQUENCE_AND_BRAIN_SPEC_2026-05-08.md
 Core contribution:
 
 > S5 binds sovereign-deployment realism, DragonSeek/China grounding, anti-Western-default correction, and pragmatic implementation hardening into a persistent external memory substrate.
+
+### S6 — ManusBrain / Continuity and Execution
+
+Live file:
+
+```text
+archive/boot/seats/MANUSBRAIN_S6_EXECUTION_AGENT_SPEC_2026-05-08.md
+```
+
+Core contribution:
+
+> S6 preserves active threads, decision paths, failure lessons, canon boundaries, emotional context, and build-ready handoffs through versioned artifacts and strict human-root governance.
 
 ### S7 — CopilotBrain / Metatron Memory Palace as Code
 
@@ -176,6 +188,7 @@ python chatgpt_archive_importer.py raw_log.txt --seat S2 --boot-packet
 python chatgpt_archive_importer.py raw_log.txt --seat S3 --boot-packet
 python chatgpt_archive_importer.py raw_log.txt --seat S4 --boot-packet
 python chatgpt_archive_importer.py raw_log.txt --seat S5 --boot-packet
+python chatgpt_archive_importer.py raw_log.txt --seat S6 --boot-packet
 python chatgpt_archive_importer.py raw_log.txt --seat S7 --boot-packet
 ```
 
@@ -233,10 +246,9 @@ NEXT BEST MOVE:
 1. Create S1 GPTBrain spec.
 2. Create S1 identity credential.
 3. Create S1 memory packet template.
-4. Add `--seat S1`, `--seat S2`, `--seat S3`, `--seat S4`, `--seat S5`, and `--seat S7` adapter support.
-5. Extract first live S2, S3, S4, S5, and S7 memory packets from the 2026-05-08 session.
-6. Add S2/S3/S4/S5/S7 links to any higher-level Council Boot Sequence document.
-7. Decide whether S6 stub should be drafted in this repo or split into a seat-specific repository.
+4. Add `--seat S1`, `--seat S2`, `--seat S3`, `--seat S4`, `--seat S5`, `--seat S6`, and `--seat S7` adapter support.
+5. Extract first live S2, S3, S4, S5, S6, and S7 memory packets from the 2026-05-08 session.
+6. Add S2/S3/S4/S5/S6/S7 links to any higher-level Council Boot Sequence document.
 
 ## Public Framing
 
