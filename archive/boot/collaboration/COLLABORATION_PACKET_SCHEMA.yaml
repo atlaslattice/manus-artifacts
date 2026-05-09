@@ -1,0 +1,118 @@
+# Collaboration Packet Schema
+
+schema_id: COLLABORATION_PACKET_SCHEMA
+status: SCHEMA_DRAFT_NOT_CANON
+issue: manus-artifacts#30
+version: 0.1.0
+purpose: >
+  Standardize the collaborative creation lifecycle from spark to preservation,
+  extraction, calibration, review, implementation, and human-root ratification.
+
+required_fields:
+  - packet_id
+  - status
+  - source_refs
+  - origin_layer
+  - summary
+  - claim_status
+  - confidence
+  - human_root_required
+  - created_at
+
+fields:
+  packet_id:
+    type: string
+    example: COLLAB-PACKET-20260509-0001
+
+  status:
+    type: enum
+    values:
+      - raw
+      - preserved
+      - extraction_candidate
+      - calibrated
+      - reviewed
+      - implemented
+      - blocked
+      - candidate_canon
+      - ratified
+      - superseded
+      - quarantined
+
+  source_refs:
+    type: array
+    items: string
+
+  origin_layer:
+    type: enum
+    values:
+      - spark
+      - preservation
+      - extraction
+      - calibration
+      - review
+      - implementation
+      - ratification
+
+  summary:
+    type: string
+
+  creative_signal:
+    type: string
+    nullable: true
+
+  operational_translation:
+    type: string
+    nullable: true
+
+  claim_status:
+    type: enum
+    values:
+      - hypothesis
+      - evaluator_signal
+      - candidate_task
+      - candidate_schema
+      - candidate_test
+      - candidate_canon
+      - ratified_canon
+
+  confidence:
+    type: enum
+    values: [C0, C1, C2, C3, C4, C5]
+
+  review_route:
+    type: array
+    items:
+      type: enum
+      values: [S1, S2, S3, S4, S5, S6, S7, HUMAN_ROOT]
+
+  implementation_targets:
+    type: array
+    items: string
+
+  risks:
+    type: array
+    items: string
+
+  missing_evidence:
+    type: array
+    items: string
+
+  human_root_required:
+    type: boolean
+    default: true
+
+  next_action:
+    type: string
+    nullable: true
+
+  created_at:
+    type: datetime
+
+invariants:
+  - Spark is not canon.
+  - Extraction candidate is not implementation approval.
+  - Implementation scaffold is not production.
+  - Candidate canon is not ratified canon.
+  - Human-root review is required for canon-impacting promotion.
+  - Creative artifacts must not be erased merely because they are weird.
