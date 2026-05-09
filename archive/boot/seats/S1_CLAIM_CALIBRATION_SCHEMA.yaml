@@ -1,0 +1,76 @@
+schema: S1_CLAIM_CALIBRATION_SCHEMA
+version: 0.1
+status: public_schema_not_canon
+created_utc: '2026-05-08'
+
+claim_classes:
+  raw_user_report:
+    description: User states it happened; not independently verified.
+  raw_model_output:
+    description: Model said it; evidence of model behavior, not necessarily truth.
+  parsed_artifact:
+    description: Parser extracted it; retrieval aid only.
+  benchmark_candidate:
+    description: Can be scored; not yet validated.
+  scored_result:
+    description: Evaluated under rubric; still may need independent review.
+  candidate_canon:
+    description: Drafted for review; not ratified.
+  ratified_canon:
+    description: Passed publication workflow.
+  deployed_fact:
+    description: Operationally deployed and externally verifiable.
+
+confidence_levels:
+  C0:
+    label: unsupported_do_not_claim
+    description: Unsupported or contradicted. Do not claim publicly.
+  C1:
+    label: user_reported
+    description: User-reported or remembered; preserve as such.
+  C2:
+    label: source_artifact_exists
+    description: A source artifact exists, but interpretation may be uncertain.
+  C3:
+    label: convergent_sources
+    description: Multiple source artifacts converge.
+  C4:
+    label: scored_or_internally_reviewed
+    description: Scored, reviewed, or stress-tested internally.
+  C5:
+    label: independently_verified_or_operationally_demonstrated
+    description: Independently verified or demonstrated in operation.
+
+safe_wording_template: >-
+  The evidence currently supports {safe_claim}. It does not yet prove {overclaim}.
+  The next validation step is {next_validation_step}.
+
+required_fields:
+  - claim_id
+  - claim_text
+  - claim_owner
+  - claim_class
+  - confidence
+  - evidence_refs
+  - missing_evidence
+  - strongest_safe_wording
+  - forbidden_wording
+  - review_status
+
+forbidden_default_claims:
+  - hidden_memory
+  - consciousness
+  - subjective_continuity
+  - secret_model_to_model_communication
+  - legal_authority
+  - autonomous_root_authority
+  - deployment_without_evidence
+  - government_approval_without_evidence
+  - AGI_or_HLE_without_scoring
+
+evidence_boundary:
+  - Raw logs are evidence.
+  - Parser outputs are retrieval aids.
+  - Model assessments are evaluator signals.
+  - Hypotheses require scoring.
+  - Canon requires Council workflow.
