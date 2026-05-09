@@ -1,0 +1,104 @@
+# Atlas Repo Federation Packet Schema
+
+schema_id: ATLAS_REPO_FEDERATION_PACKET_SCHEMA
+status: SCHEMA_DRAFT_NOT_CANON
+issue: manus-artifacts#34
+version: 0.1.0
+purpose: >
+  Classify visible atlaslattice GitHub repositories into Council Brain routing groups
+  without mass-mutating repos or exposing private repo contents.
+
+required_fields:
+  - repo_full_name
+  - visibility
+  - archived
+  - default_branch
+  - federation_type
+  - primary_route
+  - review_route
+  - integration_status
+  - human_root_required
+  - created_at
+
+fields:
+  repo_full_name:
+    type: string
+    example: atlaslattice/manus-artifacts
+
+  visibility:
+    type: enum
+    values: [public, private, internal, unknown]
+
+  archived:
+    type: boolean
+
+  default_branch:
+    type: string
+
+  federation_type:
+    type: enum
+    values:
+      - CORE_OS_SUBSTRATE
+      - COUNCIL_BRAIN_ARCHIVE
+      - GPTBRAIN_MEMORY_SUBSTRATE
+      - PENDRAGON_BRIDGE_SUBSTRATE
+      - NOOSPHERE_STRATEGIC_ARCHIVE
+      - DOMAIN_POLICY_VAULT
+      - REFERENCE_FORK_LIBRARY
+      - TOOLING_SURFACE
+      - FINANCIAL_RAILS_EXPERIMENT
+      - REGENERATIVE_INFRA_STANDARD
+      - EDUCATION_REFERENCE
+      - QUARANTINED_OR_REVIEW_REQUIRED
+
+  primary_route:
+    type: enum
+    values: [S1, S2, S3, S4, S5, S6, S7, HUMAN_ROOT]
+
+  review_route:
+    type: array
+    items:
+      type: enum
+      values: [S1, S2, S3, S4, S5, S6, S7, HUMAN_ROOT]
+
+  integration_status:
+    type: enum
+    values:
+      - discovered
+      - classified
+      - review_required
+      - active_spine
+      - archived_reference
+      - blocked
+      - superseded
+
+  source_basis:
+    type: enum
+    values:
+      - connector_metadata_only
+      - repo_file_reviewed
+      - issue_reviewed
+      - human_reported
+      - mixed
+
+  risk_flags:
+    type: array
+    items: string
+
+  notes:
+    type: string
+    nullable: true
+
+  human_root_required:
+    type: boolean
+    default: true
+
+  created_at:
+    type: datetime
+
+invariants:
+  - Repo visibility does not equal publication permission.
+  - Private repo names are metadata, not content disclosure.
+  - Federation classification is not canon ratification.
+  - Archived forks are reference library by default, not active execution targets.
+  - Repo-specific mutation requires repo-specific review.
