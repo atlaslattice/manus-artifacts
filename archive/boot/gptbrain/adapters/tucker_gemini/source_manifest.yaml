@@ -1,0 +1,71 @@
+# source_manifest.yaml
+# STATUS: ADAPTER SOURCE MANIFEST — NOT CANON
+# ISSUE: https://github.com/atlaslattice/manus-artifacts/issues/22
+# PURPOSE: machine-readable source map for Tucker/Gemini adapter scaffold
+
+adapter: tucker_gemini
+status: adapter_scaffold_not_canon
+mode: work_output
+integration_status: provenance_visible_boot_visible_route_visible_not_runtime_wired
+human_root_gate: required_before_live_execution
+
+default_mode: DRY_RUN_ONLY
+allowed_modes:
+  - REPO_TRACE_ONLY
+  - DRY_RUN_ONLY
+  - MOCK_GEMINI
+blocked_modes_by_default:
+  - LIVE_GEMINI
+
+source_surfaces:
+  tucker_repository:
+    repo: atlaslattice/tucker-gemini-GPT-
+    url: https://github.com/atlaslattice/tucker-gemini-GPT-
+    default_branch: main
+    provenance_note: ARTIFACT_PROVENANCE.md
+    provenance_url: https://github.com/atlaslattice/tucker-gemini-GPT-/blob/main/ARTIFACT_PROVENANCE.md
+  manus_artifacts:
+    repo: atlaslattice/manus-artifacts
+    issue: https://github.com/atlaslattice/manus-artifacts/issues/22
+    adapter_spec: archive/boot/gptbrain/adapters/tucker_gemini/TUCKER_GEMINI_RUNTIME_ADAPTER_SPEC_2026-05-09.md
+    adapter_readme: archive/boot/gptbrain/adapters/tucker_gemini/README.md
+    adapter_scaffold: archive/boot/gptbrain/adapters/tucker_gemini/tucker_gemini_adapter.py
+    adapter_tests: archive/boot/gptbrain/adapters/tucker_gemini/test_tucker_gemini_adapter.py
+    boot_integration_note: archive/boot/gptbrain/TUCKER_BOOT_INTEGRATION_NOTE_2026-05-09.md
+    provenance_notes:
+      - archive/provenance/TUCKER_PUBLIC_BUILD_PROVENANCE_NOTE_2026-05-08.md
+      - archive/provenance/TUCKER_BUILD_CULTURE_AND_GPT_ASSISTANCE_NOTE_2026-05-08.md
+
+safe_claims:
+  - Tucker is a public Atlas Lattice build artifact with recorded GPT-assisted design and governance provenance.
+  - Tucker is provenance-visible and boot-visible to GPTBrain.
+  - The adapter scaffold can trace sources, dry-run, and mock Gemini receipts without secrets or network calls.
+
+forbidden_claims:
+  - Tucker is ratified GPTBrain canon.
+  - GPT owns Tucker.
+  - Tucker is production-authorized by GPTBrain.
+  - Tucker is already invoked by GPTBrain.
+  - Gemini live API calls are enabled by default.
+  - Provenance visibility is execution permission.
+
+runtime_boundary:
+  live_call_attempted_by_default: false
+  live_call_allowed_by_default: false
+  secrets_required_for_tests: false
+  network_required_for_tests: false
+  human_root_required_for_live: true
+
+review_routes:
+  S1: claim calibration / provenance status / boot visibility
+  S2: non-claims / canon language / governance boundary
+  S4: adapter validation / schema formalization / simulation path
+  S6: continuity / path registry / execution handoff
+  S7: repo scaffold / tests / CI integration
+  human_root: live execution / ratification / production authorization
+
+next_actions:
+  - Add adapter tests to CI after PR #15 hygiene checks stabilize.
+  - Add claim/artifact registry entries for this adapter scaffold with commit SHA.
+  - Mirror Issue #22 link into Tucker repo provenance when appropriate.
+  - Keep live Gemini disabled until human-root approval and secrets policy exist.
