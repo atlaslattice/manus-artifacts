@@ -1,0 +1,222 @@
+# S1 GPTBrain Memory Object Schema
+
+schema_id: S1_MEMORY_OBJECT_SCHEMA
+status: SCHEMA_DRAFT_NOT_CANON
+issue: manus-artifacts#12
+version: 0.1.0
+seat: S1
+seat_name: GPTBrain
+purpose: >
+  Define the minimum structured memory object for GPTBrain / S1.
+  Memory objects preserve provenance, epistemic status, permissions,
+  links, and review state. Memory informs action but cannot authorize
+  action by itself.
+
+required_fields:
+  - memory_id
+  - title
+  - type
+  - summary
+  - epistemic_status
+  - provenance
+  - permissions
+  - review
+  - created_at
+  - updated_at
+
+fields:
+  memory_id:
+    type: string
+    description: Stable unique identifier.
+    example: S1-MEM-2026-0509-0001
+
+  title:
+    type: string
+    description: Human-readable title.
+
+  type:
+    type: enum
+    values:
+      - identity_context
+      - preference
+      - project
+      - artifact
+      - claim
+      - decision
+      - contradiction
+      - simulation
+      - emotional_context
+      - task
+      - note
+    description: What kind of memory this is.
+
+  summary:
+    type: string
+    description: Short source-grounded description.
+
+  epistemic_status:
+    type: enum
+    values:
+      - observed_fact
+      - user_claim
+      - model_inference
+      - external_source
+      - hypothesis
+      - decision
+      - preference
+      - emotional_context_signal
+      - artifact
+      - open_question
+    description: What kind of knowledge claim the memory represents.
+
+  confidence:
+    type: enum
+    values: [C0, C1, C2, C3, C4, C5]
+    description: Claim-strength ladder. C0 means unsupported / do not claim.
+
+  provenance:
+    type: object
+    required:
+      - source_type
+      - source_refs
+    fields:
+      source_type:
+        type: enum
+        values:
+          - raw_log
+          - user_message
+          - repo_file
+          - issue_comment
+          - model_output
+          - parser_output
+          - external_source
+          - manual_entry
+      source_refs:
+        type: array
+        items: string
+      sha256:
+        type: string
+        nullable: true
+      captured_at:
+        type: datetime
+        nullable: true
+
+  ontology:
+    type: object
+    fields:
+      sphere_tags:
+        type: array
+        items: string
+      primary_house:
+        type: string
+        nullable: true
+      secondary_houses:
+        type: array
+        items: string
+
+  permissions:
+    type: object
+    required:
+      - access_class
+      - consent_level
+      - executable
+    fields:
+      access_class:
+        type: enum
+        values:
+          - private_core
+          - assistant_context
+          - project_shared
+          - team_shared
+          - public_artifact
+          - sealed_sensitive
+          - ephemeral
+      consent_level:
+        type: enum
+        values:
+          - implicit_context
+          - durable_memory
+          - sensitive_memory
+          - exportable
+          - executable
+      executable:
+        type: boolean
+        default: false
+        description: If false, memory may inform reasoning but cannot authorize tool action.
+
+  retention:
+    type: object
+    fields:
+      status:
+        type: enum
+        values:
+          - active
+          - archived
+          - superseded
+          - disputed
+          - redacted
+          - deleted_by_request
+      review_after:
+        type: date
+        nullable: true
+
+  links:
+    type: object
+    fields:
+      related_memory_ids:
+        type: array
+        items: string
+      contradicts:
+        type: array
+        items: string
+      supports:
+        type: array
+        items: string
+      supersedes:
+        type: array
+        items: string
+      superseded_by:
+        type: array
+        items: string
+
+  payload:
+    type: object
+    description: Type-specific data. Must not contain secrets unless access_class permits.
+
+  review:
+    type: object
+    required:
+      - canon_status
+      - human_root_required
+    fields:
+      canon_status:
+        type: enum
+        values:
+          - raw
+          - parsed
+          - candidate
+          - reviewed
+          - ratified
+          - rejected
+          - superseded
+      human_root_required:
+        type: boolean
+        default: true
+      reviewer:
+        type: string
+        nullable: true
+      review_notes:
+        type: string
+        nullable: true
+
+  created_at:
+    type: datetime
+  updated_at:
+    type: datetime
+
+invariants:
+  - Memory can inform action; memory cannot authorize action by itself.
+  - Readable memory is not executable memory.
+  - C0 claims must not be asserted as facts.
+  - Ratified canon requires human-root review.
+  - Provenance should remain available wherever possible.
