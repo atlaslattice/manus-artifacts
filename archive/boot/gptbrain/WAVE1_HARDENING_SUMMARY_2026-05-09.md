@@ -28,15 +28,27 @@ HUMAN-ROOT GATE: required before any promotion or merge
 PR #15 (S7 repo hygiene scaffold) → S7 Hygiene Checks workflow → action_required
 
 Root cause:
-  GitHub requires maintainer approval for bot-authored PR workflows.
-  The s7_hygiene_checks.yml existed only on PR #15's branch. When triggered
-  by a Copilot bot PR, GitHub applied the "first-time contributor" security gate.
-  This is NOT a test failure — the tests themselves were never run.
+  GitHub's "Require approval for first-time contributors" security gate blocks
+  GitHub Actions workflows triggered by the copilot-swe-agent[bot] account from
+  running without explicit maintainer approval.
 
-Fix applied in Wave 1:
-  Added s7_hygiene_checks.yml to .github/workflows/ via this branch.
-  Workflow now triggers on push to master and copilot/** branches without
-  requiring approval, because it exists on the default branch.
+  This affects ALL copilot/** branches, not just PR #15:
+  - PR #15 run: https://github.com/atlaslattice/manus-artifacts/actions/runs/25591519571
+    conclusion: action_required
+  - This branch push run: https://github.com/atlaslattice/manus-artifacts/actions/runs/25597921253
+    conclusion: action_required
+  - This branch PR run: https://github.com/atlaslattice/manus-artifacts/actions/runs/25597922493
+    conclusion: action_required
+
+  GitHub's displayed status: "This workflow requires approval from a repository owner."
+  The workflow code has NOT run in any of these cases.
+  This is NOT a test failure — the tests were never executed in CI.
+
+Fix path:
+  The maintainer must either:
+  (a) Click "Approve and run" for each pending run in the Actions UI, or
+  (b) Configure the repo to allow copilot-swe-agent[bot] workflows without per-run approval.
+  See: https://github.com/atlaslattice/manus-artifacts/actions/runs/25597922493
 ```
 
 ## Commits Referenced
@@ -150,11 +162,9 @@ Remaining open items (issue #18 acceptance criteria):
 ## Guardrails Confirmed
 
 ```text
-No destructive changes.
-No deletions.
-No silent renames.
+No file deletions or silent renames.
 No branch merges.
-Additive changes only.
+Changes are limited to additive files plus narrow in-place metadata/checklist/ledger updates.
 All variant lineage preserved.
 Nothing marked RATIFIED CANON.
 Human-root review required before any promotion or merge.
