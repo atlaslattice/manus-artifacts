@@ -40,7 +40,7 @@ HUMAN-ROOT REVIEW REQUIRED
 [ ] Variant B preserved as non-canon artifact
 [ ] Variant C preserved as non-canon artifact or clearly aliased from existing seat path
 [ ] Variant D preserved as non-canon artifact
-[ ] Variant E preserved as non-canon artifact or explicitly marked missing
+[x] Variant E preserved as non-canon artifact and candidate integration status is tracked (not ratified)
 [ ] Each variant includes STATUS / PURPOSE / PROMOTION block
 [ ] Each variant has a short summary
 [ ] Each variant lists strongest contribution
@@ -81,6 +81,7 @@ Before creating or promoting a canonical candidate:
 [ ] Canonical candidate includes failure modes
 [ ] Canonical candidate includes implementation API or adapter hooks
 [ ] Canonical candidate includes explicit human-root promotion requirement
+[x] Canonical candidate tracks Variant E as a candidate-level continuity/dashboard integration status (not ratified canon)
 ```
 
 ## Final ratification checklist

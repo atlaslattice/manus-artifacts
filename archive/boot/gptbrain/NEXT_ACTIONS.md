@@ -18,6 +18,13 @@ ISSUE: manus-artifacts#12
 [ ] Link issue #12 back to issue #11 after initial scaffold completion
 ```
 
+## Alias reference status (#18)
+
+```text
+NEXT_ACTIONS.md is the live alias entrypoint.
+Evidence-bearing snapshot remains NEXT_ACTIONS_2026-05-09.md.
+```
+
 ## Candidate patch target
 
 ```text

@@ -54,6 +54,7 @@ Do not claim hidden memory, consciousness, subjective continuity, secret model-t
 ```text
 CURRENT_STATE.md and NEXT_ACTIONS.md are desired stable aliases, but dated snapshots are the verified boot sources for this sprint.
 Do not claim the bare aliases exist unless verified in repo.
+As of issue #18 hardening, the alias files are present and should stay aligned to the dated snapshots.
 ```
 
 ## Standard boot response

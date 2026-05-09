@@ -81,6 +81,13 @@ See:
 archive/boot/gptbrain/S1_VARIANT_E_RECONCILIATION_NOTE_2026-05-09.md
 ```
 
+## Alias reference status (#18)
+
+```text
+CURRENT_STATE.md is the live alias entrypoint.
+Evidence-bearing snapshot remains CURRENT_STATE_2026-05-09.md.
+```
+
 ## Recommended posture
 
 ```text
