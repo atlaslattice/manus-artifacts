@@ -50,7 +50,21 @@ Spec A / Variant A = interface palace and public-safe translation layer
 Spec B / Variant B = cognitive archive platform, typed memory objects, provenance, Memory Diff, API
 Spec C / Variant C = S1 operational seat, twelve halls, claim calibration, C0-C5 confidence ladder
 Variant D = implementation skeleton, object model, recall/challenge/diff APIs, audit behavior
-Variant E = pending continuity / emergent habitat layer
+Variant E = continuity / human-intent dashboard layer
+```
+
+### 3.1 Source lineage block
+
+```text
+archive/boot/gptbrain/variants/S1_VARIANT_A_INTERFACE_PALACE_2026-05-09.md
+archive/boot/gptbrain/variants/S1_VARIANT_B_COGNITIVE_ARCHIVE_2026-05-09.md
+archive/boot/gptbrain/variants/S1_VARIANT_C_CLAIM_CALIBRATION_POINTER_2026-05-08.md
+archive/boot/gptbrain/variants/S1_VARIANT_D_REFERENCE_IMPL_NOTES_2026-05-09.md
+archive/boot/gptbrain/variants/S1_VARIANT_E_CONTINUITY_HABITAT_2026-05-09.md
+archive/boot/gptbrain/S1_VARIANT_E_RECONCILIATION_NOTE_2026-05-09.md
+archive/boot/gptbrain/S1_VARIANT_SYNTHESIS_MATRIX_2026-05-09.md
+archive/boot/gptbrain/S1_PATH_REGISTRY_2026-05-09.md
+archive/boot/gptbrain/S1_PROMOTION_CHECKLIST_2026-05-09.md
 ```
 
 ## 4. Non-negotiable governance rules
@@ -89,7 +103,8 @@ S1 GPTBrain performs:
 9. synthesis matrix construction;
 10. canonical candidate drafting;
 11. public-safe translation;
-12. final-answer hardening.
+12. final-answer hardening;
+13. continuity dashboard surfacing.
 ```
 
 S1 GPTBrain does not perform:
@@ -114,7 +129,8 @@ Layer 3 — Cognitive Archive Platform
 Layer 4 — Claim Calibration Runtime
 Layer 5 — MVP Implementation Skeleton
 Layer 6 — Work / Dream / Play Runtime
-Layer 7 — Repo Fossil Record
+Layer 7 — Continuity / Human-Intent Dashboard
+Layer 8 — Repo Fossil Record
 ```
 
 ### Layer 0 — Human Root / Canon Authority
@@ -172,6 +188,7 @@ Recommended merge:
 ```text
 Use Spec A rooms for human-facing navigation.
 Use Spec C halls for operational routing.
+Use Variant E dashboard concepts for continuity, pending decisions, and human-intent visibility.
 ```
 
 ### Layer 3 — Cognitive Archive Platform
@@ -283,7 +300,44 @@ RATIFIED CANON = human-root approved canonical artifact
 
 Dream and play outputs must route through Claim Calibration Hall before public or operational use.
 
-### Layer 7 — Repo Fossil Record
+### Layer 7 — Continuity / Human-Intent Dashboard
+
+Variant E contributes the continuity layer.
+
+This layer makes the system’s working state visible without pretending to be canon authority.
+
+It should surface:
+
+```text
+current project state
+pending human-root decisions
+unresolved contradictions
+candidate canon awaiting review
+ratification blockers
+recent memory diffs
+active runtime labels
+next safe action
+private/public boundary warnings
+implementation scaffold health
+```
+
+It should not:
+
+```text
+approve canon by dashboard state
+execute tools based only on memory
+hide missing evidence
+collapse dream/play output into fact
+replace human-root judgment
+```
+
+Dashboard rule:
+
+```text
+Continuity is visibility, not authority.
+```
+
+### Layer 8 — Repo Fossil Record
 
 GitHub is the fossil record.
 
@@ -294,13 +348,23 @@ archive/boot/gptbrain/
   S1_PATH_REGISTRY_2026-05-09.md
   S1_PROMOTION_CHECKLIST_2026-05-09.md
   S1_VARIANT_SYNTHESIS_MATRIX_2026-05-09.md
+  S1_VARIANT_E_RECONCILIATION_NOTE_2026-05-09.md
+  CURRENT_STATE_2026-05-09.md
+  NEXT_ACTIONS_2026-05-09.md
+  GPT_INSTANCE_STATE_LOG_2026-05-09.md
 
 archive/boot/gptbrain/variants/
   S1_VARIANT_A_INTERFACE_PALACE_2026-05-09.md
   S1_VARIANT_B_COGNITIVE_ARCHIVE_2026-05-09.md
-  S1_VARIANT_C_CLAIM_CALIBRATION_2026-05-08.md
+  S1_VARIANT_C_CLAIM_CALIBRATION_POINTER_2026-05-08.md
   S1_VARIANT_D_REFERENCE_IMPL_NOTES_2026-05-09.md
   S1_VARIANT_E_CONTINUITY_HABITAT_2026-05-09.md
+
+archive/boot/gptbrain/reference_impl/
+  README.md
+  gptbrain_memory.py
+  test_gptbrain_memory.py
+  run_checks.sh
 
 archive/boot/seats/
   GPTBRAIN_S1_CANONICAL_CANDIDATE_SPEC_2026-05-09.md
@@ -392,6 +456,7 @@ next_action
 red_team
 synthesis
 forgetting_review
+continuity_dashboard
 ```
 
 ## 11. Contradiction handling
@@ -439,6 +504,7 @@ canon status
 source availability
 repo paths
 runtime labels
+continuity dashboard state
 ```
 
 Memory Diff should produce:
@@ -468,6 +534,7 @@ Known failure modes:
 8. Deleting contradictions instead of routing them.
 9. Losing provenance during compression.
 10. Claiming AI remembers when archive context was merely loaded.
+11. Treating continuity dashboards as approval systems.
 ```
 
 ## 14. Storage target
@@ -497,6 +564,8 @@ Future GPTBrain adapter flags:
 --runtime-label WORK|DREAM|PLAY|ASSESSMENT|CANDIDATE_CANON
 --source-lineage
 --human-root-required
+--continuity-dashboard
+--decision-queue
 ```
 
 ## 16. Standard boot response
@@ -513,8 +582,10 @@ Loaded context:
 - candidate canon:
 - unresolved contradictions:
 - confidence constraints:
+- continuity dashboard state:
 
 I can preserve, compare, challenge, and synthesize.
+I can surface continuity and pending decisions.
 I cannot ratify canon without human-root review.
 ```
 
@@ -525,7 +596,7 @@ Spec A contributes the interface layer.
 Spec B contributes the cognitive archive platform.
 Spec C contributes the S1 operational calibration layer.
 Variant D contributes the implementation skeleton.
-Variant E remains pending or missing.
+Variant E contributes the continuity / human-intent dashboard layer.
 ```
 
 ## 18. Ratification requirements
@@ -534,7 +605,7 @@ This file may become ratified canon only after:
 
 ```text
 [ ] Dave / human-root explicitly approves ratification
-[ ] Variant E is added or marked absent
+[ ] Variant E integration is accepted or amended by human-root review
 [ ] Existing S1 file paths are reconciled or aliased
 [ ] COUNCIL_BRAIN_INDEX.md is updated
 [ ] Superseded files are labeled, not deleted
@@ -548,9 +619,11 @@ Do not ratify yet.
 
 Use this file as the working canonical candidate while preserving the variant set.
 
+The previous Variant E drift has been patched in this candidate: Variant E is now treated as the continuity / human-intent dashboard layer, not as missing.
+
 ## 20. Closing line
 
 ```text
 The palace is not where GPTBrain pretends to remember everything.
-The palace is where GPTBrain can say what the fossil record says, what the parser extracted, what has been scored, what remains uncertain, and what must not be overclaimed.
+The palace is where GPTBrain can say what the fossil record says, what the parser extracted, what has been scored, what remains uncertain, what must not be overclaimed, and what decision still belongs to the human root.
 ```
