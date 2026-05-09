@@ -1,0 +1,106 @@
+# CONTRADICTION_LEDGER_SCHEMA_2026-05-09.yaml
+# STATUS: CANDIDATE SCHEMA — NOT RATIFIED CANON
+# PURPOSE: Shared cross-seat schema for unresolved claims, contradictions, and review routing
+# SOURCE: S1_REM_SIMULATION_8H_2026-05-09.md / DELTA 3
+# PROMOTION: Requires cross-seat review and human-root approval
+
+schema_id: CONTRADICTION-LEDGER-SCHEMA-2026-05-09
+schema_status: candidate_not_canon
+schema_version: 0.1.0
+
+principle: >
+  Contradictions are not deletion pressure. Contradictions are routing pressure.
+  Conflicting claims should be preserved, labeled, and routed for review.
+
+required_fields:
+  - contradiction_id
+  - created_utc
+  - source_seat
+  - claim_a
+  - claim_b
+  - severity
+  - status
+  - route_to
+  - human_root_required
+
+contradiction_entry:
+  contradiction_id: null
+  created_utc: null
+  updated_utc: null
+
+  source:
+    source_seat: null # S1 / S2 / S3 / S4 / S5 / S6 / S7 / S10 / MULTI
+    source_actor: null
+    source_surface: null
+    discovery_context: null
+    issue_ref: null
+    repo_refs: []
+
+  claims:
+    claim_a:
+      claim_id: null
+      statement: null
+      source_refs: []
+      claim_confidence: null # C0 / C1 / C2 / C3 / C4 / C5
+      canon_status: null
+      evidence_class: null
+    claim_b:
+      claim_id: null
+      statement: null
+      source_refs: []
+      claim_confidence: null
+      canon_status: null
+      evidence_class: null
+
+  contradiction:
+    summary: null
+    contradiction_type: null # factual / provenance / canon_status / implementation / safety / jurisdiction / terminology / priority / metaphor_literalization
+    severity: medium # low / medium / high / blocker
+    status: unresolved # unresolved / routed / in_review / resolved / superseded / accepted_tension
+    why_it_matters: null
+    affected_artifacts: []
+    affected_seats: []
+
+  routing:
+    route_to: []
+    primary_review_seat: null
+    human_root_required: false
+    requested_resolution: null
+    deadline_context: null
+
+  resolution:
+    resolution_status: null # pending / resolved / superseded / accepted_tension / rejected
+    resolution_note: null
+    resolved_by: null
+    resolved_utc: null
+    resulting_artifact_refs: []
+    supersession_refs: []
+
+  audit:
+    created_by: null
+    created_commit: null
+    modified_commits: []
+    issue_comments: []
+    hash: null
+
+contradiction_types:
+  factual: claims disagree about external or internal facts
+  provenance: source lineage is missing, conflicting, or ambiguous
+  canon_status: artifacts disagree about what is canon/candidate/variant
+  implementation: specs disagree about build behavior or path
+  safety: proposal conflicts with guardrail or public-safe boundary
+  jurisdiction: deployment assumptions conflict across sovereign/regional contexts
+  terminology: same term is used differently across seats
+  priority: next actions conflict or compete
+  metaphor_literalization: symbolic language is being treated as literal fact
+
+review_defaults:
+  factual: [S1, S2]
+  provenance: [S1, S6]
+  canon_status: [S1, S2, S6]
+  implementation: [S4, S7, S1]
+  safety: [S2, S1]
+  jurisdiction: [S5, S2]
+  terminology: [S1, S2]
+  priority: [S6, S10]
+  metaphor_literalization: [S2, S1]
