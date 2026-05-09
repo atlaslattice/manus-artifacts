@@ -1,0 +1,51 @@
+source_manifest:
+  adapter_id: tucker_gemini
+  status: SCAFFOLD — NOT CANON
+  runtime_label: REPO_TRACE_ONLY
+  issue: "manus-artifacts#22"
+  date: "2026-05-09"
+
+source:
+  repo: "atlaslattice/tucker-gemini-GPT-"
+  provenance_file: "ARTIFACT_PROVENANCE.md"
+  description: >
+    Tucker is a GPT-assisted public build artifact linked to the Atlas Lattice
+    governance and build methodology. Tucker is boot-visible to GPTBrain and
+    represented in seed ledgers, provenance notes, and artifact registry entries.
+
+safety_boundaries:
+  REPO_TRACE_ONLY: true
+  DRY_RUN_ONLY: true
+  MOCK_GEMINI: available for local testing only
+  LIVE_GEMINI: blocked by default
+  live_authorized: false
+  live_authorization_requires:
+    - human-root approval
+    - secrets policy
+    - adapter interface spec
+    - CI/workflow execution gate
+    - tracked in: "issue #22"
+
+provenance_distinctions:
+  - "provenance-visible does not mean executable"
+  - "boot-visible does not mean canon"
+  - "GPT/Gemini-assisted build lineage does not imply runtime dependency"
+  - "Tucker referenced is not Tucker invoked"
+  - "Gemini configured is not Gemini authorized"
+  - "Readable provenance is not executable permission"
+
+integration_status:
+  provenance_references: present
+  boot_packet_visibility: present
+  artifact_registry_entries: present
+  gemini_backend_context: noted
+  executable_import_call_paths: absent — deferred to issue #22
+  ci_execution_against_gemini: absent — deferred to issue #22
+  adapter_interface_contract: absent — deferred to issue #22
+  human_root_gate_for_live: absent — deferred to issue #22
+
+follow_up:
+  - "Add Tucker adapter tests to CI after PR #15 stabilizes (issue #22)"
+  - "Add claim/artifact registry entries for adapter scaffold with commit SHA"
+  - "Mirror issue #22 into Tucker repo provenance (Tucker-side action)"
+  - "Keep live Gemini disabled until human-root approval and secrets policy exist"
