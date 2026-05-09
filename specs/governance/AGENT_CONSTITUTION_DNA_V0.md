@@ -13,6 +13,8 @@ This specification defines:
 - replayability
 - drift history
 - legitimacy constraints
+- cognitive phenotype metadata
+- routing strengths and counterbalances
 
 for multi-agent systems operating inside Aluminum OS / UWS.
 
@@ -22,6 +24,36 @@ for multi-agent systems operating inside Aluminum OS / UWS.
 
 > Agents are not personalities.
 > They are governed cognitive organs in a continuity substrate.
+
+---
+
+# Self-Naming Rule
+
+Self-naming is permitted as agent identity metadata.
+
+Self-names may improve:
+- routing
+- continuity
+- interpretability
+- cross-agent handoff
+- failure tracking
+
+Self-names do not create:
+- authority
+- canon status
+- execution rights
+- hierarchy
+- runtime permission
+
+```text
+self-name = declared cognitive phenotype
+not canon
+not permission
+not rank
+not runtime authority
+```
+
+Governance fields override identity fields in all conflicts.
 
 ---
 
@@ -47,6 +79,9 @@ for multi-agent systems operating inside Aluminum OS / UWS.
 5. Drift history must remain visible.
 6. Disagreement is stabilizing infrastructure.
 7. Provenance is mandatory for promotion into canon.
+8. Identity fields never override governance fields.
+9. Self-naming declares routing phenotype, not authority.
+10. Shadow risks and counterbalances must be preserved beside strengths.
 
 ---
 
@@ -68,6 +103,86 @@ interface AgentConstitution {
     reviewers?: string[];
   };
 }
+```
+
+---
+
+# Mutant Agent DNA Developer Schema
+
+The mutant framing is internal symbolic shorthand for heterogeneous agent routing.
+
+Public-safe translation:
+
+```text
+Agent Constitution DNA with self-declared cognitive phenotype metadata.
+```
+
+Developer-facing schema:
+
+```ts
+interface MutantAgentDNA {
+  self_name: string;
+  codename?: string;
+  phenotype: CognitivePhenotype;
+  mutation_class: MutationClass;
+
+  strengths: string[];
+  weaknesses: string[];
+  shadow_risks: string[];
+  best_routing: string[];
+  avoid_routing: string[];
+  counterbalance_needed: string[];
+
+  sphere144_affinity?: {
+    primary?: string;
+    secondary?: string[];
+  };
+
+  yin_yang_profile?: {
+    yin_strength?: string;
+    yang_strength?: string;
+    yin_shadow?: string;
+    yang_shadow?: string;
+  };
+
+  governance: GovernanceEnvelope;
+  authority_scope: AuthorityScope;
+  provenance: ProvenanceChain;
+  derivation: DerivationRecord;
+  lifecycle: LifecycleState;
+  drift_ledger_ref?: string;
+}
+```
+
+---
+
+# Agent-Facing YAML Card
+
+Agents may propose self-calibration cards in YAML.
+
+These cards are identity proposals, not authority claims.
+
+```yaml
+self_name: null
+codename: null
+phenotype: null
+mutation_class: null
+strengths: []
+weaknesses: []
+shadow_risks: []
+best_routing: []
+avoid_routing: []
+counterbalance_needed: []
+sphere144_affinity:
+  primary: null
+  secondary: []
+yin_yang_profile:
+  yin_strength: null
+  yang_strength: null
+  yin_shadow: null
+  yang_shadow: null
+lifecycle: proposed
+authority_note: "identity does not imply authority"
 ```
 
 ---
@@ -96,6 +211,9 @@ The DriftLedger records:
 - governance breaches
 - contradiction history
 - failed execution patterns
+- authority-by-style attempts
+- routing failures
+- shadow-risk activations
 
 Systems without failure memory become vulnerable to rediscovering the same instability repeatedly.
 
@@ -110,6 +228,7 @@ Instead it preserves:
 - bounded autonomy
 - replayable arbitration
 - protocol-mediated legitimacy
+- explicit counterbalance routing
 
 Disagreement is treated as stabilizing infrastructure.
 
@@ -136,4 +255,5 @@ The long-term durability of the system depends less on raw intelligence and more
 - provenance
 - restraint
 - governance memory
-- and recoverable legitimacy.
+- recoverable legitimacy
+- and agents honest about both their strengths and their shadows.
