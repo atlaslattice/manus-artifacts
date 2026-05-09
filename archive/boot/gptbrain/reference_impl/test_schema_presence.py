@@ -13,6 +13,13 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+import pytest
+
+try:
+    import yaml
+except ImportError:  # pragma: no cover
+    yaml = None
+
 
 GPTBRAIN_ROOT = Path(__file__).resolve().parents[1]
 REPO_ROOT = Path(__file__).resolve().parents[4]
@@ -69,15 +76,15 @@ def test_canonical_candidate_integrates_variant_e() -> None:
 
 def test_agent_dna_schema_includes_constitutional_fields() -> None:
     schema = (GPTBRAIN_ROOT / "AGENT_DNA_SCHEMA_DRAFT.yaml").read_text(encoding="utf-8")
-    required_block = schema.split("required_fields:")[1].split("fields:")[0]
-    for field in [
-        "boot_contract",
-        "simulation_origin",
-        "constitutional_status",
-        "failure_ledger_ref",
-    ]:
-        assert f"  - {field}" in required_block
-        assert f"  {field}:" in schema
+    if yaml is None:
+        pytest.skip("PyYAML unavailable; skipping structured schema parse.")
+
+    parsed = yaml.safe_load(schema)
+    required_fields = set(parsed.get("required_fields", []))
+    field_defs = set(parsed.get("fields", {}).keys())
+    for field in {"boot_contract", "simulation_origin", "constitutional_status", "failure_ledger_ref"}:
+        assert field in required_fields
+        assert field in field_defs
 
 
 def test_lifecycle_seed_profiles_cover_multiple_states_and_are_examples() -> None:
