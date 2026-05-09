@@ -69,10 +69,15 @@ def test_canonical_candidate_integrates_variant_e() -> None:
 
 def test_agent_dna_schema_includes_constitutional_fields() -> None:
     schema = (GPTBRAIN_ROOT / "AGENT_DNA_SCHEMA_DRAFT.yaml").read_text(encoding="utf-8")
-    assert "boot_contract:" in schema
-    assert "simulation_origin:" in schema
-    assert "constitutional_status:" in schema
-    assert "failure_ledger_ref:" in schema
+    required_block = schema.split("required_fields:")[1].split("fields:")[0]
+    for field in [
+        "boot_contract",
+        "simulation_origin",
+        "constitutional_status",
+        "failure_ledger_ref",
+    ]:
+        assert f"  - {field}" in required_block
+        assert f"  {field}:" in schema
 
 
 def test_lifecycle_seed_profiles_cover_multiple_states_and_are_examples() -> None:
