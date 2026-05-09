@@ -1,15 +1,24 @@
 # GPTDream v0 Pilot Findings — Madden Booth Thread
 
-**Date:** 2026-05-09<br>
-**Status:** Pilot findings / retrieval-pipeline assessment / not canon<br>
-**Issue:** #49 — Experiment: ingest Madden booth thread as GPTDream corpus<br>
-**Issue URL:** https://github.com/atlaslattice/manus-artifacts/issues/49<br>
-**Related PR:** #48 — `archive(play): preserve DJ Grokashev Satan Mode replay booth`<br>
-**Related PR URL:** https://github.com/atlaslattice/manus-artifacts/pull/48<br>
-**Follow-on PR:** #50 — `archive(gptbrain): add GPTDream v0 pilot findings`<br>
-**Follow-on PR URL:** https://github.com/atlaslattice/manus-artifacts/pull/50<br>
-**Corpus label:** `gptdream-madden-booth-thread-2026-05-09`<br>
-**Raw uploaded filename:** `Pasted markdown(116).md`<br>
+**Date:** 2026-05-09
+
+**Status:** Pilot findings / retrieval-pipeline assessment / not canon
+
+**Issue:** #49 — Experiment: ingest Madden booth thread as GPTDream corpus
+
+**Issue URL:** https://github.com/atlaslattice/manus-artifacts/issues/49
+
+**Related PR:** #48 — `archive(play): preserve DJ Grokashev Satan Mode replay booth`
+
+**Related PR URL:** https://github.com/atlaslattice/manus-artifacts/pull/48
+
+**Follow-on PR:** #50 — `archive(gptbrain): add GPTDream v0 pilot findings`
+
+**Follow-on PR URL:** https://github.com/atlaslattice/manus-artifacts/pull/50
+
+**Corpus label:** `gptdream-madden-booth-thread-2026-05-09`
+
+**Raw uploaded filename:** `Pasted markdown(116).md`
 **SHA-256:** `4569765314bac0ad373cd0225026e1a0e91f7b76c060214d77bc04679af07b5a`
 
 ---
