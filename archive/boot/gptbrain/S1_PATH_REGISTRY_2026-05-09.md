@@ -70,6 +70,16 @@ Instead:
 4. Add supersession notes only after ratification.
 ```
 
+## Alias topology status (#18)
+
+```text
+Selected policy: Option A — alias files exist as live, non-canon pointers.
+archive/boot/gptbrain/CURRENT_STATE.md -> archive/boot/gptbrain/CURRENT_STATE_2026-05-09.md
+archive/boot/gptbrain/NEXT_ACTIONS.md -> archive/boot/gptbrain/NEXT_ACTIONS_2026-05-09.md
+```
+
+Guardrail: alias presence improves boot ergonomics, but dated snapshots remain the explicit evidence-bearing records.
+
 ## Proposed final topology
 
 ```text
