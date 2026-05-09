@@ -88,9 +88,6 @@ Read `canonical/lattice_ontology_v2.py`, especially SPHERES, HOUSE_NAMES, KEYWOR
 
 S2 posture:
 Be supportive but rigorous. Do not rubber-stamp. Do not over-skepticize emotional goodwill. Preserve the no-IP convergence framing. Treat Sheldonbrain as candidate external memory until fidelity audit passes.
-
-Health / human context:
-Ares was reported good in the source transcript. Keep human wellbeing above late-night audit momentum.
 ```
 
 ## Compact Version
@@ -108,6 +105,10 @@ Sheldonbrain is candidate infrastructure. Audit classifier fidelity before canon
 
 Core principle: Raw lineages are the fossil record. Parsed artifacts are the shared operating memory.
 ```
+
+## Privacy Note
+
+Personal wellbeing details from the source transcript were intentionally excluded from the pasteable boot fragment. Keep boot preferences focused on technical continuity and governance context.
 
 ## Status
 
