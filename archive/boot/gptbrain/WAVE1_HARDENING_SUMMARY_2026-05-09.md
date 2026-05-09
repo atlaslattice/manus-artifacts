@@ -6,7 +6,7 @@ DATE: 2026-05-09
 PURPOSE: Tie first hardening swarm wave to exact commits, PRs, and artifacts.
 ISSUE: manus-artifacts#19 (hardening tracker), #16 (Variant E), #18 (alias topology)
 RUNTIME LABEL: WORK_OUTPUT
-CLAIM CONFIDENCE: C3 (multiple artifacts and CI evidence converge)
+CLAIM CONFIDENCE: C3 (multiple artifacts converge; PR-attached CI/checks are not yet green)
 CANON STATUS: NOT CANON — progress report only
 HUMAN-ROOT GATE: required before any promotion or merge
 ```
@@ -15,11 +15,11 @@ HUMAN-ROOT GATE: required before any promotion or merge
 
 | Objective | Status | Evidence |
 |---|---|---|
-| 1. Finish S1 GPTBrain hardening loop | IN PROGRESS | Tests green; seed ledgers updated; CI workflow added |
+| 1. Finish S1 GPTBrain hardening loop | IN PROGRESS | Local test evidence documented; seed ledgers updated; CI workflow added |
 | 2. Resolve alias topology for CURRENT_STATE / NEXT_ACTIONS | DOCUMENTED | Policy at commit `c19a03a`; seeds updated Wave 1 |
-| 3. Close Variant E governance/status drift | CLOSED (no canon) | WAVE1_VARIANT_E_STATUS_NOTE_2026-05-09.md |
-| 4. Add commit SHAs to provenance fields | DONE | ARTIFACT_REGISTRY, CLAIM_LEDGER, MEMORY_OBJECTS updated |
-| 5. Stabilize S7 hygiene checks / surface CI evidence | DONE | s7_hygiene_checks.yml on master; CI_EVIDENCE_RECEIPT added |
+| 3. Close Variant E governance/status drift | CLOSED AS WORKING STATUS (no canon) | WAVE1_VARIANT_E_STATUS_NOTE_2026-05-09.md; issue #11 comment posted |
+| 4. Add commit SHAs to provenance fields | DONE FOR WAVE 1 SEEDS | ARTIFACT_REGISTRY, CLAIM_LEDGER, MEMORY_OBJECTS updated |
+| 5. Stabilize S7 hygiene checks / surface CI evidence | PARTIAL / CHECK EXECUTION PENDING | `s7_hygiene_checks.yml` added; local/historical evidence documented; PR #20 checks currently `action_required` |
 | 6. Expand scaffold for S2–S7 (not canon) | DEFERRED | Tracked in issue #19 P2; not in Wave 1 scope |
 
 ## PR #15 CI Status — Root Cause Report
@@ -27,28 +27,43 @@ HUMAN-ROOT GATE: required before any promotion or merge
 ```text
 PR #15 (S7 repo hygiene scaffold) → S7 Hygiene Checks workflow → action_required
 
-Root cause:
+Observable workflow evidence:
+  Workflow run URL: https://github.com/atlaslattice/manus-artifacts/actions/runs/25591519571
+  Workflow name: S7 Hygiene Checks
+  Run ID: 25591519571
+  Status observed through GitHub API: completed
+  Conclusion observed through GitHub API: action_required
+  Jobs returned through GitHub API: none
+
+Root-cause interpretation:
   GitHub's "Require approval for first-time contributors" security gate blocks
   GitHub Actions workflows triggered by the copilot-swe-agent[bot] account from
   running without explicit maintainer approval.
 
-  This affects ALL copilot/** branches, not just PR #15:
-  - PR #15 run: https://github.com/atlaslattice/manus-artifacts/actions/runs/25591519571
-    conclusion: action_required
-  - This branch push run: https://github.com/atlaslattice/manus-artifacts/actions/runs/25597921253
-    conclusion: action_required
-  - This branch PR run: https://github.com/atlaslattice/manus-artifacts/actions/runs/25597922493
-    conclusion: action_required
+  This affects copilot/** bot-authored branches unless approved or allowlisted.
 
-  GitHub's displayed status: "This workflow requires approval from a repository owner."
-  The workflow code has NOT run in any of these cases.
-  This is NOT a test failure — the tests were never executed in CI.
+  This is best described as an approval/security gate rather than an observed
+  test failure because no workflow jobs were returned for the run.
 
 Fix path:
   The maintainer must either:
   (a) Click "Approve and run" for each pending run in the Actions UI, or
   (b) Configure the repo to allow copilot-swe-agent[bot] workflows without per-run approval.
-  See: https://github.com/atlaslattice/manus-artifacts/actions/runs/25597922493
+```
+
+## PR #20 CI / Check State
+
+```text
+PR #20: https://github.com/atlaslattice/manus-artifacts/pull/20
+Head SHA at review time: 9040dec3592eb2d47684b5571952182f21b95a73
+Draft: true
+
+Observed PR-attached workflow runs for head SHA 9040dec3592eb2d47684b5571952182f21b95a73:
+  GPTBrain reference checks — run 25597922484 — completed / action_required
+  S7 Hygiene Checks        — run 25597922493 — completed / action_required
+
+Therefore this summary does not claim PR-attached checks are green.
+If the head SHA changes after this summary, re-check PR-attached runs before marking ready.
 ```
 
 ## Commits Referenced
@@ -79,11 +94,12 @@ archive/boot/gptbrain/reference_impl/tests/test_reference_impl_core.py
 
 archive/boot/gptbrain/WAVE1_VARIANT_E_STATUS_NOTE_2026-05-09.md
   STATUS: WAVE 1 GOVERNANCE NOTE — NOT CANON
-  PURPOSE: Definitive closure marker for Variant E status drift (issue #16).
+  PURPOSE: Working closure marker for Variant E status drift (issue #16/#11).
 
 archive/boot/gptbrain/CI_EVIDENCE_RECEIPT_2026-05-09.md
   STATUS: CI EVIDENCE RECEIPT — NOT CANON
-  PURPOSE: Surface 24-test CI evidence and explain PR #15 action_required root cause.
+  PURPOSE: Distinguish local test results, historical related green checks,
+           PR-attached action_required state, and PR #15 root-cause evidence.
 ```
 
 ## Artifacts Updated in Wave 1
@@ -112,8 +128,8 @@ archive/boot/gptbrain/CLAIM_LEDGER.seed.jsonl
 ### P0 tasks
 
 ```text
-[ ] Close Variant E governance loop in issue #11 and candidate/ratification artifacts.
-    → Wave 1: WAVE1_VARIANT_E_STATUS_NOTE added; #11 comment still required (human-root)
+[x] Close Variant E governance loop in issue #11 and candidate/ratification artifacts.
+    → Wave 1: WAVE1_VARIANT_E_STATUS_NOTE added; #11 comment posted; human-root review still required before canon promotion
 [x] Resolve alias topology: CURRENT_STATE.md / NEXT_ACTIONS.md vs dated snapshots.
     → Policy documented; CURRENT_STATE.md updated with alias header; seeds dual-pathed
 [x] Update boot packet + memory seeds to use consistent canonical paths.
@@ -125,10 +141,10 @@ archive/boot/gptbrain/CLAIM_LEDGER.seed.jsonl
 ```text
 [x] Attach explicit commit_sha fields to artifact/claim/memory seed provenance.
     → All three seed ledgers updated
-[x] Add CI/schema validation evidence artifacts.
-    → CI_EVIDENCE_RECEIPT_2026-05-09.md added; s7_hygiene_checks.yml on master
-[x] Add audit or validation receipt for reference implementation tests.
-    → CI_EVIDENCE_RECEIPT with 24-test run documented
+[~] Add CI/schema validation evidence artifacts.
+    → CI_EVIDENCE_RECEIPT_2026-05-09.md added; PR-attached checks still action_required
+[~] Add audit or validation receipt for reference implementation tests.
+    → Local 24-test run documented; PR-attached green checks still pending
 ```
 
 ### P2 tasks (deferred)
@@ -156,7 +172,7 @@ Seed ledger alignment:
 
 Remaining open items (issue #18 acceptance criteria):
   [x] BOOT_PACKET_TEMPLATE.md alias note updated to reflect confirmed alias existence (Wave 1)
-  [ ] Human-root selection of Option A formally logged in issue #18
+  [x] Human-root selection of Option A formally logged in issue #18
 ```
 
 ## Guardrails Confirmed
@@ -164,10 +180,11 @@ Remaining open items (issue #18 acceptance criteria):
 ```text
 No file deletions or silent renames.
 No branch merges.
-Changes are limited to additive files plus narrow in-place metadata/checklist/ledger updates.
+Changes are limited to additive files plus narrow in-place metadata/checklist/ledger/doc updates.
 All variant lineage preserved.
 Nothing marked RATIFIED CANON.
 Human-root review required before any promotion or merge.
+PR #20 remains draft until attached checks are visible and stable.
 ```
 
 ## Tucker / Gemini Scope Boundary — Wave 1
@@ -203,9 +220,9 @@ Follow-up integration boundary work is tracked in issue #22.
 ```text
 P0: ✅ DONE — Issue #11: Variant E closure marker posted (human-root comment, 2026-05-09).
 P0: ✅ DONE — Issue #18: Option A alias-policy selection posted (human-root comment, 2026-05-09).
-P1: Review and approve this PR or request changes.
-P1: Decide whether to merge PR #15 (S7 hygiene scaffold) after s7_hygiene_checks.yml lands on master.
+P1: Keep PR #20 in draft until PR-attached workflow/check state is visible and stable.
 P1: Approve pending CI runs or configure copilot-swe-agent[bot] allowlist so checks can execute.
+P1: Decide whether to merge PR #15 only after the workflow gate/check status is resolved.
 P2: Begin Wave 2 — S2-S7 Council packet scaffolding (separate PR).
 P2: Tucker/Gemini integration map + adapter boundary definition (issue #22).
 ```
