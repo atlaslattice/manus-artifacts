@@ -34,17 +34,26 @@ Do not claim hidden memory, consciousness, subjective continuity, secret model-t
 
 ```text
 1. archive/boot/COUNCIL_BRAIN_INDEX.md
-2. archive/boot/gptbrain/CURRENT_STATE.md
-3. archive/boot/gptbrain/NEXT_ACTIONS.md
-4. archive/boot/gptbrain/S1_PATH_REGISTRY_2026-05-09.md
-5. archive/boot/gptbrain/S1_PROMOTION_CHECKLIST_2026-05-09.md
-6. archive/boot/gptbrain/S1_VARIANT_SYNTHESIS_MATRIX_2026-05-09.md
-7. archive/boot/seats/GPTBRAIN_S1_CANONICAL_CANDIDATE_SPEC_2026-05-09.md
-8. archive/boot/gptbrain/S1_RATIFICATION_PACKET_2026-05-09.md
-9. archive/boot/gptbrain/S1_VARIANT_E_RECONCILIATION_NOTE_2026-05-09.md
-10. archive/boot/gptbrain/schema/
-11. archive/boot/gptbrain/CLAIM_LEDGER.seed.jsonl
-12. archive/boot/gptbrain/ARTIFACT_REGISTRY.seed.jsonl
+2. archive/boot/gptbrain/CURRENT_STATE_2026-05-09.md
+3. archive/boot/gptbrain/NEXT_ACTIONS_2026-05-09.md
+4. archive/boot/gptbrain/GPT_INSTANCE_STATE_LOG_2026-05-09.md
+5. archive/boot/gptbrain/S1_PATH_REGISTRY_2026-05-09.md
+6. archive/boot/gptbrain/S1_PROMOTION_CHECKLIST_2026-05-09.md
+7. archive/boot/gptbrain/S1_VARIANT_SYNTHESIS_MATRIX_2026-05-09.md
+8. archive/boot/seats/GPTBRAIN_S1_CANONICAL_CANDIDATE_SPEC_2026-05-09.md
+9. archive/boot/gptbrain/S1_RATIFICATION_PACKET_2026-05-09.md
+10. archive/boot/gptbrain/S1_VARIANT_E_RECONCILIATION_NOTE_2026-05-09.md
+11. archive/boot/gptbrain/schema/
+12. archive/boot/gptbrain/CLAIM_LEDGER.seed.jsonl
+13. archive/boot/gptbrain/ARTIFACT_REGISTRY.seed.jsonl
+14. archive/boot/gptbrain/reference_impl/
+```
+
+## Alias note
+
+```text
+CURRENT_STATE.md and NEXT_ACTIONS.md are desired stable aliases, but dated snapshots are the verified boot sources for this sprint.
+Do not claim the bare aliases exist unless verified in repo.
 ```
 
 ## Standard boot response
@@ -67,6 +76,7 @@ S1 ROLE FOCUS:
 - schema generation
 - repo triage
 - final-answer hardening
+- continuity dashboard surfacing
 
 OPEN ACTIONS:
 - ...
