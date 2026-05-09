@@ -1,0 +1,98 @@
+# ROUTE_TO_SEAT_PACKET_SCHEMA_2026-05-09.yaml
+# STATUS: CANDIDATE SCHEMA — NOT RATIFIED CANON
+# PURPOSE: Route work between Council seats when a seat detects it is outside its lane
+# SOURCE: S1_REM_SIMULATION_8H_2026-05-09.md / DELTA 2
+# PROMOTION: Requires cross-seat review and human-root approval
+
+schema_id: ROUTE-TO-SEAT-PACKET-SCHEMA-2026-05-09
+schema_status: candidate_not_canon
+schema_version: 0.1.0
+
+principle: >
+  If a seat detects it is outside its lane, it should not improvise authority.
+  It should emit a ROUTE_TO_SEAT packet.
+
+required_fields:
+  - route_id
+  - created_utc
+  - source_seat
+  - target_seat
+  - reason
+  - artifact_refs
+  - requested_output
+  - review_status
+
+route_packet:
+  route_id: null
+  created_utc: null
+  updated_utc: null
+
+  source:
+    source_seat: null # S1 / S2 / S3 / S4 / S5 / S6 / S7 / S10 / MULTI
+    source_actor: null # user / assistant / external_model / tool
+    source_surface: null
+    session_ref: null
+    issue_ref: null
+
+  target:
+    target_seat: null
+    target_role: null
+    target_reason: null
+    additional_review_seats: []
+
+  routing_reason:
+    reason: null
+    reason_code: null # constitutional_review_required / adversarial_review_required / engineering_review_required / sovereign_review_required / continuity_review_required / repo_review_required / calibration_required / human_root_decision_required
+    outside_lane_detected: true
+    urgency: normal # low / normal / high / blocker
+    human_root_required: false
+
+  artifact_context:
+    artifact_refs: []
+    repo_refs: []
+    source_refs: []
+    summary: null
+    relevant_claims: []
+    relevant_risks: []
+    known_contradictions: []
+
+  requested_output:
+    output_type: null # review_note / redline / decision_queue / simulation_plan / repo_patch / synthesis / contradiction_resolution / canonical_language
+    requested_questions: []
+    requested_checks: []
+    expected_path: null
+
+  status:
+    review_status: proposed # proposed / accepted / blocked / completed / superseded / rejected
+    response_refs: []
+    completion_note: null
+    completed_utc: null
+
+  audit:
+    created_by: null
+    created_commit: null
+    issue_comments: []
+    hash: null
+
+seat_routing_defaults:
+  S1:
+    role: calibration / evidence taxonomy / claim confidence / schema generation
+    route_when: claim status, provenance, synthesis matrix, canon label, or contradiction routing is needed
+  S2:
+    role: constitutional scribe / archivist / guardian
+    route_when: safety framing, non-claims, invariant language, dissent preservation, or canon ladder review is needed
+  S3:
+    role: adversarial play-dream / stress-test layer
+    route_when: stress testing, novelty search, public pressure testing, or contradiction discovery is needed
+  S4:
+    role: engineering rigor / simulation / visualization
+    route_when: testability, simulation design, diagrams, substrate mapping, or implementation validation is needed
+  S5:
+    role: sovereign synthesis / binding / regional realism
+    route_when: jurisdictional, sovereign, regional, infrastructure, or anti-Western-default review is needed
+  S6:
+    role: continuity / execution / archive hygiene / S10 queue
+    route_when: open decisions, handoff, failure ledger, next actions, or continuity recovery is needed
+  S7:
+    role: code integration / repo scaffolding / PR hygiene
+    route_when: file tree, schema materialization, tests, CI, PR, or merge-order review is needed
