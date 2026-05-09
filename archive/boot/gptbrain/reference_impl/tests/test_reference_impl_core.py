@@ -105,7 +105,7 @@ def test_recall_excludes_archived_by_default() -> None:
 
     Note: the scoring function applies a -2 penalty to archived memories, so even
     when include_archived=True a memory with a low base score will be filtered by
-    the score > 0 threshold. This test verifies only the default-exclusion behaviour.
+    the score > 0 threshold. This test verifies only the default-exclusion behavior.
     """
     palace = DreamMemoryPalace()
     active = palace.remember(make_claim("Active claim", "This is active.", "GPTBrain"))
