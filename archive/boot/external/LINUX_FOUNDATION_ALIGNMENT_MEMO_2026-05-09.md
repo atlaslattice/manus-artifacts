@@ -3,6 +3,7 @@
 ```text
 STATUS: CANDIDATE — STRATEGIC FRAMING
 EPISTEMIC STATUS: EXPLORATORY — NOT OUTREACH — NOT SUBMITTED
+ALIGNMENT ASSESSMENT: INTERNAL, EXPLORATORY, NOT REVIEWED BY LF
 SOURCE: Copilot strategic framing memo supplied by Dave
 CANON STATUS: NOT RATIFIED
 OUTREACH STATUS: NOT A COMMUNICATION / NOT SENT / NOT SUBMITTED
@@ -14,10 +15,12 @@ PURPOSE: Internal articulation of how the Atlas Lattice could align with future 
 
 The Atlas Lattice is an **open, forkable governance and interoperability substrate** designed to support the emerging ecosystem of **agentic computing**, **multi-model AI systems**, and **ecologically accountable infrastructure**.
 
-This memo outlines how the Lattice’s architectural principles align with the long-standing values and stewardship patterns of the **Linux Foundation**, **LF AI & Data**, and **CNCF**.
+This memo outlines how the Lattice’s architectural principles may align with long-standing values and stewardship patterns associated with the **Linux Foundation**, **LF AI & Data**, and **CNCF**.
 
 This is **not** a proposal for partnership, endorsement, or submission.
 It is a **strategic framing document** to clarify how the Lattice could eventually fit into a neutral, community-governed foundation model.
+
+No claim is made that the Linux Foundation, LF AI & Data, CNCF, or any related body has reviewed, endorsed, accepted, or prioritized this architecture. Any future foundation would make its own determination based on its governance processes, project criteria, community needs, and existing ecosystem overlap.
 
 ## 2. Alignment With Open Governance Principles
 
