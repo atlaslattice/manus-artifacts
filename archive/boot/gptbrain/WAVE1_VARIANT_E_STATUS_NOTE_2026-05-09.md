@@ -97,8 +97,15 @@ This matches the canonical candidate and closure status. No contradiction.
 
 ## Remaining Gap
 
-Issue #11 needs a closure comment for Variant E. This is a human-root coordination item,
-not a code change. It is tracked as a remaining item for the human-root to action.
+The one open acceptance criterion above is:
+
+```text
+[ ] Issue #11 has a closure comment for Variant E.
+```
+
+This is a human-root coordination item, not a code change.
+The human-root should leave a comment on issue #11 referencing this note and the
+closure status at `archive/boot/gptbrain/S1_VARIANT_E_CLOSURE_STATUS_2026-05-09.md`.
 
 ## Guardrails Confirmed
 
