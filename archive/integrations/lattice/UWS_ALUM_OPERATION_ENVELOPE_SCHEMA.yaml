@@ -1,0 +1,86 @@
+schema: UWS_ALUM_OPERATION_ENVELOPE_SCHEMA
+version: 0.1
+status: public_schema_not_canon
+created_utc: '2026-05-09'
+purpose: >-
+  Define a consent-aware, audit-ready envelope for future UWS/alum provider operations
+  routed through Aluminum OS / Council Brain / GPTBrain integration paths.
+
+required_fields:
+  - operation_id
+  - surface
+  - intent
+  - provider
+  - resource_type
+  - action
+  - requires_confirmation
+  - human_approved
+  - result_status
+  - audit_required
+  - source_refs
+  - evidence_boundary
+
+operation:
+  operation_id: null
+  created_utc: null
+  requested_by: human / agent / council_seat / automation
+  requesting_seat: null
+  surface: alum / uws / alexandria / direct_provider / github_connector / drive_connector / other
+  intent: null
+  provider: google / microsoft / apple / android / chrome / github / notion / slack / linear / local / other
+  resource_type: mail / calendar / drive / contacts / docs / sheets / slides / repo / issue / pr / memory / task / other
+  action: read / write / send / create / update / delete / sync / search / ingest / export / summarize
+
+risk_and_consent:
+  requires_confirmation: true
+  human_approved: false
+  confirmation_record: null
+  high_impact: false
+  external_send_or_share: false
+  destructive_or_irreversible: false
+  privacy_scope: public / private / mixed / redacted / unknown
+  data_classification: public / internal / sensitive / personal / regulated / unknown
+
+execution:
+  mode: dry_run / planned / executed / blocked / failed
+  auth_context: unavailable / connector / local_cli / service_account / user_oauth / unknown
+  connector_available: false
+  command_preview: null
+  provider_request_preview: null
+  result_status: planned / dry_run / executed / failed / blocked
+  result_ref: null
+  error: null
+
+provenance:
+  source_refs: []
+  artifact_refs: []
+  repo_refs: []
+  commit_sha: null
+  pr_number: null
+  issue_number: null
+  audit_event_ref: null
+
+council_review:
+  s1_claim_calibration: pending / complete / not_required
+  s3_adversarial_review: pending / complete / not_required
+  s5_sovereignty_review: pending / complete / not_required
+  s7_code_review: pending / complete / not_required
+  s10_ruling_required: true
+  human_root_required: true
+
+forbidden_escalations:
+  - memory_as_authorization
+  - parser_output_as_fact
+  - dry_run_as_execution
+  - candidate_spec_as_deployment
+  - connector_available_without_verification
+  - write_without_confirmation
+  - private_source_as_public_evidence
+
+evidence_boundary:
+  - Repo files are source artifacts.
+  - Source maps are retrieval aids.
+  - Integration specs are candidate architecture.
+  - Boot packets are context aids.
+  - Runtime integration requires code, tests, CI, and human-root approval.
+  - Memory can inform action but cannot authorize action by itself.
