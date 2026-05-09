@@ -170,12 +170,42 @@ Nothing marked RATIFIED CANON.
 Human-root review required before any promotion or merge.
 ```
 
+## Tucker / Gemini Scope Boundary — Wave 1
+
+```text
+STATUS: SCOPE NOTE — NOT CANON
+PURPOSE: Clarify Tucker/Gemini integration boundaries for this PR.
+
+Tucker and Gemini are represented in GPTBrain provenance and boot context only.
+This PR does not claim runtime invocation, adapter completion, CI execution
+against Gemini, or authorized live integration.
+
+Safe claim for PR #20:
+  Tucker/Gemini lineage is represented in GPTBrain provenance and boot context;
+  no runtime integration is claimed by this PR.
+
+Follow-up integration boundary work is tracked in issue #22.
+```
+
+| Layer | Status in PR #20 |
+|---|---|
+| Provenance references | represented |
+| Boot packet visibility | represented |
+| Artifact registry entries | represented |
+| Gemini as council/backend context | noted |
+| Executable import/call paths | NOT PRESENT — deferred to issue #22 |
+| CI/workflow execution against Gemini | NOT PRESENT — deferred to issue #22 |
+| Adapter interface / config contract | NOT PRESENT — deferred to issue #22 |
+| Human-root gate for live integration | NOT PRESENT — deferred to issue #22 |
+
 ## Recommended Next Moves
 
 ```text
-P0: Leave a closure comment on issue #11 for Variant E (human-root action).
-P0: Comment on issue #18 selecting Option A alias policy officially (human-root action).
+P0: ✅ DONE — Issue #11: Variant E closure marker posted (human-root comment, 2026-05-09).
+P0: ✅ DONE — Issue #18: Option A alias-policy selection posted (human-root comment, 2026-05-09).
 P1: Review and approve this PR or request changes.
 P1: Decide whether to merge PR #15 (S7 hygiene scaffold) after s7_hygiene_checks.yml lands on master.
+P1: Approve pending CI runs or configure copilot-swe-agent[bot] allowlist so checks can execute.
 P2: Begin Wave 2 — S2-S7 Council packet scaffolding (separate PR).
+P2: Tucker/Gemini integration map + adapter boundary definition (issue #22).
 ```

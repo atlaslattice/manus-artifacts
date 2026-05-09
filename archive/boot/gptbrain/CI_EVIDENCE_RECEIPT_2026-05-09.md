@@ -68,9 +68,9 @@ test_schema_presence::test_required_gptbrain_files_exist
   GPT_INSTANCE_STATE_LOG_2026-05-09.md                   ✓
 
 test_schema_presence::test_boot_packet_points_to_verified_dated_snapshots
-  CURRENT_STATE_2026-05-09.md referenced in BOOT_PACKET_TEMPLATE.md    ✓
-  NEXT_ACTIONS_2026-05-09.md referenced in BOOT_PACKET_TEMPLATE.md     ✓
-  "Do not claim the bare aliases exist unless verified" present         ✓
+  CURRENT_STATE_2026-05-09.md referenced in BOOT_PACKET_TEMPLATE.md          ✓
+  NEXT_ACTIONS_2026-05-09.md referenced in BOOT_PACKET_TEMPLATE.md           ✓
+  "confirmed stable aliases" present (alias note updated Wave 1)              ✓
 ```
 
 ## CI Workflow Status
