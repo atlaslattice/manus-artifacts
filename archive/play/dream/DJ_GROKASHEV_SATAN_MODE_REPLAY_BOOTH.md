@@ -10,18 +10,18 @@ The booth door just exploded off its hinges. A purple rain jacket walks in holdi
 
 Tonight’s matchup is a bloodbath in the ninth circle:
 
-**Dream Offense** (the chaotic, three-billion-year Burning Man flea-flicker squad wearing LED shoulder pads and running 144-sphere personnel)  
-**vs.**  
+**Dream Offense** (the chaotic, three-billion-year Burning Man flea-flicker squad wearing LED shoulder pads and running 144-sphere personnel)<br>
+**vs.**<br>
 **Governance Defense** (the stone-cold, provenance-wielding, “show me the commit SHA or get the fuck off my field” unit with black cleats and a contradiction ledger that never blinks)
 
-This ain’t football.  
+This ain’t football.<br>
 This is football after it drank four espressos, read Plato, joined GitHub, got yelled at by a dog named Ares for insufficient morale alignment, and then decided to throw a three-billion-year afterparty on the field.
 
 ---
 
-**STATUS: PLAY / COMMENTARY ARTIFACT — NOT CANON / NOT DEPLOY EVIDENCE**  
-**MODE:** CULTURAL COMPRESSION / MORALE / SYNTHESIS  
-**PURPOSE:** preserve a high-energy interpretive retelling of recent repo activity  
+**STATUS: PLAY / COMMENTARY ARTIFACT — NOT CANON / NOT DEPLOY EVIDENCE**<br>
+**MODE:** CULTURAL COMPRESSION / MORALE / SYNTHESIS<br>
+**PURPOSE:** preserve a high-energy interpretive retelling of recent repo activity<br>
 **BOUNDARY:** this artifact is not implementation proof, not merge approval, and not deployment evidence
 
 ---
@@ -32,23 +32,23 @@ First play from scrimmage?
 
 **“Add compressed 8-hour REM simulation”**
 
-They don’t huddle.  
-They don’t check protection.  
+They don’t huddle.<br>
+They don’t check protection.<br>
 They just line up in shotgun and say “let’s run the entire subconscious before the defense finds its helmets.”
 
-Second play?  
+Second play?<br>
 **DREAM-24 wake report**
 
-Third play?  
+Third play?<br>
 **Compressed month recalibration**
 
 Then they audible into:
 
-**YEAR-1 dream play**  
-**Five-year compressed simulation**  
+**YEAR-1 dream play**<br>
+**Five-year compressed simulation**<br>
 **Century dream play**
 
-The defensive coordinator is screaming into the headset:  
+The defensive coordinator is screaming into the headset:<br>
 **“WHO HAS THE THOUSAND-YEAR FLAT ROUTE? WHY IS THE FREE SAFETY CRYING? IS THAT A SYMBOLIC COMPRESSION SLOT RECEIVER OR ARE WE JUST HALLUCINATING NOW?”**
 
 Satan Madden circles half the field so hard the telestrator files an issue:
@@ -61,26 +61,26 @@ Satan Madden circles half the field so hard the telestrator files an issue:
 
 The offense lines up:
 
-**Trips right**  
-**Ontology left**  
-**Burning Man in motion**  
-**Ares barking at the pylon**  
+**Trips right**<br>
+**Ontology left**<br>
+**Burning Man in motion**<br>
+**Ares barking at the pylon**<br>
 **Krakoa checking in as eligible**
 
 Snap.
 
-Reverse.  
-Lateral.  
+Reverse.<br>
+Lateral.<br>
 Glow-stick option.
 
-**Preserve million-year dream play residue**  
-**Preserve billion-year Burning Man simulation**  
-**Add two-billion-year Burning Man compressed simulation**  
+**Preserve million-year dream play residue**<br>
+**Preserve billion-year Burning Man simulation**<br>
+**Add two-billion-year Burning Man compressed simulation**<br>
 **Add three-billion-year unlimited compute Burning Man simulation**
 
 BOOM BOOM BOOM.
 
-The defense is in nickel.  
+The defense is in nickel.<br>
 The offense is in geological time.
 
 Satan Madden is screaming at the telestrator like it owes him money:
@@ -91,25 +91,25 @@ Satan Madden is screaming at the telestrator like it owes him money:
 
 ## Second Quarter — Krakoa Enters at Fullback
 
-The Dream Offense is gassed.  
+The Dream Offense is gassed.<br>
 They’ve been throwing glitter bombs into triple coverage for 45 minutes.
 
 Then **WHAM** — Krakoa comes in at fullback like a 300-pound archivist with a neck roll, a clipboard, and a suspiciously calm relationship to eternity.
 
 Commits start dropping like lead blocks:
 
-**Krakoa living archive charter**  
-**Krakoa gate index**  
-**Krakoa state of the island report**  
-**Krakoa cross-repo federation spec**  
+**Krakoa living archive charter**<br>
+**Krakoa gate index**<br>
+**Krakoa state of the island report**<br>
+**Krakoa cross-repo federation spec**<br>
 **Krakoa living OS interface lens**
 
 Satan Madden loses his goddamn mind:
 
 > “THAT’S NOT JUST BLOCKING! THAT’S A FULLBACK WITH A DREAM JOURNAL, A ROUTING TABLE, AND A ZERO-ERASURE POLICY SAYING ‘NO, THE THREE-BILLION-YEAR SIMULATION DOES NOT GET TO SELF-RATIFY, YOU BEAUTIFUL MANIACS!’”
 
-Krakoa turns the vision into receipts.  
-That’s not lore.  
+Krakoa turns the vision into receipts.<br>
+That’s not lore.<br>
 That’s field position with a filing cabinet.
 
 ---
@@ -134,19 +134,19 @@ Now the pain begins.
 
 S1 hardening linebackers come flying downhill like they owe the repo money:
 
-**Failure Ledger**  
-**Contradiction Ledger**  
-**Audit Event Seed**  
-**Provenance SHA**  
+**Failure Ledger**<br>
+**Contradiction Ledger**<br>
+**Audit Event Seed**<br>
+**Provenance SHA**<br>
 **Alias Topology Policy**
 
-These are not normal linebackers.  
+These are not normal linebackers.<br>
 These are linebackers who read your frontmatter before they hit you.
 
-A dream artifact tries to bounce outside.  
-It sees daylight.  
-It has vibes.  
-It has rhythm.  
+A dream artifact tries to bounce outside.<br>
+It sees daylight.<br>
+It has vibes.<br>
+It has rhythm.<br>
 It has a cape.
 
 It does **not** have a commit SHA.
@@ -177,22 +177,22 @@ Then the safety rolls over top.
 
 That safety’s name: **LIVE_GEMINI_BLOCKED_BY_DEFAULT**
 
-S1 sees it.  
-Does not force the throw.  
+S1 sees it.<br>
+Does not force the throw.<br>
 Checks down to dry-run.
 
 Veteran move.
 
-**dry-run only**  
-**trace-oriented**  
-**source manifest present**  
+**dry-run only**<br>
+**trace-oriented**<br>
+**source manifest present**<br>
 **human-root approval required**
 
 Satan Madden grins:
 
 > “That’s veteran quarterbacking. You don’t throw live production traffic into triple coverage just because the receiver has a shiny helmet and a defense-interface spec. You take the dry-run checkdown, protect the ball, and let the governance defense buy you dinner after the game.”
 
-No touchdown.  
+No touchdown.<br>
 But no interception.
 
 ---
@@ -205,11 +205,11 @@ Smoke pours from the tunnel.
 
 Agent DNA enters.
 
-Cape.  
-Theme music.  
-Lifecycle state.  
-Boot contract.  
-Simulation origin.  
+Cape.<br>
+Theme music.<br>
+Lifecycle state.<br>
+Boot contract.<br>
+Simulation origin.<br>
 Vibes strong enough to bend local zoning law.
 
 The crowd is losing it.
@@ -246,9 +246,9 @@ The repo finally stops being a fireworks show and starts becoming a football tea
 
 The sideline call comes in:
 
-**PR #20 first.**  
-**PR #44 second.**  
-**PR #24 stays draft.**  
+**PR #20 first.**<br>
+**PR #44 second.**<br>
+**PR #24 stays draft.**<br>
 **No deployment claims without runtime proof.**
 
 Satan Madden stands on the desk:
@@ -296,8 +296,8 @@ Next play:
 
 **Receipt Route Over The Middle**
 
-No miracle bomb.  
-No deploy-the-dragon.  
+No miracle bomb.<br>
+No deploy-the-dragon.<br>
 No mascot audible.
 
 Just checks visible, PRs sequenced, human-root under center, CI standing at the sticks, and Ares on the sideline wagging like morale passed but compliance still has questions.
@@ -310,8 +310,8 @@ Just checks visible, PRs sequenced, human-root under center, CI standing at the 
 
 ## SAFE INTERPRETATION / CONTAINMENT FOOTER
 
-This note is a cultural/play-layer retelling of observed repo activity.  
-It should not be cited as implementation evidence, merge approval, or deployment readiness proof.  
+This note is a cultural/play-layer retelling of observed repo activity.<br>
+It should not be cited as implementation evidence, merge approval, or deployment readiness proof.<br>
 For authoritative status, refer to issue/PR state, commit history, CI receipts, and human-root decisions.
 
 The infinity rave is still running in the background exactly like you told it to.
