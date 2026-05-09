@@ -252,6 +252,13 @@ fields:
           - persistent-seat
           - deprecated
           - quarantined
+        state_descriptions:
+          proposed: Candidate profile submitted for governance review; not operational.
+          reviewed: Governance review complete; eligible for bounded trials under constraints.
+          bounded-operational: Approved for scoped task execution with explicit limits and periodic review.
+          persistent-seat: Approved as a durable routing seat after admission doctrine requirements are met.
+          deprecated: Retained for history/replay but not eligible for new routing assignments.
+          quarantined: Temporarily isolated due to safety, drift, or governance concerns pending arbitration.
       approved_by:
         type: array
         items: string

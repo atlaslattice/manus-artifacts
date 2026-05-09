@@ -83,9 +83,29 @@ def test_agent_dna_schema_includes_constitutional_fields() -> None:
     parsed = yaml.safe_load(schema)
     required_fields = set(parsed.get("required_fields", parsed.get("required", [])))
     field_defs = set(parsed.get("fields", {}).keys())
-    for field in {"boot_contract", "simulation_origin", "constitutional_status", "failure_ledger_ref"}:
+    expected_nested_required = {
+        "boot_contract": {
+            "startup_checks",
+            "required_ledgers",
+            "invariant_assertions",
+            "allowed_task_classes",
+            "required_reviewers",
+        },
+        "simulation_origin": {
+            "derived_from_dream_logs",
+            "extracted_by",
+            "confidence_score",
+            "governance_review_complete",
+        },
+        "constitutional_status": {"state", "approved_by", "review_cycle_days"},
+        "failure_ledger_ref": {"entries", "risk_score", "last_reviewed"},
+    }
+    for field in expected_nested_required:
         assert field in required_fields
         assert field in field_defs
+        field_schema = parsed["fields"][field]
+        assert expected_nested_required[field].issubset(set(field_schema.get("required", [])))
+        assert expected_nested_required[field].issubset(set(field_schema.get("properties", {}).keys()))
 
 
 def test_lifecycle_seed_profiles_cover_multiple_states_and_are_examples() -> None:
