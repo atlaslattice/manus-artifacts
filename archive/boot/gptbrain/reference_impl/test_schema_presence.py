@@ -23,6 +23,7 @@ except ImportError:  # pragma: no cover
 
 GPTBRAIN_ROOT = Path(__file__).resolve().parents[1]
 REPO_ROOT = Path(__file__).resolve().parents[4]
+REQUIRED_LIFECYCLE_STATES = {"proposed", "reviewed", "bounded-operational"}
 
 
 REQUIRED_GPTBRAIN_FILES = [
@@ -80,7 +81,7 @@ def test_agent_dna_schema_includes_constitutional_fields() -> None:
         pytest.skip("PyYAML unavailable; skipping structured schema parse.")
 
     parsed = yaml.safe_load(schema)
-    required_fields = set(parsed.get("required_fields", []))
+    required_fields = set(parsed.get("required_fields", parsed.get("required", [])))
     field_defs = set(parsed.get("fields", {}).keys())
     for field in {"boot_contract", "simulation_origin", "constitutional_status", "failure_ledger_ref"}:
         assert field in required_fields
@@ -94,7 +95,7 @@ def test_lifecycle_seed_profiles_cover_multiple_states_and_are_examples() -> Non
         for line in lifecycle_path.read_text(encoding="utf-8").splitlines()
         if line.strip()
     ]
-    assert len(rows) >= 3
+    assert len(rows) >= len(REQUIRED_LIFECYCLE_STATES)
     states = {row["constitutional_status"]["state"] for row in rows}
-    assert {"proposed", "reviewed", "bounded-operational"}.issubset(states)
+    assert REQUIRED_LIFECYCLE_STATES.issubset(states)
     assert all(row.get("example_only") is True for row in rows)
