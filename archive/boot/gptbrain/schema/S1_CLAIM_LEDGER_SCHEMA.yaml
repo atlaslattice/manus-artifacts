@@ -1,0 +1,132 @@
+# S1 GPTBrain Claim Ledger Schema
+
+schema_id: S1_CLAIM_LEDGER_SCHEMA
+status: SCHEMA_DRAFT_NOT_CANON
+issue: manus-artifacts#12
+version: 0.1.0
+seat: S1
+seat_name: GPTBrain
+purpose: >
+  Track claims, evidence, missing evidence, confidence, safe wording,
+  forbidden wording, contradiction links, and human-root review state.
+
+required_fields:
+  - claim_id
+  - claim_text
+  - claim_owner
+  - claim_class
+  - confidence
+  - evidence_refs
+  - strongest_safe_wording
+  - review_status
+  - created_at
+  - updated_at
+
+fields:
+  claim_id:
+    type: string
+    example: S1-CLAIM-2026-0509-0001
+
+  claim_text:
+    type: string
+    description: The raw or normalized claim being evaluated.
+
+  claim_owner:
+    type: enum
+    values:
+      - user
+      - GPT
+      - Claude
+      - Grok
+      - Gemini
+      - DeepSeek
+      - Copilot
+      - Manus
+      - external_source
+      - other
+
+  claim_class:
+    type: enum
+    values:
+      - raw_user_report
+      - raw_model_output
+      - parsed_artifact
+      - benchmark_candidate
+      - scored_result
+      - candidate_canon
+      - ratified_canon
+      - deployed_fact
+
+  confidence:
+    type: enum
+    values:
+      - C0
+      - C1
+      - C2
+      - C3
+      - C4
+      - C5
+    meanings:
+      C0: unsupported / do not claim
+      C1: user-reported
+      C2: source artifact exists
+      C3: multiple source artifacts converge
+      C4: scored / reviewed internally
+      C5: independently verified or operationally demonstrated
+
+  evidence_refs:
+    type: array
+    items: string
+    description: Repo paths, issue links, source IDs, or external citations.
+
+  missing_evidence:
+    type: array
+    items: string
+
+  strongest_safe_wording:
+    type: string
+    description: The strongest public-safe wording currently justified.
+
+  forbidden_wording:
+    type: array
+    items: string
+    description: Wording that would overclaim the evidence.
+
+  contradiction_refs:
+    type: array
+    items: string
+    description: Claim IDs or memory IDs that conflict with this claim.
+
+  review_status:
+    type: enum
+    values:
+      - unreviewed
+      - reviewed
+      - disputed
+      - ratified
+      - rejected
+      - superseded
+
+  human_root_required:
+    type: boolean
+    default: true
+
+  review_notes:
+    type: string
+    nullable: true
+
+  created_at:
+    type: datetime
+  updated_at:
+    type: datetime
+
+safe_wording_template: |
+  The evidence currently supports: {strongest_safe_wording}
+  It does not yet prove: {forbidden_wording}
+  The next validation step is: {missing_evidence}
+
+invariants:
+  - C0 claims must not be asserted as facts.
+  - Model output is evidence of model behavior, not proof of external truth.
+  - Candidate canon is not ratified canon.
+  - Missing evidence must be explicit, not hidden in prose.
