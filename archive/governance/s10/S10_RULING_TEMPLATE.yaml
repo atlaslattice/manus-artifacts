@@ -1,0 +1,61 @@
+ruling_id: S10-RQ-XXX
+status: S10_WORKING_RULING_NOT_RATIFIED
+created_utc: null
+updated_utc: null
+question: null
+
+context:
+  summary: null
+  source_refs: []
+  related_files: []
+  related_issues: []
+
+neutral_options:
+  - option_id: A
+    label: null
+    description: null
+    benefits: []
+    risks: []
+  - option_id: B
+    label: null
+    description: null
+    benefits: []
+    risks: []
+  - option_id: C
+    label: null
+    description: null
+    benefits: []
+    risks: []
+
+working_recommendation:
+  option_id: null
+  rationale: null
+  confidence: null
+
+required_labels: []
+
+human_root_review:
+  required: true
+  decision: pending
+  notes: null
+
+canon_status:
+  current: working_ruling_not_canon
+  promotion_requirements:
+    - source lineage visible
+    - neutral options preserved
+    - S10 disposition recorded
+    - human-root review completed
+    - conflicting evidence documented
+
+evidence_boundary:
+  - Raw logs are evidence.
+  - Parser outputs are retrieval aids.
+  - Model assessments are evaluator signals.
+  - Hypotheses require scoring.
+  - Canon requires Council workflow.
+
+guardrails:
+  - Do not treat this ruling as ratified canon until reviewed.
+  - Do not frame Council transmissions as orders.
+  - Do not claim deployment, approval, legal authority, or ratification without evidence.
