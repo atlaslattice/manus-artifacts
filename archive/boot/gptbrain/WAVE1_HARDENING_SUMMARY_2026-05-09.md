@@ -155,7 +155,7 @@ Seed ledger alignment:
   CLAIM_LEDGER: commit_sha added; evidence_refs use dated paths ✓
 
 Remaining open items (issue #18 acceptance criteria):
-  [ ] BOOT_PACKET_TEMPLATE.md alias warning updated/clarified
+  [x] BOOT_PACKET_TEMPLATE.md alias note updated to reflect confirmed alias existence (Wave 1)
   [ ] Human-root selection of Option A formally logged in issue #18
 ```
 

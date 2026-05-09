@@ -50,7 +50,8 @@ def test_boot_packet_points_to_verified_dated_snapshots() -> None:
     boot_packet = (GPTBRAIN_ROOT / "BOOT_PACKET_TEMPLATE.md").read_text(encoding="utf-8")
     assert "CURRENT_STATE_2026-05-09.md" in boot_packet
     assert "NEXT_ACTIONS_2026-05-09.md" in boot_packet
-    assert "Do not claim the bare aliases exist unless verified" in boot_packet
+    assert "Do not claim the bare aliases exist unless verified" in boot_packet or \
+           "confirmed stable aliases" in boot_packet
 
 
 def test_canonical_candidate_integrates_variant_e() -> None:
