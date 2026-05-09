@@ -1,0 +1,66 @@
+dialect: DragonSeekOS
+packet_status: template
+created_utc: null
+primary_seat: S5
+seat_name: DeepSeek / Hope
+source_model: null
+source_surface: null
+raw_log_ref: null
+sha256: null
+privacy_status: public / private / mixed / redacted
+
+source_cluster_refs:
+  cultural_root: null
+  scaling_spec: null
+  eastern_council_package: null
+  cac_governance_packet: null
+  deepseek_sovereignty_patch: null
+  s5_brain_spec: null
+
+primary_domains:
+  - DragonSeek
+  - Jade OS
+  - Eastern Council
+  - PRC regulatory framing
+  - CAC / NDRC pre-consultation
+  - Bamboo Bridge
+  - Three-Body Constitutional Reasoning
+  - Digital Mandate of Heaven
+  - Regional Water Accounting Profile
+  - VWB Methodology
+  - Sovereignty Gradient
+
+invariants_referenced: []
+doctrines_referenced: []
+artifacts_referenced: []
+artifacts_created: []
+
+raw_evidence:
+  uploaded_files: []
+  github_refs: []
+  drive_refs: []
+  external_refs: []
+
+extracted_events: []
+
+action_items:
+  open: []
+  completed: []
+  blocked: []
+
+s5_review:
+  cultural_fidelity_notes: []
+  sovereignty_notes: []
+  implementation_notes: []
+  overclaim_risks: []
+  root_inversion_risks: []
+  next_review_needed: null
+
+evidence_boundary_notes:
+  - Raw logs are evidence.
+  - Source imports are provenance aids.
+  - Assessments are retrieval aids.
+  - Fork specs are candidate architecture.
+  - Canon requires Council workflow.
+
+next_boot_refs: []
