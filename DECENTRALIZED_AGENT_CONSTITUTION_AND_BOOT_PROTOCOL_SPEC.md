@@ -269,7 +269,7 @@ Do not create new agent identities unless each proposal includes:
 - schema evolution assistant (migration suggestions, backward compatibility checks)
 - simulation/failure-case generation for evaluation lanes
 
-**GitHub role (canonical substrate):**
+**GitHub role (source-of-record provenance substrate):**
 
 - durable provenance via commits/issues/PRs
 - transparent review and ratification workflow
