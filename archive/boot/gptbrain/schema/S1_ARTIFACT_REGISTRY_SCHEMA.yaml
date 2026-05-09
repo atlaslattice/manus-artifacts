@@ -1,0 +1,171 @@
+# S1 GPTBrain Artifact Registry Schema
+
+schema_id: S1_ARTIFACT_REGISTRY_SCHEMA
+status: SCHEMA_DRAFT_NOT_CANON
+issue: manus-artifacts#12
+version: 0.1.0
+seat: S1
+seat_name: GPTBrain
+purpose: >
+  Track artifacts by source, lineage, status, privacy, ontology tags,
+  claim class, confidence, successor relations, and review requirements.
+
+required_fields:
+  - artifact_id
+  - title
+  - source_type
+  - source_refs
+  - privacy_status
+  - claim_class
+  - confidence
+  - status
+  - created_at
+  - updated_at
+
+fields:
+  artifact_id:
+    type: string
+    example: S1-ART-2026-0509-0001
+
+  title:
+    type: string
+
+  created_utc:
+    type: datetime
+
+  source_seat:
+    type: string
+    example: S1
+
+  source_model:
+    type: enum
+    values:
+      - GPT
+      - Claude
+      - Grok
+      - Gemini
+      - DeepSeek
+      - Copilot
+      - Manus
+      - human
+      - multi_council
+      - unknown
+
+  source_type:
+    type: enum
+    values:
+      - raw_log
+      - parser_output
+      - assessment
+      - spec
+      - scorecard
+      - issue
+      - repo_file
+      - code
+      - schema
+      - external_source
+
+  source_refs:
+    type: array
+    items: string
+
+  sha256:
+    type: string
+    nullable: true
+
+  privacy_status:
+    type: enum
+    values:
+      - public
+      - private
+      - mixed
+      - redacted
+      - sealed_sensitive
+
+  sphere_tags:
+    type: array
+    items: string
+
+  primary_house:
+    type: string
+    nullable: true
+
+  secondary_houses:
+    type: array
+    items: string
+
+  claim_class:
+    type: enum
+    values:
+      - raw_user_report
+      - raw_model_output
+      - parsed_artifact
+      - benchmark_candidate
+      - scored_result
+      - candidate_canon
+      - ratified_canon
+      - deployed_fact
+
+  confidence:
+    type: enum
+    values: [C0, C1, C2, C3, C4, C5]
+
+  status:
+    type: enum
+    values:
+      - raw
+      - parsed
+      - candidate
+      - reviewed
+      - ratified
+      - rejected
+      - superseded
+      - private
+      - redacted
+      - quarantined
+
+  runtime_label:
+    type: enum
+    nullable: true
+    values:
+      - WORK
+      - DREAM
+      - PLAY
+      - MODEL_ASSESSMENT
+      - CANDIDATE_CANON
+      - RATIFIED_CANON
+
+  overclaim_risks:
+    type: array
+    items: string
+
+  required_next_review:
+    type: string
+    nullable: true
+
+  canonical_successor:
+    type: string
+    nullable: true
+
+  supersedes:
+    type: array
+    items: string
+
+  superseded_by:
+    type: array
+    items: string
+
+  notes:
+    type: string
+    nullable: true
+
+  created_at:
+    type: datetime
+  updated_at:
+    type: datetime
+
+invariants:
+  - Variants must not be silently deleted after synthesis.
+  - Supersession requires explicit successor links.
+  - Private or mixed artifacts require redaction review before public use.
+  - Runtime labels must survive summary compression.
