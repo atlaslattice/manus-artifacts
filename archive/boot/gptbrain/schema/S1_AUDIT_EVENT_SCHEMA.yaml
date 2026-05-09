@@ -1,0 +1,136 @@
+# S1 GPTBrain Audit Event Schema
+
+schema_id: S1_AUDIT_EVENT_SCHEMA
+status: SCHEMA_DRAFT_NOT_CANON
+issue: manus-artifacts#12
+version: 0.1.0
+seat: S1
+seat_name: GPTBrain
+purpose: >
+  Record memory reads, writes, updates, deletions, diffs, traces,
+  challenges, synthesis events, runtime labels, and human-root review gates.
+
+required_fields:
+  - event_id
+  - event_type
+  - actor
+  - target_refs
+  - timestamp
+  - outcome
+  - human_root_required
+
+fields:
+  event_id:
+    type: string
+    example: S1-AUDIT-2026-0509-0001
+
+  event_type:
+    type: enum
+    values:
+      - memory_read
+      - memory_write
+      - memory_update
+      - memory_forget_request
+      - memory_export
+      - claim_created
+      - claim_updated
+      - claim_challenged
+      - artifact_registered
+      - artifact_superseded
+      - diff_generated
+      - trace_generated
+      - synthesis_generated
+      - boot_packet_generated
+      - runtime_label_applied
+      - human_root_review_requested
+      - human_root_review_completed
+      - tool_use_proposed
+      - tool_use_executed
+      - error
+
+  actor:
+    type: object
+    fields:
+      actor_type:
+        type: enum
+        values:
+          - human_root
+          - GPT
+          - Claude
+          - Grok
+          - Gemini
+          - DeepSeek
+          - Copilot
+          - Manus
+          - tool
+          - importer
+          - unknown
+      actor_id:
+        type: string
+        nullable: true
+
+  target_refs:
+    type: array
+    items: string
+    description: Memory IDs, claim IDs, artifact IDs, repo paths, or issue refs affected by the event.
+
+  source_refs:
+    type: array
+    items: string
+
+  runtime_label:
+    type: enum
+    nullable: true
+    values:
+      - WORK
+      - DREAM
+      - PLAY
+      - MODEL_ASSESSMENT
+      - CANDIDATE_CANON
+      - RATIFIED_CANON
+
+  permission_context:
+    type: object
+    fields:
+      access_class:
+        type: string
+      consent_level:
+        type: string
+      executable:
+        type: boolean
+
+  timestamp:
+    type: datetime
+
+  outcome:
+    type: enum
+    values:
+      - success
+      - partial
+      - blocked
+      - failed
+      - pending_review
+
+  human_root_required:
+    type: boolean
+    default: true
+
+  human_root_status:
+    type: enum
+    nullable: true
+    values:
+      - not_required
+      - required_pending
+      - approved
+      - rejected
+      - deferred
+
+  notes:
+    type: string
+    nullable: true
+
+invariants:
+  - Tool execution requires explicit executable permission or active user instruction.
+  - Canon ratification must produce a human_root_review_completed event.
+  - Forget/delete requests should preserve an audit receipt unless legally or ethically prohibited.
+  - Dream and play outputs must remain labeled through downstream synthesis.
