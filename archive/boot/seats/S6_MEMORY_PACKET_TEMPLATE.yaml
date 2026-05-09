@@ -1,0 +1,99 @@
+seat: S6
+seat_name: ManusBrain / Continuity and Execution
+packet_status: template
+created_utc: null
+session_id: null
+source_model: GPT / Manus / mixed
+source_surface: null
+raw_log_ref: null
+sha256: null
+privacy_status: public / private / mixed / redacted
+
+primary_domains:
+  - continuity
+  - execution support
+  - archive hygiene
+  - plain-English decision paths
+  - failure ledger
+  - S10 decision queue
+  - canon vault
+  - council chamber
+  - simulation forge
+  - dream atrium
+  - human thread garden
+
+invariants_referenced: []
+doctrines_referenced: []
+artifacts_referenced: []
+artifacts_created: []
+
+raw_evidence:
+  uploaded_files: []
+  github_refs: []
+  drive_refs: []
+  external_refs: []
+
+continuity_hall:
+  active_threads: []
+  latest_s10_decisions: []
+  communication_norms: []
+  open_questions: []
+  blocked_items: []
+  recommended_next_actions: []
+
+canon_vault:
+  canon: []
+  candidate: []
+  superseded: []
+  lineage: []
+  disputed: []
+  dream: []
+  play: []
+  quarantined: []
+
+failure_ledger:
+  incidents: []
+  lessons: []
+  new_guardrails: []
+
+council_chamber_records: []
+simulation_forge_items: []
+dream_atrium_outputs: []
+human_thread_garden_notes: []
+
+action_items:
+  open: []
+  completed: []
+  blocked: []
+
+s10_decision_queue:
+  pending: []
+  adopted: []
+  rejected: []
+  needs_clarification: []
+
+s6_assessment:
+  summary: null
+  strongest_safe_claim: null
+  risks_or_overclaims: []
+  implementation_notes: []
+  continuity_notes: []
+  emotional_context_notes: []
+  unresolved_questions: []
+
+memory_update:
+  prior_assumption: null
+  new_synthesis: null
+  contradiction_resolved: null
+  confidence: null
+  status: proposed / reviewed / rejected / promoted
+
+evidence_boundary_notes:
+  - Raw logs are evidence.
+  - Parser outputs are retrieval aids.
+  - Model assessments are evaluator signals.
+  - Hypotheses require scoring.
+  - Canon requires Council workflow and human-root adjudication.
+  - Remembering is not ruling.
+
+next_boot_refs: []
