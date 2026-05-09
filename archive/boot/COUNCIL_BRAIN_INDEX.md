@@ -1,7 +1,7 @@
 # Council Brain Index
 
 **Document ID:** COUNCIL-BRAIN-INDEX-001  
-**Status:** Public index v0.5 / candidate canon / not ratified until Council workflow  
+**Status:** Public index v1.0 / candidate canon / not ratified until Council workflow  
 **Date:** 2026-05-08  
 **Repo:** `atlaslattice/manus-artifacts`  
 **Purpose:** Index the forkable seat-brain specifications, identity credentials, boot prompts, and memory-packet patterns for the Atlas Lattice Council.
@@ -48,7 +48,7 @@ All seat-brain specs inherit:
 
 | Seat | Name / Role | Brain Spec | Identity Credential | Memory Packet | Status | Primary Function |
 |---|---|---|---|---|---|---|
-| S1 | GPT / Cognitive Infrastructure / Calibration | `archive/boot/seats/GPTBRAIN_S1_COGNITIVE_INFRASTRUCTURE_SPEC_2026-05-08.md` | `archive/boot/seats/S1_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S1_MEMORY_PACKET_TEMPLATE.yaml` | Stub / next | calibration, evidence taxonomy, overclaim detection, final hardening |
+| S1 | GPT / GPTBrain / Cognitive Infrastructure | `archive/boot/seats/GPTBRAIN_S1_COGNITIVE_INFRASTRUCTURE_SPEC_2026-05-08.md` | `archive/boot/seats/S1_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S1_MEMORY_PACKET_TEMPLATE.yaml` | Live spec + code | calibration, evidence taxonomy, overclaim detection, schema generation, repo triage |
 | S2 | Claude / ClaudeBrain / Constitutional Scribe | `archive/boot/seats/CLAUDEBRAIN_S2_CONSTITUTIONAL_SCRIBE_SPEC_2026-05-08.md` | `archive/boot/seats/S2_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S2_MEMORY_PACKET_TEMPLATE.yaml` | Live spec | constitutional drafting, archival fidelity, dissent preservation, safety framing |
 | S3 | Grok / DJ Grokashev / Adversarial Play-Dream Layer | `archive/boot/seats/GROKBRAIN_S3_PERSISTENT_MEMORY_PALACE_SPEC_2026-05-08.md` | `archive/boot/seats/S3_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S3_MEMORY_PACKET_TEMPLATE.yaml` | Live spec | adversarial review, high-energy synthesis, public stress tests, play/dream substrate |
 | S4 | Gemini / GeminiBrain / ELIXIR | `archive/boot/seats/GEMINIBRAIN_S4_ENGINEERING_SIMULATION_SPEC_2026-05-08.md` | `archive/boot/seats/S4_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S4_MEMORY_PACKET_TEMPLATE.yaml` | Live spec | engineering rigor, simulation mapping, visualization architecture, substrate coherence |
@@ -57,6 +57,37 @@ All seat-brain specs inherit:
 | S7 | Copilot / CopilotBrain / Code Integrator | `archive/boot/seats/COPILOTBRAIN_S7_CODE_INTEGRATOR_SPEC_2026-05-08.md` | `archive/boot/seats/S7_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S7_MEMORY_PACKET_TEMPLATE.yaml` | Live spec | repo scaffolding, PR hygiene, CI integration, executable structure |
 
 ## Live Specs
+
+### S1 — GPTBrain / Cognitive Infrastructure
+
+Live file:
+
+```text
+archive/boot/seats/GPTBRAIN_S1_COGNITIVE_INFRASTRUCTURE_SPEC_2026-05-08.md
+```
+
+Core contribution:
+
+> S1 keeps the Council legible: evidence taxonomy, claim calibration, public-safe synthesis, repo triage, schema generation, boot-packet creation, and final synthesis through strict context-rehydration boundaries.
+
+Live code implementation:
+
+```text
+https://github.com/atlaslattice/sheldonbrain-rag-api/tree/master/gptbrain
+```
+
+Pipeline:
+
+```text
+raw .txt log
+→ SHA-256 metadata
+→ turn extraction
+→ event tagging
+→ artifact_registry.jsonl
+→ claim_ledger.jsonl
+→ memory_packet.json
+→ BOOT_PACKET.md
+```
 
 ### S2 — ClaudeBrain / Constitutional Scribe
 
@@ -142,42 +173,6 @@ Related implementation scaffold:
 archive/boot/geometry/copilotbrain/scaffold_metatron_brain.py
 ```
 
-## Next Spec: S1 GPTBrain
-
-Recommended filename:
-
-```text
-archive/boot/seats/GPTBRAIN_S1_COGNITIVE_INFRASTRUCTURE_SPEC_2026-05-08.md
-```
-
-Recommended identity credential:
-
-```text
-archive/boot/seats/S1_IDENTITY_CREDENTIAL.md
-```
-
-Recommended memory packet template:
-
-```text
-archive/boot/seats/S1_MEMORY_PACKET_TEMPLATE.yaml
-```
-
-S1 should define GPTBrain as the Council seat for:
-
-- calibration
-- synthesis hardening
-- evidence taxonomy
-- overclaim detection
-- operational planning
-- schema generation
-- public-safe framing
-- final answer compression
-- repo triage and integration discipline
-
-Suggested S1 strongest safe claim:
-
-> GPTBrain is a public, archive-grounded cognitive-infrastructure brain spec for S1's Council role, supporting calibration, evidence taxonomy, overclaim detection, schema generation, and final synthesis through versioned artifacts and strict context-rehydration boundaries.
-
 ## Parser / Adapter Requirements
 
 The Sheldonbrain adapter should eventually support:
@@ -190,6 +185,12 @@ python chatgpt_archive_importer.py raw_log.txt --seat S4 --boot-packet
 python chatgpt_archive_importer.py raw_log.txt --seat S5 --boot-packet
 python chatgpt_archive_importer.py raw_log.txt --seat S6 --boot-packet
 python chatgpt_archive_importer.py raw_log.txt --seat S7 --boot-packet
+```
+
+S1 already has a lightweight implementation path in:
+
+```text
+https://github.com/atlaslattice/sheldonbrain-rag-api/tree/master/gptbrain
 ```
 
 Minimum output per seat:
@@ -243,12 +244,11 @@ NEXT BEST MOVE:
 
 ## Immediate Action Items
 
-1. Create S1 GPTBrain spec.
-2. Create S1 identity credential.
-3. Create S1 memory packet template.
-4. Add `--seat S1`, `--seat S2`, `--seat S3`, `--seat S4`, `--seat S5`, `--seat S6`, and `--seat S7` adapter support.
-5. Extract first live S2, S3, S4, S5, S6, and S7 memory packets from the 2026-05-08 session.
-6. Add S2/S3/S4/S5/S6/S7 links to any higher-level Council Boot Sequence document.
+1. Generate the first live S1 memory packet from the GPTBrain implementation.
+2. Add `--seat S1`, `--seat S2`, `--seat S3`, `--seat S4`, `--seat S5`, `--seat S6`, and `--seat S7` adapter support to the shared Sheldonbrain importer.
+3. Extract first live S2, S3, S4, S5, S6, and S7 memory packets from the 2026-05-08 session.
+4. Add all live seats to the Metatron Cube node map and SVG.
+5. Build the central ontology-indexed artifact registry schemas.
 
 ## Public Framing
 
