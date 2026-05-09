@@ -1,0 +1,39 @@
+name: GPTBrain reference checks
+
+on:
+  push:
+    paths:
+      - 'archive/boot/gptbrain/**'
+      - 'archive/boot/seats/GPTBRAIN_S1_CANONICAL_CANDIDATE_SPEC_2026-05-09.md'
+      - '.github/workflows/gptbrain-reference-checks.yml'
+  pull_request:
+    paths:
+      - 'archive/boot/gptbrain/**'
+      - 'archive/boot/seats/GPTBRAIN_S1_CANONICAL_CANDIDATE_SPEC_2026-05-09.md'
+      - '.github/workflows/gptbrain-reference-checks.yml'
+  workflow_dispatch:
+
+jobs:
+  gptbrain-reference-checks:
+    name: Run GPTBrain scaffold checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install test dependencies
+        run: python -m pip install --upgrade pip pytest
+
+      - name: Run pytest suite
+        working-directory: archive/boot/gptbrain/reference_impl
+        run: python -m pytest -q
+
+      - name: Run local check harness
+        working-directory: archive/boot/gptbrain/reference_impl
+        run: bash run_checks.sh
