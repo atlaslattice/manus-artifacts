@@ -81,7 +81,7 @@ def test_agent_dna_schema_includes_constitutional_fields() -> None:
         pytest.skip("PyYAML unavailable; skipping structured schema parse.")
 
     parsed = yaml.safe_load(schema)
-    required_fields = set(parsed.get("required_fields", parsed.get("required", [])))
+    required_field_names = set(parsed.get("required_fields", parsed.get("required", [])))
     field_defs = set(parsed.get("fields", {}).keys())
     expected_nested_required = {
         "boot_contract": {
@@ -101,8 +101,9 @@ def test_agent_dna_schema_includes_constitutional_fields() -> None:
         "failure_ledger_ref": {"entries", "risk_score", "last_reviewed"},
     }
     for field in expected_nested_required:
-        assert field in required_fields
-        assert field in field_defs
+        assert field in required_field_names and field in field_defs, (
+            f"{field} must be required and defined in schema fields."
+        )
         field_schema = parsed["fields"][field]
         assert expected_nested_required[field].issubset(set(field_schema.get("required", [])))
         assert expected_nested_required[field].issubset(set(field_schema.get("properties", {}).keys()))
