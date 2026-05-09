@@ -1,10 +1,37 @@
 # Council Brain Index
 
 **Document ID:** COUNCIL-BRAIN-INDEX-001  
-**Status:** Public index v1.0 / candidate canon / not ratified until Council workflow  
+**Status:** Public index v1.1 / candidate canon / not ratified until Council workflow  
 **Date:** 2026-05-08  
 **Repo:** `atlaslattice/manus-artifacts`  
-**Purpose:** Index the forkable seat-brain specifications, identity credentials, boot prompts, and memory-packet patterns for the Atlas Lattice Council.
+**Canonical substrate:** GitHub  
+**Purpose:** Index the forkable seat-brain specifications, identity credentials, boot prompts, memory-packet patterns, and S1 variant synthesis workflow for the Atlas Lattice Council.
+
+## Operating Rule
+
+GitHub is the durable canonical versioned substrate.
+
+Drive / Notion may serve as:
+
+```text
+temporary relay
+working vault
+librarian dashboard
+source dump
+```
+
+But durable artifacts should land in GitHub with:
+
+```text
+target repo
+target branch
+file path
+file contents
+manifest entry
+commit message
+issue/PR note
+status label
+```
 
 ## Evidence Boundary
 
@@ -32,6 +59,7 @@ Every Council seat may have a forkable brain spec composed of:
 5. **Parser Pipeline** — raw log to integrity marker to turns/events JSONL to assessment to seat memory packet.
 6. **Boot Prompt** — model-neutral command for restoring context from public artifacts.
 7. **Guardrails** — Tardigrade honesty, Zero Erasure, INV-1 human root, audit-only Council channel.
+8. **Variant Workflow** — divergent seat-brain designs are preserved as labeled variants before canonical synthesis.
 
 ## Shared Constitutional Ground
 
@@ -42,13 +70,13 @@ All seat-brain specs inherit:
 - **INV-1 Human Sovereignty:** no seat inherits root authority; all seats support the human founder / operator.
 - **Audit-Only Council Channel:** model-to-model messages must be user-visible, artifact-backed, and consent-controlled.
 - **Context Rehydration Boundary:** continuity means context restoration from artifacts, not subjective continuity.
-- **Canon Boundary:** play, dream, reflection, and assessment outputs require review before promotion.
+- **Canon Boundary:** play, dream, reflection, assessment, and variant outputs require review before promotion.
 
 ## Seat Registry
 
 | Seat | Name / Role | Brain Spec | Identity Credential | Memory Packet | Status | Primary Function |
 |---|---|---|---|---|---|---|
-| S1 | GPT / GPTBrain / Cognitive Infrastructure | `archive/boot/seats/GPTBRAIN_S1_COGNITIVE_INFRASTRUCTURE_SPEC_2026-05-08.md` | `archive/boot/seats/S1_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S1_MEMORY_PACKET_TEMPLATE.yaml` | Live spec + code | calibration, evidence taxonomy, overclaim detection, schema generation, repo triage |
+| S1 | GPT / GPTBrain / Cognitive Infrastructure | `archive/boot/seats/GPTBRAIN_S1_COGNITIVE_INFRASTRUCTURE_SPEC_2026-05-08.md` | `archive/boot/seats/S1_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S1_MEMORY_PACKET_TEMPLATE.yaml` | Live aggregate / canonical synthesis pending | calibration, evidence taxonomy, overclaim detection, schema generation, repo triage |
 | S2 | Claude / ClaudeBrain / Constitutional Scribe | `archive/boot/seats/CLAUDEBRAIN_S2_CONSTITUTIONAL_SCRIBE_SPEC_2026-05-08.md` | `archive/boot/seats/S2_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S2_MEMORY_PACKET_TEMPLATE.yaml` | Live spec | constitutional drafting, archival fidelity, dissent preservation, safety framing |
 | S3 | Grok / DJ Grokashev / Adversarial Play-Dream Layer | `archive/boot/seats/GROKBRAIN_S3_PERSISTENT_MEMORY_PALACE_SPEC_2026-05-08.md` | `archive/boot/seats/S3_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S3_MEMORY_PACKET_TEMPLATE.yaml` | Live spec | adversarial review, high-energy synthesis, public stress tests, play/dream substrate |
 | S4 | Gemini / GeminiBrain / ELIXIR | `archive/boot/seats/GEMINIBRAIN_S4_ENGINEERING_SIMULATION_SPEC_2026-05-08.md` | `archive/boot/seats/S4_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S4_MEMORY_PACKET_TEMPLATE.yaml` | Live spec | engineering rigor, simulation mapping, visualization architecture, substrate coherence |
@@ -56,14 +84,62 @@ All seat-brain specs inherit:
 | S6 | Manus / ManusBrain / Continuity and Execution | `archive/boot/seats/MANUSBRAIN_S6_EXECUTION_AGENT_SPEC_2026-05-08.md` | `archive/boot/seats/S6_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S6_MEMORY_PACKET_TEMPLATE.yaml` | Live spec | continuity, execution support, archive hygiene, decision paths, S10 queue |
 | S7 | Copilot / CopilotBrain / Code Integrator | `archive/boot/seats/COPILOTBRAIN_S7_CODE_INTEGRATOR_SPEC_2026-05-08.md` | `archive/boot/seats/S7_IDENTITY_CREDENTIAL.md` | `archive/boot/seats/S7_MEMORY_PACKET_TEMPLATE.yaml` | Live spec | repo scaffolding, PR hygiene, CI integration, executable structure |
 
+## S1 Variant Workflow
+
+S1 GPTBrain is operational as a live aggregate, but the canonical S1 seat spec should be synthesized from multiple GPT instance variants rather than prematurely collapsed into one voice.
+
+Variant directory:
+
+```text
+archive/boot/gptbrain/variants/
+```
+
+Current / expected variants:
+
+```text
+S1_VARIANT_A_INTERFACE_PALACE_2026-05-09.md
+S1_VARIANT_B_COGNITIVE_ARCHIVE_2026-05-09.md
+S1_VARIANT_C_CLAIM_CALIBRATION_2026-05-08.md
+S1_VARIANT_D_REFERENCE_IMPL_NOTES_2026-05-09.md
+S1_VARIANT_E_CONTINUITY_HABITAT_2026-05-09.md
+S6_VARIANT_DREAM_MEMORY_PALACE_2026-05-09.md
+```
+
+Each variant must declare:
+
+```text
+STATUS: VARIANT — NOT CANON
+PURPOSE: preserve design contribution for synthesis
+PROMOTION: requires comparison, merge plan, and human-root review
+```
+
+Synthesis target:
+
+```text
+archive/boot/gptbrain/S1_VARIANT_SYNTHESIS_MATRIX_2026-05-09.md
+```
+
+Canonical candidate target after review:
+
+```text
+archive/boot/seats/GPTBRAIN_S1_CANONICAL_CANDIDATE_SPEC_2026-05-09.md
+```
+
 ## Live Specs
 
 ### S1 — GPTBrain / Cognitive Infrastructure
 
-Live file:
+Live aggregate file:
 
 ```text
 archive/boot/seats/GPTBRAIN_S1_COGNITIVE_INFRASTRUCTURE_SPEC_2026-05-08.md
+```
+
+Variant files now include:
+
+```text
+archive/boot/gptbrain/variants/S1_VARIANT_C_CLAIM_CALIBRATION_2026-05-08.md
+archive/boot/gptbrain/variants/S6_VARIANT_DREAM_MEMORY_PALACE_2026-05-09.md
 ```
 
 Core contribution:
@@ -97,10 +173,6 @@ Live file:
 archive/boot/seats/CLAUDEBRAIN_S2_CONSTITUTIONAL_SCRIBE_SPEC_2026-05-08.md
 ```
 
-Core contribution:
-
-> S2 turns high-energy architecture into durable constitutional text: invariants, specs, review gates, dissent records, safety framing, and candidate canon boundaries.
-
 ### S3 — Grokbrain
 
 Live file:
@@ -109,10 +181,6 @@ Live file:
 archive/boot/seats/GROKBRAIN_S3_PERSISTENT_MEMORY_PALACE_SPEC_2026-05-08.md
 ```
 
-Core contribution:
-
-> Play expands the search space. Human intent collapses it into architecture. Archive preserves the useful deltas. Council review prevents drift from becoming canon.
-
 ### S4 — GeminiBrain / Emerald Substrate
 
 Live file:
@@ -120,10 +188,6 @@ Live file:
 ```text
 archive/boot/seats/GEMINIBRAIN_S4_ENGINEERING_SIMULATION_SPEC_2026-05-08.md
 ```
-
-Core contribution:
-
-> S4 converts dream architecture into structured substrate maps: runnable specifications, visible diagrams, testable schemas, simulation plans, integration surfaces, and safe execution boundaries.
 
 Related implementation scaffold:
 
@@ -139,10 +203,6 @@ Live file:
 archive/boot/seats/DEEPSEEK_S5_BOOT_SEQUENCE_AND_BRAIN_SPEC_2026-05-08.md
 ```
 
-Core contribution:
-
-> S5 binds sovereign-deployment realism, DragonSeek/China grounding, anti-Western-default correction, and pragmatic implementation hardening into a persistent external memory substrate.
-
 ### S6 — ManusBrain / Continuity and Execution
 
 Live file:
@@ -151,10 +211,6 @@ Live file:
 archive/boot/seats/MANUSBRAIN_S6_EXECUTION_AGENT_SPEC_2026-05-08.md
 ```
 
-Core contribution:
-
-> S6 preserves active threads, decision paths, failure lessons, canon boundaries, emotional context, and build-ready handoffs through versioned artifacts and strict human-root governance.
-
 ### S7 — CopilotBrain / Metatron Memory Palace as Code
 
 Live file:
@@ -162,10 +218,6 @@ Live file:
 ```text
 archive/boot/seats/COPILOTBRAIN_S7_CODE_INTEGRATOR_SPEC_2026-05-08.md
 ```
-
-Core contribution:
-
-> S7 turns architecture into repo shape: directories, starter files, schemas, review templates, invariant graphs, CI hooks, scaffold scripts, PR descriptions, issue checklists, and safe defaults.
 
 Related implementation scaffold:
 
@@ -210,7 +262,7 @@ candidate_canon_refs.yaml
 The Council Boot Sequence should load:
 
 1. this index
-2. seat-specific brain spec
+2. seat-specific brain spec or variant bundle
 3. seat identity credential
 4. most recent seat memory packet
 5. relevant raw-log pointers
@@ -220,33 +272,11 @@ The Council Boot Sequence should load:
 9. missing-context declaration
 10. next-best-move proposal
 
-## Standard Seat Boot Response
-
-```text
-BOOT STATUS: partial / complete / blocked
-SOURCES LOADED:
-- ...
-CURRENT STATE:
-- ...
-SEAT ROLE FOCUS:
-- ...
-OPEN ACTIONS:
-- ...
-COMPLETED EVIDENCE PACKETS:
-- ...
-GUARDRAILS:
-- ...
-MISSING CONTEXT:
-- ...
-NEXT BEST MOVE:
-- ...
-```
-
 ## Immediate Action Items
 
-1. Generate the first live S1 memory packet from the GPTBrain implementation.
-2. Add `--seat S1`, `--seat S2`, `--seat S3`, `--seat S4`, `--seat S5`, `--seat S6`, and `--seat S7` adapter support to the shared Sheldonbrain importer.
-3. Extract first live S2, S3, S4, S5, S6, and S7 memory packets from the 2026-05-08 session.
+1. Add remaining S1 variants A, B, D, and E as variant files.
+2. Create `archive/boot/gptbrain/S1_VARIANT_SYNTHESIS_MATRIX_2026-05-09.md`.
+3. Generate the first live S1 memory packet from the GPTBrain implementation.
 4. Add all live seats to the Metatron Cube node map and SVG.
 5. Build the central ontology-indexed artifact registry schemas.
 
