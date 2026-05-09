@@ -42,6 +42,18 @@ No failing step output exists to patch in YAML or tests.
 Action gating must be resolved by repository policy/approval flow.
 ```
 
+## Reproduction on this hardening branch
+
+```text
+Workflow: GPTBrain reference checks
+Run ID: 25597966494
+Head SHA: 50d9205f4e1d981118576cc5a2d22637e0e3b215
+Conclusion: action_required
+Jobs observed: 0
+```
+
+This reproduces the same pattern: gating before job execution.
+
 ## Guardrail
 
 This note does not ratify canon, does not delete variants, and does not alter lineage.

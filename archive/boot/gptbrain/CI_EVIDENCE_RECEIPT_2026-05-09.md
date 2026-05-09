@@ -33,6 +33,19 @@ Result:
 17 passed in 0.05s
 ```
 
+## Evidence C — CI status visibility on hardening branch
+
+```text
+Workflow: GPTBrain reference checks
+Run ID: 25597966494
+Head SHA: 50d9205f4e1d981118576cc5a2d22637e0e3b215
+Conclusion: action_required
+Jobs created: 0
+Failed jobs: 0
+```
+
+Interpretation: this branch shows visible CI status, and the status pattern matches the execution-gate root-cause pattern captured for PR #15.
+
 ## Scope guardrail
 
 This receipt records evidence only; it does not imply canon ratification or promotion.
