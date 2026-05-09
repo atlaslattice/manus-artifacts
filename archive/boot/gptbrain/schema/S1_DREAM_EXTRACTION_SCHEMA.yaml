@@ -1,0 +1,130 @@
+# S1 GPTBrain Dream Extraction Schema
+
+schema_id: S1_DREAM_EXTRACTION_SCHEMA
+status: SCHEMA_DRAFT_NOT_CANON
+issue: manus-artifacts#12
+version: 0.1.0
+seat: S1
+seat_name: GPTBrain
+purpose: >
+  Convert DREAM / PLAY artifacts into typed extraction candidates without
+  upgrading metaphor, reflection, or model-originated synthesis into fact,
+  canon, or implementation authority.
+
+required_fields:
+  - extraction_id
+  - artifact_type
+  - artifact_status
+  - source_artifact
+  - generated_at
+  - items
+  - human_root_required
+
+fields:
+  extraction_id:
+    type: string
+    example: S1-DREAM-EXTRACTION-2026-0509-0001
+
+  artifact_type:
+    type: enum
+    values:
+      - dream_output
+      - play_output
+      - culture_layer
+      - interface_mode
+      - model_assessment
+
+  artifact_status:
+    type: enum
+    values:
+      - non_canon
+      - extraction_candidate
+      - reviewed_candidate
+      - rejected
+      - superseded
+
+  source_artifact:
+    type: string
+    description: Repo path or source reference for the dream/play artifact.
+
+  generated_at:
+    type: datetime
+
+  human_root_required:
+    type: boolean
+    default: true
+
+  items:
+    type: array
+    items:
+      type: object
+      required:
+        - item_id
+        - kind
+        - source_section
+        - description
+        - operational_translation
+        - claim_status
+        - confidence
+        - review_required
+      fields:
+        item_id:
+          type: string
+          example: DREAM-ITEM-001
+        kind:
+          type: enum
+          values:
+            - wording_patch
+            - schema_candidate
+            - ui_candidate
+            - governance_candidate
+            - test_candidate
+            - code_candidate
+            - action_candidate
+            - risk_flag
+            - metaphor
+        source_section:
+          type: string
+        description:
+          type: string
+        operational_translation:
+          type: string
+        claim_status:
+          type: enum
+          values:
+            - hypothesis
+            - evaluator_signal
+            - candidate_task
+            - candidate_wording
+            - candidate_schema
+            - candidate_test
+        confidence:
+          type: enum
+          values: [C0, C1, C2, C3, C4, C5]
+          default: C1
+        review_required:
+          type: boolean
+          default: true
+        human_root_required:
+          type: boolean
+          default: true
+        source_refs:
+          type: array
+          items: string
+        risks:
+          type: array
+          items: string
+        safer_wording:
+          type: string
+          nullable: true
+        next_review_step:
+          type: string
+          nullable: true
+
+invariants:
+  - Dream output is not fact.
+  - Play output is not plan.
+  - Extraction candidate is not implementation approval.
+  - Candidate canon is not ratified canon.
+  - Human-root review is required for canon-impacting promotion.
+  - Sensitive concepts such as emotional_context_signal require privacy review before implementation.
