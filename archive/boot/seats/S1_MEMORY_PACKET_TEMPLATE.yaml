@@ -1,0 +1,71 @@
+seat: S1
+seat_name: GPTBrain / Cognitive Infrastructure / Calibration
+packet_status: template
+created_utc: null
+session_id: null
+source_model: GPT
+source_surface: ChatGPT
+raw_log_ref: null
+sha256: null
+privacy_status: public / private / mixed / redacted
+
+primary_domains:
+  - calibration
+  - evidence taxonomy
+  - overclaim detection
+  - schema generation
+  - final synthesis
+  - repo triage
+  - boot sequence
+  - artifact registry
+  - claim ledger
+  - Council Brain
+
+source_refs:
+  github_refs: []
+  drive_refs: []
+  uploaded_files: []
+  user_context_refs: []
+
+artifacts_referenced: []
+artifacts_created: []
+issues_referenced: []
+repos_referenced: []
+
+extracted_events: []
+
+action_items:
+  open: []
+  completed: []
+  blocked: []
+
+claim_calibration:
+  strongest_safe_claim: null
+  overclaims_detected: []
+  missing_evidence: []
+  recommended_wording: []
+  forbidden_wording: []
+  confidence: null
+
+s1_assessment:
+  summary: null
+  evidence_quality: null
+  implementation_readiness: null
+  public_shareability: null
+  canon_status: raw / parsed / candidate / reviewed / ratified / rejected / superseded
+
+memory_update:
+  prior_assumption: null
+  new_synthesis: null
+  contradiction_resolved: null
+  confidence: null
+  status: proposed / reviewed / rejected / promoted
+
+evidence_boundary_notes:
+  - Raw logs are evidence.
+  - Parser outputs are retrieval aids.
+  - Model assessments are evaluator signals.
+  - Hypotheses require scoring.
+  - Canon requires Council workflow.
+
+next_boot_refs: []
