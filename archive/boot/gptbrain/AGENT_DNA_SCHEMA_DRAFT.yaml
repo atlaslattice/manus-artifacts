@@ -303,6 +303,7 @@ invariants:
   - Dreams propose; reviewable governance disposes.
   - Myth inspires; protocols decide.
   - No narrative grants authority; authority emerges from transparent protocols, provenance, and reviewable constraints.
+  - "Governance precedence is strict: governance > capability > role > lineage > temperament."
   - Identity metadata is not execution authority.
   - Replayability does not imply canon authority.
   - Persistent-seat admission requires unique capability, routing justification, governance fit, replay utility, and failure-mode characterization.

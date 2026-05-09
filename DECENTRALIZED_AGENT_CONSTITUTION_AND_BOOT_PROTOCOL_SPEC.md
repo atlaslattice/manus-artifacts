@@ -1,7 +1,10 @@
 # DECENTRALIZED_AGENT_CONSTITUTION_AND_BOOT_PROTOCOL_SPEC
 
 ```text
-STATUS: ARCHITECTURE SPEC PROPOSAL — NOT CANON BY DEFAULT
+STATUS: CANDIDATE ARCHITECTURE SPEC — NOT CANON
+CANON STATUS: NOT RATIFIED
+HUMAN-ROOT GATE: REQUIRED
+DEPLOYMENT STATUS: NO RUNTIME / NO DEPLOYMENT AUTHORITY BY THIS ARTIFACT
 DATE: 2026-05-09
 SCOPE: decentralized/open-source/protocol-mediated swarm governance
 PRINCIPLE: typed operational contracts over mythology
@@ -10,6 +13,8 @@ PRINCIPLE: typed operational contracts over mythology
 ## 1) Purpose and status
 
 This specification consolidates Agent DNA, boot sequence, governance, and lifecycle into one implementation-oriented constitutional model.
+
+Canonical in this document means proposed reference architecture candidate, not ratified canon.
 
 It is:
 
@@ -22,6 +27,11 @@ It is not:
 - runtime deployment proof
 - automatic authority grant
 - canonical truth without review
+
+## Strongest safe claim
+
+This spec can make decentralized-agent identity routable, testable, replayable, and governable.
+It does not by itself create runtime deployment, canon authority, autonomous execution, or production readiness.
 
 ## 2) Core doctrines
 
@@ -46,6 +56,7 @@ Dreams -> Extraction -> Candidate Agent DNA -> Boot Contract Validation
 4. Replayability for auditability, not authority.
 5. Lifecycle states are explicit and reviewable.
 6. Failure memory is institutional and durable.
+7. Governance precedence: governance > capability > role > lineage > temperament.
 
 ## 5) Conceptual framing: myth, dreams, and GitHub-native decentralization
 
@@ -158,6 +169,8 @@ A persistent seat requires all of:
 - No single narrative artifact can self-ratify authority.
 - Promotion and deprecation require explicit reviewer metadata.
 - Human-root governance remains the final merge gate for high-impact transitions.
+- Governance precedence rule: governance > capability > role > lineage > temperament.
+- Temperament and mythic lineage are routing hints, not authority sources.
 
 ## 14) Routing and circuit participation
 
@@ -233,6 +246,19 @@ evals/
 4. `failure_ledger_ref` must exist for bounded or persistent states.
 5. Missing `boot_contract` invariants => boot rejection.
 6. Replay records must preserve provenance and reviewer traces.
+
+## 18.1) Anti-sprawl doctrine (new agent threshold)
+
+Do not create new agent identities unless each proposal includes:
+
+- a declared role gap
+- source lineage
+- Agent DNA record
+- boot contract
+- governance constraints
+- failure/contradiction ledger path
+- review route
+- human-root gate where needed
 
 ## 19) OpenAI and GitHub roles
 
