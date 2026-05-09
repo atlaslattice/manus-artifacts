@@ -1,0 +1,93 @@
+# GPTBrain Reference Implementation — CI Test Workflow
+#
+# STATUS: CI SCAFFOLD — NOT CANON
+# SEAT: S7 CopilotBrain / Code Integrator
+# PURPOSE: Run reference implementation tests on every push and PR to prevent
+#          silent regressions in the S1 memory-palace scaffold.
+# PROMOTION: This workflow is a repo-hygiene artifact; it does not ratify canon.
+#
+# Evidence boundary:
+#   Tests passing = implementation behaves as specified in scaffold.
+#   Tests passing ≠ ratified canon; human-root review still required for promotion.
+
+name: Reference Implementation Tests
+
+on:
+  push:
+    paths:
+      - "archive/boot/gptbrain/reference_impl/**"
+      - "archive/boot/gptbrain/CLAIM_LEDGER.seed.jsonl"
+      - "archive/boot/gptbrain/ARTIFACT_REGISTRY.seed.jsonl"
+      - "archive/boot/gptbrain/MEMORY_OBJECTS.seed.jsonl"
+      - ".github/workflows/reference-impl-tests.yml"
+  pull_request:
+    paths:
+      - "archive/boot/gptbrain/reference_impl/**"
+      - "archive/boot/gptbrain/CLAIM_LEDGER.seed.jsonl"
+      - "archive/boot/gptbrain/ARTIFACT_REGISTRY.seed.jsonl"
+      - "archive/boot/gptbrain/MEMORY_OBJECTS.seed.jsonl"
+      - ".github/workflows/reference-impl-tests.yml"
+
+jobs:
+  test-dream-memory-palace:
+    name: Dream Memory Palace Reference Impl
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: archive/boot/gptbrain/reference_impl
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pytest
+        run: pip install pytest
+
+      - name: Run dream_memory_palace tests
+        run: python -m pytest test_dream_memory_palace_reference_impl.py -v
+
+  test-gptbrain-memory:
+    name: GPTBrain Memory Scaffold
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: archive/boot/gptbrain/reference_impl
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pytest
+        run: pip install pytest
+
+      - name: Run gptbrain_memory tests
+        run: python -m pytest test_gptbrain_memory.py -v
+
+  run-checks-script:
+    name: Local Check Script (smoke test)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: archive/boot/gptbrain/reference_impl
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pytest
+        run: pip install pytest
+
+      - name: Run run_checks.sh
+        run: bash run_checks.sh

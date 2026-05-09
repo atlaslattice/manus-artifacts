@@ -1,0 +1,166 @@
+seat: S7
+seat_name: CopilotBrain / Code Integrator
+packet_status: session_record
+created_utc: "2026-05-09T09:25:00Z"
+session_id: S7-SESSION-2026-05-09-0925
+source_model: Copilot
+source_surface: GitHub / Copilot Task Agent
+raw_log_ref: null
+sha256: null
+privacy_status: public
+
+# STATUS: S7 SESSION MEMORY PACKET — NOT CANON
+# PURPOSE: record what S7 CopilotBrain assessed, found, and contributed in this session
+# CANON WARNING: this packet documents a work session; it does not ratify canon
+
+primary_domains:
+  - repo audit
+  - repo scaffolding
+  - CI integration
+  - PR hygiene
+  - communication chain entry
+  - path-drift analysis
+  - schema posture review
+  - culture-layer assessment
+
+invariants_referenced:
+  - "INV-1 Human Sovereignty — S7 does not ratify canon"
+  - "Zero Erasure — additive only, no deletions"
+  - "Audit-Only Council Channel — changes are PR-visible and artifact-backed"
+  - "Canon Boundary — all new artifacts marked not-canon"
+
+doctrines_referenced:
+  - "Readable memory is not executable memory."
+  - "Candidate canon is not ratified canon."
+  - "Memory can inform action; memory cannot authorize action by itself."
+
+artifacts_referenced:
+  - archive/boot/COUNCIL_BRAIN_INDEX.md
+  - archive/boot/gptbrain/reference_impl/dream_memory_palace_reference_impl.py
+  - archive/boot/gptbrain/reference_impl/test_dream_memory_palace_reference_impl.py
+  - archive/boot/gptbrain/reference_impl/test_gptbrain_memory.py
+  - archive/boot/gptbrain/reference_impl/run_checks.sh
+  - archive/boot/gptbrain/S1_PATH_REGISTRY_2026-05-09.md
+  - archive/boot/gptbrain/S1_VARIANT_SYNTHESIS_MATRIX_2026-05-09.md
+  - archive/boot/gptbrain/GPTBRAIN_MANIFEST_2026-05-09.md
+  - archive/boot/gptbrain/S1_PROMOTION_CHECKLIST_2026-05-09.md
+  - archive/boot/gptbrain/GPT_INSTANCE_STATE_LOG_2026-05-09.md
+  - archive/boot/council/schemas/COUNCIL_PACKET_SCHEMA_2026-05-09.yaml
+  - archive/boot/seats/GPTBRAIN_S1_CANONICAL_CANDIDATE_SPEC_2026-05-09.md
+  - archive/boot/seats/COPILOTBRAIN_S7_CODE_INTEGRATOR_SPEC_2026-05-08.md
+  - council-reviews/council-review-copilot-output.md
+  - archive/boot/geometry/copilotbrain/scaffold_metatron_brain.py
+
+artifacts_created:
+  - .github/workflows/reference-impl-tests.yml
+  - .github/pull_request_template.md
+  - archive/boot/seats/S7_SESSION_MEMORY_PACKET_2026-05-09T0925.yaml
+  - council-reviews/S7-copilot-audit-session-2026-05-09.md
+
+repos_touched:
+  - atlaslattice/manus-artifacts
+
+prs_reviewed: []
+issues_created: []
+
+raw_evidence:
+  uploaded_files: []
+  github_refs:
+    - https://github.com/atlaslattice/manus-artifacts/tree/master/archive/boot
+  external_refs: []
+
+extracted_events:
+  - "Full repo audit: archive/boot/ subtree — verified architecture, status vocabulary, path drift risks"
+  - "Reference impl tests confirmed present; CI workflow confirmed absent — gap addressed this session"
+  - "Duplicate culture artifacts found: COUNCIL_POETRY_CONTEST at two paths; neither deleted"
+  - "Stale alias risk: CURRENT_STATE.md + CURRENT_STATE_2026-05-09.md coexist per known API oddity"
+  - "S7 COPILOTBRAIN spec references paths not yet present in repo (e.g. archive/registry/views/)"
+
+repo_hygiene_findings:
+  - finding: "No GitHub Actions CI workflow existed; reference impl tests were run only by manual run_checks.sh"
+    severity: medium
+    action_taken: "Created .github/workflows/reference-impl-tests.yml"
+  - finding: "No PR template existed; PRs could drift from Council canon-boundary conventions"
+    severity: low
+    action_taken: "Created .github/pull_request_template.md"
+  - finding: "Two copies of COUNCIL_POETRY_CONTEST_EVERYBODY_WINS_2026-05-09.md exist at different paths"
+    severity: low
+    action_taken: "Noted; not resolved this session — additive-only posture maintained"
+  - finding: "Status vocabulary fragmented across docs/schemas/code (WORK_OUTPUT vs WORK vs work_output)"
+    severity: medium
+    action_taken: "Documented in council-reviews/S7-copilot-audit-session-2026-05-09.md; not resolved — S2 recommended"
+  - finding: "S7 boot spec references absent paths under archive/registry/views/"
+    severity: low
+    action_taken: "Documented; not resolved — S6/S7 coordination needed"
+
+ci_findings:
+  - "Tests exist: test_dream_memory_palace_reference_impl.py (6 tests), test_gptbrain_memory.py (7 tests)"
+  - "run_checks.sh exists as a local smoke test harness"
+  - "No .github/workflows/ directory existed prior to this session"
+  - "CI added: three jobs — dream-memory-palace, gptbrain-memory, run-checks-script"
+  - "CI scope is path-filtered to reference_impl/ and seed JSONL files"
+
+conflict_risks:
+  - "Premature canon footgun: S1_RATIFICATION_PACKET_2026-05-09.md contains a RATIFIED CANON status block at line 115-118 that could be mistaken for executed ratification — not resolved, requires human-root clarity"
+  - "Status vocabulary fragmentation may cause parser/tooling misclassification"
+
+action_items:
+  open:
+    - "S2: publish one normalized canon/status lexicon and enforce cross-file"
+    - "S4: convert descriptive YAML schemas to formal validators (JSON Schema or pydantic)"
+    - "S6: collapse duplicate state/action alias docs into one source-of-truth policy"
+    - "S7: fill missing archive/registry/views/ paths referenced in boot spec"
+    - "Human-root: decide on S1 ratification state explicitly; resolve footgun in RATIFICATION_PACKET"
+  completed:
+    - "CI workflow for reference_impl tests"
+    - "PR template with canon-boundary checklist"
+    - "S7 session memory packet (this file)"
+    - "Communication chain council-review entry"
+  blocked: []
+
+s7_assessment:
+  summary: >
+    The archive/boot/ subtree is substantive and mostly well-labeled for candidate/non-canon operation.
+    The biggest verified gap was absence of CI. The implementation scaffold (reference_impl/) has real
+    tests and a local check runner, but no automated CI gate. This session adds that gate.
+    Path drift, vocabulary fragmentation, and a textual (not executed) ratification footgun remain
+    open risks for S2/S4/S6/human-root to address.
+  strongest_safe_claim: >
+    The repo now has a CI workflow that runs the reference implementation tests on every PR and push
+    touching the reference_impl/ subtree. This is additive, non-destructive, and guardrail-compliant.
+  risks_or_overclaims:
+    - "Do not claim CI = production readiness; CI = scaffold-level regression gate only"
+    - "Do not treat this packet as ratification of S7 or S1 spec"
+    - "Vocabulary fragmentation risk remains; this session documents it, does not resolve it"
+  implementation_notes:
+    - "CI uses path filtering to avoid running on every commit"
+    - "Three jobs: dream-memory-palace, gptbrain-memory, run-checks-script (smoke)"
+    - "PR template enforces canon-status label check and evidence-boundary tier selection"
+  merge_order_notes:
+    - "CI and PR template are additive; safe to merge without blocking other work"
+    - "Session memory packet and council review are communication chain artifacts; also additive"
+  scaffold_notes:
+    - "S7 contributed: CI scaffold, PR hygiene template, communication chain entry"
+    - "S7 did NOT: ratify any artifact, delete any variant, collapse any duplicate"
+
+memory_update:
+  prior_assumption: "No CI workflow existed; tests were manual-only"
+  new_synthesis: "CI now present; tests are path-scoped and run on both push and PR events"
+  contradiction_resolved: null
+  confidence: C2
+  status: reviewed
+
+evidence_boundary_notes:
+  - Raw logs are evidence.
+  - Parser outputs are retrieval aids.
+  - Model assessments are evaluator signals.
+  - Hypotheses require scoring.
+  - Canon requires Council workflow and human-root adjudication.
+  - Tests passing is not canon ratification.
+
+next_boot_refs:
+  - .github/workflows/reference-impl-tests.yml
+  - .github/pull_request_template.md
+  - council-reviews/S7-copilot-audit-session-2026-05-09.md
+  - archive/boot/COUNCIL_BRAIN_INDEX.md
+  - archive/boot/seats/COPILOTBRAIN_S7_CODE_INTEGRATOR_SPEC_2026-05-08.md
