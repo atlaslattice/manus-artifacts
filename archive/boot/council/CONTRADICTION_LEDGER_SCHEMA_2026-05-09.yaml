@@ -1,0 +1,191 @@
+schema_id: COUNCIL-CONTRADICTION-LEDGER-2026-05-09
+status: schema_candidate_not_canon
+issue: manus-artifacts#17
+purpose: >
+  Provide a shared contradiction ledger schema for S1/S2/S6 so unresolved tensions,
+  source conflicts, disputed artifacts, and model disagreements are linked instead of erased.
+
+principles:
+  - Contradictions are not deletion pressure.
+  - Contradictions are routing pressure.
+  - Model assessments are not source evidence.
+  - Transcript before narrative.
+  - Original before substitute.
+  - Human-root review resolves canon conflicts.
+
+contradiction_record:
+  contradiction_id:
+    type: string
+    required: true
+    example: CONTRA-2026-05-09-0001
+  title:
+    type: string
+    required: true
+  created_utc:
+    type: string
+    format: date-time
+    required: true
+  created_by_seat:
+    type: string
+    enum: [S1, S2, S3, S4, S5, S6, S7, human_root, unknown]
+    required: true
+  severity:
+    type: string
+    enum: [low, medium, high, critical]
+    required: true
+  domain:
+    type: string
+    enum:
+      - canon_status
+      - source_lineage
+      - evidence_conflict
+      - model_disagreement
+      - factual_claim
+      - geopolitical_document
+      - constitutional_document
+      - code_or_repo_state
+      - alias_or_path_topology
+      - privacy_or_public_boundary
+      - math_or_science_overclaim
+      - execution_authority
+      - other
+    required: true
+  status:
+    type: string
+    enum: [open, under_review, resolved, superseded, rejected, quarantined]
+    required: true
+  summary:
+    type: string
+    required: true
+  items_in_conflict:
+    type: array
+    required: true
+    items:
+      type: object
+      properties:
+        item_id:
+          type: string
+        item_type:
+          type: string
+          enum: [raw_log, uploaded_file, repo_file, drive_doc, notion_page, model_assessment, parser_output, claim, artifact, issue, pr, memory_packet, other]
+        source_ref:
+          type: string
+        commit_sha:
+          type: string
+          nullable: true
+        claim_text:
+          type: string
+        evidence_boundary:
+          type: string
+          enum: [raw_evidence, parser_output, model_assessment, user_report, hypothesis, candidate_canon, ratified_canon, unknown]
+  evidence_refs:
+    type: array
+    items:
+      type: object
+      properties:
+        ref_type:
+          type: string
+          enum: [github, drive, notion, uploaded_file, web, transcript, issue, pr, commit, other]
+        path_or_url:
+          type: string
+        commit_sha:
+          type: string
+          nullable: true
+        line_range:
+          type: string
+          nullable: true
+        note:
+          type: string
+  impacted_seats:
+    type: array
+    items:
+      type: string
+      enum: [S1, S2, S3, S4, S5, S6, S7, human_root]
+  recommended_router:
+    type: string
+    enum: [S1_calibration, S2_constitutional_review, S6_continuity_queue, S7_repo_fix, human_root_decision, council_review]
+  recommended_action:
+    type: string
+    enum:
+      - verify_source_lineage
+      - locate_original
+      - mark_disputed
+      - quarantine_artifact
+      - update_alias_policy
+      - update_seed_provenance
+      - rewrite_safe_claim
+      - request_human_root_decision
+      - add_tests_or_ci_receipt
+      - update_index_or_registry
+      - no_action_monitor
+  resolution:
+    type: object
+    properties:
+      resolved_utc:
+        type: string
+        nullable: true
+      resolved_by:
+        type: string
+        nullable: true
+      resolution_summary:
+        type: string
+        nullable: true
+      canonical_successor:
+        type: string
+        nullable: true
+      human_root_approved:
+        type: boolean
+        default: false
+  audit:
+    type: object
+    properties:
+      last_reviewed_utc:
+        type: string
+        nullable: true
+      review_notes:
+        type: array
+        items:
+          type: string
+      next_review_due:
+        type: string
+        nullable: true
+
+required_output_labels:
+  - S1 CONTRADICTION LEDGER — CALIBRATE CLAIMS
+  - S2 CONTRADICTION LEDGER — PRESERVE DISSENT
+  - S6 CONTRADICTION LEDGER — ROUTE TO DECISION QUEUE
+  - TRANSCRIPT BEFORE NARRATIVE
+  - ORIGINAL BEFORE SUBSTITUTE
+  - CONTRADICTION IS ROUTING PRESSURE
+
+example:
+  contradiction_id: CONTRA-2026-05-09-0001
+  title: Variant E integration status mismatch
+  created_utc: 2026-05-09T00:00:00Z
+  created_by_seat: S1
+  severity: high
+  domain: canon_status
+  status: resolved
+  summary: Historical notes said Variant E needed patching while later candidate claimed integration.
+  items_in_conflict:
+    - item_id: note_variant_e_reconciliation
+      item_type: repo_file
+      source_ref: archive/boot/gptbrain/S1_VARIANT_E_RECONCILIATION_NOTE_2026-05-09.md
+      commit_sha: null
+      claim_text: Variant E requires patch.
+      evidence_boundary: model_assessment
+    - item_id: closure_marker
+      item_type: repo_file
+      source_ref: archive/boot/gptbrain/S1_VARIANT_E_CLOSURE_STATUS_2026-05-09.md
+      commit_sha: 1dde7eb2fbd79ca7bdb702c44793ffa9e2c68a01
+      claim_text: Variant E integrated as layer, not ratified canon.
+      evidence_boundary: candidate_canon
+  impacted_seats: [S1, S2, S6]
+  recommended_router: S6_continuity_queue
+  recommended_action: update_index_or_registry
+  resolution:
+    resolved_utc: 2026-05-09T00:00:00Z
+    resolved_by: S1
+    resolution_summary: Variant E closed as integrated non-canonical layer.
+    canonical_successor: archive/boot/gptbrain/S1_VARIANT_E_CLOSURE_STATUS_2026-05-09.md
+    human_root_approved: false
