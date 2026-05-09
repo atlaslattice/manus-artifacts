@@ -52,8 +52,10 @@ Do not claim hidden memory, consciousness, subjective continuity, secret model-t
 ## Alias note
 
 ```text
-CURRENT_STATE.md and NEXT_ACTIONS.md are desired stable aliases, but dated snapshots are the verified boot sources for this sprint.
-Do not claim the bare aliases exist unless verified in repo.
+CURRENT_STATE.md and NEXT_ACTIONS.md are confirmed stable aliases (Wave 1 verified).
+Both alias and dated-snapshot paths exist in the repo.
+Alias policy: Option A — load from alias path; dated snapshots remain as permanent fossil record.
+Policy document: archive/boot/gptbrain/S1_ALIAS_TOPOLOGY_POLICY_2026-05-09.md
 ```
 
 ## Standard boot response

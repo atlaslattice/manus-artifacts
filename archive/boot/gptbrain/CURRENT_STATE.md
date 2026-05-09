@@ -2,14 +2,17 @@
 
 ```text
 STATUS: CURRENT STATE SNAPSHOT — NOT CANON
-DATE: 2026-05-09
+DATE: 2026-05-09 (Wave 1 update)
 ISSUE: manus-artifacts#12
+ALIAS: archive/boot/gptbrain/CURRENT_STATE.md → CURRENT_STATE_2026-05-09.md (dated snapshot)
+ALIAS POLICY: stable alias per S1_ALIAS_TOPOLOGY_POLICY_2026-05-09.md
 ```
 
 ## Current operating status
 
 ```text
 S1 GPTBrain = live aggregate / canonical synthesis pending
+Wave 1 hardening = IN PROGRESS (see WAVE1_HARDENING_SUMMARY_2026-05-09.md)
 ```
 
 ## What exists
