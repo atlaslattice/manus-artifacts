@@ -1,0 +1,120 @@
+# COUNCIL_PACKET_SCHEMA_2026-05-09.yaml
+# STATUS: CANDIDATE SCHEMA — NOT RATIFIED CANON
+# PURPOSE: Standard packet wrapper for major Council Brain outputs
+# SOURCE: S1_REM_SIMULATION_8H_2026-05-09.md / DELTA 1
+# PROMOTION: Requires cross-seat review and human-root approval
+
+schema_id: COUNCIL-PACKET-SCHEMA-2026-05-09
+schema_status: candidate_not_canon
+schema_version: 0.1.0
+
+required_fields:
+  - packet_id
+  - title
+  - created_utc
+  - source_seat
+  - runtime_label
+  - claim_confidence
+  - canon_status
+  - source_refs
+  - summary
+  - review_gate
+  - next_action
+
+packet:
+  packet_id: null
+  title: null
+  created_utc: null
+  updated_utc: null
+
+  source:
+    source_seat: null # S1 / S2 / S3 / S4 / S5 / S6 / S7 / S10 / MULTI
+    source_model: null
+    source_surface: null # ChatGPT / Claude / Grok / Gemini / DeepSeek / Manus / Copilot / GitHub / Other
+    source_actor: null # user / assistant / external_model / tool
+    session_ref: null
+    issue_ref: null
+    repo_refs: []
+    source_refs: []
+
+  classification:
+    runtime_label: null # WORK_OUTPUT / DREAM_OUTPUT / PLAY_OUTPUT / MODEL_ASSESSMENT / CANDIDATE_CANON / RATIFIED_CANON
+    packet_type: null # claim / decision / artifact / contradiction / route / review / synthesis / action_item / schema / boot_packet
+    primary_domain: null
+    secondary_domains: []
+    sphere144_primary: null
+    sphere144_secondary: []
+    privacy_status: public / private / mixed / redacted
+
+  epistemic_status:
+    evidence_class: null # raw_log / parser_output / model_assessment / hypothesis / candidate_canon / ratified_canon
+    claim_confidence: null # C0 / C1 / C2 / C3 / C4 / C5
+    verification_status: null # unverified / source_grounded / internally_reviewed / independently_verified / contested / superseded
+    uncertainty_notes: []
+    contested: false
+
+  canon_status:
+    status: null # VARIANT_NOT_CANON / CANDIDATE_CANON / CANONICAL_CANDIDATE / RATIFIED_CANON / SUPERSEDED / DISPUTED / QUARANTINED
+    promoted_from: []
+    supersedes: []
+    superseded_by: []
+    ratified_by: null
+    ratified_utc: null
+    human_root_required: true
+
+  content:
+    summary: null
+    key_points: []
+    assumptions: []
+    claims: []
+    decisions: []
+    risks: []
+    contradictions: []
+    action_items: []
+
+  review_gate:
+    required: true
+    minimum_review_seats: [] # e.g. [S1, S2, S6]
+    routed_to: []
+    review_status: pending # pending / in_review / changes_requested / approved_candidate / ratified / rejected
+    human_root_required: true
+    approval_notes: []
+
+  next_action:
+    action_type: null # preserve / route / review / implement / test / archive / ratify / reject
+    owner_seat: null
+    due_context: null
+    blocking_items: []
+    output_path: null
+
+  audit:
+    created_by: null
+    created_commit: null
+    modified_by: null
+    modified_commits: []
+    issue_comments: []
+    hash: null
+
+labels:
+  runtime_labels:
+    - WORK_OUTPUT
+    - DREAM_OUTPUT
+    - PLAY_OUTPUT
+    - MODEL_ASSESSMENT
+    - CANDIDATE_CANON
+    - RATIFIED_CANON
+  confidence_levels:
+    C0: unsupported_do_not_claim
+    C1: user_reported
+    C2: source_artifact_exists
+    C3: multiple_source_artifacts_converge
+    C4: scored_or_reviewed_internally
+    C5: independently_verified_or_operationally_demonstrated
+  canon_labels:
+    - VARIANT_NOT_CANON
+    - CANDIDATE_CANON
+    - CANONICAL_CANDIDATE
+    - RATIFIED_CANON
+    - SUPERSEDED
+    - DISPUTED
+    - QUARANTINED
