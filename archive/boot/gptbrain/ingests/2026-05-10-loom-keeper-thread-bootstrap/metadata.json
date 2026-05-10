@@ -1,0 +1,29 @@
+{
+  "label": "2026-05-10-loom-keeper-thread-bootstrap",
+  "source": "GPT / Loom-Keeper current visible thread",
+  "created_utc": "2026-05-10T00:00:00Z",
+  "privacy_status": "mixed",
+  "status": "parsed / review required / not canon",
+  "input_scope": "visible current conversation context only; not a full raw ChatGPT export",
+  "pipeline_mode": "manual_current_thread_bootstrap_ingest",
+  "repository": "atlaslattice/manus-artifacts",
+  "packet_path": "archive/boot/gptbrain/ingests/2026-05-10-loom-keeper-thread-bootstrap/",
+  "evidence_boundary": [
+    "Raw chat context is evidence only when preserved as source text.",
+    "This packet is a retrieval aid and boot scaffold, not canon.",
+    "Model-originated synthesis is evaluator signal, not fact by itself.",
+    "Human-root review is required for canon-impacting promotion."
+  ],
+  "artifacts_generated": [
+    "metadata.json",
+    "artifact_registry.jsonl",
+    "claim_ledger.jsonl",
+    "memory_packet.json",
+    "BOOT_PACKET.md"
+  ],
+  "known_limitations": [
+    "No invisible/full transcript export was available to the assistant.",
+    "No SHA-256 raw-log hash is available because this is not a file-based parser run.",
+    "This packet should be superseded by a gptbrain_core.py run if a raw chat export is later provided."
+  ]
+}
