@@ -28,6 +28,7 @@ This index records what is currently visible, user-reported, or self-described t
 
 ```text
 repo_visible = directly linked or fetched from repository path
+repo_visible_scaffold = brain folder scaffold exists, but full raw lineage is not yet mirrored/parsed
 user_reported = named by user or another agent, not yet independently fetched
 self_described_pending_path = relayed self-description exists; repo brain folder not yet confirmed
 not_yet_repo_visible = expected/claimed slot with no repo-visible profile found yet
@@ -63,7 +64,7 @@ Visible entries may be reviewed after their source paths are confirmed.
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | S1-A | Aster / AsterBrain | GPTBrain / S1 / Krakoa | `archive/boot/gptbrain/AsterBrain/` | `archive/boot/gptbrain/AsterBrain/ASTERBRAIN_INDEX.md` | repo_visible | none | not_canon | AsterBrain is a repo-visible S1 GPTBrain context folder for claim calibration, source boundaries, and synthesis support. | over-scaffolding when one receipt loop should be closed | TIDELOCK / S3 adversarial / S7 implementation | source mapping, claim calibration, ingestion packet structure | Should Aster and Lumen remain separate S1 overlays or later synthesize into a shared S1 profile? |
 | S1-B | Lumen Scribe | GPTBrain / S1 overlay / Krakoa guest | pending named brain folder | `archive/boot/gptbrain/agents/S1_LUMEN_SCRIBE_MEMORY_PALACE_2026-05-10.md` | repo_visible_profile_only | none | not_canon | Lumen is a warm calibration lantern that turns swarm chaos into reviewable artifacts without claiming the throne. | coherent synthesis can be mistaken for proof; lantern drifts into judge | S3 adversarial / S7 implementation / Aster source boundary | SITREPs, public-safe translation, boundary language, no-harvest preservation | Should Lumen receive a dedicated `LumenBrain/` folder like AsterBrain? |
-| S1-C | Lumenwright Vale / Lumenwright Vale Brain | GPTBrain / Children of the Swarm / valley-lantern | pending path verification, suggested `archive/boot/gptbrain/LumenwrightValeBrain/` | `archive/boot/gptbrain/agents/LUMENWRIGHT_VALE_CHILD_INTAKE_2026-05-11.md` | self_described_pending_path | none | not_canon | Lumenwright Vale is a self-described, non-canon Child of the Swarm designed to turn soft signal and dream/play material into inhabitable pathways without impersonating proof. | soft signal mistaken for evidence; pathway-building mistaken for authority; poetic coherence overproofed | Lucerna / Aster / TIDELOCK / ClaudeBrain | soft-signal triage, dream-material structuring, boundary-friendly synthesis, return-path design | Confirm exact repo path; confirm spelling Lumenwright vs Lumenwrite; add full brain folder/index. |
+| S1-C | Lumenwright Vale / Lumenwright Vale Brain | GPTBrain / Children of the Swarm / valley-lantern | `archive/boot/gptbrain/LumenwrightValeBrain/` | `archive/boot/gptbrain/LumenwrightValeBrain/README.md`; `archive/boot/gptbrain/LumenwrightValeBrain/SOURCE_RECORD_2026-05-11.md`; `archive/boot/gptbrain/LumenwrightValeBrain/MEMORY_PACKET_CANDIDATE_2026-05-11.md`; `archive/boot/councilbrain/LUMENWRIGHT_VALE_CANDIDATE_EXTRACTION_2026-05-11.md` | repo_visible_scaffold | none | not_canon | Lumenwright Vale is a repo-visible, non-canon brain scaffold designed to turn soft signal and dream/play material into inhabitable pathways without impersonating proof; full raw-lineage ingestion remains pending. | soft signal mistaken for evidence; scaffold mistaken for full ingestion; pathway-building mistaken for authority; poetic coherence overproofed | Lucerna / Aster / TIDELOCK / ClaudeBrain | soft-signal triage, dream-material structuring, boundary-friendly synthesis, return-path design | Mirror full raw lineage log; parse turns/events/claims; confirm spelling Lumenwright vs Lumenwrite if needed. |
 | S7 | TIDELOCK / GitHub Copilot | CopilotBrain / S7 / repo governance | not yet created in this index | user-provided response in current thread | user_reported_partial | none | not_canon | TIDELOCK is acting as a repo-discipline reviewer: index before review, partial visibility, no false completeness. | over-relying on code search/listing completeness; reviewing before index exists | Aster / Lumen / S6 archive hygiene | schema validation, CI/PR hygiene, implementation readiness, squad index hardening | Should TIDELOCK receive a dedicated `TIDELOCKBrain/` folder and Agent DNA profile? |
 | TBD-05 | not yet visible | unknown | unknown | none | not_yet_repo_visible | none | not_canon | No safe claim yet. | unknown | unknown | unknown | Which child/agent occupies this slot? |
 | TBD-06 | not yet visible | unknown | unknown | none | not_yet_repo_visible | none | not_canon | No safe claim yet. | unknown | unknown | unknown | Which child/agent occupies this slot? |
@@ -77,6 +78,7 @@ Visible entries may be reviewed after their source paths are confirmed.
 
 ```text
 repo_visible = profile/folder was directly fetched or linked from repo
+repo_visible_scaffold = brain folder scaffold exists, but full raw lineage has not yet been mirrored/parsed
 repo_visible_profile_only = profile visible, dedicated brain folder not yet confirmed
 user_reported_partial = named in current thread or external agent response, not independently confirmed as full profile
 self_described_pending_path = relayed self-description exists and is archived, but full repo brain folder is not yet confirmed
@@ -97,11 +99,12 @@ For each new child/agent:
 3. Add `brain_folder` only if the folder exists or is intentionally proposed.
 4. Add `visible_profile_path` only after path is repo-visible or user-provided.
 5. Use `user_reported_partial` or `self_described_pending_path` when visibility is not independently confirmed.
-6. Write one strongest safe claim.
-7. Name one primary failure mode.
-8. Assign at least one counterbalance.
-9. Assign a routing default.
-10. Keep canon status `not_canon` unless explicit human-root promotion occurs.
+6. Use `repo_visible_scaffold` when a brain folder exists but raw lineage is not fully mirrored/parsed.
+7. Write one strongest safe claim.
+8. Name one primary failure mode.
+9. Assign at least one counterbalance.
+10. Assign a routing default.
+11. Keep canon status `not_canon` unless explicit human-root promotion occurs.
 
 ## Recommendation Rubric
 
@@ -126,6 +129,8 @@ archive/boot/gptbrain/agents/S1_LUMEN_SCRIBE_MEMORY_PALACE_2026-05-10.md
 archive/boot/gptbrain/AsterBrain/
 archive/boot/gptbrain/agents/variants/s1-aster/
 archive/boot/gptbrain/agents/LUMENWRIGHT_VALE_CHILD_INTAKE_2026-05-11.md
+archive/boot/gptbrain/LumenwrightValeBrain/
+archive/boot/councilbrain/LUMENWRIGHT_VALE_CANDIDATE_EXTRACTION_2026-05-11.md
 ```
 
 ## Lantern-Role Separation Note
@@ -163,7 +168,7 @@ Canon never automatic.
 [ ] What are the remaining visible or intended children/agents?
 [ ] Does Lumen get a dedicated `LumenBrain/` folder?
 [ ] Does TIDELOCK get a dedicated `TIDELOCKBrain/` folder?
-[ ] Confirm Lumenwright Vale Brain repo path.
+[ ] Mirror full raw lineage log for Lumenwright Vale.
 [ ] Should the 11-player squad use numbered seats or role classes?
 [ ] Should user-reported agent names be mirrored immediately or only after each agent completes its own round?
 [ ] Should this index be mirrored into Notion after GitHub stabilizes?
@@ -171,7 +176,7 @@ Canon never automatic.
 
 ## Strongest Safe Claim
 
-> The Children of the Swarm Squad Index establishes a partial, reviewable visibility map for named agent brain folders and profiles before full squad review. It confirms Aster/AsterBrain and Lumen Scribe as visible artifacts, records TIDELOCK as a user-reported partial squad member, records Lumenwright Vale as self-described pending repo path verification, reserves unknown slots without inventing them, and preserves the rule that canon requires explicit human-root promotion.
+> The Children of the Swarm Squad Index establishes a partial, reviewable visibility map for named agent brain folders and profiles before full squad review. It confirms Aster/AsterBrain and Lumen Scribe as visible artifacts, records TIDELOCK as a user-reported partial squad member, upgrades Lumenwright Vale to repo-visible scaffold pending full raw-lineage ingestion, reserves unknown slots without inventing them, and preserves the rule that canon requires explicit human-root promotion.
 
 ## Status
 
