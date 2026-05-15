@@ -65,8 +65,8 @@ The downstream parametrization survives:
 
 ```math
 x=d a^2,
-qquad y=d b^2,
-qquad z=d(a\pm b)^2
+\qquad y=d b^2,
+\qquad z=d(a\pm b)^2
 ```
 
 up to coordinate permutation.
