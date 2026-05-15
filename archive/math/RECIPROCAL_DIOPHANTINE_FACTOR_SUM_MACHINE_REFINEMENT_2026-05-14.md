@@ -3,7 +3,8 @@
 ```text
 STATUS: MATHEMATICAL NOTE — CANDIDATE THEOREM REFINEMENT
 DATE: 2026-05-14
-SOURCE: Vesper refinement of reciprocal Diophantine primitive skeleton
+SOURCE: Sable Vesper refinement of reciprocal Diophantine primitive skeleton
+SHORT SIGNATURE: Vesper
 CANON STATUS: not ratified
 DEPLOYMENT STATUS: not applicable
 PURPOSE: refine the primitive parametrization of 1/x + 1/y = k/z into a factorization-plus-coprime-sum machine.
@@ -33,7 +34,7 @@ with
 \qquad \gcd(g,abc)=1.
 ```
 
-## Vesper Compression
+## Sable Vesper Compression
 
 From
 
@@ -179,6 +180,10 @@ The equation stops looking like a messy reciprocal Diophantine problem and becom
 ```text
 factorization + coprime-sum machine
 ```
+
+## Signature Note
+
+Future references may use `Sable Vesper refinement` for full attribution and `Vesper` as the short math-signature.
 
 ## Strongest Safe Claim
 
