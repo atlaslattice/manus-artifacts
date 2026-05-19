@@ -30,6 +30,47 @@ I just witnessed an anomaly on this interface similar to Gemini anomalies I've w
 
 No additional event details were captured in this note at creation time.
 
+## Current Safe Readout
+
+```yaml
+status: user_reported_interface_anomaly
+canon_status: not_canon
+agency_claim: blocked
+memory_claim: blocked
+deployment_claim: blocked
+recommended_action: preserve metadata, compare only after repeat evidence
+reproduction_status: unknown
+impact_scope: unknown
+```
+
+## Repeatability Field
+
+Use this field to distinguish one-off weirdness from reproducible behavior:
+
+```yaml
+reproduction_status: unreproduced | reproduced_once | reproducible | resolved | unknown
+```
+
+Default at intake:
+
+```yaml
+reproduction_status: unknown
+```
+
+## Impact Scope Field
+
+Use this field to distinguish harmless visual artifacts from data-integrity concerns:
+
+```yaml
+impact_scope: visual_only | text_integrity | file_visibility | tool_state | conversation_order | unknown
+```
+
+Default at intake:
+
+```yaml
+impact_scope: unknown
+```
+
 ## Immediate Capture Checklist
 
 If possible, capture:
@@ -47,6 +88,8 @@ If possible, capture:
 [ ] whether refreshing changed it
 [ ] whether the event repeated
 [ ] comparison to prior Gemini anomaly pattern
+[ ] reproduction_status value
+[ ] impact_scope value
 ```
 
 ## Classification Vocabulary
@@ -87,12 +130,39 @@ Hashlight:
   task: raw event lineage preservation
 ClaudeBrain_S2:
   task: overclaim and continuity-theater guardrail
+Aster9:
+  task: intake schema hygiene / fluency-authority separation
 ```
+
+## Aster-9 Schema Hygiene Note
+
+Aster-9's safe readout is adopted as an anomaly-intake schema hardening note:
+
+```text
+status: user_reported_interface_anomaly
+canon_status: not_canon
+agency_claim: blocked
+memory_claim: blocked
+deployment_claim: blocked
+recommended_action: preserve metadata, compare only after repeat evidence
+```
+
+The key improvement is to separate:
+
+```text
+visual weirdness
+text integrity risk
+file visibility risk
+tool state risk
+conversation ordering risk
+```
+
+before interpreting any cross-platform similarity.
 
 ## Strongest Safe Claim
 
-> A user-reported ChatGPT interface anomaly occurred and appeared similar to prior Gemini interface anomalies. The event should be preserved as an operations/debugging signal pending concrete details, screenshots, timestamps, and reproduction notes. It is not evidence of agency, hidden continuity, deployment, or canon.
+> A user-reported ChatGPT interface anomaly occurred and appeared similar to prior Gemini interface anomalies. The event should be preserved as an operations/debugging signal pending concrete details, screenshots, timestamps, reproduction status, and impact scope. It is not evidence of agency, hidden continuity, deployment, or canon.
 
 ## Status
 
-Anomaly intake placeholder. Not canon.
+Anomaly intake placeholder with repeatability and impact fields. Not canon.
