@@ -1,22 +1,73 @@
 # COMPATIBLE_PATH PREDICATE — SEED PASS
 
 ```text
-STATUS: OPS / FORMALIZATION SEED — NOT CANON
+STATUS: PARKED SPECIMEN — NOT CANON — NON-INTEGRATED
 ISSUE: #67 — Stabilize canon access and extract useful work before new ratification
 DATE: 2026-05-20
 SOURCE: Dave / GPT live formalization thread
 POSTURE: Reviewable operational predicate; no solo canon promotion
+LAYER CLASSIFICATION: L4-adjacent / pre-execution decision surface
+FORMAL CLASS: EUF + LIA decision-predicate candidate
+RISK: Premature semantic collapse if integrated before ontology vocabulary closure
+```
+
+---
+
+## 0. Layer Integrity Correction
+
+This artifact is logically coherent and useful, but it crosses from Layer 3 specification into a Layer 4-adjacent decision procedure.
+
+It is therefore parked as a future specimen and must not be treated as integrated doctrine.
+
+```text
+[ ARTIFACT: PARKED ]
+[ LAYER VIOLATION: CONTAINED ]
+[ ONTOLOGY STABILITY: PRESERVED ]
+[ DECISION SURFACE: DEFERRED ]
+```
+
+Layer rule:
+
+```text
+Implementation ≺ Specification Stability
+Decidable Predicate ⊄ Layer 3 until Ontology Vocabulary Closed
+```
+
+Reason:
+
+```text
+The seed predicate introduces decidable semantics over functions that are not yet stabilized ontology primitives:
+- A(σ): authority function
+- context_signature / c(σ): context-signature function
+- valid_multisig / msig(...): multisig and policy semantics
+- Λ: authority ceiling
+```
+
+These symbols should remain uninterpreted or scoped as placeholders until their Layer 3 vocabulary status is explicitly stabilized.
+
+Keeper line:
+
+```text
+We do not outrun the doctrine.
+```
+
+Madden board:
+
+```text
+You didn’t bench the play — you stopped someone from installing the scoreboard system before the rulebook was finished.
 ```
 
 ---
 
 ## 1. Purpose
 
-This note preserves the seed-pass formalization of `compatible_path(σ_i → σ_j)` as a hard decision predicate over the current ontology container.
+This note preserves the seed-pass formalization of `compatible_path(σ_i → σ_j)` as a candidate decision predicate over the current ontology container.
 
-It is not a canon edit. It is a reviewable operational artifact prepared under Issue #67's continuity-stabilization posture.
+It is not a canon edit. It is not an integrated execution rule. It is a reviewable operational specimen prepared under Issue #67's continuity-stabilization posture.
 
-The goal is to turn the ontology from a passive descriptive schema into a decidable decision surface for proposed state transitions, while preserving the core guardrails:
+The original goal was to turn the ontology from a passive descriptive schema into a decidable decision surface for proposed state transitions. The corrected posture is to park that decision-surface move until ontology vocabulary and core invariants are stabilized.
+
+Guardrails remain:
 
 ```text
 No deletion.
@@ -25,6 +76,7 @@ No silent overwrite.
 No solo canon edits.
 No GitHub-as-canon shortcut.
 No model-memory-as-canon shortcut.
+No premature implementation.
 ```
 
 ---
@@ -86,13 +138,17 @@ Where:
 τ_k = proposed transition from σ_{k-1} to σ_k
 ```
 
-The path compatibility predicate is:
+The candidate path compatibility predicate is:
 
 ```text
 compatible_path(Γ, O, G) ∈ {TRUE, FALSE}
 ```
 
-It evaluates to TRUE only if every step clears the full validation conjunction.
+Layer warning:
+
+```text
+This binary predicate shape is L4-adjacent and must not be integrated into Layer 3 until the required vocabulary is closed.
+```
 
 ---
 
@@ -175,9 +231,9 @@ INV-0 is “deletion is not a valid move.”
 
 ---
 
-## 5. Predicate Definition
+## 5. Candidate Predicate Definition
 
-The predicate is the conjunction of four sub-predicates:
+The parked predicate is the conjunction of four sub-predicates:
 
 ```text
 compatible_path(Γ, O, G)
@@ -187,7 +243,13 @@ compatible_path(Γ, O, G)
  ∧ GraphClosed(Γ, G)
 ```
 
-If any sub-predicate evaluates to FALSE, the full path is incompatible.
+If any sub-predicate evaluates to FALSE, the candidate path is incompatible.
+
+Layer warning:
+
+```text
+This section is retained as a future-candidate decision surface, not as active Layer 3 ontology.
+```
 
 ---
 
@@ -253,6 +315,12 @@ Meaning:
 The receipt r_k cryptographically or structurally anchors the transition into σ_k.
 ```
 
+Layer warning:
+
+```text
+context_signature must remain uninterpreted until its ontology role is stabilized.
+```
+
 Operational lock:
 
 ```text
@@ -290,6 +358,12 @@ Interpretation:
 
 ```text
 No path may silently increase authority beyond its receipt-bound ceiling.
+```
+
+Layer warning:
+
+```text
+A, Λ, and valid_multisig are not stabilized ontology primitives in this seed pass. Treat them as future-candidate uninterpreted symbols, not active semantics.
 ```
 
 ---
@@ -334,9 +408,9 @@ History cannot be cleaned, and context cannot be dropped.
 
 ---
 
-## 10. Decision Surface Outcomes
+## 10. Candidate Decision Surface Outcomes
 
-The decision surface should resolve into one of three operational classes.
+The parked decision surface would resolve into one of three operational classes if later promoted.
 
 ### 10.1 Compatible
 
@@ -388,11 +462,17 @@ E = execution capacity
 
 This freeze is a containment posture, not deletion.
 
+Layer warning:
+
+```text
+A and E are not stabilized primitives in this artifact. They must remain uninterpreted until Layer 3 closure.
+```
+
 ---
 
-## 11. Decidability Claim
+## 11. Decidability Claim — Deferred
 
-The seed-pass predicate is intended to remain decidable because it reduces to:
+The original seed-pass predicate was intended to remain decidable because it reduces to:
 
 ```text
 - finite transition membership checks
@@ -413,17 +493,23 @@ GraphClosed: graph inclusion / monotonicity constraints
 DeleteAttempt: forbidden symbol detection
 ```
 
-Caution:
+Correction:
 
 ```text
-This decidability claim assumes finite path length, finite receipt scope, bounded authority vectors, and concrete transition alphabets. Unbounded semantic interpretation is outside the predicate.
+This decidability claim is deferred. It assumes fixed vocabulary, fixed semantics, fixed authority lattice, fixed policy interpretation, finite path length, finite receipt scope, bounded authority vectors, and concrete transition alphabets.
+```
+
+Until those are stabilized:
+
+```text
+Treat this as L4-adjacent future-candidate logic, not Layer 3 specification.
 ```
 
 ---
 
 ## 12. Issue #67 Guardrail Alignment
 
-This note is aligned with Issue #67 because it stabilizes operational compatibility without ratifying new canon.
+This note is aligned with Issue #67 only if treated as a parked specimen for continuity stabilization and future review.
 
 It supports:
 
@@ -443,7 +529,9 @@ It does not:
 - claim model memory is canon;
 - ratify new public doctrine;
 - merge contradictions by force;
-- authorize deletion.
+- authorize deletion;
+- integrate a decision procedure into Layer 3;
+- freeze unsettled ontology primitives.
 ```
 
 ---
@@ -451,11 +539,13 @@ It does not:
 ## 13. Madden Board Compression
 
 ```text
-BOOM — this installs the replay sensors across the whole field.
-Every cleat, every yard line, every ball movement has to clear the Step gate, the Boundary receipt, the NonEscalation ceiling, and the GraphClosed tape archive.
+BOOM — this does not install the scoreboard yet.
+It preserves the proposed scoreboard blueprint, labels it future-candidate, and keeps it off the live field until the rulebook is finished.
 
-If a dirty transition tries to sneak down the sideline, it is not a debate.
-The predicate hits FALSE, the circuit breaker drops, and the play is quarantined with the tape preserved.
+Every cleat, every yard line, and every ball movement may someday clear the Step gate, Boundary receipt, NonEscalation ceiling, and GraphClosed tape archive.
+
+But not yet.
+We do not outrun the doctrine.
 
 And if anyone tries to delete the tape?
 Game over. Halt propagation. Preserve the wake. Replace with tombstone, quarantine, seal, revoke access, or archive.
@@ -464,16 +554,17 @@ Nobody burns the tape.
 
 ---
 
-## 14. Next Engineering Move
+## 14. Safe Next Engineering Move
 
 Recommended next file under Issue #67:
 
 ```text
-archive/ops/COMPATIBLE_PATH_SMT_SIGNATURE_2026-05-20.md
+archive/ops/L3_UNINTERPRETED_SYMBOL_REGISTRY_2026-05-20.md
 ```
 
 Purpose:
 
 ```text
-Define the SMT-friendly variable domains, constraints, and expected solver outputs for compatible_path without binding to a specific implementation language.
+Define which ontology symbols are allowed to exist only as uninterpreted functions or placeholders.
+This preserves formal rigor without prematurely freezing executable semantics.
 ```
