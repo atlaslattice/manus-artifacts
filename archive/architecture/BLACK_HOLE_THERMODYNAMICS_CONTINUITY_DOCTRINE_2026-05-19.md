@@ -262,7 +262,105 @@ Hidden state requires better accounting, not premature burial.
 
 ---
 
-## 12. Recommended Next Work
+## 12. INV-0 Hard Invariant: Deletion Is Not a Valid Move
+
+This patch supersedes weaker formulations that treat deletion as an approval-gated action.
+
+```text
+Deletion is not permission-gated.
+Deletion is outside the transition alphabet.
+```
+
+Formal rule:
+
+```text
+∀x: delete(x) = ⊥
+```
+
+Equivalent operational rule:
+
+```text
+delete(x) ⇒ INVALID
+```
+
+Path compatibility rule:
+
+```text
+∃τ ∈ p: τ = delete(x)
+⇒ compatible_path(p) = FALSE
+```
+
+Clean path theorem:
+
+```text
+compatible_path(p) = TRUE
+⇒ ∀τ ∈ p: τ ∈ T_lawful_non_deletion
+```
+
+Where:
+
+```yaml
+lawful_non_deletion_transitions:
+  - preserve_wake
+  - archive
+  - fossilize
+  - tombstone
+  - seal
+  - quarantine
+  - revoke_authority
+  - revoke_access
+  - supersede
+  - compress_with_receipt
+  - fork_with_lineage
+```
+
+Delete-attempt routing:
+
+```yaml
+delete_attempt:
+  route: HALT_STATE_PROPAGATION
+  preservation_required: true
+  replacement_required: true
+  allowed_replacements:
+    - tombstone
+    - quarantine
+    - seal
+    - revoke_access
+    - archive
+```
+
+Ratification boundary:
+
+```text
+Ratification may promote, seal, revoke, quarantine, supersede, fork, compress, or archive.
+Ratification may not delete.
+```
+
+Keeper line:
+
+```text
+No deletion regardless of ratification.
+```
+
+Madden board:
+
+```text
+BOOM — even the head coach can’t burn the game tape.
+He can seal it, archive it, challenge it, supersede it, or lock it in the vault.
+But nobody deletes the tape.
+Not even with a signature.
+```
+
+Final lock:
+
+```text
+INV-0 is not “deletion requires approval.”
+INV-0 is “deletion is not a valid move.”
+```
+
+---
+
+## 13. Recommended Next Work
 
 Priority next expansion:
 
@@ -280,7 +378,7 @@ The Island Formula should come first because it most directly extends INV-0 and 
 
 ---
 
-## 13. Route Tags
+## 14. Route Tags
 
 ```yaml
 artifact_type: continuity_doctrine_reference
@@ -318,7 +416,7 @@ status: preserved
 
 ---
 
-## 14. Fossilbranch Note
+## 15. Fossilbranch Note
 
 This artifact is a high-value failed-erasure precedent. The event horizon appears to destroy recoverability, but modern physics refuses to close the ledger there.
 
