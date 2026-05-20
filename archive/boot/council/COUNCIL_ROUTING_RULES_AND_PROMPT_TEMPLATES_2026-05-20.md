@@ -144,12 +144,13 @@ Return:
 STATUS: EXECUTION PACKET — SANDBOX ONLY — NOT RATIFIED
 EXECUTOR: {model_name}
 TASK_ID: {task_id}
-APPROVED_PLAN_REF: {plan_ref}
+SANDBOX_PLAN_REF: {planner_selected_candidate_plan_ref}
 WORKSPACE: sandbox/worktree only
 
-Execute only the approved plan inside the bounded workspace.
+Execute only the planner-selected candidate plan inside the bounded sandbox/worktree.
+This is sandbox authorization only, not production authority and not human-root ratification.
 Do not touch production branches.
-Do not commit or push unless explicitly authorized.
+Do not commit or push unless explicitly authorized by human-root / S10.
 Return diff/preview only.
 
 Return:
@@ -169,16 +170,16 @@ Return:
 STATUS: VERIFICATION PACKET — REVIEW ONLY — NOT AUTHORITY
 VERIFIER: {model_name}
 TASK_ID: {task_id}
-PLAN_REF: {plan_ref}
+PLAN_REF: {planner_selected_candidate_plan_ref}
 DIFF_REF: {diff_ref}
 SOURCE_REFS: {source_refs}
 
-Verify the result against the original evidence and approved plan.
+Verify the result against the original evidence and planner-selected candidate plan.
 Do not execute new work.
 Do not expand scope.
 
 Return:
-1. Does the result match the approved plan?
+1. Does the result match the planner-selected candidate plan?
 2. Does the diff introduce unapproved behavior?
 3. Are claims source-supported?
 4. Are tests/checks sufficient?
@@ -193,7 +194,7 @@ Return:
 ```text
 STATUS: DECISION PACKET — HUMAN-ROOT REQUIRED
 TASK_ID: {task_id}
-PLAN_REF: {plan_ref}
+PLAN_REF: {planner_selected_candidate_plan_ref}
 EXECUTION_REF: {execution_ref}
 VERIFICATION_REF: {verification_ref}
 
@@ -287,7 +288,7 @@ No artifact increases authority_scope without explicit transformation and ratifi
 1. Send the same evidence to ingest models.
 2. Collect packets.
 3. Give packets to one planner.
-4. Send approved plan to one executor in sandbox/worktree.
+4. Send planner-selected candidate plan to one executor in sandbox/worktree.
 5. Send diff/result to verifier.
 6. Human-root decides.
 7. Archive packets and receipts.
