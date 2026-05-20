@@ -17,8 +17,10 @@ Status: candidate reference harness, not production canon.
 
 from __future__ import annotations
 
+import argparse
 import json
 import os
+import random
 import sys
 from dataclasses import dataclass
 from pathlib import Path
@@ -187,7 +189,84 @@ def run_layer1_harness(fixtures_path: str | os.PathLike[str]) -> bool:
     return False
 
 
+def run_adversarial_smoke() -> bool:
+    """Targeted mutation sweep over critical bytes from a known-good packet."""
+    base = bytes.fromhex("0400000b00000000" + "00" * 24)
+    failed_tests = 0
+
+    mutations = [
+        ("mut_v", 0, 0x05),
+        ("mut_x", 1, 0x0C),
+        ("mut_y", 2, 0x0C),
+        ("mut_z_reserved", 3, 0x0A),
+        ("mut_z_old_v2_0", 3, 0x0F),
+    ]
+
+    print("\n[+] Sector C: Running targeted adversarial mutation smoke...")
+    for name, index, value in mutations:
+        mutated = bytearray(base)
+        mutated[index] = value
+        try:
+            parse_pkt_sundya0(bytes(mutated))
+            print(f"  SECURITY HOLE: {name} unexpectedly accepted")
+            failed_tests += 1
+        except Layer1PacketError:
+            print(f"  PASS: {name} rejected as expected")
+
+    return failed_tests == 0
+
+
+def run_fuzz_trials(trials: int = 2000, seed: int = 1728) -> bool:
+    """
+    Lightweight fuzzing for random byte streams.
+
+    This fuzz pass does not assert that every 32-byte random packet must fail,
+    because a random packet can theoretically match the shape gate. It asserts
+    the stricter safety property that no non-32-byte random packet may be accepted.
+    """
+    rng = random.Random(seed)
+    allowed_lengths = [0, 1, 2, 3, 4, 8, 16, 31, 32, 33, 64]
+    failed_tests = 0
+    accepted = 0
+
+    print(f"\n[+] Sector D: Running fuzz trials... trials={trials} seed={seed}")
+    for _ in range(trials):
+        n = rng.choice(allowed_lengths)
+        buf = os.urandom(n)
+        try:
+            parse_pkt_sundya0(buf)
+            accepted += 1
+            if n != PKT_SUNDYA_SIZE:
+                failed_tests += 1
+        except Layer1PacketError:
+            pass
+
+    print(f"  FUZZ SUMMARY: accepted={accepted} non_32_byte_accept_failures={failed_tests}")
+    return failed_tests == 0
+
+
+def build_arg_parser() -> argparse.ArgumentParser:
+    parser = argparse.ArgumentParser(description="PKT-SUNDYA-0 v2.1 Layer-1 harness")
+    parser.add_argument(
+        "fixtures",
+        nargs="?",
+        default="tests/pkt_sundya_0_fixtures.json",
+        help="Path to JSON fixture suite",
+    )
+    parser.add_argument("--smoke", action="store_true", help="Run targeted mutation smoke tests")
+    parser.add_argument("--fuzz", action="store_true", help="Run lightweight random fuzz trials")
+    parser.add_argument("--fuzz-trials", type=int, default=2000, help="Number of fuzz trials")
+    parser.add_argument("--fuzz-seed", type=int, default=1728, help="Fuzz length-selection seed")
+    return parser
+
+
 if __name__ == "__main__":
-    fixtures_file = Path(sys.argv[1]) if len(sys.argv) > 1 else Path("tests/pkt_sundya_0_fixtures.json")
-    success = run_layer1_harness(fixtures_file)
+    args = build_arg_parser().parse_args()
+
+    success = run_layer1_harness(args.fixtures)
+    if args.smoke:
+        success = run_adversarial_smoke() and success
+    if args.fuzz:
+        success = run_fuzz_trials(args.fuzz_trials, args.fuzz_seed) and success
+
     sys.exit(0 if success else 1)
