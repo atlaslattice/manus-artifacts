@@ -1,0 +1,90 @@
+{
+  "suite": "PKT-SUNDYA-0 v2.1 Layer-1 fixtures",
+  "status": "candidate reference test data, not production canon",
+  "constants": {
+    "version": "0x04",
+    "state_class_sundya": "0x0B",
+    "packet_size_bytes": 32,
+    "coord_min": 0,
+    "coord_max": 11
+  },
+  "fixtures": {
+    "good_cases": [
+      {
+        "description": "valid minimal coordinate, sequence 1",
+        "hex_stream": "0400000b01000000000102030405060708090a0b0c0d0e0f1011121314151617",
+        "expected_parse": {
+          "version": 4,
+          "coord_x": 0,
+          "coord_y": 0,
+          "state_class": 11,
+          "sequence_id": 1
+        }
+      },
+      {
+        "description": "valid max coordinate, sequence 255",
+        "hex_stream": "040b0b0bff00000017161514131211100f0e0d0c0b0a09080706050403020100",
+        "expected_parse": {
+          "version": 4,
+          "coord_x": 11,
+          "coord_y": 11,
+          "state_class": 11,
+          "sequence_id": 255
+        }
+      },
+      {
+        "description": "valid interior coordinate, high sequence",
+        "hex_stream": "0405070b78563412aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "expected_parse": {
+          "version": 4,
+          "coord_x": 5,
+          "coord_y": 7,
+          "state_class": 11,
+          "sequence_id": 305419896
+        }
+      }
+    ],
+    "bad_cases": [
+      {
+        "description": "packet too short: 31 bytes",
+        "hex_stream": "0400000b01000000000102030405060708090a0b0c0d0e0f10111213141516",
+        "expected_error": "ERR_INVALID_BYTE_LENGTH"
+      },
+      {
+        "description": "packet too long: 33 bytes",
+        "hex_stream": "0400000b01000000000102030405060708090a0b0c0d0e0f101112131415161718",
+        "expected_error": "ERR_INVALID_BYTE_LENGTH"
+      },
+      {
+        "description": "wrong version byte",
+        "hex_stream": "0500000b01000000000102030405060708090a0b0c0d0e0f1011121314151617",
+        "expected_error": "ERR_L1_VERSION_MISMATCH"
+      },
+      {
+        "description": "x coordinate out of bounds at 12",
+        "hex_stream": "040c000b01000000000102030405060708090a0b0c0d0e0f1011121314151617",
+        "expected_error": "ERR_L1_COORD_X_OUT_OF_BOUNDS"
+      },
+      {
+        "description": "y coordinate out of bounds at 12",
+        "hex_stream": "04000c0b01000000000102030405060708090a0b0c0d0e0f1011121314151617",
+        "expected_error": "ERR_L1_COORD_Y_OUT_OF_BOUNDS"
+      },
+      {
+        "description": "old v2.0 external state class 0x0F rejected",
+        "hex_stream": "0400000f01000000000102030405060708090a0b0c0d0e0f1011121314151617",
+        "expected_error": "ERR_L1_STATE_CLASS_MISMATCH"
+      },
+      {
+        "description": "nearby prohibited state class 0x0C rejected",
+        "hex_stream": "0400000c01000000000102030405060708090a0b0c0d0e0f1011121314151617",
+        "expected_error": "ERR_L1_STATE_CLASS_MISMATCH"
+      },
+      {
+        "description": "invalid hex stream rejected",
+        "hex_stream": "not-hex",
+        "expected_error": "ERR_INVALID_HEX_STREAM"
+      }
+    ]
+  }
+}
