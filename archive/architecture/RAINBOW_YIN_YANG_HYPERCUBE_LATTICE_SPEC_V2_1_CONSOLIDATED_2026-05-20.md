@@ -1,7 +1,22 @@
+---
+vault_header_version: v0.1
+artifact_id: RYYH-V2-1-CONSOLIDATED-2026-05-20
+title: Rainbow Yin-Yang Hypercube Lattice Specification v2.1 Consolidated
+epistemic_label: consolidated_candidate_wire_plus_overlay_spec
+canon_status: not_canon
+deployment_status: not_deployable
+authority_scope: none
+layer: Layer 3 candidate / consolidated architecture
+pre_header_blob_sha: 8b86b23de9deffa39cc85b3eb80459941ad52ca0
+checksum_placeholder: pending_canonical_bytes
+manifest_linkage: archive/architecture/RAINBOW_YIN_YANG_HYPERCUBE_V2_1_MANIFEST_2026-05-21.md
+boundary_note: "Wire spec gates packets. Overlay guides interpretation. Neither creates canon, deployment, or authority."
+---
+
 # RAINBOW YIN-YANG PERIODIC HYPERCUBE LATTICE SPECIFICATION v2.1
 
 ```text
-STATUS: RATIFIED CANDIDATE LAYER 3 — REVIEWABLE — NOT PRODUCTION CANON
+STATUS: CANDIDATE LAYER 3 — REVIEWABLE — NOT PRODUCTION CANON
 DATE: 2026-05-20
 SOURCE: Dave / DeepSeek rectification / GPT packaging thread
 POSTURE: Consolidated mathematical north-star; staged for local reference harness
