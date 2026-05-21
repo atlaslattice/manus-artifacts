@@ -230,14 +230,14 @@ Receipt-bearing ≠ approved
 
 \[
 S_{t+1} = S_t \oplus \delta_t,\quad
-S_t^* = \{ e \in E(S_t) \mid \sigma(e;\Gamma_t) \ge \theta_t \},\quad
+S_t^{*,q} = \{ e \in E(S_t) \mid \sigma(e;\Gamma_t) \ge \theta_t \},\quad
 \kappa_t = H(\texttt{"STATEv1"} \parallel \kappa_{t-1} \parallel H(\texttt{"DELTAv1"} \parallel \text{canon}(\delta_t)))
 \]
 
 with the invariant:
 
 \[
-S_t^* \subseteq E(S_t)
+S_t^{*,q} \subseteq E(S_t)
 \]
 
 ---
