@@ -1,3 +1,18 @@
+---
+vault_header_version: v0.1
+artifact_id: RYYH-V2-1-SUNDYA-RECTIFICATION-2026-05-20
+title: Rainbow Yin-Yang Hypercube v2.1 Sundya Rectification
+epistemic_label: wire_spec_rectification_candidate
+canon_status: not_canon
+deployment_status: not_deployable
+authority_scope: none
+layer: Layer 3 candidate / wire-facing geometry correction
+pre_header_blob_sha: 6cdba27ddecdf1f60b89e2459daef94c884de8d9
+checksum_placeholder: pending_canonical_bytes
+manifest_linkage: archive/architecture/RAINBOW_YIN_YANG_HYPERCUBE_V2_1_MANIFEST_2026-05-21.md
+boundary_note: "Wire spec gates packets. It does not create canon, deployment, or authority."
+---
+
 # RAINBOW YIN-YANG PERIODIC HYPERCUBE LATTICE v2.1
 
 ## Śūnya Remapped to In-Ring Position
