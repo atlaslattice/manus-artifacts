@@ -1,0 +1,93 @@
+# V2_1_MANIFEST_INDEX.yaml
+# STATUS: MANIFEST INDEX — CANDIDATE — NOT CANON
+# ISSUE: manus-artifacts#97
+# NOTE: checksum fields are pending until actual source files are located/created and hashed externally.
+
+manifest_id: V2_1_LATTICE_MANIFEST_INDEX_2026_05_21
+status: candidate_manifest_pending_receipts
+canon_status: not_canon
+deployment_status: not_deployable
+authority_scope: none
+
+invariant:
+  wire_spec_gates_packets: true
+  overlay_helps_humans_see_why_map_matters: true
+  d0_z0_manifest_is_external: true
+  z_zero_valid_wire_coordinate: true
+
+artifacts:
+  - artifact_id: V2_1_WIRE_SPEC
+    title: v2.1 Wire Spec
+    expected_role: boring_gate_aligned_wire_packet_spec
+    source_path: pending_receipt
+    vault_header_path: archive/boot/lattice/v2_1/V2_1_VAULT_HEADERS_AND_MANIFEST_LINKAGE.md
+    checksum_sha256: pending_receipt
+    commit_lineage: pending_receipt
+    epistemic_label: executable_facing_after_validation
+    executable_status: validation_required_before_execution
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    review_route:
+      - Lucerna
+      - Hashlight
+      - S1
+      - S10
+    required_next_receipts:
+      - source_file_path
+      - external_sha256
+      - commit_sha
+
+  - artifact_id: V2_1_RAINBOW_YIN_YANG_OVERLAY
+    title: Rainbow / Yin-Yang Periodic Hypercube 2.0 Overlay
+    expected_role: creative_overlay_non_executable_design_guidance
+    source_path: pending_receipt
+    vault_header_path: archive/boot/lattice/v2_1/V2_1_VAULT_HEADERS_AND_MANIFEST_LINKAGE.md
+    checksum_sha256: pending_receipt
+    commit_lineage: pending_receipt
+    epistemic_label: inspirational_non_executable_design_guidance
+    executable_status: false
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    review_route:
+      - Lucerna
+      - Lumen
+      - S1
+      - S10
+    required_next_receipts:
+      - source_file_path
+      - external_sha256
+      - commit_sha
+
+support_artifacts:
+  - path: archive/boot/lattice/v2_1/V2_1_VAULT_HEADERS_AND_MANIFEST_LINKAGE.md
+    role: vault_header_templates_and_manifest_linkage
+    checksum_sha256: pending_external_hash
+  - path: archive/boot/lattice/v2_1/D_PHI_1_V0_4_SUPPORT_MATERIAL.md
+    role: doctrine_review_support
+    checksum_sha256: pending_external_hash
+  - path: archive/boot/lattice/v2_1/V2_1_INTEGRITY_SCAN.md
+    role: boundary_hygiene_scan
+    checksum_sha256: pending_external_hash
+
+risk_register:
+  - risk: checksum_placeholder_mistaken_for_receipt
+    severity: medium
+    mitigation: require external sha256 before receipt_status can become source_linked
+  - risk: creative_overlay_treated_as_wire_behavior
+    severity: high
+    mitigation: executable_status false; V_C canon verifier review
+  - risk: z_zero_erased_as_null
+    severity: high
+    mitigation: explicit invariant z_zero_valid_wire_coordinate
+
+next_actions:
+  - locate_or_create_v2_1_wire_source_file
+  - locate_or_create_v2_1_overlay_source_file
+  - add_vault_headers_to_source_files
+  - compute_external_sha256_for_source_files
+  - update_manifest_index_with_real_receipts
+  - wait_for_d_phi_1_v0_4_review_window
+
+keeper_line: "The gate is boring. The map is beautiful. Keep them separate."
