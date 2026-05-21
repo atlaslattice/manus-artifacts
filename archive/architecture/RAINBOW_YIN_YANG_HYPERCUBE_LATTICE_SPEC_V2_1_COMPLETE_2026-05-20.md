@@ -1,3 +1,30 @@
+---
+vault_header:
+  artifact_id: RYY-PHL-V2.1-WIRE-SPEC
+  title: Rainbow Yin-Yang Periodic Hypercube Lattice Specification v2.1
+  epistemic_label: candidate_layer_3_wire_spec
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_status: none
+  version: v2.1
+  date_recorded: 2026-05-20
+  source_surface: Dave / DeepSeek rectification / GPT packaging and harness thread
+  raw_export_status: summary_only
+  checksum_placeholder: pending_local_hash
+  commit_lineage:
+    rectification: 5611dc6fd0395c52b67ca97b2987a43f3377c79d
+    consolidated_reference: c6a610c3cc4d7e5a4371cc0e9fcc852cae1a3e3f
+    complete_spec: 8019a90adeb3232ec24de678911cda0842858e4b
+  boundary_statement: >
+    Wire reality stays boring and gate-aligned. Śūnya is in-ring at 0x0B.
+    D0/Z0 manifest is external. Lattice z=0 remains a valid wire coordinate.
+  responsibility_split:
+    layer_1: packet_shape
+    d0_session_guard: sequence_monotonicity
+    lantern_hash_d0: cryptographic_residue
+    governance_s10: authority_and_promotion
+---
+
 # RAINBOW YIN-YANG PERIODIC HYPERCUBE LATTICE SPECIFICATION v2.1
 
 ## Complete Consolidated Rewrite with Śūnya In-Ring Correction and Pre-Commit Enforcement
