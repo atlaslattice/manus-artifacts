@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atlaslattice.local/schemas/atlas_prime_query_interface.schema.json",
+  "title": "Atlas Prime Query Interface",
+  "description": "Candidate JSON-RPC interface schema for Atlas Prime reference resolution, invariant checks, and claim tagging. CANDIDATE ONLY — NOT CANON — NON-DEPLOYABLE. Atlas Prime resolves references; it does not create truth, ratify, or execute.",
+  "oneOf": [
+    { "$ref": "#/$defs/define_request" },
+    { "$ref": "#/$defs/check_invariant_request" },
+    { "$ref": "#/$defs/resolve_ref_request" },
+    { "$ref": "#/$defs/tag_claim_request" }
+  ],
+  "$defs": {
+    "jsonrpc_base": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["jsonrpc", "id", "method", "params"],
+      "properties": {
+        "jsonrpc": { "const": "2.0" },
+        "id": {
+          "oneOf": [
+            { "type": "string", "minLength": 1 },
+            { "type": "integer" }
+          ]
+        },
+        "method": {
+          "enum": ["DEFINE", "CHECK_INVARIANT", "RESOLVE_REF", "TAG_CLAIM"]
+        },
+        "params": { "type": "object" }
+      }
+    },
+    "boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canon", "deployment", "authority", "human_root_final_authority"],
+      "properties": {
+        "canon": { "const": false },
+        "deployment": { "const": false },
+        "authority": { "enum": ["none", "formalization_only", "query_only"] },
+        "human_root_final_authority": { "const": true }
+      }
+    },
+    "source_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "path", "raw_export_status"],
+      "properties": {
+        "kind": { "enum": ["repo_file", "notion_page", "raw_thread", "white_paper", "transcript", "manual_note"] },
+        "path": { "type": "string", "minLength": 1 },
+        "commit_sha": { "type": ["string", "null"] },
+        "raw_export_status": { "enum": ["RAW_EXPORTED", "RAW_NOT_EXPORTED", "RAW_PARTIAL", "RAW_UNAVAILABLE", "UNKNOWN"] }
+      }
+    },
+    "define_request": {
+      "allOf": [
+        { "$ref": "#/$defs/jsonrpc_base" },
+        {
+          "type": "object",
+          "properties": {
+            "method": { "const": "DEFINE" },
+            "params": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["term", "scope", "source_ref", "boundary"],
+              "properties": {
+                "term": { "type": "string", "minLength": 1 },
+                "scope": { "enum": ["atlas", "orcs", "gptbrain", "krakoa", "appendix_i"] },
+                "source_ref": { "$ref": "#/$defs/source_ref" },
+                "boundary": { "$ref": "#/$defs/boundary" }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "check_invariant_request": {
+      "allOf": [
+        { "$ref": "#/$defs/jsonrpc_base" },
+        {
+          "type": "object",
+          "properties": {
+            "method": { "const": "CHECK_INVARIANT" },
+            "params": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["invariant_id", "candidate_state", "boundary"],
+              "properties": {
+                "invariant_id": { "type": "string", "minLength": 1 },
+                "candidate_state": { "type": "object" },
+                "boundary": { "$ref": "#/$defs/boundary" }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "resolve_ref_request": {
+      "allOf": [
+        { "$ref": "#/$defs/jsonrpc_base" },
+        {
+          "type": "object",
+          "properties": {
+            "method": { "const": "RESOLVE_REF" },
+            "params": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["ref", "expected_kind", "boundary"],
+              "properties": {
+                "ref": { "$ref": "#/$defs/source_ref" },
+                "expected_kind": { "enum": ["repo_file", "notion_page", "raw_thread", "white_paper", "transcript", "manual_note"] },
+                "boundary": { "$ref": "#/$defs/boundary" }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "tag_claim_request": {
+      "allOf": [
+        { "$ref": "#/$defs/jsonrpc_base" },
+        {
+          "type": "object",
+          "properties": {
+            "method": { "const": "TAG_CLAIM" },
+            "params": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["claim_text", "claim_class", "confidence", "source_ref", "boundary"],
+              "properties": {
+                "claim_text": { "type": "string", "minLength": 1 },
+                "claim_class": { "enum": ["raw_user_report", "raw_model_output", "parsed_artifact", "candidate_canon", "ratified_canon", "deployment_claim"] },
+                "confidence": { "enum": ["C0_UNSUPPORTED", "C1_USER_REPORTED", "C2_SOURCE_ARTIFACT_EXISTS", "C3_MULTIPLE_ARTIFACTS_CONVERGE", "C4_INTERNAL_REVIEWED", "C5_INDEPENDENTLY_VERIFIED_OR_OPERATIONAL"] },
+                "source_ref": { "$ref": "#/$defs/source_ref" },
+                "boundary": { "$ref": "#/$defs/boundary" }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
