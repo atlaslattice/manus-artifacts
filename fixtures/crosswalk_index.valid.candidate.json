@@ -1,0 +1,38 @@
+{
+  "schema_id": "crosswalk_index.v0.1",
+  "status": "CANDIDATE",
+  "canon_status": "NOT_CANON",
+  "deployment_status": "NON_DEPLOYABLE",
+  "authority_status": "FORMALIZATION_ONLY",
+  "crosswalk_id": "CW-APPENDIX_I_V03",
+  "source_ref": {
+    "kind": "repo_file",
+    "path": "archive/boot/orcs/APPENDIX_I_ATLAS_ORCS_EPISTEMIC_PROFILE_v0.3.md",
+    "commit_sha": "ee843d27a6125712dd3fe893b5dfcecd3d538f94",
+    "raw_export_status": "RAW_NOT_EXPORTED"
+  },
+  "promotion_target": {
+    "q": "atlas_profile",
+    "description": "Candidate Atlas / ORCS epistemic profile evidence eligibility lane"
+  },
+  "evidence_set": {
+    "notation": "E_t^{q,*}",
+    "subset_of": "E(S_t)",
+    "items": [
+      {
+        "evidence_id": "APPENDIX_I_V03_PATCHED_NOTATION",
+        "score": 0.87,
+        "threshold": 0.75,
+        "eligible": true
+      }
+    ]
+  },
+  "human_root_review_required": true,
+  "human_root_signature": {
+    "status": "PENDING",
+    "signed_by": null,
+    "signed_at": null
+  },
+  "canon_promotion_receipt": null,
+  "notes": "Golden path candidate fixture. Not canon. Not deployable. No authority."
+}
