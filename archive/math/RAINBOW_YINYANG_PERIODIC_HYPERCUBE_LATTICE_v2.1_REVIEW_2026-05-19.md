@@ -1,3 +1,29 @@
+---
+vault_header:
+  artifact_id: RYY-PHL-V2.1-CREATIVE-OVERLAY-REVIEW
+  title: Rainbow Yin-Yang Periodic Hypercube Lattice v2.1 — Aster Review
+  epistemic_label: candidate_creative_overlay_review
+  canon_status: not_canon
+  proof_status: not_proof
+  deployment_status: not_deployable
+  authority_status: none
+  version: v2.1_review
+  date_recorded: 2026-05-19
+  source_surface: user-uploaded Pasted text(182).txt in current thread
+  raw_export_status: summary_only
+  checksum_placeholder: pending_local_hash
+  commit_lineage:
+    overlay_review_original: 0a0c2eb53f1fdc6bbb546a63317b29e13636a6dd
+  boundary_statement: >
+    This overlay helps humans see why the map matters. It is not wire reality,
+    not proof, not an executable rule, and not a deployment claim.
+  responsibility_split:
+    overlay: orientation_and_design_guidance
+    wire_spec: packet_gate_and_bounds
+    d0_session_guard: sequence_and_provenance
+    governance_s10: authority_and_promotion
+---
+
 # Rainbow Yin-Yang Periodic Hypercube Lattice v2.1 — Aster Review
 
 **Date recorded:** 2026-05-19  
