@@ -1,0 +1,257 @@
+# Pure-Wire Specification
+## 12×12×12 Lattice — Wire Layer Only
+**Document ID:** PWS-121212-WL  
+**Version:** 1.0.0  
+**Date:** 2026-05-21  
+**Status:** DRAFT  
+**Scope:** Wire-layer definitions only. No overlay, no governance, no routing policy.
+
+---
+
+## 1. Geometry
+
+### 1.1 Lattice Dimensions
+
+| Axis | Size | Index Range |
+|------|------|-------------|
+| X    | 12   | 0 – 11      |
+| Y    | 12   | 0 – 11      |
+| Z    | 12   | 0 – 11      |
+
+- **Total nodes:** 12 × 12 × 12 = **1 728**
+- **Topology:** Uniform rectilinear (Cartesian) lattice
+- **Connectivity:** Each interior node has degree 6 (±X, ±Y, ±Z neighbours); edge/corner nodes have reduced degree accordingly
+- **Wire orientation:** Undirected at the physical layer; direction is resolved by the address predicate (§ 4)
+
+### 1.2 Node Coordinates
+
+A node is identified by the ordered triple **(x, y, z)** where each component is an unsigned integer satisfying:
+
+```text
+0 ≤ x ≤ 11
+0 ≤ y ≤ 11
+0 ≤ z ≤ 11
+```
+
+### 1.3 Edge Set
+
+An edge exists between nodes **n₁ = (x₁, y₁, z₁)** and **n₂ = (x₂, y₂, z₂)** if and only if:
+
+```text
+|x₁ − x₂| + |y₁ − y₂| + |z₁ − z₂| = 1
+```
+
+(Manhattan distance = 1; nearest-neighbour adjacency only.)
+
+---
+
+## 2. Addressing
+
+### 2.1 Flat Node Address
+
+Each node maps to a unique 11-bit flat address **A** computed as:
+
+```text
+A(x, y, z) = (z × 144) + (y × 12) + x
+```
+
+- **Address space:** 0x000 – 0x6BF  (0 – 1727 decimal)
+- **Width:** 11 bits (fits in a 12-bit field with 1 reserved bit)
+
+### 2.2 Structured Wire Address (SWA)
+
+The Structured Wire Address is a 16-bit field laid out as follows:
+
+```text
+ 15  14  13  12  11  10   9   8   7   6   5   4   3   2   1   0
+ ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
+ │ RSV │  Z[3:0]  │    Y[3:0]     │    X[3:0]     │  TAG[1:0]  │
+ └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
+```
+
+| Field   | Bits    | Width | Description                              |
+|---------|---------|-------|------------------------------------------|
+| RSV     | [15:14] | 2     | Reserved; must be 0b00 on wire           |
+| Z       | [13:10] | 4     | Z-coordinate (0–11)                      |
+| Y       | [9:6]   | 4     | Y-coordinate (0–11)                      |
+| X       | [5:2]   | 4     | X-coordinate (0–11)                      |
+| TAG     | [1:0]   | 2     | Wire-layer tag (see § 5)                 |
+
+> **Note:** Values 12–15 in X, Y, or Z fields are invalid and must be rejected at the wire layer (see § 4 validity predicate).
+
+### 2.3 Link Identifier
+
+A directed link from source node **s** to destination node **d** is identified by the tuple **(SWA(s), SWA(d))**. The reverse direction is a distinct link.
+
+---
+
+## 3. Valid Z-Domain
+
+### 3.1 Definition
+
+The **valid Z-domain** is the set of Z-plane indices that are structurally active in this lattice instantiation:
+
+```text
+Z_valid = { z ∈ ℤ : 0 ≤ z ≤ 11 }
+```
+
+All 12 Z-planes are active. No Z-plane is reserved, masked, or conditionally disabled at the wire layer.
+
+### 3.2 Z-Plane Membership Predicate
+
+```text
+z_in_domain(z) ≜  (z ≥ 0) ∧ (z ≤ 11)
+```
+
+### 3.3 Z-Boundary Conditions
+
+| Z-plane | Boundary type | Notes                                   |
+|---------|---------------|-----------------------------------------|
+| z = 0   | Floor         | No −Z neighbour; ingress face           |
+| z = 11  | Ceiling       | No +Z neighbour; egress face            |
+| 1–10    | Interior      | Full ±Z adjacency                       |
+
+---
+
+## 4. Śūnya Tag
+
+### 4.1 Semantics
+
+The **Śūnya** (Sanskrit: *śūnya*, "void / zero") tag marks a wire-layer frame as **null-bearing**: the frame occupies a physical wire slot but carries no payload.
+
+- A Śūnya-tagged frame **must not** be forwarded to any upper layer.
+- It **may** be used for keep-alive, synchronisation, or slot-reservation signalling at the wire layer itself.
+- Upper layers **must not** originate Śūnya-tagged frames; only the wire layer may set the tag.
+
+### 4.2 Encoding
+
+Within the SWA TAG field (bits [1:0]):
+
+| TAG[1:0] | Meaning              |
+|----------|----------------------|
+| 0b00     | Normal data frame    |
+| 0b01     | Reserved             |
+| 0b10     | Reserved             |
+| 0b11     | **Śūnya** (null/void)|
+
+### 4.3 Wire-Layer Handling Rules
+
+1. **Detection:** A frame is Śūnya if and only if `TAG[1:0] == 0b11`.
+2. **Absorption:** The receiving wire-layer endpoint absorbs the frame and increments its local `sunya_rx` counter.
+3. **No ACK:** Śūnya frames do not trigger any acknowledgement.
+4. **Transparency:** Śūnya frames are invisible to all layers above the wire layer.
+5. **Injection rate:** The wire layer may inject at most one Śūnya frame per 256 consecutive wire slots on any single link (rate-cap to prevent slot exhaustion).
+
+---
+
+## 5. PktSundya0 — L1_valid Predicate
+
+### 5.1 Purpose
+
+`PktSundya0` is the canonical wire-layer **L1 validity predicate**. It is evaluated on every inbound frame before any further processing. A frame that fails `L1_valid` is silently dropped at the wire layer; no error is propagated upward.
+
+### 5.2 Formal Definition
+
+```text
+L1_valid(frame) ≜
+    coordinate_valid(frame.swa)
+  ∧ tag_not_reserved(frame.swa.TAG)
+  ∧ rsv_zero(frame.swa)
+  ∧ z_in_domain(frame.swa.Z)
+  ∧ (frame.length ≥ L1_MIN_FRAME)
+  ∧ (frame.length ≤ L1_MAX_FRAME)
+  ∧ fcs_pass(frame)
+```
+
+### 5.3 Sub-Predicate Definitions
+
+```text
+coordinate_valid(swa) ≜
+    (swa.X ≤ 11) ∧ (swa.Y ≤ 11) ∧ (swa.Z ≤ 11)
+
+tag_not_reserved(tag) ≜
+    (tag ≠ 0b01) ∧ (tag ≠ 0b10)
+
+rsv_zero(swa) ≜
+    (swa.RSV == 0b00)
+
+z_in_domain(z) ≜
+    (z ≥ 0) ∧ (z ≤ 11)          -- see § 3.2
+
+fcs_pass(frame) ≜
+    CRC16(frame.payload) == frame.fcs
+```
+
+### 5.4 Wire Constants
+
+| Constant        | Value | Description                              |
+|-----------------|-------|------------------------------------------|
+| `L1_MIN_FRAME`  | 8     | Minimum frame length in bytes (header only) |
+| `L1_MAX_FRAME`  | 2048  | Maximum frame length in bytes            |
+| `CRC_POLY`      | 0x8005| CRC-16/IBM polynomial                    |
+| `SUNYA_RATE_CAP`| 1/256 | Max Śūnya frames per wire slot           |
+
+### 5.5 Evaluation Order and Short-Circuit
+
+Implementations **must** evaluate sub-predicates in the following order, short-circuiting on first failure:
+
+```text
+1. rsv_zero          — cheapest field check; drop malformed SWA immediately
+2. coordinate_valid  — reject out-of-lattice addresses
+3. z_in_domain       — redundant with coordinate_valid.Z; retained for clarity
+4. tag_not_reserved  — reject reserved tag values
+5. length bounds     — reject undersize / oversize frames
+6. fcs_pass          — most expensive; only run if all structural checks pass
+```
+
+### 5.6 PktSundya0 and the Śūnya Tag
+
+A frame bearing the Śūnya tag (`TAG == 0b11`) is **not** rejected by `L1_valid`; `tag_not_reserved` only rejects `0b01` and `0b10`. The frame passes `L1_valid`, then the Śūnya absorption rule (§ 4.3) fires before any further forwarding decision.
+
+```text
+if L1_valid(frame):
+    if frame.swa.TAG == 0b11:          # Śūnya
+        absorb(frame)                  # wire-layer only; do not forward
+    else:
+        forward_to_l2(frame)           # normal path
+else:
+    drop(frame)                        # silent wire-layer drop
+```
+
+---
+
+## 6. Constants Summary
+
+| Symbol          | Value     | Section |
+|-----------------|-----------|---------|
+| `LATTICE_X`     | 12        | § 1.1   |
+| `LATTICE_Y`     | 12        | § 1.1   |
+| `LATTICE_Z`     | 12        | § 1.1   |
+| `NODE_COUNT`    | 1728      | § 1.1   |
+| `ADDR_BITS`     | 11        | § 2.1   |
+| `SWA_WIDTH`     | 16 bits   | § 2.2   |
+| `Z_MIN`         | 0         | § 3.1   |
+| `Z_MAX`         | 11        | § 3.1   |
+| `TAG_NORMAL`    | 0b00      | § 4.2   |
+| `TAG_SUNYA`     | 0b11      | § 4.2   |
+| `L1_MIN_FRAME`  | 8 bytes   | § 5.4   |
+| `L1_MAX_FRAME`  | 2048 bytes| § 5.4   |
+| `CRC_POLY`      | 0x8005    | § 5.4   |
+| `SUNYA_RATE_CAP`| 1/256     | § 5.4   |
+
+---
+
+## 7. Exclusions (Explicit)
+
+The following are **out of scope** for this document and must not be added here:
+
+- Overlay network definitions
+- Routing tables or forwarding policies
+- Governance rules or access-control lists
+- Upper-layer (L2+) protocol definitions
+- Quality-of-service or traffic-shaping rules
+- Node role assignments (spine, leaf, edge, etc.)
+
+---
+
+*End of Pure-Wire Specification — PWS-121212-WL v1.0.0*
