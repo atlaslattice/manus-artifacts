@@ -1,0 +1,194 @@
+# CODEX_HANDOFF_PACKET_SCHEMA.yaml
+
+schema_id: CODEX_HANDOFF_PACKET_SCHEMA
+status: SCHEMA_DRAFT_NOT_CANON
+issue: manus-artifacts#124
+version: 0.1.0
+purpose: >
+  Define a Codex-compatible candidate handoff packet for GPTDream++ memory,
+  receipt, replay, and governance workflows. Compatibility remains candidate
+  until tested on an actual OpenAI/Codex-facing path.
+
+required_fields:
+  - packet_id
+  - status
+  - source_refs
+  - raw_export_status
+  - artifact_status
+  - scope
+  - sandbox_constraints
+  - verifier_routes
+  - human_root_boundary
+  - created_at
+
+fields:
+  packet_id:
+    type: string
+    example: CODEX-HANDOFF-20260522-0001
+
+  status:
+    type: enum
+    values:
+      - candidate_not_canon
+      - dry_run_ready
+      - blocked
+      - superseded
+      - reviewed
+
+  source_refs:
+    type: array
+    items: string
+
+  raw_export_status:
+    type: enum
+    values:
+      - raw_available
+      - partial_raw_available
+      - summary_only
+      - no_raw_export
+      - unknown
+
+  artifact_status:
+    type: object
+    required:
+      - canon_status
+      - deployment_status
+      - review_state
+      - lineage_condition
+      - authority_scope
+      - provenance_type
+    fields:
+      canon_status:
+        type: enum
+        values: [candidate, provisional, canonical, deprecated, rejected, superseded]
+      deployment_status:
+        type: enum
+        values: [inert, simulated, staged, live, retired]
+      review_state:
+        type: enum
+        values: [unreviewed, reviewed, ratified, rejected, quarantined]
+      lineage_condition:
+        type: enum
+        values: [intact, partial, degraded, unknown, disputed]
+      authority_scope:
+        type: enum
+        values: [none, advisory, review, ratification, execution]
+      provenance_type:
+        type: enum
+        values: [generated, imported, retrieved, derived, mirrored, human_root_declared, external_source]
+
+  scope:
+    type: object
+    fields:
+      task_summary:
+        type: string
+      allowed_actions:
+        type: array
+        items: string
+      forbidden_actions:
+        type: array
+        items: string
+      repo_refs:
+        type: array
+        items: string
+
+  sandbox_constraints:
+    type: object
+    required:
+      - workspace_required
+      - production_branch_touch_allowed
+      - commit_push_allowed
+      - live_write_allowed
+    fields:
+      workspace_required:
+        type: enum
+        values: [sandbox, worktree, mock, dry_run]
+      production_branch_touch_allowed:
+        type: boolean
+        default: false
+      commit_push_allowed:
+        type: boolean
+        default: false
+      live_write_allowed:
+        type: boolean
+        default: false
+      adapter_mode:
+        type: enum
+        values: [REPO_TRACE_ONLY, DRY_RUN_ONLY, MOCK_GITHUB, LIVE_GITHUB]
+        default: DRY_RUN_ONLY
+
+  plan_binding:
+    type: object
+    fields:
+      sandbox_plan_ref:
+        type: string
+        nullable: true
+      sandbox_plan_sha256:
+        type: string
+        nullable: true
+      plan_hash_tool:
+        type: string
+        nullable: true
+
+  execution_expectations:
+    type: object
+    fields:
+      output_type:
+        type: enum
+        values: [diff_preview, analysis_report, test_report, no_mutation]
+      diff_sha256_required_before_verification:
+        type: boolean
+        default: true
+
+  verifier_routes:
+    type: object
+    required:
+      - logic_verifier
+      - security_verifier
+      - canon_verifier
+    fields:
+      logic_verifier:
+        type: array
+        items: string
+      security_verifier:
+        type: array
+        items: string
+      canon_verifier:
+        type: array
+        items: string
+
+  human_root_boundary:
+    type: object
+    required:
+      - human_root_required
+      - approval_actor
+      - approval_inferred_from_silence
+    fields:
+      human_root_required:
+        type: boolean
+        default: true
+      approval_actor:
+        type: string
+        example: S10 / Dave Sheldon
+      approval_inferred_from_silence:
+        type: boolean
+        default: false
+
+  corpus_control_notes:
+    type: array
+    items: string
+
+  known_overclaims_to_avoid:
+    type: array
+    items: string
+
+  created_at:
+    type: datetime
+
+invariants:
+  - Handoff packet is not approval.
+  - Dry-run receipt is not deployment.
+  - Verifier pass is not ratification.
+  - Codex output is not merge authority.
+  - If raw_export_status is not raw_available, do not imply full source fidelity.
+  - OpenAI/Codex compatibility cannot be claimed until tested on an OpenAI/Codex-facing path.
