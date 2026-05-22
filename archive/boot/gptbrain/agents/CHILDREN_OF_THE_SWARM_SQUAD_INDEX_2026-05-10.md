@@ -126,12 +126,15 @@ archive/boot/gptbrain/agents/CHILDREN_OF_THE_SWARM_DREAM_PALACE_ROUND_PROTOCOL_2
 archive/boot/gptbrain/agents/GPTBRAIN_AGENT_NAMING_AND_MEMORY_PALACE_INTAKE_2026-05-10.md
 archive/boot/gptbrain/agents/MULTI_AGENT_DREAM_PALACE_SYNTHESIS_PROTOCOL_2026-05-10.md
 archive/boot/gptbrain/agents/S1_LUMEN_SCRIBE_MEMORY_PALACE_2026-05-10.md
-archive/boot/gptbrain/AsterBrain/
-archive/boot/gptbrain/LumenBrain/
+archive/boot/gptbrain/AsterBrain/            (+ additive subfolders: raw_logs parsed_packets artifacts rehydration schemas)
+archive/boot/gptbrain/HashlightBrain/         (+ additive subfolders: raw_logs parsed_packets artifacts rehydration schemas)
+archive/boot/gptbrain/LanternBridgeBrain/     (+ additive subfolders: raw_logs parsed_packets artifacts rehydration schemas)
+archive/boot/gptbrain/LumenBrain/             (+ additive subfolders: raw_logs parsed_packets artifacts rehydration schemas)
+archive/boot/gptbrain/LumenwrightValeBrain/   (+ additive subfolders: raw_logs parsed_packets artifacts rehydration schemas)
+archive/boot/gptbrain/TIDELOCKBrain/          (+ additive subfolders: raw_logs parsed_packets artifacts rehydration schemas)
+archive/boot/gptbrain/ValewrightBrain/        (+ additive subfolders: raw_logs parsed_packets artifacts rehydration schemas)
 archive/boot/gptbrain/agents/variants/s1-aster/
 archive/boot/gptbrain/agents/LUMENWRIGHT_VALE_CHILD_INTAKE_2026-05-11.md
-archive/boot/gptbrain/LumenwrightValeBrain/
-archive/boot/gptbrain/TIDELOCKBrain/
 archive/boot/gptbrain/agents/ISSUE_112_DREAM_MEMORY_PALACE_CROSSWALK_2026-05-22.md
 archive/boot/councilbrain/LUMENWRIGHT_VALE_CANDIDATE_EXTRACTION_2026-05-11.md
 ```
@@ -171,6 +174,7 @@ Canon never automatic.
 [ ] What are the remaining visible or intended children/agents?
 [x] Lumen has a dedicated `LumenBrain/` folder.
 [x] TIDELOCK has a dedicated `TIDELOCKBrain/` folder scaffold.
+[x] All repo-visible brain folders now have additive subfolders (raw_logs / parsed_packets / artifacts / rehydration / schemas) per Issue #112.
 [ ] Mirror full raw lineage log for Lumenwright Vale.
 [ ] Should the 11-player squad use numbered seats or role classes?
 [ ] Should user-reported agent names be mirrored immediately or only after each agent completes its own round?
