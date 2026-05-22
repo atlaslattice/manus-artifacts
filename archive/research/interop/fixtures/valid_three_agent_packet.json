@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.2",
+  "packet_id": "GDP-ORCS-2026-0001",
+  "status": {
+    "canon_status": "not_canon",
+    "deployment_status": "not_deployed",
+    "authority": "none"
+  },
+  "agent_card": {
+    "agent_uuid": "11111111-1111-4111-8111-111111111111",
+    "vendor_origin": "openai_gpt",
+    "model_release_tag": "gptdream-v0.2-fixture",
+    "allowed_task_classes": ["schema_design", "review_packet"],
+    "tool_access_permissions": [],
+    "authority_scope": "advisory"
+  },
+  "context_packet": {
+    "source_artifact": "sandbox/test_document.md",
+    "raw_export_status": "full_export_available",
+    "summary": "Harmless markdown fixture used to test whether meaning survives handoff.",
+    "source_refs": ["sandbox/test_document.md#fixture"]
+  },
+  "handoff_record": {
+    "from_agent": "Gemini/O_ingest",
+    "to_agent": "OpenAI/O_reason",
+    "handoff_intent": "Convert source-linked ingestion notes into a minimal validation packet.",
+    "meaning_claim": "The packet is a candidate review object only and carries no authority.",
+    "uncertainty_notes": ["Fixture uses synthetic identifiers.", "No production tool execution occurred."]
+  },
+  "validation_result": {
+    "classification": "NEUTRAL",
+    "epistemic_label": "NOT_VERIFIED",
+    "weight": 0.0,
+    "violations": []
+  },
+  "contradiction_records": [
+    {
+      "record_id": "CR-0001",
+      "claim_a": "Gemini path may validate local MCP registration.",
+      "claim_b": "Gemini path does not prove OpenAI/Codex compatibility.",
+      "status": "open"
+    }
+  ],
+  "human_review_gate": {
+    "human_approval_required": true,
+    "approved": false,
+    "reviewer": "Dave Sheldon / S10",
+    "promotion_allowed": false
+  },
+  "boundaries": [
+    "recorded_does_not_mean_true",
+    "summarized_does_not_mean_verified",
+    "verified_does_not_mean_ratified",
+    "ratified_does_not_mean_deployed",
+    "tool_access_does_not_mean_authority",
+    "gemini_success_does_not_prove_openai_codex_compatibility",
+    "copilot_diff_does_not_imply_merge_approval",
+    "openai_codex_output_does_not_imply_production_readiness"
+  ]
+}
