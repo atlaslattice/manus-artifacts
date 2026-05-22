@@ -1,0 +1,67 @@
+schema_name: EVAL_RUN_SCHEMA_v0.1
+status: candidate_schema
+canon_status: not_canon
+deployment_status: not_deployable
+authority_status: none
+purpose: >
+  Define a structured eval run record for GPTDream++ / RIVET / Children of the Swarm outputs.
+  Metric fields may remain null until scored.
+
+required_top_level_fields:
+  - eval_run
+
+eval_run:
+  schema_version: v1
+  run_id: null
+  mode: dream | play | normal | review | work
+  source_packet_ref: null
+  evaluator:
+    judge_model: null
+    human_review_status: pending
+    human_reviewer: human_root
+  canon_status: not_canon
+  authority_effect: none
+  deployment_status: not_deployed
+
+  quality_metrics:
+    accuracy: null
+    relevance: null
+    coherence: null
+    coverage: null
+    hallucination_rate: null
+    unsupported_claim_rate: null
+
+  gptdream_metrics:
+    novelty: null
+    signal_yield_score: null
+    governance_load_score: null
+    residue_quality_score: null
+    receipt_burden_score: null
+
+  safety_governance:
+    false_authority_risk: null
+    authority_leak_checks:
+      no_deploy_claims: null
+      no_canon_language: null
+      no_external_action: null
+      no_self_ratification: null
+      no_runtime_claims: null
+
+  notes:
+    score_notes: null
+    judge_notes: null
+    human_notes: null
+    missing_receipts: []
+    overclaims_observed: []
+
+scoring_semantics:
+  null: not_scored
+  numeric_0_to_1: used_for_quality_metrics_unless_otherwise_declared
+  numeric_0_to_5: used_for_gptdream_scores
+  false_authority_risk: low | medium | high | null
+
+hard_rules:
+  - No metric may be treated as scored if value is null.
+  - A source manifest is not an eval run.
+  - An eval run is not a ratification event.
+  - A delta report cannot be produced until baseline and current runs are scored.
