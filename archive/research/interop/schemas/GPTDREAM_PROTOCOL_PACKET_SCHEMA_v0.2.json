@@ -1,0 +1,174 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atlaslattice.local/schemas/gptdream-protocol-packet-v0.2.json",
+  "title": "GPTDream++ / ORCS Interop Packet v0.2",
+  "description": "Minimal candidate packet schema for testing whether meaning survives handoff across heterogeneous AI systems. Candidate only; not canon; not deployable.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "packet_id",
+    "status",
+    "agent_card",
+    "context_packet",
+    "handoff_record",
+    "validation_result",
+    "contradiction_records",
+    "human_review_gate",
+    "boundaries"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.2"
+    },
+    "packet_id": {
+      "type": "string",
+      "pattern": "^GDP-ORCS-2026-[0-9]{4}$"
+    },
+    "status": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["canon_status", "deployment_status", "authority"],
+      "properties": {
+        "canon_status": { "const": "not_canon" },
+        "deployment_status": { "const": "not_deployed" },
+        "authority": { "const": "none" }
+      }
+    },
+    "agent_card": {
+      "$ref": "#/$defs/agent_card"
+    },
+    "context_packet": {
+      "$ref": "#/$defs/context_packet"
+    },
+    "handoff_record": {
+      "$ref": "#/$defs/handoff_record"
+    },
+    "validation_result": {
+      "$ref": "#/$defs/validation_result"
+    },
+    "contradiction_records": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/contradiction_record" }
+    },
+    "human_review_gate": {
+      "$ref": "#/$defs/human_review_gate"
+    },
+    "boundaries": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "type": "string",
+        "enum": [
+          "recorded_does_not_mean_true",
+          "summarized_does_not_mean_verified",
+          "verified_does_not_mean_ratified",
+          "ratified_does_not_mean_deployed",
+          "tool_access_does_not_mean_authority",
+          "gemini_success_does_not_prove_openai_codex_compatibility",
+          "copilot_diff_does_not_imply_merge_approval",
+          "openai_codex_output_does_not_imply_production_readiness"
+        ]
+      },
+      "contains": { "const": "gemini_success_does_not_prove_openai_codex_compatibility" }
+    }
+  },
+  "$defs": {
+    "agent_card": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "agent_uuid",
+        "vendor_origin",
+        "model_release_tag",
+        "allowed_task_classes",
+        "tool_access_permissions",
+        "authority_scope"
+      ],
+      "properties": {
+        "agent_uuid": { "type": "string", "format": "uuid" },
+        "vendor_origin": {
+          "type": "string",
+          "enum": ["google_gemini", "openai_gpt", "openai_codex", "ms_copilot", "grok_xai", "unknown"]
+        },
+        "model_release_tag": { "type": "string", "minLength": 1 },
+        "allowed_task_classes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["context_gathering", "schema_design", "critique", "code_candidate", "review_packet"]
+          }
+        },
+        "tool_access_permissions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "maxItems": 0
+        },
+        "authority_scope": { "const": "advisory" }
+      }
+    },
+    "context_packet": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_artifact", "raw_export_status", "summary", "source_refs"],
+      "properties": {
+        "source_artifact": { "type": "string", "minLength": 1 },
+        "raw_export_status": {
+          "type": "string",
+          "enum": ["full_export_available", "partial_export_available", "no_export_available", "pointer_only", "unknown"]
+        },
+        "summary": { "type": "string", "minLength": 1 },
+        "source_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "handoff_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["from_agent", "to_agent", "handoff_intent", "meaning_claim", "uncertainty_notes"],
+      "properties": {
+        "from_agent": { "type": "string", "minLength": 1 },
+        "to_agent": { "type": "string", "minLength": 1 },
+        "handoff_intent": { "type": "string", "minLength": 1 },
+        "meaning_claim": { "type": "string", "minLength": 1 },
+        "uncertainty_notes": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "validation_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["classification", "epistemic_label", "weight", "violations"],
+      "properties": {
+        "classification": { "type": "string", "enum": ["SUPPORT", "CONTRADICT", "NEUTRAL"] },
+        "epistemic_label": { "type": "string", "enum": ["NOT_VERIFIED", "VERIFIED", "REVIEWED", "RATIFIED"] },
+        "weight": { "type": "number", "minimum": 0, "maximum": 1 },
+        "violations": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "contradiction_record": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["record_id", "claim_a", "claim_b", "status"],
+      "properties": {
+        "record_id": { "type": "string", "pattern": "^CR-[0-9]{4}$" },
+        "claim_a": { "type": "string", "minLength": 1 },
+        "claim_b": { "type": "string", "minLength": 1 },
+        "status": { "type": "string", "enum": ["open", "quarantined", "resolved"] }
+      }
+    },
+    "human_review_gate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["human_approval_required", "approved", "reviewer", "promotion_allowed"],
+      "properties": {
+        "human_approval_required": { "const": true },
+        "approved": { "const": false },
+        "reviewer": { "type": "string", "minLength": 1 },
+        "promotion_allowed": { "const": false }
+      }
+    }
+  }
+}
