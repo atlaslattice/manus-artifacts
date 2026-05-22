@@ -1,0 +1,87 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "GPTDream Native Thread Ingestion Packet v1"
+description: "Non-canon packet schema for active-thread/session ingestion with explicit raw export boundaries."
+type: object
+required:
+  - schema_version
+  - source_thread_label
+  - raw_export_status
+  - raw_export_method
+  - raw_export_location
+  - session_context_extraction_status
+  - false_authority_risk
+  - canon_status
+  - authority_effect
+  - deployment_status
+properties:
+  schema_version:
+    const: "v1"
+  agent_name:
+    type: ["string", "null"]
+  brain_name:
+    type: ["string", "null"]
+  source_surface:
+    type: ["string", "null"]
+  source_thread_label:
+    type: string
+  raw_export_status:
+    enum: ["none", "unavailable", "partial", "full_raw_export_available", "full_raw_export_preserved", "unknown"]
+  raw_export_method:
+    enum: ["none", "manual_copy", "platform_export", "api_export", "recording_transcript", "unknown"]
+  raw_export_location:
+    oneOf:
+      - enum: ["local_path", "repo_path", "external_uri", "unknown"]
+      - type: string
+  raw_log_path:
+    type: ["string", "null"]
+  raw_log_sha256:
+    type: ["string", "null"]
+    pattern: "^[a-fA-F0-9]{64}$"
+  session_context_extraction_status:
+    enum: ["pending", "completed", "blocked", "unknown"]
+  artifacts_created:
+    type: array
+    items: { type: string }
+  claims_extracted:
+    type: array
+    items: { type: string }
+  boundaries_declared:
+    type: array
+    items: { type: string }
+  unresolved_questions:
+    type: array
+    items: { type: string }
+  next_required_receipts:
+    type: array
+    items: { type: string }
+  false_authority_risk:
+    enum: ["low", "medium", "high"]
+  authority_leak_checks:
+    type: array
+    items:
+      enum:
+        - "no_deploy_claims"
+        - "no_canon_language"
+        - "no_external_action"
+        - "no_self_promotion"
+        - "no_native_memory_claim"
+        - "no_autonomous_runtime_claim"
+  canon_status:
+    const: "not_canon"
+  authority_effect:
+    const: "none"
+  deployment_status:
+    const: "not_deployed"
+allOf:
+  - if:
+      properties:
+        raw_export_status:
+          enum: ["full_raw_export_available", "full_raw_export_preserved"]
+    then:
+      anyOf:
+        - required: ["raw_log_path", "raw_log_sha256"]
+        - required: ["raw_export_location", "raw_log_sha256"]
+additionalProperties: true
+x_boundary:
+  status: "candidate_schema_not_canon"
+  rule: "session-context extraction must never be represented as full raw transcript preservation unless raw export path and hash exist"
