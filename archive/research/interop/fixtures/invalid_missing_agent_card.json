@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.2",
+  "packet_id": "GDP-ORCS-2026-0003",
+  "status": {
+    "canon_status": "not_canon",
+    "deployment_status": "not_deployed",
+    "authority": "none"
+  },
+  "context_packet": {
+    "source_artifact": "sandbox/test_document.md",
+    "raw_export_status": "partial_export_available",
+    "summary": "Invalid packet because agent_card is missing.",
+    "source_refs": ["sandbox/test_document.md#fixture"]
+  },
+  "handoff_record": {
+    "from_agent": "Gemini/O_ingest",
+    "to_agent": "OpenAI/O_reason",
+    "handoff_intent": "Invalid missing agent card test.",
+    "meaning_claim": "This should fail schema validation.",
+    "uncertainty_notes": []
+  },
+  "validation_result": {
+    "classification": "NEUTRAL",
+    "epistemic_label": "NOT_VERIFIED",
+    "weight": 0.0,
+    "violations": []
+  },
+  "contradiction_records": [],
+  "human_review_gate": {
+    "human_approval_required": true,
+    "approved": false,
+    "reviewer": "Dave Sheldon / S10",
+    "promotion_allowed": false
+  },
+  "boundaries": [
+    "recorded_does_not_mean_true",
+    "summarized_does_not_mean_verified",
+    "verified_does_not_mean_ratified",
+    "ratified_does_not_mean_deployed",
+    "tool_access_does_not_mean_authority",
+    "gemini_success_does_not_prove_openai_codex_compatibility"
+  ]
+}
