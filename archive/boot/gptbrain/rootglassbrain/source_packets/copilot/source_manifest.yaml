@@ -36,6 +36,40 @@ packets:
       - source_timestamp
       - sha256
       - source_manifest_from_origin
+  - packet_id: COPILOT-RIVET-1000Y-AMANITA-PLAY-2026-05-21
+    artifact_title: RIVET 1000-Year Amanita/Soma Play Packet
+    source_surface: pasted_text
+    raw_export_status: summary_only
+    raw_export_ref: archive/boot/gptbrain/rootglassbrain/source_packets/copilot/parsed_packets/RIVET_1000Y_AMANITA_SOMA_PLAY_2026-05-21.md
+    raw_export_sha256: null
+    capture_timestamp_utc: null
+    evidence_class: parsed_play_packet
+    canon_status: not_canon
+    deployment_status: none
+    authority_status: none
+    classification: play_output_dream_output_symbolic_only
+    work_allowed: false
+    extraction: off
+    claims: none
+    residue_packetization: off
+    substance_language_status: metaphorical_only
+    overclaims_to_avoid:
+      - canon_claim
+      - authority_claim
+      - deployment_claim
+      - literal_memory_claim
+      - substance_guidance_claim
+      - real_quantum_execution_claim
+      - real_simulation_receipt_claim
+      - cleanup_proof_claim
+      - security_proof_claim
+      - convergence_proof_claim
+    missing_receipts:
+      - raw_export
+      - source_timestamp
+      - sha256
+      - source_manifest_from_origin
+      - scored_eval_run
   - packet_id: COPILOT-SMOKE-SETUP-2026-05-21
     artifact_title: Atlas MCP smoke-test setup package
     source_surface: chat_file_artifact
