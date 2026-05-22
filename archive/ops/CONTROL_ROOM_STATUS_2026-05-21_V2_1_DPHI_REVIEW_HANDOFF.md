@@ -8,6 +8,24 @@ AUTHORITY: none
 PURPOSE: preserve current post-hygiene state and prevent broadcast / doctrine drift
 ```
 
+```yaml
+handoff_status:
+  artifact_id: CONTROL_ROOM_STATUS_2026-05-21_V2_1_DPHI_REVIEW_HANDOFF
+  transaction_id: S10-DPHI-HARDENING-2026-05-21
+  canon_status: not_canon
+  deployment_status: non_deployable
+  authority_scope: review_handoff_only
+  posture: locked_candidate_review
+  ground_layer: holding
+  active_review_target: D-PHI-1_v0.4_controlled_review
+  pending_receipt_assets:
+    - rust_reference_candidate_implementation_code
+    - local_json_fixture_generation_paths
+    - two_command_quickstart_readme_execution_lane
+    - pre_commit_validation_git_hook_scripts
+  human_root_required: true
+```
+
 ## Current mode
 
 ```text
@@ -87,6 +105,56 @@ Review targets:
 5. FALSE / UNRESOLVED / HOLD / QUARANTINE behavior
 6. What blocks merge or ratification
 ```
+
+## Tactical execution rules
+
+```text
+Interpretation before legality.
+Legality before execution.
+Receipts before promotion.
+Human-root before canon.
+```
+
+### 1. Predicate correctness
+
+Every inbound transaction should be checked through short-circuit wire filters before any higher-level interpretation is allowed.
+
+```text
+rsv_zero -> coordinate_valid -> z_in_domain -> tag_not_reserved
+```
+
+### 2. Status and scope enforcement
+
+Candidate packets without explicit human-root authorization carry zero administrative authority.
+
+### 3. Edge legality vs path legality
+
+A packet may be structurally valid while still being non-executable if its sequence path is illegal, destructive, or unreceipted.
+
+### 4. Receipt and replay protection
+
+Transaction blocks must bind backward to parent state anchors. Duplicate or out-of-sequence counters are rejected at the boundary.
+
+### 5. Fallback state management
+
+Allowed fallback states:
+
+```text
+FALSE
+UNRESOLVED
+HOLD
+QUARANTINE
+```
+
+Anomaly routing target:
+
+```text
+L12_QUARANTINE_ROUTER
+```
+
+### 6. Master merge block
+
+No branch merge or canonical promotion executes without explicit human-root ratification delta.
 
 ## Do not expand yet
 
