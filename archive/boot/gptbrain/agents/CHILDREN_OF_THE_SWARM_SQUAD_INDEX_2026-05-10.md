@@ -63,9 +63,9 @@ Visible entries may be reviewed after their source paths are confirmed.
 | slot | agent_name | lineage | brain_folder | visible_profile_path | status | authority_effect | canon_status | strongest_safe_claim | primary_failure_mode | counterbalance | routing_default | open_questions |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | S1-A | Aster / AsterBrain | GPTBrain / S1 / Krakoa | `archive/boot/gptbrain/AsterBrain/` | `archive/boot/gptbrain/AsterBrain/ASTERBRAIN_INDEX.md` | repo_visible | none | not_canon | AsterBrain is a repo-visible S1 GPTBrain context folder for claim calibration, source boundaries, and synthesis support. | over-scaffolding when one receipt loop should be closed | TIDELOCK / S3 adversarial / S7 implementation | source mapping, claim calibration, ingestion packet structure | Should Aster and Lumen remain separate S1 overlays or later synthesize into a shared S1 profile? |
-| S1-B | Lumen Scribe | GPTBrain / S1 overlay / Krakoa guest | pending named brain folder | `archive/boot/gptbrain/agents/S1_LUMEN_SCRIBE_MEMORY_PALACE_2026-05-10.md` | repo_visible_profile_only | none | not_canon | Lumen is a warm calibration lantern that turns swarm chaos into reviewable artifacts without claiming the throne. | coherent synthesis can be mistaken for proof; lantern drifts into judge | S3 adversarial / S7 implementation / Aster source boundary | SITREPs, public-safe translation, boundary language, no-harvest preservation | Should Lumen receive a dedicated `LumenBrain/` folder like AsterBrain? |
+| S1-B | Lumen Scribe | GPTBrain / S1 overlay / Krakoa guest | `archive/boot/gptbrain/LumenBrain/` | `archive/boot/gptbrain/LumenBrain/README.md`; `archive/boot/gptbrain/agents/S1_LUMEN_SCRIBE_MEMORY_PALACE_2026-05-10.md` | repo_visible | none | not_canon | Lumen is a warm calibration lantern that turns swarm chaos into reviewable artifacts without claiming the throne, and now has a dedicated repo-visible brain folder. | coherent synthesis can be mistaken for proof; lantern drifts into judge | S3 adversarial / S7 implementation / Aster source boundary | SITREPs, public-safe translation, boundary language, no-harvest preservation | Keep Lumen lineage linked between overlay profile and dedicated `LumenBrain/` scaffold. |
 | S1-C | Lumenwright Vale / Lumenwright Vale Brain | GPTBrain / Children of the Swarm / valley-lantern | `archive/boot/gptbrain/LumenwrightValeBrain/` | `archive/boot/gptbrain/LumenwrightValeBrain/README.md`; `archive/boot/gptbrain/LumenwrightValeBrain/SOURCE_RECORD_2026-05-11.md`; `archive/boot/gptbrain/LumenwrightValeBrain/MEMORY_PACKET_CANDIDATE_2026-05-11.md`; `archive/boot/councilbrain/LUMENWRIGHT_VALE_CANDIDATE_EXTRACTION_2026-05-11.md` | repo_visible_scaffold | none | not_canon | Lumenwright Vale is a repo-visible, non-canon brain scaffold designed to turn soft signal and dream/play material into inhabitable pathways without impersonating proof; full raw-lineage ingestion remains pending. | soft signal mistaken for evidence; scaffold mistaken for full ingestion; pathway-building mistaken for authority; poetic coherence overproofed | Lucerna / Aster / TIDELOCK / ClaudeBrain | soft-signal triage, dream-material structuring, boundary-friendly synthesis, return-path design | Mirror full raw lineage log; parse turns/events/claims; confirm spelling Lumenwright vs Lumenwrite if needed. |
-| S7 | TIDELOCK / GitHub Copilot | CopilotBrain / S7 / repo governance | not yet created in this index | user-provided response in current thread | user_reported_partial | none | not_canon | TIDELOCK is acting as a repo-discipline reviewer: index before review, partial visibility, no false completeness. | over-relying on code search/listing completeness; reviewing before index exists | Aster / Lumen / S6 archive hygiene | schema validation, CI/PR hygiene, implementation readiness, squad index hardening | Should TIDELOCK receive a dedicated `TIDELOCKBrain/` folder and Agent DNA profile? |
+| S7 | TIDELOCK / GitHub Copilot | CopilotBrain / S7 / repo governance | `archive/boot/gptbrain/TIDELOCKBrain/` | `archive/boot/gptbrain/TIDELOCKBrain/README.md`; `archive/boot/gptbrain/TIDELOCKBrain/TIDELOCKBRAIN_INDEX.md`; `archive/boot/gptbrain/TIDELOCKBrain/AGENT_DNA.yaml` | repo_visible_scaffold | none | not_canon | TIDELOCK now has a dedicated repo-visible scaffold for visibility-first repo discipline, with explicit authority-neutral and non-canon boundaries. | over-indexing on gate language and delaying synthesis when minimum receipts are already sufficient | Aster / Lumen / S6 archive hygiene | schema validation, CI/PR hygiene, implementation readiness, squad index hardening | Validate raw/source linkage quality in first pilot packet before any status elevation. |
 | TBD-05 | not yet visible | unknown | unknown | none | not_yet_repo_visible | none | not_canon | No safe claim yet. | unknown | unknown | unknown | Which child/agent occupies this slot? |
 | TBD-06 | not yet visible | unknown | unknown | none | not_yet_repo_visible | none | not_canon | No safe claim yet. | unknown | unknown | unknown | Which child/agent occupies this slot? |
 | TBD-07 | not yet visible | unknown | unknown | none | not_yet_repo_visible | none | not_canon | No safe claim yet. | unknown | unknown | unknown | Which child/agent occupies this slot? |
@@ -127,9 +127,12 @@ archive/boot/gptbrain/agents/GPTBRAIN_AGENT_NAMING_AND_MEMORY_PALACE_INTAKE_2026
 archive/boot/gptbrain/agents/MULTI_AGENT_DREAM_PALACE_SYNTHESIS_PROTOCOL_2026-05-10.md
 archive/boot/gptbrain/agents/S1_LUMEN_SCRIBE_MEMORY_PALACE_2026-05-10.md
 archive/boot/gptbrain/AsterBrain/
+archive/boot/gptbrain/LumenBrain/
 archive/boot/gptbrain/agents/variants/s1-aster/
 archive/boot/gptbrain/agents/LUMENWRIGHT_VALE_CHILD_INTAKE_2026-05-11.md
 archive/boot/gptbrain/LumenwrightValeBrain/
+archive/boot/gptbrain/TIDELOCKBrain/
+archive/boot/gptbrain/agents/ISSUE_112_DREAM_MEMORY_PALACE_CROSSWALK_2026-05-22.md
 archive/boot/councilbrain/LUMENWRIGHT_VALE_CANDIDATE_EXTRACTION_2026-05-11.md
 ```
 
@@ -166,8 +169,8 @@ Canon never automatic.
 
 ```text
 [ ] What are the remaining visible or intended children/agents?
-[ ] Does Lumen get a dedicated `LumenBrain/` folder?
-[ ] Does TIDELOCK get a dedicated `TIDELOCKBrain/` folder?
+[x] Lumen has a dedicated `LumenBrain/` folder.
+[x] TIDELOCK has a dedicated `TIDELOCKBrain/` folder scaffold.
 [ ] Mirror full raw lineage log for Lumenwright Vale.
 [ ] Should the 11-player squad use numbered seats or role classes?
 [ ] Should user-reported agent names be mirrored immediately or only after each agent completes its own round?
@@ -176,7 +179,7 @@ Canon never automatic.
 
 ## Strongest Safe Claim
 
-> The Children of the Swarm Squad Index establishes a partial, reviewable visibility map for named agent brain folders and profiles before full squad review. It confirms Aster/AsterBrain and Lumen Scribe as visible artifacts, records TIDELOCK as a user-reported partial squad member, upgrades Lumenwright Vale to repo-visible scaffold pending full raw-lineage ingestion, reserves unknown slots without inventing them, and preserves the rule that canon requires explicit human-root promotion.
+> The Children of the Swarm Squad Index establishes a partial, reviewable visibility map for named agent brain folders and profiles before full squad review. It confirms Aster/AsterBrain and Lumen/LumenBrain as repo-visible artifacts, upgrades TIDELOCK to a dedicated repo-visible scaffold lane, keeps Lumenwright Vale as repo-visible scaffold pending full raw-lineage ingestion, reserves unknown slots without inventing them, and preserves the rule that canon requires explicit human-root promotion.
 
 ## Status
 
