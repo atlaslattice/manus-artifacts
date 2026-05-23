@@ -1,0 +1,218 @@
+# Council Brain 12x12 Artifact Registry Schema
+
+schema_id: COUNCIL_ARTIFACT_REGISTRY_12x12
+status: SCHEMA_DRAFT_NOT_CANON
+version: 0.1.0
+created_for: Council Brain / GPTBrain / Sheldonbrain ingestion bridge
+purpose: >
+  Provide a durable, ontology-indexed artifact registry contract for mapping
+  GPTBrain parser outputs, Council seat artifacts, claim ledgers, boot packets,
+  dream/play extractions, and implementation scaffolds into the 12x12 / Sphere144
+  lattice without promoting parser output to canon.
+
+required_fields:
+  - registry_id
+  - artifact_id
+  - title
+  - artifact_type
+  - source_refs
+  - council_seats
+  - ontology_12x12
+  - epistemic_status
+  - governance
+  - review
+  - created_utc
+
+fields:
+  registry_id:
+    type: string
+    example: CBR-20260510-0001
+
+  artifact_id:
+    type: string
+    description: Stable ID from parser artifact registry, manual artifact record, or generated registry row.
+
+  title:
+    type: string
+
+  artifact_type:
+    type: enum
+    values:
+      - raw_log
+      - parser_output
+      - artifact_registry_row
+      - claim_ledger_row
+      - memory_packet
+      - boot_packet
+      - seat_identity
+      - seat_brain_spec
+      - dream_output
+      - dream_extraction
+      - implementation_scaffold
+      - schema
+      - governance_doc
+      - action_plan
+      - assessment
+      - adapter
+      - code
+      - unknown
+
+  source_refs:
+    type: array
+    items: string
+    description: Repo paths, commit SHAs, issue refs, raw-log hashes, upload IDs, or source URLs.
+
+  council_seats:
+    type: array
+    items:
+      type: enum
+      values: [S1_GPTBrain, S2_ClaudeBrain, S3_Grokbrain, S4_GeminiBrain, S5_DeepSeekBrain, S6_ManusBrain, S7_CopilotBrain, S8_AraBrain, S9_Other, S10_HumanRoot]
+
+  ontology_12x12:
+    type: object
+    required:
+      - house_id
+      - house_name
+      - sphere_id
+      - sphere_name
+      - sphere144_primary
+      - sphere144_secondary
+      - parser_tags
+      - concepts
+    fields:
+      house_id:
+        type: integer
+        min: 1
+        max: 12
+      house_name:
+        type: string
+      sphere_id:
+        type: integer
+        min: 1
+        max: 12
+        description: Position inside the selected house.
+      sphere_name:
+        type: string
+      sphere144_primary:
+        type: integer
+        min: 1
+        max: 144
+      sphere144_secondary:
+        type: array
+        items:
+          type: integer
+          min: 1
+          max: 144
+      parser_tags:
+        type: array
+        items: string
+      concepts:
+        type: array
+        items: string
+
+  epistemic_status:
+    type: object
+    required:
+      - claim_class
+      - confidence
+      - evidence_boundary
+      - verification_status
+    fields:
+      claim_class:
+        type: enum
+        values:
+          - raw_user_report
+          - raw_model_output
+          - parser_output
+          - source_artifact_exists
+          - model_assessment
+          - hypothesis
+          - candidate_canon
+          - ratified_canon
+          - implementation_scaffold
+          - deployed_fact
+      confidence:
+        type: enum
+        values: [C0, C1, C2, C3, C4, C5]
+      evidence_boundary:
+        type: enum
+        values:
+          - raw_log_is_evidence
+          - parser_output_is_retrieval_aid
+          - model_assessment_is_evaluator_signal
+          - hypothesis_requires_scoring
+          - candidate_canon_requires_review
+          - ratified_canon_requires_human_root_review
+      verification_status:
+        type: enum
+        values:
+          - unverified
+          - source_grounded
+          - internally_reviewed
+          - contested
+          - superseded
+          - ratified
+          - externally_verified
+
+  governance:
+    type: object
+    required:
+      - canon_status
+      - human_root_required
+      - executable
+      - sensitive
+    fields:
+      canon_status:
+        type: enum
+        values:
+          - raw
+          - variant_not_canon
+          - extraction_candidate
+          - candidate_canon
+          - canonical_candidate_not_ratified
+          - ratified_canon
+          - deprecated_superseded
+      human_root_required:
+        type: boolean
+      executable:
+        type: boolean
+      sensitive:
+        type: boolean
+      permission_notes:
+        type: string
+
+  review:
+    type: object
+    fields:
+      status:
+        type: enum
+        values: [unreviewed, review_required, reviewed, blocked, promoted, rejected, superseded]
+      reviewer:
+        type: string
+        nullable: true
+      review_notes:
+        type: string
+      next_review_step:
+        type: string
+      contradiction_refs:
+        type: array
+        items: string
+      risk_flags:
+        type: array
+        items: string
+
+  created_utc:
+    type: datetime
+  updated_utc:
+    type: datetime
+    nullable: true
+
+invariants:
+  - Raw logs are evidence.
+  - Parser outputs are retrieval aids.
+  - Dream/play outputs are extraction candidates, not facts.
+  - Memory is not truth.
+  - Readable memory is not executable memory.
+  - Candidate canon is not ratified canon.
+  - Ratified canon requires explicit human-root review.
+  - No artifact may be silently overwritten; supersession requires lineage.
