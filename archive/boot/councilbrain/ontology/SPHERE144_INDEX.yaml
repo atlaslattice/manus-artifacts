@@ -1,0 +1,208 @@
+# Council Brain Sphere144 Index
+
+status: INDEX_STUB_NOT_CANON
+version: 0.1.0
+purpose: >
+  Provide an initial 12-house / 144-sphere indexing surface for Council Brain artifacts.
+  This is a scaffold for ingestion and retrieval, not a final ontology ratification.
+
+numbering_rule: >
+  sphere144_primary = ((house_id - 1) * 12) + sphere_id
+
+houses:
+  - house_id: 1
+    house_name: Governance & Consent
+    spheres:
+      - {sphere_id: 1, sphere144: 1, sphere_name: Human-root authority}
+      - {sphere_id: 2, sphere144: 2, sphere_name: Canon gates}
+      - {sphere_id: 3, sphere144: 3, sphere_name: Permission policy}
+      - {sphere_id: 4, sphere144: 4, sphere_name: Audit trails}
+      - {sphere_id: 5, sphere144: 5, sphere_name: Claim calibration}
+      - {sphere_id: 6, sphere144: 6, sphere_name: Contradiction routing}
+      - {sphere_id: 7, sphere144: 7, sphere_name: Safety boundaries}
+      - {sphere_id: 8, sphere144: 8, sphere_name: Governance constitution}
+      - {sphere_id: 9, sphere144: 9, sphere_name: Review workflow}
+      - {sphere_id: 10, sphere144: 10, sphere_name: Sensitive data handling}
+      - {sphere_id: 11, sphere144: 11, sphere_name: Public-safe translation}
+      - {sphere_id: 12, sphere144: 12, sphere_name: Anti-throne safeguards}
+
+  - house_id: 2
+    house_name: Memory & Archive
+    spheres:
+      - {sphere_id: 1, sphere144: 13, sphere_name: Raw log preservation}
+      - {sphere_id: 2, sphere144: 14, sphere_name: Metadata and hashes}
+      - {sphere_id: 3, sphere144: 15, sphere_name: Artifact registry}
+      - {sphere_id: 4, sphere144: 16, sphere_name: Claim ledger}
+      - {sphere_id: 5, sphere144: 17, sphere_name: Memory packets}
+      - {sphere_id: 6, sphere144: 18, sphere_name: Boot packets}
+      - {sphere_id: 7, sphere144: 19, sphere_name: Dream memory palace}
+      - {sphere_id: 8, sphere144: 20, sphere_name: Retrieval indexes}
+      - {sphere_id: 9, sphere144: 21, sphere_name: Vault sync}
+      - {sphere_id: 10, sphere144: 22, sphere_name: Provenance receipts}
+      - {sphere_id: 11, sphere144: 23, sphere_name: Retention and review}
+      - {sphere_id: 12, sphere144: 24, sphere_name: Zero erasure / continuity}
+
+  - house_id: 3
+    house_name: Parser & Ingestion
+    spheres:
+      - {sphere_id: 1, sphere144: 25, sphere_name: Raw text import}
+      - {sphere_id: 2, sphere144: 26, sphere_name: Turn extraction}
+      - {sphere_id: 3, sphere144: 27, sphere_name: Event tagging}
+      - {sphere_id: 4, sphere144: 28, sphere_name: Claim detection}
+      - {sphere_id: 5, sphere144: 29, sphere_name: Artifact clustering}
+      - {sphere_id: 6, sphere144: 30, sphere_name: Privacy classification}
+      - {sphere_id: 7, sphere144: 31, sphere_name: Redaction and filtering}
+      - {sphere_id: 8, sphere144: 32, sphere_name: Batch ingestion}
+      - {sphere_id: 9, sphere144: 33, sphere_name: Import adapters}
+      - {sphere_id: 10, sphere144: 34, sphere_name: Schema validation}
+      - {sphere_id: 11, sphere144: 35, sphere_name: Source manifests}
+      - {sphere_id: 12, sphere144: 36, sphere_name: Parser QA}
+
+  - house_id: 4
+    house_name: Council Seats & Identity
+    spheres:
+      - {sphere_id: 1, sphere144: 37, sphere_name: S1 GPTBrain}
+      - {sphere_id: 2, sphere144: 38, sphere_name: S2 ClaudeBrain}
+      - {sphere_id: 3, sphere144: 39, sphere_name: S3 Grokbrain}
+      - {sphere_id: 4, sphere144: 40, sphere_name: S4 GeminiBrain}
+      - {sphere_id: 5, sphere144: 41, sphere_name: S5 DeepSeekBrain}
+      - {sphere_id: 6, sphere144: 42, sphere_name: S6 ManusBrain}
+      - {sphere_id: 7, sphere144: 43, sphere_name: S7 CopilotBrain}
+      - {sphere_id: 8, sphere144: 44, sphere_name: S8 AraBrain}
+      - {sphere_id: 9, sphere144: 45, sphere_name: Seat naming}
+      - {sphere_id: 10, sphere144: 46, sphere_name: Identity credentials}
+      - {sphere_id: 11, sphere144: 47, sphere_name: Role overlays}
+      - {sphere_id: 12, sphere144: 48, sphere_name: Thread labeling}
+
+  - house_id: 5
+    house_name: GPTbrain & Cognitive Infrastructure
+    spheres:
+      - {sphere_id: 1, sphere144: 49, sphere_name: Cognitive infrastructure}
+      - {sphere_id: 2, sphere144: 50, sphere_name: Calibration}
+      - {sphere_id: 3, sphere144: 51, sphere_name: Schema generation}
+      - {sphere_id: 4, sphere144: 52, sphere_name: Context compression}
+      - {sphere_id: 5, sphere144: 53, sphere_name: Public-safe synthesis}
+      - {sphere_id: 6, sphere144: 54, sphere_name: Repo triage}
+      - {sphere_id: 7, sphere144: 55, sphere_name: Loom-Keeper overlay}
+      - {sphere_id: 8, sphere144: 56, sphere_name: Claim challenge}
+      - {sphere_id: 9, sphere144: 57, sphere_name: Diff and evolution trace}
+      - {sphere_id: 10, sphere144: 58, sphere_name: Golden path execution}
+      - {sphere_id: 11, sphere144: 59, sphere_name: GPTDream extraction}
+      - {sphere_id: 12, sphere144: 60, sphere_name: GPTBrain package runtime}
+
+  - house_id: 6
+    house_name: Sheldonbrain & RAG Runtime
+    spheres:
+      - {sphere_id: 1, sphere144: 61, sphere_name: Sheldonbrain core}
+      - {sphere_id: 2, sphere144: 62, sphere_name: Qdrant / vector store}
+      - {sphere_id: 3, sphere144: 63, sphere_name: RAG API}
+      - {sphere_id: 4, sphere144: 64, sphere_name: GPTbrain parser}
+      - {sphere_id: 5, sphere144: 65, sphere_name: GPTbrain adapter}
+      - {sphere_id: 6, sphere144: 66, sphere_name: Boot rehydration}
+      - {sphere_id: 7, sphere144: 67, sphere_name: Artifact ingestion}
+      - {sphere_id: 8, sphere144: 68, sphere_name: Source grounding}
+      - {sphere_id: 9, sphere144: 69, sphere_name: Semantic search}
+      - {sphere_id: 10, sphere144: 70, sphere_name: Memory object storage}
+      - {sphere_id: 11, sphere144: 71, sphere_name: Graph contradictions}
+      - {sphere_id: 12, sphere144: 72, sphere_name: Runtime observability}
+
+  - house_id: 7
+    house_name: Aluminum OS / UWS
+    spheres:
+      - {sphere_id: 1, sphere144: 73, sphere_name: Ring 0 kernel}
+      - {sphere_id: 2, sphere144: 74, sphere_name: Ring 1 inference}
+      - {sphere_id: 3, sphere144: 75, sphere_name: Ring 2 agent runtime}
+      - {sphere_id: 4, sphere144: 76, sphere_name: Ring 3 experience}
+      - {sphere_id: 5, sphere144: 77, sphere_name: Ring 4 noosphere}
+      - {sphere_id: 6, sphere144: 78, sphere_name: UWS CLI}
+      - {sphere_id: 7, sphere144: 79, sphere_name: BAZINGA middleware}
+      - {sphere_id: 8, sphere144: 80, sphere_name: NPFM engine}
+      - {sphere_id: 9, sphere144: 81, sphere_name: GitHub source of truth}
+      - {sphere_id: 10, sphere144: 82, sphere_name: Vault pipeline}
+      - {sphere_id: 11, sphere144: 83, sphere_name: Browser surface}
+      - {sphere_id: 12, sphere144: 84, sphere_name: Mobile / dream surface}
+
+  - house_id: 8
+    house_name: Simulation & Research
+    spheres:
+      - {sphere_id: 1, sphere144: 85, sphere_name: SNRS}
+      - {sphere_id: 2, sphere144: 86, sphere_name: SHUGS}
+      - {sphere_id: 3, sphere144: 87, sphere_name: Monte Carlo}
+      - {sphere_id: 4, sphere144: 88, sphere_name: Physics analogies}
+      - {sphere_id: 5, sphere144: 89, sphere_name: Infrastructure economics}
+      - {sphere_id: 6, sphere144: 90, sphere_name: Energy and water systems}
+      - {sphere_id: 7, sphere144: 91, sphere_name: Defense / aerospace}
+      - {sphere_id: 8, sphere144: 92, sphere_name: World model simulation}
+      - {sphere_id: 9, sphere144: 93, sphere_name: Benchmarking}
+      - {sphere_id: 10, sphere144: 94, sphere_name: Red-team simulations}
+      - {sphere_id: 11, sphere144: 95, sphere_name: Dream/play simulation}
+      - {sphere_id: 12, sphere144: 96, sphere_name: Research appendix}
+
+  - house_id: 9
+    house_name: Integration & Federation
+    spheres:
+      - {sphere_id: 1, sphere144: 97, sphere_name: GitHub integration}
+      - {sphere_id: 2, sphere144: 98, sphere_name: Google Drive / Docs}
+      - {sphere_id: 3, sphere144: 99, sphere_name: Notion}
+      - {sphere_id: 4, sphere144: 100, sphere_name: Gmail / Calendar}
+      - {sphere_id: 5, sphere144: 101, sphere_name: Microsoft / Copilot}
+      - {sphere_id: 6, sphere144: 102, sphere_name: Claude / Anthropic}
+      - {sphere_id: 7, sphere144: 103, sphere_name: Gemini / Google}
+      - {sphere_id: 8, sphere144: 104, sphere_name: Grok / xAI}
+      - {sphere_id: 9, sphere144: 105, sphere_name: DeepSeek / Qwen}
+      - {sphere_id: 10, sphere144: 106, sphere_name: Manus}
+      - {sphere_id: 11, sphere144: 107, sphere_name: Cross-repo federation}
+      - {sphere_id: 12, sphere144: 108, sphere_name: MCP / tool bridge}
+
+  - house_id: 10
+    house_name: Implementation & Code
+    spheres:
+      - {sphere_id: 1, sphere144: 109, sphere_name: Python scaffolds}
+      - {sphere_id: 2, sphere144: 110, sphere_name: Rust engines}
+      - {sphere_id: 3, sphere144: 111, sphere_name: TypeScript / extensions}
+      - {sphere_id: 4, sphere144: 112, sphere_name: API servers}
+      - {sphere_id: 5, sphere144: 113, sphere_name: Storage adapters}
+      - {sphere_id: 6, sphere144: 114, sphere_name: CLI tools}
+      - {sphere_id: 7, sphere144: 115, sphere_name: Tests and CI}
+      - {sphere_id: 8, sphere144: 116, sphere_name: Package split}
+      - {sphere_id: 9, sphere144: 117, sphere_name: Migration scripts}
+      - {sphere_id: 10, sphere144: 118, sphere_name: Observability}
+      - {sphere_id: 11, sphere144: 119, sphere_name: Security checks}
+      - {sphere_id: 12, sphere144: 120, sphere_name: Release management}
+
+  - house_id: 11
+    house_name: Interface & Experience
+    spheres:
+      - {sphere_id: 1, sphere144: 121, sphere_name: Browser extension}
+      - {sphere_id: 2, sphere144: 122, sphere_name: Desktop agent}
+      - {sphere_id: 3, sphere144: 123, sphere_name: Console / CLI UX}
+      - {sphere_id: 4, sphere144: 124, sphere_name: Dashboard}
+      - {sphere_id: 5, sphere144: 125, sphere_name: Memory palace UI}
+      - {sphere_id: 6, sphere144: 126, sphere_name: Dream surface}
+      - {sphere_id: 7, sphere144: 127, sphere_name: Visual maps}
+      - {sphere_id: 8, sphere144: 128, sphere_name: Notifications}
+      - {sphere_id: 9, sphere144: 129, sphere_name: Human review queue}
+      - {sphere_id: 10, sphere144: 130, sphere_name: Accessibility}
+      - {sphere_id: 11, sphere144: 131, sphere_name: Public docs}
+      - {sphere_id: 12, sphere144: 132, sphere_name: Onboarding}
+
+  - house_id: 12
+    house_name: Operations & Continuity
+    spheres:
+      - {sphere_id: 1, sphere144: 133, sphere_name: Action queue}
+      - {sphere_id: 2, sphere144: 134, sphere_name: S10 decision queue}
+      - {sphere_id: 3, sphere144: 135, sphere_name: Incident ledger}
+      - {sphere_id: 4, sphere144: 136, sphere_name: Drift repair}
+      - {sphere_id: 5, sphere144: 137, sphere_name: Migration maps}
+      - {sphere_id: 6, sphere144: 138, sphere_name: Golden path}
+      - {sphere_id: 7, sphere144: 139, sphere_name: Backup / restore}
+      - {sphere_id: 8, sphere144: 140, sphere_name: Batch runs}
+      - {sphere_id: 9, sphere144: 141, sphere_name: Cost / resource governance}
+      - {sphere_id: 10, sphere144: 142, sphere_name: External publication}
+      - {sphere_id: 11, sphere144: 143, sphere_name: Continuity protocol}
+      - {sphere_id: 12, sphere144: 144, sphere_name: Nothing dies invariant}
+
+notes:
+  - This index is an initial operational map, not a final ontology treaty.
+  - Preserve contradictions and alternate mappings rather than silently overwriting them.
+  - Future versions should crosswalk to the full Sheldonbrain 144-sphere taxonomy if/when ratified.
