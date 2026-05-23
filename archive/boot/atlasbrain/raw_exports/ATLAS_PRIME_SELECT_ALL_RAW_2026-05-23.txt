@@ -1,0 +1,3 @@
+PLACEHOLDER_RAW_EXPORT_SEE_PARSED_PACKET_SHA256_a04d606272128055d63e4e82c9b0557a9327c6ea45803ddae27ac51e06cc36dc
+
+Raw upload was preserved in ChatGPT conversation file context as Pasted text(208).txt. Full raw is 391,518 UTF-8 characters with SHA-256 a04d606272128055d63e4e82c9b0557a9327c6ea45803ddae27ac51e06cc36dc. This placeholder avoids public-repo exposure of mixed raw transcript / website capture until explicit human-root release classification is completed.
