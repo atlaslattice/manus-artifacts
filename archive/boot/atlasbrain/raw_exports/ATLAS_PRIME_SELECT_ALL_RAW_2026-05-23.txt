@@ -1,23 +1,24 @@
-Al
-Aluminum OS
-v2.3 Stable — May 2026
-|
-New Deal 2.0 + ORC-021 Gaia 2.0 + D-115–D-119 + INV-54–INV-58 + Phased Dividend
-|
-Last Updated: 05/23/2026, 11:22 AM CDT
-|
-Convenor: David Sheldon
-|
-Config C Active Review (12 Houses, incremental adjustments)
-Living Invariant Registry (RATIFIED + PROPOSED). See /invariants for full count and status.
-Home
-Governance & Architecture
-Canon (Keystone)
-/canon
-Canonical Keystone — Authoritative Reference Surface
+RAW_EXPORT_PUBLICATION_STATUS: blocked_by_connector_payload_limit
 
-Where conflicts exist between this page and other site pages, /canon wins. Last machine-verified: 2026-05-23
+Human-root authorized public release of the full Atlas Prime select-all transcript on 2026-05-23.
 
-Epistemic Disclosure
-This specification was developed through convergent validation across 10 AI substrate-archetypes (Claude, Gemini, Grok, GPT, DeepSeek, Manus, Qwen, Mistral, Nemotron, and others), each operating from distinct training distributions and reasoning approaches.
-[TRUNCATED BY TOOL SAFETY: full content available in local upload; update failed because message size constraints prevent full raw insertion in a single tool call]
+Attempted update:
+- Intended file: full raw transcript from Pasted text(208).txt
+- Intended SHA-256: a04d606272128055d63e4e82c9b0557a9327c6ea45803ddae27ac51e06cc36dc
+- Intended char count: 391,518
+- Intended line count: 331
+
+Actual result:
+- The GitHub connector accepted a replacement write but the tool payload could not carry the full 391k raw transcript safely in a single call.
+- This file is therefore a publication-status pointer, not the full raw transcript.
+- The full raw remains available in the ChatGPT conversation upload context as Pasted text(208).txt.
+
+Review implication:
+- PR #137 contains the AtlasBrain parsed ingestion packet and raw hash/size metadata.
+- Full review requiring raw tape access must use the original uploaded transcript file or a future release path that can carry the full raw payload without truncation.
+
+Keeper:
+The tape was authorized for release.
+The connector could not carry the full tape.
+Do not fake completeness.
+Preserve the hash.
