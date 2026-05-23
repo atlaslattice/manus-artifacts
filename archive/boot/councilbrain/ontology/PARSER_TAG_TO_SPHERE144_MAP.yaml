@@ -1,0 +1,157 @@
+# Parser Tag to Sphere144 Map
+
+status: MAP_DRAFT_NOT_CANON
+version: 0.1.0
+purpose: >
+  Map GPTBrain parser tags and Council Brain operational tags into the provisional
+  12x12 / Sphere144 ontology index for retrieval, routing, and review.
+
+mappings:
+  boot_sequence:
+    house_id: 2
+    house_name: Memory & Archive
+    sphere_id: 6
+    sphere144_primary: 18
+    sphere_name: Boot packets
+    secondary: [66, 123]
+
+  evidence_boundary:
+    house_id: 1
+    house_name: Governance & Consent
+    sphere_id: 5
+    sphere144_primary: 5
+    sphere_name: Claim calibration
+    secondary: [22, 56]
+
+  claim_calibration:
+    house_id: 1
+    house_name: Governance & Consent
+    sphere_id: 5
+    sphere144_primary: 5
+    sphere_name: Claim calibration
+    secondary: [16, 56]
+
+  github_archive:
+    house_id: 9
+    house_name: Integration & Federation
+    sphere_id: 1
+    sphere144_primary: 97
+    sphere_name: GitHub integration
+    secondary: [15, 81]
+
+  sheldonbrain:
+    house_id: 6
+    house_name: Sheldonbrain & RAG Runtime
+    sphere_id: 1
+    sphere144_primary: 61
+    sphere_name: Sheldonbrain core
+    secondary: [63, 65, 69]
+
+  council_brain:
+    house_id: 4
+    house_name: Council Seats & Identity
+    sphere_id: 1
+    sphere144_primary: 37
+    sphere_name: S1 GPTBrain
+    secondary: [38, 39, 40, 41, 42, 43]
+
+  dragonseek:
+    house_id: 9
+    house_name: Integration & Federation
+    sphere_id: 9
+    sphere144_primary: 105
+    sphere_name: DeepSeek / Qwen
+    secondary: [41, 107]
+
+  grokbrain:
+    house_id: 4
+    house_name: Council Seats & Identity
+    sphere_id: 3
+    sphere144_primary: 39
+    sphere_name: S3 Grokbrain
+    secondary: [95, 104]
+
+  privacy_boundary:
+    house_id: 1
+    house_name: Governance & Consent
+    sphere_id: 10
+    sphere144_primary: 10
+    sphere_name: Sensitive data handling
+    secondary: [30, 31]
+
+  artifact_registry:
+    house_id: 2
+    house_name: Memory & Archive
+    sphere_id: 3
+    sphere144_primary: 15
+    sphere_name: Artifact registry
+    secondary: [29, 97]
+
+  failure_ledger:
+    house_id: 12
+    house_name: Operations & Continuity
+    sphere_id: 3
+    sphere144_primary: 135
+    sphere_name: Incident ledger
+    secondary: [6, 136]
+
+  gptbrain:
+    house_id: 5
+    house_name: GPTbrain & Cognitive Infrastructure
+    sphere_id: 1
+    sphere144_primary: 49
+    sphere_name: Cognitive infrastructure
+    secondary: [50, 51, 52]
+
+  gptdream:
+    house_id: 5
+    house_name: GPTbrain & Cognitive Infrastructure
+    sphere_id: 11
+    sphere144_primary: 59
+    sphere_name: GPTDream extraction
+    secondary: [19, 95, 126]
+
+  loom_keeper:
+    house_id: 5
+    house_name: GPTbrain & Cognitive Infrastructure
+    sphere_id: 7
+    sphere144_primary: 55
+    sphere_name: Loom-Keeper overlay
+    secondary: [47, 52, 136]
+
+  adapter:
+    house_id: 3
+    house_name: Parser & Ingestion
+    sphere_id: 9
+    sphere144_primary: 33
+    sphere_name: Import adapters
+    secondary: [65, 113]
+
+  parser_pipeline:
+    house_id: 3
+    house_name: Parser & Ingestion
+    sphere_id: 12
+    sphere144_primary: 36
+    sphere_name: Parser QA
+    secondary: [25, 26, 27, 28, 29]
+
+  sphere144:
+    house_id: 2
+    house_name: Memory & Archive
+    sphere_id: 3
+    sphere144_primary: 15
+    sphere_name: Artifact registry
+    secondary: [34, 137]
+
+fallback:
+  house_id: 2
+  house_name: Memory & Archive
+  sphere_id: 3
+  sphere144_primary: 15
+  sphere_name: Artifact registry
+  secondary: []
+
+invariants:
+  - A parser tag mapping is a retrieval aid, not a final ontology judgment.
+  - Multi-tag artifacts may require human/root or council review for primary-sphere selection.
+  - Unknown tags fall back to Artifact registry until reviewed.
