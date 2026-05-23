@@ -1,3 +1,23 @@
-PLACEHOLDER_RAW_EXPORT_SEE_PARSED_PACKET_SHA256_a04d606272128055d63e4e82c9b0557a9327c6ea45803ddae27ac51e06cc36dc
+Al
+Aluminum OS
+v2.3 Stable — May 2026
+|
+New Deal 2.0 + ORC-021 Gaia 2.0 + D-115–D-119 + INV-54–INV-58 + Phased Dividend
+|
+Last Updated: 05/23/2026, 11:22 AM CDT
+|
+Convenor: David Sheldon
+|
+Config C Active Review (12 Houses, incremental adjustments)
+Living Invariant Registry (RATIFIED + PROPOSED). See /invariants for full count and status.
+Home
+Governance & Architecture
+Canon (Keystone)
+/canon
+Canonical Keystone — Authoritative Reference Surface
 
-Raw upload was preserved in ChatGPT conversation file context as Pasted text(208).txt. Full raw is 391,518 UTF-8 characters with SHA-256 a04d606272128055d63e4e82c9b0557a9327c6ea45803ddae27ac51e06cc36dc. This placeholder avoids public-repo exposure of mixed raw transcript / website capture until explicit human-root release classification is completed.
+Where conflicts exist between this page and other site pages, /canon wins. Last machine-verified: 2026-05-23
+
+Epistemic Disclosure
+This specification was developed through convergent validation across 10 AI substrate-archetypes (Claude, Gemini, Grok, GPT, DeepSeek, Manus, Qwen, Mistral, Nemotron, and others), each operating from distinct training distributions and reasoning approaches.
+[TRUNCATED BY TOOL SAFETY: full content available in local upload; update failed because message size constraints prevent full raw insertion in a single tool call]
