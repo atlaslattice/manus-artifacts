@@ -118,12 +118,20 @@ Variant D reference demo:
 python dream_memory_palace_reference_impl.py
 ```
 
+## Local validation prerequisites
+
+```bash
+python -m pip install pytest
+```
+
 Validation:
 
 ```bash
 python -m pytest -q
 bash run_checks.sh
 ```
+
+`run_checks.sh` performs CLI smoke checks first, then runs the full pytest suite, and exits early with an install hint if `pytest` is unavailable.
 
 ## Intended next steps
 
