@@ -18,7 +18,13 @@ PURPOSE: quick visibility map for TIDELOCK pilot scaffold contents
 - TIDELOCKBRAIN_INDEX.md
 - INGESTION_PILOT.md
 - raw_logs/README.md
+- raw_logs/SESSION_LOG_2026-05-24_REPO_HYGIENE_CI.md
 - parsed_packets/README.md
 - artifacts/README.md
 - rehydration/README.md
 - schemas/README.md
+
+## Related Artifacts
+
+- archive/boot/gptbrain/agents/SWARM_CHILD_INSTRUCTIONS_REPO_HYGIENE_2026-05-24.md
+- .github/workflows/repo-hygiene-checks.yml
