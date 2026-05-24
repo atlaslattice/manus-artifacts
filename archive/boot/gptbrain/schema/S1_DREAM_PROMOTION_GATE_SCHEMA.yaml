@@ -1,0 +1,222 @@
+# S1 GPTBrain Dream Promotion Gate Schema
+
+schema_id: S1_DREAM_PROMOTION_GATE_SCHEMA
+status: SCHEMA_DRAFT_NOT_CANON
+issue: manus-artifacts#118
+version: 0.1.0
+seat: S1
+seat_name: GPTBrain
+purpose: >
+  Validate transitions from DREAM / PLAY / culture-layer output into reviewed
+  candidates without allowing metaphor, morale, or generated synthesis to become
+  canon, deployment, authorization, or implementation evidence by default.
+
+transition_ladder:
+  - dream_or_play
+  - extraction_candidate
+  - reviewed_candidate
+  - implementation_candidate
+  - canon_candidate
+  - ratified_canon
+
+required_fields:
+  - promotion_id
+  - source_artifact
+  - current_state
+  - requested_state
+  - artifact_status
+  - authority_scope
+  - epistemic_label
+  - claim_status
+  - source_refs
+  - receipt_refs
+  - review_required
+  - human_root_required
+  - blockers
+
+fields:
+  promotion_id:
+    type: string
+    example: S1-DREAM-PROMOTION-2026-0522-0001
+
+  source_artifact:
+    type: string
+    description: Repo path, issue, PR, or source pointer for the dream/play/extraction artifact.
+
+  current_state:
+    type: enum
+    values:
+      - dream_or_play
+      - extraction_candidate
+      - reviewed_candidate
+      - implementation_candidate
+      - canon_candidate
+      - ratified_canon
+
+  requested_state:
+    type: enum
+    values:
+      - extraction_candidate
+      - reviewed_candidate
+      - implementation_candidate
+      - canon_candidate
+      - ratified_canon
+      - rejected
+      - quarantined
+      - superseded
+
+  artifact_status:
+    type: enum
+    values:
+      - NON_CANON
+      - REVIEW_ONLY
+      - LOCAL_DEV_ONLY
+      - EXTRACTION_CANDIDATE
+      - REVIEWED_CANDIDATE
+      - IMPLEMENTATION_CANDIDATE
+      - CANON_CANDIDATE
+      - RATIFIED_CANON
+      - REJECTED
+      - QUARANTINED
+      - SUPERSEDED
+
+  authority_scope:
+    type: enum
+    values:
+      - NONE
+      - REVIEW_SIGNAL
+      - LOCAL_TEST_EVIDENCE
+      - IMPLEMENTATION_CANDIDATE
+      - CANON_CANDIDATE
+      - RATIFIED_CANON
+    default: NONE
+
+  epistemic_label:
+    type: enum
+    values:
+      - CREATIVE_OVERLAY
+      - NOT_VERIFIED
+      - DESIGN_CHOICE
+      - EVALUATOR_SIGNAL
+      - LOCAL_RECEIPT_ONLY
+      - VERIFIABLE
+      - COMPUTED
+      - HUMAN_RATIFIED
+
+  claim_status:
+    type: enum
+    values:
+      - metaphor
+      - hypothesis
+      - evaluator_signal
+      - candidate_task
+      - candidate_wording
+      - candidate_schema
+      - candidate_test
+      - implementation_candidate
+      - canon_candidate
+      - ratified
+
+  source_refs:
+    type: array
+    items: string
+    description: Source artifacts or repo paths that support the promotion request.
+
+  receipt_refs:
+    type: array
+    items: string
+    description: Review receipts, smoke-test receipts, issue/PR refs, hash refs, or audit event ids.
+
+  receipts:
+    type: object
+    required:
+      - source_artifact
+      - created_at
+      - created_by
+      - repo_path
+    properties:
+      source_artifact:
+        type: string
+      source_hash:
+        type: string
+        nullable: true
+      created_at:
+        type: datetime
+      created_by:
+        type: string
+      reviewed_by:
+        type: array
+        items: string
+      repo_path:
+        type: string
+      related_issue_or_pr:
+        type: string
+        nullable: true
+
+  review_required:
+    type: boolean
+    default: true
+
+  human_root_required:
+    type: boolean
+    default: true
+
+  blockers:
+    type: array
+    items: string
+    description: Unresolved contradictions, privacy issues, failed checks, missing receipts, or authority-boundary concerns.
+
+transition_rules:
+  dream_or_play:
+    max_authority_scope: REVIEW_SIGNAL
+    required_epistemic_label: CREATIVE_OVERLAY
+    cannot_request:
+      - implementation_candidate
+      - canon_candidate
+      - ratified_canon
+
+  extraction_candidate:
+    requires:
+      - source_refs
+      - claim_status
+      - receipt_refs
+    max_authority_scope: REVIEW_SIGNAL
+
+  reviewed_candidate:
+    requires:
+      - reviewed_by
+      - receipt_refs
+      - blockers_empty_or_acknowledged
+    max_authority_scope: REVIEW_SIGNAL
+
+  implementation_candidate:
+    requires:
+      - local_test_or_schema_receipt
+      - explicit_review_record
+      - no_unresolved_authority_blockers
+    max_authority_scope: IMPLEMENTATION_CANDIDATE
+
+  canon_candidate:
+    requires:
+      - human_root_review_requested
+      - source_refs
+      - receipt_refs
+      - contradiction_ledger_checked
+    max_authority_scope: CANON_CANDIDATE
+
+  ratified_canon:
+    requires:
+      - explicit_human_root_approval
+      - ratification_receipt
+    max_authority_scope: RATIFIED_CANON
+
+invariants:
+  - Dreams propose; governance disposes.
+  - Dream output is not fact.
+  - Play output is not plan.
+  - Extraction candidate is not implementation approval.
+  - Local receipt is not deployment.
+  - Replayability does not imply canon authority.
+  - No artifact may move toward implementation or canon review without artifact_status and authority_scope.
+  - No dream/play artifact may exceed REVIEW_SIGNAL authority_scope by default.
+  - Human-root review is required for canon-impacting promotion.
