@@ -1,0 +1,81 @@
+schema_id: native_thread_ingestion_packet.v0.1
+status: required
+canon_status: not_canon
+deployment_status: not_deployable
+required_fields:
+  - packet_id
+  - seat_name
+  - model_surface
+  - source_thread_label
+  - thread_time_range
+  - raw_export_status
+  - access_scope
+  - privacy_status
+  - canon_status
+  - deployment_status
+  - strongest_safe_claim
+  - next_action
+fields:
+  packet_id:
+    type: string
+  seat_name:
+    type: string
+  model_surface:
+    type: string
+  source_thread_label:
+    type: string
+  thread_time_range:
+    type: object
+    required: [start, end, timezone]
+  raw_export_status:
+    enum: [full_raw, partial_raw, summary_only, unavailable]
+  access_scope:
+    type: object
+    required: [visible_sources, unavailable_sources, assumed_context]
+  source_refs:
+    type: list[string]
+    default: []
+  sha256_if_available:
+    type: string_or_null
+  privacy_status:
+    enum: [public, private, mixed, redacted]
+  key_events:
+    type: list[string]
+    default: []
+  artifacts_created:
+    type: list[string]
+    default: []
+  claims_extracted:
+    type: list[object]
+    item_fields:
+      claim: string
+      evidence_ref: string_or_null
+      confidence: C0_UNSUPPORTED | C1_SIGNAL | C2_EVIDENCE | C3_REVIEWED | C4_RATIFIED
+  contradictions_or_uncertainties:
+    type: list[string]
+    default: []
+  overclaims_to_avoid:
+    type: list[string]
+    default: []
+  identity_drift_events:
+    type: list[string]
+    default: []
+  canon_status:
+    enum: [not_canon]
+    default: not_canon
+  deployment_status:
+    enum: [not_deployable]
+    default: not_deployable
+  strongest_safe_claim:
+    type: string
+  next_action:
+    type: string
+hard_rules:
+  - raw_export_status is mandatory
+  - thread_time_range is mandatory
+  - access_scope is mandatory
+  - canon_status must equal not_canon for v0.1 packets
+  - deployment_status must equal not_deployable for v0.1 packets
+  - summary_only packets cannot generate public claims
+  - unavailable raw exports must list unavailable_sources
+  - any claim without evidence_ref is C0_UNSUPPORTED or C1_SIGNAL only
