@@ -1,0 +1,26 @@
+name: Repository hygiene checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  repository-hygiene:
+    name: Validate repository hygiene
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate GitHub workflow syntax
+        uses: rhysd/actionlint@v1
+
+      - name: Check for unresolved merge conflict markers
+        run: |
+          if git grep -nE '^(<<<<<<< |=======|>>>>>>> )' --; then
+            echo "Unresolved merge conflict markers detected."
+            exit 1
+          fi
+          echo "No unresolved merge conflict markers found."
