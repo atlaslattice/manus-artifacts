@@ -1,0 +1,32 @@
+schema_id: receipt_habitat_review_packet.v0.1
+status: required
+required_fields:
+  - review_id
+  - packet_id
+  - reviewer
+  - verdict
+  - risky_phrases
+  - minimal_required_changes
+  - next_safest_command_sequence
+  - notes
+fields:
+  review_id:
+    type: string
+  packet_id:
+    type: string
+  reviewer:
+    type: string
+  verdict:
+    enum: [approve, patch, block]
+  risky_phrases:
+    type: list[string]
+  minimal_required_changes:
+    type: list[string]
+  next_safest_command_sequence:
+    type: list[string]
+  notes:
+    type: list[string]
+verdict_rules:
+  approve: packet is safe for next non-canon processing step
+  patch: packet has repairable boundary, metadata, or phrase issues
+  block: packet lacks required receipts or risks false canon/deployment/public claim
