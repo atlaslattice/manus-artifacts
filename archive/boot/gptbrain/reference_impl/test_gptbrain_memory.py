@@ -44,7 +44,9 @@ def test_challenge_seed_claim_preserves_review_boundary() -> None:
     report = gm.challenge_claim("S1-CLAIM-2026-0509-0001")
     data = report.to_dict()
     assert data["status"] in {"needs_review", "pass_with_boundaries"}
-    assert any("missing evidence" in finding.lower() or "forbidden wording" in finding.lower() for finding in data["findings"])
+    assert any(
+        "missing evidence" in finding.lower() or "forbidden wording" in finding.lower() for finding in data["findings"]
+    )
 
 
 def test_diff_jsonl_detects_added_removed_changed(tmp_path: Path) -> None:
