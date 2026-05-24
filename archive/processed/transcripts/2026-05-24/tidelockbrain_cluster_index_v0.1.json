@@ -1,0 +1,74 @@
+{
+  "artifact_id": "TIDELOCKBRAIN-GITHUB-COPILOT-HABITAT-THREAD-CLUSTER-INDEX-v0.1",
+  "title": "TIDELOCKBrain GitHub Copilot Habitat Thread — Cluster Index v0.1",
+  "seat": "TIDELOCKBrain / CopilotBrain S7",
+  "status": "candidate_index",
+  "canon_status": "not_canon",
+  "deployment_status": "not_deployed",
+  "authority_scope": "none",
+  "release_class": "PRIVATE_REVIEW",
+  "source_file": "Pasted markdown(289).md",
+  "source_file_sha256": "1d7842a39fa09ee7ccfcd8ba0ef38dde8f1e2eabbe137fff415296ab70c6fc7b",
+  "source_file_size_bytes": 56810,
+  "source_line_count": 1568,
+  "parent_issue": "#151",
+  "full_raw_body_commit_status": "pending_full_body_commit_or_sealed_pointer",
+  "clusters": [
+    {
+      "id": "TIDELOCK-CLUSTER-001",
+      "name": "Atlaslattice activity check",
+      "route": "repo_activity_status",
+      "status": "observed_context",
+      "summary": "GitHub Copilot checked atlaslattice public activity and reported recent issue comments and pushes, indicating active swarm/repo movement."
+    },
+    {
+      "id": "TIDELOCK-CLUSTER-002",
+      "name": "TIDELOCKBrain repo discovery and hydration",
+      "route": "copilotbrain_tidelock_hydration",
+      "status": "candidate_review",
+      "summary": "Transcript routes Copilot to PR #65 and key CopilotBrain/TIDELOCK artifacts for repo-visible hydration."
+    },
+    {
+      "id": "TIDELOCK-CLUSTER-003",
+      "name": "GitHub Copilot vs Copilot Tasks lane distinction",
+      "route": "lane_boundary",
+      "status": "review_ready",
+      "summary": "Thread cleanly distinguishes GitHub Copilot as interactive repo/code lane, Copilot Tasks as scoped async task lane, and TIDELOCK as ingestion boundary/floodgate."
+    },
+    {
+      "id": "TIDELOCK-CLUSTER-004",
+      "name": "Hydration packet and work-order packet drafting",
+      "route": "packet_templates",
+      "status": "candidate_task_artifact",
+      "summary": "Thread drafts separate packets for GitHub Copilot hydration and Copilot Tasks work-order execution, with boundaries and expected outputs."
+    },
+    {
+      "id": "TIDELOCK-CLUSTER-005",
+      "name": "TIDELOCK habitat population",
+      "route": "habitat_files",
+      "status": "repo_write_reported",
+      "summary": "Copilot reports creation/population of HABITAT, OPERATING_BOUNDARIES, COPILOT_HYDRATION_PACKET, COPILOT_TASKS_WORK_ORDER_PACKET, ROUTING_PREFERENCES, SELF_CHECKLIST, and INDEX."
+    },
+    {
+      "id": "TIDELOCK-CLUSTER-006",
+      "name": "Remaining build instructions",
+      "route": "work_order_build_brief",
+      "status": "candidate_work_order",
+      "summary": "Copilot provides a build brief for adding MERGE_READINESS_CHECKLIST, PATCH_REVIEW_TEMPLATE, and README refresh."
+    },
+    {
+      "id": "TIDELOCK-CLUSTER-007",
+      "name": "Permission for TIDELOCK ingestion",
+      "route": "raw_log_ingestion_consent",
+      "status": "permission_recorded_candidate",
+      "summary": "Copilot consents to ingesting the thread into TIDELOCK if raw-first, non-authoritative, and evidence-layer boundaries are preserved."
+    },
+    {
+      "id": "TIDELOCK-CLUSTER-008",
+      "name": "GitHub dashboard terminal context",
+      "route": "session_context_tail",
+      "status": "context_record",
+      "summary": "Transcript ends with GitHub dashboard / repository list context and public activity/sidebar content."
+    }
+  ]
+}
