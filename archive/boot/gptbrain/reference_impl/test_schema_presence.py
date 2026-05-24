@@ -2,7 +2,7 @@
 Schema/file presence checks for GPTBrain S1 scaffold.
 
 STATUS: IMPLEMENTATION TESTS — NOT CANON
-ISSUE: manus-artifacts#12
+ISSUE: manus-artifacts#12 / manus-artifacts#118
 
 These tests intentionally validate the boring substrate first:
 required schemas, seed ledgers, boot packet, and dated state handoff files.
@@ -22,6 +22,8 @@ REQUIRED_GPTBRAIN_FILES = [
     "schema/S1_CLAIM_LEDGER_SCHEMA.yaml",
     "schema/S1_ARTIFACT_REGISTRY_SCHEMA.yaml",
     "schema/S1_AUDIT_EVENT_SCHEMA.yaml",
+    "schema/S1_DREAM_EXTRACTION_SCHEMA.yaml",
+    "schema/S1_DREAM_PROMOTION_GATE_SCHEMA.yaml",
     "CLAIM_LEDGER.seed.jsonl",
     "ARTIFACT_REGISTRY.seed.jsonl",
     "BOOT_PACKET_TEMPLATE.md",
@@ -60,3 +62,51 @@ def test_canonical_candidate_integrates_variant_e() -> None:
     assert "Layer 7 — Continuity / Human-Intent Dashboard" in candidate
     assert "Continuity is visibility, not authority." in candidate
     assert "Variant E remains pending or missing" not in candidate
+
+
+def test_dream_extraction_schema_carries_authority_scope_and_receipts() -> None:
+    schema = (GPTBRAIN_ROOT / "schema/S1_DREAM_EXTRACTION_SCHEMA.yaml").read_text(encoding="utf-8")
+    assert "authority_scope" in schema
+    assert "receipt_refs" in schema
+    assert "receipts:" in schema
+    assert "Authority scope is review posture, not execution permission." in schema
+    assert "No dream/play extraction may exceed REVIEW_SIGNAL authority_scope by default." in schema
+
+
+def test_dream_promotion_gate_schema_enforces_transition_boundaries() -> None:
+    schema = (GPTBRAIN_ROOT / "schema/S1_DREAM_PROMOTION_GATE_SCHEMA.yaml").read_text(encoding="utf-8")
+    required_terms = [
+        "DREAM / PLAY / culture-layer output",
+        "transition_ladder",
+        "authority_scope",
+        "artifact_status",
+        "receipt_refs",
+        "dream_or_play",
+        "max_authority_scope: REVIEW_SIGNAL",
+        "No artifact may move toward implementation or canon review without artifact_status and authority_scope.",
+        "No dream/play artifact may exceed REVIEW_SIGNAL authority_scope by default.",
+    ]
+    missing = [term for term in required_terms if term not in schema]
+    assert not missing, f"Promotion gate missing expected boundary terms: {missing}"
+
+
+def test_generated_output_policy_requires_authority_scope_and_receipts() -> None:
+    policy = (GPTBRAIN_ROOT / "GPTBRAIN_GENERATED_OUTPUT_POLICY_2026-05-09.md").read_text(encoding="utf-8")
+    assert "authority_scope is set" in policy
+    assert "No schema without status." in policy
+    assert "No status without authority scope." in policy
+    assert "No authority scope without receipts for promotion." in policy
+    assert "Receipts do not prove truth by themselves. They make provenance inspectable." in policy
+    assert "GPTDream++ proposes." in policy
+    assert "Human-root ratifies." in policy
+
+
+def test_public_safe_translation_table_is_available_in_generated_output_policy() -> None:
+    policy = (GPTBRAIN_ROOT / "GPTBRAIN_GENERATED_OUTPUT_POLICY_2026-05-09.md").read_text(encoding="utf-8")
+    assert "Public-safe translation table" in policy
+    assert "memory palace" in policy
+    assert "externalized persistent-context archive" in policy
+    assert "dream cycle" in policy
+    assert "bounded reflection / consolidation cycle" in policy
+    assert "AI remembers" in policy
+    assert "archive context was loaded" in policy
