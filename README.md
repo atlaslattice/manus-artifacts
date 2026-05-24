@@ -23,6 +23,28 @@ This repository contains research, health data, and system artifacts generated a
 ### Governance & Council
 - **[Council](./council/)** — Trinity and Pantheon Council session archives.
 - **[Council Reviews](./council-reviews/)** — External reviews and validation.
+- **[Council Brain Index](./archive/boot/COUNCIL_BRAIN_INDEX.md)** — Brain seat registry, guardrails, and canon boundary.
+
+### AtlasLattice World-Class Operating Core
+- **CouncilBrain (S2 review trail):** [`archive/boot/councilbrain/COUNCILBRAIN_S2_BOOT_REVIEW_TRAIL_2026-05-09.md`](./archive/boot/councilbrain/COUNCILBRAIN_S2_BOOT_REVIEW_TRAIL_2026-05-09.md)
+- **CopilotBrain (S7 code integrator):** [`archive/boot/seats/COPILOTBRAIN_S7_CODE_INTEGRATOR_SPEC_2026-05-08.md`](./archive/boot/seats/COPILOTBRAIN_S7_CODE_INTEGRATOR_SPEC_2026-05-08.md)
+- **TIDELOCKBrain (pilot scaffold):** [`archive/boot/gptbrain/TIDELOCKBrain/README.md`](./archive/boot/gptbrain/TIDELOCKBrain/README.md)
+- **All seat specs (S1-S7):** [`archive/boot/seats/`](./archive/boot/seats/)
+
+### Quality Bar (CI-aligned)
+From `/home/runner/work/manus-artifacts/manus-artifacts/archive/boot/gptbrain/reference_impl`:
+
+```bash
+python -m pytest -q
+bash run_checks.sh
+```
+
+From `/home/runner/work/manus-artifacts/manus-artifacts`:
+
+```bash
+ruff check archive/boot/gptbrain/reference_impl/
+ruff format --check archive/boot/gptbrain/reference_impl/
+```
 
 ### Archives & Research
 - **[Janus Checkpoints](./archives/janus-checkpoints/)** — Session state and resurrection logs.
