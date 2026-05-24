@@ -36,7 +36,7 @@ assert report['status'] in {'needs_review', 'pass_with_boundaries'}
 print(f"challenge: {report['status']}")
 PY
 
-echo "-- pytest"
-python -m pytest -q test_gptbrain_memory.py
+echo "-- pytest (full suite)"
+python -m pytest -q
 
 echo "checks: pass"

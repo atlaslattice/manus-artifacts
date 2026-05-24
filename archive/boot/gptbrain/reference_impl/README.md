@@ -118,21 +118,27 @@ Variant D reference demo:
 python dream_memory_palace_reference_impl.py
 ```
 
+Validation:
+
+```bash
+python -m pytest -q
+bash run_checks.sh
+```
+
 ## Intended next steps
 
 ```text
-1. Add pytest tests.
-2. Split reference implementation into package modules.
-3. Add pydantic schemas.
-4. Add SQLite/Postgres storage adapter.
-5. Add graph adapter for claims and contradictions.
-6. Add CLI commands:
+1. Split reference implementation into package modules.
+2. Add pydantic schemas.
+3. Add SQLite/Postgres storage adapter.
+4. Add graph adapter for claims and contradictions.
+5. Add CLI commands:
    gptbrain remember
    gptbrain recall
    gptbrain challenge
    gptbrain diff
    gptbrain synthesize
-7. Add importer from Sheldonbrain RAG artifacts:
+6. Add importer from Sheldonbrain RAG artifacts:
    artifact_registry.jsonl
    claim_ledger.jsonl
    memory_packet.json
