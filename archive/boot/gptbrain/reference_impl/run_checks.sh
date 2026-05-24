@@ -3,7 +3,7 @@ set -euo pipefail
 
 cd "$(dirname "$0")"
 
-tmp_dir="$(mktemp -d /tmp/gptbrain_checks.XXXXXX)"
+tmp_dir="$(mktemp -d)"
 trap 'rm -rf "$tmp_dir"' EXIT
 
 echo "== GPTBrain S1 reference implementation checks =="

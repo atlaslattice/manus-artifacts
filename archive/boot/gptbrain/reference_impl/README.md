@@ -131,7 +131,7 @@ python -m pytest -q
 bash run_checks.sh
 ```
 
-`run_checks.sh` performs CLI smoke checks first, then runs the full pytest suite, and exits early with an install hint if `pytest` is unavailable.
+`run_checks.sh` performs CLI smoke checks first, then runs the full pytest suite. Because the harness uses `set -euo pipefail`, it exits immediately if a smoke check fails, and it also exits early with an install hint if `pytest` is unavailable.
 
 ## Intended next steps
 
