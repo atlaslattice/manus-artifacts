@@ -1,0 +1,93 @@
+schema_version: "0.1"
+status: candidate_schema_not_canon
+seat: S7 / CopilotBrain / TIDELOCK
+purpose: "Parse large Copilot/GitHub chats into repo-hygiene, merge-order, and implementation-readiness packets."
+
+required_fields:
+  packet_id: string
+  title: string
+  created_at_utc: string
+  source_surface: enum
+  raw_log_ref: string
+  raw_log_status: enum
+  sha256: string_or_null
+  size_bytes: integer_or_null
+  participants: list
+  scope_summary: string
+  repos_referenced: list
+  prs_referenced: list
+  issues_referenced: list
+  commits_referenced: list
+  branches_referenced: list
+  files_referenced: list
+  direct_urls: list
+  observations: list
+  inferences: list
+  recommendations: list
+  missing_artifacts: list
+  merge_order_constraints: list
+  ci_or_runtime_claims: list
+  authority_boundary_notes: list
+  quarantine_flags: list
+  next_actions: list
+
+source_surface_values:
+  - GitHub_Copilot
+  - GitHub_Task
+  - GitHub_PR
+  - ChatGPT
+  - Uploaded_File
+  - Mixed
+  - Unknown
+
+raw_log_status_values:
+  - full_committed
+  - pointer_with_hash
+  - pointer_without_hash
+  - pasted_in_chat_only
+  - unavailable
+  - redacted
+
+observation_record:
+  text: string
+  source_ref: string
+  confidence: low | medium | high
+
+inference_record:
+  text: string
+  basis_refs: list
+  risk: low | medium | high
+  needs_review: boolean
+
+recommendation_record:
+  action: string
+  target_ref: string
+  priority: low | medium | high
+  authority_required: human_root | PR_review | CI | none
+
+missing_artifact_record:
+  expected_path_or_artifact: string
+  evidence_for_missing: string
+  possible_explanation: string
+  severity: low | medium | high
+
+merge_order_record:
+  before: string
+  after: string
+  reason: string
+  blocker: string_or_null
+
+quarantine_flag_record:
+  claim_or_artifact: string
+  reason: string
+  severity: low | medium | high
+  repair_path: string
+
+hard_rules:
+  - "Do not claim full visibility from partial search results."
+  - "Do not treat missing root folder as missing repo artifact."
+  - "Do not treat mergeable as merge-approved."
+  - "Do not treat Copilot output as canon or human authorization."
+  - "Do not convert scaffold into implementation proof."
+  - "Raw logs and hashes precede content claims."
+  - "Quarantine unsupported public claims."
