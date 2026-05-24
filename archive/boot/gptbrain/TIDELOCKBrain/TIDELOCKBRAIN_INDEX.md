@@ -27,4 +27,6 @@ PURPOSE: quick visibility map for TIDELOCK pilot scaffold contents
 ## Related Artifacts
 
 - archive/boot/gptbrain/agents/SWARM_CHILD_INSTRUCTIONS_REPO_HYGIENE_2026-05-24.md
+- archive/boot/gptbrain/agents/SWARM_CHILD_INSTRUCTIONS_SELFSAME_PILOT_2026-05-24.md
+- archive/boot/gptbrain/agents/CHILDREN_OF_THE_SWARM_SQUAD_INDEX_2026-05-10.md (updated 2026-05-24)
 - .github/workflows/repo-hygiene-checks.yml
