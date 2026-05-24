@@ -32,14 +32,14 @@ This repository contains research, health data, and system artifacts generated a
 - **All seat specs (S1-S7):** [`archive/boot/seats/`](./archive/boot/seats/)
 
 ### Quality Bar (CI-aligned)
-From `/home/runner/work/manus-artifacts/manus-artifacts/archive/boot/gptbrain/reference_impl`:
+From `archive/boot/gptbrain/reference_impl`:
 
 ```bash
 python -m pytest -q
 bash run_checks.sh
 ```
 
-From `/home/runner/work/manus-artifacts/manus-artifacts`:
+From repository root:
 
 ```bash
 ruff check archive/boot/gptbrain/reference_impl/
