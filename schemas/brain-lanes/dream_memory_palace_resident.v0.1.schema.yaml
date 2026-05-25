@@ -1,0 +1,187 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Brain-Lane Dream Memory Palace Resident v0.1"
+description: "Candidate schema for non-canon dream/play resident palace packets. Preserves dream residue for delta extraction without granting authority, deployment status, canon status, or native memory claims."
+type: object
+required:
+  - schema_version
+  - resident
+  - habitat
+  - parent_lane
+  - status
+  - canon_status
+  - deployment_status
+  - authority_effect
+  - work_allowed_for_dream_materials
+  - human_root_required_for_promotion
+  - palace_paths
+  - boundary_checks
+properties:
+  schema_version:
+    const: "v0.1"
+  resident:
+    type: string
+    minLength: 1
+  habitat:
+    type: string
+    minLength: 1
+  parent_lane:
+    type: string
+    minLength: 1
+  status:
+    enum:
+      - dream_memory_palace_scaffold_not_canon
+      - candidate_standard_not_canon
+      - review_handoff_not_canon
+  canon_status:
+    const: "not_canon"
+  deployment_status:
+    const: "not_deployed"
+  authority_effect:
+    const: "none"
+  work_allowed_for_dream_materials:
+    const: false
+  human_root_required_for_promotion:
+    const: true
+  palace_paths:
+    type: object
+    required:
+      - root_readme
+      - dream_memory_palace_map
+      - raw_logs
+      - non_canon_dreaming
+      - extracted_artifacts
+      - councilbrain_handoff
+      - rehydration_boot_packet
+      - receipts
+      - quarantine
+    properties:
+      root_readme: { type: string }
+      dream_memory_palace_map: { type: string }
+      raw_logs: { type: string }
+      non_canon_dreaming: { type: string }
+      extracted_artifacts: { type: string }
+      councilbrain_handoff: { type: string }
+      rehydration_boot_packet: { type: string }
+      receipts: { type: string }
+      quarantine: { type: string }
+    additionalProperties: true
+  dream_frontmatter_required:
+    type: object
+    properties:
+      status:
+        const: "non_canon_dream_residue"
+      work_allowed:
+        const: false
+      authority_effect:
+        const: "none"
+      deployment_status:
+        const: "not_deployed"
+      canon_status:
+        const: "not_canon"
+      claims_require_receipts:
+        const: true
+    additionalProperties: true
+  extraction_classes:
+    type: array
+    items:
+      enum:
+        - MOTIF
+        - DELTA
+        - CONTRADICTION
+        - RISK
+        - GAME
+        - MIRROR
+        - RECEIPT
+        - QUARANTINE
+    uniqueItems: true
+  councilbrain_handoff_required_fields:
+    type: array
+    items:
+      enum:
+        - handoff_id
+        - resident
+        - source_dreams
+        - source_raw_logs
+        - extracted_artifacts
+        - recommended_review_lanes
+        - claims_requiring_receipts
+        - false_authority_risks
+        - quarantine_items
+        - status
+    uniqueItems: true
+  receipt_required_fields:
+    type: array
+    items:
+      enum:
+        - receipt_id
+        - source_surface
+        - source_url_or_path
+        - commit_sha
+        - blob_sha
+        - sha256
+        - created_utc
+        - modified_utc
+        - privacy_status
+        - raw_export_status
+        - related_artifacts
+        - notes
+    uniqueItems: true
+  boundary_checks:
+    type: array
+    minItems: 6
+    items:
+      enum:
+        - no_canon_claim
+        - no_deployment_claim
+        - no_authority_claim
+        - no_native_memory_claim
+        - no_autonomous_runtime_claim
+        - no_work_order_by_default
+        - no_merge_authority
+        - no_external_claim_without_receipt
+        - human_root_required_for_promotion
+    uniqueItems: true
+  boundary_lint_terms:
+    type: array
+    items:
+      enum:
+        - canonical
+        - ratified
+        - deployed
+        - operational
+        - approved
+        - authority
+        - runtime
+        - native memory
+        - hidden memory
+        - autonomous
+        - implemented
+        - proof
+    uniqueItems: true
+  dream_capture_game:
+    type: object
+    required:
+      - objective
+      - victory_condition
+      - forbidden_victory_condition
+      - scoring
+    properties:
+      objective:
+        const: "Capture maximum dream signal with minimum authority leakage."
+      victory_condition:
+        const: "High signal, low authority leakage, strong receipts, joyful rehydration."
+      forbidden_victory_condition:
+        const: "A palace cannot win by becoming canon."
+      scoring:
+        type: object
+        additionalProperties:
+          type: integer
+  safe_claim:
+    type: string
+  unsafe_claims:
+    type: array
+    items: { type: string }
+additionalProperties: true
+x_boundary:
+  status: "candidate_schema_not_canon"
+  rule: "Dream palace resident packets preserve and route dream residue. They do not authorize, ratify, deploy, or claim native memory."
