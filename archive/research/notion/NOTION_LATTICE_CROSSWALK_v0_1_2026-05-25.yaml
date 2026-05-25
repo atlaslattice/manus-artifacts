@@ -1,0 +1,167 @@
+artifact_id: NOTION-LATTICE-CROSSWALK-v0.1
+status: candidate_crosswalk
+canon_status: not_canon
+deployment_status: not_deployable
+authority_scope: none
+runtime_status: not_implemented
+date: 2026-05-25
+purpose: >
+  First lattice crosswalk seed mapping Notion source pages, Drive/GitHub proxies,
+  project clusters, and review lanes for delta extraction and adversarial review.
+
+source_rule:
+  notion_search: discovery_only
+  notion_fetch: source_context_when_available
+  drive: proxy_or_export_layer
+  github: receipt_and_review_layer
+  website: intended_canon_surface_but_must_be_fetchable_hashable_cross_checkable
+  council: ratification_claim_requires_receipt
+
+records:
+  - artifact_id: NOTION-SHELDONBRAIN-OS-DATABASE
+    title: Sheldonbrain OS
+    source_surface: notion
+    source_id: 2d20c1de-73d9-80f9-80ac-cfa36c0893a3
+    source_url: https://www.notion.so/2d20c1de73d980f980accfa36c0893a3
+    source_connector_status: direct
+    raw_export_status: schema_metadata_fetched
+    project_tags: [Sheldonbrain, Atlas_Lattice, Receipt_Habitat, Pantheon_Council]
+    artifact_type: database
+    epistemic_label: verifiable_metadata
+    canon_relation: internal_candidate
+    authority_scope: none
+    deployment_status: not_deployed
+    review_hold_flag: false
+    useful_delta: >
+      Existing database already contains parse, council, confidence, review, sphere,
+      and execution-approval fields that can serve as the live inventory substrate.
+    contradiction_or_drift: >
+      Schema exists, but row extraction/query is not yet stable through the connector.
+    recommended_action: revise_improve
+    review_lane: ParallaxBrain
+    next_action: Establish batch-safe row export or view-based extraction.
+
+  - artifact_id: NOTION-SHELDONBRAIN-12X12-MASTER-INDEX
+    title: SHELDONBRAIN OS — 12×12 Master Index — 144 Spheres
+    source_surface: notion
+    source_id: 3210c1de-73d9-81a7-b04c-dced2cc61515
+    source_url: https://www.notion.so/3210c1de73d981a7b04cdced2cc61515
+    source_connector_status: direct_search
+    raw_export_status: pointer_only
+    project_tags: [Sheldonbrain, 144_Sphere_Ontology, Atlas_Lattice]
+    artifact_type: index
+    epistemic_label: candidate
+    canon_relation: unclear
+    authority_scope: none
+    deployment_status: not_deployed
+    review_hold_flag: false
+    useful_delta: Master sphere index likely defines core lattice shelf structure.
+    contradiction_or_drift: Must compare against website canon and GitHub Sphere144 registry.
+    recommended_action: preserve_as_is
+    review_lane: AtlasBrain
+    next_action: Fetch full page and extract sphere/house mapping.
+
+  - artifact_id: NOTION-GITHUB-MASTER-ARTIFACT-MAP
+    title: MASTER INDEX — Notion → GitHub Complete Artifact Map
+    source_surface: notion
+    source_id: 3290c1de-73d9-81ac-8ebf-d4c8e86da6b8
+    source_url: https://www.notion.so/3290c1de73d981ac8ebfd4c8e86da6b8
+    source_connector_status: direct_search
+    raw_export_status: pointer_only
+    project_tags: [Atlas_Lattice, GitHub, Notion, Receipt_Habitat]
+    artifact_type: crosswalk
+    epistemic_label: candidate
+    canon_relation: unclear
+    authority_scope: none
+    deployment_status: not_deployed
+    review_hold_flag: false
+    useful_delta: Key bridge for Notion source pages to GitHub receipt/mirror paths.
+    contradiction_or_drift: Must verify every GitHub path/commit; page says GitHub as ontology reference but website canon now controls public canon.
+    recommended_action: revise_improve
+    review_lane: TIDELOCK
+    next_action: Fetch full page and extract Notion→GitHub rows.
+
+  - artifact_id: NOTION-UNIFIED-FIELD-LATTICE-VISUAL
+    title: Unified Field Lattice — Sheldonbrain OS 12×12 Visual
+    source_surface: notion
+    source_id: 33a0c1de-73d9-81b2-8c03-ea5c7f25a4b7
+    source_url: https://www.notion.so/33a0c1de73d981b28c03ea5c7f25a4b7
+    source_connector_status: direct_search
+    raw_export_status: pointer_only
+    project_tags: [Sheldonbrain, 144_Sphere_Ontology, Creative_Overlay]
+    artifact_type: visual_index
+    epistemic_label: creative_overlay
+    canon_relation: unclear
+    authority_scope: none
+    deployment_status: not_deployed
+    review_hold_flag: false
+    useful_delta: Visual may help reconcile the 12 house / 144 sphere model.
+    contradiction_or_drift: Must not replace machine-readable sphere registry.
+    recommended_action: preserve_as_is
+    review_lane: Lucerna
+    next_action: Fetch and derive a machine-readable companion map.
+
+  - artifact_id: NOTION-ARTIFACT-CHANGELOG-PROTOCOL-v1.0
+    title: ARTIFACT CHANGELOG PROTOCOL v1.0 — Atlas Lattice Governance Spec
+    source_surface: notion
+    source_id: 3360c1de-73d9-8102-b60b-cbdd9be3ab3d
+    source_url: https://www.notion.so/3360c1de73d98102b60bcbdd9be3ab3d
+    source_connector_status: direct_search
+    raw_export_status: pointer_only
+    project_tags: [Receipt_Habitat, Atlas_Lattice, Governance, Provenance]
+    artifact_type: protocol
+    epistemic_label: candidate
+    canon_relation: council_ratified_claimed
+    authority_scope: none
+    deployment_status: not_deployed
+    review_hold_flag: false
+    useful_delta: Supplies artifact versioning pattern #{N}-V{X}, context/problem/delta discipline.
+    contradiction_or_drift: Ratified-by label requires current human-root/council receipt and website canon cross-check.
+    recommended_action: revise_improve
+    review_lane: Hashlight
+    next_action: Fetch full page and normalize into Receipt Habitat schema.
+
+  - artifact_id: NOTION-LEGACY-CONTENT-INDEX-HOUSE-11
+    title: Legacy Content Index — House 11 Interdisciplinary
+    source_surface: notion
+    source_id: 30f0c1de-73d9-8118-8598-d714c382cdd5
+    source_url: https://www.notion.so/30f0c1de73d981188598d714c382cdd5
+    source_connector_status: direct_search
+    raw_export_status: pointer_only
+    project_tags: [Legacy_Index, 144_Sphere_Ontology, Sheldonbrain]
+    artifact_type: legacy_index
+    epistemic_label: candidate
+    canon_relation: unclear
+    authority_scope: none
+    deployment_status: not_deployed
+    review_hold_flag: false
+    useful_delta: Legacy index can reveal older shelf topology and supersession paths.
+    contradiction_or_drift: High risk of outdated taxonomy / duplicate paths.
+    recommended_action: archive_deprecate
+    review_lane: ParallaxBrain
+    next_action: Compare against current 12×12 master index.
+
+  - artifact_id: NOTION-ALUMINUM-OS-ASSET-CATALOGUE
+    title: Aluminum OS — Complete Asset Catalogue & Cross-Reference Index
+    source_surface: notion
+    source_id: 3240c1de-73d9-81e4-bec7-e9ef54b7f2dc
+    source_url: https://www.notion.so/3240c1de73d981e4bec7e9ef54b7f2dc
+    source_connector_status: direct_search
+    raw_export_status: pointer_only
+    project_tags: [Aluminum_OS, UWS, Sheldonbrain, Atlas_Lattice]
+    artifact_type: asset_catalogue
+    epistemic_label: candidate
+    canon_relation: unclear
+    authority_scope: none
+    deployment_status: not_deployed
+    review_hold_flag: false
+    useful_delta: Key asset catalog for Aluminum OS / Sheldonbrain integration.
+    contradiction_or_drift: Needs reconciliation against current repo and website trajectory.
+    recommended_action: revise_improve
+    review_lane: TIDELOCK
+    next_action: Fetch full page and map assets to repo paths/issues.
+
+keeper: |
+  Map the shelves before judging the books.
+  Extract deltas before synthesis.
+  Adversarial review before canon.
