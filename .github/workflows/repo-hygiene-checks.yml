@@ -1,0 +1,57 @@
+name: Repo Hygiene Checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  hygiene:
+    name: Hygiene checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check for merge-conflict markers
+        run: |
+          echo "Scanning for merge-conflict markers..."
+          if grep -rn --include="*.md" --include="*.yaml" --include="*.yml" --include="*.py" --include="*.rs" --include="*.toml" --include="*.json" --include="*.jsonl" \
+            -e "^<<<<<<< " -e "^=======$" -e "^>>>>>>> " .; then
+            echo "ERROR: Merge-conflict markers found. Resolve conflicts before merging."
+            exit 1
+          fi
+          echo "No merge-conflict markers found."
+
+      - name: Validate GitHub Actions workflow syntax
+        run: |
+          echo "Validating workflow YAML files..."
+          for f in .github/workflows/*.yml .github/workflows/*.yaml; do
+            [ -f "$f" ] || continue
+            python3 -c "import yaml, sys; yaml.safe_load(open('$f'))" \
+              && echo "  OK: $f" \
+              || { echo "  ERROR: Invalid YAML in $f"; exit 1; }
+          done
+          echo "All workflow files are valid YAML."
+
+      - name: Check for accidentally committed secrets patterns
+        run: |
+          echo "Scanning for common secret patterns..."
+          FOUND=0
+          # Check for API key patterns (generic, not service-specific to avoid false positives)
+          if grep -rn --include="*.py" --include="*.rs" --include="*.toml" \
+            -e "api_key\s*=\s*['\"][a-zA-Z0-9_\-]\{20,\}['\"]" \
+            -e "PINECONE_API_KEY\s*=\s*['\"][a-zA-Z0-9_\-]\{20,\}['\"]" \
+            . 2>/dev/null | grep -v "os\.environ\|getenv\|placeholder\|your_key\|example\|REPLACE"; then
+            echo "WARNING: Possible hardcoded API key found. Review the above lines."
+            FOUND=1
+          fi
+          if [ "$FOUND" -eq 1 ]; then
+            echo "Potential secrets detected. Please review."
+            exit 1
+          fi
+          echo "No obvious secret patterns found."
