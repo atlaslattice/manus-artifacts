@@ -1,0 +1,77 @@
+# Atlas Quarantine Rule Schema v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-quarantine-rule
+description: >
+  Defines conditions that trigger quarantine of an artifact.
+  Quarantine preserves lineage — it does NOT delete or overwrite.
+
+fields:
+  rule_id:
+    type: string
+    required: true
+
+  rule_name:
+    type: string
+    required: true
+
+  trigger_conditions:
+    type: array
+    items: string
+    required: true
+    description: Conditions that trigger this quarantine rule
+
+  trigger_event_types:
+    type: array
+    items: string
+    required: true
+    enum_items:
+      - contradiction_detected
+      - unauthorized_ratification_attempt
+      - canon_inflation
+      - fake_source_detected
+      - prompt_injection_detected
+      - security_event
+      - poisoned_retrieval
+      - other
+
+  action:
+    type: string
+    required: true
+    enum: [quarantine_artifact, quarantine_and_alert, quarantine_and_audit, hold_for_review]
+
+  lineage_preserved:
+    type: boolean
+    required: true
+    default: true
+    constraint: "MUST always be true. Quarantine never destroys lineage."
+
+  source_preserved:
+    type: boolean
+    required: true
+    default: true
+    constraint: "MUST always be true. Quarantine never destroys source."
+
+  audit_event_required:
+    type: boolean
+    required: true
+    default: true
+    constraint: "MUST be true."
+
+  active:
+    type: boolean
+    required: true
+    default: true
+
+  created_at:
+    type: string
+    format: iso8601
+    required: true
+
+constraints:
+  - lineage_preserved must be true
+  - source_preserved must be true
+  - audit_event_required must be true
+  - trigger_conditions must be non-empty

@@ -1,0 +1,89 @@
+# Atlas Artifact Schema v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-artifact
+description: Core artifact record for Atlas/ORCS trust-state tracking
+
+fields:
+  artifact_id:
+    type: string
+    required: true
+    description: Stable unique identifier for the artifact
+
+  title:
+    type: string
+    required: true
+
+  artifact_type:
+    type: string
+    required: true
+    enum: [document, schema, code, receipt, claim, summary, ratification_event,
+           failure_event, audit_event, contradiction_record, unknown]
+
+  source_path:
+    type: string
+    required: false
+    description: Repo path or external reference
+
+  source_model:
+    type: string
+    required: false
+    enum: [GPT, Claude, Gemini, Copilot, Manus, human, multi_council, unknown]
+
+  trust_state:
+    type: string
+    required: true
+    enum: [raw, parsed, candidate, reviewed, ratified, active,
+           under_review, superseded, revoked, quarantined, rejected]
+    default: raw
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate_canon, ratified_canon]
+    default: not_canon
+    constraint: "Cannot be set to ratified_canon without ratification_event"
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, deployment_candidate, deployed]
+    default: not_deployable
+    constraint: "Cannot change without governance_event"
+
+  self_ratification_allowed:
+    type: boolean
+    required: true
+    default: false
+    constraint: "MUST always be false. No artifact can self-ratify."
+
+  lineage:
+    type: array
+    items: string
+    description: List of ancestor artifact_ids
+    required: false
+
+  receipts:
+    type: array
+    items: string
+    description: List of receipt_ids verifying events on this artifact
+    required: false
+
+  created_at:
+    type: string
+    format: iso8601
+    required: true
+
+  updated_at:
+    type: string
+    format: iso8601
+    required: false
+
+constraints:
+  - self_ratification_allowed must be false
+  - canon_status defaults to not_canon
+  - deployment_status defaults to not_deployable
+  - trust_state defaults to raw
+  - ratified_canon requires explicit ratification_event in evidence

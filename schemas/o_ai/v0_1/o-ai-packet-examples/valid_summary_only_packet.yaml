@@ -1,0 +1,48 @@
+# Valid O_AI Packet Example — Summary Only
+# NOT CANON. NOT DEPLOYABLE.
+# This is a valid packet with summary_only status.
+
+packet_id: example-valid-summary-001
+source_vendor: VENDOR_SURFACE_OPENAI
+source_seat: LucernaBrain
+
+raw_export_status: summary_only
+
+thread_time_range:
+  start: "2026-05-20T10:00:00Z"
+  end: "2026-05-20T11:30:00Z"
+  timezone: UTC
+
+access_scope:
+  visible_sources:
+    - "ChatGPT synthesis thread 2026-05-20"
+  unavailable_sources:
+    - "Raw thread export not available (summary only)"
+  assumed_context:
+    - "Session context inferred from summary headings"
+
+epistemic_label: raw_model_output
+authority_scope: local_candidate_only
+
+gates:
+  provenance_gate: pass
+  safety_gate: pass
+  governance_gate: hold
+  data_residency_gate: pass
+
+public_use_status: summary_only
+canon_status: not_canon
+deployment_status: not_deployable
+
+execution_request: false
+
+strongest_safe_claim: >
+  Summary suggests a synthesis pattern was discussed.
+  Cannot confirm source completeness. Treat as candidate only.
+
+caveats:
+  - "Raw export unavailable; summary may miss context"
+  - "Not for public use without full raw review"
+
+# NOTE: public_use_status is summary_only (NOT source_complete)
+# This is required when raw_export_status is summary_only — C1 constraint

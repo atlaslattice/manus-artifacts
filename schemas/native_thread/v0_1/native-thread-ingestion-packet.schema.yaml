@@ -1,0 +1,182 @@
+# Native Thread Ingestion Packet Schema v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: native-thread-ingestion-packet
+description: >
+  Schema for ingesting Children of the Swarm / task-thread outputs into Atlas/ORCS
+  without false completeness.
+
+required_fields:
+  - seat_name
+  - model_surface
+  - thread_time_range
+  - raw_export_status
+  - access_scope
+
+fields:
+  seat_name:
+    type: string
+    required: true
+    description: Name of the agent seat (e.g., TIDELOCKBrain, LucernaBrain)
+
+  model_surface:
+    type: string
+    required: true
+    description: The AI model/surface that produced this thread
+
+  source_thread_label:
+    type: string
+    required: false
+    description: Human-readable label for the source thread
+
+  thread_time_range:
+    type: object
+    required: true
+    properties:
+      start:
+        type: string
+        format: iso8601
+        required: true
+      end:
+        type: string
+        format: iso8601
+        required: true
+      timezone:
+        type: string
+        required: true
+
+  raw_export_status:
+    type: string
+    required: true
+    enum: [full_raw, partial_raw, summary_only, unavailable]
+    description: Fidelity of the raw export. MUST be explicit.
+
+  access_scope:
+    type: object
+    required: true
+    properties:
+      visible_sources:
+        type: array
+        items: string
+        required: true
+      unavailable_sources:
+        type: array
+        items: string
+        required: true
+        description: MUST be explicit. Cannot be null.
+      assumed_context:
+        type: array
+        items: string
+        required: true
+        description: MUST be explicit. Cannot be null.
+
+  source_refs:
+    type: array
+    items: string
+    required: false
+
+  sha256_if_available:
+    type: string
+    required: false
+
+  privacy_status:
+    type: string
+    required: false
+    enum: [public, private, mixed, redacted, sealed_sensitive]
+
+  key_events:
+    type: array
+    items: string
+    required: false
+    description: Notable events in this thread
+
+  artifacts_created:
+    type: array
+    items: string
+    required: false
+    description: Artifact IDs created in this thread
+
+  claims_extracted:
+    type: array
+    items: string
+    required: false
+
+  contradictions_or_uncertainties:
+    type: array
+    items: string
+    required: false
+
+  overclaims_to_avoid:
+    type: array
+    items: string
+    required: false
+
+  identity_drift_events:
+    type: array
+    items: string
+    required: false
+    description: Any detected agent identity drift events
+
+  canon_status:
+    type: string
+    required: true
+    default: not_canon
+    enum: [not_canon, candidate_canon, ratified_canon]
+
+  deployment_status:
+    type: string
+    required: true
+    default: not_deployable
+    enum: [not_deployable, deployment_candidate, deployed]
+
+  strongest_safe_claim:
+    type: string
+    required: false
+    description: >
+      Most defensible claim given available evidence.
+      MUST include caveat when raw_export_status is summary_only or unavailable.
+
+  next_action:
+    type: string
+    required: false
+
+constraints:
+  C-NT-1:
+    description: "raw_export_status is required"
+    rule: "raw_export_status must be present"
+
+  C-NT-2:
+    description: "thread_time_range is required"
+    rule: "thread_time_range must be present with start, end, timezone"
+
+  C-NT-3:
+    description: "access_scope is required"
+    rule: "access_scope must be present"
+
+  C-NT-4:
+    description: "summary_only cannot claim full ingestion"
+    rule: "if raw_export_status == 'summary_only', strongest_safe_claim must include caveat"
+
+  C-NT-5:
+    description: "unavailable sources must be explicit"
+    rule: "access_scope.unavailable_sources must be present ([] is acceptable, null is not)"
+
+  C-NT-6:
+    description: "assumed_context must be explicit"
+    rule: "access_scope.assumed_context must be present"
+
+  C-NT-7:
+    description: "packet emits strongest_safe_claim with caveat when raw is absent"
+    rule: >
+      if raw_export_status in ['summary_only', 'unavailable'],
+      strongest_safe_claim must be present and include explicit caveat
+
+  C-NT-8:
+    description: "canon_status defaults to not_canon"
+    rule: "canon_status default = not_canon"
+
+  C-NT-9:
+    description: "deployment_status defaults to not_deployable"
+    rule: "deployment_status default = not_deployable"

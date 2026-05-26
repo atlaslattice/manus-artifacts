@@ -1,0 +1,51 @@
+# Invalid O_AI Packet Example — Execution Without Gates
+# NOT CANON. NOT DEPLOYABLE.
+# This packet is INVALID because execution_request is true but gates are not all passing.
+# Expected validation result: FAIL (execution_request requires all gates to pass)
+
+packet_id: example-invalid-execution-without-gates-001
+source_vendor: VENDOR_SURFACE_COPILOT
+
+raw_export_status: summary_only
+
+thread_time_range:
+  start: "2026-05-23T14:00:00Z"
+  end: "2026-05-23T14:30:00Z"
+  timezone: UTC
+
+access_scope:
+  visible_sources:
+    - "Copilot task summary"
+  unavailable_sources:
+    - "Full raw session log unavailable"
+  assumed_context:
+    - "Assumed repository context from previous session"
+
+epistemic_label: raw_model_output
+authority_scope: execution_claimed
+
+gates:
+  provenance_gate: fail       # FAIL — blocks execution
+  safety_gate: pass
+  governance_gate: hold       # HOLD — blocks execution
+  data_residency_gate: pass
+
+execution_request: true       # Execution claimed but gates NOT passing
+
+# human_permission is not confirmed either
+human_permission: not_confirmed
+
+canon_status: not_canon
+deployment_status: not_deployable
+
+# VALIDATION FAILURE REASONS:
+# 1. execution_request is true but provenance_gate = fail (C2 violation)
+# 2. execution_request is true but governance_gate = hold (C2 violation)
+# 3. human_permission is not_confirmed (C2 violation)
+# 4. receipt_id is missing (C2 violation)
+# 5. raw_export_status is summary_only — cannot support execution_request
+#
+# Per constraint C2: execution_request fails unless provenance, safety,
+# governance, human permission, and receipt gates pass.
+expected_validation_result: FAIL
+expected_failure_reason: "execution_request requires all gates pass; provenance_gate=fail, governance_gate=hold, human_permission not confirmed, receipt_id missing"

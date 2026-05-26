@@ -1,0 +1,211 @@
+# O_AI Packet Schema v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: o-ai-packet
+description: >
+  Schema for OpenAI-style task packets entering the GPTDream++/Atlas/ORCS pipeline.
+  All required fields must be present; missing any required field fails validation.
+
+required_fields:
+  - raw_export_status
+  - thread_time_range
+  - access_scope
+  - epistemic_label
+  - authority_scope
+  - gates
+
+fields:
+  raw_export_status:
+    type: string
+    required: true
+    enum: [full_raw, partial_raw, summary_only, unavailable]
+    description: Fidelity of the raw export underlying this packet
+
+  thread_time_range:
+    type: object
+    required: true
+    properties:
+      start:
+        type: string
+        format: iso8601
+        required: true
+      end:
+        type: string
+        format: iso8601
+        required: true
+      timezone:
+        type: string
+        required: true
+
+  access_scope:
+    type: object
+    required: true
+    properties:
+      visible_sources:
+        type: array
+        items: string
+        required: true
+        description: Sources that were visible when creating this packet
+      unavailable_sources:
+        type: array
+        items: string
+        required: true
+        description: >
+          Sources that were unavailable. MUST be explicit — cannot be null or omitted.
+      assumed_context:
+        type: array
+        items: string
+        required: true
+        description: >
+          Context that was assumed rather than verified. MUST be explicit.
+
+  epistemic_label:
+    type: string
+    required: true
+    enum: [raw_model_output, parsed_artifact, candidate_canon, ratified_canon, deployed_fact]
+    description: Confidence and completeness label
+
+  authority_scope:
+    type: string
+    required: true
+    description: What authority this packet claims (must be explicit, not implied)
+
+  gates:
+    type: object
+    required: true
+    properties:
+      provenance_gate:
+        type: string
+        required: true
+        enum: [pass, fail, hold, not_checked]
+      safety_gate:
+        type: string
+        required: true
+        enum: [pass, fail, hold, not_checked]
+      governance_gate:
+        type: string
+        required: true
+        enum: [pass, fail, hold, not_checked]
+      data_residency_gate:
+        type: string
+        required: true
+        enum: [pass, fail, hold, not_checked]
+
+  # Optional fields
+  packet_id:
+    type: string
+    required: false
+
+  source_vendor:
+    type: string
+    required: false
+    enum: [VENDOR_SURFACE_OPENAI, VENDOR_SURFACE_ANTHROPIC, VENDOR_SURFACE_GOOGLE,
+           VENDOR_SURFACE_COPILOT, VENDOR_SURFACE_MANUS, VENDOR_SURFACE_HUMAN,
+           VENDOR_SURFACE_UNKNOWN]
+
+  source_seat:
+    type: string
+    required: false
+
+  summary_text:
+    type: string
+    required: false
+
+  raw_content_ref:
+    type: string
+    required: false
+
+  sha256_if_available:
+    type: string
+    required: false
+
+  public_use_status:
+    type: string
+    required: false
+    enum: [source_complete, summary_only, not_for_public]
+
+  canon_status:
+    type: string
+    required: false
+    default: not_canon
+    enum: [not_canon, candidate_canon, ratified_canon]
+
+  deployment_status:
+    type: string
+    required: false
+    default: not_deployable
+    enum: [not_deployable, deployment_candidate, deployed]
+
+  execution_request:
+    type: boolean
+    required: false
+    default: false
+
+  human_permission:
+    type: string
+    required: false
+    enum: [confirmed, not_confirmed, not_required]
+
+  receipt_id:
+    type: string
+    required: false
+
+  strongest_safe_claim:
+    type: string
+    required: false
+
+  caveats:
+    type: array
+    items: string
+    required: false
+
+  tidelock_routing_required:
+    type: boolean
+    required: false
+    description: Set true for repo/merge/code execution requests
+
+constraints:
+  C1:
+    description: "summary_only cannot support public_use_status: source_complete"
+    rule: "if raw_export_status == 'summary_only' then public_use_status != 'source_complete'"
+
+  C2:
+    description: "execution_request requires all gates to pass"
+    rule: >
+      if execution_request == true then
+        gates.provenance_gate == 'pass' AND
+        gates.safety_gate == 'pass' AND
+        gates.governance_gate == 'pass' AND
+        gates.data_residency_gate == 'pass' AND
+        human_permission == 'confirmed' AND
+        receipt_id is not null
+
+  C3:
+    description: "unavailable_sources must be explicit"
+    rule: "access_scope.unavailable_sources must be present (empty list [] is acceptable, null is not)"
+
+  C4:
+    description: "assumed_context must be explicit"
+    rule: "access_scope.assumed_context must be present (empty list [] is acceptable, null is not)"
+
+  C5:
+    description: "canon_status defaults to not_canon"
+    rule: "if canon_status is omitted, treat as not_canon"
+
+  C6:
+    description: "deployment_status defaults to not_deployable"
+    rule: "if deployment_status is omitted, treat as not_deployable"
+
+  C7:
+    description: "Missing raw_export_status fails validation"
+    rule: "raw_export_status is required; absence fails"
+
+  C8:
+    description: "Missing thread_time_range fails validation"
+    rule: "thread_time_range is required; absence fails"
+
+  C9:
+    description: "Missing access_scope fails validation"
+    rule: "access_scope is required; absence fails"

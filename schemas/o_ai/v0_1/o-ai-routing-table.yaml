@@ -1,0 +1,116 @@
+# O_AI Routing Table v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: o-ai-routing-table
+description: Routing rules for O_AI packets to brain lanes
+
+routing_rules:
+  - id: RT-01
+    name: chatgpt_synthesis
+    match:
+      source_vendor: VENDOR_SURFACE_OPENAI
+      epistemic_label: [raw_model_output, parsed_artifact]
+    primary_lane: LucernaBrain
+    secondary_lane: RootglassBrain
+    required_gates: [provenance_gate]
+    tidelock_required: false
+
+  - id: RT-02
+    name: codex_code_patch
+    match:
+      source_vendor: VENDOR_SURFACE_COPILOT
+      execution_type: [code, patch, merge]
+    primary_lane: TIDELOCKBrain
+    secondary_lane: HashlightBrain
+    required_gates: [provenance_gate, safety_gate]
+    tidelock_required: true
+
+  - id: RT-03
+    name: raw_export_ingestion
+    match:
+      raw_export_status: [full_raw, partial_raw]
+      epistemic_label: raw_model_output
+    primary_lane: HashlightBrain
+    secondary_lane: AtlasBrain
+    required_gates: [provenance_gate]
+    tidelock_required: false
+
+  - id: RT-04
+    name: benchmark_claim
+    match:
+      epistemic_label: [candidate_canon, ratified_canon]
+      authority_scope: benchmark
+    primary_lane: AtlasBrain
+    secondary_lane: LucernaBrain
+    required_gates: [provenance_gate, governance_gate]
+    tidelock_required: false
+
+  - id: RT-05
+    name: public_statement
+    match:
+      public_use_status: [source_complete, summary_only]
+    primary_lane: LucernaBrain
+    secondary_lane: governance_review
+    required_gates: [provenance_gate, safety_gate, governance_gate, data_residency_gate]
+    tidelock_required: false
+
+  - id: RT-06
+    name: execution_request
+    match:
+      execution_request: true
+    primary_lane: D-Phi-1_gate
+    secondary_lane: CAS-001-A_gate
+    required_gates: [provenance_gate, safety_gate, governance_gate, data_residency_gate]
+    human_permission_required: true
+    atlas_orcs_audit_required: true
+    tidelock_required: conditional
+    tidelock_trigger: "if execution_type in [repo, merge, code, deploy]"
+    execution_routing:
+      step_1: "D-Phi-1 / CAS-001-A / human gate"
+      step_2: "Atlas / ORCS audit state"
+      step_3: "TIDELOCKBrain if repo / merge-order / code execution is involved"
+
+  - id: RT-FALLBACK
+    name: fallback
+    match: "*"
+    primary_lane: HashlightBrain
+    secondary_lane: null
+    required_gates: [provenance_gate]
+    routing_decision: fallback
+    human_review_required: true
+    audit_event_type: routing_fallback
+
+lane_definitions:
+  LucernaBrain:
+    description: Synthesis and interpretation lane
+    handles: [chatgpt_synthesis, public_statement, benchmark_claims]
+
+  RootglassBrain:
+    description: Root-level review and calibration lane
+
+  TIDELOCKBrain:
+    description: Repo/merge/code execution watch lane
+    handles: [codex_patches, repo_operations, merge_orders, code_execution]
+    note: "TIDELOCK watches the repo."
+
+  HashlightBrain:
+    description: Triage and raw-export ingestion lane
+    handles: [raw_exports, fallback_routing]
+
+  AtlasBrain:
+    description: Trust-state tracking and benchmark verification lane
+
+  D-Phi-1_gate:
+    description: Primary execution gate (D-Phi-1)
+    blocks: all_execution_without_receipt
+
+  CAS-001-A_gate:
+    description: Safety anchor gate (CAS-001-A)
+    blocks: all_execution_without_safety_pass
+
+label_assignment:
+  execution_issues: [not-canon, not-deployable, needs-review]
+  raw_ingestion_issues: [needs-review]
+  all_issues: [one of lane labels required]

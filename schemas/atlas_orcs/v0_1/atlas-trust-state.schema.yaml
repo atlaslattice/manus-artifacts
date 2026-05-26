@@ -1,0 +1,71 @@
+# Atlas Trust State Schema v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-trust-state
+description: Snapshot of an artifact's trust state at a point in time
+
+fields:
+  snapshot_id:
+    type: string
+    required: true
+
+  artifact_id:
+    type: string
+    required: true
+
+  trust_state:
+    type: string
+    required: true
+    enum: [raw, parsed, candidate, reviewed, ratified, active,
+           under_review, superseded, revoked, quarantined, rejected]
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate_canon, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, deployment_candidate, deployed]
+    default: not_deployable
+
+  ratification_event_id:
+    type: string
+    required: false
+    description: Required when trust_state is ratified or active
+
+  governance_event_id:
+    type: string
+    required: false
+    description: Required when deployment_status changed from not_deployable
+
+  ratification_expiry:
+    type: string
+    format: iso8601
+    required: false
+    description: When set, expired ratification triggers move to under_review
+
+  transition_from:
+    type: string
+    required: false
+    description: Previous trust state
+
+  transition_delta_id:
+    type: string
+    required: false
+    description: Governance delta that authorized this transition
+
+  snapshot_timestamp:
+    type: string
+    format: iso8601
+    required: true
+
+constraints:
+  - ratification_event_id required when trust_state in [ratified, active]
+  - canon_status = ratified_canon requires ratification_event_id
+  - deployment_status != not_deployable requires governance_event_id
+  - expired ratification_expiry triggers trust_state → under_review

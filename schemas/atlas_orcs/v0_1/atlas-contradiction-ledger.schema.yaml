@@ -1,0 +1,73 @@
+# Atlas Contradiction Ledger Schema v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-contradiction-ledger
+description: >
+  Ledger of contradictions between artifacts or claims.
+  Contradictions create records — they do NOT overwrite source artifacts.
+
+fields:
+  contradiction_id:
+    type: string
+    required: true
+
+  artifact_a_id:
+    type: string
+    required: true
+    description: First artifact in contradiction
+
+  artifact_b_id:
+    type: string
+    required: true
+    description: Second artifact in contradiction (contradicts artifact_a)
+
+  contradiction_description:
+    type: string
+    required: true
+
+  resolution_status:
+    type: string
+    required: true
+    enum: [unresolved, under_review, resolved_a_supersedes, resolved_b_supersedes,
+           resolved_both_invalid, resolved_reconciled]
+    default: unresolved
+
+  overwrite_permitted:
+    type: boolean
+    required: true
+    default: false
+    constraint: "MUST always be false. Contradiction creates record, not overwrite."
+
+  lineage_preserved:
+    type: boolean
+    required: true
+    default: true
+    constraint: "MUST always be true. Both artifacts keep their full lineage."
+
+  canon_status:
+    type: string
+    required: true
+    default: not_canon
+
+  audit_event_id:
+    type: string
+    required: true
+    description: Atlas audit event emitted when contradiction was recorded
+
+  created_at:
+    type: string
+    format: iso8601
+    required: true
+
+  resolved_at:
+    type: string
+    format: iso8601
+    required: false
+
+constraints:
+  - overwrite_permitted must be false
+  - lineage_preserved must be true
+  - Both artifacts in contradiction preserve their full lineage
+  - An audit_event must be emitted for every contradiction record

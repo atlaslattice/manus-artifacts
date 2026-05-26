@@ -1,0 +1,61 @@
+# Atlas Uncertainty Ledger Schema v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-uncertainty-ledger
+description: Tracks explicit uncertainties, caveats, and knowledge gaps
+
+fields:
+  uncertainty_id:
+    type: string
+    required: true
+
+  artifact_id:
+    type: string
+    required: false
+    description: Artifact this uncertainty applies to (if specific)
+
+  claim_id:
+    type: string
+    required: false
+    description: Claim this uncertainty applies to (if specific)
+
+  uncertainty_type:
+    type: string
+    required: true
+    enum: [missing_source, unverified_authorship, partial_export, assumed_context,
+           expired_ratification, contradicted, unknown_provenance, other]
+
+  description:
+    type: string
+    required: true
+
+  impact:
+    type: string
+    required: true
+    enum: [blocks_ratification, reduces_confidence, requires_caveat, informational]
+
+  strongest_safe_claim:
+    type: string
+    required: false
+    description: Most defensible claim given this uncertainty
+
+  caveat_text:
+    type: string
+    required: true
+    description: Explicit caveat that must accompany any use of affected artifact/claim
+
+  resolved:
+    type: boolean
+    required: true
+    default: false
+
+  created_at:
+    type: string
+    format: iso8601
+    required: true
+
+constraints:
+  - caveat_text must be non-empty
+  - If resolved is false, caveat must travel with any downstream use

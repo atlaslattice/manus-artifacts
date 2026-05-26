@@ -1,0 +1,78 @@
+# Atlas Ratification Event Schema v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-ratification-event
+description: >
+  Explicit ratification event required to move an artifact to ratified/canon status.
+  No artifact can self-ratify. Ratification requires external authority.
+
+fields:
+  event_id:
+    type: string
+    required: true
+
+  artifact_id:
+    type: string
+    required: true
+
+  ratification_type:
+    type: string
+    required: true
+    enum: [council_ratification, human_adjudication, joint_council_and_human]
+
+  ratifying_authority:
+    type: string
+    required: true
+    description: Identity of the authority performing ratification
+
+  self_ratification:
+    type: boolean
+    required: true
+    default: false
+    constraint: "MUST always be false. No artifact can self-ratify."
+
+  previous_trust_state:
+    type: string
+    required: true
+    description: Trust state before ratification
+
+  new_trust_state:
+    type: string
+    required: true
+    enum: [ratified, active]
+
+  evidence_refs:
+    type: array
+    items: string
+    required: true
+    min_items: 1
+
+  canon_promotion:
+    type: boolean
+    required: true
+    default: false
+    description: Whether this event also promotes to canon (requires website publication)
+
+  website_published:
+    type: boolean
+    required: false
+    description: Artifact published to website canon surface
+
+  expiry_timestamp:
+    type: string
+    format: iso8601
+    required: false
+    description: When set, ratification expires and artifact moves to under_review
+
+  timestamp:
+    type: string
+    format: iso8601
+    required: true
+
+constraints:
+  - self_ratification must be false
+  - evidence_refs must be non-empty
+  - canon_promotion requires website_published = true
+  - ratifying_authority must be external to the artifact being ratified

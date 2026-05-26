@@ -1,0 +1,57 @@
+# Atlas Claim Relationship Schema v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-claim-relationship
+description: Relationship between two claims (supports, contradicts, refines, supersedes)
+
+fields:
+  relationship_id:
+    type: string
+    required: true
+
+  from_claim_id:
+    type: string
+    required: true
+
+  to_claim_id:
+    type: string
+    required: true
+
+  relationship_type:
+    type: string
+    required: true
+    enum: [supports, contradicts, refines, supersedes, cites, summarizes, is_summarized_by]
+
+  summary_equals_source:
+    type: boolean
+    required: false
+    default: false
+    description: >
+      For summarizes/is_summarized_by relationships.
+      MUST be false — summary does not equal source.
+    constraint: "MUST be false when relationship_type is summarizes or is_summarized_by"
+
+  strength:
+    type: string
+    required: false
+    enum: [strong, moderate, weak, unknown]
+
+  evidence_refs:
+    type: array
+    items: string
+    required: true
+
+  issuing_seat:
+    type: string
+    required: true
+
+  created_at:
+    type: string
+    format: iso8601
+    required: true
+
+constraints:
+  - summary_equals_source must be false for summary relationships
+  - A summarizes relationship does not grant the summary source-level authority
