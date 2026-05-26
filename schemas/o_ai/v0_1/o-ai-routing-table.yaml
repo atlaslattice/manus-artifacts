@@ -1,0 +1,10 @@
+version: "0.1"
+routes:
+  synthesis:
+    lanes: [LucernaBrain, RootglassBrain]
+  codex_patch:
+    lanes: [TIDELOCKBrain, HashlightBrain]
+  execution_request:
+    gates: [D-Φ-1, CAS-001-A, human]
+    audit: Atlas/ORCS
+    repo_execution_lane: TIDELOCKBrain

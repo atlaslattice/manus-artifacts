@@ -1,0 +1,35 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "native thread ingestion packet v0.1"
+type: object
+required:
+  - seat_name
+  - model_surface
+  - source_thread_label
+  - thread_time_range
+  - raw_export_status
+  - access_scope
+  - strongest_safe_claim
+  - next_action
+properties:
+  seat_name: {type: string}
+  model_surface: {type: string}
+  source_thread_label: {type: string}
+  thread_time_range:
+    type: object
+    required: [start, end, timezone]
+  raw_export_status:
+    type: string
+    enum: [full_raw, partial_raw, summary_only, unavailable]
+  access_scope:
+    type: object
+    required: [visible_sources, unavailable_sources, assumed_context]
+  canon_status:
+    type: string
+    default: not_canon
+    enum: [not_canon]
+  deployment_status:
+    type: string
+    default: not_deployable
+    enum: [not_deployable]
+  strongest_safe_claim: {type: string}
+  next_action: {type: string}

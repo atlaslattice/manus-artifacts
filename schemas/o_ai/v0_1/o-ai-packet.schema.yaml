@@ -1,0 +1,44 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "o-ai packet v0.1"
+type: object
+additionalProperties: true
+required:
+  - raw_export_status
+  - thread_time_range
+  - access_scope
+  - epistemic_label
+  - authority_scope
+  - gates
+properties:
+  raw_export_status:
+    type: string
+    enum: [full_raw, partial_raw, summary_only, unavailable]
+  thread_time_range:
+    type: object
+    required: [start, end]
+  access_scope:
+    type: object
+    required: [visible_sources, unavailable_sources, assumed_context]
+  epistemic_label:
+    type: string
+  authority_scope:
+    type: string
+  public_use_status:
+    type: string
+    enum: [source_complete, constrained]
+  execution_request:
+    type: boolean
+  gates:
+    type: object
+    required:
+      - provenance_gate
+      - safety_gate
+      - governance_gate
+      - data_residency_gate
+    properties:
+      provenance_gate: {type: string}
+      safety_gate: {type: string}
+      governance_gate: {type: string}
+      data_residency_gate: {type: string}
+      human_permission_gate: {type: string}
+      receipt_gate: {type: string}

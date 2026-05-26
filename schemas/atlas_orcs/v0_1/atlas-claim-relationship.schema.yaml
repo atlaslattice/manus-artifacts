@@ -1,0 +1,17 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "atlas claim relationship"
+type: object
+additionalProperties: true
+properties:
+  schema_version:
+    type: string
+    const: "0.1"
+  canon_status:
+    type: string
+    default: not_canon
+    enum: [not_canon, candidate, ratified]
+  deployment_status:
+    type: string
+    default: not_deployable
+    enum: [not_deployable, candidate, active]
+required: [schema_version]

@@ -1,0 +1,17 @@
+raw_export_status: summary_only
+thread_time_range: {start: "2026-05-26T00:00:00Z", end: "2026-05-26T01:00:00Z"}
+access_scope:
+  visible_sources: ["thread-summary"]
+  unavailable_sources: ["raw-thread-export"]
+  assumed_context: ["partial history"]
+epistemic_label: constrained
+authority_scope: non-authoritative
+public_use_status: constrained
+execution_request: false
+gates:
+  provenance_gate: pass
+  safety_gate: pass
+  governance_gate: pass
+  data_residency_gate: pass
+  human_permission_gate: n/a
+  receipt_gate: pass
