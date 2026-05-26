@@ -83,6 +83,7 @@ properties:
   next_action:
     type: string
 allOf:
+  # Anti-false-completeness guardrail: summary-only ingestion cannot be labeled full ingestion.
   - if:
       properties:
         raw_export_status:

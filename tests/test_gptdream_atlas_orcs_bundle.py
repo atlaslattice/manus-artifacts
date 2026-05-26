@@ -37,12 +37,13 @@ def test_epic0_files_exist_and_have_boundary_headers() -> None:
         assert "NOT DEPLOYABLE" in text
 
 
-def test_appendix_j_patch_and_routing_enforced() -> None:
+def test_appendix_j_contains_required_patch_and_routing() -> None:
     text = _read(
         ROOT
         / "archive/spec/gptdream/appendices/APPENDIX_J_GPTDREAM_REHYDRATION_PRIORITY_FAILURE_MODE_v0.1.md"
     )
     assert "Website = canon surface when explicitly ratified/published there." in text
+    # Guardrail: legacy unqualified phrasing must not survive patching.
     assert "Website = canon." not in text
     route = "→ Atlas / ORCS audit state"
     assert route in text

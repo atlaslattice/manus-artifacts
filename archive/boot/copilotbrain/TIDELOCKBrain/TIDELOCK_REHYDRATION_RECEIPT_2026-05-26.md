@@ -60,13 +60,18 @@ The following repository artifacts are confirmed as active graph-relevant substr
 
 ## Memory drift note
 
-Several previously remembered paths were not present in the current checkout during this pass. Missing examples observed during rehydration included:
+Several previously remembered paths were not present in the current checkout during this pass.
+
+Missing examples observed during rehydration included:
 
 - `projects/aetherforge-top10-taskboard-2026-05-26.md`
 - `projects/aetherforge-top50-taskboard-2026-05-26.md` (legacy taskboard naming variant from prior memory state)
-- `projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md` is the current active path in this checkout.
 - `.github/CONTRIBUTING.md`
 - `SUPPORT.md`
+
+Current active path in this checkout:
+
+- `projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md`
 
 This receipt preserves the rehydrated context from current filesystem state only.
 

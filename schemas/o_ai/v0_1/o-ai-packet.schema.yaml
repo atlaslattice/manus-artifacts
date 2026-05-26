@@ -59,6 +59,7 @@ properties:
       human_permission_gate: {type: boolean}
       receipt_gate: {type: boolean}
 allOf:
+  # Anti-false-completeness guardrail: summary-only packets cannot claim source-complete public use.
   - if:
       properties:
         raw_export_status:
