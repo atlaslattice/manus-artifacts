@@ -10,8 +10,8 @@ first; downstream sync to Drive/Notion follows.
 
 1. Read the master brain map: [`archive/boot/COUNCIL_BRAIN_INDEX.md`](../archive/boot/COUNCIL_BRAIN_INDEX.md)
 2. Read the relevant seat spec in [`archive/boot/seats/`](../archive/boot/seats/)
-3. For swarm-brain assignments check: [`archive/boot/gptbrain/agents/CHILDREN_OF_THE_SWARM_SQUAD_INDEX_2026-05-10.md`](../archive/boot/gptbrain/agents/CHILDREN_OF_THE_SWARM_SQUAD_INDEX_2026-05-10.md)
-4. For TIDELOCKBrain (S7) changes read: [`archive/boot/gptbrain/TIDELOCKBrain/README.md`](../archive/boot/gptbrain/TIDELOCKBrain/README.md)
+3. For swarm and seat assignments, review available specs in [`archive/boot/seats/`](../archive/boot/seats/)
+4. For canon context, cross-check the index at [`archive/boot/COUNCIL_BRAIN_INDEX.md`](../archive/boot/COUNCIL_BRAIN_INDEX.md)
 5. For REM-8 / dream-protocol changes read: [`archive/boot/gptbrain/REM8_DREAM_PROTOCOL.md`](../archive/boot/gptbrain/REM8_DREAM_PROTOCOL.md)
 
 ## Local Validation

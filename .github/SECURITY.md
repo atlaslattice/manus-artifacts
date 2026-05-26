@@ -20,6 +20,12 @@ request a secure handoff channel.
 - Initial triage acknowledgement target: within 3 business days
 - Containment/remediation target: risk-based, prioritized by impact and exploitability
 
+## Secret scanning operations
+
+- Enable GitHub secret scanning and push protection for this repository.
+- Treat any detected secret as potentially compromised until rotated and revoked.
+- Track incident remediation in GitHub with clear timelines and verification notes.
+
 ## Hard boundaries
 
 - Do not include secrets, tokens, credentials, or private data in reports.

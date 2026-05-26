@@ -1,0 +1,79 @@
+name: Docs link integrity checks
+
+on:
+  push:
+    paths:
+      - "archive/**/*.md"
+      - "projects/**/*.md"
+      - ".github/**/*.md"
+      - ".github/workflows/docs-link-checks.yml"
+  pull_request:
+    paths:
+      - "archive/**/*.md"
+      - "projects/**/*.md"
+      - ".github/**/*.md"
+      - ".github/workflows/docs-link-checks.yml"
+  workflow_dispatch:
+
+jobs:
+  docs-link-check:
+    name: Validate markdown links in canon docs
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate relative markdown links
+        run: |
+          python - <<'PY'
+          import re
+          import sys
+          from pathlib import Path
+
+          repo_root = Path(".").resolve()
+          scan_roots = [Path("archive"), Path("projects"), Path(".github")]
+          markdown_files = []
+          for root in scan_roots:
+              if root.exists():
+                  markdown_files.extend(root.rglob("*.md"))
+
+          link_pattern = re.compile(r'(?<!\!)\[[^\]]+\]\(([^)]+)\)')
+          errors = []
+
+          for md_file in markdown_files:
+              text = md_file.read_text(encoding="utf-8")
+              for raw_target in link_pattern.findall(text):
+                  target = raw_target.strip().split()[0].strip("<>")
+                  if (
+                      not target
+                      or target.startswith("#")
+                      or target.startswith(("http://", "https://", "mailto:", "tel:", "data:"))
+                  ):
+                      continue
+
+                  path_target = target.split("#", 1)[0]
+                  if not path_target:
+                      continue
+
+                  if path_target.startswith("/"):
+                      resolved = (repo_root / path_target.lstrip("/")).resolve()
+                  else:
+                      resolved = (md_file.parent / path_target).resolve()
+
+                  if not str(resolved).startswith(str(repo_root)):
+                      errors.append(f"{md_file}: link escapes repository boundary -> {target}")
+                      continue
+
+                  if not resolved.exists():
+                      errors.append(f"{md_file}: broken link target -> {target}")
+
+          if errors:
+              print("ERROR: broken or unsafe markdown links found:", file=sys.stderr)
+              for error in errors:
+                  print(f"- {error}", file=sys.stderr)
+              sys.exit(1)
+
+          print(f"Validated {len(markdown_files)} markdown file(s) with no broken relative links.")
+          PY
