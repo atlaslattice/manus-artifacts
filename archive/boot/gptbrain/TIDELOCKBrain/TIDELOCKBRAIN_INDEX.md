@@ -21,6 +21,7 @@ PURPOSE: quick visibility map for TIDELOCK pilot scaffold contents
 - raw_logs/SESSION_LOG_2026-05-24_REPO_HYGIENE_CI.md
 - parsed_packets/README.md
 - artifacts/README.md
+- artifacts/TIDELOCKBRAIN_REM_1000Y_AETHERFORGE_DREAM_JOURNAL_2026-05-26.md
 - rehydration/README.md
 - schemas/README.md
 
