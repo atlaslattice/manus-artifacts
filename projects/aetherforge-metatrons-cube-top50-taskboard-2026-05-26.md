@@ -10,9 +10,9 @@ Implement a public-facing, world-class archive program across canon, navigation,
 
 ## Ring I — Canon & Identity (1–10)
 
-1. [ ] **Publish front-door archive manifesto** — Add a clear “what this archive is” statement to the repository entrypoint.
-2. [ ] **Define canonical vs relay boundaries** — Establish one authoritative governance reference for canon authority.
-3. [ ] **Stabilize artifact taxonomy** — Normalize domain categories for systems, projects, councils, research, health, and vault.
+1. [x] **Publish front-door archive manifesto** — Add a clear “what this archive is” statement to the repository entrypoint.
+2. [x] **Define canonical vs relay boundaries** — Establish one authoritative governance reference for canon authority.
+3. [x] **Stabilize artifact taxonomy** — Normalize domain categories for systems, projects, councils, research, health, and vault.
 4. [ ] **Add naming/versioning conventions** — Introduce consistent standards for new artifacts and revisions.
 5. [ ] **Build canon index** — Publish a newcomer-first index with must-read canonical paths.
 6. [ ] **Mark canonical status explicitly** — Add visible status badges/markers to canonical documents.
@@ -23,10 +23,10 @@ Implement a public-facing, world-class archive program across canon, navigation,
 
 ## Ring II — Information Architecture & Navigation (11–20)
 
-11. [ ] **Redesign README onboarding portal** — Build a world-class first-run path.
+11. [x] **Redesign README onboarding portal** — Build a world-class first-run path.
 12. [ ] **Add per-domain landing pages** — Provide purpose and navigation map per domain.
 13. [ ] **Build cross-link doctrine maps** — Connect related doctrines and project artifacts.
-14. [ ] **Add intent-based start paths** — Support researcher, builder, reviewer, and journalist entry routes.
+14. [x] **Add intent-based start paths** — Support researcher, builder, reviewer, and journalist entry routes.
 15. [ ] **Introduce domain changelog streams** — Track evolution by domain over time.
 16. [ ] **Standardize metadata blocks** — Apply frontmatter/metadata schema to major docs.
 17. [ ] **Normalize table-of-contents usage** — Add consistent TOC patterns to long-form docs.
@@ -75,8 +75,8 @@ Implement a public-facing, world-class archive program across canon, navigation,
 
 ## Priority Starter Set
 
-- [ ] Ring I: Tasks 1–3
-- [ ] Ring II: Tasks 11 and 14
+- [x] Ring I: Tasks 1–3
+- [x] Ring II: Tasks 11 and 14
 - [ ] Ring III: Tasks 21, 22, and 24
 - [ ] Ring V: Task 41
 
