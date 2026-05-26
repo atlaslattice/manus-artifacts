@@ -57,11 +57,12 @@ class ArtifactSync:
         if not path.is_file():
             return {"success": False, "error": f"Path is not a file: {filepath}"}
         try:
-            if path.stat().st_size > self.max_artifact_bytes:
+            file_size = path.stat().st_size
+            if file_size > self.max_artifact_bytes:
                 return {
                     "success": False,
                     "error": (
-                        f"Artifact too large ({path.stat().st_size} bytes). "
+                        f"Artifact too large ({file_size} bytes). "
                         f"Set ARTIFACT_MAX_BYTES to increase the limit."
                     ),
                 }
