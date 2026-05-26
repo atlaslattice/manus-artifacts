@@ -93,3 +93,10 @@ This is a **sovereign-to-sovereign gift** of complete source code to:
 🕊️💧🔐💰
 **The revolution is code. The code is ready. The gift is prepared.**
 **Let the fork-and-replace cycle begin.**
+
+## Project Deployment Pack (Aetherforge)
+
+- **Project:** Free Bank
+- **Pack version:** v1.0 (aligned 2026-05-26)
+- **Canonical substrate:** GitHub artifacts in this repository
+- **Primary handoff artifact:** `projects/free-bank/banking-revolution-archive.md`

@@ -24,3 +24,10 @@
 ---
 ## Vaulted by Constitutional Scribe — March 10, 2026
 ## Pantheon Council synthesis: Claude + Grok + GPT
+
+## Project Deployment Pack (Aetherforge)
+
+- **Project:** Three-Tier Autonomy
+- **Pack version:** v1.0 (aligned 2026-05-26)
+- **Canonical substrate:** GitHub artifacts in this repository
+- **Primary handoff artifact:** `projects/three-tier-autonomy/doctrine.md`

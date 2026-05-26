@@ -37,6 +37,6 @@ print(f"challenge: {report['status']}")
 PY
 
 echo "-- pytest"
-python -m pytest -q test_gptbrain_memory.py
+python -m pytest -q
 
 echo "checks: pass"
