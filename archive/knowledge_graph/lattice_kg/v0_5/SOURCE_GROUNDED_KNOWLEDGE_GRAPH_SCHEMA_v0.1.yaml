@@ -1,0 +1,56 @@
+artifact: SOURCE_GROUNDED_KNOWLEDGE_GRAPH_SCHEMA_v0.1
+status: candidate_schema
+canon_status: not_canon
+deployment_status: not_deployable
+authority: none
+purpose: Convert mirrored material into source-grounded graph objects.
+node_types:
+  raw_source:
+    description: Raw source receipt, URL, export, or preserved source object.
+    required_fields: [node_id, node_type, source_ref, canon_status, deployment_status]
+  parsed_fact:
+    description: Bounded extraction derived from a raw source.
+    required_fields: [node_id, node_type, derived_from, fact_text, uncertainty]
+  claim:
+    description: Interpretive assertion requiring evidence and review.
+    required_fields: [node_id, node_type, derived_from, claim_text, claim_status]
+  evidence:
+    description: Source span, receipt, checksum, or citation supporting or contradicting a claim.
+    required_fields: [node_id, node_type, source_ref, evidence_kind]
+  review:
+    description: Review outcome with reviewer, scope, and unresolved claims.
+    required_fields: [node_id, node_type, reviewed_ref, review_outcome]
+  action_candidate:
+    description: Proposed next action that cannot execute itself.
+    required_fields: [node_id, node_type, goal, next_safest_action]
+edge_types:
+  derived_from:
+    description: Child object derives from source object.
+    allowed_sources: [parsed_fact, claim, evidence, review, action_candidate]
+    allowed_targets: [raw_source, parsed_fact, claim, evidence, review]
+  supports:
+    description: Evidence or review supports a claim.
+    allowed_sources: [evidence, review, parsed_fact]
+    allowed_targets: [claim]
+  contradicts:
+    description: Object contradicts another object without deleting either.
+    allowed_sources: [raw_source, parsed_fact, claim, evidence, review]
+    allowed_targets: [raw_source, parsed_fact, claim, evidence, review]
+  supersedes:
+    description: Newer or better-cited object supersedes an older object while preserving both.
+    allowed_sources: [raw_source, parsed_fact, claim, review]
+    allowed_targets: [raw_source, parsed_fact, claim, review]
+rules:
+  no_claim_without_derived_from_path: true
+  derived_from_path_must_reach_raw_source_or_source_url: true
+  graph_location_does_not_grant_authority: true
+  ratification_requires_explicit_event: true
+example_claim_node:
+  node_id: claim-example-v0-1
+  node_type: claim
+  claim_text: Example claim requiring verification.
+  derived_from:
+    - raw-source-example-v0-1
+  claim_status: candidate
+  canon_status: not_canon
+  deployment_status: not_deployable

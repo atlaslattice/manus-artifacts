@@ -1,0 +1,65 @@
+artifact: TIDELOCK_HANDOFF_PACKET_SCHEMA_v0.1
+status: candidate_schema
+canon_status: not_canon
+deployment_status: not_deployable
+authority: none
+purpose: Keep GPT cohort preprocessing separate from Copilot/TIDELOCK repo-grounded execution.
+required_fields:
+  - module_id
+  - task_id
+  - source_type
+  - source_paths
+  - issue_or_pr_refs
+  - goal
+  - in_scope_files
+  - out_of_scope_files
+  - definition_of_done
+  - tests_required
+  - authority_boundary
+  - canon_status
+  - deployment_status
+  - claims_requiring_verification
+  - next_safest_action_if_blocked
+  - aetherforge_role
+  - fun_mode
+field_definitions:
+  module_id: Module identifier from the 12-module task packet.
+  task_id: Specific task identifier or quest number.
+  source_type: raw | extracted | synthesized | dream_delta | reviewed_candidate
+  source_paths: Repository paths or external source pointers to verify.
+  issue_or_pr_refs: GitHub issues or PRs connected to the task.
+  goal: Bounded task objective.
+  in_scope_files: Files the executor may edit.
+  out_of_scope_files: Files the executor must not edit without instruction.
+  definition_of_done: Observable completion criteria.
+  tests_required: Validation commands or checks required.
+  authority_boundary: Explicit statement of non-canon/non-deployable authority limits.
+  claims_requiring_verification: Claims that must be checked against sources.
+  next_safest_action_if_blocked: What to do instead of inventing context.
+  aetherforge_role: Playful role label for the task.
+  fun_mode: Play framing; never authority.
+constraints:
+  canon_status_must_be: not_canon
+  deployment_status_must_be: not_deployable
+  upstream_synthesis_is_not_proof: true
+example_packet:
+  module_id: module-12
+  task_id: task-133
+  source_type: synthesized
+  source_paths:
+    - archive/knowledge_graph/lattice_kg/v0_5/TIDELOCK_HANDOFF_PACKET_SCHEMA_v0.1.yaml
+  issue_or_pr_refs: []
+  goal: Create bounded handoff schema.
+  in_scope_files:
+    - archive/knowledge_graph/lattice_kg/v0_5/TIDELOCK_HANDOFF_PACKET_SCHEMA_v0.1.yaml
+  out_of_scope_files: []
+  definition_of_done: Schema includes required fields and non-authority boundaries.
+  tests_required:
+    - python -m pytest tests/notion_mirror -q
+  authority_boundary: candidate only; not canon; not deployable
+  canon_status: not_canon
+  deployment_status: not_deployable
+  claims_requiring_verification: []
+  next_safest_action_if_blocked: Ask for missing source packet.
+  aetherforge_role: Harbor Masters
+  fun_mode: bounded play
