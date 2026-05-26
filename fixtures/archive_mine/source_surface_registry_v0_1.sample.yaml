@@ -1,0 +1,91 @@
+registry_id: source-surface-registry-2026-05-26
+schema_version: "0.1"
+status: candidate
+deployment: "no"
+authority: none
+source_gravity:
+  mass_ingestion_parent: "#160"
+  lanes: ["#158", "#159", "#163", "#165", "#168", "#169", "#171", "#173", "#175"]
+
+notion_roots:
+  - id: notion-root-council
+    name: Council Working Vault
+    fossil_state: extracted_candidate
+  - id: notion-root-gptdream
+    name: GPTDream Working Vault
+    fossil_state: extracted_candidate
+
+drive_roots:
+  - id: drive-root-reports
+    name: Field Reports Root
+    fossil_state: extracted_candidate
+  - id: drive-root-rehydration
+    name: Rehydration Root
+    fossil_state: extracted_candidate
+
+github_archive_lanes:
+  - issue: "#160"
+    lane: mass_ingestion_parent
+  - issue: "#158"
+    lane: extraction
+  - issue: "#159"
+    lane: extraction
+  - issue: "#163"
+    lane: reconciliation
+  - issue: "#165"
+    lane: quarantine
+  - issue: "#168"
+    lane: recoverability
+  - issue: "#169"
+    lane: reconciliation
+  - issue: "#171"
+    lane: recoverability
+  - issue: "#173"
+    lane: quarantine
+  - issue: "#175"
+    lane: reconciliation
+
+website_canon_surfaces:
+  - surface_id: website-docs-root
+    route: /docs
+    ratified: false
+  - surface_id: website-governance-root
+    route: /governance
+    ratified: false
+
+contamination_labels:
+  - claude_touched_material
+  - claude_generated_summary
+  - claude_rewrite_required
+
+notion_candidate_deltas:
+  - delta_id: nd-001
+    fossil_id: notion-fossil-council-001
+    candidate_receipt: gh-receipt-candidate-001
+  - delta_id: nd-002
+    fossil_id: notion-fossil-gptdream-002
+    candidate_receipt: gh-receipt-candidate-002
+
+drive_candidate_deltas:
+  - delta_id: dd-001
+    report_id: drive-report-ops-001
+    candidate_receipt: gh-receipt-candidate-003
+  - delta_id: dd-002
+    report_id: drive-report-rehydration-002
+    candidate_receipt: gh-receipt-candidate-004
+
+canon_recoverability_manifest:
+  - surface_id: website-docs-root
+    recoverable: true
+    recovery_receipt: recovery-001
+  - surface_id: website-governance-root
+    recoverable: true
+    recovery_receipt: recovery-002
+
+fossil_to_github_receipt_crosswalk:
+  - fossil_id: notion-fossil-council-001
+    github_receipt: gh-receipt-candidate-001
+  - fossil_id: notion-fossil-gptdream-002
+    github_receipt: gh-receipt-candidate-002
+  - fossil_id: drive-report-ops-001
+    github_receipt: gh-receipt-candidate-003

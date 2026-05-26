@@ -1,0 +1,135 @@
+schema_name: source-surface-registry
+schema_version: "0.1"
+type: object
+additionalProperties: false
+required:
+  - registry_id
+  - schema_version
+  - status
+  - deployment
+  - authority
+  - source_gravity
+  - notion_roots
+  - drive_roots
+  - github_archive_lanes
+  - website_canon_surfaces
+  - contamination_labels
+  - notion_candidate_deltas
+  - drive_candidate_deltas
+  - canon_recoverability_manifest
+  - fossil_to_github_receipt_crosswalk
+properties:
+  registry_id:
+    type: string
+  schema_version:
+    type: string
+    const: "0.1"
+  status:
+    type: string
+    enum: [candidate]
+  deployment:
+    type: string
+    enum: ["no"]
+  authority:
+    type: string
+    enum: [none]
+  source_gravity:
+    type: object
+    additionalProperties: false
+    required: [mass_ingestion_parent, lanes]
+    properties:
+      mass_ingestion_parent:
+        type: string
+      lanes:
+        type: array
+        minItems: 1
+        items: {type: string}
+  notion_roots:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      additionalProperties: false
+      required: [id, name, fossil_state]
+      properties:
+        id: {type: string}
+        name: {type: string}
+        fossil_state: {type: string}
+  drive_roots:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      additionalProperties: false
+      required: [id, name, fossil_state]
+      properties:
+        id: {type: string}
+        name: {type: string}
+        fossil_state: {type: string}
+  github_archive_lanes:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      additionalProperties: false
+      required: [issue, lane]
+      properties:
+        issue: {type: string}
+        lane: {type: string}
+  website_canon_surfaces:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      additionalProperties: false
+      required: [surface_id, route, ratified]
+      properties:
+        surface_id: {type: string}
+        route: {type: string}
+        ratified: {type: boolean}
+  contamination_labels:
+    type: array
+    minItems: 1
+    items:
+      type: string
+  notion_candidate_deltas:
+    type: array
+    items:
+      type: object
+      additionalProperties: false
+      required: [delta_id, fossil_id, candidate_receipt]
+      properties:
+        delta_id: {type: string}
+        fossil_id: {type: string}
+        candidate_receipt: {type: string}
+  drive_candidate_deltas:
+    type: array
+    items:
+      type: object
+      additionalProperties: false
+      required: [delta_id, report_id, candidate_receipt]
+      properties:
+        delta_id: {type: string}
+        report_id: {type: string}
+        candidate_receipt: {type: string}
+  canon_recoverability_manifest:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      additionalProperties: false
+      required: [surface_id, recoverable, recovery_receipt]
+      properties:
+        surface_id: {type: string}
+        recoverable: {type: boolean}
+        recovery_receipt: {type: string}
+  fossil_to_github_receipt_crosswalk:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      additionalProperties: false
+      required: [fossil_id, github_receipt]
+      properties:
+        fossil_id: {type: string}
+        github_receipt: {type: string}
