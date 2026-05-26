@@ -23,6 +23,7 @@ import os
 import json
 import subprocess
 import hashlib
+import stat
 from datetime import datetime
 from typing import Dict, List, Optional
 from pathlib import Path
@@ -52,12 +53,11 @@ class ArtifactSync:
         
         path = Path(filepath)
         
-        if not path.exists():
-            return {"success": False, "error": f"File not found: {filepath}"}
-        if not path.is_file():
-            return {"success": False, "error": f"Path is not a file: {filepath}"}
         try:
-            file_size = path.stat().st_size
+            file_stat = path.stat()
+            if not stat.S_ISREG(file_stat.st_mode):
+                return {"success": False, "error": f"Path is not a file: {filepath}"}
+            file_size = file_stat.st_size
             if file_size > self.max_artifact_bytes:
                 return {
                     "success": False,
@@ -67,6 +67,8 @@ class ArtifactSync:
                     ),
                 }
             content = path.read_text(encoding="utf-8", errors="replace")
+        except FileNotFoundError:
+            return {"success": False, "error": f"File not found: {filepath}"}
         except OSError as e:
             return {"success": False, "error": f"Unable to read file: {e}"}
         
@@ -245,7 +247,7 @@ class ArtifactSync:
                 return {"exists": True}
             else:
                 error = (result.stderr or "").strip()
-                return {"exists": False, "error": error} if error else {"exists": False}
+                return {"exists": False, "error": error or None}
         except Exception as e:
             return {"error": str(e)}
     
@@ -339,13 +341,14 @@ class DualPlatformArchiver:
             results["platforms"]["keep"] = self._archive_to_keep(content, title)
         else:
             results["platforms"]["keep"] = {
-                "success": False,
+                "skipped": True,
                 "reason": "Google Keep integration not available in Zapier MCP",
                 "action_required": "Add Google Keep to Zapier MCP configuration"
             }
         
         results["success"] = all(
-            platform_result.get("success") for platform_result in results["platforms"].values()
+            platform_result.get("success") or platform_result.get("skipped")
+            for platform_result in results["platforms"].values()
         )
         
         return results
