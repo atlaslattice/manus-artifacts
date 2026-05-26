@@ -1,0 +1,68 @@
+status: CANDIDATE
+canon: no
+deployment: no
+authority: none
+schema_version: "0.1"
+title: "OpenAI Graph Lane Source Inventory"
+source_gravity:
+  - "Issue #180 defines graph substrate and first inventory artifact"
+  - "Issue #183 defines OpenAI-integrated product lane and graph phases"
+  - "PR #182 adds OpenAI graph substrate candidate packet"
+
+source_inventory_record_shape:
+  source_id:
+  title:
+  surface:
+  url_or_path:
+  file_type:
+  created_or_modified:
+  raw_export_status:
+  sha256_status:
+  source_class:
+  related_lane:
+  review_priority:
+  mirrored_to_github:
+  missing_receipts:
+
+source_inventory:
+  - source_id: github-issue-180
+    title: "Build source-grounded knowledge graph inventory for OpenAI integration"
+    surface: GitHub
+    url_or_path: "https://github.com/atlaslattice/manus-artifacts/issues/180"
+    file_type: issue
+    created_or_modified: "2026-05-26T05:32:46Z"
+    raw_export_status: full_raw
+    sha256_status: not_computed
+    source_class: doctrine
+    related_lane: openai-graph
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts: []
+
+  - source_id: github-issue-183
+    title: "Product lane: OpenAI-integrated source-grounded knowledge graph"
+    surface: GitHub
+    url_or_path: "https://github.com/atlaslattice/manus-artifacts/issues/183"
+    file_type: issue
+    created_or_modified: "2026-05-26T05:54:35Z"
+    raw_export_status: full_raw
+    sha256_status: not_computed
+    source_class: architecture
+    related_lane: openai-graph
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts: []
+
+  - source_id: github-pr-182
+    title: "archive(knowledge-graph): add OpenAI graph substrate candidate"
+    surface: GitHub
+    url_or_path: "https://github.com/atlaslattice/manus-artifacts/pull/182"
+    file_type: pull_request
+    created_or_modified: "2026-05-26T05:53:46Z"
+    raw_export_status: full_raw
+    sha256_status: not_computed
+    source_class: implementation
+    related_lane: openai-graph
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts: []

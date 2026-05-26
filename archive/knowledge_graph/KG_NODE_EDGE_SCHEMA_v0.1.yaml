@@ -1,0 +1,93 @@
+status: CANDIDATE
+canon: no
+deployment: no
+authority: none
+schema_version: "0.1"
+title: "Knowledge Graph Node/Edge Schema"
+purpose: "OpenAI-integrated source graph substrate separating raw source -> parsed facts -> claims -> evidence -> review -> action"
+
+graph_node_schema:
+  base_required:
+    - node_id
+    - node_type
+    - title
+    - source_ref
+    - created_at
+    - lane
+    - canon_status
+    - deployment_status
+  node_types:
+    raw_source:
+      description: "Raw source record captured from GitHub/Drive/Notion/Upload"
+      required:
+        - surface
+        - url_or_path
+        - raw_export_status
+        - sha256_status
+    parsed_fact:
+      description: "Atomic parsed statement from one or more raw sources"
+      required:
+        - fact_text
+        - parser
+        - confidence
+    claim:
+      description: "Claim extracted from parsed facts"
+      required:
+        - claim_text
+        - claim_class
+        - strongest_safe_claim
+    evidence:
+      description: "Evidence anchor tied to one or more claims"
+      required:
+        - evidence_type
+        - anchor
+        - receipt_status
+    review:
+      description: "Review finding in a named lane"
+      required:
+        - review_lane
+        - finding
+        - risk_level
+    action_candidate:
+      description: "Proposed action pending review/human gate"
+      required:
+        - action_text
+        - proposed_by
+        - gate_status
+
+graph_edge_schema:
+  base_required:
+    - edge_id
+    - edge_type
+    - from_node_id
+    - to_node_id
+    - created_at
+    - rationale
+  edge_types:
+    derived_from:
+      description: "Output node derived from source node"
+      allowed_pairs:
+        - [parsed_fact, raw_source]
+        - [claim, parsed_fact]
+        - [evidence, raw_source]
+        - [review, claim]
+        - [action_candidate, review]
+    supports:
+      description: "Evidence/review supports claim or action"
+      allowed_pairs:
+        - [evidence, claim]
+        - [review, claim]
+        - [claim, action_candidate]
+    contradicts:
+      description: "Node contradicts a claim/evidence/action"
+      allowed_pairs:
+        - [evidence, claim]
+        - [review, claim]
+        - [claim, claim]
+        - [review, action_candidate]
+
+guardrails:
+  - "Graph is not memory"
+  - "Graph is not canon"
+  - "Graph is not authority"
+  - "Human-root is authority gate"
