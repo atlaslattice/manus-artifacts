@@ -7,6 +7,7 @@ STATUS: CANDIDATE TESTS — NOT CANON — NOT DEPLOYABLE
 from __future__ import annotations
 
 from pathlib import Path
+import re
 import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -59,15 +60,36 @@ def test_heading_numbering_uses_h_and_i() -> None:
         ROOT
         / "archive/spec/gptdream/appendices/APPENDIX_I_3_ATLAS_ORCS_SCHEMA_BUNDLE_v0.1.md"
     )
-    assert "H.1" in h_text and "H.2" in h_text and "H.3" in h_text
-    assert "I.1" in i_text and "I.2" in i_text
-    assert "I.3" in i3_text
+    assert re.search(r"^\s*##\s+H\.1\b", h_text, flags=re.MULTILINE)
+    assert re.search(r"^\s*##\s+H\.2\b", h_text, flags=re.MULTILINE)
+    assert re.search(r"^\s*##\s+H\.3\b", h_text, flags=re.MULTILINE)
+    assert re.search(r"^\s*##\s+I\.1\b", i_text, flags=re.MULTILINE)
+    assert re.search(r"^\s*##\s+I\.2\b", i_text, flags=re.MULTILINE)
+    assert re.search(r"^\s*#\s+Appendix\s+I\.3\b", i3_text, flags=re.MULTILINE)
 
 
 def test_schema_bundle_files_present_with_version_and_defaults() -> None:
     schema_dir = ROOT / "schemas/atlas_orcs/v0_1"
     files = sorted(schema_dir.glob("*.schema.yaml"))
-    assert len(files) == 15
+    expected_names = {
+        "atlas-artifact.schema.yaml",
+        "atlas-provenance-receipt.schema.yaml",
+        "atlas-claim.schema.yaml",
+        "atlas-claim-relationship.schema.yaml",
+        "atlas-contradiction-ledger.schema.yaml",
+        "atlas-uncertainty-ledger.schema.yaml",
+        "atlas-summary-lineage.schema.yaml",
+        "atlas-intent-provenance.schema.yaml",
+        "atlas-trust-state.schema.yaml",
+        "atlas-ratification-event.schema.yaml",
+        "atlas-failure-event.schema.yaml",
+        "atlas-governance-profile.schema.yaml",
+        "atlas-domain-module.schema.yaml",
+        "atlas-quarantine-rule.schema.yaml",
+        "atlas-audit-event.schema.yaml",
+    }
+    observed_names = {path.name for path in files}
+    assert observed_names == expected_names
     for path in files:
         text = _read(path)
         assert 'const: "0.1"' in text

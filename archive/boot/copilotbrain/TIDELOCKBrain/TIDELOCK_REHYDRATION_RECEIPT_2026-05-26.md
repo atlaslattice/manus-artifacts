@@ -64,6 +64,7 @@ Several previously remembered paths were not present in the current checkout dur
 
 - `projects/aetherforge-top10-taskboard-2026-05-26.md`
 - `projects/aetherforge-top50-taskboard-2026-05-26.md` (legacy taskboard naming variant from prior memory state)
+- `projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md` is the current active path in this checkout.
 - `.github/CONTRIBUTING.md`
 - `SUPPORT.md`
 
