@@ -35,7 +35,7 @@ fields:
   task_uuid:
     type: string
     nullable: true
-    description: UUID extracted from task URLs containing '/tasks/' followed by a valid UUID string.
+    description: UUID (RFC 4122 string) extracted from task URLs containing '/tasks/'.
 
   source_surface:
     type: enum
@@ -98,10 +98,12 @@ fields:
   related_issue_refs:
     type: array
     items: string
+    description: Related issue references (for example '#151' or full GitHub issue URLs).
 
   related_pr_refs:
     type: array
     items: string
+    description: Related pull request references (for example 'PR #65' or full GitHub PR URLs).
 
 invariants:
   - Task ledger entries are routing artifacts, not authority grants.
