@@ -1,0 +1,28 @@
+# This module is an upstream candidate packet, not proof.
+#
+# Treat all summaries as claims until verified against repo files or source exports.
+# Do not expand scope beyond listed files unless explicitly instructed.
+# Preserve uncertainty.
+# Return blockers, patch items, tests run, files changed, and next safest action.
+#
+# CANON: no
+# DEPLOYMENT: no
+# AUTHORITY: none
+artifact: PARSED_PACKET_TEMPLATE_v0.1
+source_id: REQUIRED
+parsed_packet_id: REQUIRED
+derived_from:
+  raw_export_path: REQUIRED_OR_NULL
+  source_url: REQUIRED_OR_NULL
+  raw_export_receipt: REQUIRED_OR_NULL
+parsed_at_utc: REQUIRED
+parsed_by: REQUIRED
+raw_export_status: REQUIRED
+sha256_if_available: null
+access_scope: REQUIRED
+canon_status: not_canon
+deployment_status: not_deployable
+authority: none
+parsed_facts: []
+claims_requiring_verification: []
+contamination_flags: []

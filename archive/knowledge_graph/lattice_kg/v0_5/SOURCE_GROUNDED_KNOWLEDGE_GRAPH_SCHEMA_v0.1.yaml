@@ -1,0 +1,46 @@
+# This module is an upstream candidate packet, not proof.
+#
+# Treat all summaries as claims until verified against repo files or source exports.
+# Do not expand scope beyond listed files unless explicitly instructed.
+# Preserve uncertainty.
+# Return blockers, patch items, tests run, files changed, and next safest action.
+#
+# CANON: no
+# DEPLOYMENT: no
+# AUTHORITY: none
+artifact: SOURCE_GROUNDED_KNOWLEDGE_GRAPH_SCHEMA_v0.1
+status: CANDIDATE SCHEMA — NOT CANON
+canon_status: not_canon
+deployment_status: not_deployable
+authority: none
+node_types:
+  raw_source:
+    required: [id, source_path_or_url, raw_export_status, canon_status, deployment_status]
+  parsed_fact:
+    required: [id, derived_from, fact_text, canon_status, deployment_status]
+  claim:
+    required: [id, derived_from, claim_text, verification_status, canon_status, deployment_status]
+  evidence:
+    required: [id, derived_from, evidence_text, supports_or_contradicts]
+  review:
+    required: [id, reviewed_node_or_edge, review_state, reviewer]
+  action_candidate:
+    required: [id, derived_from, proposed_action, next_safest_action]
+edge_types:
+  derived_from:
+    source: any
+    target: raw_source
+  supports:
+    source: evidence
+    target: claim
+  contradicts:
+    source: evidence
+    target: claim
+  supersedes:
+    source: any
+    target: any
+rules:
+  - No claim may exist without a derived_from path.
+  - Derived paths must point to a source URL, raw export receipt, or repository file.
+  - Graph inclusion does not imply canon, deployment, or authority.
+definition_of_done: The graph can answer where each claim came from.
