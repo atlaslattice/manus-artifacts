@@ -2,22 +2,28 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://atlaslattice.local/schemas/continuity/artifact.schema.json",
   "title": "Continuity OS Artifact",
+  "description": "Receipt-first Continuity OS artifact envelope for the dry-run O_AI execution loop. Artifact presence is not canon, deployment, authority, or approval.",
   "type": "object",
   "additionalProperties": false,
   "required": [
+    "schema_version",
     "artifact_id",
     "title",
     "artifact_type",
     "status",
     "canon_status",
     "authority_status",
+    "deployment_status",
     "raw_export_status",
+    "hash_status",
     "created_at",
     "source_refs",
     "claims",
+    "review_dissent",
     "next_actions"
   ],
   "properties": {
+    "schema_version": { "type": "string", "const": "continuity.artifact.v0.2" },
     "artifact_id": { "type": "string", "minLength": 1 },
     "title": { "type": "string", "minLength": 1 },
     "artifact_type": {
@@ -25,9 +31,11 @@
       "enum": [
         "raw_log",
         "ingestion_packet",
+        "parsed_packet",
         "vault_receipt",
         "claim_ledger",
         "execution_contract",
+        "verification_receipt",
         "protocol_doc",
         "product_charter",
         "repo_issue",
@@ -40,20 +48,27 @@
     },
     "status": {
       "type": "string",
-      "enum": ["draft", "vaulted_provisional", "review_ready", "approved", "superseded", "archived", "quarantined"]
+      "enum": ["draft", "vaulted_provisional", "review_ready", "approved_for_dry_run", "approved_for_write", "simulated", "verified", "superseded", "archived", "quarantined"]
     },
     "canon_status": {
       "type": "string",
-      "enum": ["not_canon", "candidate", "ratified", "rejected", "superseded"]
+      "enum": ["not_canon", "candidate", "ratified", "rejected", "superseded"],
+      "default": "not_canon"
     },
     "authority_status": {
       "type": "string",
-      "enum": ["none", "advisory", "execution_authorized", "sovereign_authority", "unknown"]
+      "enum": ["none", "advisory", "review", "human_root_approved_write", "execution_authorized", "unknown"],
+      "default": "none"
     },
     "deployment_status": {
       "type": "string",
-      "enum": ["not_deployable", "demo_only", "deployable", "deployed", "retired"],
+      "enum": ["not_deployable", "local_dry_run_only", "demo_only", "deployable", "deployed", "retired"],
       "default": "not_deployable"
+    },
+    "runtime_status": {
+      "type": "string",
+      "enum": ["none", "local_dry_run_only", "simulated", "live"],
+      "default": "local_dry_run_only"
     },
     "native_memory_status": {
       "type": "string",
@@ -69,30 +84,44 @@
       "enum": ["public", "private", "mixed", "redacted", "unknown"],
       "default": "unknown"
     },
+    "hash_status": {
+      "type": "string",
+      "enum": ["present", "unavailable", "not_applicable"]
+    },
+    "hash_method": { "type": "string", "enum": ["sha256", "git_blob_sha", "none", "unknown"], "default": "unknown" },
+    "hash_source_scope": {
+      "type": "string",
+      "enum": ["full_raw", "partial_raw", "normalized_text", "repo_file", "simulated_write_plan", "not_applicable", "unknown"],
+      "default": "unknown"
+    },
+    "sha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" },
     "created_at": { "type": "string", "format": "date-time" },
     "updated_at": { "type": "string", "format": "date-time" },
     "source_refs": {
       "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": ["label", "ref_type"],
-        "properties": {
-          "label": { "type": "string" },
-          "ref_type": { "type": "string", "enum": ["user_prompt", "repo_file", "commit", "issue", "web", "model_output", "tool_result", "memory", "other"] },
-          "uri": { "type": "string" },
-          "commit_sha": { "type": "string" },
-          "file_sha": { "type": "string" },
-          "notes": { "type": "string" }
-        }
-      }
+      "minItems": 1,
+      "items": { "$ref": "vault-receipt.schema.json#/$defs/source_ref" }
     },
     "parent_artifacts": { "type": "array", "items": { "type": "string" }, "default": [] },
     "child_artifacts": { "type": "array", "items": { "type": "string" }, "default": [] },
     "claims": { "type": "array", "items": { "$ref": "claim-ledger.schema.json#/$defs/claim" } },
+    "review_dissent": { "$ref": "claim-ledger.schema.json#/$defs/review_dissent" },
+    "blocker_level": { "type": "string", "enum": ["none", "minor", "major", "blocking"], "default": "none" },
+    "falsification_condition": { "type": "string" },
     "risks": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "overclaims_to_avoid": { "type": "array", "items": { "type": "string" }, "default": [] },
     "open_loops": { "type": "array", "items": { "type": "string" }, "default": [] },
     "next_actions": { "type": "array", "items": { "type": "string" } },
     "receipt": { "$ref": "vault-receipt.schema.json" }
-  }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "hash_status": { "const": "present" } }, "required": ["hash_status"] },
+      "then": { "required": ["hash_method", "hash_source_scope"] }
+    },
+    {
+      "if": { "properties": { "canon_status": { "const": "ratified" } }, "required": ["canon_status"] },
+      "then": { "properties": { "authority_status": { "const": "execution_authorized" } } }
+    }
+  ]
 }
