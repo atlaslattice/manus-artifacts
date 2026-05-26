@@ -1,0 +1,76 @@
+schema_name: KG_NODE_EDGE_SCHEMA_v0.1
+status: candidate
+canon_status: not_canon
+deployment_status: not_deployable
+authority_scope: none
+purpose: >
+  Define a source-grounded knowledge graph schema that separates raw sources,
+  parsed packets, claims, evidence anchors, review findings, decisions, and actions.
+  The graph is an index and review substrate, not canon or model memory.
+
+doctrine:
+  - The graph is not memory.
+  - The graph is not canon.
+  - The graph is not authority.
+  - The graph maps what exists, what it claims, what supports it, what contradicts it, and what still needs review.
+
+node_types:
+  SourceArtifact:
+    examples: [Drive file, GitHub file, Notion page, uploaded transcript]
+    required_fields: [node_id, title, surface, url_or_path, source_class, raw_export_status]
+  RawExport:
+    examples: [raw transcript, markdown export, PDF export, copied chat log]
+    required_fields: [node_id, source_artifact_id, raw_export_status, sha256_status]
+  ParsedPacket:
+    examples: [extracted claims, artifact manifest, source summary]
+    required_fields: [node_id, parsed_from, parser_or_model, evidence_class]
+  Claim:
+    examples: [PR contains raw pointer but not full transcript]
+    required_fields: [node_id, exact_text, claim_type, confidence, status]
+  EvidenceAnchor:
+    examples: [SHA-256, file ID, commit SHA, PR URL, Drive URL]
+    required_fields: [node_id, anchor_type, anchor_value, verification_status]
+  ReviewFinding:
+    examples: [Rootglass review, Lucerna receipt review, Grok adversarial finding]
+    required_fields: [node_id, reviewer_lane, finding_type, related_claims]
+  Decision:
+    examples: [approved candidate, deferred, rejected, ratified]
+    required_fields: [node_id, decision_type, authority, receipt_ref]
+  Action:
+    examples: [create source packet, patch schema, open review issue]
+    required_fields: [node_id, action_type, status, owner_or_lane]
+  CanonCandidate:
+    examples: [Appendix I v0.3, GangaSeek template, INV/CLM catalog]
+    required_fields: [node_id, title, canon_status, ratification_status]
+
+edge_types:
+  derived_from: {from: any, to: SourceArtifact}
+  cites: {from: Claim, to: EvidenceAnchor}
+  contradicts: {from: Claim, to: Claim}
+  supersedes: {from: any, to: any}
+  patches: {from: any, to: any}
+  requires_review: {from: any, to: ReviewFinding}
+  missing_receipt: {from: any, to: EvidenceAnchor}
+  raw_export_of: {from: RawExport, to: SourceArtifact}
+  parsed_from: {from: ParsedPacket, to: RawExport}
+  promoted_to: {from: CanonCandidate, to: Decision}
+  blocked_by: {from: any, to: ReviewFinding}
+  belongs_to_lane: {from: any, to: string}
+  source_mirrored_to: {from: SourceArtifact, to: EvidenceAnchor}
+
+statuses:
+  canon_status: [not_canon, canon_candidate, canon, deprecated, unknown]
+  deployment_status: [not_deployable, local_dev_only, deployed, unknown]
+  authority_scope: [none, advisory, human_root_required, ratified]
+  raw_export_status: [available, unavailable, partial, not_supported, pending_user_export, summary_only]
+  verification_status: [unverified, source_visible, hash_verified, human_reviewed]
+
+must_not_infer:
+  - retrieved_chunk_is_fact
+  - source_presence_is_canon
+  - graph_edge_is_ratification
+  - model_summary_is_raw_export
+  - repeated_model_output_is_independent_confirmation
+  - OpenAI_agent_output_is_authority
+keeper: >
+  Source first. Claim second. Evidence third. Review fourth. Human-root before canon.
