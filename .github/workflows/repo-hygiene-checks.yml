@@ -1,0 +1,37 @@
+name: Repo Hygiene Checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  hygiene:
+    name: Hygiene
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for merge-conflict markers
+        run: |
+          if grep -rn "<<<<<<\|=======\|>>>>>>" . \
+               --include="*.md" \
+               --include="*.yml" \
+               --include="*.yaml" \
+               --include="*.py" \
+               --include="*.json" \
+               --exclude-dir=".git"; then
+            echo "::error::Merge-conflict markers found. Resolve before merging."
+            exit 1
+          fi
+          echo "No merge-conflict markers found."
+
+      - name: Install yamllint
+        run: pip install yamllint --quiet
+
+      - name: Lint workflow YAML files
+        run: |
+          yamllint -d "{extends: relaxed, rules: {line-length: {max: 200}}}" \
+            .github/workflows/
