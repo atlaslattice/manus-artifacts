@@ -5,7 +5,7 @@ Scope: Execute the next highest-fun/high-leverage tasks and log outcomes in TIDE
 
 ## Quest Queue (10)
 
-- [ ] 1. Build a repo-wide artifact ID convention draft.
+- [x] 1. Build a repo-wide artifact ID convention draft. → `/archive/spec/ARTIFACT_ID_CONVENTION_DRAFT_2026-05-26.md`
 - [ ] 2. Create a cross-artifact relation index scaffold.
 - [ ] 3. Add a canon vs candidate source-of-truth map.
 - [ ] 4. Add contradiction-link registry starter page.
@@ -26,4 +26,4 @@ Scope: Execute the next highest-fun/high-leverage tasks and log outcomes in TIDE
 
 - 2026-05-26 — Wave 1 initialized and linked from repository README.
 - 2026-05-26 — Baseline validation attempted; `ruff` and `pytest` unavailable in current environment.
-
+- 2026-05-26 — Quest 1 complete: added artifact ID convention draft at `/archive/spec/ARTIFACT_ID_CONVENTION_DRAFT_2026-05-26.md`.
