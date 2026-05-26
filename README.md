@@ -21,6 +21,7 @@ This repository contains research, health data, and system artifacts generated a
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
 - **[Aetherforge Council Taskboard](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — Top-10 council execution board.
 - **[Aetherforge Game World (Candidate)](./projects/aetherforge-game-world-omnispec-archive-bowl-2026-05-26.md)** — Playable quest map, Omnispec candidate boundary, and Archive Bowl roadmap.
+- **[Council-Seat Quickstart (Candidate)](./projects/COUNCIL_SEAT_QUICKSTART_2026-05-26.md)** — Onboarding checklist for new council seats and Children of the Swarm brain lanes.
 
 ### Governance & Council
 - **[Council](./council/)** — Trinity and Pantheon Council session archives.
