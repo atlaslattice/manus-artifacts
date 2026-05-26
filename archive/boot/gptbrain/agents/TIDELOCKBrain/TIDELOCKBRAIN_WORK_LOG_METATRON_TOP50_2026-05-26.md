@@ -87,3 +87,22 @@ repo: atlaslattice/manus-artifacts
 - Extracted candidate delta packets for Notion fossils and Drive reports.
 - Created canon recoverability manifest (issue #171 package requirements).
 - Built fossil → current GitHub receipt crosswalk.
+
+## Module 9 Increment (2026-05-26)
+
+13. Executed optional requirement: **Vendor Bridge — OpenAI/Microsoft/Google/xAI-SpaceX operator manifold expansion**.
+14. Added Vendor Bridge packet set:
+    - `archive/knowledge_graph/vendor_bridge/VENDOR_OPERATOR_MANIFOLD_INDEX_v0.1.yaml`
+    - `archive/knowledge_graph/vendor_bridge/*_OPERATOR_MAP_v0.1.yaml`
+    - `archive/knowledge_graph/vendor_bridge/FOUR_PILLAR_INTEROP_PACKET_SCHEMA_v0.1.yaml`
+    - `archive/knowledge_graph/vendor_bridge/VENDOR_OVERCLAIM_SCANNER_v0.1.yaml`
+15. Crosswalked Vendor Bridge references into Appendix H.
+
+### Module 9 receipts
+
+- Added OpenAI, Microsoft, Alphabet/Google, and xAI/SpaceX operator maps.
+- Added mandatory `not_official_vendor_statement` footer in all vendor map files.
+- Added `source_date` and `retrieval_date` fields across index/map/scanner artifacts.
+- Added four-pillar interop packet schema with boundary and required-field gates.
+- Added vendor overclaim scanner rules for partnership/deployment/authority overclaim language.
+- Updated `APPENDIX_H_CROSS_VENDOR_INTEROP_MODEL_v0.1.md` with Vendor Bridge crosswalk paths.

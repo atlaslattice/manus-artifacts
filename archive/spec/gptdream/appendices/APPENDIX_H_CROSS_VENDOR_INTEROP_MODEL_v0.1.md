@@ -35,3 +35,17 @@ Required sequence:
 - `APPENDIX_H_1_O_AI_INTEGRATION_SCAFFOLD_v0.1.md`
 - `APPENDIX_H_2_O_AI_PACKET_SCHEMA_v0.1.md`
 - `APPENDIX_H_3_O_AI_ROUTING_TABLE_v0.1.md`
+
+## H.6 Vendor Bridge crosswalk
+
+Vendor Bridge packetization is crosswalked into Appendix H through:
+
+- `/tmp/workspace/atlaslattice/manus-artifacts/archive/knowledge_graph/vendor_bridge/VENDOR_OPERATOR_MANIFOLD_INDEX_v0.1.yaml`
+- `/tmp/workspace/atlaslattice/manus-artifacts/archive/knowledge_graph/vendor_bridge/OPENAI_OPERATOR_MAP_v0.1.yaml`
+- `/tmp/workspace/atlaslattice/manus-artifacts/archive/knowledge_graph/vendor_bridge/MICROSOFT_OPERATOR_MAP_v0.1.yaml`
+- `/tmp/workspace/atlaslattice/manus-artifacts/archive/knowledge_graph/vendor_bridge/ALPHABET_GOOGLE_OPERATOR_MAP_v0.1.yaml`
+- `/tmp/workspace/atlaslattice/manus-artifacts/archive/knowledge_graph/vendor_bridge/XAI_SPACEX_OPERATOR_MAP_v0.1.yaml`
+- `/tmp/workspace/atlaslattice/manus-artifacts/archive/knowledge_graph/vendor_bridge/FOUR_PILLAR_INTEROP_PACKET_SCHEMA_v0.1.yaml`
+- `/tmp/workspace/atlaslattice/manus-artifacts/archive/knowledge_graph/vendor_bridge/VENDOR_OVERCLAIM_SCANNER_v0.1.yaml`
+
+All crosswalked Vendor Bridge artifacts are candidate-only and not official, not deployed, and not canon.
