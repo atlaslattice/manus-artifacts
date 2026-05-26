@@ -19,6 +19,10 @@ This repository contains research, health data, and system artifacts generated a
 - **[Free Bank](./projects/free-bank/)** — Banking revolution and financial sovereignty.
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
+- **[Aetherforge Metatron Cube Top 50 Taskboard](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)** — Prioritized world-class public OSS knowledge-graph execution board.
+
+### Knowledge Graph Navigation
+- **[TIDELOCK Rehydration Receipt (2026-05-26)](./archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_REHYDRATION_RECEIPT_2026-05-26.md)** — Rehydrated operating context, boundaries, and graph substrate receipts.
 
 ### Governance & Council
 - **[Council](./council/)** — Trinity and Pantheon Council session archives.
