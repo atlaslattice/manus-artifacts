@@ -23,7 +23,7 @@ Governance status: nothing is canon until ratified by the full council and adjud
 - **Researcher** → [Research](./research/) · [Unified Field v4.0](./aluminum-os/v4.0-unified-field.md) · [Docs](./docs/)
 - **Builder** → [Projects](./projects/) · [GPTBrain Reference Checks](./.github/workflows/gptbrain-reference-checks.yml) · [SheldonBrain Architecture](./sheldonbrain/system-architecture.md)
 - **Reviewer** → [Council](./council/) · [Council Reviews](./council-reviews/) · [Canon Boundary](./docs/CANON_BOUNDARY.md)
-- **Journalist** → [About David Sheldon](./about/david-sheldon.md) · [State of the Union Briefing](./State_of_the_Union_Briefing.md) · [Top 10 Taskboard](./projects/aetherforge-top10-taskboard-2026-05-26.md)
+- **Journalist** → [About David Sheldon](./about/david-sheldon.md) · [State of the Union Briefing](./State_of_the_Union_Briefing.md) · [Metatron Top 50 Taskboard](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
 
 ## Taxonomy Navigation
 
