@@ -16,11 +16,18 @@ jobs:
 
       - name: Check for merge-conflict markers
         run: |
+          set +e
           FOUND=$(grep -rn --include="*.md" --include="*.py" \
                            --include="*.yml" --include="*.yaml" \
                            --include="*.json" --include="*.ts" \
-                           -e "^<<<<<<< " -e "^=======$" -e "^>>>>>>> " . || true)
-          if [ -n "$FOUND" ]; then
+                           -e "^<<<<<<<" -e "^=======$" -e "^>>>>>>>" .)
+          GREP_EXIT=$?
+          set -e
+          if [ "$GREP_EXIT" -gt 1 ]; then
+            echo "ERROR: grep failed while scanning for conflict markers." >&2
+            exit "$GREP_EXIT"
+          fi
+          if [ "$GREP_EXIT" -eq 0 ]; then
             echo "ERROR: merge-conflict markers found:" >&2
             echo "$FOUND" >&2
             exit 1
