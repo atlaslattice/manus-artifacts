@@ -73,13 +73,14 @@ See [CONTRIBUTING.md](./.github/CONTRIBUTING.md) for branch naming, commit conve
 
 - [Code of Conduct](./CODE_OF_CONDUCT.md)
 - [Security Policy](./SECURITY.md)
+- [Support Policy](./SUPPORT.md)
 - [Open an Issue](https://github.com/atlaslattice/manus-artifacts/issues/new/choose)
 
 ---
 
 ## 📊 Public Launch Progress
 
-16 / 50 tasks complete — see the [Aetherforge Top-50 Taskboard](./projects/aetherforge-top50-taskboard-2026-05-26.md).
+17 / 50 tasks complete — see the [Aetherforge Top-50 Taskboard](./projects/aetherforge-top50-taskboard-2026-05-26.md).
 
 **⚠️ Pre-public blockers** (require @atlaslattice manual action):
 1. Secret scan of git history

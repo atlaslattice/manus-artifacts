@@ -15,6 +15,7 @@ effectively and keep the archive world-class.
 5. [Pull Request Process](#pull-request-process)
 6. [Local Validation](#local-validation)
 7. [Code of Conduct](#code-of-conduct)
+8. [Support](#support)
 
 ---
 
@@ -113,3 +114,9 @@ yamllint .github/workflows/
 
 All contributors must follow the [Code of Conduct](../CODE_OF_CONDUCT.md).
 Violations can be reported to atlas-lattice-foundation [at] proton.me.
+
+---
+
+## Support
+
+For support expectations and help channels, see [SUPPORT.md](../SUPPORT.md).

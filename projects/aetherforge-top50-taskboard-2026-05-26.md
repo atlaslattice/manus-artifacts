@@ -1,7 +1,7 @@
 # ⚡ Aetherforge Top-50 Public Launch Taskboard
 
 > **Mission:** Make all Atlas Lattice Foundation work public, open-source, and world-class.
-> **Last Updated:** 2026-05-26 · **Progress:** 16 / 50
+> **Last Updated:** 2026-05-26 · **Progress:** 17 / 50
 
 ---
 
@@ -29,7 +29,7 @@
 | 11 | Document canon vs. candidate policy | ✅ Done | In CONTRIBUTING.md |
 | 12 | Add governance/ratification flow | ✅ Done | In CONTRIBUTING.md + GLOSSARY |
 | 13 | Add security disclosure policy | ✅ Done | SECURITY.md |
-| 14 | Add support/maintenance policy | 🟡 TODO | Add `SUPPORT.md` |
+| 14 | Add support/maintenance policy | ✅ Done | `SUPPORT.md` added at repo root |
 
 ---
 
@@ -102,12 +102,12 @@
 | Ring | Domain | Done | Total | % |
 |------|--------|------|-------|---|
 | 0 | Core Foundation | 3 | 7 | 43% |
-| 1 | Governance & Policy | 6 | 7 | 86% |
+| 1 | Governance & Policy | 7 | 7 | 100% |
 | 2 | Documentation | 5 | 10 | 50% |
 | 3 | CI & Quality | 4 | 8 | 50% |
 | 4 | Archive Structure | 0 | 9 | 0% |
 | 5 | Release & Launch | 0 | 9 | 0% |
-| **Total** | | **16** | **50** | **32%** |
+| **Total** | | **17** | **50** | **34%** |
 
 ---
 
