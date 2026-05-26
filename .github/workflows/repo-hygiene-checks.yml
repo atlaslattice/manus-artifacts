@@ -5,6 +5,9 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   repo-hygiene:
     name: Workflow syntax + merge marker checks
@@ -45,4 +48,3 @@ jobs:
             exit 1
           fi
           echo "no merge markers found"
-
