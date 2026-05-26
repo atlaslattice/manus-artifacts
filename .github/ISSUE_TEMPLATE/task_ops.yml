@@ -1,0 +1,38 @@
+name: Task / Ops
+description: Track operational, archival, or process execution work.
+title: "[Task]: "
+labels:
+  - task
+body:
+  - type: input
+    id: objective
+    attributes:
+      label: Objective
+      description: One-line mission outcome.
+    validations:
+      required: true
+  - type: textarea
+    id: checklist
+    attributes:
+      label: Execution checklist
+      description: Break work into concrete checkboxes.
+      placeholder: |
+        - [ ] Step 1
+        - [ ] Step 2
+        - [ ] Step 3
+    validations:
+      required: true
+  - type: input
+    id: owner
+    attributes:
+      label: Owner
+      description: GitHub handle responsible for completion.
+    validations:
+      required: true
+  - type: input
+    id: success
+    attributes:
+      label: Definition of done
+      description: What verifies completion?
+    validations:
+      required: true
