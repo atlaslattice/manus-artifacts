@@ -1,0 +1,37 @@
+nodes:
+  - id: src_raw_001
+    type: raw_source
+    label: OpenAI packet 001
+    raw_export_status: full_raw
+    public_use_status: source_complete
+  - id: fact_001
+    type: parsed_fact
+    label: Parsed source statement
+  - id: claim_001
+    type: claim
+    label: Candidate claim
+  - id: evidence_001
+    type: evidence
+    label: Supporting evidence
+  - id: review_001
+    type: review
+    label: Human review checkpoint
+  - id: action_001
+    type: action
+    label: Deferred action
+edges:
+  - src: claim_001
+    dst: fact_001
+    type: derived_from
+  - src: fact_001
+    dst: src_raw_001
+    type: derived_from
+  - src: evidence_001
+    dst: claim_001
+    type: supports
+  - src: review_001
+    dst: claim_001
+    type: supersedes
+  - src: action_001
+    dst: claim_001
+    type: quarantines
