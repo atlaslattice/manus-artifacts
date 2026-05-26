@@ -3,6 +3,7 @@
 Date: 2026-05-26  
 Seat: Council Operator  
 Scope: Public, world-class archive execution
+Status: Candidate (not canon until full council ratification and adjudication by @atlaslattice)
 
 ## Mission
 Implement a public-facing, world-class archive program across canon, navigation, quality, reach, and governance.
@@ -83,4 +84,4 @@ Implement a public-facing, world-class archive program across canon, navigation,
 
 - Use checklist updates to track execution.
 - Keep links and owners attached to each completed task.
-- Treat this board as the canonical execution reference for Aetherforge Top 50.
+- Treat this board as the active candidate execution reference for Aetherforge Top 50.

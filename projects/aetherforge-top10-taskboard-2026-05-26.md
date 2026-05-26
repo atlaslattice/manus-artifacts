@@ -6,9 +6,9 @@ Seat: Council Operator
 ## Mission
 Pick high-fun, high-impact tasks that improve canon quality, execution reliability, and project momentum.
 
-## Canonical Reference
+## Candidate Reference
 
-- Primary execution board: [Aetherforge Metatron's Cube Taskboard (Top 50)](./aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
+- Primary execution board candidate: [Aetherforge Metatron's Cube Taskboard (Top 50)](./aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
 
 ## Top 10 Tasks
 
