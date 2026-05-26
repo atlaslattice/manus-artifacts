@@ -1,0 +1,12 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-evidence-packet
+schema_version: "0.1"
+type: object
+required: [schema_version, evidence_packet_id, raw_export_id, parsed_packet_id, review_status]
+properties:
+  schema_version: { const: "0.1" }
+  evidence_packet_id: { type: string }
+  raw_export_id: { type: string }
+  parsed_packet_id: { type: string }
+  review_status: { enum: [pending, approved, rejected], default: pending }
+additionalProperties: true

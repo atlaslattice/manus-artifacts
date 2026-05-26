@@ -1,0 +1,14 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-raw-export
+schema_version: "0.1"
+type: object
+required: [schema_version, raw_export_id, storage_lane, hash_sha256, raw_tape_preserved]
+properties:
+  schema_version: { const: "0.1" }
+  raw_export_id: { type: string }
+  storage_lane: { const: raw_exports }
+  hash_sha256:
+    type: string
+    pattern: "^[a-fA-F0-9]{64}$"
+  raw_tape_preserved: { const: true }
+additionalProperties: true

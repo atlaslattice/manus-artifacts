@@ -1,0 +1,14 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-artifact
+schema_version: "0.1"
+type: object
+required: [schema_version, artifact_id, canon_status, deployment_status, trust_state, self_ratified]
+properties:
+  schema_version: { const: "0.1" }
+  artifact_id: { type: string }
+  trust_state:
+    enum: [raw, parsed, candidate, reviewed, ratified, active, under_review, superseded, revoked, quarantined, rejected]
+  canon_status: { type: string, enum: [not_canon, candidate, ratified], default: not_canon }
+  deployment_status: { type: string, enum: [not_deployable, candidate, deployable], default: not_deployable }
+  self_ratified: { const: false, default: false }
+additionalProperties: true

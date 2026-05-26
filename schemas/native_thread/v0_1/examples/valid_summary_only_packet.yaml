@@ -1,0 +1,18 @@
+schema_version: "0.1"
+seat_name: TIDELOCK
+model_surface: local
+source_thread_label: thread://sample
+thread_time_range:
+  start: "2026-05-26T00:00:00Z"
+  end: "2026-05-26T01:00:00Z"
+  timezone: UTC
+raw_export_status: summary_only
+ingestion_completeness: partial_ingestion
+access_scope:
+  visible_sources: ["thread://sample"]
+  unavailable_sources: ["thread://hidden"]
+  assumed_context: []
+canon_status: not_canon
+deployment_status: not_deployable
+strongest_safe_claim: "Summary-only packet, candidate-grade claim."
+next_action: "Collect raw export before any escalation."

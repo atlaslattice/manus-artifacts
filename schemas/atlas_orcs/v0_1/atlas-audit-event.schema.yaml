@@ -1,0 +1,11 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-audit-event
+schema_version: "0.1"
+type: object
+required: [schema_version, audit_event_id, artifact_id, event_type]
+properties:
+  schema_version: { const: "0.1" }
+  audit_event_id: { type: string }
+  artifact_id: { type: string }
+  event_type: { type: string }
+additionalProperties: true

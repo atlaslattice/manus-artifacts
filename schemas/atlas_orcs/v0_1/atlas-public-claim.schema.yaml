@@ -1,0 +1,20 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-public-claim
+schema_version: "0.1"
+type: object
+required: [schema_version, public_claim_id, source_completeness, quarantine_status, publish_allowed]
+properties:
+  schema_version: { const: "0.1" }
+  public_claim_id: { type: string }
+  source_completeness: { enum: [incomplete, complete], default: incomplete }
+  quarantine_status: { enum: [quarantined, released], default: quarantined }
+  publish_allowed: { type: boolean, default: false }
+allOf:
+  - if:
+      properties:
+        source_completeness: { const: incomplete }
+    then:
+      properties:
+        quarantine_status: { const: quarantined }
+        publish_allowed: { const: false }
+additionalProperties: true

@@ -1,0 +1,12 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-summary-lineage
+schema_version: "0.1"
+type: object
+required: [schema_version, summary_id, source_artifact_id, summary_artifact_id]
+properties:
+  schema_version: { const: "0.1" }
+  summary_id: { type: string }
+  source_artifact_id: { type: string }
+  summary_artifact_id: { type: string }
+  summary_replaces_source: { const: false, default: false }
+additionalProperties: true

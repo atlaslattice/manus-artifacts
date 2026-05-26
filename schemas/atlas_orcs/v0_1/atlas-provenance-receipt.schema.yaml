@@ -1,0 +1,12 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-provenance-receipt
+schema_version: "0.1"
+type: object
+required: [schema_version, receipt_id, artifact_id, receipt_kind]
+properties:
+  schema_version: { const: "0.1" }
+  receipt_id: { type: string }
+  artifact_id: { type: string }
+  receipt_kind: { enum: [provenance, processing, review] }
+  truth_claim: { type: string, enum: [not_truth], default: not_truth }
+additionalProperties: true
