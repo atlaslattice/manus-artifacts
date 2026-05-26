@@ -36,10 +36,10 @@ task_url -> task_uuid -> raw receipt -> processed transcript artifacts -> intake
 Expected processed set shape:
 
 ```text
-archive/processed/transcripts/<YYYY-MM-DD>/copilottask_<uuid>_cluster_index_v0.1.json
-archive/processed/transcripts/<YYYY-MM-DD>/copilottask_<uuid>_task_ledger_v0.1.jsonl
-archive/processed/transcripts/<YYYY-MM-DD>/copilottask_<uuid>_blocker_ledger_v0.1.jsonl
-archive/processed/transcripts/<YYYY-MM-DD>/copilottask_<uuid>_triage_packet_v0.1_<YYYY-MM-DD>.md
+archive/processed/transcripts/<YYYY-MM-DD>/copilot_task_<uuid>_cluster_index_v0.1.json
+archive/processed/transcripts/<YYYY-MM-DD>/copilot_task_<uuid>_task_ledger_v0.1.jsonl
+archive/processed/transcripts/<YYYY-MM-DD>/copilot_task_<uuid>_blocker_ledger_v0.1.jsonl
+archive/processed/transcripts/<YYYY-MM-DD>/copilot_task_<uuid>_triage_packet_v0.1_<YYYY-MM-DD>.md
 ```
 
 ## Core posture
