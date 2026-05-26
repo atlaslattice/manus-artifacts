@@ -16,3 +16,7 @@ Status legend: `queued` | `active` | `done`
 ## Council focus
 
 This board tracks the highest-leverage work items for repository quality, canon integrity, and operational clarity.
+
+## Related Aetherforge artifacts
+
+- [`aetherforge-game-world-omnispec-archive-bowl-2026-05-26.md`](./aetherforge-game-world-omnispec-archive-bowl-2026-05-26.md) — Candidate playable quest map and Archive Bowl roadmap.
