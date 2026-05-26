@@ -1,0 +1,49 @@
+name: Repo Hygiene Checks
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  hygiene:
+    name: Hygiene
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for merge-conflict markers
+        run: |
+          if grep -rn "^<<<<<<< " --include="*.md" --include="*.yml" --include="*.yaml" --include="*.py" .; then
+            echo "ERROR: merge conflict markers found"
+            exit 1
+          fi
+          echo "No merge conflict markers found."
+
+      - name: Validate workflow YAML syntax
+        run: |
+          python3 -c "
+          import yaml, sys, pathlib, os
+          errors = []
+          for p in pathlib.Path('.github/workflows').glob('*.yml'):
+              try:
+                  yaml.safe_load(p.read_text())
+              except yaml.YAMLError as e:
+                  errors.append(f'{p}: {e}')
+          if errors:
+              print('YAML errors found:')
+              for e in errors: print(e)
+              sys.exit(1)
+          print(f'All workflow YAML files valid.')
+          "
+
+      - name: Check for secrets/tokens patterns
+        run: |
+          if grep -rn --include="*.md" --include="*.py" --include="*.yml" \
+            -E "(sk-[a-zA-Z0-9]{20,}|ghp_[a-zA-Z0-9]{36}|AKIA[0-9A-Z]{16})" .; then
+            echo "WARNING: possible secret pattern detected — review before merging"
+            exit 1
+          fi
+          echo "No obvious secret patterns detected."

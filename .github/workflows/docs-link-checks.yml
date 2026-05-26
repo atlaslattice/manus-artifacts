@@ -1,0 +1,55 @@
+name: Docs Link Checks
+
+on:
+  push:
+    paths:
+      - "**/*.md"
+      - "docs/**"
+  pull_request:
+    paths:
+      - "**/*.md"
+      - "docs/**"
+
+permissions:
+  contents: read
+
+jobs:
+  link-check:
+    name: Internal Link Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check internal markdown links
+        run: |
+          python3 - <<'EOF'
+          import re, pathlib, sys
+
+          root = pathlib.Path(".")
+          md_files = list(root.rglob("*.md"))
+          errors = []
+
+          link_re = re.compile(r'\[([^\]]*)\]\(([^)]+)\)')
+
+          for md in md_files:
+              for m in link_re.finditer(md.read_text(errors="replace")):
+                  target = m.group(2)
+                  # skip external links and anchors-only
+                  if target.startswith("http") or target.startswith("#"):
+                      continue
+                  # strip anchor from path
+                  path_part = target.split("#")[0]
+                  if not path_part:
+                      continue
+                  resolved = (md.parent / path_part).resolve()
+                  if not resolved.exists():
+                      errors.append(f"{md}: broken link -> {target}")
+
+          if errors:
+              print(f"Found {len(errors)} broken internal link(s):")
+              for e in errors:
+                  print(f"  {e}")
+              sys.exit(1)
+          else:
+              print(f"Checked {len(md_files)} markdown files — all internal links OK.")
+          EOF
