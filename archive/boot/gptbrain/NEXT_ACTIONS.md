@@ -66,8 +66,8 @@ synthesize
 [x] boot packet template exists
 [x] current-state snapshot exists
 [x] next-actions ledger exists
-[ ] reference implementation exists
-[ ] reference implementation README exists
+[x] reference implementation exists
+[x] reference implementation README exists
 [ ] issue #12 updated after reference implementation lands
 ```
 
