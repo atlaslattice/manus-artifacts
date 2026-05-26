@@ -35,7 +35,7 @@ fields:
   task_uuid:
     type: string
     nullable: true
-    description: UUID extracted from /tasks/<uuid> when present.
+    description: UUID extracted from task URLs matching /tasks/{uuid} when present.
 
   source_surface:
     type: enum

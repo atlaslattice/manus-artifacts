@@ -39,7 +39,7 @@ Expected processed set shape:
 archive/processed/transcripts/<YYYY-MM-DD>/copilottask_<uuid>_cluster_index_v0.1.json
 archive/processed/transcripts/<YYYY-MM-DD>/copilottask_<uuid>_task_ledger_v0.1.jsonl
 archive/processed/transcripts/<YYYY-MM-DD>/copilottask_<uuid>_blocker_ledger_v0.1.jsonl
-archive/processed/transcripts/<YYYY-MM-DD>/COPILOTTASK_<uuid>_TRIAGE_PACKET_v0.1_<YYYY-MM-DD>.md
+archive/processed/transcripts/<YYYY-MM-DD>/copilottask_<uuid>_triage_packet_v0.1_<YYYY-MM-DD>.md
 ```
 
 ## Core posture
