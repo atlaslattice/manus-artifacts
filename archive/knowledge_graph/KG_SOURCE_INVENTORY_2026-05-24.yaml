@@ -1,0 +1,196 @@
+inventory_name: KG_SOURCE_INVENTORY_2026-05-24
+status: candidate_inventory
+canon_status: not_canon
+deployment_status: not_deployable
+authority_scope: none
+purpose: >
+  Start the source inventory clipboard before allowing agents to roam across GitHub,
+  Drive, Notion, and uploaded transcripts. Rows are source-registration records,
+  not evaluation scores or canon claims.
+
+records:
+  - source_id: KG-SRC-GITHUB-ROOTGLASS-PR61
+    title: RootglassBrain PR #61
+    surface: GitHub
+    url_or_path: https://github.com/atlaslattice/manus-artifacts/pull/61
+    file_type: pull_request
+    created_or_modified: 2026-05-11
+    raw_export_status: partial
+    sha256_status: pending
+    source_class: repo_visible
+    related_lane: rootglassbrain
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts:
+      - raw_export
+      - full_thread_hash
+      - attachment_manifest
+  - source_id: KG-SRC-GITHUB-ROOTGLASS-COPILOT-MANIFEST
+    title: RootglassBrain Copilot Artifact Manifest
+    surface: GitHub
+    url_or_path: archive/boot/gptbrain/rootglassbrain/source_packets/copilot/COPILOT_ARTIFACT_MANIFEST_2026-05-21.md
+    file_type: markdown
+    created_or_modified: 2026-05-21
+    raw_export_status: summary_only
+    sha256_status: pending
+    source_class: repo_visible_manifest
+    related_lane: copilot_source_packets
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts:
+      - raw_copilot_exports
+      - source_timestamps
+      - sha256_hashes
+  - source_id: KG-SRC-GITHUB-ROOTGLASS-COPILOT-SOURCE-MANIFEST
+    title: RootglassBrain Copilot source_manifest.yaml
+    surface: GitHub
+    url_or_path: archive/boot/gptbrain/rootglassbrain/source_packets/copilot/source_manifest.yaml
+    file_type: yaml
+    created_or_modified: 2026-05-21
+    raw_export_status: summary_only
+    sha256_status: pending
+    source_class: repo_visible_manifest
+    related_lane: copilot_source_packets
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts:
+      - raw_exports
+      - source_manifest_from_origin
+      - source_timestamps
+  - source_id: KG-SRC-GITHUB-ROOTGLASS-EVAL-SCAFFOLD
+    title: RootglassBrain Eval Ledger Scaffold
+    surface: GitHub
+    url_or_path: archive/boot/gptbrain/rootglassbrain/eval/
+    file_type: folder
+    created_or_modified: 2026-05-21
+    raw_export_status: not_applicable
+    sha256_status: pending
+    source_class: repo_visible_scaffold
+    related_lane: eval
+    review_priority: medium
+    mirrored_to_github: true
+    missing_receipts:
+      - scored_baseline_eval
+      - scored_current_eval
+  - source_id: KG-SRC-UPLOADED-UNIFIED-ONTOLOGY-CANDIDATE-V033
+    title: Atlas Lattice Unified Ontology Candidate v0.3.3
+    surface: uploaded_file
+    url_or_path: ATLAS_LATTICE_UNIFIED_ONTOLOGY_CANDIDATE_v0_3_3_2026-05-21.txt
+    file_type: text
+    created_or_modified: 2026-05-21
+    raw_export_status: available_as_uploaded_text
+    sha256_status: pending
+    source_class: uploaded_candidate
+    related_lane: ontology_candidate
+    review_priority: high
+    mirrored_to_github: unknown
+    missing_receipts:
+      - repo_path_if_committed
+      - commit_sha
+      - human_root_ratification
+  - source_id: KG-SRC-DRIVE-GANGASEEK-NAMESPACE-PACKET
+    title: GangaSeek Namespace Ratification Packet
+    surface: Drive
+    url_or_path: pending_inventory
+    file_type: unknown
+    created_or_modified: unknown
+    raw_export_status: pending_user_export
+    sha256_status: pending
+    source_class: user_reported
+    related_lane: gangaseek
+    review_priority: high
+    mirrored_to_github: unknown
+    missing_receipts:
+      - drive_url
+      - raw_export
+      - sha256
+      - source_manifest
+  - source_id: KG-SRC-DRIVE-GANGASEEK-INV-CLM-CATALOG
+    title: GangaSeek INV/CLM Catalog
+    surface: Drive
+    url_or_path: pending_inventory
+    file_type: unknown
+    created_or_modified: unknown
+    raw_export_status: pending_user_export
+    sha256_status: pending
+    source_class: user_reported
+    related_lane: gangaseek
+    review_priority: high
+    mirrored_to_github: unknown
+    missing_receipts:
+      - drive_url
+      - raw_export
+      - sha256
+      - undefined_id_report
+  - source_id: KG-SRC-DRIVE-GANGASEEK-DOC-TEMPLATE
+    title: GangaSeek Document Template
+    surface: Drive
+    url_or_path: pending_inventory
+    file_type: unknown
+    created_or_modified: unknown
+    raw_export_status: pending_user_export
+    sha256_status: pending
+    source_class: user_reported
+    related_lane: gangaseek
+    review_priority: medium
+    mirrored_to_github: unknown
+    missing_receipts:
+      - drive_url
+      - raw_export
+      - sha256
+  - source_id: KG-SRC-DRIVE-COPILOT-CHAT-RAW-NOT-CANON
+    title: Copilot Chat.md RAW TRANSCRIPT NOT CANON.md
+    surface: Drive
+    url_or_path: pending_inventory
+    file_type: markdown
+    created_or_modified: unknown
+    raw_export_status: pending_user_export
+    sha256_status: pending
+    source_class: user_reported
+    related_lane: copilot_raw
+    review_priority: high
+    mirrored_to_github: unknown
+    missing_receipts:
+      - drive_url
+      - raw_export
+      - sha256
+      - privacy_review
+  - source_id: KG-SRC-DRIVE-GEMINI-COUNCIL-INPUTS
+    title: Gemini council input files
+    surface: Drive
+    url_or_path: pending_inventory
+    file_type: unknown
+    created_or_modified: unknown
+    raw_export_status: pending_user_export
+    sha256_status: pending
+    source_class: user_reported
+    related_lane: gemini_source_packets
+    review_priority: high
+    mirrored_to_github: unknown
+    missing_receipts:
+      - drive_urls
+      - raw_exports
+      - sha256
+      - source_manifest
+  - source_id: KG-SRC-DRIVE-ORCS-COPILOT-SYNTHESIS-V12
+    title: ORCS Copilot Synthesis v1.2
+    surface: Drive
+    url_or_path: pending_inventory
+    file_type: unknown
+    created_or_modified: unknown
+    raw_export_status: pending_user_export
+    sha256_status: pending
+    source_class: user_reported
+    related_lane: orcs
+    review_priority: medium
+    mirrored_to_github: unknown
+    missing_receipts:
+      - drive_url
+      - raw_export
+      - sha256
+
+notes:
+  - This is a starter clipboard, not a complete inventory.
+  - Drive and Notion entries remain user-reported until connector-visible URLs/exports are attached.
+  - Do not use source inventory rows as proof of source contents.
+keeper: First build the clipboard. Then label the boxes. Then scan the receipts.
