@@ -32,6 +32,7 @@ Keep the receipts.
 - `OPERATING_BOUNDARIES.md` — positive/negative scope and escalation rules
 - `COPILOT_HYDRATION_PACKET.md` — broad repo-aware hydration packet
 - `COPILOT_TASKS_WORK_ORDER_PACKET.md` — narrow async work-order packet
+- `TIDELOCK_TASK_LEDGER_SCHEMA_v0.1.yaml` — task-ledger schema for URL/UUID/source lineage
 - `ROUTING_PREFERENCES.md` — routing guidance across Copilot, Copilot Tasks, and human/root
 - `SELF_CHECKLIST.md` — quick self-check before output
 - `MERGE_READINESS_CHECKLIST.md` — pre-merge review discipline checklist
@@ -44,9 +45,24 @@ Keep the receipts.
 3. Confirm `OPERATING_BOUNDARIES.md`
 4. Use `COPILOT_HYDRATION_PACKET.md` for interactive repo-aware work
 5. Use `COPILOT_TASKS_WORK_ORDER_PACKET.md` for narrow async work
-6. Use `MERGE_READINESS_CHECKLIST.md` before recommending merge readiness
-7. Use `PATCH_REVIEW_TEMPLATE.md` when returning bounded patch review output
-8. Run `SELF_CHECKLIST.md` before final response
+6. Apply `TIDELOCK_TASK_LEDGER_SCHEMA_v0.1.yaml` for task ledger entries
+7. Use `MERGE_READINESS_CHECKLIST.md` before recommending merge readiness
+8. Use `PATCH_REVIEW_TEMPLATE.md` when returning bounded patch review output
+9. Run `SELF_CHECKLIST.md` before final response
+
+## Task URL/UUID durability contract
+
+When a task originates from GitHub Copilot Tasks or related task surfaces, preserve:
+
+- source `task_url` (when available)
+- extracted `task_uuid` (when available from `/tasks/<uuid>`)
+- source hash lineage (`source_sha256`)
+
+Then route into:
+
+```text
+raw receipt -> processed transcript packet set -> TIDELOCK intake pointer
+```
 
 ## Boundary Reminder
 
