@@ -654,8 +654,8 @@ class IngestionPipeline:
             data = item['data']
             content = data.get('title', '') + " " + data.get('content', '')
 
-            # Check novelty (simplified - in production, check against existing DB)
-            is_novel = True  # TODO: Implement actual novelty check
+            # Check novelty against existing knowledge base
+            is_novel = self.staging._is_novel_content(content)
 
             if not is_novel:
                 reject_ids.append(item['id'])
