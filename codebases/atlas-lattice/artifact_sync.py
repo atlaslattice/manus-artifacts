@@ -122,7 +122,7 @@ class ArtifactSync:
     def _generate_id(self, filepath: str, content: str) -> str:
         """Generate unique artifact ID."""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-        seed = f"{filepath}:{content[:1024]}"
+        seed = f"{filepath}:{content}"
         file_hash = hashlib.sha256(seed.encode("utf-8")).hexdigest()[:12]
         return f"ART_{timestamp}_{file_hash}"
     
@@ -244,12 +244,12 @@ class ArtifactSync:
             result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
             
             if result.returncode == 0 and artifact_id in result.stdout:
-                return {"exists": True}
+                return {"exists": True, "error": None}
             else:
                 error = (result.stderr or "").strip()
                 return {"exists": False, "error": error or None}
         except Exception as e:
-            return {"error": str(e)}
+            return {"exists": False, "error": str(e)}
     
     def sync_directory(self, directory: str, pattern: str = "*.md") -> List[Dict]:
         """Sync all matching files in a directory."""
