@@ -28,20 +28,22 @@ Environment Variables Required:
 import os
 import json
 import subprocess
+from abc import ABC, abstractmethod
 from datetime import datetime
 from typing import Dict, List, Optional
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-class CouncilMember:
-    """Base class for council members (AI models)."""
+class CouncilMember(ABC):
+    """Abstract base class for council members (AI models)."""
     
     def __init__(self, name: str):
         self.name = name
         self.available = False
     
+    @abstractmethod
     def analyze(self, question: str, context: Optional[Dict] = None) -> Dict:
         """Analyze a question and return perspective."""
-        raise NotImplementedError
+        ...
 
 
 class ClaudeMember(CouncilMember):
@@ -442,8 +444,10 @@ class TrinityCouncil:
         ]
         
         try:
-            subprocess.run(cmd, capture_output=True, text=True, timeout=60)
-            return {"success": True}
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
+            if result.returncode == 0:
+                return {"success": True}
+            return {"success": False, "error": result.stderr.strip() or "non-zero exit"}
         except Exception as e:
             return {"success": False, "error": str(e)}
 

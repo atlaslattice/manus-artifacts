@@ -206,7 +206,8 @@ async def krakoa_shadow_sweep(params: ShadowSweepInput) -> str:
             try:
                 if datetime.fromtimestamp(os.path.getmtime(fp)) >= cutoff:
                     results["claude_sessions"].append({"path": fp, "size": os.path.getsize(fp)})
-            except: pass
+            except OSError as _err:
+                results.setdefault("errors", []).append({"path": fp, "error": str(_err)})
     
     sweep_file = Path(f"{KRAKOA_HOME}/shadow/sweep_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.json")
     with open(sweep_file, "w") as f:

@@ -17,8 +17,10 @@ Usage:
 Environment Variables Required:
     - NOTION_API_KEY: Notion integration token
     - PINECONE_API_KEY: Pinecone API key (optional)
+    - PINECONE_INDEX: Pinecone index name (default: manus-artifacts)
 """
 
+import logging
 import os
 import json
 import subprocess
@@ -26,6 +28,8 @@ import hashlib
 from datetime import datetime
 from typing import Dict, List, Optional
 from pathlib import Path
+
+logger = logging.getLogger(__name__)
 
 class ArtifactSync:
     """Synchronize artifacts across all platforms."""
@@ -181,12 +185,89 @@ class ArtifactSync:
         except Exception as e:
             return {"success": False, "error": str(e)}
     
+    def _check_prerequisites(self) -> Dict[str, bool]:
+        """Check which integrations are available based on env vars and tools."""
+        prereqs: Dict[str, bool] = {}
+
+        prereqs["notion"] = bool(os.getenv("NOTION_API_KEY"))
+        prereqs["pinecone"] = bool(os.getenv("PINECONE_API_KEY"))
+
+        # Check rclone (Google Drive) availability
+        try:
+            subprocess.run(
+                ["rclone", "version", "--config", "/home/ubuntu/.gdrive-rclone.ini"],
+                capture_output=True, timeout=5, check=False
+            )
+            prereqs["drive"] = True
+        except (FileNotFoundError, subprocess.TimeoutExpired):
+            prereqs["drive"] = False
+
+        missing = [k for k, v in prereqs.items() if not v]
+        if missing:
+            logger.warning("Integrations unavailable: %s", ", ".join(missing))
+
+        return prereqs
+
     def _sync_to_pinecone(self, artifact: Dict) -> Dict:
-        """Sync artifact to Pinecone for semantic search."""
-        
-        # This would use the Pinecone API to create embeddings and upsert
-        # For now, return a placeholder
-        return {"success": True, "note": "Pinecone sync placeholder - implement with actual API"}
+        """Sync artifact to Pinecone for semantic search using hosted embeddings."""
+        try:
+            from pinecone import Pinecone  # pip install pinecone
+        except ImportError:
+            return {
+                "success": False,
+                "error": "pinecone package not installed. Run: pip install pinecone",
+            }
+
+        try:
+            pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
+            index_name = os.getenv("PINECONE_INDEX", "manus-artifacts")
+
+            available_names = [idx.name for idx in pc.list_indexes()]
+            if index_name not in available_names:
+                return {
+                    "success": False,
+                    "error": (
+                        f"Pinecone index '{index_name}' not found. "
+                        f"Available: {available_names}. "
+                        "Set PINECONE_INDEX or create the index first."
+                    ),
+                }
+
+            index = pc.Index(index_name)
+
+            # Generate embedding via Pinecone's built-in Inference API
+            # (no separate embedding-model API key required)
+            text_to_embed = f"{artifact['title']}\n\n{artifact['content'][:8000]}"
+            embeddings = pc.inference.embed(
+                model="multilingual-e5-large",
+                inputs=[text_to_embed],
+                parameters={"input_type": "passage", "truncate": "END"},
+            )
+            vector = embeddings[0].values
+
+            metadata = {
+                "artifact_id": artifact["id"],
+                "filename": artifact["filename"],
+                "title": artifact["title"],
+                "sphere": artifact["sphere"],
+                "category": artifact["category"],
+                "priority": artifact["priority"],
+                "timestamp": artifact["timestamp"],
+                "hash": artifact["hash"],
+                "content_preview": artifact["content"][:500],
+            }
+
+            index.upsert(vectors=[{
+                "id": artifact["id"],
+                "values": vector,
+                "metadata": metadata,
+            }])
+
+            return {"success": True, "id": artifact["id"], "index": index_name}
+
+        except Exception as e:
+            logger.error("Pinecone upsert failed: %s", e)
+            return {"success": False, "error": str(e)}
     
     def verify_sync(self, artifact_id: str) -> Dict:
         """Verify an artifact exists on all platforms."""
@@ -201,10 +282,32 @@ class ArtifactSync:
         results["platforms"]["notion"] = notion_result
         
         # Check Drive
-        # (Would need to search by artifact ID in filename)
-        results["platforms"]["drive"] = {"checked": False, "note": "Manual verification needed"}
+        results["platforms"]["drive"] = self._check_drive(f"ART_*_{artifact_id[-8:]}.md")
         
         return results
+    
+    def _check_drive(self, pattern: str) -> Dict:
+        """Check if a file matching *pattern* exists on Google Drive."""
+        cmd = [
+            "rclone", "lsf",
+            f"manus_google_drive:{self.drive_inbox}/",
+            "--config", "/home/ubuntu/.gdrive-rclone.ini",
+            "--include", pattern,
+        ]
+        try:
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+            if result.returncode == 0:
+                matches = [line for line in result.stdout.splitlines() if line.strip()]
+                if matches:
+                    return {"exists": True, "files": matches}
+                return {"exists": False}
+            return {"exists": False, "error": result.stderr.strip() or "rclone returned non-zero"}
+        except FileNotFoundError:
+            return {"exists": False, "error": "rclone not found on PATH"}
+        except subprocess.TimeoutExpired:
+            return {"exists": False, "error": "rclone timed out"}
+        except Exception as e:
+            return {"exists": False, "error": str(e)}
     
     def _check_notion(self, artifact_id: str) -> Dict:
         """Check if artifact exists in Notion."""
@@ -289,7 +392,7 @@ class DualPlatformArchiver:
         try:
             result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
             return "keep" in result.stdout.lower()
-        except:
+        except Exception:
             return False
     
     def archive(
