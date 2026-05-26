@@ -55,8 +55,13 @@ def test_heading_numbering_uses_h_and_i() -> None:
         ROOT
         / "archive/spec/gptdream/appendices/APPENDIX_I_ATLAS_ORCS_EPISTEMIC_GOVERNANCE_PROFILE_v0.1.md"
     )
+    i3_text = _read(
+        ROOT
+        / "archive/spec/gptdream/appendices/APPENDIX_I_3_ATLAS_ORCS_SCHEMA_BUNDLE_v0.1.md"
+    )
     assert "H.1" in h_text and "H.2" in h_text and "H.3" in h_text
     assert "I.1" in i_text and "I.2" in i_text
+    assert "I.3" in i3_text
 
 
 def test_schema_bundle_files_present_with_version_and_defaults() -> None:
@@ -110,6 +115,25 @@ def test_oai_schema_contains_required_fields_and_gate_constraints() -> None:
     assert "summary_only" in schema
     assert "source_complete" in schema
     assert "execution_request" in schema
+
+
+def test_oai_schema_required_arrays_include_expected_fields_when_pyyaml_available() -> None:
+    yaml = pytest.importorskip("yaml")
+    schema = yaml.safe_load(_read(ROOT / "schemas/o_ai/v0_1/o-ai-packet.schema.yaml"))
+    assert set(schema["required"]) >= {
+        "raw_export_status",
+        "thread_time_range",
+        "access_scope",
+        "epistemic_label",
+        "authority_scope",
+        "gates",
+    }
+    assert set(schema["properties"]["gates"]["required"]) >= {
+        "provenance_gate",
+        "safety_gate",
+        "governance_gate",
+        "data_residency_gate",
+    }
 
 
 def test_oai_examples_include_valid_and_invalid_packets() -> None:
