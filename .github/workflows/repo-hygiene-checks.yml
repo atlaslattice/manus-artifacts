@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Fail on merge-conflict markers
         run: |
-          if rg -n --fixed-strings '<<<<<<< ' . || rg -n --fixed-strings '=======' . || rg -n --fixed-strings '>>>>>>> ' .; then
+          if grep -R -n --exclude-dir=.git -E '^<<<<<<< |^=======$|^>>>>>>> ' .; then
             echo "Merge conflict markers detected."
             exit 1
           fi
