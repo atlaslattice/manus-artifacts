@@ -3,7 +3,6 @@ from datetime import datetime, timezone
 from .state import Artifact, TrustState
 
 
-
 def ratification_expired(artifact: Artifact, now_iso: str) -> bool:
     if not artifact.ratification_expires_at:
         return False

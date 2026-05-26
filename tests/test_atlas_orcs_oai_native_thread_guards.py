@@ -1,11 +1,11 @@
 from pathlib import Path
 
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
+
 def _read(path: str) -> str:
     return (REPO_ROOT / path).read_text(encoding="utf-8")
-
-
-REPO_ROOT = Path(__file__).resolve().parents[1]
 
 
 def test_appendix_j_has_canon_surface_patch():

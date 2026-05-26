@@ -17,6 +17,9 @@ on:
       - ".github/workflows/boring-machine-validation.yml"
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   schema-validation:
     runs-on: ubuntu-latest
