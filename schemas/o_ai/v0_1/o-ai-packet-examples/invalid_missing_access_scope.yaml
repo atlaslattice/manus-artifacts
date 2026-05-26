@@ -1,5 +1,7 @@
 raw_export_status: full_raw
 thread_time_range: {start: "2026-05-20T00:00:00Z", end: "2026-05-20T01:00:00Z", timezone: "UTC"}
+access_scope:
+  visible_sources: ["raw-export"]
 epistemic_label: candidate
 authority_scope: bounded
 packet_kind: analysis

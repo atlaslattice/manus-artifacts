@@ -1,40 +1,53 @@
 from pathlib import Path
 
+import pytest
 import yaml
+from jsonschema import ValidationError, validate
+
+from reference_impl.o_ai.validator import validate_oai_packet
 
 
 def _load_example(name: str):
-    base = Path("/home/runner/work/manus-artifacts/manus-artifacts/schemas/o_ai/v0_1/o-ai-packet-examples")
+    base = Path(__file__).resolve().parents[1] / "schemas/o_ai/v0_1/o-ai-packet-examples"
     return yaml.safe_load((base / name).read_text())
 
 
-def _validate(packet: dict):
-    required = ["raw_export_status", "thread_time_range", "access_scope", "epistemic_label", "authority_scope", "gates"]
-    for r in required:
-        if r not in packet:
-            return False
-
-    if packet["raw_export_status"] == "summary_only" and packet.get("public_use_status") == "source_complete":
-        return False
-
-    if packet.get("packet_kind") == "execution_request":
-        g = packet.get("gates", {})
-        needed = ["provenance_gate", "safety_gate", "governance_gate", "human_permission_gate", "receipt_gate"]
-        if not all(g.get(k) == "pass" for k in needed):
-            return False
-
-    access = packet.get("access_scope", {})
-    if "unavailable_sources" not in access or "assumed_context" not in access:
-        return False
-
-    return True
+def _load_schema():
+    schema_path = Path(__file__).resolve().parents[1] / "schemas/o_ai/v0_1/o-ai-packet.schema.yaml"
+    return yaml.safe_load(schema_path.read_text())
 
 
 def test_valid_packets_pass():
-    assert _validate(_load_example("valid_summary_only_packet.yaml"))
-    assert _validate(_load_example("valid_full_raw_packet.yaml"))
+    schema = _load_schema()
+    summary = _load_example("valid_summary_only_packet.yaml")
+    full_raw = _load_example("valid_full_raw_packet.yaml")
+    validate(summary, schema)
+    validate(full_raw, schema)
+    assert validate_oai_packet(summary)[0]
+    assert validate_oai_packet(full_raw)[0]
 
 
 def test_invalid_packets_fail():
-    assert not _validate(_load_example("invalid_missing_access_scope.yaml"))
-    assert not _validate(_load_example("invalid_execution_without_gates.yaml"))
+    schema = _load_schema()
+    missing_access = _load_example("invalid_missing_access_scope.yaml")
+    invalid_exec = _load_example("invalid_execution_without_gates.yaml")
+    with pytest.raises(ValidationError):
+        validate(missing_access, schema)
+    with pytest.raises(ValidationError):
+        validate(invalid_exec, schema)
+    assert not validate_oai_packet(missing_access)[0]
+    assert not validate_oai_packet(invalid_exec)[0]
+
+
+def test_summary_only_cannot_be_source_complete():
+    packet = _load_example("valid_summary_only_packet.yaml")
+    packet["public_use_status"] = "source_complete"
+    assert not validate_oai_packet(packet)[0]
+
+
+def test_execution_request_requires_human_permission_and_receipt_pass():
+    packet = _load_example("valid_full_raw_packet.yaml")
+    packet["packet_kind"] = "execution_request"
+    packet["gates"]["human_permission_gate"] = "fail"
+    packet["gates"]["receipt_gate"] = "fail"
+    assert not validate_oai_packet(packet)[0]
