@@ -1,0 +1,81 @@
+# MODULE 8 — Repo Task Labels
+# Used by: .github/workflows/sync-labels.yml (crazy-max/ghaction-github-labeler)
+# Lane routing spec: archive/spec/module-8-lane-routing/LANE_ROUTING_SPEC_v0.1.md
+
+# ── Protocol / domain ────────────────────────────────────────────────────────
+
+- name: gptdream
+  color: "0075ca"
+  description: "GPTDream++ habitat protocol artifact or issue"
+
+- name: atlas-orcs
+  color: "0052cc"
+  description: "Atlas/ORCS trust-state or audit concern"
+
+- name: o-ai
+  color: "1d76db"
+  description: "O_AI vendor packet / interop concern"
+
+- name: native-thread-ingestion
+  color: "5319e7"
+  description: "Native thread ingestion packet or pipeline"
+
+- name: schema
+  color: "006b75"
+  description: "YAML/JSON schema artifact"
+
+- name: validator
+  color: "0e8a16"
+  description: "Validator module or rule"
+
+- name: compatible
+  color: "bfd4f2"
+  description: "Compatibility / cross-vendor interop check"
+
+- name: anti-laundering
+  color: "e4e669"
+  description: "Anti-laundering predicate (Module 4)"
+
+- name: dphi
+  color: "c2e0c6"
+  description: "D-Φ-1 execution gate / differential-phi concern"
+
+- name: cas-001-a
+  color: "d93f0b"
+  description: "CAS-001-A Atlas/ORCS audit-state execution route"
+
+# ── Agent routing ─────────────────────────────────────────────────────────────
+
+- name: tidelock
+  color: "7c3aed"
+  description: "Route to TIDELOCKBrain (Codex patch / repo work)"
+
+- name: hashlight
+  color: "b45309"
+  description: "Route to HashlightBrain (raw export / Codex patch)"
+
+- name: lucerna
+  color: "0891b2"
+  description: "Route to LucernaBrain (synthesis / benchmark / public)"
+
+- name: rootglass
+  color: "475569"
+  description: "Route to RootglassBrain (ChatGPT synthesis)"
+
+- name: atlasbrain
+  color: "1e40af"
+  description: "Route to AtlasBrain (benchmark claim / raw export)"
+
+# ── Status / governance ───────────────────────────────────────────────────────
+
+- name: not-canon
+  color: "e11d48"
+  description: "Artifact has not been ratified; not canon — do not treat as authority"
+
+- name: not-deployable
+  color: "dc2626"
+  description: "Execution blocked; requires human gate before any deployment"
+
+- name: needs-review
+  color: "f59e0b"
+  description: "Awaiting council or @atlaslattice review before promotion"
