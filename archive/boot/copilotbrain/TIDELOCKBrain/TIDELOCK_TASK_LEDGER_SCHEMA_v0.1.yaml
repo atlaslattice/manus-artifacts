@@ -35,7 +35,7 @@ fields:
   task_uuid:
     type: string
     nullable: true
-    description: UUID (RFC 4122 string) extracted from task URLs containing '/tasks/'; set null if extraction fails or value is non-compliant.
+    description: UUID (RFC 4122 string) extracted from task URLs containing '/tasks/'; set to null if extraction fails or value is non-compliant.
 
   source_surface:
     type: enum
@@ -108,6 +108,6 @@ fields:
 
 invariants:
   - Task ledger entries are routing artifacts, not authority grants.
-  - Missing task_url/task_uuid values must be explicit, not inferred silently.
+  - Missing task_url/task_uuid values must be explicit (set to null, empty string, or unknown), not inferred silently.
   - Task outputs must preserve raw-vs-parsed boundaries.
   - Task ledger status is not merge, canon, or deployment approval.
