@@ -1,0 +1,67 @@
+artifact: NOTION_SOURCE_ROOT_INVENTORY_v0.1
+status: candidate_inventory
+canon_status: not_canon
+deployment_status: not_deployable
+authority: none
+mode: repo_grounded_discovery
+purpose: Identify known Notion source roots before graphing or mirroring.
+boundary_header: |
+  This module is an upstream candidate packet, not proof.
+  Treat all summaries as claims until verified against repo files or source exports.
+  Do not expand scope beyond listed files unless explicitly instructed.
+  Preserve uncertainty.
+  Return blockers, patch items, tests run, files changed, and next safest action.
+  CANON: no
+  DEPLOYMENT: no
+  AUTHORITY: none
+inventory_rules:
+  default_source_status: discovered_not_fetched
+  default_canon_status: not_canon
+  default_deployment_status: not_deployable
+  needs_fetch_default: true
+  source_root_classes:
+    - master_index
+    - system_hub
+    - research_report
+    - migration_queue
+    - historical_compilation
+    - unknown
+  required_fields:
+    - root_id
+    - title
+    - url
+    - discovered_at_utc
+    - search_query_used
+    - source_status
+    - canon_status
+    - deployment_status
+    - needs_fetch
+    - root_class
+    - related_github_issue_refs
+    - privacy_review_required
+    - raw_export_status
+    - access_scope
+known_notion_roots: []
+blockers:
+  - No raw Notion export or source URL list was present in the repository context for this patch.
+  - Future agents must append stable records only after discovery can be traced to a query, source URL, or export receipt.
+next_safest_action: Fetch or receive a raw Notion export, then add one inventory record per root with source_status preserved as discovered_not_fetched until content is stored.
+example_record:
+  root_id: notion-root-example-slug
+  title: Example Root Title
+  url: https://www.notion.so/example
+  discovered_at_utc: '2026-05-26T00:00:00Z'
+  search_query_used: 'site:notion.so Atlas Lattice example'
+  source_status: discovered_not_fetched
+  canon_status: not_canon
+  deployment_status: not_deployable
+  needs_fetch: true
+  root_class: unknown
+  related_github_issue_refs: []
+  privacy_review_required: true
+  raw_export_status: missing_raw
+  access_scope:
+    visible_sources: []
+    unavailable_sources:
+      - full Notion page content
+    assumed_context: []

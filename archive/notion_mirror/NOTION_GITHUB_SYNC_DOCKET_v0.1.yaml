@@ -1,0 +1,32 @@
+artifact: NOTION_GITHUB_SYNC_DOCKET_v0.1
+status: candidate_docket
+canon_status: not_canon
+deployment_status: not_deployable
+authority: none
+purpose: Tie Notion mirror work to GitHub issues and PRs without deleting duplicate receipts.
+parent_refs:
+  mass_ingestion_parent: '#160'
+  knowledge_graph_parents:
+    - '#180'
+    - '#183'
+  aetherforge_quest_board: '#187'
+rules:
+  duplicate_handling: Preserve duplicates, link them, and mark candidate supersession only after source comparison.
+  superseded_handling: Keep superseded records with supersedes/superseded_by references and reason.
+  blocked_handling: Mark blocked with blocker, owner if known, and next_safest_action.
+  no_deletion_for_duplicates: true
+known_mappings: []
+default_record:
+  root_id: null
+  notion_title: null
+  notion_url: null
+  github_issue_refs: []
+  github_pr_refs: []
+  needs_triage: true
+  mirror_status: not_mirrored
+  canon_status: not_canon
+  deployment_status: not_deployable
+  blockers:
+    - no verified source record yet
+  next_safest_action: add source inventory record or raw receipt before graphing
+readme_note: No deletion for duplicates; preserve receipts, route conflicts, and document supersession.

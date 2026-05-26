@@ -1,0 +1,18 @@
+packet_id: parsed-packet-template-v0-1
+status: candidate_template
+canon_status: not_canon
+deployment_status: not_deployable
+derived_from:
+  raw_export_receipt_id: null
+  source_url: null
+sha256_if_available: null
+retrieved_at_utc: null
+retrieved_by: null
+raw_export_status: missing_raw
+access_scope:
+  visible_sources: []
+  unavailable_sources: []
+  assumed_context: []
+parsed_facts: []
+claims_requiring_verification: []
+next_safest_action_if_blocked: cite raw export before extracting claims
