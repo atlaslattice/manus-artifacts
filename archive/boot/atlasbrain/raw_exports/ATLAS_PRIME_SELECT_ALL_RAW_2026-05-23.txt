@@ -1,0 +1,12 @@
+STATUS: CANDIDATE INGEST POINTER — NOT CANON
+DEPLOYMENT: NO
+AUTHORITY: NONE
+
+Raw export content is preserved in private-review storage.
+This repository artifact is the preservation pointer and receipt.
+
+raw_sha256: a04d606272128055d63e4e82c9b0557a9327c6ea45803ddae27ac51e06cc36dc
+raw_char_count: 391518
+raw_line_count: 331
+release_class: PRIVATE_REVIEW
+source_gravity: PR #137

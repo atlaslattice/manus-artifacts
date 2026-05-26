@@ -1,0 +1,11 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Evidence Vault Parsed Packet v0.1"
+type: object
+additionalProperties: false
+required: [schema_version, packet_id, derived_from_raw, raw_export_id, raw_sha256]
+properties:
+  schema_version: {type: string, const: "0.1"}
+  packet_id: {type: string}
+  derived_from_raw: {type: boolean, const: true}
+  raw_export_id: {type: string}
+  raw_sha256: {type: string, minLength: 32}

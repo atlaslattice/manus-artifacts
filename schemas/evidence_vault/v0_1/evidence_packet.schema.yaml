@@ -1,0 +1,13 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Evidence Vault Evidence Packet v0.1"
+type: object
+additionalProperties: false
+required: [schema_version, evidence_packet_id, claim_ref, receipt_refs]
+properties:
+  schema_version: {type: string, const: "0.1"}
+  evidence_packet_id: {type: string}
+  claim_ref: {type: string}
+  receipt_refs:
+    type: array
+    minItems: 1
+    items: {type: string}

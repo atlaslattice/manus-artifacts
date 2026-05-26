@@ -1,0 +1,11 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Evidence Vault Raw Export v0.1"
+type: object
+additionalProperties: false
+required: [schema_version, export_id, source_ref, raw_sha256, raw_export_status]
+properties:
+  schema_version: {type: string, const: "0.1"}
+  export_id: {type: string}
+  source_ref: {type: string}
+  raw_sha256: {type: string, minLength: 32}
+  raw_export_status: {type: string, enum: [full_raw, partial_raw, summary_only, unavailable]}

@@ -1,0 +1,23 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Evidence Vault Benchmark Claim v0.1"
+type: object
+additionalProperties: false
+required:
+  - schema_version
+  - claim_id
+  - claim_text
+  - source_raw_sha256
+  - evidence_packet_ids
+  - review_status
+  - publish_requested
+properties:
+  schema_version: {type: string, const: "0.1"}
+  claim_id: {type: string}
+  claim_text: {type: string}
+  source_raw_sha256: {type: string, minLength: 32}
+  evidence_packet_ids:
+    type: array
+    minItems: 1
+    items: {type: string}
+  review_status: {type: string, enum: [pending, approved, rejected]}
+  publish_requested: {type: boolean}
