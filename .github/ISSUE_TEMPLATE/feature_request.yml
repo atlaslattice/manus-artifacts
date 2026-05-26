@@ -1,0 +1,49 @@
+name: Feature request
+description: Propose a repository improvement with explicit value and acceptance criteria.
+title: "[Feature] "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What current pain or gap are you addressing?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe what should change.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: "- [ ] ..."
+    validations:
+      required: true
+  - type: input
+    id: affected_paths
+    attributes:
+      label: Expected affected paths
+      placeholder: /home/runner/work/manus-artifacts/manus-artifacts/...
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P3 - nice to have
+        - P2 - important
+        - P1 - urgent
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety checks
+      options:
+        - label: I did not include secrets, credentials, or private personal data.
+          required: true

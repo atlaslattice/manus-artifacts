@@ -57,6 +57,13 @@ All four commands must pass before submitting a pull request.
 - Do not promote candidate canon to ratified canon without explicit human-root review.
 - Keep candidate vs ratified status explicit in docs and PR notes.
 
+## Security and issue intake
+
+- Read [`/home/runner/work/manus-artifacts/manus-artifacts/SECURITY.md`](../SECURITY.md) before reporting vulnerabilities.
+- Use structured issue templates in [`.github/ISSUE_TEMPLATE/`](./ISSUE_TEMPLATE/) for bugs, features, and governance tasks.
+- Check ownership expectations in [`.github/CODEOWNERS`](./CODEOWNERS).
+- Review active improvement ledger in [`archive/boot/gptbrain/TIDELOCKBrain/TIDELOCK_TOP50_EXECUTION_2026-05-26.md`](../archive/boot/gptbrain/TIDELOCKBrain/TIDELOCK_TOP50_EXECUTION_2026-05-26.md).
+
 ## Questions
 
 Open an issue.

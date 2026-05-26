@@ -30,6 +30,15 @@ This repository contains research, health data, and system artifacts generated a
 - **CopilotBrain (S7 code integrator):** [`archive/boot/seats/COPILOTBRAIN_S7_CODE_INTEGRATOR_SPEC_2026-05-08.md`](./archive/boot/seats/COPILOTBRAIN_S7_CODE_INTEGRATOR_SPEC_2026-05-08.md)
 - **TIDELOCKBrain (pilot scaffold):** [`archive/boot/gptbrain/TIDELOCKBrain/README.md`](./archive/boot/gptbrain/TIDELOCKBrain/README.md)
 - **All seat specs (S1-S7):** [`archive/boot/seats/`](./archive/boot/seats/)
+- **TIDELOCK Top-50 execution ledger:** [`archive/boot/gptbrain/TIDELOCKBrain/TIDELOCK_TOP50_EXECUTION_2026-05-26.md`](./archive/boot/gptbrain/TIDELOCKBrain/TIDELOCK_TOP50_EXECUTION_2026-05-26.md)
+
+### Governance & Operations
+- **Contributing guide:** [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md)
+- **PR template:** [`.github/pull_request_template.md`](./.github/pull_request_template.md)
+- **Issue templates:** [`.github/ISSUE_TEMPLATE/`](./.github/ISSUE_TEMPLATE/)
+- **Code ownership:** [`.github/CODEOWNERS`](./.github/CODEOWNERS)
+- **Security policy:** [`SECURITY.md`](./SECURITY.md)
+- **Changelog:** [`CHANGELOG.md`](./CHANGELOG.md)
 
 ### Quality Bar (CI-aligned)
 From `archive/boot/gptbrain/reference_impl`:
