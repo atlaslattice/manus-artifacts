@@ -1,0 +1,43 @@
+delta_packet_id: NOTION_FOSSIL_CANDIDATE_DELTAS_v0.1
+status: NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+authority_scope: none
+date: 2026-05-26
+source_issues:
+  - 159
+  - 163
+  - 165
+deltas:
+  - delta_id: N-DELTA-001
+    source_title: "MASTER INDEX — Notion → GitHub Complete Artifact Map"
+    candidate_value: migration_index_hints_and_missing_paths
+    risks:
+      - stale_path_claims
+      - unverified_commit_references
+    proposed_github_receipt_path: /tmp/workspace/atlaslattice/manus-artifacts/archive/spec/archive-mine/FOSSIL_TO_CURRENT_GITHUB_RECEIPT_CROSSWALK_v0.1.yaml
+    review_lane: TIDELOCK
+  - delta_id: N-DELTA-002
+    source_title: "SHELDONBRAIN OS — 12×12 Master Index — 144 Spheres"
+    candidate_value: ontology_groupings_for_registry_tagging
+    risks:
+      - old_canon_language
+      - taxonomy_drift
+    proposed_github_receipt_path: /tmp/workspace/atlaslattice/manus-artifacts/archive/spec/archive-mine/SOURCE_SURFACE_REGISTRY_v0.1.yaml
+    review_lane: AtlasBrain
+  - delta_id: N-DELTA-003
+    source_title: "JANUS v2 — Constitutional Continuity Hub"
+    candidate_value: continuity_state_machine_inputs
+    risks:
+      - epoch_semantic_drift
+      - authority_wording_drift
+    proposed_github_receipt_path: /tmp/workspace/atlaslattice/manus-artifacts/governance
+    review_lane: Lucerna
+  - delta_id: N-DELTA-004
+    source_title: "SheldClaude BOOT v2.1 — S1 Anthropic Constitutional Scribe"
+    candidate_value: salvageable_structure_after_quarantine
+    risks:
+      - attribution_contamination
+      - claude_authority_leakage
+    proposed_github_receipt_path: /tmp/workspace/atlaslattice/manus-artifacts/archive/spec/archive-mine/CLAUDE_CONTAMINATION_LABELS_v0.1.yaml
+    review_lane: Hashlight
+hard_boundary: "Useful delta ≠ automatic adoption; quarantine and human review required."

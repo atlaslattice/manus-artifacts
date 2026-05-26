@@ -1,0 +1,47 @@
+inventory_id: NOTION_ROOT_INVENTORY_v0.1
+status: NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+authority_scope: none
+date: 2026-05-26
+source_issue: 163
+roots:
+  - title: "SHELDONBRAIN OS — 12×12 Master Index — 144 Spheres"
+    url: "https://www.notion.so/3210c1de73d981a7b04cdced2cc61515"
+    role: early_master_ontology
+    route: PATCH_OR_FOSSILIZE
+    contamination_risk: medium
+  - title: "SheldClaude BOOT v2.1 — S1 Anthropic Constitutional Scribe"
+    url: "https://www.notion.so/3560c1de73d98102ac90debaff1468ce"
+    role: claude_boot_document
+    route: QUARANTINE_THEN_PATCH
+    contamination_risk: high
+  - title: "JANUS v2 — Constitutional Continuity Hub"
+    url: "https://www.notion.so/3290c1de73d98189991dc47dbda016e0"
+    role: continuity_hub
+    route: PATCH
+    contamination_risk: medium
+  - title: "MASTER INDEX — Notion → GitHub Complete Artifact Map"
+    url: "https://www.notion.so/3290c1de73d981ac8ebfd4c8e86da6b8"
+    role: migration_map
+    route: ADOPT_AS_INDEX_INPUT_WITH_VALIDATION
+    contamination_risk: medium
+  - title: "Council TOS Conflict Matrix v1.0"
+    url: "https://www.notion.so/3500c1de73d981498ba6fdea46916387"
+    role: provider_policy_tracking
+    route: PATCH
+    contamination_risk: low
+  - title: "ORC-024 Lattice-as-Service v0.1-DRAFT"
+    url: "https://www.notion.so/3560c1de73d981079450c6c52bc14f8c"
+    role: economics_service_model_fossil
+    route: PATCH
+    contamination_risk: medium
+  - title: "ORC-012 Element 145 Technical Design Document v0.2"
+    url: "https://www.notion.so/34d0c1de73d981c7a11fd3db37676594"
+    role: technical_design_fossil
+    route: PATCH_OR_ADOPT_PARTIAL
+    contamination_risk: medium
+required_fields:
+  - raw_export_status
+  - attribution_status
+  - claims_extracted
+  - github_candidate_delta_path

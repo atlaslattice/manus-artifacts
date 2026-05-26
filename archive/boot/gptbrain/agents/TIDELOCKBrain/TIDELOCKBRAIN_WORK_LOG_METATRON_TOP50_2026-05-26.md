@@ -70,3 +70,20 @@ repo: atlaslattice/manus-artifacts
 - Added explicit source-date + officiality boundary register.
 - Added schema-required boundary fields (`not_official`, `not_deployed`, `not_canon`, `authority_scope=none`).
 - Added compatibility gates that block partnership, deployment, canon, and authority inference.
+
+## Module 4 Increment (2026-05-26)
+
+10. Executed new requirement: **Archive Mine — Notion/Drive/GitHub/website fossil reconciliation**.
+11. Added Module 4 source-surface and reconciliation packet set under:
+    - `archive/spec/archive-mine/`
+12. Logged source-gravity lanes (#160 parent; #158, #159, #163, #165, #168, #169, #171, #173, #175) in registry metadata.
+
+### Module 4 receipts
+
+- Built `SOURCE_SURFACE_REGISTRY_v0.1.yaml`.
+- Inventoried Notion roots and Drive roots.
+- Inventoried GitHub archive lanes and website canon surfaces.
+- Added Claude contamination labels packet.
+- Extracted candidate delta packets for Notion fossils and Drive reports.
+- Created canon recoverability manifest (issue #171 package requirements).
+- Built fossil → current GitHub receipt crosswalk.

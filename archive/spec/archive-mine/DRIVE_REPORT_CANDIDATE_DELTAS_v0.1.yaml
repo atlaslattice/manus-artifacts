@@ -1,0 +1,34 @@
+delta_packet_id: DRIVE_REPORT_CANDIDATE_DELTAS_v0.1
+status: NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+authority_scope: none
+date: 2026-05-26
+source_issues:
+  - 169
+  - 175
+deltas:
+  - delta_id: D-DELTA-001
+    source_title: "deep-research-report (23)(2).md"
+    candidate_value: DELTA-005_claim_objects_and_validation_debt
+    risks:
+      - internal_thesis_vs_external_support_blur
+      - receipt_gaps
+    proposed_github_receipt_path: /tmp/workspace/atlaslattice/manus-artifacts/archive/spec/archive-mine/CANON_RECOVERABILITY_MANIFEST_v0.1.yaml
+    review_lane: AtlasBrain
+  - delta_id: D-DELTA-002
+    source_title: "Atlas-Lattice_Complete-Doctrine-Invariant-Registry_v1-1_2026-04-29.md"
+    candidate_value: doctrine_index_candidates_for_gap_checking
+    risks:
+      - stale_or_duplicate_copies
+      - canon_status_drift
+    proposed_github_receipt_path: /tmp/workspace/atlaslattice/manus-artifacts/docs
+    review_lane: TIDELOCK
+  - delta_id: D-DELTA-003
+    source_title: "MULTI_COUNCIL_INTEGRATION_SWEEP_v1-0_2026-04-29.md"
+    candidate_value: integration_claims_for_adversarial_review_queue
+    risks:
+      - partnership_overclaim
+      - deployment_overclaim
+    proposed_github_receipt_path: /tmp/workspace/atlaslattice/manus-artifacts/archive/knowledge_graph
+    review_lane: Lucerna
+hard_boundary: "Drive reports are candidate extraction inputs only."

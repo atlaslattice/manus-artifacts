@@ -1,0 +1,27 @@
+inventory_id: WEBSITE_CANON_SURFACE_INVENTORY_v0.1
+status: NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+authority_scope: none
+date: 2026-05-26
+policy_rule: "Website = canon surface when explicitly ratified/published there."
+surfaces:
+  - surface_id: website_publication_gate_policy
+    type: governance_policy
+    evidence_path: /tmp/workspace/atlaslattice/manus-artifacts/governance/WEBSITE_PUBLICATION_GATE.md
+    recoverability_status: defined
+  - surface_id: canon_lifecycle_policy
+    type: governance_policy
+    evidence_path: /tmp/workspace/atlaslattice/manus-artifacts/docs/CANON_LIFECYCLE.md
+    recoverability_status: defined
+  - surface_id: trust_charter_policy
+    type: governance_policy
+    evidence_path: /tmp/workspace/atlaslattice/manus-artifacts/docs/TRUST_CHARTER.md
+    recoverability_status: defined
+  - surface_id: live_website_canon_destination
+    type: public_destination
+    evidence_path: unknown_in_repo
+    recoverability_status: needs_source_registration
+    action: "Record explicit website URL + hash manifest before canon inference."
+hard_boundaries:
+  - "No unratified website page is canon."
+  - "GitHub visibility does not imply website canon."

@@ -1,0 +1,39 @@
+crosswalk_id: FOSSIL_TO_CURRENT_GITHUB_RECEIPT_CROSSWALK_v0.1
+status: NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+authority_scope: none
+date: 2026-05-26
+fossil_to_receipt:
+  - fossil_title: "SHELDONBRAIN OS — 12×12 Master Index — 144 Spheres"
+    fossil_surface: notion
+    current_github_receipt: /tmp/workspace/atlaslattice/manus-artifacts/archive/spec/archive-mine/NOTION_ROOT_INVENTORY_v0.1.yaml
+    mapping_confidence: medium
+    route: PATCH_OR_FOSSILIZE
+  - fossil_title: "SheldClaude BOOT v2.1 — S1 Anthropic Constitutional Scribe"
+    fossil_surface: notion
+    current_github_receipt: /tmp/workspace/atlaslattice/manus-artifacts/archive/spec/archive-mine/CLAUDE_CONTAMINATION_LABELS_v0.1.yaml
+    mapping_confidence: high
+    route: QUARANTINE_THEN_PATCH
+  - fossil_title: "JANUS v2 — Constitutional Continuity Hub"
+    fossil_surface: notion
+    current_github_receipt: /tmp/workspace/atlaslattice/manus-artifacts/governance
+    mapping_confidence: medium
+    route: PATCH
+  - fossil_title: "MASTER INDEX — Notion → GitHub Complete Artifact Map"
+    fossil_surface: notion
+    current_github_receipt: /tmp/workspace/atlaslattice/manus-artifacts/archive/spec/archive-mine/SOURCE_SURFACE_REGISTRY_v0.1.yaml
+    mapping_confidence: high
+    route: ADOPT_AS_INDEX_INPUT_WITH_VALIDATION
+  - fossil_title: "Atlas-Lattice_Complete-Doctrine-Invariant-Registry_v1-1_2026-04-29.md"
+    fossil_surface: drive
+    current_github_receipt: /tmp/workspace/atlaslattice/manus-artifacts/docs
+    mapping_confidence: medium
+    route: PATCH
+  - fossil_title: "deep-research-report (23)(2).md"
+    fossil_surface: drive
+    current_github_receipt: /tmp/workspace/atlaslattice/manus-artifacts/archive/spec/archive-mine/DRIVE_REPORT_CANDIDATE_DELTAS_v0.1.yaml
+    mapping_confidence: high
+    route: EXTRACT_DELTA_THEN_REVIEW
+boundary_notes:
+  - "Fossil record is preserved but not authority."
+  - "Crosswalk mapping does not promote canon."

@@ -1,0 +1,30 @@
+labels_id: CLAUDE_CONTAMINATION_LABELS_v0.1
+status: NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+authority_scope: none
+date: 2026-05-26
+source_issue: 173
+labels:
+  - label: CLAUDE_QUARANTINE
+    meaning: claude_touched_material_requires_quarantine_first
+    default_action: preserve_raw_then_review
+  - label: ATTRIBUTION_CONTAMINATION
+    meaning: authorship_or_inventor_claim_not_trustworthy_without_human_root_review
+    default_action: strip_authority_claims
+  - label: AUTHORITY_LEAKAGE_RISK
+    meaning: text_overstates_model_or_surface_authority
+    default_action: downgrade_to_candidate_and_patch
+  - label: RECEIPT_MISSING
+    meaning: claim_lacks_verifiable_receipt_anchor
+    default_action: block_delta_promotion
+  - label: CANON_DRIFT_RISK
+    meaning: old_or_unqualified_canon_language_detected
+    default_action: patch_with_current_boundary_rule
+  - label: DEPLOYMENT_DRIFT_RISK
+    meaning: unsupported_deployment_language_detected
+    default_action: force_not_deployed_marking
+metadata_patch:
+  quarantine_required: true
+  model_surface: Claude
+  author_claim_status: contaminated_or_unverified
+  authority_scope: none
