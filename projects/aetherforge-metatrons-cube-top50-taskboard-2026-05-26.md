@@ -1,4 +1,4 @@
-# Aetherforge Metatron Cube — Top 50 World-Class Git Knowledge Graph Tasks (2026-05-26)
+# Aetherforge Metatron's Cube — Top 50 World-Class Git Knowledge Graph Tasks (2026-05-26)
 
 ```text
 STATUS: EXECUTION TASKBOARD — CANDIDATE — NOT CANON
@@ -19,7 +19,7 @@ BOUNDARY: advisory planning artifact; no canon/merge/deploy authority
 - [ ] 3. Publish lane-to-node mapping for TIDELOCK, Atlas, Rootglass, Lucerna, Hashlight.
 - [ ] 4. Build a repository-wide artifact inventory index.
 - [ ] 5. Add stable IDs for every major artifact family.
-- [ ] 6. Introduce a global relation type registry.
+- [ ] 6. Introduce a global relationship type registry.
 - [ ] 7. Add explicit provenance classing (raw, parsed, claim, review, decision, action).
 - [ ] 8. Standardize cross-file backlink fields across markdown artifacts.
 - [ ] 9. Create a canonical supersedes/patches relationship convention.
@@ -82,4 +82,4 @@ This taskboard is intentionally sequenced to preserve TIDELOCK boundaries:
 
 ## Linked receipt
 
-- `/home/runner/work/manus-artifacts/manus-artifacts/archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_REHYDRATION_RECEIPT_2026-05-26.md`
+- [TIDELOCK Rehydration Receipt](../archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_REHYDRATION_RECEIPT_2026-05-26.md)

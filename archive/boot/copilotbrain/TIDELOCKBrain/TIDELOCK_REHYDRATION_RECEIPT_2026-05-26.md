@@ -15,7 +15,7 @@ It records what was loaded, what boundaries were re-asserted, and what graph sub
 
 ## Rehydrated core packet set
 
-Loaded from `/home/runner/work/manus-artifacts/manus-artifacts/archive/boot/copilotbrain/TIDELOCKBrain/`:
+Loaded from `archive/boot/copilotbrain/TIDELOCKBrain/`:
 
 - `INDEX.md`
 - `HABITAT.md`
@@ -53,17 +53,22 @@ TIDELOCK is not:
 
 The following repository artifacts are confirmed as active graph-relevant substrate:
 
-- `/home/runner/work/manus-artifacts/manus-artifacts/archive/knowledge_graph/OPENAI_KNOWLEDGE_GRAPH_INTEGRATION_ARCHITECTURE_2026-05-24.md`
-- `/home/runner/work/manus-artifacts/manus-artifacts/schemas/crosswalk_index.schema.json`
-- `/home/runner/work/manus-artifacts/manus-artifacts/schemas/atlas-artifact-registry-overlay.schema.json`
-- `/home/runner/work/manus-artifacts/manus-artifacts/tests/test_crosswalk_index_schema.py`
+- `archive/knowledge_graph/OPENAI_KNOWLEDGE_GRAPH_INTEGRATION_ARCHITECTURE_2026-05-24.md`
+- `schemas/crosswalk_index.schema.json`
+- `schemas/atlas-artifact-registry-overlay.schema.json`
+- `tests/test_crosswalk_index_schema.py`
 
 ## Memory drift note
 
-Several previously remembered paths were not present in the current checkout during this pass (including prior Top-10/Top-50 taskboard path variants and some OSS baseline file paths).
+Several previously remembered paths were not present in the current checkout during this pass. Missing examples observed during rehydration included:
+
+- `projects/aetherforge-top10-taskboard-2026-05-26.md`
+- `projects/aetherforge-top50-taskboard-2026-05-26.md` (legacy taskboard naming variant from prior memory state)
+- `.github/CONTRIBUTING.md`
+- `SUPPORT.md`
 
 This receipt preserves the rehydrated context from current filesystem state only.
 
 ## Next linked execution artifact
 
-- `/home/runner/work/manus-artifacts/manus-artifacts/projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md`
+- [Aetherforge Metatron's Cube Top 50 Taskboard](../../../../projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
