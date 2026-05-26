@@ -77,3 +77,5 @@ constraints:
   - execution_gate_required must be true
   - canon_requires_website_publication must be true
   - recognized_authorities must be non-empty
+  - canon_status defaults to not_canon
+  - deployment_status defaults to not_deployable

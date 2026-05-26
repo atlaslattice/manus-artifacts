@@ -69,3 +69,6 @@ constraints:
   - canon_status = ratified_canon requires ratification_event_id
   - deployment_status != not_deployable requires governance_event_id
   - expired ratification_expiry triggers trust_state → under_review
+  - ratification_event_id must be externally authorized (no self-ratification)
+  - canon_status defaults to not_canon
+  - deployment_status defaults to not_deployable

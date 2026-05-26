@@ -68,6 +68,18 @@ def test_canon_and_deployment_defaults(schema_name: str):
     assert fields["deployment_status"].get("default") == "not_deployable"
 
 
+@pytest.mark.parametrize("schema_name", sorted(REQUIRED_SCHEMA_FILES))
+def test_default_constraints_declared(schema_name: str):
+    """
+    Machine-checkable wording guard:
+      constraints section must explicitly declare default canon/deploy posture.
+    """
+    schema = _load_schema(schema_name)
+    constraints = "\n".join(schema.get("constraints", []))
+    assert "canon_status defaults to not_canon" in constraints
+    assert "deployment_status defaults to not_deployable" in constraints
+
+
 def test_no_object_can_self_ratify_constraints():
     """
     Explicit no-self-ratification controls must exist where ratification is modeled.
