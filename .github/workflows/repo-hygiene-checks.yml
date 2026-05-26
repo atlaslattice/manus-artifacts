@@ -8,6 +8,8 @@ jobs:
   hygiene:
     name: Conflict markers & workflow YAML syntax
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - uses: actions/checkout@v4
