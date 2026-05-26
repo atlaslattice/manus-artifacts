@@ -17,6 +17,14 @@ _ORDERINGS = {
     "public_claim": {"PRIVATE": 0, "PUBLIC_VISIBLE": 1, "AUTHORITATIVE_CLAIM": 2},
 }
 
+_DELTA_KEYS = {
+    "authority": "authority_grant_id",
+    "canon": "ratification_event_id",
+    "deployment": "deployment_approval_id",
+    "proof": "proof_attestation_id",
+    "public_claim": "public_claim_approval_id",
+}
+
 
 def _level(kind: str, value: str) -> int:
     return _ORDERINGS[kind].get(value, -1)
@@ -41,39 +49,39 @@ def compatible(edge: dict[str, Any]) -> Decision:
     new = dict(edge.get("to", {}))
     delta = dict(edge.get("governance_delta", {}))
 
-    if _increase("canon", old, new) and not _has_delta(delta, "ratification_event_id"):
-        return "FALSE"
-    if _increase("authority", old, new) and not _has_delta(delta, "authority_grant_id"):
-        return "FALSE"
-    if _increase("deployment", old, new) and not _has_delta(delta, "deployment_approval_id"):
-        return "FALSE"
-    if _increase("proof", old, new) and not _has_delta(delta, "proof_attestation_id"):
-        return "FALSE"
-    if _increase("public_claim", old, new) and not _has_delta(delta, "public_claim_approval_id"):
-        return "FALSE"
-
-    # Receipt-only path cannot become proof unless explicitly attested.
-    if old.get("proof") == "RECEIPT_ONLY" and new.get("proof") == "PROOF":
-        if not _has_delta(delta, "proof_attestation_id"):
-            return "FALSE"
-
-    # Public visibility cannot become authority unless explicitly granted.
-    if old.get("public_claim") == "PUBLIC_VISIBLE" and _increase("authority", old, new):
-        if not _has_delta(delta, "authority_grant_id"):
+    for kind, delta_key in _DELTA_KEYS.items():
+        if _increase(kind, old, new) and not _has_delta(delta, delta_key):
             return "FALSE"
 
     return "TRUE"
 
 
 def launder(path: Iterable[dict[str, Any]]) -> bool:
-    """Return True if the path composes into unauthorized status escalation."""
-    for edge in path:
-        if compatible(edge) != "TRUE":
+    """Return True when a path causes unauthorized status escalation."""
+    edges = list(path)
+    if not edges:
+        return False
+
+    start = dict(edges[0].get("from", {}))
+    end = dict(edges[-1].get("to", {}))
+
+    seen_deltas: set[str] = set()
+    for edge in edges:
+        delta = dict(edge.get("governance_delta", {}))
+        for key in _DELTA_KEYS.values():
+            if _has_delta(delta, key):
+                seen_deltas.add(key)
+
+    for kind, delta_key in _DELTA_KEYS.items():
+        if _increase(kind, start, end) and delta_key not in seen_deltas:
             return True
+
     return False
 
 
 def compatible_path(path: Iterable[dict[str, Any]]) -> bool:
     """Path rule: all edges TRUE and NOT launder(path)."""
     edges = list(path)
-    return all(compatible(edge) == "TRUE" for edge in edges) and not launder(edges)
+    if any(compatible(edge) != "TRUE" for edge in edges):
+        return False
+    return not launder(edges)
