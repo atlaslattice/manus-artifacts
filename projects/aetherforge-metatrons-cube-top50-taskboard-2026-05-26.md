@@ -83,9 +83,11 @@ Evidence: [CANON_UX_IDENTITY_TOOLKIT](../docs/CANON_UX_IDENTITY_TOOLKIT.md)
 - [ ] Execute Ring III (21–30)
 - [ ] Execute Ring IV (31–40)
 - [ ] Execute Ring V (41–50)
+- [x] Execute TIDELOCK Harbor Floodgate requirement (dedupe, supersession, boundary audit, mergeability language, identifier/history reconciliation)
 
 ## Status Protocol
 
 - Use checklist updates to track execution.
 - Attach receipts when a task flips to complete.
 - Log implementation updates in TIDELOCKBrain.
+- Do not treat partial visibility, draft PR status, or “brain” folder presence as authority proof.
