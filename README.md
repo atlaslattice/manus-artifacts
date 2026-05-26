@@ -21,6 +21,7 @@ This repository contains research, health data, and system artifacts generated a
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
 - **[Aetherforge Top-10 Taskboard](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — Task valuation, bounty/trophy model, and deployed solution map.
 - **[Aetherforge Game World (Module 8)](./projects/aetherforge-game-world/README.md)** — Quest taxonomy, Archive Bowl index, Omnispec candidate framing, and onboarding template.
+- **[Aetherforge Top-100 Quest Ledger](./projects/aetherforge-game-world/AETHERFORGE_TOP100_QUEST_LEDGER_v0.1.md)** — Optimal next-100 tasks across all repo components in Metatron's Cube ring topology.
 
 ### Governance & Council
 - **[Council](./council/)** — Trinity and Pantheon Council session archives.
