@@ -1,0 +1,91 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "O_AI Packet v0.1"
+description: "CANDIDATE ONLY — NOT CANON — NOT DEPLOYABLE. OpenAI-style task packet schema with explicit gates."
+type: object
+required:
+  - schema_version
+  - packet_type
+  - raw_export_status
+  - thread_time_range
+  - access_scope
+  - epistemic_label
+  - authority_scope
+  - gates
+properties:
+  schema_version:
+    const: "0.1"
+  packet_type:
+    enum: [summary_packet, evidence_packet, execution_request]
+  raw_export_status:
+    enum: [full_raw, partial_raw, summary_only, unavailable]
+  thread_time_range:
+    type: object
+    required: [start, end, timezone]
+    properties:
+      start: {type: string}
+      end: {type: string}
+      timezone: {type: string}
+  access_scope:
+    type: object
+    required: [visible_sources, unavailable_sources, assumed_context]
+    properties:
+      visible_sources:
+        type: array
+        items: {type: string}
+      unavailable_sources:
+        type: array
+        items: {type: string}
+      assumed_context:
+        type: array
+        items: {type: string}
+  epistemic_label:
+    type: string
+  authority_scope:
+    type: string
+  public_use_status:
+    enum: [source_incomplete, source_complete]
+  gates:
+    type: object
+    required:
+      - provenance_gate
+      - safety_gate
+      - governance_gate
+      - data_residency_gate
+    properties:
+      provenance_gate: {type: boolean}
+      safety_gate: {type: boolean}
+      governance_gate: {type: boolean}
+      data_residency_gate: {type: boolean}
+      human_permission_gate: {type: boolean}
+      receipt_gate: {type: boolean}
+allOf:
+  - if:
+      properties:
+        raw_export_status:
+          const: summary_only
+    then:
+      not:
+        properties:
+          public_use_status:
+            const: source_complete
+  - if:
+      properties:
+        packet_type:
+          const: execution_request
+    then:
+      properties:
+        gates:
+          required:
+            - provenance_gate
+            - safety_gate
+            - governance_gate
+            - data_residency_gate
+            - human_permission_gate
+            - receipt_gate
+          properties:
+            provenance_gate: {const: true}
+            safety_gate: {const: true}
+            governance_gate: {const: true}
+            data_residency_gate: {const: true}
+            human_permission_gate: {const: true}
+            receipt_gate: {const: true}

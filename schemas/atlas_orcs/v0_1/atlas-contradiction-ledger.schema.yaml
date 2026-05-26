@@ -1,0 +1,33 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Atlas Contradiction Ledger"
+description: "CANDIDATE ONLY — NOT CANON — NOT DEPLOYABLE. Machine-checkable Atlas/ORCS schema v0.1."
+type: object
+required:
+  - schema_version
+  - artifact_id
+  - canon_status
+  - deployment_status
+  - self_ratified
+properties:
+  schema_version:
+    const: "0.1"
+  artifact_id:
+    type: string
+    minLength: 1
+  canon_status:
+    type: string
+    default: not_canon
+    enum: [not_canon, candidate, reviewed, ratified]
+  deployment_status:
+    type: string
+    default: not_deployable
+    enum: [not_deployable, candidate_only, deployable]
+  self_ratified:
+    const: false
+  provenance_receipt_id:
+    type: ["string", "null"]
+  summary_ref:
+    type: ["string", "null"]
+  source_ref:
+    type: ["string", "null"]
+additionalProperties: true

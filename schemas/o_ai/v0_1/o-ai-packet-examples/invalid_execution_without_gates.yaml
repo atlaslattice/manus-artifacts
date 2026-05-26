@@ -1,0 +1,20 @@
+schema_version: "0.1"
+packet_type: execution_request
+raw_export_status: full_raw
+thread_time_range:
+  start: "2026-05-20T00:00:00Z"
+  end: "2026-05-20T01:00:00Z"
+  timezone: "UTC"
+access_scope:
+  visible_sources: ["repo:ops"]
+  unavailable_sources: []
+  assumed_context: []
+epistemic_label: "execution_candidate"
+authority_scope: "candidate_only"
+gates:
+  provenance_gate: true
+  safety_gate: false
+  governance_gate: true
+  data_residency_gate: true
+  human_permission_gate: false
+  receipt_gate: false

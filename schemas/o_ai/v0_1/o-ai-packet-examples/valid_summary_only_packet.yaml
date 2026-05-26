@@ -1,0 +1,19 @@
+schema_version: "0.1"
+packet_type: summary_packet
+raw_export_status: summary_only
+thread_time_range:
+  start: "2026-05-20T00:00:00Z"
+  end: "2026-05-20T01:00:00Z"
+  timezone: "UTC"
+access_scope:
+  visible_sources: ["repo:docs"]
+  unavailable_sources: ["private_dm"]
+  assumed_context: ["prior meeting context"]
+epistemic_label: "candidate_summary"
+authority_scope: "none"
+public_use_status: source_incomplete
+gates:
+  provenance_gate: true
+  safety_gate: true
+  governance_gate: true
+  data_residency_gate: true

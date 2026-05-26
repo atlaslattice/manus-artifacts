@@ -1,0 +1,100 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Native Thread Ingestion Packet v0.1"
+description: "CANDIDATE ONLY — NOT CANON — NOT DEPLOYABLE. Native thread ingestion schema with anti-false-completeness guardrails."
+type: object
+required:
+  - schema_version
+  - seat_name
+  - model_surface
+  - source_thread_label
+  - thread_time_range
+  - raw_export_status
+  - access_scope
+  - canon_status
+  - deployment_status
+  - strongest_safe_claim
+  - next_action
+properties:
+  schema_version:
+    const: "0.1"
+  seat_name:
+    type: string
+  model_surface:
+    type: string
+  source_thread_label:
+    type: string
+  thread_time_range:
+    type: object
+    required: [start, end, timezone]
+    properties:
+      start: {type: string}
+      end: {type: string}
+      timezone: {type: string}
+  raw_export_status:
+    enum: [full_raw, partial_raw, summary_only, unavailable]
+  access_scope:
+    type: object
+    required: [visible_sources, unavailable_sources, assumed_context]
+    properties:
+      visible_sources:
+        type: array
+        items: {type: string}
+      unavailable_sources:
+        type: array
+        items: {type: string}
+      assumed_context:
+        type: array
+        items: {type: string}
+  source_refs:
+    type: array
+    items: {type: string}
+  sha256_if_available:
+    type: ["string", "null"]
+  privacy_status:
+    type: ["string", "null"]
+  key_events:
+    type: array
+    items: {type: string}
+  artifacts_created:
+    type: array
+    items: {type: string}
+  claims_extracted:
+    type: array
+    items: {type: string}
+  contradictions_or_uncertainties:
+    type: array
+    items: {type: string}
+  overclaims_to_avoid:
+    type: array
+    items: {type: string}
+  identity_drift_events:
+    type: array
+    items: {type: string}
+  canon_status:
+    const: not_canon
+  deployment_status:
+    const: not_deployable
+  ingestion_completeness:
+    enum: [partial_ingestion, full_ingestion]
+  strongest_safe_claim:
+    type: string
+  strongest_safe_claim_caveat:
+    type: ["string", "null"]
+  next_action:
+    type: string
+allOf:
+  - if:
+      properties:
+        raw_export_status:
+          const: summary_only
+    then:
+      not:
+        properties:
+          ingestion_completeness:
+            const: full_ingestion
+  - if:
+      properties:
+        raw_export_status:
+          enum: [summary_only, unavailable, partial_raw]
+    then:
+      required: [strongest_safe_claim_caveat]
