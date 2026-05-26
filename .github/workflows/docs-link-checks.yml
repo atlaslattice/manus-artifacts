@@ -28,27 +28,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install lychee link checker
-        run: |
-          curl -sL https://github.com/lycheeverse/lychee/releases/download/lychee-v0.15.1/lychee-v0.15.1-x86_64-unknown-linux-gnu.tar.gz | tar xz
-          mv lychee /usr/local/bin/
-          lychee --version
-
-      - name: Check internal links in markdown files
-        run: |
-          lychee \
-            --offline \
-            --include-fragments \
-            --exclude-path '.git' \
-            --exclude-path 'aluminum-os-core/target' \
-            --exclude 'https?://' \
-            --format markdown \
-            '**/*.md' \
-          || true
-        # We use `|| true` so the step doesn't block on external URLs.
-        # Internal link failures will be reported in the summary.
-
-      - name: Strict internal-only link check (fail on broken internal links)
+      - name: Check internal-only links (fail on broken internal links)
         run: |
           python3 << 'EOF'
           import os, re, sys
