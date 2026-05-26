@@ -19,6 +19,7 @@ This repository contains research, health data, and system artifacts generated a
 - **[Free Bank](./projects/free-bank/)** — Banking revolution and financial sovereignty.
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
+- **[Aetherforge Top-10 Taskboard](./projects/AETHERFORGE_TOP10_TASKBOARD_2026-05-26.md)** — Task valuation, bounty/trophy model, and deployed solution map.
 
 ### Governance & Council
 - **[Council](./council/)** — Trinity and Pantheon Council session archives.

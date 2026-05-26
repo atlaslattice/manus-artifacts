@@ -93,3 +93,32 @@ This is a **sovereign-to-sovereign gift** of complete source code to:
 🕊️💧🔐💰
 **The revolution is code. The code is ready. The gift is prepared.**
 **Let the fork-and-replace cycle begin.**
+
+---
+
+## ⚒️ Aetherforge Deployment Pack (deployed)
+
+### A1 — Canon truth spine for project lane
+- **Solution deployed:** Free Bank lane now explicitly routes through in-repo artifact authority first.
+- **Execution order:** lane doc → architecture/safety sections → tranche/risk/KPI pack.
+
+### A2 — Implementation tranche map (MVP → scale)
+- **Solution deployed:**
+  - **Tranche 1 (0-6 months):** wallet + payments MVP, core KYC/KYB rails, fraud baseline.
+  - **Tranche 2 (6-18 months):** multi-rail settlement, open API partner layer, audit automation.
+  - **Tranche 3 (18-36 months):** sovereign fork kits, regional compliance adapters, resilience hardening.
+
+### A3 — Risk/control matrix (custody, compliance, fraud)
+- **Solution deployed (control anchors):**
+  - custody risk → non-custodial key ownership default + emergency recovery policy
+  - compliance risk → jurisdiction profile per deployment fork
+  - fraud risk → real-time anomaly detection + human escalation
+  - infra risk → failover + immutable audit trail
+
+### A4 — KPI scoreboard
+- **Solution deployed (initial KPI grid):**
+  - cost-to-serve per user
+  - fraud loss rate
+  - settlement latency
+  - user retention and active transaction ratio
+  - incident MTTR and audit closure time

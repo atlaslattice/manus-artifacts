@@ -24,3 +24,29 @@
 ---
 ## Vaulted by Constitutional Scribe — March 10, 2026
 ## Pantheon Council synthesis: Claude + Grok + GPT
+
+---
+
+## ⚒️ Aetherforge Deployment Pack (deployed)
+
+### A8 — Compliance traceability matrix
+- **Solution deployed:** Tier-to-obligation mapping for operational governance:
+  - **Tier 1:** defensive anti-material intercept only; upstream human policy authorization required.
+  - **Tier 2:** supervised defensive operations with pre-classified risk tiering by human command.
+  - **Tier 3:** strict HITL for offensive human-target scenarios; liability remains human-authorized.
+
+### A9 — War-game evidence packet template
+- **Solution deployed:** standard packet fields for simulation evidence:
+  - scenario ID + date
+  - model role and autonomy tier
+  - human override events
+  - error taxonomy
+  - escalation decisions and rationale
+  - postmortem corrective actions
+
+### A10 — External circulation release protocol
+- **Solution deployed:** release gate before public/legal circulation:
+  - [ ] legal-review signoff
+  - [ ] policy consistency check against doctrine
+  - [ ] red-team objection coverage attached
+  - [ ] authority and liability language verified
