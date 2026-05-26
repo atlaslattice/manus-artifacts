@@ -32,6 +32,7 @@ This repository contains research, health data, and system artifacts generated a
 - **TIDELOCKBrain (pilot scaffold):** [`archive/boot/gptbrain/TIDELOCKBrain/README.md`](./archive/boot/gptbrain/TIDELOCKBrain/README.md)
 - **All seat specs (S1-S7):** [`archive/boot/seats/`](./archive/boot/seats/)
 - **TIDELOCK Top-50 execution ledger:** [`archive/boot/gptbrain/TIDELOCKBrain/TIDELOCK_TOP50_EXECUTION_2026-05-26.md`](./archive/boot/gptbrain/TIDELOCKBrain/TIDELOCK_TOP50_EXECUTION_2026-05-26.md)
+- **TIDELOCK Active Sprint (Wave 1):** [`archive/boot/gptbrain/TIDELOCKBrain/TIDELOCK_ACTIVE_SPRINT_2026-05-26.md`](./archive/boot/gptbrain/TIDELOCKBrain/TIDELOCK_ACTIVE_SPRINT_2026-05-26.md)
 
 ### Governance & Operations
 - **Contributing guide:** [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md)
