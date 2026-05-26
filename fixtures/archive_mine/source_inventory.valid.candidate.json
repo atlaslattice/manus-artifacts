@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1",
+  "inventory_id": "inv-archive-mine-2026-05-26",
+  "generated_at": "2026-05-26T18:52:32Z",
+  "default_trust_status": "candidate",
+  "sources": [
+    {
+      "source_id": "notion-root-export",
+      "surface": "notion",
+      "artifact_path": "integrations/notion/root-export-2026-05-26.json",
+      "ingest_status": "raw",
+      "trust_status": "candidate",
+      "contamination_flags": [],
+      "authority_blocked": false,
+      "searchable": true,
+      "canon_receipt_id": null
+    },
+    {
+      "source_id": "drive-legacy-bullshit-olympics",
+      "surface": "drive",
+      "artifact_path": "integrations/drive/bullshit-olympics-archive.zip",
+      "ingest_status": "parsed",
+      "trust_status": "quarantined",
+      "contamination_flags": [
+        "bullshit_olympics_fossil",
+        "stale_source"
+      ],
+      "authority_blocked": true,
+      "searchable": true,
+      "canon_receipt_id": null
+    },
+    {
+      "source_id": "website-canon-snapshot",
+      "surface": "website",
+      "artifact_path": "archive/spec/archive-mine/website-canon-snapshot-2026-05-26.json",
+      "ingest_status": "parsed",
+      "trust_status": "candidate",
+      "contamination_flags": [],
+      "authority_blocked": false,
+      "searchable": true,
+      "canon_receipt_id": "receipt-web-2026-05-26-001"
+    }
+  ]
+}

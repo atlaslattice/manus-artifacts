@@ -1,0 +1,70 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Archive Mine Canon Recoverability Package v0.1"
+description: "CANDIDATE ONLY — NOT CANON — NOT DEPLOYABLE. Website canon recoverability and audit receipt package."
+type: object
+required:
+  - schema_version
+  - package_id
+  - website_surface
+  - recoverable
+  - website_snapshots
+  - audit_events
+  - generated_at
+properties:
+  schema_version:
+    const: "0.1"
+  package_id:
+    type: string
+  website_surface:
+    const: website
+  recoverable:
+    type: boolean
+  generated_at:
+    type: string
+  website_snapshots:
+    type: array
+    items:
+      type: object
+      required:
+        - snapshot_id
+        - source_url
+        - artifact_ref
+        - sha256
+        - receipt_id
+      properties:
+        snapshot_id:
+          type: string
+        source_url:
+          type: string
+        artifact_ref:
+          type: string
+        sha256:
+          type: string
+          pattern: "^[a-fA-F0-9]{64}$"
+        receipt_id:
+          type: string
+  audit_events:
+    type: array
+    items:
+      type: object
+      required: [event_id, event_type, actor, timestamp]
+      properties:
+        event_id:
+          type: string
+        event_type:
+          enum: [captured, hashed, indexed, reviewed, adjudicated]
+        actor:
+          type: string
+        timestamp:
+          type: string
+allOf:
+  - if:
+      properties:
+        recoverable:
+          const: true
+    then:
+      properties:
+        website_snapshots:
+          minItems: 1
+        audit_events:
+          minItems: 1

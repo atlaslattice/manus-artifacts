@@ -1,0 +1,38 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Archive Mine Candidate Delta Packet v0.1"
+description: "CANDIDATE ONLY — NOT CANON — NOT DEPLOYABLE. Delta extraction packet for review lanes."
+type: object
+required:
+  - schema_version
+  - delta_packet_id
+  - deltas
+properties:
+  schema_version:
+    const: "0.1"
+  delta_packet_id:
+    type: string
+  deltas:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      required:
+        - delta_id
+        - source_artifact_id
+        - proposed_artifact_id
+        - extraction_reason
+        - authority_effect
+        - human_review_required
+      properties:
+        delta_id:
+          type: string
+        source_artifact_id:
+          type: string
+        proposed_artifact_id:
+          type: string
+        extraction_reason:
+          type: string
+        authority_effect:
+          const: none
+        human_review_required:
+          const: true

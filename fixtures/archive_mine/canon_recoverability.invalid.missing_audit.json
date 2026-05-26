@@ -1,0 +1,9 @@
+{
+  "schema_version": "0.1",
+  "package_id": "recoverability-invalid-2026-05-26",
+  "website_surface": "website",
+  "recoverable": true,
+  "generated_at": "2026-05-26T18:52:32Z",
+  "website_snapshots": [],
+  "audit_events": []
+}

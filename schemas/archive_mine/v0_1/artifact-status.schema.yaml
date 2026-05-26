@@ -1,0 +1,38 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Archive Mine Artifact Status Record v0.1"
+description: "CANDIDATE ONLY — NOT CANON — NOT DEPLOYABLE. Per-artifact status and contamination assignment."
+type: object
+required:
+  - schema_version
+  - artifact_id
+  - primary_status
+  - contamination_flags
+  - authority_blocked
+properties:
+  schema_version:
+    const: "0.1"
+  artifact_id:
+    type: string
+    minLength: 1
+  primary_status:
+    enum: [raw, parsed, candidate, quarantined, superseded, ratified]
+  contamination_flags:
+    type: array
+    items:
+      type: string
+  authority_blocked:
+    type: boolean
+  notes:
+    type: ["string", "null"]
+allOf:
+  - if:
+      properties:
+        contamination_flags:
+          minItems: 1
+    then:
+      properties:
+        authority_blocked:
+          const: true
+        primary_status:
+          not:
+            const: ratified

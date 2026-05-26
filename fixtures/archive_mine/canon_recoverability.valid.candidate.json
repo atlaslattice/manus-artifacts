@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1",
+  "package_id": "recoverability-2026-05-26",
+  "website_surface": "website",
+  "recoverable": true,
+  "generated_at": "2026-05-26T18:52:32Z",
+  "website_snapshots": [
+    {
+      "snapshot_id": "snap-001",
+      "source_url": "https://example.org/canon/page-1",
+      "artifact_ref": "archive/spec/archive-mine/website-canon-snapshot-2026-05-26.json",
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "receipt_id": "receipt-web-2026-05-26-001"
+    }
+  ],
+  "audit_events": [
+    {
+      "event_id": "evt-001",
+      "event_type": "captured",
+      "actor": "TIDELOCKBrain",
+      "timestamp": "2026-05-26T18:52:32Z"
+    }
+  ]
+}
