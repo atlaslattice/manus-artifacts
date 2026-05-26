@@ -16,6 +16,7 @@ This repository contains research, health data, and system artifacts generated a
   - [v0.1 Launch Decree](./bazinga/v0.1-launch-decree.md)
 
 ### Projects
+- **[Aetherforge Metatron Top 50 Taskboard](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)** — Canonical 5-ring execution board for a public, world-class archive.
 - **[Aetherforge Taskboard](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — Council execution board for top-priority tasks.
 - **[Free Bank](./projects/free-bank/)** — Banking revolution and financial sovereignty.
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
