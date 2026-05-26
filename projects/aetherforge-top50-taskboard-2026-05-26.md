@@ -3,6 +3,7 @@
 **Date:** 2026-05-26  
 **Framework:** Metatron's Cube (5 Rings × 10 Tasks)  
 **Governance:** Candidate artifacts until ratified by @atlaslattice
+**Module 8 Companion:** `./aetherforge-game-world/README.md`
 
 ---
 

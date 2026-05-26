@@ -43,6 +43,7 @@ Need vocabulary? → **[docs/GLOSSARY.md](./docs/GLOSSARY.md)**
 - **[Free Bank](./projects/free-bank/)** — Banking revolution and financial sovereignty.
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
+- **[Aetherforge Game World](./projects/aetherforge-game-world/README.md)** — Gameplay framing, Archive Bowl routing, and quest templates.
 
 ### Governance & Council
 - **[Council](./council/)** — Trinity and Pantheon Council session archives.
@@ -64,6 +65,7 @@ Need vocabulary? → **[docs/GLOSSARY.md](./docs/GLOSSARY.md)**
 ## 📋 Active Sprint
 
 **[Aetherforge Top-50 Taskboard](./projects/aetherforge-top50-taskboard-2026-05-26.md)** — 11/50 complete
+- **[Aetherforge Game World Onboarding](./projects/aetherforge-game-world/README.md)** — Module 8 candidate layer
 
 ---
 
