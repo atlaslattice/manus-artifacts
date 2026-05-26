@@ -1,0 +1,63 @@
+name: SBOM Generation
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  id-token: write
+
+jobs:
+  generate-sbom:
+    name: Generate SBOM for release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pip-licenses (for Python dependency SBOM)
+        run: pip install pip-licenses cyclonedx-bom
+
+      - name: Install project dependencies (best-effort)
+        run: |
+          for req in codebases/other/requirements.txt codebases/atlas-lattice/requirements.txt; do
+            if [ -f "$req" ]; then
+              pip install -r "$req" --quiet || true
+            fi
+          done
+
+      - name: Generate CycloneDX SBOM (Python)
+        run: |
+          cyclonedx-py environment \
+            --output-format json \
+            --output-file sbom-python.json || true
+
+      - name: Generate SBOM for repo files (syft)
+        uses: anchore/sbom-action@v0
+        with:
+          path: .
+          format: spdx-json
+          output-file: sbom-repo.spdx.json
+          artifact-name: sbom-repo.spdx.json
+
+      - name: Upload Python SBOM as artifact
+        if: hashFiles('sbom-python.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: sbom-python
+          path: sbom-python.json
+          retention-days: 90
+
+      - name: Attach SBOM to release
+        if: github.event_name == 'release'
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            sbom-repo.spdx.json
+            sbom-python.json

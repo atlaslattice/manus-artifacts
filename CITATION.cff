@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: >
+  If you use this archive, systems, or protocols in your research or work,
+  please cite it using the metadata below.
+title: "Manus Artifacts — Aetherforge Archive"
+authors:
+  - family-names: Sheldon
+    given-names: David
+    alias: atlaslattice
+    orcid: ""
+abstract: >
+  A public archive of research, governance frameworks, AI system architectures,
+  and constitutional substrates developed through the Aetherforge initiative.
+  Includes Aluminum OS (constitutional substrate for regenerative computing),
+  GPTBrain agent scaffolding, council governance records, and allied projects
+  spanning financial sovereignty, aerospace policy, and agentic autonomy.
+keywords:
+  - ai-governance
+  - constitutional-ai
+  - agentic-systems
+  - regenerative-computing
+  - open-source
+  - aluminum-os
+  - gptbrain
+license: Apache-2.0
+repository-code: "https://github.com/atlaslattice/manus-artifacts"
+date-released: "2026-05-26"
+version: "1.0.0-public"

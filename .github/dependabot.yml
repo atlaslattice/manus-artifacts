@@ -1,0 +1,45 @@
+version: 2
+updates:
+  # Python dependencies
+  - package-ecosystem: "pip"
+    directory: "/codebases/other"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    reviewers:
+      - "atlaslattice"
+    labels:
+      - "dependencies"
+      - "python"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(deps)"
+
+  - package-ecosystem: "pip"
+    directory: "/codebases/atlas-lattice"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    reviewers:
+      - "atlaslattice"
+    labels:
+      - "dependencies"
+      - "python"
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "chore(deps)"
+
+  # GitHub Actions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    reviewers:
+      - "atlaslattice"
+    labels:
+      - "dependencies"
+      - "github-actions"
+    open-pull-requests-limit: 10
+    commit-message:
+      prefix: "chore(deps)"

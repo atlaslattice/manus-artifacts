@@ -1,0 +1,85 @@
+name: Release Readiness
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag or version being assessed"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  release-readiness:
+    name: Release Readiness Checklist
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check LICENSE present
+        run: |
+          if [ ! -f LICENSE ]; then
+            echo "::error::LICENSE file is missing"
+            exit 1
+          fi
+          echo "✅ LICENSE present"
+
+      - name: Check CITATION.cff present
+        run: |
+          if [ ! -f CITATION.cff ]; then
+            echo "::warning::CITATION.cff is missing — archive is not citable"
+          else
+            echo "✅ CITATION.cff present"
+          fi
+
+      - name: Check SECURITY.md present
+        run: |
+          if [ ! -f .github/SECURITY.md ]; then
+            echo "::error::.github/SECURITY.md is missing"
+            exit 1
+          fi
+          echo "✅ SECURITY.md present"
+
+      - name: Check GOVERNANCE.md present
+        run: |
+          if [ ! -f GOVERNANCE.md ]; then
+            echo "::warning::GOVERNANCE.md is missing"
+          else
+            echo "✅ GOVERNANCE.md present"
+          fi
+
+      - name: Check for merge-conflict markers
+        run: |
+          if git grep -rn "^<<<<<<< \|^=======$\|^>>>>>>> " --include="*.md" .; then
+            echo "::error::Merge-conflict markers found in markdown files"
+            exit 1
+          fi
+          echo "✅ No merge-conflict markers"
+
+      - name: Check README exists and is non-trivial
+        run: |
+          if [ ! -f README.md ]; then
+            echo "::error::README.md is missing"
+            exit 1
+          fi
+          LINES=$(wc -l < README.md)
+          if [ "$LINES" -lt 10 ]; then
+            echo "::error::README.md has fewer than 10 lines — likely a stub"
+            exit 1
+          fi
+          echo "✅ README.md present ($LINES lines)"
+
+      - name: Summary
+        run: |
+          echo "## Release Readiness Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Check | Status |" >> $GITHUB_STEP_SUMMARY
+          echo "|---|---|" >> $GITHUB_STEP_SUMMARY
+          echo "| LICENSE | ✅ |" >> $GITHUB_STEP_SUMMARY
+          echo "| SECURITY.md | ✅ |" >> $GITHUB_STEP_SUMMARY
+          echo "| README.md | ✅ |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Release candidate is clear for publication." >> $GITHUB_STEP_SUMMARY
