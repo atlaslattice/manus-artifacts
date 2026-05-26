@@ -10,7 +10,7 @@ permissions:
 
 jobs:
   repo-hygiene:
-    name: Workflow syntax + merge marker checks
+    name: Workflow + doc + index + seed hygiene
     runs-on: ubuntu-latest
 
     steps:
@@ -30,15 +30,15 @@ jobs:
           import sys
           import yaml
 
-          paths = sorted(glob.glob(".github/workflows/*.yml"))
+          paths = sorted(glob.glob('.github/workflows/*.yml'))
           if not paths:
-              print("no workflow files found")
+              print('no workflow files found')
               sys.exit(1)
 
           for path in paths:
-              with open(path, "r", encoding="utf-8") as f:
+              with open(path, 'r', encoding='utf-8') as f:
                   yaml.safe_load(f)
-              print(f"yaml-parse-ok: {path}")
+              print(f'yaml-parse-ok: {path}')
           PY
 
       - name: Block merge conflict markers
@@ -48,3 +48,171 @@ jobs:
             exit 1
           fi
           echo "no merge markers found"
+
+      - name: Markdown link integrity checks
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+
+          repo = Path('.')
+          md_files = [
+              Path('README.md'),
+              Path('.github/CONTRIBUTING.md'),
+              Path('archive/boot/gptbrain/GPTBRAIN_INDEX_OF_INDEXES_2026-05-26.md'),
+              Path('archive/boot/atlasbrain/ATLASBRAIN_INDEX_2026-05-26.md'),
+              Path('archive/boot/gptbrain/KRAKOA_CANON_TRUTH_SPINE_2026-05-26.md'),
+          ]
+          link_re = re.compile(r'\[[^\]]+\]\(([^)]+)\)')
+          failures = []
+
+          for md in md_files:
+              if not md.exists():
+                  failures.append(f'missing markdown file for link check: {md}')
+                  continue
+              text = md.read_text(encoding='utf-8', errors='ignore')
+              for raw_target in link_re.findall(text):
+                  target = raw_target.strip()
+                  if not target or target.startswith(('http://', 'https://', 'mailto:', '#')):
+                      continue
+                  target = target.split('#', 1)[0]
+                  if target.startswith('./'):
+                      resolved = (md.parent / target[2:]).resolve()
+                  elif target.startswith('../'):
+                      resolved = (md.parent / target).resolve()
+                  elif target.startswith('/'):
+                      resolved = (repo / target.lstrip('/')).resolve()
+                  else:
+                      resolved = (md.parent / target).resolve()
+                  if not resolved.exists():
+                      failures.append(f'{md}: missing link target {raw_target}')
+
+          if failures:
+              print('\n'.join(failures))
+              raise SystemExit(1)
+          print(f'markdown-link-check-ok: {len(md_files)} markdown files scanned')
+          PY
+
+      - name: Warn on stale dated docs
+        run: |
+          python - <<'PY'
+          import re
+          from datetime import datetime, timezone
+          from pathlib import Path
+
+          now = datetime.now(timezone.utc).date()
+          stale_re = re.compile(r'^STALE AFTER:\s*(\d{4}-\d{2}-\d{2})\s*$', re.MULTILINE)
+          date_re = re.compile(r'^DATE:\s*(\d{4}-\d{2}-\d{2})\s*$', re.MULTILINE)
+          warned = 0
+
+          for path in Path('archive/boot').rglob('*.md'):
+              text = path.read_text(encoding='utf-8', errors='ignore')
+              stale = stale_re.search(text)
+              if stale:
+                  stale_date = datetime.strptime(stale.group(1), '%Y-%m-%d').date()
+                  if stale_date < now:
+                      print(f'::warning file={path}::stale after {stale_date} (review required)')
+                      warned += 1
+              elif date_re.search(text):
+                  print(f'::warning file={path}::dated doc missing STALE AFTER metadata')
+                  warned += 1
+
+          print(f'stale-doc-warning-scan-complete: {warned} warning(s)')
+          PY
+
+      - name: Required status header checks
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          required_files = [
+              Path('archive/boot/COUNCIL_BRAIN_INDEX.md'),
+              Path('archive/boot/gptbrain/CURRENT_STATE.md'),
+              Path('archive/boot/gptbrain/NEXT_ACTIONS.md'),
+              Path('archive/boot/gptbrain/KRAKOA_TOP_50_EXECUTION_LEDGER_2026-05-26.md'),
+              Path('archive/boot/gptbrain/GPTBRAIN_INDEX_OF_INDEXES_2026-05-26.md'),
+              Path('archive/boot/atlasbrain/ATLASBRAIN_INDEX_2026-05-26.md'),
+          ]
+
+          missing = []
+          for f in required_files:
+              if not f.exists():
+                  missing.append(f'missing file: {f}')
+                  continue
+              text = f.read_text(encoding='utf-8', errors='ignore')
+              for marker in ('STATUS:', 'DATE:'):
+                  if marker not in text:
+                      missing.append(f'{f}: missing {marker}')
+
+          if missing:
+              print('\n'.join(missing))
+              raise SystemExit(1)
+          print('required-status-header-check-ok')
+          PY
+
+      - name: Required index presence checks
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          required = [
+              'archive/boot/gptbrain/KRAKOA_CANON_TRUTH_SPINE_2026-05-26.md',
+              'archive/boot/gptbrain/GPTBRAIN_INDEX_OF_INDEXES_2026-05-26.md',
+              'archive/boot/atlasbrain/ATLASBRAIN_INDEX_2026-05-26.md',
+              'archive/boot/gptbrain/KRAKOA_SEAT_BRAIN_QUICK_NAV_2026-05-26.md',
+              'archive/boot/gptbrain/KRAKOA_ISSUE_TO_DOC_ROUTING_MAP_2026-05-26.md',
+          ]
+          missing = [p for p in required if not Path(p).exists()]
+          if missing:
+              print('\n'.join(f'missing required index: {m}' for m in missing))
+              raise SystemExit(1)
+          print('required-index-presence-check-ok')
+          PY
+
+      - name: Index integrity checks for missing targets
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+
+          indexes = [
+              Path('archive/boot/gptbrain/GPTBRAIN_INDEX_OF_INDEXES_2026-05-26.md'),
+              Path('archive/boot/atlasbrain/ATLASBRAIN_INDEX_2026-05-26.md'),
+          ]
+          path_re = re.compile(r'`(archive/[^`]+)`')
+          failures = []
+          for idx in indexes:
+              text = idx.read_text(encoding='utf-8', errors='ignore')
+              for target in path_re.findall(text):
+                  if not Path(target).exists():
+                      failures.append(f'{idx}: missing indexed target {target}')
+          if failures:
+              print('\n'.join(failures))
+              raise SystemExit(1)
+          print('index-integrity-check-ok')
+          PY
+
+      - name: JSONL parse checks for seed ledgers
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          ledgers = [
+              Path('archive/boot/gptbrain/CLAIM_LEDGER.seed.jsonl'),
+              Path('archive/boot/gptbrain/ARTIFACT_REGISTRY.seed.jsonl'),
+              Path('archive/boot/gptbrain/MEMORY_OBJECTS.seed.jsonl'),
+          ]
+
+          for ledger in ledgers:
+              if not ledger.exists():
+                  raise SystemExit(f'missing seed ledger: {ledger}')
+              for line_no, line in enumerate(ledger.read_text(encoding='utf-8').splitlines(), start=1):
+                  if not line.strip():
+                      continue
+                  try:
+                      json.loads(line)
+                  except json.JSONDecodeError as exc:
+                      raise SystemExit(f'invalid JSONL in {ledger} line {line_no}: {exc}')
+              print(f'jsonl-parse-ok: {ledger}')
+          PY

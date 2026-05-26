@@ -79,6 +79,19 @@ class TestValidateBenchmarks:
         assert len(report.checked) == 2
         assert len(report.violations) == 1
 
+    def test_malformed_evidence_packet_fixture_is_rejected(self, tmp_path: Path) -> None:
+        fixture = (
+            Path(__file__).resolve().parent
+            / "testdata"
+            / "atlasbrain_gate"
+            / "MALFORMED_EVIDENCE_PACKET_LINK.md"
+        )
+        body = fixture.read_text(encoding="utf-8")
+        _write(tmp_path, "benchmarks/MALFORMED.md", body)
+        report = gate.validate_benchmarks(tmp_path)
+        assert not report.passed
+        assert any("must_link_evidence_packet" in v.rule for v in report.violations)
+
 
 # ---------------------------------------------------------------------------
 # validate_public_claims
@@ -142,6 +155,12 @@ class TestValidatePublicClaims:
         _write(tmp_path, "public_claims/CLAIM.md", body)
         report = gate.validate_public_claims(tmp_path)
         assert not report.passed
+
+    def test_authority_status_with_period_is_normalized(self, tmp_path: Path) -> None:
+        body = f"# Claim\n\n{EVIDENCE_PACKET_LINK}\nauthority_status: reviewed_claim.\n"
+        _write(tmp_path, "public_claims/CLAIM.md", body)
+        report = gate.validate_public_claims(tmp_path)
+        assert report.passed
 
 
 # ---------------------------------------------------------------------------

@@ -4,6 +4,9 @@
 STATUS: ACTION LEDGER — NOT CANON
 DATE: 2026-05-09
 ISSUE: manus-artifacts#12
+CANON STATUS: not ratified
+AUTHORITY: planning ledger only
+STALE AFTER: 2026-06-09
 ```
 
 ## Immediate next actions

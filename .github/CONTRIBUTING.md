@@ -11,12 +11,13 @@ Thanks for contributing.
 
 ## First reads before changes
 
-1. `archive/boot/COUNCIL_BRAIN_INDEX.md`
-2. `archive/boot/gptbrain/CURRENT_STATE.md`
-3. `archive/boot/gptbrain/NEXT_ACTIONS.md`
-4. `archive/boot/gptbrain/GPTBRAIN_INDEX_OF_INDEXES_2026-05-26.md`
-5. `archive/boot/atlasbrain/README.md`
-6. `archive/boot/atlasbrain/ATLASBRAIN_INDEX_2026-05-26.md`
+1. `archive/boot/gptbrain/KRAKOA_CANON_TRUTH_SPINE_2026-05-26.md`
+2. `archive/boot/COUNCIL_BRAIN_INDEX.md`
+3. `archive/boot/gptbrain/CURRENT_STATE.md`
+4. `archive/boot/gptbrain/NEXT_ACTIONS.md`
+5. `archive/boot/gptbrain/GPTBRAIN_INDEX_OF_INDEXES_2026-05-26.md`
+6. `archive/boot/atlasbrain/README.md`
+7. `archive/boot/atlasbrain/ATLASBRAIN_INDEX_2026-05-26.md`
 
 ## High-signal local checks
 
@@ -41,4 +42,3 @@ bash run_checks.sh
 - Keep changes surgical and repo-grounded.
 - Update nearby docs when behavior or routing changes.
 - Do not claim ratification unless explicitly approved.
-

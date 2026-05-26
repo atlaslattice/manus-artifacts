@@ -3,8 +3,18 @@
 ```text
 STATUS: NAVIGATION INDEX — NOT CANON
 DATE: 2026-05-26
+FRESHNESS: ACTIVE
+UPDATE CADENCE: weekly or on any routing change
 PURPOSE: provide one high-signal routing page for GPTBrain and adjacent Krakoa habitat docs
 ```
+
+## Canon truth spine (read first)
+
+- `archive/boot/gptbrain/KRAKOA_CANON_TRUTH_SPINE_2026-05-26.md`
+- `archive/boot/COUNCIL_BRAIN_INDEX.md`
+- `archive/boot/gptbrain/CURRENT_STATE.md`
+- `archive/boot/gptbrain/NEXT_ACTIONS.md`
+- `archive/boot/gptbrain/KRAKOA_TOP_50_EXECUTION_LEDGER_2026-05-26.md`
 
 ## Core governance indexes
 
@@ -42,3 +52,25 @@ PURPOSE: provide one high-signal routing page for GPTBrain and adjacent Krakoa h
 
 - `archive/boot/gptbrain/KRAKOA_TOP_50_EXECUTION_LEDGER_2026-05-26.md`
 
+## Navigation + governance operations
+
+- `archive/boot/gptbrain/KRAKOA_SEAT_BRAIN_QUICK_NAV_2026-05-26.md`
+- `archive/boot/gptbrain/KRAKOA_ISSUE_TO_DOC_ROUTING_MAP_2026-05-26.md`
+- `archive/boot/gptbrain/ARCHIVE_PATH_NAMING_CONVENTIONS_2026-05-26.md`
+- `archive/boot/gptbrain/STATE_SNAPSHOT_STALENESS_POLICY_2026-05-26.md`
+
+## Program cadence artifacts
+
+- `archive/boot/gptbrain/KRAKOA_EXECUTION_WAVE_PLAN_2026-05-26.md`
+- `archive/boot/gptbrain/KRAKOA_WEEKLY_SITREP_TEMPLATE_2026-05-26.md`
+- `archive/boot/gptbrain/KRAKOA_MONTHLY_HABITAT_HEALTH_SCORECARD_2026-05-26.md`
+- `archive/boot/gptbrain/KRAKOA_RELEASE_NOTE_PROTOCOL_2026-05-26.md`
+- `archive/boot/gptbrain/KRAKOA_OWNER_REVIEWER_LANE_MAP_2026-05-26.md`
+- `archive/boot/gptbrain/KRAKOA_DONE_MEANS_VALIDATED_POLICY_2026-05-26.md`
+- `archive/boot/gptbrain/KRAKOA_UNRESOLVED_QUESTION_LEDGER_2026-05-26.md`
+- `archive/boot/gptbrain/KRAKOA_FIRST_30_DAY_MILESTONE_BOARD_2026-05-26.md`
+
+## Index integrity policy
+
+- Every path listed here must resolve to an existing repository file.
+- CI validates path existence for this index and AtlasBrain index.

@@ -4,6 +4,9 @@
 STATUS: CURRENT STATE SNAPSHOT — NOT CANON
 DATE: 2026-05-11
 ISSUE: manus-artifacts#12
+CANON STATUS: not ratified
+AUTHORITY: snapshot/reporting only
+STALE AFTER: 2026-06-11
 ```
 
 ## Current operating status

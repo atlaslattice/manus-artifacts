@@ -343,3 +343,9 @@ Do claim:
 Public S7 boot/brain spec v0.1. Not ratified canon unless routed through Council workflow.
 
 The Copilot memory palace is code-shaped: concrete, navigable, reviewable, and bounded.
+
+## Ratification checklist cross-links
+
+- `archive/boot/gptbrain/S1_PROMOTION_CHECKLIST_2026-05-09.md`
+- `archive/boot/gptbrain/S1_RATIFICATION_PACKET_2026-05-09.md`
+- `archive/boot/gptbrain/KRAKOA_CANON_TRUTH_SPINE_2026-05-26.md`
