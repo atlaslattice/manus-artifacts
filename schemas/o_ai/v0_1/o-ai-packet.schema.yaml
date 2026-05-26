@@ -1,0 +1,73 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "O_AI Packet v0.1"
+type: object
+additionalProperties: false
+required:
+  - schema_version
+  - raw_export_status
+  - thread_time_range
+  - access_scope
+  - epistemic_label
+  - authority_scope
+  - gates
+properties:
+  schema_version:
+    type: string
+    const: "0.1"
+  raw_export_status:
+    type: string
+    enum: [full_raw, partial_raw, summary_only, unavailable]
+  thread_time_range:
+    type: object
+    required: [start, end]
+    properties:
+      start: {type: string}
+      end: {type: string}
+      timezone: {type: string}
+  access_scope:
+    type: object
+    required: [visible_sources, unavailable_sources, assumed_context]
+    properties:
+      visible_sources: {type: array, items: {type: string}}
+      unavailable_sources: {type: array, items: {type: string}}
+      assumed_context: {type: array, items: {type: string}}
+  epistemic_label:
+    type: string
+  authority_scope:
+    type: string
+  public_use_status:
+    type: string
+    enum: [source_partial, source_complete]
+  execution_request:
+    type: boolean
+  gates:
+    type: object
+    required: [provenance_gate, safety_gate, governance_gate, data_residency_gate, human_permission_gate, receipt_gate]
+    properties:
+      provenance_gate: {type: boolean}
+      safety_gate: {type: boolean}
+      governance_gate: {type: boolean}
+      data_residency_gate: {type: boolean}
+      human_permission_gate: {type: boolean}
+      receipt_gate: {type: boolean}
+allOf:
+  - if:
+      properties:
+        raw_export_status: {const: summary_only}
+    then:
+      properties:
+        public_use_status:
+          not:
+            const: source_complete
+  - if:
+      properties:
+        execution_request: {const: true}
+    then:
+      properties:
+        gates:
+          properties:
+            provenance_gate: {const: true}
+            safety_gate: {const: true}
+            governance_gate: {const: true}
+            human_permission_gate: {const: true}
+            receipt_gate: {const: true}

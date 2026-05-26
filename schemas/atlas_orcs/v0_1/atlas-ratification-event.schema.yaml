@@ -1,0 +1,28 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Atlas Ratification Event"
+type: object
+additionalProperties: false
+properties:
+  schema_version:
+    type: string
+    const: "0.1"
+  id:
+    type: string
+  canon_status:
+    type: string
+    enum: [not_canon, candidate, ratified]
+    default: not_canon
+  deployment_status:
+    type: string
+    enum: [not_deployable, candidate, deployable]
+    default: not_deployable
+  created_at:
+    type: string
+  subject_artifact_id:
+    type: string
+  ratifying_artifact_id:
+    type: string
+  explicit_event:
+    type: boolean
+    const: true
+required: [schema_version, id, subject_artifact_id, ratifying_artifact_id, explicit_event]

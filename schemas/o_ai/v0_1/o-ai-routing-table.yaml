@@ -1,0 +1,13 @@
+schema_version: "0.1"
+status: candidate
+routing:
+  execution_request:
+    - D-Φ-1 / CAS-001-A / human gate
+    - Atlas / ORCS audit state
+    - TIDELOCKBrain if repo / merge-order / code execution is involved
+  chatgpt_synthesis:
+    - LucernaBrain
+    - RootglassBrain
+  codex_patch:
+    - TIDELOCKBrain
+    - HashlightBrain

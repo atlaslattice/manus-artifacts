@@ -1,0 +1,13 @@
+schema_version: "0.1"
+raw_export_status: full_raw
+thread_time_range: {start: "2026-05-01T00:00:00Z", end: "2026-05-01T01:00:00Z"}
+epistemic_label: candidate
+authority_scope: none
+execution_request: false
+gates:
+  provenance_gate: true
+  safety_gate: true
+  governance_gate: true
+  data_residency_gate: true
+  human_permission_gate: true
+  receipt_gate: true

@@ -1,0 +1,21 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Atlas Domain Module"
+type: object
+additionalProperties: false
+properties:
+  schema_version:
+    type: string
+    const: "0.1"
+  id:
+    type: string
+  canon_status:
+    type: string
+    enum: [not_canon, candidate, ratified]
+    default: not_canon
+  deployment_status:
+    type: string
+    enum: [not_deployable, candidate, deployable]
+    default: not_deployable
+  created_at:
+    type: string
+required: [schema_version, id]
