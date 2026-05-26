@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atlaslattice.local/schemas/continuity/claim-ledger.schema.json",
+  "title": "Continuity OS Claim Ledger",
+  "description": "Source-grounded claim ledger for Continuity OS. Claims are labels over evidence, not truth, canon, deployment, or authority.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "ledger_id",
+    "created_at",
+    "artifact_id",
+    "source_refs",
+    "claims",
+    "review_dissent",
+    "blocker_level",
+    "falsification_condition",
+    "next_action"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "const": "continuity.claim_ledger.v0.1" },
+    "ledger_id": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "artifact_id": { "type": "string", "minLength": 1 },
+    "source_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "vault-receipt.schema.json#/$defs/source_ref" }
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/claim" }
+    },
+    "review_dissent": { "$ref": "#/$defs/review_dissent" },
+    "blocker_level": { "type": "string", "enum": ["none", "minor", "major", "blocking"] },
+    "falsification_condition": { "type": "string", "minLength": 1 },
+    "unresolved_questions": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "overclaims_to_avoid": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "next_action": { "type": "string", "minLength": 1 }
+  },
+  "$defs": {
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim_id",
+        "claim_text",
+        "claim_type",
+        "confidence",
+        "evidence_status",
+        "evidence_refs",
+        "canon_status",
+        "deployment_status",
+        "authority_scope",
+        "review_state"
+      ],
+      "properties": {
+        "claim_id": { "type": "string", "minLength": 1 },
+        "claim_text": { "type": "string", "minLength": 1 },
+        "claim_type": {
+          "type": "string",
+          "enum": [
+            "source_reported_fact",
+            "derived_inference",
+            "design_proposal",
+            "creative_overlay",
+            "unverified_external_claim"
+          ]
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["C0_UNSUPPORTED", "C1_SIGNAL", "C2_EVIDENCE", "C3_REVIEWED", "C4_RATIFIED"]
+        },
+        "evidence_status": {
+          "type": "string",
+          "enum": ["none", "pointer_only", "source_present", "hash_present", "reviewed", "contradicted"]
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["ref_id", "ref_type"],
+            "properties": {
+              "ref_id": { "type": "string", "minLength": 1 },
+              "ref_type": { "type": "string", "enum": ["source_ref", "file_path", "commit_sha", "issue", "pull_request", "quote_anchor", "hash", "review", "other"] },
+              "path": { "type": "string" },
+              "uri": { "type": "string" },
+              "sha256": { "type": "string", "pattern": "^[a-fA-F0-9]{64}$" },
+              "notes": { "type": "string" }
+            }
+          },
+          "default": []
+        },
+        "contradicts": { "type": "array", "items": { "type": "string" }, "default": [] },
+        "supersedes": { "type": "array", "items": { "type": "string" }, "default": [] },
+        "canon_status": { "type": "string", "enum": ["not_canon", "candidate", "ratified", "rejected"], "default": "not_canon" },
+        "deployment_status": { "type": "string", "enum": ["not_deployable", "local_dry_run_only", "deployed"], "default": "not_deployable" },
+        "authority_scope": { "type": "string", "enum": ["none", "advisory", "review", "approved_write_only", "execution"], "default": "none" },
+        "review_state": { "type": "string", "enum": ["unreviewed", "needs_review", "reviewed", "blocked", "ratified"] },
+        "risk_tags": { "type": "array", "items": { "type": "string" }, "default": [] },
+        "falsification_condition": { "type": "string" },
+        "notes": { "type": "string" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "confidence": { "enum": ["C2_EVIDENCE", "C3_REVIEWED", "C4_RATIFIED"] } }, "required": ["confidence"] },
+          "then": { "properties": { "evidence_refs": { "minItems": 1 } } }
+        },
+        {
+          "if": { "properties": { "claim_type": { "const": "unverified_external_claim" } }, "required": ["claim_type"] },
+          "then": { "properties": { "confidence": { "enum": ["C0_UNSUPPORTED", "C1_SIGNAL"] } } }
+        },
+        {
+          "if": { "properties": { "claim_type": { "const": "creative_overlay" } }, "required": ["claim_type"] },
+          "then": { "properties": { "canon_status": { "const": "not_canon" }, "authority_scope": { "const": "none" } } }
+        }
+      ]
+    },
+    "review_dissent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["present", "summary", "dissenting_reviewers"],
+      "properties": {
+        "present": { "type": "boolean" },
+        "summary": { "type": "string" },
+        "dissenting_reviewers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["reviewer", "position"],
+            "properties": {
+              "reviewer": { "type": "string", "minLength": 1 },
+              "position": { "type": "string", "minLength": 1 },
+              "blocker_level": { "type": "string", "enum": ["none", "minor", "major", "blocking"] },
+              "required_change": { "type": "string" }
+            }
+          },
+          "default": []
+        }
+      }
+    }
+  }
+}
