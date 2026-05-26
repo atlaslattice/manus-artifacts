@@ -20,6 +20,7 @@ This repository contains research, health data, and system artifacts generated a
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
 - **[Aetherforge Top-10 Taskboard](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — Task valuation, bounty/trophy model, and deployed solution map.
+- **[Aetherforge Game World (Module 8)](./projects/aetherforge-game-world/README.md)** — Quest taxonomy, Archive Bowl index, Omnispec candidate framing, and onboarding template.
 
 ### Governance & Council
 - **[Council](./council/)** — Trinity and Pantheon Council session archives.
