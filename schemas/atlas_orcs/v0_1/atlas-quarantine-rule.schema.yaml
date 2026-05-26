@@ -1,0 +1,10 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-quarantine-rule
+schema_version: "0.1"
+type: object
+required: [schema_version, rule_id, preserves_lineage]
+properties:
+  schema_version: { const: "0.1" }
+  rule_id: { type: string }
+  preserves_lineage: { const: true }
+additionalProperties: true

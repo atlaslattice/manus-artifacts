@@ -1,0 +1,12 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-claim
+schema_version: "0.1"
+type: object
+required: [schema_version, claim_id, artifact_id, claim_text]
+properties:
+  schema_version: { const: "0.1" }
+  claim_id: { type: string }
+  artifact_id: { type: string }
+  claim_text: { type: string }
+  proof_status: { enum: [unproven, candidate, verified], default: unproven }
+additionalProperties: true

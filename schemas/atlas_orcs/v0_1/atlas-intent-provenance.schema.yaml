@@ -1,0 +1,11 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-intent-provenance
+schema_version: "0.1"
+type: object
+required: [schema_version, intent_id, actor, artifact_id]
+properties:
+  schema_version: { const: "0.1" }
+  intent_id: { type: string }
+  actor: { type: string }
+  artifact_id: { type: string }
+additionalProperties: true

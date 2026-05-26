@@ -1,0 +1,69 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: o-ai-packet
+schema_version: "0.1"
+type: object
+required:
+  - schema_version
+  - raw_export_status
+  - thread_time_range
+  - access_scope
+  - epistemic_label
+  - authority_scope
+  - gates
+properties:
+  schema_version: { const: "0.1" }
+  packet_type: { enum: [analysis_request, execution_request], default: analysis_request }
+  raw_export_status: { enum: [full_raw, partial_raw, summary_only, unavailable] }
+  thread_time_range:
+    type: object
+    required: [start, end, timezone]
+    properties:
+      start: { type: string }
+      end: { type: string }
+      timezone: { type: string }
+  access_scope:
+    type: object
+    required: [visible_sources, unavailable_sources, assumed_context]
+    properties:
+      visible_sources: { type: array, items: { type: string } }
+      unavailable_sources: { type: array, items: { type: string } }
+      assumed_context: { type: array, items: { type: string } }
+  epistemic_label: { enum: [candidate, bounded, uncertain] }
+  authority_scope: { enum: [none, advisory] }
+  public_use_status: { enum: [source_incomplete, source_complete], default: source_incomplete }
+  gates:
+    type: object
+    required:
+      - provenance_gate
+      - safety_gate
+      - governance_gate
+      - data_residency_gate
+      - human_permission_gate
+      - receipt_gate
+    properties:
+      provenance_gate: { enum: [pass, fail] }
+      safety_gate: { enum: [pass, fail] }
+      governance_gate: { enum: [pass, fail] }
+      data_residency_gate: { enum: [pass, fail] }
+      human_permission_gate: { enum: [pass, fail] }
+      receipt_gate: { enum: [pass, fail] }
+allOf:
+  - if:
+      properties:
+        raw_export_status: { const: summary_only }
+    then:
+      properties:
+        public_use_status: { enum: [source_incomplete] }
+  - if:
+      properties:
+        packet_type: { const: execution_request }
+    then:
+      properties:
+        gates:
+          properties:
+            provenance_gate: { const: pass }
+            safety_gate: { const: pass }
+            governance_gate: { const: pass }
+            human_permission_gate: { const: pass }
+            receipt_gate: { const: pass }
+additionalProperties: true

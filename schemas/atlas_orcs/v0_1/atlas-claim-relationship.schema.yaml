@@ -1,0 +1,12 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-claim-relationship
+schema_version: "0.1"
+type: object
+required: [schema_version, relationship_id, source_claim_id, target_claim_id, relationship_type]
+properties:
+  schema_version: { const: "0.1" }
+  relationship_id: { type: string }
+  source_claim_id: { type: string }
+  target_claim_id: { type: string }
+  relationship_type: { enum: [supports, contradicts, refines, derives_from] }
+additionalProperties: true

@@ -1,0 +1,12 @@
+schema_version: "0.1"
+status: candidate_not_canon_not_deployable
+routes:
+  execution_request:
+    - D-Φ-1
+    - CAS-001-A
+    - human_gate
+    - atlas_orcs_audit_state
+    - tidelock_when_repo_merge_or_code_execution
+  analysis_request:
+    - bounded_synthesis
+    - atlas_orcs_review_lane
