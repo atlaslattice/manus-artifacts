@@ -1,0 +1,128 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atlaslattice.local/schemas/continuity/execution-contract.schema.json",
+  "title": "Continuity OS Execution Contract",
+  "description": "Approval and boundary envelope for Continuity OS actions. In Sprint 0, execution contracts default to dry-run or approved repo-write only; they do not authorize deployment, canon promotion, or autonomous mutation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "contract_id",
+    "created_at",
+    "requested_action",
+    "execution_class",
+    "mode",
+    "authority_scope",
+    "human_approval",
+    "target_repository",
+    "target_branch",
+    "planned_paths",
+    "preconditions",
+    "blocked_actions",
+    "verification_plan",
+    "post_action_receipt_required",
+    "canon_status",
+    "deployment_status",
+    "next_action"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "const": "continuity.execution_contract.v0.1" },
+    "contract_id": { "type": "string", "minLength": 1 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "requested_action": { "type": "string", "minLength": 1 },
+    "execution_class": {
+      "type": "string",
+      "enum": ["class_0_noop", "class_1_draft", "class_2_dry_run", "class_3_repo_write", "class_4_external_action", "class_5_deployment"]
+    },
+    "mode": { "type": "string", "enum": ["local_dry_run", "simulated_write", "approved_repo_write", "external_action", "deployment"] },
+    "authority_scope": { "type": "string", "enum": ["none", "advisory", "review", "approved_write_only", "execution"], "default": "none" },
+    "human_approval": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "status", "approver"],
+      "properties": {
+        "required": { "type": "boolean" },
+        "status": { "type": "string", "enum": ["not_required", "pending", "approved", "rejected"] },
+        "approver": { "type": "string" },
+        "approval_ref": { "type": "string" },
+        "approval_timestamp": { "type": "string", "format": "date-time" }
+      }
+    },
+    "target_repository": { "type": "string", "pattern": "^[^/]+/[^/]+$" },
+    "target_branch": { "type": "string", "minLength": 1 },
+    "base_branch": { "type": "string" },
+    "planned_paths": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["path", "operation"],
+        "properties": {
+          "path": { "type": "string", "minLength": 1 },
+          "operation": { "type": "string", "enum": ["create", "update", "delete", "simulate"] },
+          "content_source": { "type": "string" },
+          "expected_hash_status": { "type": "string", "enum": ["present", "unavailable", "not_applicable"] },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "preconditions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "blocked_actions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["canon_promotion", "deployment", "secret_access", "database_mutation", "external_send", "public_post", "sovereign_payload_routing", "training_use", "unverified_claim_promotion", "lineage_erasure"]
+      },
+      "default": ["canon_promotion", "deployment", "secret_access", "external_send", "public_post", "sovereign_payload_routing", "training_use", "lineage_erasure"]
+    },
+    "verification_plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["method", "required_outputs"],
+      "properties": {
+        "method": { "type": "string", "enum": ["schema_validation", "dry_run_receipt", "github_fetch_after_write", "hash_compare", "manual_review"] },
+        "required_outputs": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "enum": ["repository", "branch", "path", "commit_sha", "file_sha", "sha256", "verification_receipt", "next_action"] }
+        },
+        "failure_behavior": { "type": "string", "enum": ["block", "patch", "rollback_required", "manual_review_required"], "default": "manual_review_required" }
+      }
+    },
+    "post_action_receipt_required": { "type": "boolean", "const": true },
+    "canon_status": { "type": "string", "enum": ["not_canon", "candidate", "ratified"], "default": "not_canon" },
+    "deployment_status": { "type": "string", "enum": ["not_deployable", "local_dry_run_only", "deployed"], "default": "not_deployable" },
+    "risk_notes": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "next_action": { "type": "string", "minLength": 1 }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "execution_class": { "const": "class_3_repo_write" } }, "required": ["execution_class"] },
+      "then": {
+        "properties": {
+          "mode": { "const": "approved_repo_write" },
+          "authority_scope": { "const": "approved_write_only" },
+          "human_approval": { "properties": { "required": { "const": true }, "status": { "const": "approved" } } }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "mode": { "enum": ["local_dry_run", "simulated_write"] } }, "required": ["mode"] },
+      "then": {
+        "properties": {
+          "authority_scope": { "enum": ["none", "advisory", "review"] },
+          "deployment_status": { "enum": ["not_deployable", "local_dry_run_only"] }
+        }
+      }
+    },
+    {
+      "if": { "properties": { "execution_class": { "const": "class_5_deployment" } }, "required": ["execution_class"] },
+      "then": false
+    }
+  ]
+}
