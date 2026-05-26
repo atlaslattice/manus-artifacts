@@ -35,7 +35,7 @@ fields:
   task_uuid:
     type: string
     nullable: true
-    description: UUID (RFC 4122 string) extracted from task URLs containing '/tasks/'.
+    description: UUID (RFC 4122 string) extracted from task URLs containing '/tasks/'; set null if extraction fails or value is non-compliant.
 
   source_surface:
     type: enum
@@ -46,6 +46,7 @@ fields:
       - transcript_upload
       - direct_request
       - unknown
+    default: unknown
 
   status:
     type: enum
