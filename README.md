@@ -23,6 +23,10 @@ This repository contains research, health data, and system artifacts generated a
 ### Governance & Council
 - **[Council](./council/)** — Trinity and Pantheon Council session archives.
 - **[Council Reviews](./council-reviews/)** — External reviews and validation.
+- **[Boot / Council Brain Index](./archive/boot/COUNCIL_BRAIN_INDEX.md)** — Canonical substrate doctrine and seat registry.
+- **[GPTBrain Index of Indexes](./archive/boot/gptbrain/GPTBRAIN_INDEX_OF_INDEXES_2026-05-26.md)** — Fast navigation for Krakoa habitat docs.
+- **[AtlasBrain Index](./archive/boot/atlasbrain/ATLASBRAIN_INDEX_2026-05-26.md)** — Evidence-lane routing and gate map.
+- **[Krakoa Top 50 Execution Ledger](./archive/boot/gptbrain/KRAKOA_TOP_50_EXECUTION_LEDGER_2026-05-26.md)** — Active execution backlog and completion status.
 
 ### Archives & Research
 - **[Janus Checkpoints](./archives/janus-checkpoints/)** — Session state and resurrection logs.

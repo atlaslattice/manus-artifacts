@@ -1,0 +1,48 @@
+name: Repo hygiene checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  repo-hygiene:
+    name: Workflow syntax + merge marker checks
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate workflow YAML parses
+        run: |
+          python -m pip install --upgrade pip pyyaml
+          python - <<'PY'
+          import glob
+          import sys
+          import yaml
+
+          paths = sorted(glob.glob(".github/workflows/*.yml"))
+          if not paths:
+              print("no workflow files found")
+              sys.exit(1)
+
+          for path in paths:
+              with open(path, "r", encoding="utf-8") as f:
+                  yaml.safe_load(f)
+              print(f"yaml-parse-ok: {path}")
+          PY
+
+      - name: Block merge conflict markers
+        run: |
+          if git grep -n -E '^(<<<<<<< |=======|>>>>>>> )' -- . ':!*.snap'; then
+            echo "merge conflict markers detected"
+            exit 1
+          fi
+          echo "no merge markers found"
+
