@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
+Status: Candidate
+
 Public, open-source, and world-class — all work in this repository is freely available under the [MIT License](./LICENSE).
 
 ## Front-Door Manifesto (Candidate)
@@ -14,9 +16,11 @@ Governance status: nothing is canon until ratified by the full council and adjud
 ## Start Here
 
 1. Read the [START_HERE guide](./docs/START_HERE.md).
-2. Review canon authority boundaries in [CANON_BOUNDARY](./docs/CANON_BOUNDARY.md).
-3. Use the normalized [ARCHIVE_TAXONOMY](./docs/ARCHIVE_TAXONOMY.md) to navigate by domain.
-4. Track active execution in the [Aetherforge Metatron Top 50 Taskboard](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md).
+2. Follow the [NEWCOMER_GUIDE](./docs/NEWCOMER_GUIDE.md) for 5-minute, 30-minute, and deep-dive paths.
+3. Review canon authority boundaries in [CANON_BOUNDARY](./docs/CANON_BOUNDARY.md).
+4. Use the normalized [ARCHIVE_TAXONOMY](./docs/ARCHIVE_TAXONOMY.md) to navigate by domain.
+5. Explore the curated [BEST_OF_ARCHIVE](./docs/BEST_OF_ARCHIVE.md).
+6. Track active execution in the [Aetherforge Metatron Top 50 Taskboard](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md).
 
 ## Intent-Based Paths
 
@@ -24,6 +28,14 @@ Governance status: nothing is canon until ratified by the full council and adjud
 - **Builder** → [Projects](./projects/) · [GPTBrain Reference Checks](./.github/workflows/gptbrain-reference-checks.yml) · [SheldonBrain Architecture](./sheldonbrain/system-architecture.md)
 - **Reviewer** → [Council](./council/) · [Council Reviews](./council-reviews/) · [Canon Boundary](./docs/CANON_BOUNDARY.md)
 - **Journalist** → [About David Sheldon](./about/david-sheldon.md) · [State of the Union Briefing](./State_of_the_Union_Briefing.md) · [Metatron Top 50 Taskboard](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
+
+## Public Guides
+
+- [Best of Archive](./docs/BEST_OF_ARCHIVE.md) — curated high-signal entry collection.
+- [Executive Summaries](./docs/EXECUTIVE_SUMMARIES.md) — concise briefings on flagship systems and projects.
+- [Top 25 Reading Path](./docs/TOP25_READING_PATH.md) — ranked route into the archive.
+- [Glossary](./docs/GLOSSARY.md) — single authoritative term reference for the archive.
+- [Roadmap](./docs/ROADMAP.md) — measurable public outcomes and future direction.
 
 ## Taxonomy Navigation
 
@@ -58,6 +70,14 @@ Governance status: nothing is canon until ratified by the full council and adjud
 ### Vault
 - **[Manus Vault](./manus-vault/)** — Internal session summaries and Noah's Ark protocols.
 - **[Janus Checkpoints](./archives/janus-checkpoints/)** — Session state and resurrection logs.
+
+## Governance
+
+- **[Governance Index](./governance/README.md)** — Entry point for review, retention, audit, and continuity policy.
+- **[Council Review Workflow](./governance/COUNCIL_REVIEW_WORKFLOW.md)** — Submission, triage, review, vote, adjudication, and publication path.
+- **[Decision Rights Matrix](./governance/DECISION_RIGHTS_MATRIX.md)** — Role-based authority map for creation, promotion, archival, and conflict handling.
+- **[Risk Register](./governance/RISK_REGISTER.md)** — Active governance and quality risks across the archive.
+- **[Mission Control Cadence](./governance/MISSION_CONTROL_CADENCE.md)** — Weekly, monthly, quarterly, and annual governance rhythm.
 
 ### About
 - **[David Sheldon](./about/david-sheldon.md)** — Visionary and system architect.

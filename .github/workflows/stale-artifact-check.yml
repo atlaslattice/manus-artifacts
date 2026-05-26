@@ -1,0 +1,52 @@
+name: Stale artifact check
+
+on:
+  schedule:
+    - cron: '0 14 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  stale-artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Report stale markdown artifacts
+        run: |
+          python - <<'PY'
+          import datetime as dt
+          import subprocess
+          from pathlib import Path
+
+          cutoff = dt.datetime.utcnow() - dt.timedelta(days=90)
+          stale = []
+          for path in Path('.').rglob('*.md'):
+              if '.git/' in str(path):
+                  continue
+              ts = subprocess.check_output(
+                  ['git', 'log', '-1', '--format=%cI', '--', str(path)],
+                  text=True,
+              ).strip()
+              if not ts:
+                  continue
+              updated = dt.datetime.fromisoformat(ts.replace('Z', '+00:00')).replace(tzinfo=None)
+              if updated < cutoff:
+                  stale.append((updated.date().isoformat(), str(path)))
+
+          stale.sort()
+          report = Path.cwd() / 'stale-artifact-report.md'
+          with report.open('w', encoding='utf-8') as fh:
+              fh.write('# Stale Artifact Report\n\n')
+              if not stale:
+                  fh.write('No markdown artifacts exceed the 90-day threshold.\n')
+              else:
+                  for date, path in stale:
+                      fh.write(f'- [ ] {path} — last updated {date}\n')
+          print(report.read_text(encoding='utf-8'))
+          PY
