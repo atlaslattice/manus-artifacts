@@ -65,6 +65,18 @@ fields:
     required: true
     default: true
 
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate_canon, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, deployment_candidate, deployed]
+    default: not_deployable
+
   created_at:
     type: string
     format: iso8601
@@ -75,3 +87,5 @@ constraints:
   - source_preserved must be true
   - audit_event_required must be true
   - trigger_conditions must be non-empty
+  - canon_status defaults to not_canon
+  - deployment_status defaults to not_deployable

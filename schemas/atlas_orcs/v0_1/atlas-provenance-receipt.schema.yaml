@@ -62,8 +62,22 @@ fields:
     type: string
     required: false
 
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate_canon, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, deployment_candidate, deployed]
+    default: not_deployable
+
 constraints:
   - receipt_is_truth must be false
   - A receipt records that an event occurred; it does not establish epistemic truth
   - evidence_refs must be non-empty
   - summary receipt does not equal source truth
+  - canon_status defaults to not_canon
+  - deployment_status defaults to not_deployable

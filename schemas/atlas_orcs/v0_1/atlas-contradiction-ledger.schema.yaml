@@ -49,7 +49,14 @@ fields:
   canon_status:
     type: string
     required: true
+    enum: [not_canon, candidate_canon, ratified_canon]
     default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, deployment_candidate, deployed]
+    default: not_deployable
 
   audit_event_id:
     type: string
@@ -71,3 +78,5 @@ constraints:
   - lineage_preserved must be true
   - Both artifacts in contradiction preserve their full lineage
   - An audit_event must be emitted for every contradiction record
+  - canon_status defaults to not_canon
+  - deployment_status defaults to not_deployable

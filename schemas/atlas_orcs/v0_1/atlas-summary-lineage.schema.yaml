@@ -56,7 +56,14 @@ fields:
   canon_status:
     type: string
     required: true
+    enum: [not_canon, candidate_canon, ratified_canon]
     default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, deployment_candidate, deployed]
+    default: not_deployable
 
   created_at:
     type: string
@@ -68,3 +75,5 @@ constraints:
   - summary_replaces_source must be false
   - fidelity_loss_acknowledged must be true
   - summary_only source cannot produce source_complete downstream claims
+  - canon_status defaults to not_canon
+  - deployment_status defaults to not_deployable

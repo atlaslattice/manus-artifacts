@@ -70,6 +70,18 @@ fields:
     default: true
     constraint: "MUST be true. Every failure emits an audit event."
 
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate_canon, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, deployment_candidate, deployed]
+    default: not_deployable
+
   timestamp:
     type: string
     format: iso8601
@@ -79,3 +91,5 @@ constraints:
   - source_preserved must be true when quarantine_triggered
   - unauthorized_promotion_occurred must be false
   - audit_event_emitted must be true
+  - canon_status defaults to not_canon
+  - deployment_status defaults to not_deployable
