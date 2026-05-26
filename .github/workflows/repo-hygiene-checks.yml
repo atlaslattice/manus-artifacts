@@ -1,0 +1,41 @@
+name: Repo Hygiene Checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  hygiene:
+    name: Hygiene checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check for merge-conflict markers
+        run: |
+          if grep -rn --include="*.md" --include="*.yml" --include="*.yaml" \
+               --include="*.py" --include="*.json" \
+               -E "^(<<<<<<<|=======|>>>>>>>)" .; then
+            echo "::error::Merge-conflict markers found — resolve before merging."
+            exit 1
+          fi
+          echo "No merge-conflict markers found."
+
+      - name: Validate YAML workflow files
+        run: |
+          pip install --quiet yamllint
+          yamllint -d relaxed .github/workflows/
+
+      - name: Check for accidentally committed secrets (basic patterns)
+        run: |
+          if grep -rn --include="*.py" --include="*.yml" --include="*.env" \
+               -E "(AKIA[0-9A-Z]{16}|sk-[a-zA-Z0-9]{32,}|ghp_[a-zA-Z0-9]{36})" .; then
+            echo "::error::Possible secret pattern detected — review before merging."
+            exit 1
+          fi
+          echo "No obvious secret patterns found."
