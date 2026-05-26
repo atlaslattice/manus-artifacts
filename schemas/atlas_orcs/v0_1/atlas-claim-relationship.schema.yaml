@@ -1,0 +1,72 @@
+# Atlas/ORCS Schema: Claim Relationship
+# NOT CANON — NOT DEPLOYABLE
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-claim-relationship
+canon_status: not_canon
+deployment_status: not_deployable
+
+description: >
+  Describes a directed relationship between two claims in the Atlas/ORCS system.
+  Relationships are typed and carry their own provenance.
+
+fields:
+  relationship_id:
+    type: string
+    required: true
+
+  claim_a_id:
+    type: string
+    required: true
+
+  claim_b_id:
+    type: string
+    required: true
+
+  relationship_type:
+    type: string
+    required: true
+    enum:
+      - supports        # claim_a provides evidence for claim_b
+      - contradicts     # claim_a conflicts with claim_b
+      - supersedes      # claim_a replaces claim_b
+      - summarizes      # claim_a is a summary of claim_b
+      - cites           # claim_a references claim_b as a source
+      - depends_on      # claim_a requires claim_b to be valid
+      - derived_from    # claim_a was derived from claim_b
+
+  created_at:
+    type: string
+    format: iso8601
+    required: true
+
+  created_by:
+    type: string
+    required: true
+
+  confidence:
+    type: string
+    enum: [low, medium, high, verified]
+    default: low
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, review_pending, approved, deployed]
+    default: not_deployable
+
+  notes:
+    type: string
+    required: false
+
+constraints:
+  - relationship_type == summarizes IMPLIES claim_a does NOT inherit claim_b.authority
+  - relationship_type == contradicts IMPLIES contradiction_ledger entry must be created
+  - relationship_type == supersedes IMPLIES claim_b.trust_state transitions to superseded

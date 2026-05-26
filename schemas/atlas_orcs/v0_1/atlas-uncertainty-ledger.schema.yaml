@@ -1,0 +1,85 @@
+# Atlas/ORCS Schema: Uncertainty Ledger
+# NOT CANON — NOT DEPLOYABLE
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-uncertainty-ledger
+canon_status: not_canon
+deployment_status: not_deployable
+
+description: >
+  Records unresolved uncertainties in the knowledge base.
+  Uncertainties are first-class citizens — not bugs to suppress.
+  An agent that discovers uncertainty MUST log it rather than assume away.
+
+fields:
+  ledger_id:
+    type: string
+    required: true
+
+  uncertainty_id:
+    type: string
+    required: true
+
+  uncertainty_type:
+    type: string
+    required: true
+    enum:
+      - missing_source      # Source referenced but unavailable
+      - unverified_claim    # Claim made without traceable source
+      - conflicting_signals # Multiple signals; no clear resolution
+      - assumed_context     # Contextual assumption made; may be wrong
+      - temporal_gap        # Time period without data
+      - identity_drift      # Agent behavior shifted; unclear if same context
+      - export_gap          # Raw export unavailable; summary only
+
+  description:
+    type: string
+    required: true
+
+  affected_artifact_ids:
+    type: array
+    items: string
+    required: false
+
+  detected_by:
+    type: string
+    required: true
+
+  detected_at:
+    type: string
+    format: iso8601
+    required: true
+
+  severity:
+    type: string
+    required: true
+    enum: [low, medium, high, blocking]
+    default: medium
+
+  status:
+    type: string
+    required: true
+    enum: [open, acknowledged, resolved]
+    default: open
+
+  resolution_notes:
+    type: string
+    required: false
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, review_pending, approved, deployed]
+    default: not_deployable
+
+constraints:
+  - uncertainty MUST be explicitly logged; suppression is PROHIBITED
+  - severity == blocking IMPLIES affected artifacts cannot be promoted past candidate
+  - An agent MUST emit uncertainty records rather than false confidence

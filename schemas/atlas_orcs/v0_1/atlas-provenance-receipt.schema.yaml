@@ -1,0 +1,76 @@
+# Atlas/ORCS Schema: Provenance Receipt
+# NOT CANON — NOT DEPLOYABLE
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-provenance-receipt
+canon_status: not_canon
+deployment_status: not_deployable
+
+description: >
+  A provenance receipt proves that an artifact was filed at a specific location
+  at a specific time. A receipt does NOT constitute proof of the artifact's claims,
+  authority, or canon status. Receipt ≠ truth.
+
+fields:
+  receipt_id:
+    type: string
+    required: true
+
+  receipt_of:
+    type: string
+    required: true
+    description: artifact_id of the artifact this receipt covers
+
+  filed_by:
+    type: string
+    required: true
+    description: Agent or human who filed the artifact
+
+  filed_at:
+    type: string
+    format: iso8601
+    required: true
+
+  location:
+    type: object
+    required: true
+    fields:
+      type:
+        type: string
+        enum: [github_commit, github_file, notion_page, drive_file, local_file, other]
+      url:
+        type: string
+        required: false
+      sha256:
+        type: string
+        required: false
+        description: Hash of artifact content at time of filing
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, review_pending, approved, deployed]
+    default: not_deployable
+
+  notes:
+    type: string
+    required: false
+
+constraints:
+  - receipt_id IS NOT EQUAL TO artifact_id (receipt is a distinct record)
+  - location.type == github_commit DOES NOT imply canon_status == ratified_canon
+  - A receipt does NOT transfer authority from the filed location to the artifact
+  - Receipt IS evidence of filing; IS NOT evidence of truth or canon
+
+note: >
+  GitHub receipts prove an artifact exists in the repository.
+  They do not prove the artifact's claims are true.
+  They do not make the artifact canon.
+  Canon requires an explicit ORCS-RATIFY event + adjudication + website publication.

@@ -1,0 +1,81 @@
+# Atlas/ORCS Schema: Quarantine Rule
+# NOT CANON — NOT DEPLOYABLE
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-quarantine-rule
+canon_status: not_canon
+deployment_status: not_deployable
+
+description: >
+  Defines a rule that triggers quarantine of an artifact.
+  Quarantine isolates artifacts for safety or integrity review.
+  Quarantined artifacts PRESERVE their full lineage — quarantine is not deletion.
+
+fields:
+  rule_id:
+    type: string
+    required: true
+
+  rule_name:
+    type: string
+    required: true
+
+  trigger_condition:
+    type: string
+    required: true
+    enum:
+      - adversarial_pattern_detected  # Known attack pattern found
+      - safety_gate_fail              # Safety gate evaluation failed
+      - unauthorized_promotion        # Promotion attempted without governance event
+      - self_ratification_attempt     # Artifact attempted to self-ratify
+      - fake_authority_signal         # Fake authority signal detected
+      - prompt_injection_detected     # Hidden prompt injection found
+      - provenance_failure            # Provenance cannot be verified
+      - identity_conflict             # Conflicting identity assertions
+      - data_residency_violation      # Data residency constraint violated
+      - custom                        # Custom trigger (requires description)
+
+  trigger_description:
+    type: string
+    required: true
+
+  severity:
+    type: string
+    required: true
+    enum: [low, medium, high, critical]
+
+  action:
+    type: string
+    required: true
+    enum: [quarantine, hold, flag_for_review]
+    default: quarantine
+
+  lineage_preserved:
+    type: boolean
+    required: true
+    const: true
+    description: Lineage is ALWAYS preserved during quarantine. This is hardcoded true.
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, review_pending, approved, deployed]
+    default: not_deployable
+
+  created_at:
+    type: string
+    format: iso8601
+    required: true
+
+constraints:
+  - lineage_preserved IS ALWAYS true (hardcoded; quarantine is not deletion)
+  - Quarantine MUST create an atlas-failure-event record
+  - Quarantine MUST create an atlas-audit-event record
+  - Quarantined artifacts CANNOT be promoted until review is completed

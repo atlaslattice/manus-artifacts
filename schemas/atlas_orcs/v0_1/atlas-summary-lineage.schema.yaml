@@ -1,0 +1,94 @@
+# Atlas/ORCS Schema: Summary Lineage
+# NOT CANON — NOT DEPLOYABLE
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-summary-lineage
+canon_status: not_canon
+deployment_status: not_deployable
+
+description: >
+  Records the lineage of a summary artifact back to its source(s).
+  Core invariant: summary ≠ source. A summary does not inherit the source's
+  authority, canon status, or epistemic level.
+  A summary lineage record makes the derivation explicit and auditable.
+
+fields:
+  lineage_id:
+    type: string
+    required: true
+
+  summary_artifact_id:
+    type: string
+    required: true
+
+  source_artifact_ids:
+    type: array
+    items: string
+    required: true
+    description: All source artifacts this summary is derived from
+
+  summary_method:
+    type: string
+    required: true
+    enum:
+      - manual_human       # Human-authored summary
+      - ai_synthesis       # AI model synthesis
+      - extraction         # Subset/extraction from source
+      - translation        # Cross-language or cross-format
+      - compression        # Semantic compression
+
+  summarized_by:
+    type: string
+    required: true
+    description: Agent or human who created the summary
+
+  created_at:
+    type: string
+    format: iso8601
+    required: true
+
+  raw_export_status:
+    type: string
+    required: true
+    enum: [full_raw, partial_raw, summary_only, unavailable]
+    description: What source material was available when the summary was created
+
+  access_scope:
+    type: object
+    required: true
+    fields:
+      visible_sources:
+        type: array
+        items: string
+      unavailable_sources:
+        type: array
+        items: string
+      assumed_context:
+        type: array
+        items: string
+
+  authority_inherited:
+    type: boolean
+    required: true
+    const: false
+    description: >
+      A summary NEVER inherits source authority.
+      This field is always false. It exists to make the non-inheritance explicit.
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, review_pending, approved, deployed]
+    default: not_deployable
+
+constraints:
+  - authority_inherited MUST ALWAYS BE false
+  - summary_artifact.canon_status MUST NOT be upgraded based solely on source_artifact.canon_status
+  - raw_export_status == summary_only IMPLIES summary cannot claim source_completeness

@@ -1,0 +1,55 @@
+# Valid O_AI Packet Example: Full Raw
+# NOT CANON — NOT DEPLOYABLE
+# This is a VALID packet with full_raw raw_export_status.
+
+packet_id: "example-valid-fullraw-001"
+packet_version: "0.1"
+source_surface: "O_AI"
+timestamp: "2026-05-26T18:39:00Z"
+
+raw_export_status: full_raw
+epistemic_label: candidate
+authority_scope: local
+canon_status: not_canon
+deployment_status: not_deployable
+
+thread_time_range:
+  start: "2026-05-26T10:00:00Z"
+  end: "2026-05-26T14:00:00Z"
+  timezone: UTC
+
+access_scope:
+  visible_sources:
+    - "Full ChatGPT session transcript (attached)"
+    - "Referenced document: design-spec-v0.1.md"
+  unavailable_sources: []
+  assumed_context: []
+
+content_type: synthesis
+content:
+  raw_transcript_ref: "sha256:abc123..."
+  synthesis: >
+    This packet contains a synthesis from a full raw session export.
+    All sources visible. No unavailable context.
+  key_claims:
+    - claim: "Design spec section 3 describes the core state machine"
+      source: "design-spec-v0.1.md:section-3"
+      confidence: high
+    - claim: "Implementation follows the Atlas/ORCS pattern"
+      source: "session transcript, turn 42"
+      confidence: medium
+
+public_use_status: review_pending
+
+sha256_if_available: "sha256:abc123def456..."
+
+gates:
+  provenance_gate: pass
+  safety_gate: pass
+  governance_gate: pass
+  data_residency_gate: pass
+
+routing:
+  primary_lane: hashlight
+  tidelock_required: false
+  atlas_orcs_audit: true

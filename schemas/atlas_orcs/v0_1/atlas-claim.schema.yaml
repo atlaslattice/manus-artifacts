@@ -1,0 +1,92 @@
+# Atlas/ORCS Schema: Claim
+# NOT CANON — NOT DEPLOYABLE
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-claim
+canon_status: not_canon
+deployment_status: not_deployable
+
+description: >
+  An individual epistemic claim managed by Atlas/ORCS.
+  Claims have an authority level, confidence level, and source references.
+  Summary claims do not inherit the authority of their source.
+
+fields:
+  claim_id:
+    type: string
+    required: true
+
+  claim_text:
+    type: string
+    required: true
+
+  claim_type:
+    type: string
+    required: true
+    enum: [assumption, context, receipt, reviewed_claim, ratified_claim, proof]
+    default: assumption
+    note: >
+      assumption <_P context <_P receipt <_P reviewed_claim <_P ratified_claim <_P proof
+      No claim can self-promote to a higher type without a governance event.
+
+  author_id:
+    type: string
+    required: true
+
+  source_refs:
+    type: array
+    items: string
+    required: false
+    description: What sources support this claim
+
+  created_at:
+    type: string
+    format: iso8601
+    required: true
+
+  confidence:
+    type: string
+    required: true
+    enum: [low, medium, high, verified]
+    default: low
+
+  epistemic_label:
+    type: string
+    required: true
+    enum: [summary_only, partial_raw, full_raw, unavailable]
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, review_pending, approved, deployed]
+    default: not_deployable
+
+  is_summary_of:
+    type: string
+    required: false
+    description: claim_id of the source claim this summarizes
+    note: If set, this claim does NOT inherit source claim's authority
+
+  ratification_event_id:
+    type: string
+    required: false
+    description: Required if claim_type == ratified_claim or proof
+
+  contradictions:
+    type: array
+    items: string
+    description: IDs of contradiction records involving this claim
+    default: []
+
+constraints:
+  - claim_type == proof REQUIRES ratification_event_id IS NOT NULL
+  - claim_type == ratified_claim REQUIRES ratification_event_id IS NOT NULL
+  - is_summary_of IS NOT NULL IMPLIES claim_type <= reviewed_claim (summary cannot be proof)
+  - Self-promotion of claim_type is PROHIBITED without governance event

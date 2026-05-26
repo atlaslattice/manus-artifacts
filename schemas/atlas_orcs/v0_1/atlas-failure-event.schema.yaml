@@ -1,0 +1,98 @@
+# Atlas/ORCS Schema: Failure Event
+# NOT CANON — NOT DEPLOYABLE
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-failure-event
+canon_status: not_canon
+deployment_status: not_deployable
+
+description: >
+  Records a failure event in the Atlas/ORCS system.
+  Failure events include: gate rejections, laundering detections,
+  unauthorized promotion attempts, adversarial pattern detections,
+  and rehydration failures.
+
+fields:
+  event_id:
+    type: string
+    required: true
+
+  event_type:
+    type: string
+    required: true
+    enum:
+      - gate_rejection             # A required gate failed
+      - laundering_detected        # compatible_Γ returned FALSE
+      - unauthorized_promotion     # Attempt to promote without governance event
+      - self_ratification_attempt  # Artifact attempted to self-ratify
+      - expired_ratification       # Ratification expired; artifact demoted
+      - adversarial_pattern        # Known adversarial pattern detected
+      - rehydration_failure        # Agent rehydration failed
+      - missing_receipt            # Execution attempted without receipt
+      - missing_human_gate         # Execution attempted without human permission
+
+  artifact_id:
+    type: string
+    required: false
+    description: Affected artifact (if applicable)
+
+  triggered_by:
+    type: string
+    required: true
+    description: Agent, system, or event that triggered this failure
+
+  detected_by:
+    type: string
+    required: true
+    description: System component that detected the failure
+
+  failed_at:
+    type: string
+    format: iso8601
+    required: true
+
+  failure_details:
+    type: string
+    required: true
+    description: Human-readable description of the failure
+
+  gate_chain_state:
+    type: object
+    required: false
+    description: State of each gate at time of failure
+    fields:
+      provenance_gate: string
+      safety_gate: string
+      governance_gate: string
+      data_residency_gate: string
+      human_permission_gate: string
+      receipt_gate: string
+
+  resolution:
+    type: string
+    required: true
+    enum: [blocked, held, quarantined, logged_only]
+    description: What action was taken in response to this failure
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, review_pending, approved, deployed]
+    default: not_deployable
+
+  notes:
+    type: string
+    required: false
+
+constraints:
+  - Every failure event MUST be logged (no silent failures)
+  - event_type == adversarial_pattern IMPLIES artifact_id quarantined
+  - event_type == laundering_detected IMPLIES path execution BLOCKED
+  - Failure events are IMMUTABLE once created

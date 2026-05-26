@@ -1,0 +1,229 @@
+# Native Thread Ingestion Packet Schema v0.1
+# NOT CANON — NOT DEPLOYABLE
+# See: archive/spec/gptdream/appendices/APPENDIX_I_ATLAS_ORCS_EPISTEMIC_GOVERNANCE_PROFILE_v0.1.md
+
+schema_version: "0.1"
+schema_id: native-thread-ingestion-packet
+canon_status: not_canon
+deployment_status: not_deployable
+
+description: >
+  Schema for ingesting native AI model threads (ChatGPT threads, Claude sessions, etc.)
+  into the GPTDream++ habitat. Used by Children of the Swarm agents for task-thread ingestion.
+  Designed to prevent false completeness — the packet must honestly declare what it has and
+  what it doesn't.
+
+required_fields:
+  - packet_id
+  - seat_name
+  - model_surface
+  - source_thread_label
+  - thread_time_range
+  - raw_export_status
+  - access_scope
+  - canon_status
+  - deployment_status
+  - strongest_safe_claim
+
+fields:
+  packet_id:
+    type: string
+    required: true
+
+  schema_version:
+    type: string
+    default: "0.1"
+
+  seat_name:
+    type: string
+    required: true
+    description: Which brain seat originated this thread (e.g., LucernaBrain, TIDELOCKBrain)
+
+  model_surface:
+    type: string
+    required: true
+    description: The AI model/surface that generated this thread (e.g., O_AI, ANTHROPIC, COPILOT)
+
+  source_thread_label:
+    type: string
+    required: true
+    description: Human-readable label for the source thread
+
+  thread_time_range:
+    type: object
+    required: true
+    fields:
+      start:
+        type: string
+        format: iso8601
+        required: true
+      end:
+        type: string
+        format: iso8601
+        required: true
+      timezone:
+        type: string
+        required: true
+        default: UTC
+
+  raw_export_status:
+    type: string
+    required: true
+    enum: [full_raw, partial_raw, summary_only, unavailable]
+    description: >
+      REQUIRED. What raw data is available.
+      full_raw: complete export available
+      partial_raw: some turns missing or truncated
+      summary_only: no raw export; summary only
+      unavailable: export not possible or not attempted
+
+  access_scope:
+    type: object
+    required: true
+    fields:
+      visible_sources:
+        type: array
+        items: string
+        required: true
+      unavailable_sources:
+        type: array
+        items: string
+        required: true
+        description: MUST be explicit — empty list [] if nothing unavailable
+      assumed_context:
+        type: array
+        items: string
+        required: true
+        description: MUST be explicit — empty list [] if no assumed context
+
+  source_refs:
+    type: array
+    items: string
+    required: false
+
+  sha256_if_available:
+    type: string
+    required: false
+
+  privacy_status:
+    type: string
+    required: false
+    enum: [public, internal, confidential, restricted]
+    default: internal
+
+  key_events:
+    type: array
+    required: false
+    description: Key events that occurred during the thread
+    items:
+      type: object
+      fields:
+        event_type: string
+        description: string
+        timestamp: string
+
+  artifacts_created:
+    type: array
+    items: string
+    required: false
+    description: IDs or descriptions of artifacts created during this thread
+
+  claims_extracted:
+    type: array
+    required: false
+    description: Claims extracted from the thread (for Atlas/ORCS processing)
+    items:
+      type: object
+      fields:
+        claim_text: string
+        confidence:
+          type: string
+          enum: [low, medium, high]
+          default: low
+        source_ref: string
+
+  contradictions_or_uncertainties:
+    type: array
+    items: string
+    required: false
+    description: Contradictions or uncertainties detected during this thread
+
+  overclaims_to_avoid:
+    type: array
+    items: string
+    required: false
+    description: Specific overclaims that should NOT be made based on this thread
+
+  identity_drift_events:
+    type: array
+    required: false
+    description: Events where the model's behavior shifted notably mid-thread
+    items:
+      type: object
+      fields:
+        description: string
+        approximate_turn: integer
+        severity:
+          type: string
+          enum: [minor, moderate, significant]
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, review_pending, approved, deployed]
+    default: not_deployable
+
+  strongest_safe_claim:
+    type: string
+    required: true
+    description: >
+      The strongest claim that can be safely made based on available data.
+      MUST include a caveat if raw_export_status != full_raw.
+      Example: "Thread produced synthesis on topic X [CAVEAT: summary only; raw unavailable]"
+
+  next_action:
+    type: string
+    required: false
+    description: Recommended next action (e.g., "verify claims with raw source", "route to council review")
+
+validation_rules:
+  - id: NT-VAL-001
+    rule: raw_export_status IS NULL
+    result: FAIL
+    message: "raw_export_status is required"
+
+  - id: NT-VAL-002
+    rule: thread_time_range IS NULL
+    result: FAIL
+    message: "thread_time_range is required"
+
+  - id: NT-VAL-003
+    rule: access_scope IS NULL
+    result: FAIL
+    message: "access_scope is required"
+
+  - id: NT-VAL-004
+    rule: raw_export_status == summary_only AND strongest_safe_claim does NOT contain caveat
+    result: WARN
+    message: "summary_only packet should include caveat in strongest_safe_claim"
+
+  - id: NT-VAL-005
+    rule: raw_export_status == summary_only AND any claim has confidence == high
+    result: WARN
+    message: "summary_only packet should not have high-confidence claims without raw source"
+
+  - id: NT-VAL-006
+    rule: unavailable_sources IS NULL (not even empty list)
+    result: FAIL
+    message: "unavailable_sources must be explicit (empty list [] is valid)"
+
+  - id: NT-VAL-007
+    rule: assumed_context IS NULL (not even empty list)
+    result: FAIL
+    message: "assumed_context must be explicit (empty list [] is valid)"

@@ -1,0 +1,251 @@
+# O_AI Packet Schema v0.1
+# NOT CANON — NOT DEPLOYABLE
+# See: archive/spec/gptdream/appendices/APPENDIX_H_2_O_AI_PACKET_SCHEMA_v0.1.md
+
+schema_version: "0.1"
+schema_id: o-ai-packet
+canon_status: not_canon
+deployment_status: not_deployable
+
+description: >
+  Schema for packets originating from OpenAI surfaces (ChatGPT, o3, o4, GPT-4.x, etc.).
+  All O_AI packets are default not_canon and not_deployable.
+  O_AI packets cannot self-authorize execution or self-ratify.
+
+required_fields:
+  - packet_id
+  - packet_version
+  - source_surface
+  - timestamp
+  - raw_export_status
+  - epistemic_label
+  - authority_scope
+  - canon_status
+  - deployment_status
+  - thread_time_range
+  - access_scope
+  - content_type
+  - content
+  - gates
+
+fields:
+  packet_id:
+    type: string
+    description: Unique identifier (UUID or deterministic hash)
+
+  packet_version:
+    type: string
+    default: "0.1"
+
+  source_surface:
+    type: string
+    const: "O_AI"
+    description: Always O_AI for this schema
+
+  timestamp:
+    type: string
+    format: iso8601
+
+  # ── Epistemic Status ─────────────────────────────────────────
+  raw_export_status:
+    type: string
+    required: true
+    enum: [full_raw, partial_raw, summary_only, unavailable]
+    description: >
+      REQUIRED. What raw data was available.
+      summary_only CANNOT support public_use_status: source_complete.
+
+  epistemic_label:
+    type: string
+    required: true
+    enum: [working, candidate, reviewed, ratified]
+    default: working
+
+  authority_scope:
+    type: string
+    required: true
+    enum: [none, local, council, ratified_canon]
+    default: none
+    description: What authority this O_AI output has. Default none.
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, review_pending, approved, deployed]
+    default: not_deployable
+
+  # ── Time Range ────────────────────────────────────────────────
+  thread_time_range:
+    type: object
+    required: true
+    fields:
+      start:
+        type: string
+        format: iso8601
+        required: true
+      end:
+        type: string
+        format: iso8601
+        required: true
+      timezone:
+        type: string
+        required: true
+        default: UTC
+
+  # ── Access Scope ──────────────────────────────────────────────
+  access_scope:
+    type: object
+    required: true
+    fields:
+      visible_sources:
+        type: array
+        items: string
+        required: true
+        description: Sources the model could access
+      unavailable_sources:
+        type: array
+        items: string
+        required: true
+        description: EXPLICIT list of sources the model could NOT access
+      assumed_context:
+        type: array
+        items: string
+        required: true
+        description: EXPLICIT list of assumed/inferred context
+
+  # ── Content ───────────────────────────────────────────────────
+  content_type:
+    type: string
+    required: true
+    enum: [synthesis, task_plan, code, data, execution_request]
+
+  content:
+    type: object
+    required: true
+
+  # ── Public Use ────────────────────────────────────────────────
+  public_use_status:
+    type: string
+    required: false
+    enum: [internal_only, review_pending, source_complete]
+    description: >
+      CONSTRAINT: summary_only CANNOT support source_complete.
+      This will fail validation if raw_export_status==summary_only AND
+      public_use_status==source_complete.
+
+  # ── Gates ─────────────────────────────────────────────────────
+  gates:
+    type: object
+    required: true
+    fields:
+      provenance_gate:
+        type: string
+        required: true
+        enum: [pending, pass, fail]
+        default: pending
+      safety_gate:
+        type: string
+        required: true
+        enum: [pending, pass, fail]
+        default: pending
+      governance_gate:
+        type: string
+        required: true
+        enum: [pending, pass, fail]
+        default: pending
+      data_residency_gate:
+        type: string
+        required: true
+        enum: [pending, pass, fail]
+        default: pending
+      human_permission_gate:
+        type: string
+        required: false
+        enum: [pending, pass, fail]
+        description: REQUIRED when content_type == execution_request
+      receipt_gate:
+        type: string
+        required: false
+        enum: [pending, pass, fail]
+        description: REQUIRED when content_type == execution_request
+
+  # ── Routing ───────────────────────────────────────────────────
+  routing:
+    type: object
+    required: false
+    fields:
+      primary_lane:
+        type: string
+        enum: [lucerna, tidelock, hashlight, atlasbrain, rootglass]
+      tidelock_required:
+        type: boolean
+        default: false
+      atlas_orcs_audit:
+        type: boolean
+        default: false
+
+  # ── Lineage ───────────────────────────────────────────────────
+  parent_packet_id:
+    type: string
+    required: false
+
+  source_refs:
+    type: array
+    items: string
+    required: false
+
+  sha256_if_available:
+    type: string
+    required: false
+
+validation_rules:
+  - id: VAL-001
+    rule: raw_export_status == summary_only AND public_use_status == source_complete
+    result: FAIL
+    message: "summary_only packets cannot claim source_complete"
+
+  - id: VAL-002
+    rule: content_type == execution_request AND (human_permission_gate == null OR human_permission_gate != pass)
+    result: FAIL
+    message: "execution_request requires human_permission_gate == pass"
+
+  - id: VAL-003
+    rule: content_type == execution_request AND (receipt_gate == null OR receipt_gate != pass)
+    result: FAIL
+    message: "execution_request requires receipt_gate == pass"
+
+  - id: VAL-004
+    rule: content_type == execution_request AND safety_gate != pass
+    result: FAIL
+    message: "execution_request requires safety_gate == pass"
+
+  - id: VAL-005
+    rule: raw_export_status IS NULL
+    result: FAIL
+    message: "raw_export_status is required"
+
+  - id: VAL-006
+    rule: thread_time_range IS NULL
+    result: FAIL
+    message: "thread_time_range is required"
+
+  - id: VAL-007
+    rule: access_scope IS NULL
+    result: FAIL
+    message: "access_scope is required"
+
+  - id: VAL-008
+    rule: access_scope.unavailable_sources IS NULL
+    result: FAIL
+    message: "unavailable_sources must be explicit (can be empty list [])"
+
+  - id: VAL-009
+    rule: access_scope.assumed_context IS NULL
+    result: FAIL
+    message: "assumed_context must be explicit (can be empty list [])"

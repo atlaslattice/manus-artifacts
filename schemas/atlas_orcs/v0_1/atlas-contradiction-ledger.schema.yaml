@@ -1,0 +1,85 @@
+# Atlas/ORCS Schema: Contradiction Ledger
+# NOT CANON — NOT DEPLOYABLE
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-contradiction-ledger
+canon_status: not_canon
+deployment_status: not_deployable
+
+description: >
+  The contradiction ledger records all detected contradictions between artifacts or claims.
+  CRITICAL: Contradictions are NEVER silently resolved or overwritten.
+  Each contradiction creates a permanent record. Both conflicting items are preserved.
+  Only a council governance event can resolve a contradiction (by choosing, superseding, or quarantining).
+
+fields:
+  ledger_id:
+    type: string
+    required: true
+
+  contradiction_id:
+    type: string
+    required: true
+
+  artifact_id_a:
+    type: string
+    required: true
+
+  artifact_id_b:
+    type: string
+    required: true
+
+  contradiction_type:
+    type: string
+    required: true
+    enum:
+      - factual          # Two claims make opposite factual assertions
+      - temporal         # Claims are contradictory about timing or sequence
+      - authority        # Claims make conflicting authority assertions
+      - provenance       # Claims have conflicting provenance
+      - structural       # Claims have structurally incompatible definitions
+      - identity         # Claims make conflicting identity assertions
+
+  detected_by:
+    type: string
+    required: true
+
+  detected_at:
+    type: string
+    format: iso8601
+    required: true
+
+  status:
+    type: string
+    required: true
+    enum: [open, under_review, resolved]
+    default: open
+
+  resolution_event_id:
+    type: string
+    required: false
+    description: ORCS governance event that resolved this contradiction (if resolved)
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, review_pending, approved, deployed]
+    default: not_deployable
+
+  notes:
+    type: string
+    required: false
+
+constraints:
+  - Contradiction detection MUST create a new contradiction_id record
+  - NO artifact may be overwritten as a result of contradiction detection
+  - Both artifact_id_a and artifact_id_b MUST be preserved
+  - status == resolved REQUIRES resolution_event_id IS NOT NULL
+  - Silent resolution (without governance event) IS PROHIBITED

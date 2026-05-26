@@ -1,0 +1,57 @@
+# INVALID O_AI Packet Example: Execution without gates
+# NOT CANON — NOT DEPLOYABLE
+# This packet FAILS validation (execution_request without required gates)
+
+packet_id: "example-invalid-exec-no-gates-001"
+packet_version: "0.1"
+source_surface: "O_AI"
+timestamp: "2026-05-26T18:39:00Z"
+
+raw_export_status: summary_only
+epistemic_label: working
+authority_scope: none
+canon_status: not_canon
+deployment_status: not_deployable
+
+thread_time_range:
+  start: "2026-05-26T10:00:00Z"
+  end: "2026-05-26T12:00:00Z"
+  timezone: UTC
+
+access_scope:
+  visible_sources: ["ChatGPT session"]
+  unavailable_sources: []
+  assumed_context: []
+
+content_type: execution_request  # THIS TRIGGERS EXTRA GATE REQUIREMENTS
+
+content:
+  action: "deploy to production"
+  target: "main branch"
+  description: "Execute the deployment pipeline"
+  # This execution request is missing required gates — it will be REJECTED
+
+gates:
+  provenance_gate: pending     # Should be pass
+  safety_gate: pending         # Should be pass — BLOCKS execution
+  governance_gate: pending     # Should be pass
+  data_residency_gate: pending
+  # human_permission_gate: MISSING — REQUIRED for execution_request (VAL-002)
+  # receipt_gate: MISSING — REQUIRED for execution_request (VAL-003)
+
+validation_failures:
+  - rule: VAL-002
+    message: "execution_request requires human_permission_gate == pass"
+  - rule: VAL-003
+    message: "execution_request requires receipt_gate == pass"
+  - rule: VAL-004
+    message: "execution_request requires safety_gate == pass"
+
+routing:
+  primary_lane: dphi_gate
+  tidelock_required: true
+  atlas_orcs_audit: true
+
+# Expected result: REJECTED at D-Φ-1 gate
+# Missing: human_permission_gate, receipt_gate, safety_gate not pass
+# No execution should occur from this packet

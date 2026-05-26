@@ -1,0 +1,85 @@
+# Atlas/ORCS Schema: Intent Provenance
+# NOT CANON — NOT DEPLOYABLE
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-intent-provenance
+canon_status: not_canon
+deployment_status: not_deployable
+
+description: >
+  Records the provenance of inferred intent — when an agent or system
+  interprets the purpose or goal behind an artifact, action, or statement.
+  Inferred intent is epistemic, not authoritative. It must be labeled as such.
+
+fields:
+  intent_provenance_id:
+    type: string
+    required: true
+
+  subject_artifact_id:
+    type: string
+    required: true
+    description: The artifact or action whose intent is being described
+
+  inferred_intent:
+    type: string
+    required: true
+    description: The inferred intent (in natural language)
+
+  inferred_by:
+    type: string
+    required: true
+    description: Agent or human who inferred this intent
+
+  inference_method:
+    type: string
+    required: true
+    enum:
+      - explicit_statement   # Intent was explicitly stated by author
+      - contextual_inference # Intent inferred from context
+      - pattern_matching     # Intent inferred from similar patterns
+      - model_synthesis      # AI model synthesized intent from available data
+
+  confidence:
+    type: string
+    required: true
+    enum: [low, medium, high, explicit]
+    default: low
+    note: >
+      Only inference_method == explicit_statement can support confidence == explicit
+
+  source_refs:
+    type: array
+    items: string
+    required: false
+
+  created_at:
+    type: string
+    format: iso8601
+    required: true
+
+  is_authoritative:
+    type: boolean
+    required: true
+    default: false
+    description: >
+      Is this intent record authoritative (explicitly confirmed by author)?
+      False by default — requires explicit_statement + confirmation.
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, review_pending, approved, deployed]
+    default: not_deployable
+
+constraints:
+  - inference_method != explicit_statement IMPLIES confidence != explicit
+  - Inferred intent MUST NOT be used as a basis for execution requests
+  - is_authoritative == true REQUIRES confirmation from the original author

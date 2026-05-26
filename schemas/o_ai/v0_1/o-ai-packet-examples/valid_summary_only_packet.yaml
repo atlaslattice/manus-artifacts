@@ -1,0 +1,55 @@
+# Valid O_AI Packet Example: Summary Only
+# NOT CANON — NOT DEPLOYABLE
+# This is a VALID packet with summary_only raw_export_status.
+
+packet_id: "example-valid-summary-001"
+packet_version: "0.1"
+source_surface: "O_AI"
+timestamp: "2026-05-26T18:39:00Z"
+
+raw_export_status: summary_only
+epistemic_label: working
+authority_scope: none
+canon_status: not_canon
+deployment_status: not_deployable
+
+thread_time_range:
+  start: "2026-05-26T10:00:00Z"
+  end: "2026-05-26T12:00:00Z"
+  timezone: UTC
+
+access_scope:
+  visible_sources:
+    - "ChatGPT session (summary only)"
+  unavailable_sources:
+    - "raw transcript (not exported)"
+    - "attached files referenced in session"
+  assumed_context:
+    - "continued from prior session; prior session context assumed but not verified"
+
+content_type: synthesis
+content:
+  summary: >
+    This packet contains a summary synthesis of a ChatGPT session.
+    The raw transcript is unavailable. Strongest safe claim: synthesis was produced;
+    specific claims require raw source verification before promotion.
+  strongest_safe_claim: >
+    Synthesis produced during session window. Claims are working hypotheses only.
+    Raw source unavailable — cannot verify specific factual assertions.
+  caveats:
+    - "Summary only; raw export unavailable"
+    - "Cannot confirm completeness"
+    - "Do not treat as source-complete"
+
+public_use_status: internal_only
+
+gates:
+  provenance_gate: pass
+  safety_gate: pass
+  governance_gate: pending
+  data_residency_gate: pass
+
+routing:
+  primary_lane: lucerna
+  tidelock_required: false
+  atlas_orcs_audit: false
