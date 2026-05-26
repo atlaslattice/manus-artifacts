@@ -1,0 +1,47 @@
+name: docs-link-checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check-relative-markdown-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate relative markdown links
+        run: |
+          python - <<'PY'
+          import re
+          from pathlib import Path
+
+          roots = [
+              Path("archive"),
+              Path("projects"),
+              Path(".github"),
+          ]
+          md_files = []
+          for root in roots:
+              if root.exists():
+                  md_files.extend(root.rglob("*.md"))
+
+          link_re = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
+          failures = []
+          for file in md_files:
+              text = file.read_text(encoding="utf-8", errors="ignore")
+              for raw in link_re.findall(text):
+                  link = raw.strip()
+                  if not link or link.startswith(("http://", "https://", "mailto:", "#")):
+                      continue
+                  target = (file.parent / link.split("#", 1)[0]).resolve()
+                  if not target.exists():
+                      failures.append(f"{file}: {link}")
+
+          if failures:
+              print("Broken relative links found:")
+              for item in failures:
+                  print(f"- {item}")
+              raise SystemExit(1)
+
+          print("All checked relative markdown links exist.")
+          PY
