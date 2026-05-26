@@ -1,13 +1,12 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-title: "atlas claim"
+title: "receipt habitat claim"
 type: object
 additionalProperties: true
 properties:
   schema_version:
     type: string
     const: "0.1"
-  claim_id:
-    type: string
+  claim_id: {type: string}
   claim_state:
     type: string
     enum: [candidate, reviewed, ratified]
@@ -25,13 +24,11 @@ properties:
       receipt_id: {type: string}
       receipt_type: {type: string}
       receipt_hash: {type: string}
-      generated_at: {type: string}
     required: [receipt_id, receipt_type, receipt_hash]
   governance_event:
     type: object
     properties:
       governance_event_id: {type: string}
-      governance_event_type: {type: string}
     required: [governance_event_id]
   source_basis:
     type: string
@@ -48,8 +45,3 @@ properties:
       verification_event_id: {type: string}
     required: [verification_event_id]
 required: [schema_version, claim_state, evidence_refs]
-x-rules:
-  candidate_to_reviewed_requires_receipt: "candidate -> reviewed requires receipt_metadata"
-  reviewed_to_ratified_requires_governance_event: "reviewed -> ratified requires governance_event"
-  summary_cannot_become_source: "source_basis=summary_only cannot set source_status=source"
-  receipt_not_truth: "receipt metadata does not imply truth_status=verified without verification_event"

@@ -6,12 +6,21 @@ properties:
   schema_version:
     type: string
     const: "0.1"
-  canon_status:
+  receipt_id:
     type: string
-    default: not_canon
-    enum: [not_canon, candidate, ratified]
-  deployment_status:
+  receipt_type:
     type: string
-    default: not_deployable
-    enum: [not_deployable, candidate, active]
-required: [schema_version]
+  receipt_hash:
+    type: string
+  claim_state:
+    type: string
+    enum: [candidate, reviewed, ratified]
+  evidence_refs:
+    type: array
+    minItems: 1
+    items:
+      type: string
+  source_basis:
+    type: string
+    enum: [full_source, summary_only, mixed]
+required: [schema_version, receipt_id, receipt_type, receipt_hash, claim_state, evidence_refs]
