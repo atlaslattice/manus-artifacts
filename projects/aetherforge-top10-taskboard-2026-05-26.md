@@ -4,6 +4,10 @@
 **Mode:** Council Seat / Metatron Cube framing  
 **Purpose:** Track the ten most enjoyable, high-leverage repository tasks to execute.
 
+> Canonical board: `projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md`
+>  
+> This Top-10 board remains active as a sprint slice of the Top-50 canonical board.
+
 ## Top 10
 
 1. **Rebuild and maintain this board as a living execution map**  
