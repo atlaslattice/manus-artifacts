@@ -1,0 +1,39 @@
+schema_name: o-ai-packet
+schema_version: "0.1"
+type: object
+required:
+  - raw_export_status
+  - thread_time_range
+  - access_scope
+  - epistemic_label
+  - authority_scope
+  - gates
+properties:
+  raw_export_status:
+    type: string
+    enum: [full_raw, partial_raw, summary_only, unavailable]
+  thread_time_range:
+    type: object
+    required: [start, end, timezone]
+  access_scope:
+    type: object
+    required: [visible_sources, unavailable_sources, assumed_context]
+  epistemic_label:
+    type: string
+  authority_scope:
+    type: string
+  public_use_status:
+    type: string
+    enum: [none, source_incomplete, source_complete]
+  packet_kind:
+    type: string
+    enum: [analysis, execution_request]
+  gates:
+    type: object
+    required:
+      - provenance_gate
+      - safety_gate
+      - governance_gate
+      - data_residency_gate
+      - human_permission_gate
+      - receipt_gate

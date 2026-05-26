@@ -1,0 +1,18 @@
+schema_name: atlas-ratification-event
+schema_version: "0.1"
+type: object
+properties:
+  id:
+    type: string
+  actor_id:
+    type: string
+  subject_id:
+    type: string
+  ratification_key_id:
+    type: string
+  canon_status:
+    type: string
+    default: not_canon
+required: [id, actor_id, subject_id, ratification_key_id]
+x_constraints:
+  - actor_id_must_not_equal_subject_id
