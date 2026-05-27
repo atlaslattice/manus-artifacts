@@ -37,6 +37,14 @@ bash run_checks.sh
 - Contradictions should be linked/routed, not silently erased.
 - Quarantine preserves disputed artifacts without authority leakage.
 
+## Aetherforge Module 8-9 routing
+
+- Start with `AETHERFORGE_MODULE_REGISTRY_v0.1.md` and `projects/aetherforge-game-world/README.md` before routing Module 8 or Module 9 work.
+- Route **M8 / Archive Bowl** work to knowledge-graph, archive-mining, and cross-reference artifacts. Keep every new index or graph edge source-linked and mark candidate/canon status explicitly.
+- Route **M9 / Lore Library** work to documentation, manifests, boot cards, rehydration guidance, and agent-brain profile surfaces. Keep first-read paths current when routing changes.
+- If a Module 8-9 change creates or moves a navigation surface, update the nearest README or index-of-indexes in the same patch.
+- Do not treat Aetherforge game framing, quest titles, or storage location as ratification.
+
 ## Pull request expectations
 
 - Keep changes surgical and repo-grounded.
