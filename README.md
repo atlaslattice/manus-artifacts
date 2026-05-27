@@ -20,6 +20,7 @@ This repository contains research, health data, and system artifacts generated a
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
 - **[Aetherforge Council Taskboard](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — Top-10 council execution board.
+- **[Aetherforge 144-Task Hypercube Campaign](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — 12 waves of 12 tasks for public + world-class execution.
 - **[Aetherforge Game World (Candidate)](./projects/aetherforge-game-world-omnispec-archive-bowl-2026-05-26.md)** — Playable quest map, Omnispec candidate boundary, and Archive Bowl roadmap.
 - **[Council-Seat Quickstart (Candidate)](./projects/COUNCIL_SEAT_QUICKSTART_2026-05-26.md)** — Onboarding checklist for new council seats and Children of the Swarm brain lanes.
 - **[GPTDream++ OpenAI Staging Lane (Candidate)](./archive/aetherforge/gptdreampp-openai/README.md)** — Provenance-first package skeleton for public staging.
