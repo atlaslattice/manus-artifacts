@@ -44,6 +44,7 @@ Need vocabulary? → **[docs/GLOSSARY.md](./docs/GLOSSARY.md)**
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
 - **[Aetherforge Game World](./projects/aetherforge-game-world/README.md)** — Gameplay framing, Archive Bowl routing, and quest templates.
+- **[Aetherforge Open-Source Execution Map](./projects/aetherforge-open-source-gift-execution-map-2026-05-27.md)** — Knowledge graph + game + GPTDream++ world-class execution framing.
 
 ### Governance & Council
 - **[Council](./council/)** — Trinity and Pantheon Council session archives.
