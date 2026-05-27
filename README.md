@@ -65,6 +65,7 @@ by @atlaslattice. See [GOVERNANCE.md](./GOVERNANCE.md) for the ratification proc
 - **[Aetherforge Wave-1 Board](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — ✅ Complete
 - **[Aetherforge Wave-2 Board](./projects/aetherforge-top10-taskboard-2026-05-26-wave2.md)** — ✅ Complete
 - **[Aetherforge Top-50 Public Launch Board](./projects/aetherforge-top50-taskboard-2026-05-26.md)** — 🔄 16/50 complete
+- **[Aetherforge 12×12 Hypercube (144 Tasks)](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — 🔄 0/144 complete
 
 ### Archives & Research
 - **[Janus Checkpoints](./archives/janus-checkpoints/)** — Session state and resurrection logs.
