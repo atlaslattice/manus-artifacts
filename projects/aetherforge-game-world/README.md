@@ -85,3 +85,4 @@ Loot is only awarded when all are true:
 
 - Archive Bowl problem index: `projects/aetherforge-game-world/ARCHIVE_BOWL_PROBLEM_INDEX_v0.1.md`
 - Fun framing + acceptance template: `projects/aetherforge-game-world/FUN_FRAMING_SERIOUS_ACCEPTANCE_TEMPLATE_v0.1.md`
+- Loot registry: `/tmp/workspace/atlaslattice/manus-artifacts/projects/aetherforge-game-world/AETHERFORGE_LOOT_REGISTRY.md`
