@@ -61,6 +61,7 @@ All artifacts remain candidate work unless explicitly ratified as canon.
 
 ### Archives & Research
 - **[Archive Index (ops/spec/KG)](./archive/README.md)** — Operational, governance, and protocol artifact archive.
+- **[Codebases](./codebases/README.md)** — Implementation sandboxes and application snapshots.
 - **[Janus Checkpoints](./archives/janus-checkpoints/)** — Session state and resurrection logs.
 - **[Research](./research/)** — Intelligence sweeps and convergence reports.
 - **[Health](./health/)** — Patient rights and wellness facility research.
