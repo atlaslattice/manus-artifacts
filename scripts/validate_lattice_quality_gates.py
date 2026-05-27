@@ -86,8 +86,13 @@ def validate_index(repo_root: Path, index_path: Path, max_age_days: int) -> list
 
     required_paths = {
         "README.md",
+        "projects/aetherforge-world-class-authoritative-roadmap-v0.1.md",
         "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_AETHERFORGE_GPTDREAM_UNIFIED_MISSION_CHARTER_v0.1.md",
         "archive/knowledge_graph/lattice_kg/v0_5/lattice_hypercube_144_scoreboard.v0.1.json",
+        "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_WORLD_CLASS_CONTRIBUTOR_START_HERE_v0.1.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_GLOSSARY_v0.1.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_QUERY_COOKBOOK_v0.1.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_STATE_OF_GRAPH_WEEKLY_REPORT_2026-05-27.md",
     }
     index_by_path = {item["path"]: item for item in indexed_artifacts}
     index_by_id = {item["artifact_id"]: item for item in indexed_artifacts}
@@ -127,9 +132,11 @@ def validate_gptdreampp_staging_fixtures(repo_root: Path) -> list[str]:
         "hash_status",
         "claim_class",
         "review_state",
+        "lifecycle_state",
         "promotion_eligibility",
         "contamination_flags",
         "contradiction_links",
+        "supersedes_links",
         "tests_required",
         "tests_run",
         "blockers",
@@ -148,6 +155,15 @@ def validate_gptdreampp_staging_fixtures(repo_root: Path) -> list[str]:
             if record.get("promotion_eligibility") == "ratified":
                 errors.append(
                     f"fixture check failed: artifact contract record {idx} cannot be ratified in candidate fixture"
+                )
+            if record.get("lifecycle_state") not in {
+                "intake",
+                "in_review",
+                "blocked",
+                "ready_for_adjudication",
+            }:
+                errors.append(
+                    f"fixture check failed: artifact contract record {idx} has invalid lifecycle_state"
                 )
 
     notion_fixture = load_json(repo_root / "fixtures/gptdreampp_openai/notion_cargo_queue.valid.candidate.json")

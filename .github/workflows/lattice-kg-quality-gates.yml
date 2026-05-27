@@ -8,7 +8,11 @@ on:
       - 'scripts/build_lattice_global_index.py'
       - 'scripts/validate_lattice_quality_gates.py'
       - 'tests/test_lattice_kg_hypercube_program.py'
+      - 'tests/test_world_class_execution_surfaces.py'
       - 'fixtures/gptdreampp_openai/**'
+      - 'projects/aetherforge-world-class-authoritative-roadmap-v0.1.md'
+      - 'projects/README.md'
+      - 'README.md'
       - '.github/workflows/lattice-kg-quality-gates.yml'
   pull_request:
     paths:
@@ -17,7 +21,11 @@ on:
       - 'scripts/build_lattice_global_index.py'
       - 'scripts/validate_lattice_quality_gates.py'
       - 'tests/test_lattice_kg_hypercube_program.py'
+      - 'tests/test_world_class_execution_surfaces.py'
       - 'fixtures/gptdreampp_openai/**'
+      - 'projects/aetherforge-world-class-authoritative-roadmap-v0.1.md'
+      - 'projects/README.md'
+      - 'README.md'
       - '.github/workflows/lattice-kg-quality-gates.yml'
   workflow_dispatch:
 
@@ -43,5 +51,5 @@ jobs:
       - name: Validate completeness, link integrity, stale-index, and retrieval gates
         run: python scripts/validate_lattice_quality_gates.py --repo-root . --index archive/knowledge_graph/lattice_kg/v0_5/lattice_global_index.v0.1.json --max-age-days 7
 
-      - name: Run focused lattice kg tests
-        run: python -m pytest -q tests/test_lattice_kg_hypercube_program.py
+      - name: Run focused lattice execution tests
+        run: python -m pytest -q tests/test_lattice_kg_hypercube_program.py tests/test_world_class_execution_surfaces.py

@@ -35,6 +35,7 @@ Guardrails:
 - **[Free Bank](./projects/free-bank/)** — Banking revolution and financial sovereignty.
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
+- **[Aetherforge World-Class Authoritative Roadmap v0.1](./projects/aetherforge-world-class-authoritative-roadmap-v0.1.md)** — Single authoritative execution roadmap for world-class sequencing.
 - **[Aetherforge Metatron's Cube Top 50 Taskboard](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)** — Prioritized world-class OSS knowledge-graph execution board.
 - **[GPTDream++ OpenAI Public Staging Lane](./archive/aetherforge/gptdreampp-openai/README.md)** — GitHub-first ingestion control board, artifact contract, and review-lane staging package (candidate/non-canon).
 
@@ -43,6 +44,10 @@ Guardrails:
 - **[Lattice Hypercube 144 Scoreboard v0.1](./archive/knowledge_graph/lattice_kg/v0_5/LATTICE_HYPERCUBE_144_SCOREBOARD_v0.1.md)** — 144-category measurable framework with maturity states and evidence requirements.
 - **[Lattice KG Primitives + Ingestion Protocol v0.1](./archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_PRIMITIVES_AND_INGESTION_PROTOCOL_v0.1.md)** — Standard primitives and admission contract for linkable/queryable artifacts.
 - **[Lattice Unified Mission Dashboard v0.1](./archive/knowledge_graph/lattice_kg/v0_5/LATTICE_UNIFIED_MISSION_DASHBOARD_v0.1.md)** — Coverage, retrieval reliability, validation status, and blocker visibility.
+- **[Lattice World-Class Contributor Start Here v0.1](./archive/knowledge_graph/lattice_kg/v0_5/LATTICE_WORLD_CLASS_CONTRIBUTOR_START_HERE_v0.1.md)** — Fast path for compliant contribution loops.
+- **[Lattice KG Glossary v0.1](./archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_GLOSSARY_v0.1.md)** — Shared vocabulary for graph/mission terms.
+- **[Lattice KG Query Cookbook v0.1](./archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_QUERY_COOKBOOK_v0.1.md)** — Deterministic retrieval playbook.
+- **[Lattice State of the Graph — Weekly Report (2026-05-27)](./archive/knowledge_graph/lattice_kg/v0_5/LATTICE_STATE_OF_GRAPH_WEEKLY_REPORT_2026-05-27.md)** — Public weekly progress, risk, and next-wave report.
 - **[TIDELOCK Rehydration Receipt (2026-05-26)](./archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_REHYDRATION_RECEIPT_2026-05-26.md)** — Rehydrated operating context, boundaries, and graph substrate receipts.
 
 ### Governance & Council
