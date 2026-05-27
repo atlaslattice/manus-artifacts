@@ -68,7 +68,8 @@ All artifacts remain candidate work unless explicitly ratified as canon.
 - **[Manus Vault](./manus-vault/)** — Internal session summaries and Noah's Ark protocols.
 
 ### About
-- **[David Sheldon](./about/david-sheldon.md)** — Visionary and system architect.
+- **[About](./about/README.md)** — Founder and project leadership context.
+  - [David Sheldon](./about/david-sheldon.md) — Visionary and system architect.
 
 ---
 
