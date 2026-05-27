@@ -37,3 +37,8 @@ Order by:
 - **Checkpoint A (50%)**: blockers tracked with at least one closure artifact drafted.
 - **Checkpoint B (75%)**: safety blockers closed and evidence coverage improved.
 - **Checkpoint C (Pre-release)**: all hard blockers closed and readiness gates green.
+
+
+## Related campaign
+
+- `/tmp/workspace/atlaslattice/manus-artifacts/projects/aetherforge-144-task-campaign-2026-05-27.md`

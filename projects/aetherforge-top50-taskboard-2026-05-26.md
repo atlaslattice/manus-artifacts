@@ -125,3 +125,5 @@ See blocker tracking artifact: `/tmp/workspace/atlaslattice/manus-artifacts/docs
 ---
 
 *Taskboard maintained by Aetherforge Council. To propose a task update, open a [Feature Request](https://github.com/atlaslattice/manus-artifacts/issues/new?template=feature_request.md).*
+
+Hypercube campaign board: `/tmp/workspace/atlaslattice/manus-artifacts/projects/aetherforge-144-task-campaign-2026-05-27.md`

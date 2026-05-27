@@ -1,6 +1,6 @@
 # Lattice Global Index
 
-Generated at: `2026-05-27T22:05:18+00:00`
+Generated at: `2026-05-27T22:06:46+00:00`
 
 ## Domain Summary
 
@@ -8,6 +8,7 @@ Generated at: `2026-05-27T22:05:18+00:00`
 |---|---:|
 | `(root)` | 8 |
 | `.github` | 5 |
+| `.pytest_cache` | 1 |
 | `about` | 1 |
 | `aluminum-os` | 22 |
 | `aluminum-os-core` | 1 |
@@ -20,7 +21,7 @@ Generated at: `2026-05-27T22:05:18+00:00`
 | `docs` | 20 |
 | `health` | 4 |
 | `manus-vault` | 12 |
-| `projects` | 6 |
+| `projects` | 7 |
 | `research` | 7 |
 | `sheldonbrain` | 1 |
 
@@ -42,6 +43,9 @@ Generated at: `2026-05-27T22:05:18+00:00`
 - `.github/ISSUE_TEMPLATE/bug_report.md`
 - `.github/ISSUE_TEMPLATE/feature_request.md`
 - `.github/PULL_REQUEST_TEMPLATE.md`
+
+### .pytest_cache
+- `.pytest_cache/README.md`
 
 ### about
 - `about/david-sheldon.md`
@@ -134,6 +138,7 @@ Generated at: `2026-05-27T22:05:18+00:00`
 - ... 2 more
 
 ### projects
+- `projects/aetherforge-144-task-campaign-2026-05-27.md`
 - `projects/aetherforge-next10-execution-queue-2026-05-27.md`
 - `projects/aetherforge-top50-taskboard-2026-05-26.md`
 - `projects/chinook-guardian/v1.0.md`
