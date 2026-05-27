@@ -1,7 +1,7 @@
 # ⚡ Aetherforge Top-50 Public Launch Taskboard
 
 > **Mission:** Make all Atlas Lattice Foundation work public, open-source, and world-class.
-> **Last Updated:** 2026-05-26 · **Progress:** 17 / 50
+> **Last Updated:** 2026-05-27 · **Progress:** 24 / 50
 
 ---
 
@@ -41,12 +41,12 @@
 | 16 | Add docs/START_HERE.md | ✅ Done | Public entry point |
 | 17 | Build docs/ARCHIVE_INDEX.md | ✅ Done | Full artifact index |
 | 18 | Add docs/GLOSSARY.md | ✅ Done | Key terms canon |
-| 19 | Add architecture map of all domains | 🟡 TODO | Mermaid diagram in README or docs/ |
-| 20 | Add metadata schema for all artifacts | 🟡 TODO | Frontmatter standard |
+| 19 | Add architecture map of all domains | ✅ Done | `docs/ARCHITECTURE_MAP.md` |
+| 20 | Add metadata schema for all artifacts | ✅ Done | `schemas/artifact_metadata/v0_1/artifact-metadata.schema.json` |
 | 21 | Add provenance fields to top artifacts | 🟡 TODO | Source/date/status headers |
 | 22 | Build ADR (decision record) archive | 🟡 TODO | `docs/decisions/` |
 | 23 | Convert tribal knowledge to docs | 🟡 TODO | Backfill from session archives |
-| 24 | Add FAQ for contributors/users | 🟡 TODO | `docs/FAQ.md` |
+| 24 | Add FAQ for contributors/users | ✅ Done | `docs/FAQ.md` |
 
 ---
 
@@ -58,7 +58,7 @@
 | 26 | Add docs-link-checks CI workflow | ✅ Done | Relative link validation weekly |
 | 27 | Add secret scanning CI step | 🟡 TODO | `gitleaks` or GitHub Advanced Security |
 | 28 | Add dependency vulnerability scanning | 🟡 TODO | Dependabot or `pip-audit` |
-| 29 | Add markdown/docs lint checks in CI | 🟡 TODO | `markdownlint` |
+| 29 | Add markdown/docs lint checks in CI | ✅ Done | `.github/workflows/markdown-lint.yml` |
 | 30 | Define test coverage expectations | 🟡 TODO | For `reference_impl/` code |
 | 31 | Add reproducible local validation guide | ✅ Done | In CONTRIBUTING.md |
 | 32 | Define "world-class ready" quality gates | 🟡 TODO | Checklist doc in docs/ |
@@ -72,8 +72,8 @@
 | 33 | Standardize folder taxonomy | 🟡 TODO | Audit and normalize root-level dirs |
 | 34 | Standardize artifact naming conventions | 🟡 TODO | Document in CONTRIBUTING |
 | 35 | Add metadata/frontmatter to all canonical artifacts | 🟡 TODO | `status`, `version`, `date`, `author` |
-| 36 | Add archive manifest generation script | 🟡 TODO | Auto-gen `docs/ARCHIVE_INDEX.md` |
-| 37 | Add validation for metadata completeness | 🟡 TODO | CI check for frontmatter |
+| 36 | Add archive manifest generation script | ✅ Done | `scripts/build_lattice_global_index.py` -> `docs/LATTICE_GLOBAL_INDEX.md` |
+| 37 | Add validation for metadata completeness | ✅ Done | `scripts/validate_artifact_metadata.py` + lattice gate workflow |
 | 38 | Backfill docs for top 10 legacy artifacts | 🟡 TODO | Aluminum OS, SheldonBrain, BAZINGA |
 | 39 | Build timeline of major milestones | 🟡 TODO | `docs/TIMELINE.md` |
 | 40 | Add duplicate artifact detection pass | 🟡 TODO | Script to find near-duplicates |
@@ -88,7 +88,7 @@
 | 42 | Add release automation with changelogs | 🟡 TODO | GitHub Releases + auto-changelog |
 | 43 | Add signed tags/releases policy | 🟡 TODO | GPG signing guide |
 | 44 | Add semantic versioning guidance | 🟡 TODO | `docs/VERSIONING.md` |
-| 45 | Build public roadmap (Now/Next/Later) | 🟡 TODO | `docs/ROADMAP.md` |
+| 45 | Build public roadmap (Now/Next/Later) | ✅ Done | `docs/ROADMAP.md` |
 | 46 | Publish monthly archive status reports | 🟡 TODO | `projects/status-reports/` |
 | 47 | Add "good first issue" contributor lane | 🟡 TODO | Label + `docs/GOOD_FIRST_ISSUES.md` |
 | 48 | Add observability/status for sync pipelines | 🟡 TODO | Pinecone sync health check |
@@ -103,11 +103,11 @@
 |------|--------|------|-------|---|
 | 0 | Core Foundation | 3 | 7 | 43% |
 | 1 | Governance & Policy | 7 | 7 | 100% |
-| 2 | Documentation | 5 | 10 | 50% |
-| 3 | CI & Quality | 4 | 8 | 50% |
-| 4 | Archive Structure | 0 | 9 | 0% |
-| 5 | Release & Launch | 0 | 9 | 0% |
-| **Total** | | **17** | **50** | **34%** |
+| 2 | Documentation | 8 | 10 | 80% |
+| 3 | CI & Quality | 5 | 8 | 63% |
+| 4 | Archive Structure | 2 | 9 | 22% |
+| 5 | Release & Launch | 1 | 9 | 11% |
+| **Total** | | **24** | **50** | **48%** |
 
 ---
 

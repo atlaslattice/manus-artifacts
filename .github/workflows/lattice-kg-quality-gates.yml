@@ -1,0 +1,44 @@
+name: Lattice KG Quality Gates
+
+on:
+  push:
+    paths:
+      - "docs/**"
+      - "schemas/**"
+      - "scripts/**"
+      - "tests/test_lattice_kg_hypercube_program.py"
+      - ".github/workflows/lattice-kg-quality-gates.yml"
+  pull_request:
+    paths:
+      - "docs/**"
+      - "schemas/**"
+      - "scripts/**"
+      - "tests/test_lattice_kg_hypercube_program.py"
+      - ".github/workflows/lattice-kg-quality-gates.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  quality-gates:
+    name: Build and validate lattice gates
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build lattice global index
+        run: python scripts/build_lattice_global_index.py
+
+      - name: Validate metadata
+        run: python scripts/validate_artifact_metadata.py
+
+      - name: Validate quality gates
+        run: python scripts/validate_lattice_quality_gates.py
+
+      - name: Run wave1 lattice tests
+        run: python -m pytest -q tests/test_lattice_kg_hypercube_program.py

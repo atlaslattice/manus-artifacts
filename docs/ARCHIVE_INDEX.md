@@ -97,6 +97,13 @@
 | [Start Here](./START_HERE.md) | Entry point for new visitors |
 | [Archive Index](./ARCHIVE_INDEX.md) | This file |
 | [Glossary](./GLOSSARY.md) | Key terms and definitions |
+| [Architecture Map](./ARCHITECTURE_MAP.md) | Layered system and governance map |
+| [Artifact Relationship Types](./ARTIFACT_RELATIONSHIP_TYPES.md) | Relationship vocabulary for graph linking |
+| [Contributor Quickstart](./CONTRIBUTOR_QUICKSTART.md) | Contributor onboarding and validation |
+| [FAQ](./FAQ.md) | Common contributor and governance questions |
+| [Folder Taxonomy Audit](./FOLDER_TAXONOMY_AUDIT_2026-05-27.md) | Wave 1 taxonomy baseline |
+| [Lattice Global Index](./LATTICE_GLOBAL_INDEX.md) | Generated cross-domain markdown index |
+| [Roadmap](./ROADMAP.md) | Now/Next/Later execution roadmap |
 | [Asset Catalogue March 2026](./asset-catalogue-march-2026.md) | Monthly asset inventory |
 | [Constitutional Convention Process](./constitutional-convention-process.md) | Governance process |
 | [Operational Manifest v1.0.0-alpha](./operational-manifest-v1.0.0-alpha.md) | Operational baseline |

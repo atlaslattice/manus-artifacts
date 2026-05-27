@@ -65,6 +65,10 @@ All work is **MIT licensed**, intended to be **public**, and held to **world-cla
 | [North Star Mission](./docs/NORTH_STAR_MISSION.md) | Unified mission frame for all repository work |
 | [Archive Index](./docs/ARCHIVE_INDEX.md) | Full index of all artifacts |
 | [Glossary](./docs/GLOSSARY.md) | Key terms and definitions |
+| [Architecture Map](./docs/ARCHITECTURE_MAP.md) | Layered map of systems and governance surfaces |
+| [Contributor Quickstart](./docs/CONTRIBUTOR_QUICKSTART.md) | Fast onboarding + Wave 1 validation commands |
+| [FAQ](./docs/FAQ.md) | Common contributor and governance questions |
+| [Roadmap](./docs/ROADMAP.md) | Now/Next/Later public execution plan |
 
 ---
 

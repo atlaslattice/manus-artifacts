@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atlaslattice.org/schemas/artifact_metadata/v0_1/artifact-metadata.schema.json",
+  "title": "Artifact Metadata Schema v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "title",
+    "status",
+    "owner",
+    "created",
+    "last_updated",
+    "source_of_truth"
+  ],
+  "properties": {
+    "artifact_id": {
+      "type": "string",
+      "minLength": 3
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "DRAFT",
+        "CANDIDATE",
+        "CANONICAL",
+        "ARCHIVED"
+      ]
+    },
+    "owner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "last_updated": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "source_of_truth": {
+      "type": "string",
+      "enum": [
+        "GitHub"
+      ]
+    }
+  }
+}
