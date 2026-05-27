@@ -22,6 +22,31 @@ AUTHORITY: none
 6. Graph edge → ORCS state: map to raw, parsed, candidate, under_review, quarantined, superseded, or ratified.
 7. ORCS state → review packet: record findings, blockers, and next safest action.
 
+## Source-grounded graph admission gate
+
+Before adding a graph node or edge:
+
+1. Confirm a source URL, raw export receipt, or repository path exists.
+2. Confirm `derived_from` lineage is explicit and traversable.
+3. Confirm candidate boundary fields remain `not_canon` and `not_deployable`.
+4. Confirm no self-promotion language appears in claims.
+5. Confirm contradiction handling is preserved when evidence conflicts.
+
+If any check fails, route to quarantine/review and do not admit as a promoted claim.
+
+## Provenance receipt minimums
+
+Each admitted candidate object should carry:
+
+- `source_id`
+- `source_path_or_url`
+- `raw_export_status`
+- `retrieved_at_utc` when available
+- `retrieved_by` when available
+- `sha256_if_available`
+- `derived_from` path chain
+- `claims_requiring_verification`
+
 ## One-page manual workflow
 
 Process one page only: inventory record, raw receipt, parsed packet if sourced, graph node, review packet if needed, tests, and docket update.

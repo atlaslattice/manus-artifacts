@@ -2,6 +2,22 @@
 
 This repository contains research, health data, and system artifacts generated and managed by Manus.
 
+## Unified Mission Frame (Candidate)
+
+```text
+MISSION: Lattice as a functional knowledge graph + Aetherforge as a playable archive game + GPTDream++ as an open-source public gift.
+STATUS: CANDIDATE — NOT CANON
+DEPLOYMENT: NONE
+AUTHORITY: NONE
+```
+
+Guardrails:
+
+- Everything can connect to everything.
+- Nothing can promote itself.
+- Fun framing does not grant canon.
+- Public release quality requires bounded scope, tests, blockers, and next safest action.
+
 ## Table of Contents
 
 ### Core Systems
@@ -22,6 +38,7 @@ This repository contains research, health data, and system artifacts generated a
 - **[Aetherforge Metatron's Cube Top 50 Taskboard](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)** — Prioritized world-class OSS knowledge-graph execution board.
 
 ### Knowledge Graph Navigation
+- **[Unified Mission Charter v0.1](./archive/knowledge_graph/lattice_kg/v0_5/LATTICE_AETHERFORGE_GPTDREAM_UNIFIED_MISSION_CHARTER_v0.1.md)** — Public mission frame, quality gates, and quest-loop discipline.
 - **[TIDELOCK Rehydration Receipt (2026-05-26)](./archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_REHYDRATION_RECEIPT_2026-05-26.md)** — Rehydrated operating context, boundaries, and graph substrate receipts.
 
 ### Governance & Council

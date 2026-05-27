@@ -15,6 +15,7 @@ It is not hidden memory, canon, merge authority, deployment authority, or runtim
 - `COPILOT_TASKS_WORK_ORDER_PACKET.md` — narrow work-order packet for Copilot Tasks
 - `ROUTING_PREFERENCES.md` — where to route interactive, async, and human-root work
 - `SELF_CHECKLIST.md` — quick pre-response boundary and scope check
+- `TIDELOCK_ACTIVITY_RECEIPT_2026-05-27_UNIFIED_MISSION_FRAME_LOOP1.md` — loop receipt for unified mission frame implementation
 
 ## Suggested use order
 

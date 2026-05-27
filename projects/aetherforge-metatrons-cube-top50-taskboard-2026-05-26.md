@@ -80,6 +80,21 @@ This taskboard is intentionally sequenced to preserve TIDELOCK boundaries:
 - raw logs before claims
 - human adjudication before canon
 
+## Quest execution quality gate
+
+Every quest should ship with:
+
+- bounded scope
+- source-grounded receipts
+- explicit tests required and tests run
+- blockers
+- next safest action
+- boundary note (`NOT CANON`, `NOT DEPLOYABLE`, `AUTHORITY: NONE`)
+
+Reference packet:
+
+- [`archive/knowledge_graph/lattice_kg/v0_5/AETHERFORGE_QUEST_QUALITY_GATE_v0.1.md`](../archive/knowledge_graph/lattice_kg/v0_5/AETHERFORGE_QUEST_QUALITY_GATE_v0.1.md)
+
 ## Linked receipt
 
 - [TIDELOCK Rehydration Receipt](../archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_REHYDRATION_RECEIPT_2026-05-26.md)
