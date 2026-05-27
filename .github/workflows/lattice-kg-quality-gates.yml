@@ -19,6 +19,9 @@ on:
       - '.github/workflows/lattice-kg-quality-gates.yml'
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   lattice-kg-quality-gates:
     runs-on: ubuntu-latest

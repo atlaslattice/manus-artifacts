@@ -25,6 +25,8 @@ AUTHORITY: none
 - M3_reliable: 0 categories
 - M4_world_class: 0 categories
 
+Loop 2 baseline assignment used implementation evidence from this cycle: categories directly covered by new schemas/scripts/tests were set to M2, adjacent operational categories were set to M1, and all remaining categories started at M0 pending additional receipts.
+
 ## Acceptance criteria (applies to every category)
 
 1. Bounded scope declared.

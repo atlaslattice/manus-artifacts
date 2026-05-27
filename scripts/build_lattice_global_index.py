@@ -58,7 +58,7 @@ def _iter_files(repo_root: Path) -> list[Path]:
         for path in repo_root.rglob("*")
         if path.is_file() and _should_include(path.relative_to(repo_root))
     ]
-    return sorted(files)
+    return sorted(files, key=lambda path: path.relative_to(repo_root).as_posix())
 
 
 def _sha256(path: Path) -> str:
