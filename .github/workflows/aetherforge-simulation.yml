@@ -1,0 +1,31 @@
+name: Aetherforge Simulation Sandbox
+
+on:
+  pull_request:
+    paths:
+      - "projects/aetherforge-simulation/**"
+      - ".github/workflows/aetherforge-simulation.yml"
+  push:
+    paths:
+      - "projects/aetherforge-simulation/**"
+      - ".github/workflows/aetherforge-simulation.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/aetherforge-simulation
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate matrix
+        run: python -m aetherforge_sim validate
+      - name: Run deterministic simulation
+        run: python -m aetherforge_sim --json simulate --steps 12 --seed 144
+      - name: Install test tooling
+        run: python -m pip install pytest
+      - name: Run tests
+        run: pytest
