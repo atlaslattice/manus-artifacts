@@ -20,7 +20,7 @@ jobs:
         run: |
           if grep -rn --include="*.md" --include="*.yml" --include="*.yaml" \
                --include="*.py" --include="*.json" \
-               -E "^(<<<<<<<|=======|>>>>>>>)" .; then
+               -E "^(<<<<<<<( .+)?|=======|>>>>>>>( .+)?)$" .; then
             echo "::error::Merge-conflict markers found — resolve before merging."
             exit 1
           fi
