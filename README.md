@@ -40,6 +40,7 @@ Need vocabulary? → **[docs/GLOSSARY.md](./docs/GLOSSARY.md)**
 - **[Children of the Swarm](./children-of-the-swarm/)** — Indexed swarm agent brain folders.
 
 ### Projects
+- **[Projects Index](./projects/README.md)** — Navigation for active boards, execution maps, and project domains.
 - **[Free Bank](./projects/free-bank/)** — Banking revolution and financial sovereignty.
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
@@ -66,6 +67,7 @@ Need vocabulary? → **[docs/GLOSSARY.md](./docs/GLOSSARY.md)**
 
 ## 📋 Active Sprint
 
+**[Aetherforge 12×12 Hypercube Campaign](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — 144-task public + world-class campaign board
 **[Aetherforge Top-50 Taskboard](./projects/aetherforge-top50-taskboard-2026-05-26.md)** — 11/50 complete
 - **[Aetherforge Game World Onboarding](./projects/aetherforge-game-world/README.md)** — Module 8 candidate layer
 
