@@ -27,14 +27,14 @@ Evidence: [CANON_UX_IDENTITY_TOOLKIT](../docs/CANON_UX_IDENTITY_TOOLKIT.md)
 ## Ring II — Navigation + Knowledge Graph (11–20)
 
 11. [ ] Domain README for every top-level major folder  
-12. [ ] Cross-domain “See also” minimum-link policy  
-13. [ ] Knowledge-graph seed index (node list)  
-14. [ ] Artifact relationship types spec (supersedes/supports/depends)  
+12. [x] Cross-domain “See also” minimum-link policy  
+13. [x] Knowledge-graph seed index (node list)  
+14. [x] Artifact relationship types spec (supersedes/supports/depends)  
 15. [ ] Auto-generated doctrine map index file  
-16. [ ] “Start by role” landing page hardening v2  
+16. [x] “Start by role” landing page hardening v2  
 17. [ ] Glossary authority + dispute process  
-18. [ ] Public archive map SVG/mermaid view  
-19. [ ] Weekly delta digest template by domain  
+18. [x] Public archive map SVG/mermaid view  
+19. [x] Weekly delta digest template by domain  
 20. [ ] Newcomer friction audit checklist + scoring  
 
 ## Ring III — Validation + CI Hardening (21–30)
@@ -79,7 +79,7 @@ Evidence: [CANON_UX_IDENTITY_TOOLKIT](../docs/CANON_UX_IDENTITY_TOOLKIT.md)
 ## Active Sprint
 
 - [x] Execute Ring I (1–10) as first sprint
-- [ ] Execute Ring II (11–20)
+- [ ] Execute Ring II (11–20) (in progress; core docs completed with receipts)
 - [ ] Execute Ring III (21–30)
 - [ ] Execute Ring IV (31–40)
 - [ ] Execute Ring V (41–50)
@@ -92,3 +92,12 @@ Evidence: [CANON_UX_IDENTITY_TOOLKIT](../docs/CANON_UX_IDENTITY_TOOLKIT.md)
 - Attach receipts when a task flips to complete.
 - Log implementation updates in TIDELOCKBrain.
 - Do not treat partial visibility, draft PR status, or “brain” folder presence as authority proof.
+
+### Ring II receipts
+
+- [Cross-Domain Link Policy](../docs/CROSS_DOMAIN_LINK_POLICY.md)
+- [Lattice Knowledge Graph Node Index](../docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md)
+- [Artifact Relationship Types](../docs/ARTIFACT_RELATIONSHIP_TYPES.md)
+- [Public Archive Map](../docs/PUBLIC_ARCHIVE_MAP.md)
+- [Weekly Delta Digest Template](../docs/WEEKLY_DELTA_DIGEST_TEMPLATE.md)
+- [START_HERE](../docs/START_HERE.md)

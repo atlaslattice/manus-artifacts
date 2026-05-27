@@ -12,6 +12,8 @@ It turns the Aetherforge improvement gameboard into a recurring discipline inste
 - stale artifact triage
 - stewardship gaps
 - next highest-leverage actions
+- publish one delta using [../docs/WEEKLY_DELTA_DIGEST_TEMPLATE.md](../docs/WEEKLY_DELTA_DIGEST_TEMPLATE.md)
+- attach one TIDELOCK receipt path under `archive/boot/gptbrain/agents/TIDELOCKBrain/`
 
 ## Monthly review template
 

@@ -4,10 +4,14 @@ Date: 2026-05-26
 
 This public roadmap ties archive work to measurable outcomes.
 It uses the Aetherforge / Metatron's Cube framing to keep improvements legible across five rings of work.
+North-star mission: functional lattice knowledge graph + playable Aetherforge archive + GPTDream++ protocols as a public open-source gift.
 
 ## Near-term — Q2 2026
 
 - Complete the Top-50 archive improvement batch.
+- Complete Ring II knowledge-graph foundations (node index, relationship taxonomy, cross-domain policy, public archive map).
+- Launch questboard-first public contribution flow for archive maintenance, curation, and validation receipts.
+- Publish GPTDream++ protocol surface index unifying specs, schemas, reference implementations, and tests with candidate/canon boundary clarity.
 - Establish the full governance surface for canon lifecycle, review, retention, and incident response.
 - Publish newcomer-first guides, primers, and executive summaries.
 - Outcome target: a first-time public reader can understand the archive's structure and trust posture within 30 minutes.
@@ -16,6 +20,7 @@ It uses the Aetherforge / Metatron's Cube framing to keep improvements legible a
 
 - Retrofit metadata frontmatter onto flagship legacy artifacts.
 - Publish recurring quality dashboard and state-of-archive updates.
+- Run recurring CI triage sweeps and close repeat failure classes in validation workflows.
 - Formalize canon decision log operations and website publication flows.
 - Expand provenance coverage for health, research, and high-stakes project claims.
 - Outcome target: major domains reach or sustain maturity level 4 where appropriate.
@@ -35,6 +40,9 @@ It uses the Aetherforge / Metatron's Cube framing to keep improvements legible a
 - stale artifact review completion rate
 - number of fully documented canon decisions
 - frequency of public state-of-archive reporting
+- cross-domain link density across major domains
+- quest completion receipts published per week
+- GPTDream++ protocol-pack validation pass rate
 
 ## Strategic principle
 

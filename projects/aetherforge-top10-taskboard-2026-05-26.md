@@ -4,7 +4,7 @@ Date: 2026-05-26
 Seat: Council Operator
 
 ## Mission
-Pick high-fun, high-impact tasks that improve canon quality, execution reliability, and project momentum.
+Pick high-fun, high-impact tasks that implement one mission: functional lattice knowledge graph + playable Aetherforge archive + GPTDream++ open protocol gift.
 
 ## Candidate Reference
 
@@ -12,34 +12,35 @@ Pick high-fun, high-impact tasks that improve canon quality, execution reliabili
 
 ## Top 10 Tasks
 
-1. [ ] **Harden GPTBrain validation loop**  
+1. [x] **Harden GPTBrain validation loop**  
    Confirm local check order and remove friction in the reference implementation path.
-2. [ ] **Run CI failure triage sweep**  
-   Review recent workflow outcomes and eliminate recurring failure patterns.
-3. [ ] **Canon boundary clarity pass**  
+2. [x] **Run CI triage + baseline validation sweep**  
+   Run local CI-equivalent checks and keep quality loops explicit before promotion.
+3. [x] **Canon boundary clarity pass**  
    Strengthen docs language that distinguishes canonical vs relay substrates.
-4. [ ] **Artifact sync edge-case testing**  
+4. [x] **Knowledge graph ring-II docs pack**  
+   Publish node index, relationship taxonomy, cross-domain policy, and archive map.
+5. [ ] **Artifact sync edge-case testing**  
    Expand confidence around unusual payloads and sync retries.
-5. [ ] **Pinecone sync reliability pass**  
+6. [ ] **Pinecone sync reliability pass**  
    Validate environment assumptions and improve operational guardrails.
-6. [ ] **Swarm index gap resolution plan**  
+7. [ ] **Swarm index gap resolution plan**  
    Advance assignments for unresolved TBD-08 to TBD-11 slots.
-7. [ ] **Adapter safety perimeter audit**  
+8. [ ] **Adapter safety perimeter audit**  
    Re-verify dry-run enforcement and trace-only protections.
-8. [ ] **Cross-project deployment pack review**  
+9. [ ] **Cross-project deployment pack review**  
    Reconcile Free Bank, Chinook, and Three-Tier pack consistency.
-9. [ ] **Docs link integrity sweep**  
-   Ensure archive/, projects/, and .github/ references remain healthy.
-10. [ ] **Mission control weekly checkpoint**  
-    Publish a lightweight status update against this board.
+10. [x] **Mission control weekly checkpoint template**  
+    Publish a reusable weekly delta template for rhythm and receipts.
 
 ## Priority Starter Pack
 
-- [ ] Task 1: Harden GPTBrain validation loop
-- [ ] Task 2: Run CI failure triage sweep
-- [ ] Task 3: Canon boundary clarity pass
+- [x] Task 1: Harden GPTBrain validation loop
+- [x] Task 2: Run CI triage + baseline validation sweep
+- [x] Task 3: Canon boundary clarity pass
 
 ## Notes
 
 - This board is intended as a living execution artifact.
 - Keep status updates in checklist form for rapid council review.
+- Receipts: `docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md`, `docs/ARTIFACT_RELATIONSHIP_TYPES.md`, `docs/CROSS_DOMAIN_LINK_POLICY.md`, `docs/PUBLIC_ARCHIVE_MAP.md`, `docs/WEEKLY_DELTA_DIGEST_TEMPLATE.md`.
