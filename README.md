@@ -36,6 +36,7 @@ Guardrails:
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
 - **[Aetherforge Metatron's Cube Top 50 Taskboard](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)** — Prioritized world-class OSS knowledge-graph execution board.
+- **[GPTDream++ OpenAI Public Staging Lane](./archive/aetherforge/gptdreampp-openai/README.md)** — GitHub-first ingestion control board, artifact contract, and review-lane staging package (candidate/non-canon).
 
 ### Knowledge Graph Navigation
 - **[Unified Mission Charter v0.1](./archive/knowledge_graph/lattice_kg/v0_5/LATTICE_AETHERFORGE_GPTDREAM_UNIFIED_MISSION_CHARTER_v0.1.md)** — Public mission frame, quality gates, and quest-loop discipline.

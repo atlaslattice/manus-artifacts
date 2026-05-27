@@ -5,6 +5,7 @@ Primary artifact corpus for historical, operational, governance, and knowledge-g
 ## Key entry points
 
 - [Boot](./boot/) — boot packets, brain scaffolds, and runtime receipts.
+- [Aetherforge](./aetherforge/) — GitHub-first staging lanes and ingestion control artifacts.
 - [Knowledge Graph](./knowledge_graph/) — lattice KG mission and index artifacts.
 - [Spec](./spec/) — protocol and schema specification surfaces.
 - [Validation](./validation/) — validation packets and checks.
