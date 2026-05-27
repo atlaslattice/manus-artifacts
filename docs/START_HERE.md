@@ -28,6 +28,7 @@ All work is MIT licensed. All artifacts are candidates until ratified by the ful
 
 | You want to… | Go here |
 |---|---|
+| See the one-frame mission for all work | [North Star Mission](./NORTH_STAR_MISSION.md) |
 | Understand the full archive | [Archive Index](./ARCHIVE_INDEX.md) |
 | Learn key terminology | [Glossary](./GLOSSARY.md) |
 | Understand the core OS | [Aluminum OS v4.0](../aluminum-os/v4.0-unified-field.md) |

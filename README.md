@@ -62,6 +62,7 @@ All work is **MIT licensed**, intended to be **public**, and held to **world-cla
 | Doc | Description |
 |-----|-------------|
 | [Start Here](./docs/START_HERE.md) | Entry point — read this first |
+| [North Star Mission](./docs/NORTH_STAR_MISSION.md) | Unified mission frame for all repository work |
 | [Archive Index](./docs/ARCHIVE_INDEX.md) | Full index of all artifacts |
 | [Glossary](./docs/GLOSSARY.md) | Key terms and definitions |
 
