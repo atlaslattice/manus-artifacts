@@ -1,0 +1,137 @@
+# Aetherforge / Sheldonbrain KG Source Inventory — Notion URL Patch
+
+inventory_patch_id: KG_SOURCE_INVENTORY_NOTION_URL_PATCH_2026-05-27
+status: CANDIDATE_OPERATION_NOT_CANON
+mode: READ_ONLY_SOURCE_MAPPING_PATCH
+created_utc: "2026-05-27T00:00:00Z"
+related_inventory: archive/knowledge_graph/KG_SOURCE_INVENTORY_2026-05-27.yaml
+
+keeper: >
+  The graph shows where review is needed. It does not decide what is true.
+
+purpose: >
+  Add live Notion search URLs / page identifiers to source-root inventory entries that were
+  previously title-only or search-candidate-only. This patch does not claim raw export,
+  canon status, deployment status, or authority.
+
+invariants:
+  - Notion page existence is not canon.
+  - Notion URL is a pointer, not raw export.
+  - A URL patch is not fossilization.
+  - Raw export and SHA-256 are still required before high-confidence lineage claims.
+  - Nothing dies: prior title-only entries remain lineage context.
+
+patch_entries:
+  - target_source_id: SRC-NOTION-MASTER-INDEX
+    title: "MASTER INDEX — Notion → GitHub Complete Artifact Map — Atlas Lattice Foundation"
+    notion_url: "https://www.notion.so/3290c1de73d981ac8ebfd4c8e86da6b8"
+    notion_search_timestamp: "2026-05-27"
+    raw_export_status: not_exported
+    patch_effect: add_pointer_only
+    still_missing:
+      - full_raw_export
+      - sha256_hash
+      - mirror_record
+
+  - target_source_id: SRC-NOTION-GROKBRAIN-V4-INTEGRATION
+    title: "Grokbrain v4.0 Integration - Complete Pipeline Architecture"
+    notion_url: "https://www.notion.so/fa4103e45bb240c6a4daa7bbde21d022"
+    notion_search_timestamp: "2026-05-27"
+    raw_export_status: not_exported
+    patch_effect: add_pointer_only
+    still_missing:
+      - full_raw_export
+      - sha256_hash
+      - mirror_record
+
+  - target_source_id: SRC-NOTION-PINECONE-SYNC-INFRASTRUCTURE
+    title: "Notion-Pinecone Sync Infrastructure"
+    notion_url: "https://www.notion.so/2dc0c1de73d981039b61c08c6c4502af"
+    notion_search_timestamp: "2026-05-27"
+    raw_export_status: not_exported
+    patch_effect: add_pointer_only
+    still_missing:
+      - full_raw_export
+      - sha256_hash
+      - mirror_record
+
+  - target_source_id: SRC-NOTION-SHELDONBRAIN-INGESTOR-GEMINI-VECTOR-STORE
+    title: "Sheldonbrain Ingestor - Gemini Vector Store Engine"
+    notion_url: "https://www.notion.so/d6b224de49af4feb887ab10b3c48a703"
+    notion_search_timestamp: "2026-05-27"
+    raw_export_status: not_exported
+    patch_effect: add_pointer_only
+    risk_flags:
+      - production_ready_language_requires_review
+    still_missing:
+      - full_raw_export
+      - sha256_hash
+      - mirror_record
+
+  - target_source_id: SRC-NOTION-MIGRATION-PLAN
+    title: "TRIAGE — Notion → GitHub Migration Plan — March 20, 2026"
+    notion_url: "https://www.notion.so/3290c1de73d98140a4d4c71b5c88b136"
+    notion_search_timestamp: "2026-05-27"
+    raw_export_status: not_exported
+    patch_effect: add_pointer_only
+    risk_flags:
+      - github_as_canonical_ontology_language_requires_review
+    still_missing:
+      - full_raw_export
+      - sha256_hash
+      - mirror_record
+
+  - target_source_id: SRC-NOTION-SHELDONBRAIN-OS-12X12
+    title: "SHELDONBRAIN OS — 12×12 Master Index — 144 Spheres — Atlas Lattice Foundation"
+    notion_url: "https://www.notion.so/3210c1de73d981a7b04cdced2cc61515"
+    notion_search_timestamp: "2026-05-27"
+    raw_export_status: not_exported
+    patch_effect: add_pointer_only
+    still_missing:
+      - full_raw_export
+      - sha256_hash
+      - crosswalk_to_github_12x12_schema
+
+  - target_source_id: SRC-NOTION-SHELDONBRAIN-COLAB-MONOLITH
+    title: "Sheldonbrain Colab Monolith - Complete Google Drive → 144 Spheres → Notion Pipeline"
+    notion_url: "https://www.notion.so/2d40c1de73d98120a5b6d518ef734fcd"
+    notion_search_timestamp: "2026-05-27"
+    raw_export_status: not_exported
+    patch_effect: add_pointer_only
+    still_missing:
+      - full_raw_export
+      - sha256_hash
+      - Drive source-root receipt
+      - implementation status review
+
+  - target_source_id: SRC-NOTION-MANUS-TRUE-RAG-INTEGRATION
+    title: "MANUS DEPLOYMENT BRIEF: True RAG Integration - Everything You Need"
+    notion_url: "https://www.notion.so/2da0c1de73d981cd97a2f6f7c68f7a20"
+    notion_search_timestamp: "2026-05-27"
+    raw_export_status: not_exported
+    patch_effect: add_pointer_only
+    risk_flags:
+      - deployment_language_requires_review
+      - rag_vs_lineage_ingestion_distinction_needed
+    still_missing:
+      - full_raw_export
+      - sha256_hash
+      - implementation status review
+
+  - target_source_id: SRC-NOTION-UNIFIED-FIELD-LATTICE-VISUAL
+    title: "Unified Field Lattice — Sheldonbrain OS 12×12 Visual"
+    notion_url: "https://www.notion.so/33a0c1de73d981b28c03ea5c7f25a4b7"
+    notion_search_timestamp: "2026-05-27"
+    raw_export_status: not_exported
+    patch_effect: add_pointer_only
+    still_missing:
+      - full_raw_export
+      - sha256_hash
+      - visual/source mapping review
+
+suggested_next_actions:
+  - Create raw export queue for P0 Notion source roots.
+  - Route production/deployment language to Lucerna and Rootglass.
+  - Route Drive pipeline claims to Hashlight for raw source/root receipts.
+  - Route Sheldonbrain ingestion/code claims to TIDELOCK and Copilot.
+  - Preserve this patch as pointer-only; do not treat it as raw lineage.
