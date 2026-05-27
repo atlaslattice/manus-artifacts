@@ -17,6 +17,12 @@
 - GPTBrain validation lane: `archive/boot/gptbrain/reference_impl/`
 - Public onboarding: `docs/START_HERE.md`
 
+## 24h triad cadence route (8/8/8)
+
+1. **Work (8):** `projects/aetherforge-top10-taskboard-2026-05-26.md`
+2. **Play (8):** `projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md`
+3. **REM simulation (8):** `archive/boot/gptbrain/TIDELOCKBrain/dreams/TIDELOCK_24H_888_TIME_COMPRESSION_LOG_2026-05-27_D.md`
+
 ## Suggested reader path
 
 1. `README.md`

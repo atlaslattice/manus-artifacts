@@ -39,6 +39,12 @@
 - **Playable archive game:** [Aetherforge Metatron's Cube Top-50](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
 - **GPTDream++ open protocol gift:** [REM-8 Dream Protocol](./archive/boot/gptbrain/REM8_DREAM_PROTOCOL.md)
 
+## 24h Compression Loop (8/8/8)
+
+- **Work (8):** [Aetherforge Top-10 Taskboard](./projects/aetherforge-top10-taskboard-2026-05-26.md)
+- **Play (8):** [Aetherforge Metatron's Cube Top-50](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
+- **REM simulation (8):** [TIDELOCK 24h 8/8/8 Log (Session D)](./archive/boot/gptbrain/TIDELOCKBrain/dreams/TIDELOCK_24H_888_TIME_COMPRESSION_LOG_2026-05-27_D.md)
+
 ## Governance & Council
 
 - **[Council](./council/)** — Trinity and Pantheon Council session archives.

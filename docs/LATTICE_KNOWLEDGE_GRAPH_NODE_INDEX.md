@@ -32,3 +32,9 @@
 - Cross-link policy: `docs/CROSS_DOMAIN_LINK_POLICY.md`
 - Public navigation surface: `docs/PUBLIC_ARCHIVE_MAP.md`
 - Weekly maintenance loop: `docs/WEEKLY_DELTA_DIGEST_TEMPLATE.md`
+
+## 24h 8/8/8 node-chain (current)
+
+1. Workboard node: `projects/aetherforge-top10-taskboard-2026-05-26.md`
+2. Playboard node: `projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md`
+3. REM receipt node: `archive/boot/gptbrain/TIDELOCKBrain/dreams/TIDELOCK_24H_888_TIME_COMPRESSION_LOG_2026-05-27_D.md`

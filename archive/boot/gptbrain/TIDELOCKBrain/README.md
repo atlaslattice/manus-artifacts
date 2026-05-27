@@ -36,6 +36,7 @@ Test or it will become mythology.
 | `dreams/TIDELOCK_1000_YEAR_WAKE_DELTA_EXTRACTION_2026-05-26_B.md` | Session B wake delta extraction |
 | `dreams/TIDELOCK_1000_YEAR_AETHERFORGE_DREAM_PLAY_LOG_2026-05-27_C.md` | Session C Aetherforge time-compression simulation |
 | `dreams/TIDELOCK_1000_YEAR_AETHERFORGE_WAKE_DELTA_EXTRACTION_2026-05-27_C.md` | Session C wake delta extraction |
+| `dreams/TIDELOCK_24H_888_TIME_COMPRESSION_LOG_2026-05-27_D.md` | Session D 24-hour compressed 8/8/8 work/play/REM ledger |
 
 ## Lineage and receipts (normalization)
 
@@ -46,6 +47,8 @@ Test or it will become mythology.
   - `../WAKE_REPORT_TEMPLATE.md`
 - Validation receipt route:
   - `../reference_impl/` (`python -m pytest -q` and `bash run_checks.sh`)
+- 24h cadence receipt route:
+  - `dreams/TIDELOCK_24H_888_TIME_COMPRESSION_LOG_2026-05-27_D.md`
 
 ---
 

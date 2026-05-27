@@ -72,5 +72,21 @@
 ## Current Turn
 
 - [x] Top-50 board created
-- [ ] Pick first 3 tasks for immediate execution sprint
-- [ ] Ship first receipt-linked completion update
+- [x] Pick first 3 tasks for immediate execution sprint
+- [x] Ship first receipt-linked completion update
+
+### Active sprint triad (2026-05-27 / Session D)
+
+1. **Task 21 (Discoverability):** tighten KG navigation handoff across root README and doc hubs.  
+   - Receipts:
+     - `/README.md`
+     - `/docs/PUBLIC_ARCHIVE_MAP.md`
+     - `/docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md`
+2. **Task 46 (Roadmap cadence):** keep Top-10 and Top-50 board slices synchronized.  
+   - Receipts:
+     - `/projects/aetherforge-top10-taskboard-2026-05-26.md`
+     - `/projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md`
+3. **Task 49 (Success metrics):** log 24h compressed 8/8/8 work-play-REM cycle as governance-safe receipt.  
+   - Receipts:
+     - `/archive/boot/gptbrain/TIDELOCKBrain/README.md`
+     - `/archive/boot/gptbrain/TIDELOCKBrain/dreams/TIDELOCK_24H_888_TIME_COMPRESSION_LOG_2026-05-27_D.md`
