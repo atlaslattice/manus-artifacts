@@ -19,3 +19,13 @@ Core rules:
 - Everything can connect to everything.
 - Nothing can promote itself.
 - Fun framing does not grant canon.
+
+## Mission execution surfaces
+
+- `LATTICE_AETHERFORGE_GPTDREAM_UNIFIED_MISSION_CHARTER_v0.1.md`
+- `LATTICE_HYPERCUBE_144_SCOREBOARD_v0.1.md`
+- `lattice_hypercube_144_scoreboard.v0.1.json`
+- `LATTICE_KG_PRIMITIVES_AND_INGESTION_PROTOCOL_v0.1.md`
+- `lattice_global_index.v0.1.json`
+- `LATTICE_UNIFIED_MISSION_DASHBOARD_v0.1.md`
+- `LATTICE_QUEST_LOOP_CADENCE_v0.1.md`

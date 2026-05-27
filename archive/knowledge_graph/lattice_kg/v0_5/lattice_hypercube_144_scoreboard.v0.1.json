@@ -1,0 +1,3043 @@
+{
+  "schema_id": "lattice_hypercube_144_scoreboard.v0.1",
+  "status": "CANDIDATE_ONLY_NOT_CANON_NOT_DEPLOYABLE",
+  "generated_at_utc": "2026-05-27T20:30:40.945971Z",
+  "mission_target": {
+    "categories_total": 144,
+    "best_in_world_target": true,
+    "archival_and_retrieval_reliability_required": true
+  },
+  "maturity_scale": {
+    "M0_seed": "Defined but little or no validated evidence.",
+    "M1_bootstrapped": "Some evidence and repeatable process exist.",
+    "M2_structured": "Structured acceptance gates and receipts are established.",
+    "M3_reliable": "Consistently passing quality gates with low drift.",
+    "M4_world_class": "Benchmark-leading outcomes with stable reproducibility."
+  },
+  "categories": [
+    {
+      "category_id": "C001",
+      "domain_id": "D01",
+      "capability_id": "K01",
+      "domain": "kg_modeling",
+      "capability": "scope_definition",
+      "maturity_state": "M2_structured",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C002",
+      "domain_id": "D01",
+      "capability_id": "K02",
+      "domain": "kg_modeling",
+      "capability": "acceptance_criteria",
+      "maturity_state": "M2_structured",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C003",
+      "domain_id": "D01",
+      "capability_id": "K03",
+      "domain": "kg_modeling",
+      "capability": "evidence_receipts",
+      "maturity_state": "M2_structured",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C004",
+      "domain_id": "D01",
+      "capability_id": "K04",
+      "domain": "kg_modeling",
+      "capability": "automation_coverage",
+      "maturity_state": "M2_structured",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C005",
+      "domain_id": "D01",
+      "capability_id": "K05",
+      "domain": "kg_modeling",
+      "capability": "test_coverage",
+      "maturity_state": "M2_structured",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C006",
+      "domain_id": "D01",
+      "capability_id": "K06",
+      "domain": "kg_modeling",
+      "capability": "retrieval_reproducibility",
+      "maturity_state": "M2_structured",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C007",
+      "domain_id": "D01",
+      "capability_id": "K07",
+      "domain": "kg_modeling",
+      "capability": "drift_detection",
+      "maturity_state": "M2_structured",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C008",
+      "domain_id": "D01",
+      "capability_id": "K08",
+      "domain": "kg_modeling",
+      "capability": "blocker_reporting",
+      "maturity_state": "M2_structured",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C009",
+      "domain_id": "D01",
+      "capability_id": "K09",
+      "domain": "kg_modeling",
+      "capability": "operator_runbook",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C010",
+      "domain_id": "D01",
+      "capability_id": "K10",
+      "domain": "kg_modeling",
+      "capability": "public_docs",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C011",
+      "domain_id": "D01",
+      "capability_id": "K11",
+      "domain": "kg_modeling",
+      "capability": "cross_domain_links",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C012",
+      "domain_id": "D01",
+      "capability_id": "K12",
+      "domain": "kg_modeling",
+      "capability": "handoff_readiness",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C013",
+      "domain_id": "D02",
+      "capability_id": "K01",
+      "domain": "ingestion_pipeline",
+      "capability": "scope_definition",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C014",
+      "domain_id": "D02",
+      "capability_id": "K02",
+      "domain": "ingestion_pipeline",
+      "capability": "acceptance_criteria",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C015",
+      "domain_id": "D02",
+      "capability_id": "K03",
+      "domain": "ingestion_pipeline",
+      "capability": "evidence_receipts",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C016",
+      "domain_id": "D02",
+      "capability_id": "K04",
+      "domain": "ingestion_pipeline",
+      "capability": "automation_coverage",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C017",
+      "domain_id": "D02",
+      "capability_id": "K05",
+      "domain": "ingestion_pipeline",
+      "capability": "test_coverage",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C018",
+      "domain_id": "D02",
+      "capability_id": "K06",
+      "domain": "ingestion_pipeline",
+      "capability": "retrieval_reproducibility",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C019",
+      "domain_id": "D02",
+      "capability_id": "K07",
+      "domain": "ingestion_pipeline",
+      "capability": "drift_detection",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C020",
+      "domain_id": "D02",
+      "capability_id": "K08",
+      "domain": "ingestion_pipeline",
+      "capability": "blocker_reporting",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C021",
+      "domain_id": "D02",
+      "capability_id": "K09",
+      "domain": "ingestion_pipeline",
+      "capability": "operator_runbook",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C022",
+      "domain_id": "D02",
+      "capability_id": "K10",
+      "domain": "ingestion_pipeline",
+      "capability": "public_docs",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C023",
+      "domain_id": "D02",
+      "capability_id": "K11",
+      "domain": "ingestion_pipeline",
+      "capability": "cross_domain_links",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C024",
+      "domain_id": "D02",
+      "capability_id": "K12",
+      "domain": "ingestion_pipeline",
+      "capability": "handoff_readiness",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C025",
+      "domain_id": "D03",
+      "capability_id": "K01",
+      "domain": "provenance",
+      "capability": "scope_definition",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C026",
+      "domain_id": "D03",
+      "capability_id": "K02",
+      "domain": "provenance",
+      "capability": "acceptance_criteria",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C027",
+      "domain_id": "D03",
+      "capability_id": "K03",
+      "domain": "provenance",
+      "capability": "evidence_receipts",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C028",
+      "domain_id": "D03",
+      "capability_id": "K04",
+      "domain": "provenance",
+      "capability": "automation_coverage",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C029",
+      "domain_id": "D03",
+      "capability_id": "K05",
+      "domain": "provenance",
+      "capability": "test_coverage",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C030",
+      "domain_id": "D03",
+      "capability_id": "K06",
+      "domain": "provenance",
+      "capability": "retrieval_reproducibility",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C031",
+      "domain_id": "D03",
+      "capability_id": "K07",
+      "domain": "provenance",
+      "capability": "drift_detection",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C032",
+      "domain_id": "D03",
+      "capability_id": "K08",
+      "domain": "provenance",
+      "capability": "blocker_reporting",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C033",
+      "domain_id": "D03",
+      "capability_id": "K09",
+      "domain": "provenance",
+      "capability": "operator_runbook",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C034",
+      "domain_id": "D03",
+      "capability_id": "K10",
+      "domain": "provenance",
+      "capability": "public_docs",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C035",
+      "domain_id": "D03",
+      "capability_id": "K11",
+      "domain": "provenance",
+      "capability": "cross_domain_links",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C036",
+      "domain_id": "D03",
+      "capability_id": "K12",
+      "domain": "provenance",
+      "capability": "handoff_readiness",
+      "maturity_state": "M1_bootstrapped",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C037",
+      "domain_id": "D04",
+      "capability_id": "K01",
+      "domain": "retrieval",
+      "capability": "scope_definition",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C038",
+      "domain_id": "D04",
+      "capability_id": "K02",
+      "domain": "retrieval",
+      "capability": "acceptance_criteria",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C039",
+      "domain_id": "D04",
+      "capability_id": "K03",
+      "domain": "retrieval",
+      "capability": "evidence_receipts",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C040",
+      "domain_id": "D04",
+      "capability_id": "K04",
+      "domain": "retrieval",
+      "capability": "automation_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C041",
+      "domain_id": "D04",
+      "capability_id": "K05",
+      "domain": "retrieval",
+      "capability": "test_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C042",
+      "domain_id": "D04",
+      "capability_id": "K06",
+      "domain": "retrieval",
+      "capability": "retrieval_reproducibility",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C043",
+      "domain_id": "D04",
+      "capability_id": "K07",
+      "domain": "retrieval",
+      "capability": "drift_detection",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C044",
+      "domain_id": "D04",
+      "capability_id": "K08",
+      "domain": "retrieval",
+      "capability": "blocker_reporting",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C045",
+      "domain_id": "D04",
+      "capability_id": "K09",
+      "domain": "retrieval",
+      "capability": "operator_runbook",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C046",
+      "domain_id": "D04",
+      "capability_id": "K10",
+      "domain": "retrieval",
+      "capability": "public_docs",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C047",
+      "domain_id": "D04",
+      "capability_id": "K11",
+      "domain": "retrieval",
+      "capability": "cross_domain_links",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C048",
+      "domain_id": "D04",
+      "capability_id": "K12",
+      "domain": "retrieval",
+      "capability": "handoff_readiness",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C049",
+      "domain_id": "D05",
+      "capability_id": "K01",
+      "domain": "index_integrity",
+      "capability": "scope_definition",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C050",
+      "domain_id": "D05",
+      "capability_id": "K02",
+      "domain": "index_integrity",
+      "capability": "acceptance_criteria",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C051",
+      "domain_id": "D05",
+      "capability_id": "K03",
+      "domain": "index_integrity",
+      "capability": "evidence_receipts",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C052",
+      "domain_id": "D05",
+      "capability_id": "K04",
+      "domain": "index_integrity",
+      "capability": "automation_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C053",
+      "domain_id": "D05",
+      "capability_id": "K05",
+      "domain": "index_integrity",
+      "capability": "test_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C054",
+      "domain_id": "D05",
+      "capability_id": "K06",
+      "domain": "index_integrity",
+      "capability": "retrieval_reproducibility",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C055",
+      "domain_id": "D05",
+      "capability_id": "K07",
+      "domain": "index_integrity",
+      "capability": "drift_detection",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C056",
+      "domain_id": "D05",
+      "capability_id": "K08",
+      "domain": "index_integrity",
+      "capability": "blocker_reporting",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C057",
+      "domain_id": "D05",
+      "capability_id": "K09",
+      "domain": "index_integrity",
+      "capability": "operator_runbook",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C058",
+      "domain_id": "D05",
+      "capability_id": "K10",
+      "domain": "index_integrity",
+      "capability": "public_docs",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C059",
+      "domain_id": "D05",
+      "capability_id": "K11",
+      "domain": "index_integrity",
+      "capability": "cross_domain_links",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C060",
+      "domain_id": "D05",
+      "capability_id": "K12",
+      "domain": "index_integrity",
+      "capability": "handoff_readiness",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C061",
+      "domain_id": "D06",
+      "capability_id": "K01",
+      "domain": "schema_governance",
+      "capability": "scope_definition",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C062",
+      "domain_id": "D06",
+      "capability_id": "K02",
+      "domain": "schema_governance",
+      "capability": "acceptance_criteria",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C063",
+      "domain_id": "D06",
+      "capability_id": "K03",
+      "domain": "schema_governance",
+      "capability": "evidence_receipts",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C064",
+      "domain_id": "D06",
+      "capability_id": "K04",
+      "domain": "schema_governance",
+      "capability": "automation_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C065",
+      "domain_id": "D06",
+      "capability_id": "K05",
+      "domain": "schema_governance",
+      "capability": "test_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C066",
+      "domain_id": "D06",
+      "capability_id": "K06",
+      "domain": "schema_governance",
+      "capability": "retrieval_reproducibility",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C067",
+      "domain_id": "D06",
+      "capability_id": "K07",
+      "domain": "schema_governance",
+      "capability": "drift_detection",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C068",
+      "domain_id": "D06",
+      "capability_id": "K08",
+      "domain": "schema_governance",
+      "capability": "blocker_reporting",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C069",
+      "domain_id": "D06",
+      "capability_id": "K09",
+      "domain": "schema_governance",
+      "capability": "operator_runbook",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C070",
+      "domain_id": "D06",
+      "capability_id": "K10",
+      "domain": "schema_governance",
+      "capability": "public_docs",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C071",
+      "domain_id": "D06",
+      "capability_id": "K11",
+      "domain": "schema_governance",
+      "capability": "cross_domain_links",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C072",
+      "domain_id": "D06",
+      "capability_id": "K12",
+      "domain": "schema_governance",
+      "capability": "handoff_readiness",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C073",
+      "domain_id": "D07",
+      "capability_id": "K01",
+      "domain": "ci_quality_gates",
+      "capability": "scope_definition",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C074",
+      "domain_id": "D07",
+      "capability_id": "K02",
+      "domain": "ci_quality_gates",
+      "capability": "acceptance_criteria",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C075",
+      "domain_id": "D07",
+      "capability_id": "K03",
+      "domain": "ci_quality_gates",
+      "capability": "evidence_receipts",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C076",
+      "domain_id": "D07",
+      "capability_id": "K04",
+      "domain": "ci_quality_gates",
+      "capability": "automation_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C077",
+      "domain_id": "D07",
+      "capability_id": "K05",
+      "domain": "ci_quality_gates",
+      "capability": "test_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C078",
+      "domain_id": "D07",
+      "capability_id": "K06",
+      "domain": "ci_quality_gates",
+      "capability": "retrieval_reproducibility",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C079",
+      "domain_id": "D07",
+      "capability_id": "K07",
+      "domain": "ci_quality_gates",
+      "capability": "drift_detection",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C080",
+      "domain_id": "D07",
+      "capability_id": "K08",
+      "domain": "ci_quality_gates",
+      "capability": "blocker_reporting",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C081",
+      "domain_id": "D07",
+      "capability_id": "K09",
+      "domain": "ci_quality_gates",
+      "capability": "operator_runbook",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C082",
+      "domain_id": "D07",
+      "capability_id": "K10",
+      "domain": "ci_quality_gates",
+      "capability": "public_docs",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C083",
+      "domain_id": "D07",
+      "capability_id": "K11",
+      "domain": "ci_quality_gates",
+      "capability": "cross_domain_links",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C084",
+      "domain_id": "D07",
+      "capability_id": "K12",
+      "domain": "ci_quality_gates",
+      "capability": "handoff_readiness",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C085",
+      "domain_id": "D08",
+      "capability_id": "K01",
+      "domain": "public_navigation",
+      "capability": "scope_definition",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C086",
+      "domain_id": "D08",
+      "capability_id": "K02",
+      "domain": "public_navigation",
+      "capability": "acceptance_criteria",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C087",
+      "domain_id": "D08",
+      "capability_id": "K03",
+      "domain": "public_navigation",
+      "capability": "evidence_receipts",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C088",
+      "domain_id": "D08",
+      "capability_id": "K04",
+      "domain": "public_navigation",
+      "capability": "automation_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C089",
+      "domain_id": "D08",
+      "capability_id": "K05",
+      "domain": "public_navigation",
+      "capability": "test_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C090",
+      "domain_id": "D08",
+      "capability_id": "K06",
+      "domain": "public_navigation",
+      "capability": "retrieval_reproducibility",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C091",
+      "domain_id": "D08",
+      "capability_id": "K07",
+      "domain": "public_navigation",
+      "capability": "drift_detection",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C092",
+      "domain_id": "D08",
+      "capability_id": "K08",
+      "domain": "public_navigation",
+      "capability": "blocker_reporting",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C093",
+      "domain_id": "D08",
+      "capability_id": "K09",
+      "domain": "public_navigation",
+      "capability": "operator_runbook",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C094",
+      "domain_id": "D08",
+      "capability_id": "K10",
+      "domain": "public_navigation",
+      "capability": "public_docs",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C095",
+      "domain_id": "D08",
+      "capability_id": "K11",
+      "domain": "public_navigation",
+      "capability": "cross_domain_links",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C096",
+      "domain_id": "D08",
+      "capability_id": "K12",
+      "domain": "public_navigation",
+      "capability": "handoff_readiness",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C097",
+      "domain_id": "D09",
+      "capability_id": "K01",
+      "domain": "contributor_experience",
+      "capability": "scope_definition",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C098",
+      "domain_id": "D09",
+      "capability_id": "K02",
+      "domain": "contributor_experience",
+      "capability": "acceptance_criteria",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C099",
+      "domain_id": "D09",
+      "capability_id": "K03",
+      "domain": "contributor_experience",
+      "capability": "evidence_receipts",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C100",
+      "domain_id": "D09",
+      "capability_id": "K04",
+      "domain": "contributor_experience",
+      "capability": "automation_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C101",
+      "domain_id": "D09",
+      "capability_id": "K05",
+      "domain": "contributor_experience",
+      "capability": "test_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C102",
+      "domain_id": "D09",
+      "capability_id": "K06",
+      "domain": "contributor_experience",
+      "capability": "retrieval_reproducibility",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C103",
+      "domain_id": "D09",
+      "capability_id": "K07",
+      "domain": "contributor_experience",
+      "capability": "drift_detection",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C104",
+      "domain_id": "D09",
+      "capability_id": "K08",
+      "domain": "contributor_experience",
+      "capability": "blocker_reporting",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C105",
+      "domain_id": "D09",
+      "capability_id": "K09",
+      "domain": "contributor_experience",
+      "capability": "operator_runbook",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C106",
+      "domain_id": "D09",
+      "capability_id": "K10",
+      "domain": "contributor_experience",
+      "capability": "public_docs",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C107",
+      "domain_id": "D09",
+      "capability_id": "K11",
+      "domain": "contributor_experience",
+      "capability": "cross_domain_links",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C108",
+      "domain_id": "D09",
+      "capability_id": "K12",
+      "domain": "contributor_experience",
+      "capability": "handoff_readiness",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C109",
+      "domain_id": "D10",
+      "capability_id": "K01",
+      "domain": "security_and_safety",
+      "capability": "scope_definition",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C110",
+      "domain_id": "D10",
+      "capability_id": "K02",
+      "domain": "security_and_safety",
+      "capability": "acceptance_criteria",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C111",
+      "domain_id": "D10",
+      "capability_id": "K03",
+      "domain": "security_and_safety",
+      "capability": "evidence_receipts",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C112",
+      "domain_id": "D10",
+      "capability_id": "K04",
+      "domain": "security_and_safety",
+      "capability": "automation_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C113",
+      "domain_id": "D10",
+      "capability_id": "K05",
+      "domain": "security_and_safety",
+      "capability": "test_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C114",
+      "domain_id": "D10",
+      "capability_id": "K06",
+      "domain": "security_and_safety",
+      "capability": "retrieval_reproducibility",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C115",
+      "domain_id": "D10",
+      "capability_id": "K07",
+      "domain": "security_and_safety",
+      "capability": "drift_detection",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C116",
+      "domain_id": "D10",
+      "capability_id": "K08",
+      "domain": "security_and_safety",
+      "capability": "blocker_reporting",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C117",
+      "domain_id": "D10",
+      "capability_id": "K09",
+      "domain": "security_and_safety",
+      "capability": "operator_runbook",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C118",
+      "domain_id": "D10",
+      "capability_id": "K10",
+      "domain": "security_and_safety",
+      "capability": "public_docs",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C119",
+      "domain_id": "D10",
+      "capability_id": "K11",
+      "domain": "security_and_safety",
+      "capability": "cross_domain_links",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C120",
+      "domain_id": "D10",
+      "capability_id": "K12",
+      "domain": "security_and_safety",
+      "capability": "handoff_readiness",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C121",
+      "domain_id": "D11",
+      "capability_id": "K01",
+      "domain": "observability",
+      "capability": "scope_definition",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C122",
+      "domain_id": "D11",
+      "capability_id": "K02",
+      "domain": "observability",
+      "capability": "acceptance_criteria",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C123",
+      "domain_id": "D11",
+      "capability_id": "K03",
+      "domain": "observability",
+      "capability": "evidence_receipts",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C124",
+      "domain_id": "D11",
+      "capability_id": "K04",
+      "domain": "observability",
+      "capability": "automation_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C125",
+      "domain_id": "D11",
+      "capability_id": "K05",
+      "domain": "observability",
+      "capability": "test_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C126",
+      "domain_id": "D11",
+      "capability_id": "K06",
+      "domain": "observability",
+      "capability": "retrieval_reproducibility",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C127",
+      "domain_id": "D11",
+      "capability_id": "K07",
+      "domain": "observability",
+      "capability": "drift_detection",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C128",
+      "domain_id": "D11",
+      "capability_id": "K08",
+      "domain": "observability",
+      "capability": "blocker_reporting",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C129",
+      "domain_id": "D11",
+      "capability_id": "K09",
+      "domain": "observability",
+      "capability": "operator_runbook",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C130",
+      "domain_id": "D11",
+      "capability_id": "K10",
+      "domain": "observability",
+      "capability": "public_docs",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C131",
+      "domain_id": "D11",
+      "capability_id": "K11",
+      "domain": "observability",
+      "capability": "cross_domain_links",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C132",
+      "domain_id": "D11",
+      "capability_id": "K12",
+      "domain": "observability",
+      "capability": "handoff_readiness",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C133",
+      "domain_id": "D12",
+      "capability_id": "K01",
+      "domain": "release_readiness",
+      "capability": "scope_definition",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C134",
+      "domain_id": "D12",
+      "capability_id": "K02",
+      "domain": "release_readiness",
+      "capability": "acceptance_criteria",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C135",
+      "domain_id": "D12",
+      "capability_id": "K03",
+      "domain": "release_readiness",
+      "capability": "evidence_receipts",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C136",
+      "domain_id": "D12",
+      "capability_id": "K04",
+      "domain": "release_readiness",
+      "capability": "automation_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C137",
+      "domain_id": "D12",
+      "capability_id": "K05",
+      "domain": "release_readiness",
+      "capability": "test_coverage",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C138",
+      "domain_id": "D12",
+      "capability_id": "K06",
+      "domain": "release_readiness",
+      "capability": "retrieval_reproducibility",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C139",
+      "domain_id": "D12",
+      "capability_id": "K07",
+      "domain": "release_readiness",
+      "capability": "drift_detection",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C140",
+      "domain_id": "D12",
+      "capability_id": "K08",
+      "domain": "release_readiness",
+      "capability": "blocker_reporting",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C141",
+      "domain_id": "D12",
+      "capability_id": "K09",
+      "domain": "release_readiness",
+      "capability": "operator_runbook",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C142",
+      "domain_id": "D12",
+      "capability_id": "K10",
+      "domain": "release_readiness",
+      "capability": "public_docs",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C143",
+      "domain_id": "D12",
+      "capability_id": "K11",
+      "domain": "release_readiness",
+      "capability": "cross_domain_links",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    },
+    {
+      "category_id": "C144",
+      "domain_id": "D12",
+      "capability_id": "K12",
+      "domain": "release_readiness",
+      "capability": "handoff_readiness",
+      "maturity_state": "M0_seed",
+      "acceptance_criteria": [
+        "Bounded scope declared for this category",
+        "Evidence receipt(s) linked for current state claim",
+        "Validation command and result recorded",
+        "Blockers and next safest action recorded when incomplete"
+      ],
+      "evidence_requirements": [
+        "source_path_or_url",
+        "source_receipt_or_checksum",
+        "test_or_validation_receipt",
+        "tidelock_receipt_path"
+      ],
+      "current_status_note": "Candidate baseline imported in loop 2; promotion requires additional evidence."
+    }
+  ]
+}

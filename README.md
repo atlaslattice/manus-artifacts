@@ -39,6 +39,9 @@ Guardrails:
 
 ### Knowledge Graph Navigation
 - **[Unified Mission Charter v0.1](./archive/knowledge_graph/lattice_kg/v0_5/LATTICE_AETHERFORGE_GPTDREAM_UNIFIED_MISSION_CHARTER_v0.1.md)** — Public mission frame, quality gates, and quest-loop discipline.
+- **[Lattice Hypercube 144 Scoreboard v0.1](./archive/knowledge_graph/lattice_kg/v0_5/LATTICE_HYPERCUBE_144_SCOREBOARD_v0.1.md)** — 144-category measurable framework with maturity states and evidence requirements.
+- **[Lattice KG Primitives + Ingestion Protocol v0.1](./archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_PRIMITIVES_AND_INGESTION_PROTOCOL_v0.1.md)** — Standard primitives and admission contract for linkable/queryable artifacts.
+- **[Lattice Unified Mission Dashboard v0.1](./archive/knowledge_graph/lattice_kg/v0_5/LATTICE_UNIFIED_MISSION_DASHBOARD_v0.1.md)** — Coverage, retrieval reliability, validation status, and blocker visibility.
 - **[TIDELOCK Rehydration Receipt (2026-05-26)](./archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_REHYDRATION_RECEIPT_2026-05-26.md)** — Rehydrated operating context, boundaries, and graph substrate receipts.
 
 ### Governance & Council
