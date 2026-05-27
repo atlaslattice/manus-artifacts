@@ -10,6 +10,7 @@ Describe what changed and why.
 ## Validation
 
 - [ ] Ran relevant local tests/checks
+- [ ] 1000-year reader test: an uninitiated reader could find and understand the change path from repo docs in about one hour
 - [ ] No merge-conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`)
 - [ ] No secrets or credentials committed
 - [ ] If `archive/boot/gptbrain/**` changed, ran:

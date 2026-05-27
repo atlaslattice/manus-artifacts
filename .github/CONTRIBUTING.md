@@ -46,6 +46,7 @@ EOF
 
 - [ ] No merge-conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) in committed files
 - [ ] No secrets, credentials, or API keys committed
+- [ ] 1000-year reader test: an uninitiated reader can find and understand the change path from repo docs in about one hour
 - [ ] Workflow YAML files pass the syntax check above
 - [ ] Changes to `archive/` are **additive only** — never delete canon documents
 - [ ] GPTBrain checks pass if `archive/boot/gptbrain/**` was modified
