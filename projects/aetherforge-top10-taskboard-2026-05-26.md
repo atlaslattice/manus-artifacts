@@ -20,3 +20,4 @@ This board tracks the highest-leverage work items for repository quality, canon 
 ## Related Aetherforge artifacts
 
 - [`aetherforge-game-world-omnispec-archive-bowl-2026-05-26.md`](./aetherforge-game-world-omnispec-archive-bowl-2026-05-26.md) — Candidate playable quest map and Archive Bowl roadmap.
+- [`../archive/aetherforge/gptdreampp-openai/README.md`](../archive/aetherforge/gptdreampp-openai/README.md) — GPTDream++ OpenAI staging lane and provenance-first templates.

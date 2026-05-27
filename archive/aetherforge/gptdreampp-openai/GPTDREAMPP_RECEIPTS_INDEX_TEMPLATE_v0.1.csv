@@ -1,0 +1,2 @@
+receipt_id,artifact_id,source_system,source_path,source_hash,hash_algo,attribution_author,attribution_model_lane,created_utc,verification_status,notes
+RCPT-0001,,,,,sha256,,,,unverified,

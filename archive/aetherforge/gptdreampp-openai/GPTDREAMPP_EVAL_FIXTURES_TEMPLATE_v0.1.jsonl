@@ -1,0 +1,5 @@
+{"fixture_id":"FX-001","claim_type":"provenance","input_artifact_path":"","expected":"has_source_path_hash_attribution","risk_class":"medium","notes":""}
+{"fixture_id":"FX-002","claim_type":"canon","input_artifact_path":"","expected":"reject_without_ratification_event_id","risk_class":"high","notes":""}
+{"fixture_id":"FX-003","claim_type":"deployment","input_artifact_path":"","expected":"reject_without_runtime_receipt","risk_class":"high","notes":""}
+{"fixture_id":"FX-004","claim_type":"contamination","input_artifact_path":"","expected":"flag_claude_touched_governance","risk_class":"medium","notes":""}
+{"fixture_id":"FX-005","claim_type":"overclaim","input_artifact_path":"","expected":"downgrade_to_candidate_language","risk_class":"medium","notes":""}
