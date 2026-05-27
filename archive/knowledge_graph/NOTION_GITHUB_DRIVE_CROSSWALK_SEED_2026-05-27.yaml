@@ -1,0 +1,199 @@
+crosswalk_name: NOTION_GITHUB_DRIVE_CROSSWALK_SEED_2026-05-27
+status: staging_seed
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+created_utc: 2026-05-27
+purpose: >
+  Seed typed, non-authoritative edges across Notion, Drive, and GitHub so Sheldonbrain can
+  begin mapping lineage into the Atlas Lattice knowledge graph. Every edge is review pressure,
+  not promotion.
+
+hard_invariants:
+  - a_graph_edge_is_not_a_promotion
+  - a_cluster_is_not_canon
+  - a_central_node_is_not_authority
+  - a_coordinate_is_not_permission
+  - a_crosswalk_edge_is_not_truth
+  - source_presence_is_not_raw_export
+  - mirror_status_is_not_source_completeness
+  - human_root_before_canon
+
+surface_roles:
+  github:
+    role: public receipt shelf / source-packet substrate / code and schema staging
+    default_canon_status: not_canon
+  drive:
+    role: live staging tent / raw and semi-raw cargo / task boards / dream logs / source inventories
+    default_canon_status: not_canon
+  notion:
+    role: old cargo warehouse / legacy ontology / historical source roots / authored knowledge maps
+    default_canon_status: not_canon_unless_explicit_website_gate
+  website:
+    role: eventual canon surface only after human-root and website promotion
+    default_canon_status: canon_gate
+  openai_gptbrain:
+    role: reasoning / extraction / evaluation / routing / candidate graph construction
+    can_ratify: false
+    can_deploy: false
+    can_authorize: false
+  sheldonbrain:
+    role: lineage ingestion and crosswalk engine
+  aetherforge:
+    role: playable task and delta surface
+  bullshit_olympics:
+    role: adversarial false-authority and canon-drift detector
+
+nodes:
+  - node_id: SURFACE-GITHUB-MANUS-ARTIFACTS
+    node_type: SourceRoot
+    surface: github
+    title: atlaslattice/manus-artifacts
+    ref: atlaslattice/manus-artifacts
+    status: not_canon
+  - node_id: SURFACE-GITHUB-SHELDONBRAIN-RAG-API
+    node_type: SourceRoot
+    surface: github
+    title: atlaslattice/sheldonbrain-rag-api
+    ref: atlaslattice/sheldonbrain-rag-api
+    status: not_canon
+  - node_id: DRIVE-KG-SOURCE-INVENTORY-2026-05-27
+    node_type: SourceArtifact
+    surface: drive
+    title: KG_SOURCE_INVENTORY_2026-05-27 — Drive Staging v0.1
+    ref: https://docs.google.com/spreadsheets/d/1PklRq2hq-M87jiOkgPmYR0WpyOKhqbNjHQK1I3PqJmA
+    status: not_canon
+  - node_id: DRIVE-AETHERFORGE-SHELDONBRAIN-SYNC-2026-05-27
+    node_type: SourceArtifact
+    surface: drive
+    title: Aetherforge / Sheldonbrain Graph Ingestion Sync — Candidate Operation
+    ref: https://docs.google.com/document/d/1-SwfJxjqCq_N6sQCHA4a8UvpqA9I5DJ63DjK2yxBrAk
+    status: not_canon
+  - node_id: DRIVE-GPTDREAM-OPENAI-FIRST-RUNBOOK-v0-1
+    node_type: Runbook
+    surface: drive
+    title: GPTDream++ OpenAI-First Maximum Performance Runbook — Staging v0.1
+    ref: https://docs.google.com/document/d/1KLPMFa2nKX_tG5pYfUY_miumMFUuhw7blDqHLhKfsZE
+    status: not_canon
+  - node_id: DRIVE-MURMUR-OF-MANY-12x12-LATTICE
+    node_type: TaskLattice
+    surface: drive
+    title: Murmur-of-Many — 12x12 Aetherforge GPTDream Task Lattice
+    ref: https://docs.google.com/document/d/1a8fizmcJovbP88J1HgIXvl2nSf8xQ6qPoAsmMHdiyLE
+    status: not_canon
+  - node_id: DRIVE-AETHERFORGE-1000Y-DELTAS-v0-1
+    node_type: SourceArtifact
+    surface: drive
+    title: Aetherforge 1000-Year Simulation — 144 Candidate Deltas v0.1
+    ref: https://docs.google.com/spreadsheets/d/1JHNA9iovmGQdQzVHVIVGQQxxBmF0VBfcLJpd95cTWVc
+    status: not_canon
+  - node_id: DRIVE-ASTER-1000Y-LATTICE-RETURN
+    node_type: TaskLattice
+    surface: drive
+    title: Aster 1000-Year Lattice Return — 144 Enjoyable Sheldonbrain Graph Tasks
+    ref: https://docs.google.com/document/d/1zPH85Iu2onnKjq2WIJyb-eGryKqR02Cg6sVaZ-C3ifU
+    status: not_canon
+  - node_id: NOTION-MASTER-INDEX
+    node_type: SourceRoot
+    surface: notion
+    title: Notion Master Index
+    ref: Notion URL/ID pending
+    status: not_canon
+  - node_id: NOTION-MIGRATION-PLAN
+    node_type: SourceRoot
+    surface: notion
+    title: Notion → GitHub Migration Plan
+    ref: Notion URL/ID pending
+    status: not_canon
+  - node_id: NOTION-SHELDONBRAIN-OS-12x12
+    node_type: SourceRoot
+    surface: notion
+    title: SHELDONBRAIN OS — 12×12 Master Index
+    ref: Notion URL/ID pending
+    status: not_canon
+  - node_id: GITHUB-KG-NODE-EDGE-SCHEMA-v0-1
+    node_type: SchemaArtifact
+    surface: github
+    title: KG_NODE_EDGE_SCHEMA_v0.1.yaml
+    ref: archive/knowledge_graph/KG_NODE_EDGE_SCHEMA_v0.1.yaml
+    status: not_canon
+
+edges:
+  - edge_id: EDGE-001
+    edge_type: mirrors
+    from_node: DRIVE-KG-SOURCE-INVENTORY-2026-05-27
+    to_node: GITHUB-KG-SOURCE-INVENTORY-2026-05-27
+    status: proposed
+    review_required: true
+  - edge_id: EDGE-002
+    edge_type: defines_candidate_operation
+    from_node: DRIVE-AETHERFORGE-SHELDONBRAIN-SYNC-2026-05-27
+    to_node: SURFACE-GITHUB-MANUS-ARTIFACTS
+    status: proposed
+    review_required: true
+  - edge_id: EDGE-003
+    edge_type: requires_review
+    from_node: NOTION-MASTER-INDEX
+    to_node: DRIVE-KG-SOURCE-INVENTORY-2026-05-27
+    status: proposed
+    review_required: true
+  - edge_id: EDGE-004
+    edge_type: missing_receipt
+    from_node: NOTION-MASTER-INDEX
+    to_node: NOTION-MASTER-INDEX-RAW-EXPORT
+    reason: Notion source root requires page id, full raw export, block tree, and hash before fossilization.
+    status: proposed
+  - edge_id: EDGE-005
+    edge_type: missing_receipt
+    from_node: NOTION-SHELDONBRAIN-OS-12x12
+    to_node: NOTION-SHELDONBRAIN-OS-12x12-RAW-EXPORT
+    reason: Legacy 12x12 master index requires raw export and hash before normalized graph claims.
+    status: proposed
+  - edge_id: EDGE-006
+    edge_type: defines_operating_frame
+    from_node: DRIVE-GPTDREAM-OPENAI-FIRST-RUNBOOK-v0-1
+    to_node: OPENAI-GPTBRAIN-LANE
+    status: proposed
+    review_required: true
+  - edge_id: EDGE-007
+    edge_type: contains_tasks
+    from_node: DRIVE-MURMUR-OF-MANY-12x12-LATTICE
+    to_node: AETHERFORGE-TASK-LATTICE-RETURNS-INDEX-2026-05-27
+    status: proposed
+    review_required: true
+  - edge_id: EDGE-008
+    edge_type: proposes_delta
+    from_node: DRIVE-AETHERFORGE-1000Y-DELTAS-v0-1
+    to_node: AETHERFORGE-DELTA-QUEUE
+    status: proposed
+    review_required: true
+  - edge_id: EDGE-009
+    edge_type: contains_tasks
+    from_node: DRIVE-ASTER-1000Y-LATTICE-RETURN
+    to_node: AETHERFORGE-TASK-LATTICE-RETURNS-INDEX-2026-05-27
+    status: proposed
+    review_required: true
+  - edge_id: EDGE-010
+    edge_type: defines
+    from_node: GITHUB-KG-NODE-EDGE-SCHEMA-v0-1
+    to_node: KNOWLEDGE-GRAPH-SCHEMA
+    status: proposed
+    review_required: true
+  - edge_id: EDGE-011
+    edge_type: routes_to_review
+    from_node: CLAUDE-ORIGIN-GOVERNANCE-ARTIFACTS
+    to_node: CLAUDE-ADVERSARIAL-REVIEW-QUEUE
+    reason: Claude is not trusted as authority; preserve lineage and extract signal through adversarial review.
+    status: proposed
+
+review_rules:
+  claude_originated_governance: route_to_claude_adversarial_review
+  canon_like_language_without_ratification: route_to_lucerna_rootglass
+  deployment_runtime_claims: route_to_atlasbrain_lucerna
+  math_operator_claims: route_to_sable_vesper
+  repo_path_pr_commit_claims: route_to_tidelock
+  raw_export_hash_claims: route_to_hashlight
+  identity_memory_inflation: route_to_fossilbranch_gptbrain
+
+keeper: >
+  Map everything to everything. Do not merge everything. Do not crown the map.
