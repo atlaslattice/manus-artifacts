@@ -6,6 +6,7 @@ import sys
 from pathlib import Path
 
 import aetherforge_sim
+import graph_export
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -50,6 +51,21 @@ def test_receipt_chain_links_every_step() -> None:
     assert result["receipt_head"] == receipts[-1]["head"]
 
 
+def test_graph_export_maps_matrix_to_lattice() -> None:
+    graph = graph_export.build_graph(MATRIX_PATH)
+    assert graph["validation"]["ok"] is True
+    assert graph["summary"]["tasks"] == 144
+    assert graph["summary"]["domains"] == 12
+    node_ids = {node["id"] for node in graph["nodes"]}
+    edge_pairs = {(edge["source"], edge["relation"], edge["target"]) for edge in graph["edges"]}
+    assert "project:aetherforge-simulation" in node_ids
+    assert "boundary:non_canon_simulation" in node_ids
+    assert "task:D01-T01" in node_ids
+    assert "task:D12-T12" in node_ids
+    assert ("boundary:non_canon_simulation", "constrains", "project:aetherforge-simulation") in edge_pairs
+    assert ("cmd:simulate", "generates", "receipt:chain") in edge_pairs
+
+
 def test_cli_validate_json() -> None:
     completed = subprocess.run(
         [sys.executable, "aetherforge_sim.py", "--json", "--matrix-path", str(MATRIX_PATH), "validate"],
@@ -75,3 +91,17 @@ def test_cli_simulate_json() -> None:
     assert payload["steps"] == 3
     assert len(payload["receipts"]) == 3
     assert payload["boundary"]["canon_adjustments"] is False
+
+
+def test_cli_graph_export_json() -> None:
+    completed = subprocess.run(
+        [sys.executable, "graph_export.py", "--json", "--matrix-path", str(MATRIX_PATH)],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    payload = json.loads(completed.stdout)
+    assert payload["schema_version"] == "aetherforge.lattice_graph.v1"
+    assert payload["validation"]["ok"] is True
+    assert payload["summary"]["tasks"] == 144
