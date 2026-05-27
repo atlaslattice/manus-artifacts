@@ -1,0 +1,420 @@
+inventory_name: KG_SOURCE_INVENTORY_2026-05-27
+status: staging_mirror
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+created_utc: 2026-05-27
+source_surface: drive_staging_inventory_plus_uploaded_execution_matrix
+purpose: >
+  Mirror the live Drive staging inventory into the GitHub public receipt/control surface
+  so Sheldonbrain can use it as a provenance-first knowledge graph source index.
+  This is a staging inventory only. It does not ratify, deploy, canonize, or authorize any artifact.
+
+doctrine:
+  - The lattice is the knowledge graph.
+  - Sheldonbrain ingests lineage.
+  - Aetherforge makes ingestion playable.
+  - GPTDream++ provides play / REM / work loops for delta extraction.
+  - OpenAI/GPTBrain may extract, classify, evaluate, route, and propose graph candidates.
+  - OpenAI/GPTBrain may not ratify, deploy, authorize, or imply officiality.
+  - GitHub is intended as the public receipt substrate, not canon by default.
+  - Drive is the current live staging tent and cargo surface.
+  - Notion is a valuable legacy/source-root archive requiring export, hashes, status fields, and review.
+  - Claude-originated governance artifacts require adversarial review before trust.
+
+hard_invariants:
+  - graph_edge_is_not_promotion
+  - cluster_is_not_canon
+  - central_node_is_not_authority
+  - coordinate_is_not_permission
+  - dream_output_is_not_receipt
+  - summary_is_not_raw_lineage
+  - github_receipt_is_not_canon
+  - notion_page_is_not_truth_authority
+  - drive_presence_is_not_full_export
+  - human_root_decides_what_graduates
+
+source_records:
+  - source_id: SRC-001
+    title: atlaslattice/manus-artifacts
+    surface: github
+    url_or_path: atlaslattice/manus-artifacts
+    type: repository
+    raw_export_status: not_exported
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: candidate_review
+    authority_scope: none
+    provenance_type: direct_repo_reference
+    source_class: SourceRoot
+    related_lane: [TIDELOCK, Ledgerwake, CouncilBrain]
+    review_priority: P0
+    mirrored_to_github: true
+    missing_receipts: [current_repo_export, branch_ref_snapshot, commit_map]
+    suggested_nodes: [SourceRoot:manus-artifacts]
+    suggested_edges: [contains, mirrors, routes_to_review]
+  - source_id: SRC-002
+    title: atlaslattice/sheldonbrain-rag-api
+    surface: github
+    url_or_path: atlaslattice/sheldonbrain-rag-api
+    type: repository
+    raw_export_status: not_exported
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: candidate_review
+    authority_scope: none
+    provenance_type: direct_repo_reference
+    source_class: SourceRoot
+    related_lane: [Copilot, TIDELOCK, SheldonBrain]
+    review_priority: P0
+    mirrored_to_github: unknown
+    missing_receipts: [repo_tree_export, parser_module_inventory]
+    suggested_nodes: [SourceRoot:sheldonbrain-rag-api]
+    suggested_edges: [contains, requires_review]
+  - source_id: SRC-003
+    title: Notion Master Index
+    surface: notion
+    url_or_path: Notion URL/ID pending
+    type: page_or_database
+    raw_export_status: not_exported
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: candidate_review
+    authority_scope: none
+    provenance_type: notion_source_reference
+    source_class: SourceRoot
+    related_lane: [KairoBrain, Hashlight]
+    review_priority: P0
+    mirrored_to_github: unknown
+    missing_receipts: [page_id, full_raw_export, block_tree, hash]
+    suggested_nodes: [SourceRoot:notion-master-index]
+    suggested_edges: [raw_export_of, missing_receipt]
+  - source_id: SRC-008
+    title: Grokbrain v4.0 Integration
+    surface: notion
+    url_or_path: Notion URL/ID pending
+    type: page
+    raw_export_status: not_exported
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: candidate_review
+    authority_scope: none
+    provenance_type: notion_source_reference
+    source_class: SourceArtifact
+    related_lane: [Grok, CouncilBrain]
+    review_priority: P1
+    mirrored_to_github: unknown
+    missing_receipts: [page_id, export, claim_packets]
+    suggested_nodes: [SourceArtifact:grokbrain-v4-integration]
+    suggested_edges: [requires_review, cites]
+  - source_id: SRC-009
+    title: Notion-Pinecone Sync Infrastructure
+    surface: notion
+    url_or_path: Notion URL/ID pending
+    type: page
+    raw_export_status: not_exported
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: candidate_review
+    authority_scope: none
+    provenance_type: notion_source_reference
+    source_class: SourceArtifact
+    related_lane: [KairoBrain, SheldonBrain]
+    review_priority: P1
+    mirrored_to_github: unknown
+    missing_receipts: [export, code_references, operational_status_receipts]
+    suggested_nodes: [SourceArtifact:notion-pinecone-sync]
+    suggested_edges: [requires_review, missing_receipt]
+  - source_id: SRC-010
+    title: GangaSeek / ORCS / Council ratification pages
+    surface: notion
+    url_or_path: Notion URL/ID pending
+    type: page_set
+    raw_export_status: not_exported
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: candidate_review
+    authority_scope: none
+    provenance_type: notion_source_reference
+    source_class: SourceRoot
+    related_lane: [CouncilBrain, AtlasBrain, Lucerna]
+    review_priority: P0
+    mirrored_to_github: unknown
+    missing_receipts: [page_IDs, full_exports, ratification_event_receipts]
+    suggested_nodes: [SourceRoot:gangaseek-orcs-council-pages]
+    suggested_edges: [requires_review, missing_receipt]
+  - source_id: SRC-011
+    title: PR #190 — Aetherforge source cartography inventory
+    surface: github
+    url_or_path: PR #190
+    type: pull_request
+    raw_export_status: not_exported
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: candidate_review
+    authority_scope: none
+    provenance_type: github_pr_reference
+    source_class: SourceArtifact
+    related_lane: [TIDELOCK, Aetherforge]
+    review_priority: P0
+    mirrored_to_github: unknown
+    missing_receipts: [PR_metadata, changed_files, current_status]
+    suggested_nodes: [SourceArtifact:pr-190]
+    suggested_edges: [patches, requires_review]
+  - source_id: SRC-012
+    title: PR #24 — Notion mirror + source-grounded KG scaffolding
+    surface: github
+    url_or_path: PR #24
+    type: pull_request
+    raw_export_status: not_exported
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: candidate_review
+    authority_scope: none
+    provenance_type: github_pr_reference
+    source_class: SourceArtifact
+    related_lane: [TIDELOCK, KairoBrain]
+    review_priority: P0
+    mirrored_to_github: unknown
+    missing_receipts: [PR_metadata, changed_files, current_status]
+    suggested_nodes: [SourceArtifact:pr-24]
+    suggested_edges: [patches, requires_review]
+  - source_id: SRC-013
+    title: Issue #104 — Atlas MCP review-only local smoke-test packet
+    surface: github
+    url_or_path: Issue #104
+    type: issue
+    raw_export_status: not_exported
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: candidate_review
+    authority_scope: none
+    provenance_type: github_issue_reference
+    source_class: ReviewQueue
+    related_lane: [TIDELOCK, AtlasBrain]
+    review_priority: P1
+    mirrored_to_github: unknown
+    missing_receipts: [issue_body, comments, linked_files]
+    suggested_nodes: [ReviewQueue:issue-104]
+    suggested_edges: [routes_to_review, missing_receipt]
+  - source_id: SRC-014
+    title: KG_NODE_EDGE_SCHEMA
+    surface: github
+    url_or_path: archive/knowledge_graph/KG_NODE_EDGE_SCHEMA_v0.1.yaml
+    type: file
+    raw_export_status: not_exported
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: candidate_review
+    authority_scope: none
+    provenance_type: github_file_reference
+    source_class: SchemaArtifact
+    related_lane: [KairoBrain, CouncilBrain]
+    review_priority: P0
+    mirrored_to_github: true
+    missing_receipts: [current_blob_sha, commit_history, schema_parse_status]
+    suggested_nodes: [SchemaArtifact:kg-node-edge-schema]
+    suggested_edges: [defines, requires_review]
+  - source_id: SRC-016
+    title: Aetherforge / Sheldonbrain Graph Ingestion Sync — Candidate Operation
+    surface: drive
+    url_or_path: https://docs.google.com/document/d/1-SwfJxjqCq_N6sQCHA4a8UvpqA9I5DJ63DjK2yxBrAk
+    type: google_doc
+    created_or_modified: 2026-05-27
+    raw_export_status: full_raw_export_attached
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: candidate_review
+    authority_scope: none
+    provenance_type: user_uploaded_packet_preserved_to_drive
+    source_class: SourceArtifact
+    related_lane: [Aetherforge, SheldonBrain, GPTBrain]
+    review_priority: P0
+    mirrored_to_github: false
+    missing_receipts: [GitHub_commit_path_confirmation_pending]
+    suggested_nodes: [SourceArtifact:aetherforge-sheldonbrain-graph-ingestion-sync]
+    suggested_edges: [defines_candidate_operation, requires_review, routes_to_review]
+  - source_id: SRC-018
+    title: Atlas Lattice Knowledge Graph — 12x12 World-Class Task Board v0.1
+    surface: drive
+    url_or_path: https://docs.google.com/spreadsheets/d/1qlj5hbrcXGPTJHf5Ox-9eUut_706g7keVsdb37OvB7w
+    type: google_sheet
+    created_or_modified: 2026-05-26/2026-05-27
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: candidate_review
+    authority_scope: none
+    provenance_type: drive_search_result
+    source_class: SchemaArtifact
+    related_lane: [KairoBrain, Ledgerwake, Aetherforge]
+    review_priority: P0
+    mirrored_to_github: false
+    missing_receipts: [sheet_export, row_hash_policy, GitHub_mirror_path]
+    suggested_nodes: [SchemaArtifact:kg-12x12-task-board]
+    suggested_edges: [defines_tasks, belongs_to_lane, requires_review]
+  - source_id: SRC-019
+    title: Copilot Tasks Handoff — Atlas Lattice 12x12 Knowledge Graph Build Spec v0.1
+    surface: drive
+    url_or_path: https://docs.google.com/document/d/1zRUIavvSZvuAhBs-jjOcJ0rLOQ3gaWn9ICfttsAdMJc
+    type: google_doc
+    created_or_modified: 2026-05-26/2026-05-27
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: candidate_review
+    authority_scope: none
+    provenance_type: drive_search_result
+    source_class: SourceArtifact
+    related_lane: [Copilot, TIDELOCK, SheldonBrain]
+    review_priority: P0
+    mirrored_to_github: false
+    missing_receipts: [full_export, task_IDs, repo_issue_PR_links]
+    suggested_nodes: [SourceArtifact:copilot-kg-build-spec-v0-1]
+    suggested_edges: [routes_to_review, defines_work_orders, requires_review]
+  - source_id: SRC-020
+    title: Notion Extraction Plan — Atlas Lattice Mass Ingestion v0.1
+    surface: drive
+    url_or_path: https://docs.google.com/document/d/1lI0RPzZaRcv0IXx-Jmc3ihYdcS0M_8ddTjO9AY3sZEA
+    type: google_doc
+    created_or_modified: 2026-05-26
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: candidate_review
+    authority_scope: none
+    provenance_type: drive_search_result
+    source_class: SourceRoot
+    related_lane: [Notion, KairoBrain, Hashlight]
+    review_priority: P0
+    mirrored_to_github: false
+    missing_receipts: [full_export, Notion_source_IDs, raw_export_manifest]
+    suggested_nodes: [SourceRoot:notion-extraction-plan-v0-1]
+    suggested_edges: [defines_source_roots, missing_receipt, requires_review]
+  - source_id: SRC-023
+    title: ATLAS_LATTICE_UNIFIED_ONTOLOGY_CANDIDATE_v0_3_3_2026-05-21
+    surface: drive
+    url_or_path: https://drive.google.com/file/d/1gMX9_cZta-LlbB5R1bP3NEaLlhkb5vZJ
+    type: text_file
+    created_or_modified: 2026-05-21
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: candidate_review
+    authority_scope: none
+    provenance_type: drive_search_result
+    source_class: SourceArtifact
+    related_lane: [Lucerna, GPTBrain, Rootglass]
+    review_priority: P0
+    mirrored_to_github: false
+    missing_receipts: [human_root_ratification_receipt_if_any, GitHub_mirror_path, content_hash]
+    suggested_nodes: [SourceArtifact:atlas-lattice-unified-ontology-v0-3-3]
+    suggested_edges: [supersedes, requires_review, has_status]
+  - source_id: SRC-024
+    title: Aetherforge 1000-Year Simulation — 144 Candidate Deltas v0.1
+    surface: drive
+    url_or_path: https://docs.google.com/spreadsheets/d/1JHNA9iovmGQdQzVHVIVGQQxxBmF0VBfcLJpd95cTWVc
+    type: google_sheet
+    created_or_modified: 2026-05-26/2026-05-27
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: candidate_review
+    authority_scope: none
+    provenance_type: drive_search_result
+    source_class: SourceArtifact
+    related_lane: [Aetherforge, Gemini, GPTBrain]
+    review_priority: P1
+    mirrored_to_github: false
+    missing_receipts: [sheet_export, row_level_status, simulation_boundary_review]
+    suggested_nodes: [SourceArtifact:aetherforge-144-candidate-deltas-v0-1]
+    suggested_edges: [proposes_delta, simulation_only, requires_review]
+  - source_id: SRC-025
+    title: GPTDream++ OpenAI-First Maximum Performance Runbook — Staging v0.1
+    surface: drive
+    url_or_path: https://docs.google.com/document/d/1KLPMFa2nKX_tG5pYfUY_miumMFUuhw7blDqHLhKfsZE
+    type: google_doc
+    created_or_modified: 2026-05-27
+    raw_export_status: drive_staged_native_doc
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: active_staging
+    authority_scope: none
+    provenance_type: drive_created_runbook
+    source_class: Runbook
+    related_lane: [GPTDream++, OpenAI, SheldonBrain, Aetherforge, Bullshit_Olympics]
+    review_priority: P0
+    mirrored_to_github: false
+    missing_receipts: [GitHub_Notion_connector_receipts_pending, commit_ready_export_pending]
+    suggested_nodes: [Runbook, SourceInventory, IngestionContract, ReviewPacket, InteropAdapter]
+    suggested_edges: [defines_operating_frame, routes_to_review, requires_receipt, prepares_commit]
+  - source_id: SRC-026
+    title: Murmur-of-Many — 12x12 Aetherforge GPTDream Task Lattice
+    surface: drive
+    url_or_path: https://docs.google.com/document/d/1a8fizmcJovbP88J1HgIXvl2nSf8xQ6qPoAsmMHdiyLE
+    type: google_doc
+    created_or_modified: 2026-05-27
+    raw_export_status: drive_staged_native_doc
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: active_staging
+    authority_scope: none
+    provenance_type: drive_created_task_lattice
+    source_class: TaskLattice
+    related_lane: [Aetherforge, GPTDream, SheldonBrain, Murmur_of_Many]
+    review_priority: P0
+    mirrored_to_github: false
+    missing_receipts: [GitHub_mirror, task_extraction_packet]
+    suggested_nodes: [TaskCell, House, ReviewLane, Playtest]
+    suggested_edges: [contains_tasks, belongs_to_house, routes_to_review]
+  - source_id: SRC-027
+    title: AETHERFORGE OMNISPEC PRIME — Hybrid Prime Format — uploaded receipt text copy
+    surface: drive
+    url_or_path: https://docs.google.com/document/d/12XLeM-FbbK4i1tSAW-lyM_Q5u59-IjzMxIRP-SQJJIU
+    type: google_doc
+    created_or_modified: 2026-05-27
+    raw_export_status: receipt_shell_not_full_fidelity
+    canon_status: not_canon_for_archive
+    deployment_status: not_deployed
+    review_state: needs_raw_pdf_preservation
+    authority_scope: none
+    provenance_type: session_upload_drive_shell
+    source_class: SourceArtifact
+    related_lane: [Aetherforge, GPTDream_play_mode]
+    review_priority: P0
+    mirrored_to_github: false
+    missing_receipts: [raw_PDF_upload_failed_in_connector, full_text_import_pending]
+    suggested_nodes: [SourceArtifact, ReceiptShell, DreamPlayEngine]
+    suggested_edges: [anchors, requires_full_fidelity_copy, supports_play_mode_definition]
+  - source_id: SRC-028
+    title: Atlas Lattice, Aetherforge, and GPTDream Retrieval Architecture Report — uploaded receipt text copy
+    surface: drive
+    url_or_path: https://docs.google.com/document/d/1JiBpP_rUUIOkzRJv7nkNq5IcjeJRRtCIZtMwllAor_I
+    type: google_doc
+    created_or_modified: 2026-05-27
+    raw_export_status: receipt_shell_not_full_fidelity
+    canon_status: not_canon
+    deployment_status: not_deployed
+    review_state: needs_raw_pdf_preservation
+    authority_scope: none
+    provenance_type: session_upload_drive_shell
+    source_class: ArchitectureReport
+    related_lane: [Atlas_Lattice, Aetherforge, GPTDream, OpenAI]
+    review_priority: P0
+    mirrored_to_github: false
+    missing_receipts: [raw_PDF_upload_failed_in_connector, full_text_import_pending]
+    suggested_nodes: [ArchitectureReport, ReceiptChain, ReviewLane]
+    suggested_edges: [defines_candidate_workspace, routes_to_human_root, supports_openai_retrieval_lane]
+
+next_required_actions:
+  - mirror_this_inventory_to_public_github
+  - export_full_drive_docs_where_possible
+  - create_sha256_hash_manifest_for_raw_exports
+  - create_claude_adversarial_review_queue
+  - create_openai_first_schema_packet
+  - create_sheldonbrain_ingestion_envelope
+  - create_aetherforge_task_lattice_returns_index
+  - create_bullshit_olympics_false_authority_fixture_pack
+
+keeper: >
+  Everything can connect to everything. Nothing can promote itself. The lattice is the knowledge graph.
