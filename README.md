@@ -51,7 +51,7 @@ All artifacts remain candidate work unless explicitly ratified as canon.
 ### Governance & Council
 - **[Council](./council/)** — Trinity and Pantheon Council session archives.
 - **[Council Reviews](./council-reviews/)** — External reviews and validation.
-- **[Swarm Governance & Operations Dossier](./docs/)** — Operational specs and templates for assignable, auditable swarm execution.
+- **[Swarm Governance & Operations Dossier](./docs/README.md)** — Operational specs and templates for assignable, auditable swarm execution.
   - [Swarm Operations Spec](./docs/SWARM_OPERATIONS_SPEC.md)
   - [Task Packet Schema](./docs/TASK_PACKET_SCHEMA.md)
   - [Agent Lifecycle Spec v0.1](./docs/AGENT_LIFECYCLE_SPEC_v0.1.md)
