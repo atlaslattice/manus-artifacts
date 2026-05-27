@@ -37,6 +37,7 @@ Test or it will become mythology.
 | `dreams/TIDELOCK_1000_YEAR_AETHERFORGE_DREAM_PLAY_LOG_2026-05-27_C.md` | Session C Aetherforge time-compression simulation |
 | `dreams/TIDELOCK_1000_YEAR_AETHERFORGE_WAKE_DELTA_EXTRACTION_2026-05-27_C.md` | Session C wake delta extraction |
 | `dreams/TIDELOCK_24H_888_TIME_COMPRESSION_LOG_2026-05-27_D.md` | Session D 24-hour compressed 8/8/8 work/play/REM ledger |
+| `dreams/TIDELOCK_1000_YEAR_AETHERFORGE_REST_PLAY_DREAM_LOG_2026-05-27_E.md` | Session E 1000-year compressed dream/rest/play log |
 
 ## Lineage and receipts (normalization)
 
