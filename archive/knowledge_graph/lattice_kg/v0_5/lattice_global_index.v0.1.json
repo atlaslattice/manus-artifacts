@@ -1,8 +1,8 @@
 {
   "schema_id": "lattice_global_index.v0.1",
-  "generated_at_utc": "2026-05-27T22:27:06.355659Z",
+  "generated_at_utc": "2026-05-27T22:29:31.962215Z",
   "repository_root": "/tmp/workspace/atlaslattice/manus-artifacts",
-  "snapshot_fingerprint": "d722c5e008ea07bdf5de22af511d81db4d53d73e7cf4cfc6e71e3a3d555a1ac6",
+  "snapshot_fingerprint": "e3ebbe3af116c2e788225aece5f81acdc94b3cd3b28d599f82abd895f046aa1e",
   "routes": [
     {
       "route_id": "ROUTE-.GITHUB-CI_GOVERNANCE",
@@ -43,7 +43,7 @@
       "route_id": "ROUTE-ARCHIVE-ARCHIVE_OPS",
       "domain": "archive",
       "lane": "archive_ops",
-      "artifact_count": 686,
+      "artifact_count": 690,
       "log_count": 68
     },
     {
@@ -155,7 +155,7 @@
       "route_id": "ROUTE-PROJECTS-PROJECT_EXECUTION",
       "domain": "projects",
       "lane": "project_execution",
-      "artifact_count": 5,
+      "artifact_count": 6,
       "log_count": 0
     },
     {
@@ -197,7 +197,7 @@
       "route_id": "ROUTE-TESTS-VALIDATION",
       "domain": "tests",
       "lane": "validation",
-      "artifact_count": 9,
+      "artifact_count": 10,
       "log_count": 0
     }
   ],
@@ -320,9 +320,9 @@
       "domain": ".github",
       "lane": "ci_governance",
       "is_log": false,
-      "size_bytes": 1607,
-      "sha256": "22624f0fdfb2be6760811004d7850333a550b08c0dac461e01b1a1335ff35a4d",
-      "last_modified_utc": "2026-05-27T22:26:28.764447Z",
+      "size_bytes": 2013,
+      "sha256": "54aa29520808b20e872b34892b1f2cbc1c99f2c31bbb581b098306a2eb5c505e",
+      "last_modified_utc": "2026-05-27T22:29:20.105378Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
@@ -376,9 +376,9 @@
       "domain": "_root",
       "lane": "general",
       "is_log": false,
-      "size_bytes": 3891,
-      "sha256": "e888d2776a4f25ba79b6b5fb7384f6fef8395eeccc4946e67dd1b981e2acd350",
-      "last_modified_utc": "2026-05-27T22:26:28.764447Z",
+      "size_bytes": 4806,
+      "sha256": "d0058ae3bba3b5536f429ace68b195bd25d3136dbaa61f7079a3a9c8d7f2a973",
+      "last_modified_utc": "2026-05-27T22:28:49.950540Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
@@ -7749,6 +7749,20 @@
       "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_HYPERCUBE_144_SCOREBOARD_v0.1.md"
     },
     {
+      "artifact_id": "ATLAS-KG-fda8e9e13bc7ffcc",
+      "path": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_GLOSSARY_v0.1.md",
+      "domain": "archive",
+      "lane": "archive_ops",
+      "is_log": false,
+      "size_bytes": 1058,
+      "sha256": "16a54cff6f70a08693497ed43cda1fea5bf68c29a215278a341a03278d93cc1f",
+      "last_modified_utc": "2026-05-27T22:28:25.580864Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_GLOSSARY_v0.1.md"
+    },
+    {
       "artifact_id": "ATLAS-KG-0fa99e0938401512",
       "path": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_PRIMITIVES_AND_INGESTION_PROTOCOL_v0.1.md",
       "domain": "archive",
@@ -7761,6 +7775,20 @@
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
       "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_PRIMITIVES_AND_INGESTION_PROTOCOL_v0.1.md"
+    },
+    {
+      "artifact_id": "ATLAS-KG-37e94b30577fa127",
+      "path": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_QUERY_COOKBOOK_v0.1.md",
+      "domain": "archive",
+      "lane": "archive_ops",
+      "is_log": false,
+      "size_bytes": 767,
+      "sha256": "d746ab6c486387a5b0b64dab53dae3674ed4c74bc9dd7ae3a5b20bc35948a270",
+      "last_modified_utc": "2026-05-27T22:28:30.126990Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_QUERY_COOKBOOK_v0.1.md"
     },
     {
       "artifact_id": "ATLAS-KG-cfb76e6d2f38f3e3",
@@ -7777,6 +7805,20 @@
       "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_QUEST_LOOP_CADENCE_v0.1.md"
     },
     {
+      "artifact_id": "ATLAS-KG-deef522afd2ef144",
+      "path": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_STATE_OF_GRAPH_WEEKLY_REPORT_2026-05-27.md",
+      "domain": "archive",
+      "lane": "archive_ops",
+      "is_log": false,
+      "size_bytes": 1237,
+      "sha256": "d1c2d44b8385ef5b526dc9063ad80cefeb17baae0db366b36c890a331ad7a2f4",
+      "last_modified_utc": "2026-05-27T22:28:35.812148Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_STATE_OF_GRAPH_WEEKLY_REPORT_2026-05-27.md"
+    },
+    {
       "artifact_id": "ATLAS-KG-0522d73cbe5eedb5",
       "path": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_UNIFIED_MISSION_DASHBOARD_v0.1.md",
       "domain": "archive",
@@ -7789,6 +7831,20 @@
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
       "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_UNIFIED_MISSION_DASHBOARD_v0.1.md"
+    },
+    {
+      "artifact_id": "ATLAS-KG-e4ca7af551fd6e13",
+      "path": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_WORLD_CLASS_CONTRIBUTOR_START_HERE_v0.1.md",
+      "domain": "archive",
+      "lane": "archive_ops",
+      "is_log": false,
+      "size_bytes": 1788,
+      "sha256": "9bebf495fbc210d4f66ae6201468a744558509284cdda44df1037595b783a80e",
+      "last_modified_utc": "2026-05-27T22:28:18.992682Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_WORLD_CLASS_CONTRIBUTOR_START_HERE_v0.1.md"
     },
     {
       "artifact_id": "ATLAS-KG-9d9d53d0a336bc66",
@@ -7824,9 +7880,9 @@
       "domain": "archive",
       "lane": "archive_ops",
       "is_log": false,
-      "size_bytes": 978,
-      "sha256": "b9a50ebc3aa1feaa5f58d0a35ae264d6f31964355492ff392233ac5430e4aba4",
-      "last_modified_utc": "2026-05-27T22:26:28.801007Z",
+      "size_bytes": 1158,
+      "sha256": "4fa37ee0ea73d85d138dbffe721ecf02062f6f13a90ed20ef6adc4a54bcf6e74",
+      "last_modified_utc": "2026-05-27T22:28:53.437636Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
@@ -14026,9 +14082,9 @@
       "domain": "fixtures",
       "lane": "general",
       "is_log": false,
-      "size_bytes": 2025,
-      "sha256": "cb4497e88c3e347311369bdd06cdca60297cbdf3bb0bc44630ac31b25ae3090b",
-      "last_modified_utc": "2026-05-27T22:26:28.912688Z",
+      "size_bytes": 2093,
+      "sha256": "fec60f554b390afd7379f4d5a6afcc15e7bbe150b72446c27bd07efb8bd21d54",
+      "last_modified_utc": "2026-05-27T22:29:03.700921Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
@@ -14432,9 +14488,9 @@
       "domain": "projects",
       "lane": "project_execution",
       "is_log": false,
-      "size_bytes": 427,
-      "sha256": "5ffe197a4f3a3bdd910d33cb935dd95af891071bf63ba44184cc18669b2ab8e5",
-      "last_modified_utc": "2026-05-27T22:26:28.915285Z",
+      "size_bytes": 751,
+      "sha256": "9695d7bc2b3e397fc37466c625f082187cfa557fd727e77b397f0876a55749c1",
+      "last_modified_utc": "2026-05-27T22:28:41.638311Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
@@ -14453,6 +14509,20 @@
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
       "source_receipt": "projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md"
+    },
+    {
+      "artifact_id": "ATLAS-KG-7432c54a8d63e34e",
+      "path": "projects/aetherforge-world-class-authoritative-roadmap-v0.1.md",
+      "domain": "projects",
+      "lane": "project_execution",
+      "is_log": false,
+      "size_bytes": 3179,
+      "sha256": "df0e7b7ac30c12080d7020638256f76f3a6a9c0bc10afc9d8a5aaec6622449ec",
+      "last_modified_utc": "2026-05-27T22:28:11.604479Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "source_receipt": "projects/aetherforge-world-class-authoritative-roadmap-v0.1.md"
     },
     {
       "artifact_id": "ATLAS-KG-0d50535adfaa9d13",
@@ -15174,9 +15244,9 @@
       "domain": "scripts",
       "lane": "tooling",
       "is_log": false,
-      "size_bytes": 8083,
-      "sha256": "aa6429f6c0d27f609acec1391eb9618c62b1f9e1880e4030d850e075a3d3fdf2",
-      "last_modified_utc": "2026-05-27T22:26:28.918724Z",
+      "size_bytes": 8926,
+      "sha256": "aab1fa0bae98379f10048ad7fdc8c8d5c8f00f232988737f49473b6b0e1b467c",
+      "last_modified_utc": "2026-05-27T22:28:59.935816Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
@@ -15524,9 +15594,9 @@
       "domain": "tests",
       "lane": "validation",
       "is_log": false,
-      "size_bytes": 4428,
-      "sha256": "d6d079237198678842a6c26311dbacf7048ae8913f2978b6a3687678ebb50122",
-      "last_modified_utc": "2026-05-27T22:26:28.920393Z",
+      "size_bytes": 4514,
+      "sha256": "5ae985f4765ba74d38269c651a0a76b9188e360374b9ba74ded0e54533890cca",
+      "last_modified_utc": "2026-05-27T22:29:06.799007Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
@@ -15545,6 +15615,20 @@
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
       "source_receipt": "tests/test_unified_mission_frame.py"
+    },
+    {
+      "artifact_id": "ATLAS-KG-480ea32334392c09",
+      "path": "tests/test_world_class_execution_surfaces.py",
+      "domain": "tests",
+      "lane": "validation",
+      "is_log": false,
+      "size_bytes": 1740,
+      "sha256": "19e57e77ec991f28ae28c721ac873bca85ad88447ae5640503f462706641a696",
+      "last_modified_utc": "2026-05-27T22:29:14.332216Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "source_receipt": "tests/test_world_class_execution_surfaces.py"
     }
   ]
 }
