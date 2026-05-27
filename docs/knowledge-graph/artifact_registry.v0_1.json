@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "artifact_count": 15,
+  "artifact_count": 17,
   "artifacts": [
     {
       "id": "AL-MISSION-001",
@@ -37,6 +37,10 @@
         {
           "relation": "referenced_by",
           "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "extends",
+          "target_id": "AL-KG-003"
         }
       ]
     },
@@ -131,6 +135,10 @@
         {
           "relation": "prioritizes",
           "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "prioritizes",
+          "target_id": "AL-KG-003"
         }
       ]
     },
@@ -242,6 +250,44 @@
         {
           "relation": "evidence_for",
           "target_id": "AL-EVID-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-KG-003",
+      "title": "Artifact ID and Lifecycle Contract v0.1",
+      "artifact_type": "spec",
+      "status": "CANDIDATE",
+      "path": "docs/knowledge-graph/ARTIFACT_ID_AND_LIFECYCLE_CONTRACT_v0_1.md",
+      "links": [
+        {
+          "relation": "extends",
+          "target_id": "AL-KG-001"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "governs",
+          "target_id": "AL-EXEC-144-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-LOG-002",
+      "title": "TIDELOCK Wave 2 Receipt 2026-05-27",
+      "artifact_type": "receipt",
+      "status": "CANDIDATE",
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_WAVE2_144_TASK_EXECUTION_RECEIPT_2026-05-27.md",
+      "links": [
+        {
+          "relation": "receipts_for",
+          "target_id": "AL-EXEC-144-001"
+        },
+        {
+          "relation": "evidence_for",
+          "target_id": "AL-KG-003"
         }
       ]
     }

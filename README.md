@@ -131,6 +131,7 @@ The Aetherforge swarm — a council of named AI agents with distinct roles, stre
 | **[Mission Charter](./projects/AETHERFORGE_LATTICE_GPTDREAM_MISSION_CHARTER_v0.1.md)** | Unified north-star for Lattice + Aetherforge + GPTDream++ |
 | **[Knowledge Graph Taxonomy](./docs/knowledge-graph/artifact_taxonomy.v0_1.json)** | Machine-readable artifact types, lifecycle states, and required metadata |
 | **[Knowledge Graph Registry](./docs/knowledge-graph/artifact_registry.v0_1.json)** | Stable IDs and required cross-links between mission-critical artifacts |
+| **[Artifact ID + Lifecycle Contract](./docs/knowledge-graph/ARTIFACT_ID_AND_LIFECYCLE_CONTRACT_v0_1.md)** | ID grammar, lifecycle transitions, and relation vocabulary contract |
 | **[Ratification & Trust Flow](./docs/RATIFICATION_AND_TRUST_FLOW.md)** | Candidate-to-canon adjudication checkpoints and traceability rules |
 | **[Archive Index](./docs/ARCHIVE_INDEX.md)** | Full searchable catalog of all artifact domains |
 | **[Start Here Guide](./docs/START_HERE.md)** | Persona-based reading paths |

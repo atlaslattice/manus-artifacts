@@ -64,5 +64,100 @@
     "status",
     "path",
     "links"
+  ],
+  "id_format": {
+    "pattern": "^AL-[A-Z]+-[0-9]{3}$",
+    "description": "Stable artifact ID format: AL-<DOMAIN>-<SEQ>"
+  },
+  "id_domain_prefixes": [
+    {
+      "domain": "MISSION",
+      "description": "Mission doctrine/alignment artifacts"
+    },
+    {
+      "domain": "KG",
+      "description": "Knowledge-graph schema/registry contracts"
+    },
+    {
+      "domain": "AF",
+      "description": "Aetherforge artifacts"
+    },
+    {
+      "domain": "GP",
+      "description": "GPTDream++ package artifacts"
+    },
+    {
+      "domain": "RT",
+      "description": "Ratification/trust artifacts"
+    },
+    {
+      "domain": "CI",
+      "description": "Automation and validation artifacts"
+    },
+    {
+      "domain": "EXEC",
+      "description": "Execution boards and sprint artifacts"
+    },
+    {
+      "domain": "GOV",
+      "description": "Governance baseline artifacts"
+    },
+    {
+      "domain": "EVID",
+      "description": "Evidence ledger/schema artifacts"
+    },
+    {
+      "domain": "LOG",
+      "description": "Execution receipts and logs"
+    }
+  ],
+  "relation_vocabulary": [
+    "defines",
+    "implements",
+    "implemented_by",
+    "extends",
+    "operationalizes",
+    "governs",
+    "supports",
+    "constrains",
+    "validated_by",
+    "indexes",
+    "references",
+    "referenced_by",
+    "depends_on",
+    "summarized_by",
+    "prioritizes",
+    "runs",
+    "validates",
+    "receipts_for",
+    "evidence_for",
+    "recorded_in"
+  ],
+  "lifecycle_transitions": [
+    {
+      "from": "DRAFT",
+      "to": "CANDIDATE"
+    },
+    {
+      "from": "CANDIDATE",
+      "to": "RATIFIED"
+    },
+    {
+      "from": "CANDIDATE",
+      "to": "DEPRECATED"
+    },
+    {
+      "from": "RATIFIED",
+      "to": "ARCHIVED"
+    },
+    {
+      "from": "RATIFIED",
+      "to": "DEPRECATED"
+    }
+  ],
+  "lifecycle_transition_guards": [
+    "RATIFIED requires council ratification and @atlaslattice adjudication.",
+    "ARCHIVED artifacts retain stable IDs and provenance.",
+    "DEPRECATED artifacts remain addressable and should point to replacement artifacts when possible."
   ]
 }

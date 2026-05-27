@@ -37,12 +37,12 @@ Each sprint must:
 
 - This sprint artifact now governs a 12-wave campaign (`AL-EXEC-144-001`) with 12 tasks per wave.
 - Wave completion requires: linked artifacts, validation receipts, and TIDELOCK execution logging.
-- Active wave: **Wave 1 — Mission/Governance/Evidence Baseline**.
+- Active wave: **Wave 2 — Taxonomy/IDs/Lifecycle Expansion**.
 
-## Wave 1 Scope
+## Wave 2 Scope
 
-1. Mission and governance baseline lock-in
-2. Taxonomy/registry updates for wave artifacts
-3. AI evidence ledger schema and seed publication
-4. README navigation and discoverability updates
+1. ID grammar and namespace contract publication
+2. Relation vocabulary expansion for graph linking
+3. Lifecycle transition and guard contract codification
+4. Registry expansion with Wave 2 artifacts and links
 5. Validation and execution receipts
