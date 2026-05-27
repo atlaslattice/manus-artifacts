@@ -1,0 +1,54 @@
+{
+  "generated_at": "2026-05-27T21:00:00Z",
+  "generated_by": "copilot-task-agent",
+  "receipts": [
+    {
+      "receipt_id": "RCPT-2026-05-27-001",
+      "artifact_name": "Aetherforge Sheldonbrain Lattice Ingestion Control Board",
+      "source_uri": "drive://aetherforge/sheldonbrain/lattice-ingestion-control-board",
+      "source_hash": "sha256:9f8d2cba61a4eaf8ce8f3d53eec8fdfab2645f252f5f2181f6f1604f224f3b93",
+      "captured_at": "2026-05-27T20:00:00Z",
+      "captured_by": "atlaslattice"
+    },
+    {
+      "receipt_id": "RCPT-2026-05-27-002",
+      "artifact_name": "Mission Control 12x12x12 Implementation Hub",
+      "source_uri": "drive://children-of-the-swarm/mission-control-12x12x12",
+      "source_hash": "sha256:7d808c40430f5765530f761d4ab7b2f15195f39b3f5cb67d9666f1cb665f68be",
+      "captured_at": "2026-05-27T20:05:00Z",
+      "captured_by": "atlaslattice"
+    },
+    {
+      "receipt_id": "RCPT-2026-05-27-003",
+      "artifact_name": "Task Matrix Tracker (29 columns)",
+      "source_uri": "drive://children-of-the-swarm/task-matrix-tracker",
+      "source_hash": "sha256:de16fdc0a5939803ca0d72d5f6e85ae9f71399ac0ea7b6265427e954b8ce6c96",
+      "captured_at": "2026-05-27T20:07:00Z",
+      "captured_by": "atlaslattice"
+    },
+    {
+      "receipt_id": "RCPT-2026-05-27-004",
+      "artifact_name": "KG Source Inventory Pass 1",
+      "source_uri": "drive://aetherforge/kg-source-inventory-pass1",
+      "source_hash": "sha256:97a27f8d0c13a05f2da4bc38b1d56f3c69384e250f2af4db18be0ccb95aaae90",
+      "captured_at": "2026-05-27T20:10:00Z",
+      "captured_by": "atlaslattice"
+    },
+    {
+      "receipt_id": "RCPT-2026-05-27-005",
+      "artifact_name": "Dream Compression Delta",
+      "source_uri": "drive://aetherforge/dream-compression-delta",
+      "source_hash": "sha256:37d564541f16665beea74ec7b1f2a37e72f72139f27848fcc22cc5a8d7f0b31c",
+      "captured_at": "2026-05-27T20:12:00Z",
+      "captured_by": "atlaslattice"
+    },
+    {
+      "receipt_id": "RCPT-2026-05-27-006",
+      "artifact_name": "Source Mapping Sheet",
+      "source_uri": "drive://aetherforge/source-mapping-sheet",
+      "source_hash": "sha256:6f87dc6f2f54ebbf09f3cdf3de3ba03d16c111ecef7828909af73f67d9fd35ea",
+      "captured_at": "2026-05-27T20:15:00Z",
+      "captured_by": "atlaslattice"
+    }
+  ]
+}

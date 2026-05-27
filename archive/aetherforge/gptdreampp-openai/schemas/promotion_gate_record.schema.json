@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atlaslattice.local/schemas/gptdreampp-openai/promotion_gate_record.schema.json",
+  "title": "GPTDream++ Drive to GitHub Promotion Gate Record",
+  "description": "CANDIDATE ONLY — NON CANON. Required gate fields and canon adjudication constraints.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record_id",
+    "artifact_class",
+    "source_uri",
+    "source_hash",
+    "receipt",
+    "provenance",
+    "canon_status",
+    "reviewer",
+    "ratification_event",
+    "github_target_path",
+    "required_validations",
+    "completed_validations"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "pattern": "^PG-[A-Z0-9][A-Z0-9_-]*$"
+    },
+    "artifact_class": {
+      "enum": ["dream", "play", "work"]
+    },
+    "source_uri": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_hash": {
+      "type": "string",
+      "minLength": 1
+    },
+    "receipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["receipt_id", "captured_at", "captured_by", "receipt_uri"],
+      "properties": {
+        "receipt_id": {"type": "string", "minLength": 1},
+        "captured_at": {"type": "string", "format": "date-time"},
+        "captured_by": {"type": "string", "minLength": 1},
+        "receipt_uri": {"type": "string", "minLength": 1}
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["lineage", "extraction_method", "authority_notes"],
+      "properties": {
+        "lineage": {"type": "string", "minLength": 1},
+        "extraction_method": {"type": "string", "minLength": 1},
+        "authority_notes": {"type": "string", "minLength": 1}
+      }
+    },
+    "canon_status": {
+      "enum": ["NOT_CANON", "CANDIDATE", "RATIFIED_CANON"]
+    },
+    "reviewer": {
+      "type": ["string", "null"]
+    },
+    "ratification_event": {
+      "type": ["string", "null"]
+    },
+    "github_target_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "required_validations": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "minItems": 1
+    },
+    "completed_validations": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    },
+    "bullshit_olympics_review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reviewed_at", "notes"],
+      "properties": {
+        "status": {"enum": ["PENDING", "PASS", "FAIL"]},
+        "reviewed_at": {"type": ["string", "null"], "format": "date-time"},
+        "notes": {"type": "string"}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "canon_status": {"const": "RATIFIED_CANON"}
+        },
+        "required": ["canon_status"]
+      },
+      "then": {
+        "properties": {
+          "reviewer": {
+            "type": "string",
+            "minLength": 1
+          },
+          "ratification_event": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ]
+}

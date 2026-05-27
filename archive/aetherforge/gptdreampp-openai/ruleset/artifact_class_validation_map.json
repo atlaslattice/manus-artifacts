@@ -1,0 +1,25 @@
+{
+  "dream": [
+    "non_canon_default",
+    "receipt_present",
+    "source_hash_present",
+    "provenance_lineage_present",
+    "delta_template_attached"
+  ],
+  "play": [
+    "non_canon_default",
+    "receipt_present",
+    "source_hash_present",
+    "provenance_lineage_present",
+    "source_mapping_attached",
+    "bullshit_olympics_pass"
+  ],
+  "work": [
+    "non_canon_default",
+    "receipt_present",
+    "source_hash_present",
+    "provenance_lineage_present",
+    "kg_mapping_attached",
+    "bullshit_olympics_pass"
+  ]
+}
