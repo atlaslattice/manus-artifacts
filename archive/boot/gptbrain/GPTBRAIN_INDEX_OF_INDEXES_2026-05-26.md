@@ -47,6 +47,7 @@ PURPOSE: provide one high-signal routing page for GPTBrain and adjacent Krakoa h
 
 - `archive/boot/gptbrain/REM8_DREAM_PROTOCOL.md`
 - `archive/boot/gptbrain/WAKE_REPORT_TEMPLATE.md`
+- `archive/boot/gptbrain/agents/TIDELOCKBrain/TIDELOCKBRAIN_REM_INDEX_2026-05-27.md`
 
 ## Execution ledger
 

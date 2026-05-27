@@ -19,6 +19,7 @@ PURPOSE: quick directory routing for archive and adjacent surfaces
 - Main archive: `/tmp/workspace/atlaslattice/manus-artifacts/archive/`
 - Historical snapshots: `/tmp/workspace/atlaslattice/manus-artifacts/archives/`
 - GPTBrain boot/governance lane: `/tmp/workspace/atlaslattice/manus-artifacts/archive/boot/gptbrain/`
+- TIDELOCK REM horizon index: `/tmp/workspace/atlaslattice/manus-artifacts/archive/boot/gptbrain/agents/TIDELOCKBrain/TIDELOCKBRAIN_REM_INDEX_2026-05-27.md`
 - AtlasBrain evidence lane: `/tmp/workspace/atlaslattice/manus-artifacts/archive/boot/atlasbrain/`
 - GPTDream++ specs: `/tmp/workspace/atlaslattice/manus-artifacts/archive/spec/gptdream/`
 - Research lane: `/tmp/workspace/atlaslattice/manus-artifacts/research/`
@@ -30,4 +31,3 @@ PURPOSE: quick directory routing for archive and adjacent surfaces
 - Aetherforge game world: `/tmp/workspace/atlaslattice/manus-artifacts/projects/aetherforge-game-world/`
 - Module registry: `/tmp/workspace/atlaslattice/manus-artifacts/AETHERFORGE_MODULE_REGISTRY_v0.1.md`
 - Top-100 quest ledger: `/tmp/workspace/atlaslattice/manus-artifacts/projects/aetherforge-game-world/AETHERFORGE_TOP100_QUEST_LEDGER_v0.1.md`
-
