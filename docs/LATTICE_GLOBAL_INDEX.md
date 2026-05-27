@@ -1,6 +1,6 @@
 # Lattice Global Index
 
-Generated at: `2026-05-27T22:06:46+00:00`
+Generated at: `2026-05-27T22:22:57+00:00`
 
 ## Domain Summary
 
@@ -8,7 +8,6 @@ Generated at: `2026-05-27T22:06:46+00:00`
 |---|---:|
 | `(root)` | 8 |
 | `.github` | 5 |
-| `.pytest_cache` | 1 |
 | `about` | 1 |
 | `aluminum-os` | 22 |
 | `aluminum-os-core` | 1 |
@@ -43,9 +42,6 @@ Generated at: `2026-05-27T22:06:46+00:00`
 - `.github/ISSUE_TEMPLATE/bug_report.md`
 - `.github/ISSUE_TEMPLATE/feature_request.md`
 - `.github/PULL_REQUEST_TEMPLATE.md`
-
-### .pytest_cache
-- `.pytest_cache/README.md`
 
 ### about
 - `about/david-sheldon.md`
