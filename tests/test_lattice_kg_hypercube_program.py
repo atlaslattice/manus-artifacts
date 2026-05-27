@@ -70,3 +70,53 @@ def test_loop2_receipt_exists_with_boundary() -> None:
     assert "STATUS: CANDIDATE EXECUTION RECEIPT — NOT CANON" in text
     assert "LOOP: 2" in text
     assert "Next safest action" in text
+
+
+def test_gptdreampp_openai_fixtures_exist_for_quality_gate_lane() -> None:
+    fixture_dir = ROOT / "fixtures/gptdreampp_openai"
+    expected = {
+        "artifact_contract_records.valid.candidate.json",
+        "notion_cargo_queue.valid.candidate.json",
+        "bullshit_olympics_review.valid.candidate.json",
+    }
+    observed = {p.name for p in fixture_dir.glob("*.json")}
+    assert observed == expected
+
+
+def test_gptdreampp_artifact_fixture_preserves_candidate_boundary() -> None:
+    data = _read_json(ROOT / "fixtures/gptdreampp_openai/artifact_contract_records.valid.candidate.json")
+    assert data["status"] == "CANDIDATE_ONLY"
+    assert data["canon_status"] == "NOT_CANON"
+    assert data["deployment_status"] == "NOT_DEPLOYABLE"
+    assert data["authority_status"] == "NONE"
+    assert data["records"]
+    row = data["records"][0]
+    required = {
+        "source_pointer",
+        "lineage_parent_ids",
+        "content_hash_sha256",
+        "hash_status",
+        "claim_class",
+        "review_state",
+        "promotion_eligibility",
+        "tests_required",
+        "tests_run",
+        "blockers",
+        "next_safest_action",
+    }
+    assert required <= set(row)
+    assert row["promotion_eligibility"] != "ratified"
+
+
+def test_gptdreampp_bullshit_olympics_fixture_has_required_detectors() -> None:
+    data = _read_json(ROOT / "fixtures/gptdreampp_openai/bullshit_olympics_review.valid.candidate.json")
+    expected = {
+        "overclaim_detector",
+        "false_authority_detector",
+        "canon_drift_detector",
+        "contradiction_link_completeness",
+        "source_to_claim_traceability",
+    }
+    observed = {row["check_id"] for row in data["checks"]}
+    assert observed == expected
+    assert data["promotion_outcome"] == "candidate_only"

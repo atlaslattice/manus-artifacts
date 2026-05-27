@@ -23,6 +23,12 @@ GitHub-first staging lane for GPTDream++ ingestion coordination, provenance-firs
 - [Aetherforge Sheldonbrain Lattice Ingestion Control Board](./AETHERFORGE_SHELDONBRAIN_LATTICE_INGESTION_CONTROL_BOARD_2026-05-27.md)
 - [GPTDream++ Ingestion Artifact Contract v0.1](./GPTDREAMPP_INGESTION_ARTIFACT_CONTRACT_v0.1.md)
 
+## Machine-readable fixture set
+
+- [`fixtures/gptdreampp_openai/artifact_contract_records.valid.candidate.json`](../../../fixtures/gptdreampp_openai/artifact_contract_records.valid.candidate.json)
+- [`fixtures/gptdreampp_openai/notion_cargo_queue.valid.candidate.json`](../../../fixtures/gptdreampp_openai/notion_cargo_queue.valid.candidate.json)
+- [`fixtures/gptdreampp_openai/bullshit_olympics_review.valid.candidate.json`](../../../fixtures/gptdreampp_openai/bullshit_olympics_review.valid.candidate.json)
+
 ## Required receipt policy
 
 Every staged artifact must include or link:

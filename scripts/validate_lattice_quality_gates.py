@@ -11,6 +11,11 @@ from pathlib import Path
 
 EXCLUDE_PARTS = {".git", ".pytest_cache", "__pycache__"}
 EXCLUDE_PATHS = {"archive/knowledge_graph/lattice_kg/v0_5/lattice_global_index.v0.1.json"}
+GPTDREAMPP_FIXTURE_PATHS = {
+    "fixtures/gptdreampp_openai/artifact_contract_records.valid.candidate.json",
+    "fixtures/gptdreampp_openai/notion_cargo_queue.valid.candidate.json",
+    "fixtures/gptdreampp_openai/bullshit_olympics_review.valid.candidate.json",
+}
 
 
 def load_json(path: Path) -> dict:
@@ -94,6 +99,88 @@ def validate_index(repo_root: Path, index_path: Path, max_age_days: int) -> list
             continue
         if record["artifact_id"] not in index_by_id:
             errors.append(f"retrieval check failed: artifact_id lookup missing for {required}")
+
+    errors.extend(validate_gptdreampp_staging_fixtures(repo_root))
+
+    return errors
+
+
+def validate_gptdreampp_staging_fixtures(repo_root: Path) -> list[str]:
+    errors: list[str] = []
+    for rel in sorted(GPTDREAMPP_FIXTURE_PATHS):
+        if not (repo_root / rel).exists():
+            errors.append(f"fixture check failed: required GPTDream++ fixture missing: {rel}")
+
+    if errors:
+        return errors
+
+    artifact_fixture = load_json(
+        repo_root / "fixtures/gptdreampp_openai/artifact_contract_records.valid.candidate.json"
+    )
+    record_required = {
+        "artifact_id",
+        "artifact_path",
+        "source_pointer",
+        "lineage_parent_ids",
+        "provenance_receipt_path",
+        "content_hash_sha256",
+        "hash_status",
+        "claim_class",
+        "review_state",
+        "promotion_eligibility",
+        "contamination_flags",
+        "contradiction_links",
+        "tests_required",
+        "tests_run",
+        "blockers",
+        "next_safest_action",
+    }
+    records = artifact_fixture.get("records", [])
+    if not records:
+        errors.append("fixture check failed: artifact contract fixture has no records")
+    else:
+        for idx, record in enumerate(records):
+            missing = sorted(record_required - set(record))
+            if missing:
+                errors.append(
+                    f"fixture check failed: artifact contract record {idx} missing required fields: {missing}"
+                )
+            if record.get("promotion_eligibility") == "ratified":
+                errors.append(
+                    f"fixture check failed: artifact contract record {idx} cannot be ratified in candidate fixture"
+                )
+
+    notion_fixture = load_json(repo_root / "fixtures/gptdreampp_openai/notion_cargo_queue.valid.candidate.json")
+    notion_queue = notion_fixture.get("queue", [])
+    if not notion_queue:
+        errors.append("fixture check failed: notion cargo queue fixture has no queue rows")
+    else:
+        blocked_rows = [row for row in notion_queue if row.get("blocked") is True]
+        if not blocked_rows:
+            errors.append("fixture check failed: notion cargo queue fixture must include at least one blocked row")
+        for idx, row in enumerate(notion_queue):
+            if row.get("blocked") is True and row.get("route") != "intake":
+                errors.append(
+                    f"fixture check failed: notion cargo queue row {idx} blocked entries must route to intake"
+                )
+
+    review_fixture = load_json(
+        repo_root / "fixtures/gptdreampp_openai/bullshit_olympics_review.valid.candidate.json"
+    )
+    required_checks = {
+        "overclaim_detector",
+        "false_authority_detector",
+        "canon_drift_detector",
+        "contradiction_link_completeness",
+        "source_to_claim_traceability",
+    }
+    checks = review_fixture.get("checks", [])
+    observed_checks = {row.get("check_id") for row in checks}
+    missing_checks = sorted(required_checks - observed_checks)
+    if missing_checks:
+        errors.append(f"fixture check failed: bullshit olympics fixture missing checks: {missing_checks}")
+    if review_fixture.get("promotion_outcome") == "ratified":
+        errors.append("fixture check failed: bullshit olympics fixture cannot declare ratified outcome")
 
     return errors
 

@@ -8,6 +8,7 @@ on:
       - 'scripts/build_lattice_global_index.py'
       - 'scripts/validate_lattice_quality_gates.py'
       - 'tests/test_lattice_kg_hypercube_program.py'
+      - 'fixtures/gptdreampp_openai/**'
       - '.github/workflows/lattice-kg-quality-gates.yml'
   pull_request:
     paths:
@@ -16,6 +17,7 @@ on:
       - 'scripts/build_lattice_global_index.py'
       - 'scripts/validate_lattice_quality_gates.py'
       - 'tests/test_lattice_kg_hypercube_program.py'
+      - 'fixtures/gptdreampp_openai/**'
       - '.github/workflows/lattice-kg-quality-gates.yml'
   workflow_dispatch:
 
