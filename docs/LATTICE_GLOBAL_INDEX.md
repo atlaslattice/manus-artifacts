@@ -1,6 +1,6 @@
 # Lattice Global Index
 
-Generated at: `2026-05-27T21:10:23+00:00`
+Generated at: `2026-05-27T21:51:00+00:00`
 
 ## Domain Summary
 
@@ -8,11 +8,10 @@ Generated at: `2026-05-27T21:10:23+00:00`
 |---|---:|
 | `(root)` | 8 |
 | `.github` | 5 |
-| `.pytest_cache` | 1 |
 | `about` | 1 |
 | `aluminum-os` | 22 |
 | `aluminum-os-core` | 1 |
-| `archive` | 168 |
+| `archive` | 167 |
 | `archives` | 1 |
 | `bazinga` | 1 |
 | `codebases` | 57 |
@@ -44,9 +43,6 @@ Generated at: `2026-05-27T21:10:23+00:00`
 - `.github/ISSUE_TEMPLATE/feature_request.md`
 - `.github/PULL_REQUEST_TEMPLATE.md`
 
-### .pytest_cache
-- `.pytest_cache/README.md`
-
 ### about
 - `about/david-sheldon.md`
 
@@ -77,7 +73,7 @@ Generated at: `2026-05-27T21:10:23+00:00`
 - `archive/boot/COUNCIL_BRAIN_FULL_SYNTHESIS_2026-05-09.md`
 - `archive/boot/COUNCIL_BRAIN_INDEX.md`
 - `archive/boot/agents/TUCKER_GPT_GEMINI_DEFENSE_INTERFACE_SPEC_2026-05-09.md`
-- ... 158 more
+- ... 157 more
 
 ### archives
 - `archives/janus-checkpoints/latest-checkpoint.md`
