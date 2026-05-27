@@ -4,6 +4,9 @@ This repository contains research, health data, and system artifacts generated a
 
 ## Table of Contents
 
+## Start Here
+- **[Start Here](./START_HERE.md)** — Fast onboarding path with role-based navigation.
+
 ### Core Systems
 - **[Aluminum OS](./aluminum-os/)** — Constitutional substrate for regenerative computing.
   - [v4.0 Unified Field](./aluminum-os/v4.0-unified-field.md) (Canonical)
@@ -22,6 +25,7 @@ This repository contains research, health data, and system artifacts generated a
 - **[Aetherforge Council Taskboard](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — Top-10 council execution board.
 - **[Aetherforge 144-Task Hypercube Campaign](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — 12 waves of 12 tasks for public + world-class execution.
 - **[Aetherforge Wave 1 Foundation Pack](./projects/aetherforge-wave1-foundation-public-readiness-2026-05-27.md)** — Public-readiness rubric, policy, glossary, KPIs, and launch cadence.
+- **[Aetherforge Wave 2 IA & Navigation Pack](./projects/aetherforge-wave2-information-architecture-navigation-2026-05-27.md)** — Topology audit, domain indexes, start-here path, and repo maps.
 - **[Aetherforge Game World (Candidate)](./projects/aetherforge-game-world-omnispec-archive-bowl-2026-05-26.md)** — Playable quest map, Omnispec candidate boundary, and Archive Bowl roadmap.
 - **[Council-Seat Quickstart (Candidate)](./projects/COUNCIL_SEAT_QUICKSTART_2026-05-26.md)** — Onboarding checklist for new council seats and Children of the Swarm brain lanes.
 - **[GPTDream++ OpenAI Staging Lane (Candidate)](./archive/aetherforge/gptdreampp-openai/README.md)** — Provenance-first package skeleton for public staging.

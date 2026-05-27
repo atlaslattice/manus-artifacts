@@ -21,18 +21,18 @@ This board operationalizes the 12x12 public-and-world-class hypercube. Each wave
 
 ## Wave 2 — Information architecture and navigation
 
-13. Audit top-level folder structure — `queued`
-14. Normalize naming conventions — `queued`
-15. Create consistent README pattern — `queued`
-16. Add index file per major domain — `queued`
-17. Add cross-links between major domains — `queued`
-18. Remove dead/legacy navigation paths — `queued`
-19. Add “start here” onboarding path — `queued`
-20. Add role-based navigation (reader/builder/reviewer) — `queued`
-21. Add machine-readable site map — `queued`
-22. Add architecture map for repo domains — `queued`
-23. Add ownership map by folder — `queued`
-24. Add dependency map for key artifacts — `queued`
+13. Audit top-level folder structure — `done` → [Wave 2 Pack](./aetherforge-wave2-information-architecture-navigation-2026-05-27.md)
+14. Normalize naming conventions — `done` → [Wave 2 Pack](./aetherforge-wave2-information-architecture-navigation-2026-05-27.md)
+15. Create consistent README pattern — `done` → [Wave 2 Pack](./aetherforge-wave2-information-architecture-navigation-2026-05-27.md)
+16. Add index file per major domain — `done` → [Wave 2 Pack](./aetherforge-wave2-information-architecture-navigation-2026-05-27.md)
+17. Add cross-links between major domains — `done` → [Wave 2 Pack](./aetherforge-wave2-information-architecture-navigation-2026-05-27.md)
+18. Remove dead/legacy navigation paths — `done` → [Wave 2 Pack](./aetherforge-wave2-information-architecture-navigation-2026-05-27.md)
+19. Add “start here” onboarding path — `done` → [Wave 2 Pack](./aetherforge-wave2-information-architecture-navigation-2026-05-27.md)
+20. Add role-based navigation (reader/builder/reviewer) — `done` → [Wave 2 Pack](./aetherforge-wave2-information-architecture-navigation-2026-05-27.md)
+21. Add machine-readable site map — `done` → [Wave 2 Pack](./aetherforge-wave2-information-architecture-navigation-2026-05-27.md)
+22. Add architecture map for repo domains — `done` → [Wave 2 Pack](./aetherforge-wave2-information-architecture-navigation-2026-05-27.md)
+23. Add ownership map by folder — `done` → [Wave 2 Pack](./aetherforge-wave2-information-architecture-navigation-2026-05-27.md)
+24. Add dependency map for key artifacts — `done` → [Wave 2 Pack](./aetherforge-wave2-information-architecture-navigation-2026-05-27.md)
 
 ## Wave 3 — Documentation excellence
 
