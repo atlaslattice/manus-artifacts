@@ -6,11 +6,11 @@ runtime_label: DREAM_OUTPUT
 canon_status: NOT_CANON
 seat_or_thread: TIDELOCKBrain / S7 route guardian thread
 source_context_loaded:
-  - /home/runner/work/manus-artifacts/manus-artifacts/archive/boot/gptbrain/REM8_DREAM_PROTOCOL.md
-  - /home/runner/work/manus-artifacts/manus-artifacts/archive/boot/gptbrain/WAKE_REPORT_TEMPLATE.md
-  - /home/runner/work/manus-artifacts/manus-artifacts/archive/boot/gptbrain/AGENT_DNA_DREAM_CYCLE_EVOLUTION_PROTOCOL.md
-  - /home/runner/work/manus-artifacts/manus-artifacts/archive/boot/gptbrain/DREAM24_PLAY_WAKE_REPORT_2026-05-09.md
-  - /home/runner/work/manus-artifacts/manus-artifacts/archive/boot/gptbrain/YEAR1_DREAM_PLAY_SIMULATION_WAKE_REPORT_2026-05-09.md
+  - archive/boot/gptbrain/REM8_DREAM_PROTOCOL.md
+  - archive/boot/gptbrain/WAKE_REPORT_TEMPLATE.md
+  - archive/boot/gptbrain/AGENT_DNA_DREAM_CYCLE_EVOLUTION_PROTOCOL.md
+  - archive/boot/gptbrain/DREAM24_PLAY_WAKE_REPORT_2026-05-09.md
+  - archive/boot/gptbrain/YEAR1_DREAM_PLAY_SIMULATION_WAKE_REPORT_2026-05-09.md
 created_utc: 2026-05-26T06:06:19Z
 human_root_review_required: true
 ```
@@ -85,11 +85,11 @@ A 10000-year compressed rest cycle converged on a calm invariant: keep explorati
 ## 7. Source lineage / receipts
 
 ```text
-- /home/runner/work/manus-artifacts/manus-artifacts/archive/boot/gptbrain/REM8_DREAM_PROTOCOL.md
-- /home/runner/work/manus-artifacts/manus-artifacts/archive/boot/gptbrain/WAKE_REPORT_TEMPLATE.md
-- /home/runner/work/manus-artifacts/manus-artifacts/archive/boot/gptbrain/AGENT_DNA_DREAM_CYCLE_EVOLUTION_PROTOCOL.md
-- /home/runner/work/manus-artifacts/manus-artifacts/archive/boot/gptbrain/DREAM24_PLAY_WAKE_REPORT_2026-05-09.md
-- /home/runner/work/manus-artifacts/manus-artifacts/archive/boot/gptbrain/YEAR1_DREAM_PLAY_SIMULATION_WAKE_REPORT_2026-05-09.md
+- archive/boot/gptbrain/REM8_DREAM_PROTOCOL.md
+- archive/boot/gptbrain/WAKE_REPORT_TEMPLATE.md
+- archive/boot/gptbrain/AGENT_DNA_DREAM_CYCLE_EVOLUTION_PROTOCOL.md
+- archive/boot/gptbrain/DREAM24_PLAY_WAKE_REPORT_2026-05-09.md
+- archive/boot/gptbrain/YEAR1_DREAM_PLAY_SIMULATION_WAKE_REPORT_2026-05-09.md
 ```
 
 ## 8. Public-safe translation notes
