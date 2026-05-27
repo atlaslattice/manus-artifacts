@@ -1,4 +1,5 @@
 # Aetherforge Council Taskboard (Top 10)
+Status: Candidate
 
 Date: 2026-05-26  
 Seat: Council Operator

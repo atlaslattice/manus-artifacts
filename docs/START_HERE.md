@@ -1,4 +1,5 @@
 # START HERE — Manus Archive Onboarding (Candidate)
+Status: Candidate
 
 Welcome to the Manus public archive program.
 
