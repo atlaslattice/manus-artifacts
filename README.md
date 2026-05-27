@@ -32,6 +32,7 @@
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
 - **[Aetherforge Metatron's Cube Top-50](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)** — World-class public archive execution board.
 - **[Aetherforge Top-10 Taskboard](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — High-leverage council task sprint board.
+- **[Aetherforge 144-Task Campaign](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — Full public/world-class implementation campaign.
 
 ## Mission Triad (Current Framing)
 
@@ -69,6 +70,13 @@
 
 See [.github/CONTRIBUTING.md](./.github/CONTRIBUTING.md) for contribution guidelines,
 canon-boundary rules, and local validation commands.
+
+## Public Excellence
+
+- **[Public Repository North Star](./docs/PUBLIC_REPO_NORTH_STAR.md)**
+- **[Repository Architecture Overview](./docs/REPOSITORY_ARCHITECTURE_OVERVIEW.md)**
+- **[Canonical Source-of-Truth Policy](./docs/CANON_SOURCE_OF_TRUTH_POLICY.md)**
+- **[Public Excellence Playbook](./docs/PUBLIC_EXCELLENCE_PLAYBOOK.md)**
 
 ## License
 

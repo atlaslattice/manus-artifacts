@@ -1,0 +1,17 @@
+# Default owners
+* @atlaslattice
+
+# Governance and contribution policy
+/.github/ @atlaslattice
+/council/ @atlaslattice
+/council-reviews/ @atlaslattice
+
+# Core architecture and systems
+/aluminum-os/ @atlaslattice
+/sheldonbrain/ @atlaslattice
+/bazinga/ @atlaslattice
+
+# Archive and project execution
+/archive/ @atlaslattice
+/projects/ @atlaslattice
+/docs/ @atlaslattice
