@@ -6,18 +6,18 @@ This board operationalizes the 12x12 public-and-world-class hypercube. Each wave
 
 ## Wave 1 — Foundation and public-readiness
 
-1. Define public-readiness rubric — `queued`
-2. Define “world-class” quality bar — `queued`
-3. Create repo-wide visibility policy — `queued`
-4. Classify all folders by audience — `queued`
-5. Mark sensitive vs public-safe artifacts — `queued`
-6. Add release-readiness checklist — `queued`
-7. Add canonical terminology glossary — `queued`
-8. Add contributor mission statement — `queued`
-9. Add repository north-star KPIs — `queued`
-10. Add operating principles page — `queued`
-11. Define publication cadence — `queued`
-12. Create public launch roadmap — `queued`
+1. Define public-readiness rubric — `done` → [Wave 1 Pack](./aetherforge-wave1-foundation-public-readiness-2026-05-27.md)
+2. Define “world-class” quality bar — `done` → [Wave 1 Pack](./aetherforge-wave1-foundation-public-readiness-2026-05-27.md)
+3. Create repo-wide visibility policy — `done` → [Wave 1 Pack](./aetherforge-wave1-foundation-public-readiness-2026-05-27.md)
+4. Classify all folders by audience — `done` → [Wave 1 Pack](./aetherforge-wave1-foundation-public-readiness-2026-05-27.md)
+5. Mark sensitive vs public-safe artifacts — `done` → [Wave 1 Pack](./aetherforge-wave1-foundation-public-readiness-2026-05-27.md)
+6. Add release-readiness checklist — `done` → [Wave 1 Pack](./aetherforge-wave1-foundation-public-readiness-2026-05-27.md)
+7. Add canonical terminology glossary — `done` → [Wave 1 Pack](./aetherforge-wave1-foundation-public-readiness-2026-05-27.md)
+8. Add contributor mission statement — `done` → [Wave 1 Pack](./aetherforge-wave1-foundation-public-readiness-2026-05-27.md)
+9. Add repository north-star KPIs — `done` → [Wave 1 Pack](./aetherforge-wave1-foundation-public-readiness-2026-05-27.md)
+10. Add operating principles page — `done` → [Wave 1 Pack](./aetherforge-wave1-foundation-public-readiness-2026-05-27.md)
+11. Define publication cadence — `done` → [Wave 1 Pack](./aetherforge-wave1-foundation-public-readiness-2026-05-27.md)
+12. Create public launch roadmap — `done` → [Wave 1 Pack](./aetherforge-wave1-foundation-public-readiness-2026-05-27.md)
 
 ## Wave 2 — Information architecture and navigation
 
