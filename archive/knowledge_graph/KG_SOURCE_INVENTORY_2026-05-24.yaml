@@ -1,0 +1,171 @@
+status: INVENTORY_SEED_CANDIDATE_NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+date: '2026-05-24'
+purpose: Initial source inventory seed for the source-grounded knowledge graph.
+
+inventory_notes:
+  - This is a seed inventory, not a complete crawl.
+  - Entries may be user-reported, repo-visible, or known-from-current-session.
+  - raw_export_status must be upgraded only after raw export and hash receipts exist.
+  - source presence does not imply canon.
+
+records:
+  - source_id: kg-src-gangaseek-namespace-ratification-packet
+    title: GangaSeek Namespace Ratification Packet
+    surface: Drive
+    url_or_path: unknown_drive_item
+    file_type: unknown
+    raw_export_status: unavailable
+    sha256_status: unavailable
+    source_class: candidate_governance_packet
+    related_lane: GangaSeek
+    review_priority: high
+    mirrored_to_github: unknown
+    missing_receipts:
+      - drive_file_id
+      - raw_export
+      - sha256
+
+  - source_id: kg-src-gangaseek-inv-clm-catalog
+    title: GangaSeek INV/CLM Catalog
+    surface: Drive
+    url_or_path: unknown_drive_item
+    file_type: unknown
+    raw_export_status: unavailable
+    sha256_status: unavailable
+    source_class: invariant_catalog
+    related_lane: GangaSeek
+    review_priority: high
+    mirrored_to_github: unknown
+    missing_receipts:
+      - drive_file_id
+      - raw_export
+      - sha256
+
+  - source_id: kg-src-gangaseek-document-template
+    title: GangaSeek Document Template
+    surface: Drive
+    url_or_path: unknown_drive_item
+    file_type: unknown
+    raw_export_status: unavailable
+    sha256_status: unavailable
+    source_class: template
+    related_lane: GangaSeek
+    review_priority: medium
+    mirrored_to_github: unknown
+    missing_receipts:
+      - drive_file_id
+      - raw_export
+      - sha256
+
+  - source_id: kg-src-copilot-chat-raw-transcript-not-canon
+    title: Copilot Chat.md RAW TRANSCRIPT NOT CANON.md
+    surface: Drive
+    url_or_path: unknown_drive_item
+    file_type: markdown
+    raw_export_status: unavailable
+    sha256_status: unavailable
+    source_class: raw_or_near_raw_transcript
+    related_lane: CopilotBrain
+    review_priority: high
+    mirrored_to_github: unknown
+    missing_receipts:
+      - drive_file_id
+      - raw_export
+      - sha256
+
+  - source_id: kg-src-gemini-council-input-files
+    title: Gemini council input files
+    surface: Drive
+    url_or_path: unknown_drive_collection
+    file_type: mixed
+    raw_export_status: unavailable
+    sha256_status: unavailable
+    source_class: council_input
+    related_lane: GeminiBrain
+    review_priority: high
+    mirrored_to_github: unknown
+    missing_receipts:
+      - file_manifest
+      - raw_exports
+      - sha256
+
+  - source_id: kg-src-orcs-copilot-synthesis-v1-2
+    title: ORCS Copilot Synthesis v1.2
+    surface: Drive
+    url_or_path: unknown_drive_item
+    file_type: unknown
+    raw_export_status: unavailable
+    sha256_status: unavailable
+    source_class: synthesis_candidate
+    related_lane: ORCS
+    review_priority: high
+    mirrored_to_github: unknown
+    missing_receipts:
+      - drive_file_id
+      - raw_export
+      - sha256
+
+  - source_id: kg-src-gangaseek-invariant-pdfs
+    title: GangaSeek invariant PDFs
+    surface: Drive
+    url_or_path: unknown_drive_collection
+    file_type: pdf
+    raw_export_status: unavailable
+    sha256_status: unavailable
+    source_class: invariant_packet
+    related_lane: GangaSeek
+    review_priority: high
+    mirrored_to_github: unknown
+    missing_receipts:
+      - file_manifest
+      - pdf_exports
+      - sha256
+
+  - source_id: kg-src-rootglass-pr-61
+    title: RootglassBrain PR #61
+    surface: GitHub
+    url_or_path: https://github.com/atlaslattice/manus-artifacts/pull/61
+    file_type: pull_request
+    raw_export_status: summary_only
+    sha256_status: unavailable
+    source_class: candidate_memory_palace_pr
+    related_lane: RootglassBrain
+    review_priority: medium
+    mirrored_to_github: true
+    missing_receipts:
+      - raw_thread_export
+      - sha256
+
+  - source_id: kg-src-atlasbrain-pr-57
+    title: AtlasBrain PR #57
+    surface: GitHub
+    url_or_path: https://github.com/atlaslattice/manus-artifacts/pull/57
+    file_type: pull_request
+    raw_export_status: summary_only
+    sha256_status: unavailable
+    source_class: evidence_lane_pr
+    related_lane: AtlasBrain
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts:
+      - raw_transcript_artifacts
+      - sha256
+
+  - source_id: kg-src-appendix-i-math-vault
+    title: Appendix I / Math Vault
+    surface: GitHub
+    url_or_path: archive/math/
+    file_type: directory
+    raw_export_status: partial_raw
+    sha256_status: unavailable
+    source_class: math_archive
+    related_lane: MathVault
+    review_priority: medium
+    mirrored_to_github: true
+    missing_receipts:
+      - directory_manifest
+      - hash_manifest
+
+strongest_safe_claim: >
+  This inventory is an initial clipboard for the knowledge graph. It lists likely high-value GitHub, Drive, and Notion-adjacent source artifacts, but does not claim completeness, canon status, or raw fossil-record preservation without source manifests and hashes.
