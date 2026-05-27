@@ -38,6 +38,11 @@ This repository contains research, health data, and system artifacts generated a
 - **[Health](./health/)** — Patient rights and wellness facility research.
 - **[Manus Vault](./manus-vault/)** — Internal session summaries and Noah's Ark protocols.
 
+### Docs & onboarding
+- **[Start Here](./docs/START_HERE.md)** — First-stop orientation for contributors and public readers.
+- **[Archive Index](./docs/ARCHIVE_INDEX.md)** — Directory routing map across archive and adjacent lanes.
+- **[Glossary](./docs/GLOSSARY.md)** — Shared vocabulary for governance, Aetherforge, and GPTDream++ protocols.
+
 ### About
 - **[David Sheldon](./about/david-sheldon.md)** — Visionary and system architect.
 
