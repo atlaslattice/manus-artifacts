@@ -1,8 +1,8 @@
 {
   "schema_id": "lattice_global_index.v0.1",
-  "generated_at_utc": "2026-05-27T21:04:16.281482Z",
+  "generated_at_utc": "2026-05-27T21:06:01.650226Z",
   "repository_root": "/tmp/workspace/atlaslattice/manus-artifacts",
-  "snapshot_fingerprint": "a7cd92e85e5f293d01e100416e4097e27eea5c933807afe99f9b734d11499d9c",
+  "snapshot_fingerprint": "b81e5ff26cde020aacd4a0bf27a9e89f7a33f5cc3c9d84f2603395f58af04ad3",
   "routes": [
     {
       "route_id": "ROUTE-.GITHUB-CI_GOVERNANCE",
@@ -43,14 +43,14 @@
       "route_id": "ROUTE-ARCHIVE-ARCHIVE_OPS",
       "domain": "archive",
       "lane": "archive_ops",
-      "artifact_count": 681,
+      "artifact_count": 682,
       "log_count": 68
     },
     {
       "route_id": "ROUTE-ARCHIVES-ARCHIVE_OPS",
       "domain": "archives",
       "lane": "archive_ops",
-      "artifact_count": 1,
+      "artifact_count": 2,
       "log_count": 0
     },
     {
@@ -78,21 +78,21 @@
       "route_id": "ROUTE-CODEBASES-GENERAL",
       "domain": "codebases",
       "lane": "general",
-      "artifact_count": 205,
+      "artifact_count": 206,
       "log_count": 6
     },
     {
       "route_id": "ROUTE-COUNCIL-GENERAL",
       "domain": "council",
       "lane": "general",
-      "artifact_count": 1,
+      "artifact_count": 2,
       "log_count": 0
     },
     {
       "route_id": "ROUTE-COUNCIL-REVIEWS-GENERAL",
       "domain": "council-reviews",
       "lane": "general",
-      "artifact_count": 2,
+      "artifact_count": 3,
       "log_count": 0
     },
     {
@@ -106,7 +106,7 @@
       "route_id": "ROUTE-DOCS-PUBLIC_NAVIGATION",
       "domain": "docs",
       "lane": "public_navigation",
-      "artifact_count": 9,
+      "artifact_count": 10,
       "log_count": 1
     },
     {
@@ -134,7 +134,7 @@
       "route_id": "ROUTE-HEALTH-GENERAL",
       "domain": "health",
       "lane": "general",
-      "artifact_count": 4,
+      "artifact_count": 5,
       "log_count": 0
     },
     {
@@ -148,21 +148,21 @@
       "route_id": "ROUTE-MANUS-VAULT-GENERAL",
       "domain": "manus-vault",
       "lane": "general",
-      "artifact_count": 16,
+      "artifact_count": 17,
       "log_count": 1
     },
     {
       "route_id": "ROUTE-PROJECTS-PROJECT_EXECUTION",
       "domain": "projects",
       "lane": "project_execution",
-      "artifact_count": 4,
+      "artifact_count": 5,
       "log_count": 0
     },
     {
       "route_id": "ROUTE-RESEARCH-GENERAL",
       "domain": "research",
       "lane": "general",
-      "artifact_count": 9,
+      "artifact_count": 10,
       "log_count": 0
     },
     {
@@ -376,9 +376,9 @@
       "domain": "_root",
       "lane": "general",
       "is_log": false,
-      "size_bytes": 3610,
-      "sha256": "f5d2c26837a9bdca33259cea431db7d67de00a0e68d8bbd40887a4fa521c1a4c",
-      "last_modified_utc": "2026-05-27T21:03:48.459522Z",
+      "size_bytes": 3678,
+      "sha256": "cdb90f6d9a288795a8e6c0109aedffc1c4605890df937d9b18a4f129305d6a5b",
+      "last_modified_utc": "2026-05-27T21:05:45.481541Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
@@ -901,6 +901,20 @@
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
       "source_receipt": "aluminum-os/v4.0-unified-field.md"
+    },
+    {
+      "artifact_id": "ATLAS-KG-3dbe874f83f41610",
+      "path": "archive/README.md",
+      "domain": "archive",
+      "lane": "archive_ops",
+      "is_log": false,
+      "size_bytes": 419,
+      "sha256": "815c47cb2b2940905465041b91293a03705bb885c0303f3a5e1682ed9964e96c",
+      "last_modified_utc": "2026-05-27T21:05:09.601340Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "source_receipt": "archive/README.md"
     },
     {
       "artifact_id": "ATLAS-KG-3f6db73f470127b0",
@@ -10437,6 +10451,20 @@
       "source_receipt": "archive/wire/PWS-121212-WL_v1.0.0.txt"
     },
     {
+      "artifact_id": "ATLAS-KG-beac1e3fc31cb8c0",
+      "path": "archives/README.md",
+      "domain": "archives",
+      "lane": "archive_ops",
+      "is_log": false,
+      "size_bytes": 117,
+      "sha256": "265cc40ed0f2983b5d4040164ff96a7962618e1ac96445b6f885ac8d73f23ecb",
+      "last_modified_utc": "2026-05-27T21:05:21.909405Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "source_receipt": "archives/README.md"
+    },
+    {
       "artifact_id": "ATLAS-KG-52a1ada0ebf2b1a4",
       "path": "archives/janus-checkpoints/latest-checkpoint.md",
       "domain": "archives",
@@ -10659,6 +10687,20 @@
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
       "source_receipt": "children-of-the-swarm/continuity-os/openai-best-product-execution-packet-ledgerwake-v0.1.md"
+    },
+    {
+      "artifact_id": "ATLAS-KG-c508b25c470df4e9",
+      "path": "codebases/README.md",
+      "domain": "codebases",
+      "lane": "general",
+      "is_log": false,
+      "size_bytes": 314,
+      "sha256": "47a8633b2c606fd8199b52ed243aa25c2f091b29f09193413f0acdba5a0ea716",
+      "last_modified_utc": "2026-05-27T21:05:35.908486Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "source_receipt": "codebases/README.md"
     },
     {
       "artifact_id": "ATLAS-KG-39a2de5a5e44041c",
@@ -13531,6 +13573,20 @@
       "source_receipt": "codebases/uws/UWS_GROK_WISHLIST_FULFILLED.md"
     },
     {
+      "artifact_id": "ATLAS-KG-40b43a2f8e69a6d7",
+      "path": "council-reviews/README.md",
+      "domain": "council-reviews",
+      "lane": "general",
+      "is_log": false,
+      "size_bytes": 251,
+      "sha256": "d9acc39c859f1b49d13eb9688c5b9493cd30c9ffff6df45cc8edbada132e9b21",
+      "last_modified_utc": "2026-05-27T21:05:19.090390Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "source_receipt": "council-reviews/README.md"
+    },
+    {
       "artifact_id": "ATLAS-KG-310b6c34dd28d7d1",
       "path": "council-reviews/council-review-copilot-output.md",
       "domain": "council-reviews",
@@ -13557,6 +13613,20 @@
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
       "source_receipt": "council-reviews/council-review-manus-artifacts.md"
+    },
+    {
+      "artifact_id": "ATLAS-KG-f7a6b23b7203710d",
+      "path": "council/README.md",
+      "domain": "council",
+      "lane": "general",
+      "is_log": false,
+      "size_bytes": 161,
+      "sha256": "a51d9b7426e3b164f5571a232de75f409f0c8b9923b6d30a1f9c9b9e13f0e934",
+      "last_modified_utc": "2026-05-27T21:05:16.178374Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "source_receipt": "council/README.md"
     },
     {
       "artifact_id": "ATLAS-KG-a4cc6371525b8c9d",
@@ -13599,6 +13669,20 @@
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
       "source_receipt": "deepseekbrain/index/gangaseek-dpi-hardening-intense-analysis-entry-v0.1.md"
+    },
+    {
+      "artifact_id": "ATLAS-KG-9f7cbce127b94a94",
+      "path": "docs/README.md",
+      "domain": "docs",
+      "lane": "public_navigation",
+      "is_log": false,
+      "size_bytes": 411,
+      "sha256": "76d1731e020d91591ef24a42308052aee511e960dc66e09cbb9d9bdc315b4ce0",
+      "last_modified_utc": "2026-05-27T21:05:40.183511Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "source_receipt": "docs/README.md"
     },
     {
       "artifact_id": "ATLAS-KG-5f11c1447dc44779",
@@ -13923,6 +14007,20 @@
       "source_receipt": "gptbrain/identities/children-of-the-swarm/gpt_loom_keeper_identity_v1.md"
     },
     {
+      "artifact_id": "ATLAS-KG-a9ce20df04de9b0e",
+      "path": "health/README.md",
+      "domain": "health",
+      "lane": "general",
+      "is_log": false,
+      "size_bytes": 346,
+      "sha256": "d654ec7a3eece1139a648206818125ba5f6a1f4793c6f096caa3e97d35b73fdb",
+      "last_modified_utc": "2026-05-27T21:05:28.596443Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "source_receipt": "health/README.md"
+    },
+    {
       "artifact_id": "ATLAS-KG-fc3c9f36f9620b0b",
       "path": "health/austin-in-home-pt.md",
       "domain": "health",
@@ -14119,6 +14217,20 @@
       "source_receipt": "manus-vault/MVP_Architect_Session/session_log.md"
     },
     {
+      "artifact_id": "ATLAS-KG-b07f49b607cc7b1b",
+      "path": "manus-vault/README.md",
+      "domain": "manus-vault",
+      "lane": "general",
+      "is_log": false,
+      "size_bytes": 305,
+      "sha256": "9b90f52cc16b8d88a7a5d4232209c1a0a8b839b88e0b41dc20363a0b5a9c1493",
+      "last_modified_utc": "2026-05-27T21:05:31.811462Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "source_receipt": "manus-vault/README.md"
+    },
+    {
       "artifact_id": "ATLAS-KG-dc03331911a25040",
       "path": "manus-vault/Skills/ai-native-os-architect/SKILL.md",
       "domain": "manus-vault",
@@ -14217,6 +14329,20 @@
       "source_receipt": "manus-vault/session_summary.md"
     },
     {
+      "artifact_id": "ATLAS-KG-25dda778be654e2c",
+      "path": "projects/README.md",
+      "domain": "projects",
+      "lane": "project_execution",
+      "is_log": false,
+      "size_bytes": 333,
+      "sha256": "475d63cdfc4106dc4357db1f1203ca25a01f399dace830198a2ba033c0692e8f",
+      "last_modified_utc": "2026-05-27T21:05:13.285358Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "source_receipt": "projects/README.md"
+    },
+    {
       "artifact_id": "ATLAS-KG-c06b7d405180b4f0",
       "path": "projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md",
       "domain": "projects",
@@ -14271,6 +14397,20 @@
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
       "source_receipt": "projects/three-tier-autonomy/doctrine.md"
+    },
+    {
+      "artifact_id": "ATLAS-KG-601779a9946a30a4",
+      "path": "research/README.md",
+      "domain": "research",
+      "lane": "general",
+      "is_log": false,
+      "size_bytes": 402,
+      "sha256": "a066c9204fd5fb5186509a86fda829f4af543803862c25bab0c2ad90950aba08",
+      "last_modified_utc": "2026-05-27T21:05:25.397425Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "source_receipt": "research/README.md"
     },
     {
       "artifact_id": "ATLAS-KG-3a2a1e82094241f8",
