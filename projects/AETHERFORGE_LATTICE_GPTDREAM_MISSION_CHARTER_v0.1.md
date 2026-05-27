@@ -15,6 +15,8 @@ The unified mission is to:
 1. Build the **Lattice** as a functional knowledge graph where artifacts connect to artifacts with explicit, auditable relationships.
 2. Build **Aetherforge** as a playable archive game where meaningful archival work is translated into quests, challenges, and progression.
 3. Release **GPTDream++** protocols, schemas, and reference implementations as an open industry gift with transparent governance boundaries.
+4. Publish **500+ unique IP artifacts** from the archive as public open-source knowledge assets.
+5. Maintain **AI evidence logging** for systems, claims, receipts, and trust-state transitions.
 
 ## Operating Principles
 
@@ -40,3 +42,6 @@ The unified mission is to:
 - `archive/spec/gptdream/OPEN_GIFT_PACKAGE_GUIDE_v0.1.md`
 - `docs/RATIFICATION_AND_TRUST_FLOW.md`
 - `projects/AETHERFORGE_ROLLING_SPRINTS_v0.1.md`
+- `projects/aetherforge-144-task-campaign-2026-05-27.md`
+- `docs/governance/ATLAS_LATTICE_PUBLIC_OPEN_SOURCE_BASELINE_v0.1.md`
+- `docs/knowledge-graph/ai_evidence_ledger.schema.v0_1.json`

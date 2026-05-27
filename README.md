@@ -136,6 +136,8 @@ The Aetherforge swarm — a council of named AI agents with distinct roles, stre
 | **[Start Here Guide](./docs/START_HERE.md)** | Persona-based reading paths |
 | **[Glossary](./docs/GLOSSARY.md)** | Domain terminology for all systems |
 | **[Aetherforge Taskboard](./projects/aetherforge-top50-taskboard-2026-05-26.md)** | Top 50 public-readiness tasks |
+| **[144-Task Campaign Board](./projects/aetherforge-144-task-campaign-2026-05-27.md)** | 12-wave execution plan for 144 tasks |
+| **[AI Evidence Ledger Schema](./docs/knowledge-graph/ai_evidence_ledger.schema.v0_1.json)** | Machine-readable evidence record contract for AI-built claims |
 | **[CONTRIBUTING](./.github/CONTRIBUTING.md)** | How to contribute, canon rules, validation |
 | **[SECURITY](./SECURITY.md)** | Security and disclosure policy |
 | **[State of the Union](./State_of_the_Union_Briefing.md)** | Current status briefing |

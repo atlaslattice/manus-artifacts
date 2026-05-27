@@ -31,3 +31,18 @@ Each sprint must:
 - changed artifacts are linked and discoverable
 - relevant checks pass or known pre-existing failures are recorded
 - follow-up sprint items are explicitly queued
+
+
+## 12-Wave Campaign Model
+
+- This sprint artifact now governs a 12-wave campaign (`AL-EXEC-144-001`) with 12 tasks per wave.
+- Wave completion requires: linked artifacts, validation receipts, and TIDELOCK execution logging.
+- Active wave: **Wave 1 — Mission/Governance/Evidence Baseline**.
+
+## Wave 1 Scope
+
+1. Mission and governance baseline lock-in
+2. Taxonomy/registry updates for wave artifacts
+3. AI evidence ledger schema and seed publication
+4. README navigation and discoverability updates
+5. Validation and execution receipts

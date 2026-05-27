@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "artifact_count": 10,
+  "artifact_count": 15,
   "artifacts": [
     {
       "id": "AL-MISSION-001",
@@ -9,10 +9,22 @@
       "status": "CANDIDATE",
       "path": "projects/AETHERFORGE_LATTICE_GPTDREAM_MISSION_CHARTER_v0.1.md",
       "links": [
-        {"relation": "defines", "target_id": "AL-KG-001"},
-        {"relation": "defines", "target_id": "AL-AF-001"},
-        {"relation": "defines", "target_id": "AL-GP-001"},
-        {"relation": "defines", "target_id": "AL-RT-001"}
+        {
+          "relation": "defines",
+          "target_id": "AL-KG-001"
+        },
+        {
+          "relation": "defines",
+          "target_id": "AL-AF-001"
+        },
+        {
+          "relation": "defines",
+          "target_id": "AL-GP-001"
+        },
+        {
+          "relation": "defines",
+          "target_id": "AL-RT-001"
+        }
       ]
     },
     {
@@ -22,7 +34,10 @@
       "status": "CANDIDATE",
       "path": "docs/knowledge-graph/artifact_taxonomy.v0_1.json",
       "links": [
-        {"relation": "referenced_by", "target_id": "AL-KG-002"}
+        {
+          "relation": "referenced_by",
+          "target_id": "AL-KG-002"
+        }
       ]
     },
     {
@@ -32,10 +47,22 @@
       "status": "CANDIDATE",
       "path": "docs/knowledge-graph/artifact_registry.v0_1.json",
       "links": [
-        {"relation": "indexes", "target_id": "AL-MISSION-001"},
-        {"relation": "indexes", "target_id": "AL-AF-001"},
-        {"relation": "indexes", "target_id": "AL-GP-001"},
-        {"relation": "indexes", "target_id": "AL-RT-001"}
+        {
+          "relation": "indexes",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-AF-001"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-GP-001"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-RT-001"
+        }
       ]
     },
     {
@@ -45,7 +72,10 @@
       "status": "CANDIDATE",
       "path": "projects/aetherforge-game-world/AETHERFORGE_GAME_LOOP_SPEC_v0.1.md",
       "links": [
-        {"relation": "implemented_by", "target_id": "AL-EXEC-001"}
+        {
+          "relation": "implemented_by",
+          "target_id": "AL-EXEC-001"
+        }
       ]
     },
     {
@@ -55,7 +85,10 @@
       "status": "CANDIDATE",
       "path": "archive/spec/gptdream/OPEN_GIFT_PACKAGE_GUIDE_v0.1.md",
       "links": [
-        {"relation": "depends_on", "target_id": "AL-GP-002"}
+        {
+          "relation": "depends_on",
+          "target_id": "AL-GP-002"
+        }
       ]
     },
     {
@@ -65,7 +98,10 @@
       "status": "CANDIDATE",
       "path": "archive/spec/gptdream/VAULT_MANIFEST_2026-05-26.md",
       "links": [
-        {"relation": "summarized_by", "target_id": "AL-GP-001"}
+        {
+          "relation": "summarized_by",
+          "target_id": "AL-GP-001"
+        }
       ]
     },
     {
@@ -75,7 +111,10 @@
       "status": "CANDIDATE",
       "path": "docs/RATIFICATION_AND_TRUST_FLOW.md",
       "links": [
-        {"relation": "governs", "target_id": "AL-MISSION-001"}
+        {
+          "relation": "governs",
+          "target_id": "AL-MISSION-001"
+        }
       ]
     },
     {
@@ -85,8 +124,14 @@
       "status": "CANDIDATE",
       "path": "projects/AETHERFORGE_ROLLING_SPRINTS_v0.1.md",
       "links": [
-        {"relation": "prioritizes", "target_id": "AL-KG-001"},
-        {"relation": "prioritizes", "target_id": "AL-KG-002"}
+        {
+          "relation": "prioritizes",
+          "target_id": "AL-KG-001"
+        },
+        {
+          "relation": "prioritizes",
+          "target_id": "AL-KG-002"
+        }
       ]
     },
     {
@@ -96,7 +141,10 @@
       "status": "CANDIDATE",
       "path": ".github/workflows/artifact-graph-checks.yml",
       "links": [
-        {"relation": "runs", "target_id": "AL-CI-002"}
+        {
+          "relation": "runs",
+          "target_id": "AL-CI-002"
+        }
       ]
     },
     {
@@ -106,7 +154,95 @@
       "status": "CANDIDATE",
       "path": ".github/scripts/validate_artifact_graph.py",
       "links": [
-        {"relation": "validates", "target_id": "AL-KG-002"}
+        {
+          "relation": "validates",
+          "target_id": "AL-KG-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-EXEC-144-001",
+      "title": "Aetherforge 144-Task Execution Campaign",
+      "artifact_type": "roadmap",
+      "status": "CANDIDATE",
+      "path": "projects/aetherforge-144-task-campaign-2026-05-27.md",
+      "links": [
+        {
+          "relation": "extends",
+          "target_id": "AL-EXEC-001"
+        },
+        {
+          "relation": "operationalizes",
+          "target_id": "AL-MISSION-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-GOV-002",
+      "title": "Atlas Lattice Public Open-Source Baseline v0.1",
+      "artifact_type": "doctrine",
+      "status": "CANDIDATE",
+      "path": "docs/governance/ATLAS_LATTICE_PUBLIC_OPEN_SOURCE_BASELINE_v0.1.md",
+      "links": [
+        {
+          "relation": "governs",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "governs",
+          "target_id": "AL-EXEC-144-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-EVID-001",
+      "title": "AI Evidence Ledger Schema v0.1",
+      "artifact_type": "schema",
+      "status": "CANDIDATE",
+      "path": "docs/knowledge-graph/ai_evidence_ledger.schema.v0_1.json",
+      "links": [
+        {
+          "relation": "constrains",
+          "target_id": "AL-EVID-002"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-GOV-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-EVID-002",
+      "title": "AI Evidence Ledger Seed v0.1",
+      "artifact_type": "evidence",
+      "status": "CANDIDATE",
+      "path": "docs/knowledge-graph/ai_evidence_ledger.seed.v0_1.json",
+      "links": [
+        {
+          "relation": "validated_by",
+          "target_id": "AL-EVID-001"
+        },
+        {
+          "relation": "recorded_in",
+          "target_id": "AL-LOG-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-LOG-001",
+      "title": "TIDELOCK Wave 1 Receipt 2026-05-27",
+      "artifact_type": "receipt",
+      "status": "CANDIDATE",
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_WAVE1_144_TASK_EXECUTION_RECEIPT_2026-05-27.md",
+      "links": [
+        {
+          "relation": "receipts_for",
+          "target_id": "AL-EXEC-144-001"
+        },
+        {
+          "relation": "evidence_for",
+          "target_id": "AL-EVID-002"
+        }
       ]
     }
   ]

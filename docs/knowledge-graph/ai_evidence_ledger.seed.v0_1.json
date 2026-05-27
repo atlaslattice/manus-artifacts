@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "entries": [
+    {
+      "entry_id": "AL-EVID-WAVE1-001",
+      "system_name": "Atlas Lattice Campaign",
+      "claim_id": "AL-EXEC-144-W1-COMMIT",
+      "claim_summary": "Wave 1 governance and evidence baseline artifacts were created and linked in the knowledge graph registry.",
+      "source_paths": [
+        "projects/aetherforge-144-task-campaign-2026-05-27.md",
+        "docs/governance/ATLAS_LATTICE_PUBLIC_OPEN_SOURCE_BASELINE_v0.1.md",
+        "docs/knowledge-graph/ai_evidence_ledger.schema.v0_1.json"
+      ],
+      "evidence_receipt": "archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_WAVE1_144_TASK_EXECUTION_RECEIPT_2026-05-27.md",
+      "trust_state": "CANDIDATE",
+      "review_status": "PENDING",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "created_utc": "2026-05-27T22:05:00Z",
+      "notes": "Candidate-only until human-root adjudication."
+    }
+  ]
+}
