@@ -64,6 +64,26 @@ bash archive/boot/gptbrain/reference_impl/run_checks.sh
 
 ---
 
+## Repository Quality Gates
+
+Use these checks before opening PRs that touch docs, workflows, or GPTBrain artifacts:
+
+```bash
+# Workflow hygiene (merge markers + workflow YAML lint)
+grep -rn --include="*.md" --include="*.yml" --include="*.yaml" -e "^<<<<<<< " -e "^=======$" -e "^>>>>>>> " .
+yamllint -d "{extends: default, rules: {line-length: {max: 200}}}" .github/workflows/
+
+# GPTBrain reference checks
+bash archive/boot/gptbrain/reference_impl/run_checks.sh
+```
+
+CI workflow alignment:
+- `repo-hygiene-checks.yml` — merge-conflict marker scan + workflow YAML lint
+- `docs-link-checks.yml` — relative link validation in root docs surfaces
+- `gptbrain-reference-checks.yml` — GPTBrain reference implementation checks
+
+---
+
 ## Style Guidelines
 
 - Use Markdown for all documents

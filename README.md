@@ -17,6 +17,18 @@ The **Atlas Lattice Foundation** is an independent AI governance and knowledge a
 
 ---
 
+## 🎯 Mission Convergence Layer
+
+One unified mission across this repository:
+
+- 🕸️ **Functional Lattice Knowledge Graph** → [Lattice KG v0.5](./archive/knowledge_graph/lattice_kg/v0_5/README.md)
+- 🎮 **Playable Archive Game (Aetherforge)** → [Archive Play Loop v0.1](./projects/AETHERFORGE_ARCHIVE_PLAY_LOOP_v0.1.md)
+- 🧠 **GPTDream++ Open Source Protocol Gift** → [GPTDream++ Public Package Guide](./archive/spec/gptdream/PUBLIC_PACKAGE_GUIDE_v0.1.md)
+
+All artifacts remain candidate work unless explicitly ratified as canon.
+
+---
+
 ## Table of Contents
 
 ### Core Systems
@@ -31,6 +43,7 @@ The **Atlas Lattice Foundation** is an independent AI governance and knowledge a
   - [v0.1 Launch Decree](./bazinga/v0.1-launch-decree.md)
 
 ### Projects
+- **[Projects Index](./projects/README.md)** — Project briefs, mission loops, and public roadmap.
 - **[Free Bank](./projects/free-bank/)** — Banking revolution and financial sovereignty.
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
@@ -47,6 +60,7 @@ The **Atlas Lattice Foundation** is an independent AI governance and knowledge a
   - [Swarm Health Scorecard](./health/SWARM_HEALTH_SCORECARD.md)
 
 ### Archives & Research
+- **[Archive Index (ops/spec/KG)](./archive/README.md)** — Operational, governance, and protocol artifact archive.
 - **[Janus Checkpoints](./archives/janus-checkpoints/)** — Session state and resurrection logs.
 - **[Research](./research/)** — Intelligence sweeps and convergence reports.
 - **[Health](./health/)** — Patient rights and wellness facility research.

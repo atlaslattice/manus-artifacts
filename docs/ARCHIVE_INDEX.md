@@ -39,6 +39,14 @@
 
 → [Project folder](../projects/free-bank/)
 
+### Aetherforge
+*Playable archive layer and mission system for public cleanup and publication*
+
+| Artifact | Status | Notes |
+|----------|--------|-------|
+| [Top-50 Public Launch Taskboard](../projects/aetherforge-top50-taskboard-2026-05-26.md) | Candidate | Public roadmap in ring-based mission format |
+| [Aetherforge Archive Play Loop v0.1](../projects/AETHERFORGE_ARCHIVE_PLAY_LOOP_v0.1.md) | Candidate | Artifact → objective → evidence execution loop |
+
 ### Chinook Guardian
 *Aerospace and defense protocols*
 
@@ -97,6 +105,20 @@
 *Internal session summaries and Noah's Ark protocols*
 
 → [Manus Vault folder](../manus-vault/)
+
+### Knowledge Graph / Lattice
+*Source-grounded graph substrate and bridge runbooks*
+
+→ [Lattice KG v0.5](../archive/knowledge_graph/lattice_kg/v0_5/README.md)
+
+### GPTDream++ Spec Vault
+*Candidate protocol vault, schema bundles, and reference implementations*
+
+| Artifact | Status |
+|----------|--------|
+| [Spec Vault README](../archive/spec/gptdream/README.md) | Candidate |
+| [Public Package Guide v0.1](../archive/spec/gptdream/PUBLIC_PACKAGE_GUIDE_v0.1.md) | Candidate |
+| [Vault Manifest](../archive/spec/gptdream/VAULT_MANIFEST_2026-05-26.md) | Candidate |
 
 ---
 

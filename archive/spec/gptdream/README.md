@@ -34,6 +34,7 @@ It is the source of truth for the **candidate working spec** — not canon, not 
 archive/spec/gptdream/
 ├── README.md                                          (this file)
 ├── VAULT_MANIFEST_2026-05-26.md                      (complete file index)
+├── PUBLIC_PACKAGE_GUIDE_v0.1.md                      (public OSS package routes)
 ├── REHYDRATION_BOOT_CARD.md                          (agent rehydration guide)
 ├── GPTDREAM_PLUSPLUS_PERSONAL_AGENT_HABITAT_PROTOCOL_v0.2.md  (core protocol)
 └── appendices/
@@ -61,6 +62,7 @@ archive/spec/gptdream/
 | `reference_impl/execution_gate/` | D-Φ-1 / CAS-001-A execution gate |
 | `reference_impl/native_thread/` | Native thread ingestion reference impl |
 | `tests/adversarial/` | T01–T12 adversarial harness |
+| `PUBLIC_PACKAGE_GUIDE_v0.1.md` | Single entrypoint for external contributors and adopters |
 
 ---
 

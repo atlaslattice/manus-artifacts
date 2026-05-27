@@ -19,3 +19,16 @@ Everything can connect to everything. Nothing can promote itself. No Notion page
 - `AETHERFORGE_NOTION_MIRROR_QUEST_INDEX_v0.1.md` — playable task index with serious acceptance criteria.
 - `NOTION_GITHUB_KNOWLEDGE_GRAPH_RUNBOOK_v0.1.md` — repeatable pipeline runbook.
 - `TIDELOCK_HANDOFF_PACKET_SCHEMA_v0.1.yaml` — bounded handoff packet schema.
+- `LATTICE_KG_ADDRESS_BOOK_v0.1.md` — graph-addressable artifact routing table with canon/governance state.
+
+## Graph Addressability
+
+Use the address book as the stable route index for graph-linked execution:
+
+→ [LATTICE_KG_ADDRESS_BOOK_v0.1.md](./LATTICE_KG_ADDRESS_BOOK_v0.1.md)
+
+Each mapped artifact includes:
+- artifact id
+- graph node family
+- canon boundary state
+- governance route for promotion

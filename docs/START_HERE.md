@@ -37,6 +37,23 @@
 
 ---
 
+## Mission Control (Unified Workstream)
+
+This archive is organized around one integrated mission:
+
+1. **Functional knowledge graph layer**  
+   → [Lattice KG v0.5](../archive/knowledge_graph/lattice_kg/v0_5/README.md)
+2. **Playable archive game layer (Aetherforge)**  
+   → [Aetherforge Top-50 Taskboard](../projects/aetherforge-top50-taskboard-2026-05-26.md)  
+   → [Aetherforge Archive Play Loop v0.1](../projects/AETHERFORGE_ARCHIVE_PLAY_LOOP_v0.1.md)
+3. **Open-source GPTDream++ protocol layer**  
+   → [GPTDream++ Spec Vault](../archive/spec/gptdream/README.md)  
+   → [GPTDream++ Public Package Guide](../archive/spec/gptdream/PUBLIC_PACKAGE_GUIDE_v0.1.md)
+
+All layers operate under the same governance boundary: candidate by default, canon only after ratification + adjudication.
+
+---
+
 ## How to Contribute
 
 This is a living, open archive. Contributions are welcome.
