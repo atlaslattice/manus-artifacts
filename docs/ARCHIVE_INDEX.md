@@ -104,10 +104,15 @@
 | [Folder Taxonomy Audit](./FOLDER_TAXONOMY_AUDIT_2026-05-27.md) | Wave 1 taxonomy baseline |
 | [Lattice Global Index](./LATTICE_GLOBAL_INDEX.md) | Generated cross-domain markdown index |
 | [Roadmap](./ROADMAP.md) | Now/Next/Later execution roadmap |
+| [Public Charter (500+ IP)](./ATLAS_LATTICE_PUBLIC_CHARTER_500IP.md) | Public scope, inclusion, evidence rules |
+| [AI Systems Evidence Index](./AI_SYSTEMS_EVIDENCE_INDEX.md) | AI claim lineage and evidence spine |
+| [Launch Blockers Tracker](./LAUNCH_BLOCKERS_TRACKER.md) | Hard gate owner/action/evidence tracker |
+| [World-Class Readiness Gates](./WORLD_CLASS_READINESS_GATES.md) | Milestone go/no-go criteria |
+| [Good First Issues](./GOOD_FIRST_ISSUES.md) | Contributor lanes for graph/evidence work |
 | [Asset Catalogue March 2026](./asset-catalogue-march-2026.md) | Monthly asset inventory |
 | [Constitutional Convention Process](./constitutional-convention-process.md) | Governance process |
 | [Operational Manifest v1.0.0-alpha](./operational-manifest-v1.0.0-alpha.md) | Operational baseline |
 
 ---
 
-*Index last updated: 2026-05-26. To propose a new artifact, open an [Artifact Proposal issue](https://github.com/atlaslattice/manus-artifacts/issues/new?template=artifact_proposal.md).*
+*Index last updated: 2026-05-27. To propose a new artifact, open an [Artifact Proposal issue](https://github.com/atlaslattice/manus-artifacts/issues/new?template=artifact_proposal.md).*

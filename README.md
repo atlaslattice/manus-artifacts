@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Repo Hygiene](https://github.com/atlaslattice/manus-artifacts/actions/workflows/repo-hygiene-checks.yml/badge.svg)](https://github.com/atlaslattice/manus-artifacts/actions/workflows/repo-hygiene-checks.yml)
 [![Docs Links](https://github.com/atlaslattice/manus-artifacts/actions/workflows/docs-link-checks.yml/badge.svg)](https://github.com/atlaslattice/manus-artifacts/actions/workflows/docs-link-checks.yml)
+[![Secret Scan](https://github.com/atlaslattice/manus-artifacts/actions/workflows/secret-scan.yml/badge.svg)](https://github.com/atlaslattice/manus-artifacts/actions/workflows/secret-scan.yml)
 
 The **Atlas Lattice Foundation** is building the governance layer missing from current AI stacks — a constitutional substrate for coordinating intelligence across models, sessions, and civilizational scale. This repository is the public, open-source archive of all research, architecture, protocols, and governance artifacts produced under that mission.
 
@@ -69,6 +70,11 @@ All work is **MIT licensed**, intended to be **public**, and held to **world-cla
 | [Contributor Quickstart](./docs/CONTRIBUTOR_QUICKSTART.md) | Fast onboarding + Wave 1 validation commands |
 | [FAQ](./docs/FAQ.md) | Common contributor and governance questions |
 | [Roadmap](./docs/ROADMAP.md) | Now/Next/Later public execution plan |
+| [Public Charter (500+ IP)](./docs/ATLAS_LATTICE_PUBLIC_CHARTER_500IP.md) | Scope, inclusion criteria, evidence, and publishing rules |
+| [AI Systems Evidence Index](./docs/AI_SYSTEMS_EVIDENCE_INDEX.md) | Authoritative AI-system evidence spine |
+| [Launch Blockers Tracker](./docs/LAUNCH_BLOCKERS_TRACKER.md) | Manual blockers and closure evidence tracking |
+| [World-Class Readiness Gates](./docs/WORLD_CLASS_READINESS_GATES.md) | 50/75/pre-release go-no-go gates |
+| [Good First Issues](./docs/GOOD_FIRST_ISSUES.md) | Public contributor lanes for high-impact work |
 
 ---
 
@@ -85,13 +91,15 @@ See [CONTRIBUTING.md](./.github/CONTRIBUTING.md) for branch naming, commit conve
 
 ## 📊 Public Launch Progress
 
-17 / 50 tasks complete — see the [Aetherforge Top-50 Taskboard](./projects/aetherforge-top50-taskboard-2026-05-26.md).
+29 / 50 tasks complete — see the [Aetherforge Top-50 Taskboard](./projects/aetherforge-top50-taskboard-2026-05-26.md).
 
 **⚠️ Pre-public blockers** (require @atlaslattice manual action):
 1. Secret scan of git history
 2. PII audit (`health/` and personal data)
 3. Scope decision on public content
 4. History rewrite if issues found
+
+Execution queue: [Aetherforge Next-10](./projects/aetherforge-next10-execution-queue-2026-05-27.md) · Monthly evidence snapshots: [projects/status-reports/](./projects/status-reports/)
 
 ---
 

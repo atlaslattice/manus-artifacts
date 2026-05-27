@@ -36,6 +36,9 @@ All work is MIT licensed. All artifacts are candidates until ratified by the ful
 | Meet the founder | [About David Sheldon](../about/david-sheldon.md) |
 | Contribute | [Contributing Guide](../.github/CONTRIBUTING.md) |
 | Report a security issue | [Security Policy](../SECURITY.md) |
+| Understand 500+ IP publication scope | [Public Charter (500+ IP)](./ATLAS_LATTICE_PUBLIC_CHARTER_500IP.md) |
+| Review AI-system evidence spine | [AI Systems Evidence Index](./AI_SYSTEMS_EVIDENCE_INDEX.md) |
+| Check launch blockers | [Launch Blockers Tracker](./LAUNCH_BLOCKERS_TRACKER.md) |
 
 ---
 

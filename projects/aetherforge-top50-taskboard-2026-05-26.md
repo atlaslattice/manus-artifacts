@@ -1,7 +1,7 @@
 # ⚡ Aetherforge Top-50 Public Launch Taskboard
 
 > **Mission:** Make all Atlas Lattice Foundation work public, open-source, and world-class.
-> **Last Updated:** 2026-05-27 · **Progress:** 24 / 50
+> **Last Updated:** 2026-05-27 · **Progress:** 29 / 50
 
 ---
 
@@ -56,12 +56,12 @@
 |---|------|--------|-------|
 | 25 | Add repo-hygiene CI workflow | ✅ Done | Merge-conflict + YAML lint |
 | 26 | Add docs-link-checks CI workflow | ✅ Done | Relative link validation weekly |
-| 27 | Add secret scanning CI step | 🟡 TODO | `gitleaks` or GitHub Advanced Security |
-| 28 | Add dependency vulnerability scanning | 🟡 TODO | Dependabot or `pip-audit` |
+| 27 | Add secret scanning CI step | ✅ Done | `.github/workflows/secret-scan.yml` |
+| 28 | Add dependency vulnerability scanning | ✅ Done | `.github/dependabot.yml` |
 | 29 | Add markdown/docs lint checks in CI | ✅ Done | `.github/workflows/markdown-lint.yml` |
 | 30 | Define test coverage expectations | 🟡 TODO | For `reference_impl/` code |
 | 31 | Add reproducible local validation guide | ✅ Done | In CONTRIBUTING.md |
-| 32 | Define "world-class ready" quality gates | 🟡 TODO | Checklist doc in docs/ |
+| 32 | Define "world-class ready" quality gates | ✅ Done | `docs/WORLD_CLASS_READINESS_GATES.md` |
 
 ---
 
@@ -89,8 +89,8 @@
 | 43 | Add signed tags/releases policy | 🟡 TODO | GPG signing guide |
 | 44 | Add semantic versioning guidance | 🟡 TODO | `docs/VERSIONING.md` |
 | 45 | Build public roadmap (Now/Next/Later) | ✅ Done | `docs/ROADMAP.md` |
-| 46 | Publish monthly archive status reports | 🟡 TODO | `projects/status-reports/` |
-| 47 | Add "good first issue" contributor lane | 🟡 TODO | Label + `docs/GOOD_FIRST_ISSUES.md` |
+| 46 | Publish monthly archive status reports | ✅ Done | `projects/status-reports/AI_EVIDENCE_STATUS_2026-05.md` |
+| 47 | Add "good first issue" contributor lane | ✅ Done | `docs/GOOD_FIRST_ISSUES.md` |
 | 48 | Add observability/status for sync pipelines | 🟡 TODO | Pinecone sync health check |
 | 49 | Add backup/export strategy | 🟡 TODO | Docs for Drive/Notion export |
 | 50 | Run formal "world-class readiness review" | 🟡 TODO | Final gate before public launch |
@@ -104,10 +104,10 @@
 | 0 | Core Foundation | 3 | 7 | 43% |
 | 1 | Governance & Policy | 7 | 7 | 100% |
 | 2 | Documentation | 8 | 10 | 80% |
-| 3 | CI & Quality | 5 | 8 | 63% |
+| 3 | CI & Quality | 7 | 8 | 88% |
 | 4 | Archive Structure | 2 | 9 | 22% |
-| 5 | Release & Launch | 1 | 9 | 11% |
-| **Total** | | **24** | **50** | **48%** |
+| 5 | Release & Launch | 3 | 9 | 33% |
+| **Total** | | **29** | **50** | **58%** |
 
 ---
 
@@ -119,6 +119,8 @@
 4. **History rewrite** — if issues found in #1 or #2, must use `git filter-repo`
 
 > These 4 blockers must be resolved before the repository can be safely made public.
+
+See blocker tracking artifact: `/tmp/workspace/atlaslattice/manus-artifacts/docs/LAUNCH_BLOCKERS_TRACKER.md`
 
 ---
 

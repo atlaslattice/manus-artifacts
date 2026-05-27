@@ -32,9 +32,9 @@ source_of_truth: GitHub
 
 ## Later (Waves 7-12)
 
-- Security and dependency hardening
+- Security and dependency hardening (secret scan workflow + Dependabot baseline added)
 - Expanded regression tests and fixtures
 - Contributor/reviewer ops templates + ADR archive
-- Release automation and status reporting
+- Release automation and status reporting (monthly AI evidence status snapshot started)
 - Core-system content backfill
 - Playable Aetherforge + TIDELOCK governance intake

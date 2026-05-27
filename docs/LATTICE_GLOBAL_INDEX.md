@@ -1,6 +1,6 @@
 # Lattice Global Index
 
-Generated at: `2026-05-27T21:51:00+00:00`
+Generated at: `2026-05-27T21:53:48+00:00`
 
 ## Domain Summary
 
@@ -8,6 +8,7 @@ Generated at: `2026-05-27T21:51:00+00:00`
 |---|---:|
 | `(root)` | 8 |
 | `.github` | 5 |
+| `.pytest_cache` | 1 |
 | `about` | 1 |
 | `aluminum-os` | 22 |
 | `aluminum-os-core` | 1 |
@@ -17,10 +18,10 @@ Generated at: `2026-05-27T21:51:00+00:00`
 | `codebases` | 57 |
 | `council` | 1 |
 | `council-reviews` | 2 |
-| `docs` | 15 |
+| `docs` | 20 |
 | `health` | 4 |
 | `manus-vault` | 12 |
-| `projects` | 4 |
+| `projects` | 6 |
 | `research` | 7 |
 | `sheldonbrain` | 1 |
 
@@ -42,6 +43,9 @@ Generated at: `2026-05-27T21:51:00+00:00`
 - `.github/ISSUE_TEMPLATE/bug_report.md`
 - `.github/ISSUE_TEMPLATE/feature_request.md`
 - `.github/PULL_REQUEST_TEMPLATE.md`
+
+### .pytest_cache
+- `.pytest_cache/README.md`
 
 ### about
 - `about/david-sheldon.md`
@@ -102,17 +106,17 @@ Generated at: `2026-05-27T21:51:00+00:00`
 - `council-reviews/council-review-manus-artifacts.md`
 
 ### docs
+- `docs/AI_SYSTEMS_EVIDENCE_INDEX.md`
 - `docs/ARCHITECTURE_MAP.md`
 - `docs/ARCHIVE_INDEX.md`
 - `docs/ARTIFACT_RELATIONSHIP_TYPES.md`
+- `docs/ATLAS_LATTICE_PUBLIC_CHARTER_500IP.md`
 - `docs/CONTRIBUTOR_QUICKSTART.md`
 - `docs/FAQ.md`
 - `docs/FOLDER_TAXONOMY_AUDIT_2026-05-27.md`
 - `docs/GLOSSARY.md`
-- `docs/LATTICE_GLOBAL_INDEX.md`
-- `docs/NORTH_STAR_MISSION.md`
-- `docs/ROADMAP.md`
-- ... 5 more
+- `docs/GOOD_FIRST_ISSUES.md`
+- ... 10 more
 
 ### health
 - `health/austin-in-home-pt.md`
@@ -134,9 +138,11 @@ Generated at: `2026-05-27T21:51:00+00:00`
 - ... 2 more
 
 ### projects
+- `projects/aetherforge-next10-execution-queue-2026-05-27.md`
 - `projects/aetherforge-top50-taskboard-2026-05-26.md`
 - `projects/chinook-guardian/v1.0.md`
 - `projects/free-bank/banking-revolution-archive.md`
+- `projects/status-reports/AI_EVIDENCE_STATUS_2026-05.md`
 - `projects/three-tier-autonomy/doctrine.md`
 
 ### research
