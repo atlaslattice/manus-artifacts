@@ -26,6 +26,8 @@ by [@atlaslattice](https://github.com/atlaslattice).
 | See active projects | [Projects](../projects/) |
 | Read governance docs | [Council](../council/) |
 | Browse all archived content | [Archive Index](./ARCHIVE_INDEX.md) |
+| See the mission-triad map | [Public Archive Map](./PUBLIC_ARCHIVE_MAP.md) |
+| Explore lattice graph node types | [Knowledge Graph Node Index](./LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md) |
 | Look up terminology | [Glossary](./GLOSSARY.md) |
 | Contribute | [Contributing](../.github/CONTRIBUTING.md) |
 
@@ -43,6 +45,7 @@ All major artifacts require council review before canonization. See [Council Arc
 - **Children of the Swarm** — the 7-seat AI agent squad (S1-A through TBD-07)
 - **Aetherforge** — the game-frame for archival and execution work
 - **Metatron's Cube** — the geometric organizing principle for all knowledge structures
+- **Lattice Knowledge Graph** — explicit node and relationship architecture for discoverability and reuse
 
 See the full [Glossary](./GLOSSARY.md) for definitions.
 

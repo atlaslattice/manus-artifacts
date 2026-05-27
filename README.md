@@ -12,6 +12,7 @@
 **New here?** → [docs/START_HERE.md](./docs/START_HERE.md)
 **Full index** → [docs/ARCHIVE_INDEX.md](./docs/ARCHIVE_INDEX.md)
 **Terminology** → [docs/GLOSSARY.md](./docs/GLOSSARY.md)
+**Public archive map** → [docs/PUBLIC_ARCHIVE_MAP.md](./docs/PUBLIC_ARCHIVE_MAP.md)
 
 ---
 
@@ -31,6 +32,12 @@
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
 - **[Aetherforge Metatron's Cube Top-50](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)** — World-class public archive execution board.
 - **[Aetherforge Top-10 Taskboard](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — High-leverage council task sprint board.
+
+## Mission Triad (Current Framing)
+
+- **Functional knowledge graph:** [Lattice Knowledge Graph Node Index](./docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md)
+- **Playable archive game:** [Aetherforge Metatron's Cube Top-50](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
+- **GPTDream++ open protocol gift:** [REM-8 Dream Protocol](./archive/boot/gptbrain/REM8_DREAM_PROTOCOL.md)
 
 ## Governance & Council
 

@@ -82,6 +82,11 @@
 | [START_HERE.md](./START_HERE.md) | Onboarding entry point |
 | [ARCHIVE_INDEX.md](./ARCHIVE_INDEX.md) | This file |
 | [GLOSSARY.md](./GLOSSARY.md) | Canonical term definitions |
+| [PUBLIC_ARCHIVE_MAP.md](./PUBLIC_ARCHIVE_MAP.md) | Mission-triad navigation surface |
+| [LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md](./LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md) | Priority graph nodes |
+| [ARTIFACT_RELATIONSHIP_TYPES.md](./ARTIFACT_RELATIONSHIP_TYPES.md) | Relation vocabulary |
+| [CROSS_DOMAIN_LINK_POLICY.md](./CROSS_DOMAIN_LINK_POLICY.md) | Cross-linking standards |
+| [WEEKLY_DELTA_DIGEST_TEMPLATE.md](./WEEKLY_DELTA_DIGEST_TEMPLATE.md) | Weekly triad progress receipt template |
 | [asset-catalogue-march-2026.md](./asset-catalogue-march-2026.md) | Asset catalogue snapshot |
 | [operational-manifest-v1.0.0-alpha.md](./operational-manifest-v1.0.0-alpha.md) | Operational manifest |
 | [unified-field-v4.0.md](./unified-field-v4.0.md) | Unified field doc snapshot |

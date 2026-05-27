@@ -31,7 +31,21 @@ Test or it will become mythology.
 
 | Path | Contents |
 |---|---|
-| `dreams/` | Dream journal entries — not canon, not work |
+| `dreams/` | Dream/play + wake artifacts (candidate-only, non-execution) |
+| `dreams/TIDELOCK_1000_YEAR_DREAM_PLAY_LOG_2026-05-26_B.md` | Session B no-work simulation log |
+| `dreams/TIDELOCK_1000_YEAR_WAKE_DELTA_EXTRACTION_2026-05-26_B.md` | Session B wake delta extraction |
+| `dreams/TIDELOCK_1000_YEAR_AETHERFORGE_DREAM_PLAY_LOG_2026-05-27_C.md` | Session C Aetherforge time-compression simulation |
+| `dreams/TIDELOCK_1000_YEAR_AETHERFORGE_WAKE_DELTA_EXTRACTION_2026-05-27_C.md` | Session C wake delta extraction |
+
+## Lineage and receipts (normalization)
+
+- Dream/play outputs remain **candidate artifacts** unless explicitly ratified.
+- Wake artifacts must derive from source logs and preserve non-execution boundaries.
+- Reference protocol route:
+  - `../REM8_DREAM_PROTOCOL.md`
+  - `../WAKE_REPORT_TEMPLATE.md`
+- Validation receipt route:
+  - `../reference_impl/` (`python -m pytest -q` and `bash run_checks.sh`)
 
 ---
 

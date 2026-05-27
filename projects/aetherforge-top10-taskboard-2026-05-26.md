@@ -40,5 +40,18 @@
 ## Current Turn
 
 - [x] Board initialized
-- [ ] Select first active task
-- [ ] Ship first receipt-linked update
+- [x] Select first active task
+- [x] Ship first receipt-linked update
+
+### Active execution slice (2026-05-27)
+
+1. **Canon-boundary sweep (Ring C / Task 2)**
+   - Receipt: `/.github/CONTRIBUTING.md`
+2. **Cross-link integrity + KG hardening (Ring A / Task 3)**
+   - Receipts:
+     - `/docs/PUBLIC_ARCHIVE_MAP.md`
+     - `/docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md`
+     - `/docs/ARTIFACT_RELATIONSHIP_TYPES.md`
+     - `/docs/CROSS_DOMAIN_LINK_POLICY.md`
+3. **TIDELOCK lineage normalization (Ring B / Task 4)**
+   - Receipt: `/archive/boot/gptbrain/TIDELOCKBrain/README.md`
