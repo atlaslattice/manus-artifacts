@@ -276,7 +276,7 @@ def auto_parse_exports(...):
 **Evidence:**
 - 6 files with timeline structures
 - All include `time_range` with start/end timestamps
-- Example: [mars_terraforming.json](parsed/mars_terraforming.json)
+- Example: `parsed/mars_terraforming.json`
 
 ```json
 {
