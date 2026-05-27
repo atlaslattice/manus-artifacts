@@ -139,17 +139,17 @@ Target: make `atlaslattice/manus-artifacts` fully public, provenance-first, and 
 
 ## Axis 10 — AI Evidence Logging (109-120)
 
-- [ ] 109. Define AI system evidence schema.
-- [ ] 110. Create AI build log template.
-- [ ] 111. Create model eval log template.
-- [ ] 112. Create architecture decision log template.
-- [ ] 113. Create training/data provenance log template.
-- [ ] 114. Create safety incident log template.
-- [ ] 115. Create drift/performance log template.
-- [ ] 116. Create reproducibility receipt template.
-- [ ] 117. Add AI claims-to-evidence matrix.
-- [ ] 118. Add third-party validation log section.
-- [ ] 119. Add AI evidence index page.
+- [x] 109. Define AI system evidence schema.
+- [x] 110. Create AI build log template.
+- [x] 111. Create model eval log template.
+- [x] 112. Create architecture decision log template.
+- [x] 113. Create training/data provenance log template.
+- [x] 114. Create safety incident log template.
+- [x] 115. Create drift/performance log template.
+- [x] 116. Create reproducibility receipt template.
+- [x] 117. Add AI claims-to-evidence matrix.
+- [x] 118. Add third-party validation log section.
+- [x] 119. Add AI evidence index page.
 - [ ] 120. Add AI evidence integrity checker.
 
 ## Axis 11 — Open Source Publishing & Community (121-132)

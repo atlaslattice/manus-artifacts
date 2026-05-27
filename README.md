@@ -37,6 +37,7 @@ by @atlaslattice. See [GOVERNANCE.md](./GOVERNANCE.md) for the ratification proc
 | Understand governance | [GOVERNANCE.md](./GOVERNANCE.md) |
 | Report a security issue | [.github/SECURITY.md](./.github/SECURITY.md) |
 | Check repository health | [docs/HEALTH_DASHBOARD.md](./docs/HEALTH_DASHBOARD.md) |
+| Log AI evidence artifacts | [docs/ai-evidence/README.md](./docs/ai-evidence/README.md) |
 | Cite this work | [CITATION.cff](./CITATION.cff) |
 
 ---
@@ -72,6 +73,7 @@ by @atlaslattice. See [GOVERNANCE.md](./GOVERNANCE.md) for the ratification proc
 - **[Research](./research/)** — Intelligence sweeps and convergence reports.
 - **[Health](./health/)** — Patient rights and wellness facility research.
 - **[Manus Vault](./manus-vault/)** — Internal session summaries and Noah's Ark protocols.
+- **[AI Evidence Logging](./docs/ai-evidence/README.md)** — provenance-first AI build/eval logging templates.
 
 ### About
 - **[David Sheldon](./about/david-sheldon.md)** — Visionary and system architect.
