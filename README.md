@@ -51,6 +51,7 @@ Guardrails:
 ### Archives & Research
 - **[Janus Checkpoints](./archives/janus-checkpoints/)** — Session state and resurrection logs.
 - **[Research](./research/)** — Intelligence sweeps and convergence reports.
+- **[Docs](./docs/)** — Operational and governance documentation.
 - **[Health](./health/)** — Patient rights and wellness facility research.
 - **[Manus Vault](./manus-vault/)** — Internal session summaries and Noah's Ark protocols.
 
