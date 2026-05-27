@@ -1,0 +1,401 @@
+# KG_SOURCE_INVENTORY_2026-05-24.yaml
+# STATUS: SOURCE INVENTORY SEED — NOT CANON
+# DEPLOYMENT: NONE
+# AUTHORITY: NONE
+# PURPOSE: seed Aetherforge provenance-first graph substrate before agent expansion
+
+metadata:
+  artifact_id: KG-SOURCE-INVENTORY-2026-05-24
+  title: Aetherforge Knowledge Graph Source Inventory
+  version: v0.1-seed
+  created_date: 2026-05-27
+  canon_status: not_canon
+  deployment_status: none
+  authority_scope: none
+  graph_status: source_inventory_seed
+  source_policy:
+    - "The graph is not memory."
+    - "The graph is not canon."
+    - "The graph is not authority."
+    - "A graph edge is not a promotion."
+    - "A cluster is not canon."
+    - "A central node is not authority."
+    - "Summaries are not raw lineage."
+    - "raw_export_status must be explicit."
+  related_issues:
+    - issue: 183
+      title: Product lane: OpenAI-integrated source-grounded knowledge graph
+      url: https://github.com/atlaslattice/manus-artifacts/issues/183
+    - issue: 195
+      title: Aetherforge dispatch: Sheldonbrain graph ingestion kickoff and first-path audit
+      url: https://github.com/atlaslattice/manus-artifacts/issues/195
+    - issue: 203
+      title: World-class operations matrix: 144 tasks across 12 lanes
+      url: https://github.com/atlaslattice/manus-artifacts/issues/203
+  related_pull_requests:
+    - pr: 190
+      title: archive(notion): seed Aetherforge source cartography inventory
+      url: https://github.com/atlaslattice/manus-artifacts/pull/190
+      note: Notion source cartography seed already in flight; do not duplicate, crosswalk.
+    - pr: 182
+      title: archive(knowledge-graph): add OpenAI graph substrate candidate
+      url: https://github.com/atlaslattice/manus-artifacts/pull/182
+      note: OpenAI KG substrate candidate already in flight; this inventory should feed it.
+
+record_schema:
+  source_id: string
+  title: string
+  surface: GitHub | Drive | Notion | Gamma | Chat | Upload | External | Unknown
+  url_or_path: string
+  file_type: markdown | yaml | txt | pdf | issue | pull_request | notion_page | drive_file | gamma_deck | unknown
+  created_or_modified: string | unknown
+  raw_export_status: full_raw | partial_raw | summary_only | unavailable | pending | attached | hashed | verified
+  sha256_status: missing | pending | recorded | verified | not_applicable
+  source_class: raw_source | wrapper | prior_canon_snapshot | candidate_schema | review_packet | dream_artifact | product_charter | graph_seed | unknown
+  related_lane: string
+  review_priority: low | medium | high | critical
+  mirrored_to_github: true | false | partial | unknown
+  missing_receipts: list
+  artifact_status:
+    canon_status: candidate | not_canon | ratified | deprecated | unknown
+    deployment_status: inert | none | staged | live | unknown
+    review_state: unreviewed | reviewed | needs_review | ratified | unknown
+    authority_scope: none | advisory | review | ratification | execution | unknown
+  strongest_safe_claim: string
+
+sources:
+  - source_id: GH-PR-190
+    title: archive(notion): seed Aetherforge source cartography inventory
+    surface: GitHub
+    url_or_path: https://github.com/atlaslattice/manus-artifacts/pull/190
+    file_type: pull_request
+    created_or_modified: 2026-05-26
+    raw_export_status: summary_only
+    sha256_status: missing
+    source_class: graph_seed
+    related_lane: notion_mirror / source_cartography / aetherforge
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts:
+      - raw Notion export hashes
+      - source root IDs
+      - full inventory file review
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: inert
+      review_state: needs_review
+      authority_scope: none
+    strongest_safe_claim: "PR #190 appears to seed Notion source cartography for Aetherforge, but inventory records remain review inputs until raw source roots and hashes are confirmed."
+
+  - source_id: GH-PR-182
+    title: archive(knowledge-graph): add OpenAI graph substrate candidate
+    surface: GitHub
+    url_or_path: https://github.com/atlaslattice/manus-artifacts/pull/182
+    file_type: pull_request
+    created_or_modified: 2026-05-25
+    raw_export_status: summary_only
+    sha256_status: missing
+    source_class: product_charter
+    related_lane: knowledge_graph / openai_integration
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts:
+      - full artifact diff review
+      - source-linked OpenAI references
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: inert
+      review_state: needs_review
+      authority_scope: none
+    strongest_safe_claim: "PR #182 is a candidate OpenAI KG substrate artifact, not a deployment or authority grant."
+
+  - source_id: GH-ISSUE-183
+    title: Product lane: OpenAI-integrated source-grounded knowledge graph
+    surface: GitHub
+    url_or_path: https://github.com/atlaslattice/manus-artifacts/issues/183
+    file_type: issue
+    created_or_modified: 2026-05-26
+    raw_export_status: summary_only
+    sha256_status: not_applicable
+    source_class: product_charter
+    related_lane: knowledge_graph / openai_integration
+    review_priority: critical
+    mirrored_to_github: true
+    missing_receipts:
+      - Drive source IDs
+      - Notion page IDs
+      - Gamma deck IDs
+      - raw source hashes
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: inert
+      review_state: reviewed
+      authority_scope: none
+    strongest_safe_claim: "Issue #183 defines the source-grounded KG lane: OpenAI extracts/classifies/routes; GitHub holds receipts; Drive holds raw cargo; Notion holds legacy structure; human-root decides promotion."
+
+  - source_id: GH-ISSUE-195
+    title: Aetherforge dispatch: Sheldonbrain graph ingestion kickoff and first-path audit
+    surface: GitHub
+    url_or_path: https://github.com/atlaslattice/manus-artifacts/issues/195
+    file_type: issue
+    created_or_modified: 2026-05-27
+    raw_export_status: summary_only
+    sha256_status: not_applicable
+    source_class: graph_seed
+    related_lane: aetherforge / sheldonbrain_ingestion / adversarial_review
+    review_priority: critical
+    mirrored_to_github: true
+    missing_receipts:
+      - Sheldonbrain code path inventory
+      - Notion source root export
+      - first claim packets
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: inert
+      review_state: reviewed
+      authority_scope: none
+    strongest_safe_claim: "Aetherforge is a bounded review/ingestion operation; it creates inspectable paths for review, not truth or canon."
+
+  - source_id: GH-ISSUE-203
+    title: World-class operations matrix: 144 tasks across 12 lanes
+    surface: GitHub
+    url_or_path: https://github.com/atlaslattice/manus-artifacts/issues/203
+    file_type: issue
+    created_or_modified: 2026-05-27
+    raw_export_status: summary_only
+    sha256_status: not_applicable
+    source_class: graph_seed
+    related_lane: operations_matrix / world_class_workplan
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts:
+      - task execution receipts
+      - per-lane owner/review packets
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: inert
+      review_state: reviewed
+      authority_scope: none
+    strongest_safe_claim: "Issue #203 identifies a 12x12 operations scaffold; it is not canon, deployment, or authority."
+
+  - source_id: GH-PR-145
+    title: feat(receipt-habitat): add local v0.1 schema validator and overclaim gate
+    surface: GitHub
+    url_or_path: https://github.com/atlaslattice/manus-artifacts/pull/145
+    file_type: pull_request
+    created_or_modified: 2026-05-23
+    raw_export_status: summary_only
+    sha256_status: missing
+    source_class: candidate_schema
+    related_lane: receipt_habitat / local_boring_machine
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts:
+      - test run logs
+      - schema validation outputs
+      - mergeability triage
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: inert
+      review_state: needs_review
+      authority_scope: none
+    strongest_safe_claim: "PR #145 appears to be the first local Receipt Habitat validator lane; treat as local dry-run candidate until test logs are reviewed."
+
+  - source_id: GH-PR-137
+    title: archive(atlasbrain): ingest Atlas Prime select-all transcript
+    surface: GitHub
+    url_or_path: https://github.com/atlaslattice/manus-artifacts/pull/137
+    file_type: pull_request
+    created_or_modified: 2026-05-23
+    raw_export_status: attached
+    sha256_status: pending
+    source_class: raw_source
+    related_lane: atlasbrain / transcript_ingestion
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts:
+      - raw transcript SHA-256 confirmation
+      - privacy review
+      - parsed packet review
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: inert
+      review_state: needs_review
+      authority_scope: none
+    strongest_safe_claim: "PR #137 appears to contain an AtlasBrain raw export lane; raw transcript existence must still be hash-verified before fossil status is claimed."
+
+  - source_id: GH-PR-102
+    title: archive(architecture): add RYYH v2.1 vault headers and manifest
+    surface: GitHub
+    url_or_path: https://github.com/atlaslattice/manus-artifacts/pull/102
+    file_type: pull_request
+    created_or_modified: 2026-05-21
+    raw_export_status: summary_only
+    sha256_status: missing
+    source_class: wrapper
+    related_lane: ryyh_v2_1 / manifest / vault_headers
+    review_priority: medium
+    mirrored_to_github: true
+    missing_receipts:
+      - canonical checksum policy
+      - mergeability triage
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: inert
+      review_state: reviewed
+      authority_scope: none
+    strongest_safe_claim: "PR #102 adds manifest/header hygiene; it does not ratify the wire spec or deploy the overlay."
+
+  - source_id: GH-PR-106
+    title: archive(architecture): vault OpenAI xAI SpaceX interop manifold
+    surface: GitHub
+    url_or_path: https://github.com/atlaslattice/manus-artifacts/pull/106
+    file_type: pull_request
+    created_or_modified: 2026-05-22
+    raw_export_status: partial_raw
+    sha256_status: recorded
+    source_class: candidate_schema
+    related_lane: external_operator_manifold / interop
+    review_priority: medium
+    mirrored_to_github: true
+    missing_receipts:
+      - officiality disclaimer review
+      - source citation audit
+      - mergeability triage
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: inert
+      review_state: reviewed
+      authority_scope: none
+    strongest_safe_claim: "PR #106 vaults an interpretive interop manifold only; it does not assert real OpenAI-xAI/SpaceX interoperability."
+
+  - source_id: GH-ISSUE-117
+    title: Review GangaSeek packet schema v0.2.0 before vaulting
+    surface: GitHub
+    url_or_path: https://github.com/atlaslattice/manus-artifacts/issues/117
+    file_type: issue
+    created_or_modified: 2026-05-22
+    raw_export_status: attached
+    sha256_status: pending
+    source_class: candidate_schema
+    related_lane: gangaseek / schema_review
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts:
+      - v0.2.2 patched schema file
+      - coordinate decode tables
+      - local schema validation
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: inert
+      review_state: reviewed
+      authority_scope: none
+    strongest_safe_claim: "GangaSeek packet schema is useful but not vault-ready until bitfield/addressing, Base64 envelope, authority_scope, and cryptographic wording are patched."
+
+  - source_id: DRIVE-GANGASEEK-NAMESPACE-RATIFICATION-PACKET
+    title: GangaSeek Namespace Ratification Packet
+    surface: Drive
+    url_or_path: pending
+    file_type: unknown
+    created_or_modified: unknown
+    raw_export_status: pending
+    sha256_status: missing
+    source_class: raw_source
+    related_lane: gangaseek / namespace / review
+    review_priority: high
+    mirrored_to_github: false
+    missing_receipts:
+      - Drive file ID
+      - raw export
+      - SHA-256
+      - GitHub mirror path
+    artifact_status:
+      canon_status: unknown
+      deployment_status: inert
+      review_state: unreviewed
+      authority_scope: none
+    strongest_safe_claim: "Reported Drive source placeholder only; no repo-visible raw artifact yet."
+
+  - source_id: DRIVE-GANGASEEK-INV-CLM-CATALOG
+    title: GangaSeek INV/CLM Catalog
+    surface: Drive
+    url_or_path: pending
+    file_type: unknown
+    created_or_modified: unknown
+    raw_export_status: pending
+    sha256_status: missing
+    source_class: raw_source
+    related_lane: gangaseek / invariant_catalog
+    review_priority: high
+    mirrored_to_github: false
+    missing_receipts:
+      - Drive file ID
+      - raw export
+      - SHA-256
+      - undefined ID analysis
+    artifact_status:
+      canon_status: unknown
+      deployment_status: inert
+      review_state: unreviewed
+      authority_scope: none
+    strongest_safe_claim: "Reported Drive source placeholder only; no repo-visible raw catalog yet."
+
+  - source_id: DRIVE-COPILOT-CHAT-RAW
+    title: Copilot Chat raw transcript
+    surface: Drive
+    url_or_path: pending
+    file_type: unknown
+    created_or_modified: unknown
+    raw_export_status: pending
+    sha256_status: missing
+    source_class: raw_source
+    related_lane: copilotbrain / tidelock / graph_ingestion
+    review_priority: high
+    mirrored_to_github: false
+    missing_receipts:
+      - Drive file ID
+      - raw export
+      - SHA-256
+      - TIDELOCK route
+    artifact_status:
+      canon_status: unknown
+      deployment_status: inert
+      review_state: unreviewed
+      authority_scope: none
+    strongest_safe_claim: "Reported raw Copilot chat placeholder only; no fossil record until raw export and SHA-256 exist."
+
+  - source_id: NOTION-LEGACY-LATTICE-CANON-OVERFLOW
+    title: Legacy lattice / canon overflow roots
+    surface: Notion
+    url_or_path: pending
+    file_type: notion_page
+    created_or_modified: unknown
+    raw_export_status: pending
+    sha256_status: missing
+    source_class: prior_canon_snapshot
+    related_lane: notion_mirror / canon_overflow / archaeology
+    review_priority: high
+    mirrored_to_github: partial
+    missing_receipts:
+      - Notion page IDs
+      - export files
+      - SHA-256
+      - crosswalk to /canon and GitHub
+    artifact_status:
+      canon_status: unknown
+      deployment_status: inert
+      review_state: unreviewed
+      authority_scope: none
+    strongest_safe_claim: "Notion is legacy structure and source material, not canon by default."
+
+next_actions:
+  - task: "Review PR #190 and crosswalk this inventory against NOTION_SOURCE_ROOT_INVENTORY_v0.1.yaml."
+    lane: H1 Source Inventory
+  - task: "Create KG_NODE_EDGE_SCHEMA_v0.1.yaml."
+    lane: H2 Knowledge Graph Schema
+  - task: "Create CLAUDE_ADVERSARIAL_REVIEW_QUEUE_2026-05-24.md."
+    lane: H6 Claude Quarantine
+  - task: "Add source records for Drive/Gamma once connector-visible IDs or exports are available."
+    lane: H1 Source Inventory
+  - task: "Do not let graph centrality, wrapper PRs, or summary-only packets become authority."
+    lane: H7 Status Enforcement
