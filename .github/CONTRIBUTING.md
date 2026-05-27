@@ -69,9 +69,11 @@ All artifacts in this repository are **candidates** unless explicitly marked `ca
 | `dream` | Compressed simulation outputs |
 | `seed` | Structured JSONL seed data |
 | `schema` | YAML/JSON schemas |
+| `registry` | Machine-readable artifact index and relationships |
 | `agent-dna` | Agent identity declarations |
 | `synthesis` | Cross-model synthesis outputs |
 | `blueprint` | Project architecture docs |
+| `guide` | Contributor or implementation guidance |
 
 ### Lifecycle States
 New artifacts should indicate their status:
@@ -91,6 +93,18 @@ Major new artifacts should include a provenance block:
 > **Review:** Pending @atlaslattice
 ```
 
+### Machine-Readable Graph Metadata
+
+For mission-critical net-new artifacts, update:
+
+- `docs/knowledge-graph/artifact_taxonomy.v0_1.json` (if adding a new type/state pattern)
+- `docs/knowledge-graph/artifact_registry.v0_1.json` (stable ID, path, and required cross-links)
+
+Registry entries must include:
+
+- `id`, `title`, `artifact_type`, `status`, `path`, `links`
+- at least one outbound link with `relation` and `target_id`
+
 ---
 
 ## Issue and PR Guidelines
@@ -108,6 +122,7 @@ All PRs must pass:
 - **Repo Hygiene** (`repo-hygiene-checks.yml`): merge-conflict markers, workflow syntax
 - **Docs Link Checks** (`docs-link-checks.yml`): internal markdown link validation
 - **GPTBrain Reference Checks** (`gptbrain-reference-checks.yml`): pytest suite for Python scaffold
+- **Artifact Graph Checks** (`artifact-graph-checks.yml`): taxonomy/registry structure and cross-link integrity
 
 ---
 

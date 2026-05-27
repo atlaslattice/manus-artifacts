@@ -1,0 +1,113 @@
+{
+  "schema_version": "0.1",
+  "artifact_count": 10,
+  "artifacts": [
+    {
+      "id": "AL-MISSION-001",
+      "title": "Aetherforge + Lattice + GPTDream++ Mission Charter v0.1",
+      "artifact_type": "doctrine",
+      "status": "CANDIDATE",
+      "path": "projects/AETHERFORGE_LATTICE_GPTDREAM_MISSION_CHARTER_v0.1.md",
+      "links": [
+        {"relation": "defines", "target_id": "AL-KG-001"},
+        {"relation": "defines", "target_id": "AL-AF-001"},
+        {"relation": "defines", "target_id": "AL-GP-001"},
+        {"relation": "defines", "target_id": "AL-RT-001"}
+      ]
+    },
+    {
+      "id": "AL-KG-001",
+      "title": "Artifact Taxonomy v0.1",
+      "artifact_type": "schema",
+      "status": "CANDIDATE",
+      "path": "docs/knowledge-graph/artifact_taxonomy.v0_1.json",
+      "links": [
+        {"relation": "referenced_by", "target_id": "AL-KG-002"}
+      ]
+    },
+    {
+      "id": "AL-KG-002",
+      "title": "Artifact Registry v0.1",
+      "artifact_type": "registry",
+      "status": "CANDIDATE",
+      "path": "docs/knowledge-graph/artifact_registry.v0_1.json",
+      "links": [
+        {"relation": "indexes", "target_id": "AL-MISSION-001"},
+        {"relation": "indexes", "target_id": "AL-AF-001"},
+        {"relation": "indexes", "target_id": "AL-GP-001"},
+        {"relation": "indexes", "target_id": "AL-RT-001"}
+      ]
+    },
+    {
+      "id": "AL-AF-001",
+      "title": "Aetherforge Game Loop Spec v0.1",
+      "artifact_type": "spec",
+      "status": "CANDIDATE",
+      "path": "projects/aetherforge-game-world/AETHERFORGE_GAME_LOOP_SPEC_v0.1.md",
+      "links": [
+        {"relation": "implemented_by", "target_id": "AL-EXEC-001"}
+      ]
+    },
+    {
+      "id": "AL-GP-001",
+      "title": "GPTDream++ Open Gift Package Guide v0.1",
+      "artifact_type": "guide",
+      "status": "CANDIDATE",
+      "path": "archive/spec/gptdream/OPEN_GIFT_PACKAGE_GUIDE_v0.1.md",
+      "links": [
+        {"relation": "depends_on", "target_id": "AL-GP-002"}
+      ]
+    },
+    {
+      "id": "AL-GP-002",
+      "title": "GPTDream++ Vault Manifest",
+      "artifact_type": "registry",
+      "status": "CANDIDATE",
+      "path": "archive/spec/gptdream/VAULT_MANIFEST_2026-05-26.md",
+      "links": [
+        {"relation": "summarized_by", "target_id": "AL-GP-001"}
+      ]
+    },
+    {
+      "id": "AL-RT-001",
+      "title": "Ratification and Trust Flow",
+      "artifact_type": "doctrine",
+      "status": "CANDIDATE",
+      "path": "docs/RATIFICATION_AND_TRUST_FLOW.md",
+      "links": [
+        {"relation": "governs", "target_id": "AL-MISSION-001"}
+      ]
+    },
+    {
+      "id": "AL-EXEC-001",
+      "title": "Aetherforge Rolling Sprints",
+      "artifact_type": "blueprint",
+      "status": "CANDIDATE",
+      "path": "projects/AETHERFORGE_ROLLING_SPRINTS_v0.1.md",
+      "links": [
+        {"relation": "prioritizes", "target_id": "AL-KG-001"},
+        {"relation": "prioritizes", "target_id": "AL-KG-002"}
+      ]
+    },
+    {
+      "id": "AL-CI-001",
+      "title": "Artifact Graph Checks Workflow",
+      "artifact_type": "schema",
+      "status": "CANDIDATE",
+      "path": ".github/workflows/artifact-graph-checks.yml",
+      "links": [
+        {"relation": "runs", "target_id": "AL-CI-002"}
+      ]
+    },
+    {
+      "id": "AL-CI-002",
+      "title": "Artifact Graph Validator",
+      "artifact_type": "spec",
+      "status": "CANDIDATE",
+      "path": ".github/scripts/validate_artifact_graph.py",
+      "links": [
+        {"relation": "validates", "target_id": "AL-KG-002"}
+      ]
+    }
+  ]
+}

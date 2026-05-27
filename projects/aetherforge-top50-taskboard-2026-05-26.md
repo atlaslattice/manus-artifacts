@@ -14,7 +14,7 @@
 | # | Task | Status | Notes |
 |---|---|---|---|
 | 1 | Define a single global canon policy for what constitutes authoritative content in-repo | 🟡 Candidate | See [CONTRIBUTING.md](../.github/CONTRIBUTING.md) draft |
-| 2 | Create a repository-wide taxonomy for all artifact types (doctrine, spec, log, dream, seed, schema) | ⬜ Open | Needed for frontmatter validation |
+| 2 | Create a repository-wide taxonomy for all artifact types (doctrine, spec, log, dream, seed, schema) | ✅ Done | `docs/knowledge-graph/artifact_taxonomy.v0_1.json` |
 | 3 | Add stable semantic IDs for every major document (`ALM-v4`, `BAZZINGA-v0.1`, etc.) | ⬜ Open | Enables canonical cross-links |
 | 4 | Standardize folder naming conventions across all domains | ⬜ Open | Audit needed |
 | 5 | Add lifecycle states to all artifacts: `draft` → `candidate` → `ratified` → `archived` | ⬜ Open | Frontmatter standard |
@@ -33,7 +33,7 @@
 |---|---|---|---|
 | 11 | Enforce markdown linting and heading structure checks in CI | ✅ Done | `repo-hygiene-checks.yml` |
 | 12 | Enforce broken-link detection for all internal markdown links | ✅ Done | `docs-link-checks.yml` |
-| 13 | Add YAML frontmatter/schema validation for key document classes | ⬜ Open | Hook into CI |
+| 13 | Add YAML frontmatter/schema validation for key document classes | ✅ Done | `artifact-graph-checks.yml` + `validate_artifact_graph.py` |
 | 14 | Add duplicate-title and duplicate stable-ID detection | ⬜ Open | Python script |
 | 15 | Add orphan-file detection for unlinked important artifacts | ⬜ Open | |
 | 16 | Add merge-conflict marker detection across all text files | ✅ Done | `repo-hygiene-checks.yml` |
@@ -58,7 +58,7 @@
 | 27 | Add glossary pages for domain-specific terms | ✅ Done | See [GLOSSARY.md](../docs/GLOSSARY.md) |
 | 28 | Add changelog streams per major project/domain | ⬜ Open | CHANGELOG.md per domain |
 | 29 | Publish architecture map of all repository domains (ASCII + visual) | ✅ Done | In README.md |
-| 30 | Add dependency graph for conceptual and project relationships | ⬜ Open | Mermaid diagram |
+| 30 | Add dependency graph for conceptual and project relationships | ✅ Done | Mermaid graph added to `README.md` |
 
 ---
 
@@ -87,7 +87,7 @@
 |---|---|---|---|
 | 41 | Redesign README as a premium public landing page | ✅ Done | [README.md](../README.md) |
 | 42 | Add flagship artifact spotlight with value statements | ✅ Done | In README.md |
-| 43 | Add polished project overview pages for each major initiative | ⬜ Open | Free Bank, Chinook, 3-Tier |
+| 43 | Add polished project overview pages for each major initiative | ✅ Done | Added project overview READMEs and refreshed Chinook v1.0 |
 | 44 | Add visual identity consistency across major docs | ⬜ Open | Emoji + heading conventions |
 | 45 | Add a "state of the archive" quarterly report | ⬜ Open | [State_of_the_Union_Briefing.md](../State_of_the_Union_Briefing.md) extends this |
 | 46 | Add curated "best-of" reading lists by theme | ⬜ Open | |
@@ -101,24 +101,24 @@
 ## Progress Summary
 
 ```
-Ring I   (Canon & Structure):       2/10 done
-Ring II  (Quality Gates):           4/10 done
-Ring III (Discoverability):         5/10 done
+Ring I   (Canon & Structure):       3/10 done
+Ring II  (Quality Gates):           5/10 done
+Ring III (Discoverability):         6/10 done
 Ring IV  (Governance & Trust):      5/10 done
-Ring V   (Public Showcase):         5/10 done
+Ring V   (Public Showcase):         6/10 done
 ─────────────────────────────────────────────
-Total:  21/50 tasks complete  ▓▓▓▓▓▓▓▓░░░░░░░░░░░░  42%
+Total:  25/50 tasks complete  ▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░  50%
 ```
 
 ---
 
 ## Next Sprint Candidates (Highest-Impact Open Tasks)
 
-1. **#2** — Repository-wide artifact taxonomy (unlocks #3, #13, #22, #36)
-2. **#34** — CODEOWNERS (unlocks #37 SLAs)
-3. **#30** — Mermaid dependency graph in README
-4. **#43** — Polished per-project overview pages (Free Bank, Chinook, 3-Tier)
-5. **#13** — YAML frontmatter schema validation in CI
+1. **#34** — CODEOWNERS (unlocks #37 SLAs)
+2. **#14** — Duplicate-title and duplicate stable-ID detection
+3. **#18** — CI reporting for doc health by domain
+4. **#39** — Public quality rubric for world-class artifact status
+5. **#49** — World-readiness scorecard against top repos
 
 ---
 

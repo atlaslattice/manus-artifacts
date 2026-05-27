@@ -25,6 +25,7 @@ Everything here was built through conversational AI collaboration (Claude, GPT, 
 
 | I am a… | Go to… |
 |---|---|
+| **Mission / strategy reader** | [Mission Charter](./projects/AETHERFORGE_LATTICE_GPTDREAM_MISSION_CHARTER_v0.1.md) → [Rolling Sprints](./projects/AETHERFORGE_ROLLING_SPRINTS_v0.1.md) |
 | **Newcomer / curious human** | [About David Sheldon](./about/david-sheldon.md) → [Glossary](./docs/GLOSSARY.md) |
 | **Researcher or academic** | [Research](./research/) → [Archive Index](./docs/ARCHIVE_INDEX.md) |
 | **Engineer or builder** | [Aluminum OS Core](./aluminum-os-core/) → [BAZINGA](./bazinga/) → [Codebases](./codebases/) |
@@ -81,6 +82,7 @@ The Aetherforge swarm — a council of named AI agents with distinct roles, stre
 
 | Project | Mission | Stage | Docs |
 |---|---|---|---|
+| **[Aetherforge Game World](./projects/aetherforge-game-world/)** | Playable archive game layer for quest-driven curation and knowledge graph growth | 🟡 Candidate | [Game Loop Spec](./projects/aetherforge-game-world/AETHERFORGE_GAME_LOOP_SPEC_v0.1.md) |
 | **[Free Bank](./projects/free-bank/)** | Zero-fee DeFi replacement for extractive banking — MIT licensed, open-source, BRICS-compatible | 🔵 Blueprint | [Archive](./projects/free-bank/banking-revolution-archive.md) |
 | **[Chinook Guardian](./projects/chinook-guardian/)** | Aerospace and defense sovereignty protocols | 🔵 Blueprint | [v1.0](./projects/chinook-guardian/v1.0.md) |
 | **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** | Constitutional policy framework for agentic AI governance | 🟡 Draft | [Doctrine](./projects/three-tier-autonomy/doctrine.md) |
@@ -126,6 +128,10 @@ The Aetherforge swarm — a council of named AI agents with distinct roles, stre
 
 | Resource | Description |
 |---|---|
+| **[Mission Charter](./projects/AETHERFORGE_LATTICE_GPTDREAM_MISSION_CHARTER_v0.1.md)** | Unified north-star for Lattice + Aetherforge + GPTDream++ |
+| **[Knowledge Graph Taxonomy](./docs/knowledge-graph/artifact_taxonomy.v0_1.json)** | Machine-readable artifact types, lifecycle states, and required metadata |
+| **[Knowledge Graph Registry](./docs/knowledge-graph/artifact_registry.v0_1.json)** | Stable IDs and required cross-links between mission-critical artifacts |
+| **[Ratification & Trust Flow](./docs/RATIFICATION_AND_TRUST_FLOW.md)** | Candidate-to-canon adjudication checkpoints and traceability rules |
 | **[Archive Index](./docs/ARCHIVE_INDEX.md)** | Full searchable catalog of all artifact domains |
 | **[Start Here Guide](./docs/START_HERE.md)** | Persona-based reading paths |
 | **[Glossary](./docs/GLOSSARY.md)** | Domain terminology for all systems |
@@ -133,6 +139,23 @@ The Aetherforge swarm — a council of named AI agents with distinct roles, stre
 | **[CONTRIBUTING](./.github/CONTRIBUTING.md)** | How to contribute, canon rules, validation |
 | **[SECURITY](./SECURITY.md)** | Security and disclosure policy |
 | **[State of the Union](./State_of_the_Union_Briefing.md)** | Current status briefing |
+
+---
+
+## 🕸 Concept Dependency Graph (Candidate)
+
+```mermaid
+graph TD
+    A[AL-MISSION-001 Mission Charter] --> B[AL-KG-001 Taxonomy]
+    A --> C[AL-KG-002 Registry]
+    A --> D[AL-AF-001 Aetherforge Loop]
+    A --> E[AL-GP-001 GPTDream++ Open Gift]
+    A --> F[AL-RT-001 Ratification + Trust]
+    D --> G[AL-EXEC-001 Rolling Sprints]
+    C --> H[AL-CI-001 Artifact Graph Workflow]
+    H --> I[AL-CI-002 Graph Validator]
+    E --> J[AL-GP-002 Vault Manifest]
+```
 
 ---
 

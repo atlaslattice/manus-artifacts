@@ -84,9 +84,12 @@ This repository is the **canonical archive** of that work. Everything here is li
 
 1. [CONTRIBUTING.md](../.github/CONTRIBUTING.md) — start here, always
 2. [Canon Boundary Rules](../.github/CONTRIBUTING.md#canon-boundary) — nothing is canon until ratified
-3. [Aetherforge Taskboard](../projects/aetherforge-top50-taskboard-2026-05-26.md) — open tasks
-4. [Open Issues](https://github.com/atlaslattice/manus-artifacts/issues) — pick a task
-5. [PR Template](../.github/pull_request_template.md) — use for all PRs
+3. [Mission Charter](../projects/AETHERFORGE_LATTICE_GPTDREAM_MISSION_CHARTER_v0.1.md) — north-star framing
+4. [Aetherforge Taskboard](../projects/aetherforge-top50-taskboard-2026-05-26.md) — open tasks
+5. [Aetherforge Rolling Sprints](../projects/AETHERFORGE_ROLLING_SPRINTS_v0.1.md) — high-leverage queue
+6. [Artifact Registry](./knowledge-graph/artifact_registry.v0_1.json) — machine-readable IDs and links
+7. [Open Issues](https://github.com/atlaslattice/manus-artifacts/issues) — pick a task
+8. [PR Template](../.github/pull_request_template.md) — use for all PRs
 
 ---
 
@@ -95,9 +98,11 @@ This repository is the **canonical archive** of that work. Everything here is li
 
 1. [Aetherforge Taskboard](../projects/aetherforge-top50-taskboard-2026-05-26.md) — the full 50-task elevation plan
 2. [Archive Index](./ARCHIVE_INDEX.md) — full domain catalog
-3. [Artifact Type Taxonomy](./ARCHIVE_INDEX.md#artifact-type-taxonomy) — how to classify artifacts
-4. [CONTRIBUTING.md](../.github/CONTRIBUTING.md) — canon rules for curation
-5. High-value open tasks: #2 (taxonomy), #34 (CODEOWNERS), #13 (frontmatter validation), #43 (project overview pages)
+3. [Artifact Type Taxonomy (JSON)](./knowledge-graph/artifact_taxonomy.v0_1.json) — machine-readable classification
+4. [Artifact Registry (JSON)](./knowledge-graph/artifact_registry.v0_1.json) — stable IDs + cross-links
+5. [CONTRIBUTING.md](../.github/CONTRIBUTING.md) — canon rules for curation
+5. [Ratification & Trust Flow](./RATIFICATION_AND_TRUST_FLOW.md) — candidate-to-canon promotion rules
+6. High-value open tasks: #34 (CODEOWNERS), #14 (duplicate IDs), #18 (doc health summaries), #49 (world-readiness scorecard)
 
 ---
 
@@ -105,7 +110,9 @@ This repository is the **canonical archive** of that work. Everything here is li
 
 | Need | Go here |
 |---|---|
+| Mission framing | [Aetherforge + Lattice + GPTDream++ Mission Charter](../projects/AETHERFORGE_LATTICE_GPTDREAM_MISSION_CHARTER_v0.1.md) |
 | Full file catalog | [ARCHIVE_INDEX.md](./ARCHIVE_INDEX.md) |
+| Machine-readable graph links | [Artifact Registry](./knowledge-graph/artifact_registry.v0_1.json) |
 | Domain terminology | [GLOSSARY.md](./GLOSSARY.md) |
 | Open tasks | [Aetherforge Taskboard](../projects/aetherforge-top50-taskboard-2026-05-26.md) |
 | Contribute | [CONTRIBUTING.md](../.github/CONTRIBUTING.md) |

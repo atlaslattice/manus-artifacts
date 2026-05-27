@@ -1,0 +1,44 @@
+name: Artifact Graph Checks
+
+on:
+  push:
+    paths:
+      - 'docs/knowledge-graph/**'
+      - '.github/scripts/validate_artifact_graph.py'
+      - '.github/workflows/artifact-graph-checks.yml'
+      - 'projects/AETHERFORGE_LATTICE_GPTDREAM_MISSION_CHARTER_v0.1.md'
+      - 'projects/AETHERFORGE_ROLLING_SPRINTS_v0.1.md'
+      - 'projects/aetherforge-game-world/**'
+      - 'archive/spec/gptdream/OPEN_GIFT_PACKAGE_GUIDE_v0.1.md'
+      - 'docs/RATIFICATION_AND_TRUST_FLOW.md'
+  pull_request:
+    paths:
+      - 'docs/knowledge-graph/**'
+      - '.github/scripts/validate_artifact_graph.py'
+      - '.github/workflows/artifact-graph-checks.yml'
+      - 'projects/AETHERFORGE_LATTICE_GPTDREAM_MISSION_CHARTER_v0.1.md'
+      - 'projects/AETHERFORGE_ROLLING_SPRINTS_v0.1.md'
+      - 'projects/aetherforge-game-world/**'
+      - 'archive/spec/gptdream/OPEN_GIFT_PACKAGE_GUIDE_v0.1.md'
+      - 'docs/RATIFICATION_AND_TRUST_FLOW.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  artifact-graph:
+    name: Validate artifact graph metadata
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate taxonomy and registry
+        run: python .github/scripts/validate_artifact_graph.py

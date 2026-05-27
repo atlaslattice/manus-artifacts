@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "taxonomy": [
+    {"type": "doctrine", "description": "Immutable principles and constitutional rules"},
+    {"type": "spec", "description": "Technical specifications and protocol definitions"},
+    {"type": "schema", "description": "Machine-readable validation schemas"},
+    {"type": "registry", "description": "Machine-readable artifact index and relationships"},
+    {"type": "blueprint", "description": "Project and system architecture plans"},
+    {"type": "log", "description": "Execution, audit, and session logs"},
+    {"type": "dream", "description": "Compressed simulation or dream outputs"},
+    {"type": "seed", "description": "Structured ingest seed data"},
+    {"type": "guide", "description": "Contributor and onboarding guidance"}
+  ],
+  "lifecycle_states": [
+    "DRAFT",
+    "CANDIDATE",
+    "RATIFIED",
+    "ARCHIVED",
+    "DEPRECATED"
+  ],
+  "required_metadata_fields": [
+    "id",
+    "title",
+    "artifact_type",
+    "status",
+    "path",
+    "links"
+  ]
+}

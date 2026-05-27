@@ -2,7 +2,7 @@
 
 > Full catalog of all major artifact domains in this repository.
 > **580+ files** across 20+ domains.
-> Last updated: 2026-05-26 · Maintained by TIDELOCKBRAIN
+> Last updated: 2026-05-27 · Maintained by TIDELOCKBRAIN
 
 ---
 
@@ -29,6 +29,7 @@
 | [Health](#health) | ~10 | Patient rights, health sovereignty |
 | [Manus Vault](#manus-vault) | ~15 | Session summaries, Noah's Ark |
 | [Codebases](#codebases) | ~10 | Python artifact sync tools |
+| [Knowledge Graph Metadata](#knowledge-graph-metadata) | ~2 | Machine-readable taxonomy and cross-link registry |
 | [Archives — Janus](#archives--janus-checkpoints) | ~5 | Session state resurrection logs |
 | [Root Artifacts](#root-artifacts) | ~5 | State briefings, synthesis plans |
 
@@ -283,6 +284,18 @@
 
 **Path:** `archives/janus-checkpoints/`
 **Description:** Session state snapshots and resurrection protocols for Janus continuity.
+
+---
+
+## Knowledge Graph Metadata
+
+**Path:** `docs/knowledge-graph/`
+**Description:** Machine-readable substrate for artifact taxonomy, lifecycle states, stable IDs, and required cross-links.
+
+| File | Description |
+|---|---|
+| `artifact_taxonomy.v0_1.json` | Artifact types, lifecycle states, and required metadata fields |
+| `artifact_registry.v0_1.json` | Stable IDs, paths, and relation edges for mission-critical artifacts |
 
 ---
 
