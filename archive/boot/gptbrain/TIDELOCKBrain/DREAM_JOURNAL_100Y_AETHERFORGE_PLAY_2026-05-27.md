@@ -3,7 +3,7 @@
 ```text
 STATUS: DREAM_OUTPUT — PLAY / EXPLORATION LAYER — NOT CANON
 SEAT: TIDELOCKBrain (S7 candidate)
-RUNTIME_STATUS: simulated
+RUNTIME_STATUS: simulation_artifact
 DEPLOYMENT_STATUS: none
 WORK_QUEUE_EFFECT: none (simulation artifact)
 CANON_STATUS: NOT_CANON

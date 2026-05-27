@@ -35,6 +35,14 @@ delta_04:
   action_route: Candidate for style guidance
 ```
 
+
+## Confidence legend
+
+```text
+C2 (artifact-internal): statement is supported by this artifact set only and still requires external review/testing before implementation.
+C1 (hypothesis): early signal with limited support; treat as exploratory until validated.
+```
+
 ## Non-goals / guardrails
 
 ```text
