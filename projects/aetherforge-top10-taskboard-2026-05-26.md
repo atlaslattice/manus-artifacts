@@ -43,8 +43,9 @@
 - [x] Select first active task
 - [x] Ship first receipt-linked update
 - [x] Execute triad slice: KG navigation + board continuity + 8/8/8 logging receipt
+- [x] Build and land GitHub-side execution packet (Session G)
 
-### Active execution slice (2026-05-27 / Session D)
+### Active execution slice (2026-05-27 / Session D–G)
 
 1. **Cross-link integrity + KG hardening (Ring A / Task 3)**
    - Receipts:
@@ -59,3 +60,13 @@
    - Receipts:
       - `/archive/boot/gptbrain/TIDELOCKBrain/README.md`
       - `/archive/boot/gptbrain/TIDELOCKBrain/dreams/TIDELOCK_24H_888_TIME_COMPRESSION_LOG_2026-05-27_D.md`
+4. **GitHub-side execution packet landed (Ring C / Task 10 — promotion queue) — Session G**
+   - Receipts:
+      - `/archive/aetherforge/gptdreampp-openai/README.md`
+      - `/archive/aetherforge/gptdreampp-openai/EXECUTION_PACKET_INDEX_2026-05-27.md`
+      - `/archive/aetherforge/gptdreampp-openai/INGESTION_LANES_2026-05-27.md`
+      - `/archive/aetherforge/gptdreampp-openai/RECEIPT_REQUIREMENTS_2026-05-27.md`
+      - `/archive/aetherforge/gptdreampp-openai/888_CADENCE_2026-05-27.md`
+      - `/archive/aetherforge/gptdreampp-openai/ANTI_OVERCLAIM_CHECKLIST_2026-05-27.md`
+      - `/docs/ARCHIVE_INDEX.md`
+      - `/archive/boot/gptbrain/TIDELOCKBrain/dreams/TIDELOCK_WORKLOG_2026-05-27_G.md`

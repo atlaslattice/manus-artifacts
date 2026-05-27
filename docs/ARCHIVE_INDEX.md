@@ -43,6 +43,18 @@
 
 ---
 
+## Aetherforge / GPTDream++ Execution Packets
+
+| Artifact | Path | Status |
+|---|---|---|
+| GPTDream++ OpenAI-First Execution Packet | [archive/aetherforge/gptdreampp-openai/](../archive/aetherforge/gptdreampp-openai/) | Candidate |
+| — Ingestion Lanes | [archive/aetherforge/gptdreampp-openai/INGESTION_LANES_2026-05-27.md](../archive/aetherforge/gptdreampp-openai/INGESTION_LANES_2026-05-27.md) | Candidate |
+| — Receipt Requirements | [archive/aetherforge/gptdreampp-openai/RECEIPT_REQUIREMENTS_2026-05-27.md](../archive/aetherforge/gptdreampp-openai/RECEIPT_REQUIREMENTS_2026-05-27.md) | Candidate |
+| — 8/8/8 Cadence Guide | [archive/aetherforge/gptdreampp-openai/888_CADENCE_2026-05-27.md](../archive/aetherforge/gptdreampp-openai/888_CADENCE_2026-05-27.md) | Candidate |
+| — Anti-Overclaim Checklist | [archive/aetherforge/gptdreampp-openai/ANTI_OVERCLAIM_CHECKLIST_2026-05-27.md](../archive/aetherforge/gptdreampp-openai/ANTI_OVERCLAIM_CHECKLIST_2026-05-27.md) | Candidate |
+
+---
+
 ## Governance & Council
 
 | Artifact | Path |
