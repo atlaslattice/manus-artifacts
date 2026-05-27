@@ -1,0 +1,511 @@
+{
+  "schema_version": "aetherforge.task_matrix.v1",
+  "name": "Aetherforge Simulation Sandbox 12x12 Task Matrix",
+  "boundary": {
+    "canon_adjustments": false,
+    "deployment_claims": false,
+    "authority_claims": false,
+    "runtime_scope": "local deterministic simulation"
+  },
+  "dimensions": {
+    "domains": 12,
+    "tasks_per_domain": 12,
+    "total_tasks": 144
+  },
+  "domains": [
+    {
+      "id": "D01",
+      "name": "Repository hygiene",
+      "task_count": 12
+    },
+    {
+      "id": "D02",
+      "name": "Simulation kernel",
+      "task_count": 12
+    },
+    {
+      "id": "D03",
+      "name": "Task matrix integrity",
+      "task_count": 12
+    },
+    {
+      "id": "D04",
+      "name": "Quality gates",
+      "task_count": 12
+    },
+    {
+      "id": "D05",
+      "name": "Open-source onboarding",
+      "task_count": 12
+    },
+    {
+      "id": "D06",
+      "name": "Data and schemas",
+      "task_count": 12
+    },
+    {
+      "id": "D07",
+      "name": "Safety boundaries",
+      "task_count": 12
+    },
+    {
+      "id": "D08",
+      "name": "Developer experience",
+      "task_count": 12
+    },
+    {
+      "id": "D09",
+      "name": "Observability",
+      "task_count": 12
+    },
+    {
+      "id": "D10",
+      "name": "Examples and fixtures",
+      "task_count": 12
+    },
+    {
+      "id": "D11",
+      "name": "Interoperability",
+      "task_count": 12
+    },
+    {
+      "id": "D12",
+      "name": "World-class hardening",
+      "task_count": 12
+    }
+  ],
+  "tasks": [
+    {
+      "id": "D01-T01",
+      "domain": "Repository hygiene",
+      "domain_index": 1,
+      "task_index": 1,
+      "title": "Add concise project README and quickstart",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "validation",
+      "dependencies": []
+    },
+    {
+      "id": "D01-T02",
+      "domain": "Repository hygiene",
+      "domain_index": 1,
+      "task_index": 2,
+      "title": "Add permissive subtree license notice",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "usability",
+      "dependencies": []
+    },
+    {
+      "id": "D01-T03",
+      "domain": "Repository hygiene",
+      "domain_index": 1,
+      "task_index": 3,
+      "title": "Add contribution pathway for simulation work",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "safety",
+      "dependencies": []
+    },
+    {
+      "id": "D01-T04",
+      "domain": "Repository hygiene",
+      "domain_index": 1,
+      "task_index": 4,
+      "title": "Add code of conduct pointer for collaborative safety",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "interoperability",
+      "dependencies": []
+    },
+    {
+      "id": "D01-T05",
+      "domain": "Repository hygiene",
+      "domain_index": 1,
+      "task_index": 5,
+      "title": "Add changelog skeleton for simulation releases",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "reproducibility",
+      "dependencies": []
+    },
+    {
+      "id": "D01-T06",
+      "domain": "Repository hygiene",
+      "domain_index": 1,
+      "task_index": 6,
+      "title": "Add issue template for simulator bugs",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "validation",
+      "dependencies": []
+    },
+    {
+      "id": "D01-T07",
+      "domain": "Repository hygiene",
+      "domain_index": 1,
+      "task_index": 7,
+      "title": "Add issue template for task proposals",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "usability",
+      "dependencies": []
+    },
+    {
+      "id": "D01-T08",
+      "domain": "Repository hygiene",
+      "domain_index": 1,
+      "task_index": 8,
+      "title": "Add PR checklist for non-canon simulation work",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "safety",
+      "dependencies": []
+    },
+    {
+      "id": "D01-T09",
+      "domain": "Repository hygiene",
+      "domain_index": 1,
+      "task_index": 9,
+      "title": "Add repository map for discoverability",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "interoperability",
+      "dependencies": []
+    },
+    {
+      "id": "D01-T10",
+      "domain": "Repository hygiene",
+      "domain_index": 1,
+      "task_index": 10,
+      "title": "Add dependency policy with zero-runtime baseline",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "reproducibility",
+      "dependencies": []
+    },
+    {
+      "id": "D01-T11",
+      "domain": "Repository hygiene",
+      "domain_index": 1,
+      "task_index": 11,
+      "title": "Add security reporting note",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "validation",
+      "dependencies": []
+    },
+    {
+      "id": "D01-T12",
+      "domain": "Repository hygiene",
+      "domain_index": 1,
+      "task_index": 12,
+      "title": "Add release tagging convention",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "usability",
+      "dependencies": []
+    },
+    {
+      "id": "D02-T01",
+      "domain": "Simulation kernel",
+      "domain_index": 2,
+      "task_index": 1,
+      "title": "Implement deterministic state model",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "usability",
+      "dependencies": []
+    },
+    {
+      "id": "D02-T02",
+      "domain": "Simulation kernel",
+      "domain_index": 2,
+      "task_index": 2,
+      "title": "Implement seeded scenario generation",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "safety",
+      "dependencies": []
+    },
+    {
+      "id": "D02-T03",
+      "domain": "Simulation kernel",
+      "domain_index": 2,
+      "task_index": 3,
+      "title": "Implement per-step transition function",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "interoperability",
+      "dependencies": []
+    },
+    {
+      "id": "D02-T04",
+      "domain": "Simulation kernel",
+      "domain_index": 2,
+      "task_index": 4,
+      "title": "Implement invariant checks",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "reproducibility",
+      "dependencies": []
+    },
+    {
+      "id": "D02-T05",
+      "domain": "Simulation kernel",
+      "domain_index": 2,
+      "task_index": 5,
+      "title": "Implement receipt hash chain",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "validation",
+      "dependencies": []
+    },
+    {
+      "id": "D02-T06",
+      "domain": "Simulation kernel",
+      "domain_index": 2,
+      "task_index": 6,
+      "title": "Implement replay from scenario and seed",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "usability",
+      "dependencies": []
+    },
+    {
+      "id": "D02-T07",
+      "domain": "Simulation kernel",
+      "domain_index": 2,
+      "task_index": 7,
+      "title": "Implement failure injection hooks",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "safety",
+      "dependencies": []
+    },
+    {
+      "id": "D02-T08",
+      "domain": "Simulation kernel",
+      "domain_index": 2,
+      "task_index": 8,
+      "title": "Implement bounded randomness wrapper",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "interoperability",
+      "dependencies": []
+    },
+    {
+      "id": "D02-T09",
+      "domain": "Simulation kernel",
+      "domain_index": 2,
+      "task_index": 9,
+      "title": "Implement stable JSON serialization",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "reproducibility",
+      "dependencies": []
+    },
+    {
+      "id": "D02-T10",
+      "domain": "Simulation kernel",
+      "domain_index": 2,
+      "task_index": 10,
+      "title": "Implement run summary metrics",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "validation",
+      "dependencies": []
+    },
+    {
+      "id": "D02-T11",
+      "domain": "Simulation kernel",
+      "domain_index": 2,
+      "task_index": 11,
+      "title": "Implement CLI simulation command",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "usability",
+      "dependencies": []
+    },
+    {
+      "id": "D02-T12",
+      "domain": "Simulation kernel",
+      "domain_index": 2,
+      "task_index": 12,
+      "title": "Implement simulation fixture outputs",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "safety",
+      "dependencies": []
+    },
+    {
+      "id": "D03-T01",
+      "domain": "Task matrix integrity",
+      "domain_index": 3,
+      "task_index": 1,
+      "title": "Create balanced 12x12 matrix data file",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "safety",
+      "dependencies": []
+    },
+    {
+      "id": "D03-T02",
+      "domain": "Task matrix integrity",
+      "domain_index": 3,
+      "task_index": 2,
+      "title": "Validate exactly 12 domains",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "interoperability",
+      "dependencies": []
+    },
+    {
+      "id": "D03-T03",
+      "domain": "Task matrix integrity",
+      "domain_index": 3,
+      "task_index": 3,
+      "title": "Validate exactly 12 tasks per domain",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "reproducibility",
+      "dependencies": []
+    },
+    {
+      "id": "D03-T04",
+      "domain": "Task matrix integrity",
+      "domain_index": 3,
+      "task_index": 4,
+      "title": "Validate exactly 144 unique task IDs",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "validation",
+      "dependencies": []
+    },
+    {
+      "id": "D03-T05",
+      "domain": "Task matrix integrity",
+      "domain_index": 3,
+      "task_index": 5,
+      "title": "Validate stable task ordering",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "usability",
+      "dependencies": []
+    },
+    {
+      "id": "D03-T06",
+      "domain": "Task matrix integrity",
+      "domain_index": 3,
+      "task_index": 6,
+      "title": "Validate domain balance scores",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "safety",
+      "dependencies": []
+    },
+    {
+      "id": "D03-T07",
+      "domain": "Task matrix integrity",
+      "domain_index": 3,
+      "task_index": 7,
+      "title": "Validate task status vocabulary",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "interoperability",
+      "dependencies": []
+    },
+    {
+      "id": "D03-T08",
+      "domain": "Task matrix integrity",
+      "domain_index": 3,
+      "task_index": 8,
+      "title": "Validate task ownership fields",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "reproducibility",
+      "dependencies": []
+    },
+    {
+      "id": "D03-T09",
+      "domain": "Task matrix integrity",
+      "domain_index": 3,
+      "task_index": 9,
+      "title": "Validate non-canon boundary field",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "validation",
+      "dependencies": []
+    },
+    {
+      "id": "D03-T10",
+      "domain": "Task matrix integrity",
+      "domain_index": 3,
+      "task_index": 10,
+      "title": "Validate milestone mapping",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "usability",
+      "dependencies": []
+    },
+    {
+      "id": "D03-T11",
+      "domain": "Task matrix integrity",
+      "domain_index": 3,
+      "task_index": 11,
+      "title": "Validate export format",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "safety",
+      "dependencies": []
+    },
+    {
+      "id": "D03-T12",
+      "domain": "Task matrix integrity",
+      "domain_index": 3,
+      "task_index": 12,
+      "title": "Validate matrix CLI command",
+      "status": "candidate",
+      "boundary": "non-canon simulation infrastructure",
+      "completion_definition": "A reviewer can validate the change locally without external services or authority/deployment claims.",
+      "simulation_value": "interoperability",
+      "dependencies": []
+    }
+  ]
+}
