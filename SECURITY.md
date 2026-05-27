@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-SECURITY-MD-2026-05-27
+title: Security Policy
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # Security Policy
 
 ## Supported Versions

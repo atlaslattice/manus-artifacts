@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-README-MD-2026-05-27
+title: Atlas Lattice Foundation — Manus Artifacts
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # Atlas Lattice Foundation — Manus Artifacts
 
 > *"Why is 90% of the planet in abject poverty when we have the technology for regenerative abundance?"*
@@ -75,6 +84,8 @@ All work is **MIT licensed**, intended to be **public**, and held to **world-cla
 | [Launch Blockers Tracker](./docs/LAUNCH_BLOCKERS_TRACKER.md) | Manual blockers and closure evidence tracking |
 | [World-Class Readiness Gates](./docs/WORLD_CLASS_READINESS_GATES.md) | 50/75/pre-release go-no-go gates |
 | [Good First Issues](./docs/GOOD_FIRST_ISSUES.md) | Public contributor lanes for high-impact work |
+| [Metadata Backfill Scope](./docs/METADATA_BACKFILL_SCOPE_2026-05-27.md) | Wave 3 top-50 and next-100 metadata queue |
+| [Metadata Coverage Report](./docs/METADATA_COVERAGE_REPORT_2026-05-27.md) | Current frontmatter and provenance coverage |
 
 ---
 
@@ -92,6 +103,8 @@ See [CONTRIBUTING.md](./.github/CONTRIBUTING.md) for branch naming, commit conve
 ## 📊 Public Launch Progress
 
 29 / 50 tasks complete — see the [Aetherforge Top-50 Taskboard](./projects/aetherforge-top50-taskboard-2026-05-26.md).
+
+Wave 3 metadata/provenance outputs are now published: [backfill scope](./docs/METADATA_BACKFILL_SCOPE_2026-05-27.md), [coverage report](./docs/METADATA_COVERAGE_REPORT_2026-05-27.md), [provenance completeness](./docs/PROVENANCE_COMPLETENESS_REPORT_2026-05-27.md), and [monthly drift snapshot](./projects/status-reports/PROVENANCE_DRIFT_REPORT_2026-05.md).
 
 **⚠️ Pre-public blockers** (require @atlaslattice manual action):
 1. Secret scan of git history

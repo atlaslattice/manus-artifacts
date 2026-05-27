@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-DOCS-GLOSSARY-MD-2026-05-27
+title: 📖 Glossary — Atlas Lattice Foundation
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # 📖 Glossary — Atlas Lattice Foundation
 
 Key terms, acronyms, and concepts used throughout the archive.

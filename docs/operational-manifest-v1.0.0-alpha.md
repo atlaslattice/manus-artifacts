@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-DOCS-OPERATIONAL-MANIFEST-V1-0-0-ALPHA-MD-2026-05-27
+title: Constitutional Computing OS: Operational Manifest
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # Constitutional Computing OS: Operational Manifest
 
 **Version:** 1.0.0-alpha

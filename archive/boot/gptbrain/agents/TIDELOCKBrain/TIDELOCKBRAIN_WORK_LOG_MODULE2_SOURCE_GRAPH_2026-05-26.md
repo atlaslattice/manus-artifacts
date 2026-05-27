@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-AGENTS-TIDELOCKBRAIN-TIDELOCKBRAIN-WORK-LOG-MODULE2-SOURCE-GRAPH-2026-05-26-MD-2026-05-27
+title: TIDELOCKBrain Work Log — Module 2 Source Graph Engine
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # TIDELOCKBrain Work Log — Module 2 Source Graph Engine
 
 - Date: 2026-05-26

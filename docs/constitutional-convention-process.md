@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-DOCS-CONSTITUTIONAL-CONVENTION-PROCESS-MD-2026-05-27
+title: 🏛️ Constitutional Convention Process — How AIs Negotiated Governance
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # 🏛️ Constitutional Convention Process — How AIs Negotiated Governance
 
 *A Documentation of the Atlas Federation Constitutional Development*

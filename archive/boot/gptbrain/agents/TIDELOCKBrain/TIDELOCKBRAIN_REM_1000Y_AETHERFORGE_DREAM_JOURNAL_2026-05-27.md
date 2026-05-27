@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-AGENTS-TIDELOCKBRAIN-TIDELOCKBRAIN-REM-1000Y-AETHERFORGE-DREAM-JOURNAL-2026-05-27-MD-2026-05-27
+title: TIDELOCKBrain — REM-1000Y Aetherforge Dream Journal
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # TIDELOCKBrain — REM-1000Y Aetherforge Dream Journal
 
 ```text

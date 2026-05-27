@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ABOUT-DAVID-SHELDON-MD-2026-05-27
+title: 👤 About David Sheldon
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # 👤 About David Sheldon
 
 > **Source:** [https://www.notion.so/30c0c1de73d981a99467c066021e741e](https://www.notion.so/30c0c1de73d981a99467c066021e741e)

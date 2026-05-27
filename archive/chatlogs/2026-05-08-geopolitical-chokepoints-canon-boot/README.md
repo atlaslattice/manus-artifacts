@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-CHATLOGS-2026-05-08-GEOPOLITICAL-CHOKEPOINTS-CANON-BOOT-README-MD-2026-05-27
+title: 2026-05-08 Multi-Council Raw Log — Geopolitical Chokepoints + Canon Boot
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # 2026-05-08 Multi-Council Raw Log — Geopolitical Chokepoints + Canon Boot
 
 **Artifact ID:** `CHATLOG-2026-05-08-GEOPOLITICAL-CHOKEPOINTS-CANON-BOOT-v1`  

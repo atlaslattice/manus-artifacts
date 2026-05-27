@@ -7,7 +7,6 @@ created: 2026-05-27
 last_updated: 2026-05-27
 source_of_truth: GitHub
 ---
-
 # Aetherforge 12x12 Hypercube Campaign (144 Tasks)
 
 ## Mission
@@ -224,3 +223,4 @@ Operationalize a 12x12 campaign to make Atlas Lattice fully public, open-source,
 - Keep monthly snapshots in `/tmp/workspace/atlaslattice/manus-artifacts/projects/status-reports/`.
 - Track blocker closure evidence in `/tmp/workspace/atlaslattice/manus-artifacts/docs/LAUNCH_BLOCKERS_TRACKER.md`.
 - Keep AI claims lineage updated in `/tmp/workspace/atlaslattice/manus-artifacts/docs/AI_SYSTEMS_EVIDENCE_INDEX.md`.
+- Wave 3 metadata/provenance outputs live in `/tmp/workspace/atlaslattice/manus-artifacts/docs/METADATA_BACKFILL_SCOPE_2026-05-27.md`, `/tmp/workspace/atlaslattice/manus-artifacts/docs/METADATA_COVERAGE_REPORT_2026-05-27.md`, and `/tmp/workspace/atlaslattice/manus-artifacts/projects/status-reports/PROVENANCE_DRIFT_REPORT_2026-05.md`.

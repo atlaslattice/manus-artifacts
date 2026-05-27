@@ -7,7 +7,6 @@ created: 2026-05-27
 last_updated: 2026-05-27
 source_of_truth: GitHub
 ---
-
 # Public Roadmap
 
 ## Now (Wave 1)
@@ -25,7 +24,7 @@ source_of_truth: GitHub
 ## Next (Waves 2-6)
 
 - Navigation backfill and domain indices
-- Provenance/frontmatter backfill for flagship artifacts
+- Provenance/frontmatter backfill for flagship artifacts (Wave 3 scope + reports now published)
 - Archive normalization and lifecycle consistency
 - Knowledge graph relationship typing and orphan checks
 - Search/discovery improvements

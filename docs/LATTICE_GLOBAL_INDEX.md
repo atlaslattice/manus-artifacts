@@ -1,6 +1,16 @@
+---
+artifact_id: DOC-LATTICE-GLOBAL-INDEX-2026-05-27
+title: Lattice Global Index
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
+
 # Lattice Global Index
 
-Generated at: `2026-05-27T22:22:57+00:00`
+Generated at: `2026-05-27T22:26:37+00:00`
 
 ## Domain Summary
 
@@ -8,19 +18,20 @@ Generated at: `2026-05-27T22:22:57+00:00`
 |---|---:|
 | `(root)` | 8 |
 | `.github` | 5 |
+| `.pytest_cache` | 1 |
 | `about` | 1 |
 | `aluminum-os` | 22 |
 | `aluminum-os-core` | 1 |
-| `archive` | 167 |
+| `archive` | 168 |
 | `archives` | 1 |
 | `bazinga` | 1 |
 | `codebases` | 57 |
 | `council` | 1 |
 | `council-reviews` | 2 |
-| `docs` | 20 |
+| `docs` | 27 |
 | `health` | 4 |
 | `manus-vault` | 12 |
-| `projects` | 7 |
+| `projects` | 8 |
 | `research` | 7 |
 | `sheldonbrain` | 1 |
 
@@ -42,6 +53,9 @@ Generated at: `2026-05-27T22:22:57+00:00`
 - `.github/ISSUE_TEMPLATE/bug_report.md`
 - `.github/ISSUE_TEMPLATE/feature_request.md`
 - `.github/PULL_REQUEST_TEMPLATE.md`
+
+### .pytest_cache
+- `.pytest_cache/README.md`
 
 ### about
 - `about/david-sheldon.md`
@@ -73,7 +87,7 @@ Generated at: `2026-05-27T22:22:57+00:00`
 - `archive/boot/COUNCIL_BRAIN_FULL_SYNTHESIS_2026-05-09.md`
 - `archive/boot/COUNCIL_BRAIN_INDEX.md`
 - `archive/boot/agents/TUCKER_GPT_GEMINI_DEFENSE_INTERFACE_SPEC_2026-05-09.md`
-- ... 157 more
+- ... 158 more
 
 ### archives
 - `archives/janus-checkpoints/latest-checkpoint.md`
@@ -105,14 +119,14 @@ Generated at: `2026-05-27T22:22:57+00:00`
 - `docs/AI_SYSTEMS_EVIDENCE_INDEX.md`
 - `docs/ARCHITECTURE_MAP.md`
 - `docs/ARCHIVE_INDEX.md`
+- `docs/ARTIFACT_ID_COLLISION_REPORT_2026-05-27.md`
 - `docs/ARTIFACT_RELATIONSHIP_TYPES.md`
 - `docs/ATLAS_LATTICE_PUBLIC_CHARTER_500IP.md`
 - `docs/CONTRIBUTOR_QUICKSTART.md`
 - `docs/FAQ.md`
 - `docs/FOLDER_TAXONOMY_AUDIT_2026-05-27.md`
 - `docs/GLOSSARY.md`
-- `docs/GOOD_FIRST_ISSUES.md`
-- ... 10 more
+- ... 17 more
 
 ### health
 - `health/austin-in-home-pt.md`
@@ -140,6 +154,7 @@ Generated at: `2026-05-27T22:22:57+00:00`
 - `projects/chinook-guardian/v1.0.md`
 - `projects/free-bank/banking-revolution-archive.md`
 - `projects/status-reports/AI_EVIDENCE_STATUS_2026-05.md`
+- `projects/status-reports/PROVENANCE_DRIFT_REPORT_2026-05.md`
 - `projects/three-tier-autonomy/doctrine.md`
 
 ### research

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-STATE-OF-THE-UNION-BRIEFING-MD-2026-05-27
+title: State of the Union Briefing: Atlas Lattice Foundation
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # State of the Union Briefing: Atlas Lattice Foundation
 **Date:** April 16, 2026
 **Author:** Manus AI

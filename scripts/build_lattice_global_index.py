@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "docs/LATTICE_GLOBAL_INDEX.md"
+BACKFILL_DATE = "2026-05-27"
 
 EXCLUDED_PREFIXES = {
     ".git/",
@@ -31,6 +32,16 @@ def build_index() -> str:
     now = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
     lines = [
+        "---",
+        "artifact_id: DOC-LATTICE-GLOBAL-INDEX-2026-05-27",
+        "title: Lattice Global Index",
+        "status: CANDIDATE",
+        "owner: atlaslattice",
+        f"created: {BACKFILL_DATE}",
+        f"last_updated: {BACKFILL_DATE}",
+        "source_of_truth: GitHub",
+        "---",
+        "",
         "# Lattice Global Index",
         "",
         f"Generated at: `{now}`",

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-DOCS-ARCHIVE-INDEX-MD-2026-05-27
+title: 🗂️ Archive Index — Atlas Lattice Foundation
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # 🗂️ Archive Index — Atlas Lattice Foundation
 
 > Full index of all artifact domains in this repository.

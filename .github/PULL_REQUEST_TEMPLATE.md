@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-GITHUB-PULL-REQUEST-TEMPLATE-MD-2026-05-27
+title: Summary
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 ## Summary
 
 <!-- Describe what this PR does and why. -->

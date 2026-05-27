@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODE-OF-CONDUCT-MD-2026-05-27
+title: Contributor Covenant Code of Conduct
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # Contributor Covenant Code of Conduct
 
 ## Our Pledge

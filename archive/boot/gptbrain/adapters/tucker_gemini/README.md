@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-ADAPTERS-TUCKER-GEMINI-README-MD-2026-05-27
+title: Tucker / Gemini Adapter Scaffold
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # Tucker / Gemini Adapter Scaffold
 
 ```text

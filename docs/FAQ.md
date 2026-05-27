@@ -7,7 +7,6 @@ created: 2026-05-27
 last_updated: 2026-05-27
 source_of_truth: GitHub
 ---
-
 # FAQ
 
 ## What is this repository?

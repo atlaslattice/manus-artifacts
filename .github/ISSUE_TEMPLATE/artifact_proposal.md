@@ -1,11 +1,16 @@
 ---
+artifact_id: ARTIFACT-GITHUB-ISSUE-TEMPLATE-ARTIFACT-PROPOSAL-MD-2026-05-27
+title: "[ARTIFACT] "
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
 name: Artifact Proposal
 about: Propose a new artifact for the archive (document, spec, research, protocol)
-title: "[ARTIFACT] "
 labels: artifact-proposal
 assignees: atlaslattice
 ---
-
 ## Artifact Title
 
 <!-- Proposed title of the artifact. -->

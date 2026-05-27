@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-DOCS-ASSET-CATALOGUE-MARCH-2026-MD-2026-05-27
+title: Aluminum OS — Complete Asset Catalogue (March 15, 2026)
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # Aluminum OS — Complete Asset Catalogue (March 15, 2026)
 
 **Total Assets:** 130+ files across 4 codebases

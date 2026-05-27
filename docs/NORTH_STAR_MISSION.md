@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-DOCS-NORTH-STAR-MISSION-MD-2026-05-27
+title: 🌐 North Star Mission — One Frame for All Work
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # 🌐 North Star Mission — One Frame for All Work
 
 This repository follows one integrated mission frame:

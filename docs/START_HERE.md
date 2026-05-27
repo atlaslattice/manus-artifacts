@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-DOCS-START-HERE-MD-2026-05-27
+title: 🚀 Start Here — Atlas Lattice Foundation Archive
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # 🚀 Start Here — Atlas Lattice Foundation Archive
 
 > *"Why is 90% of the planet in abject poverty when we have the technology for regenerative abundance?"*

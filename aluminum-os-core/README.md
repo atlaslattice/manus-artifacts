@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ALUMINUM-OS-CORE-README-MD-2026-05-27
+title: Aluminum OS Core — Anti-Busywork Policy Engine
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # Aluminum OS Core — Anti-Busywork Policy Engine
 
 **The elimination of busywork is inevitable. This system ensures that when busywork dies, human flourishing rises.**

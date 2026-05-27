@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-DOCS-UNIFIED-FIELD-V4-0-MD-2026-05-27
+title: ⚡ ALUMINUM OS — UNIFIED FIELD v4.0 (March 20, 2026)
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # ⚡ ALUMINUM OS — UNIFIED FIELD v4.0 (March 20, 2026)
 
 **Version:** 4.0

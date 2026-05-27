@@ -1,11 +1,16 @@
 ---
+artifact_id: ARTIFACT-GITHUB-ISSUE-TEMPLATE-FEATURE-REQUEST-MD-2026-05-27
+title: "[FEATURE] "
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
 name: Feature Request
 about: Propose a new capability, automation, or improvement
-title: "[FEATURE] "
 labels: enhancement
 assignees: atlaslattice
 ---
-
 ## Summary
 
 <!-- One-sentence description of the feature. -->

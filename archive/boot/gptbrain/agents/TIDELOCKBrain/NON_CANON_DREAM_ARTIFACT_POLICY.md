@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-AGENTS-TIDELOCKBRAIN-NON-CANON-DREAM-ARTIFACT-POLICY-MD-2026-05-27
+title: TIDELOCKBrain NON CANON Dream Artifact Policy
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # TIDELOCKBrain NON CANON Dream Artifact Policy
 
 ```text

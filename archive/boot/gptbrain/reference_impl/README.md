@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-REFERENCE-IMPL-README-MD-2026-05-27
+title: GPTBrain S1 Reference Implementation
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # GPTBrain S1 Reference Implementation
 
 ```text

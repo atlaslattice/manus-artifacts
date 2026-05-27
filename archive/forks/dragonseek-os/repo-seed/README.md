@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-FORKS-DRAGONSEEK-OS-REPO-SEED-README-MD-2026-05-27
+title: DragonSeekOS
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # DragonSeekOS
 
 **Status:** Public repo seed / fork candidate / not deployed / not PRC-approved / not canon  

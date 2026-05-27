@@ -7,7 +7,6 @@ created: 2026-05-27
 last_updated: 2026-05-27
 source_of_truth: GitHub
 ---
-
 # Atlas Lattice Public Charter (500+ IP Launch Scope)
 
 ## Mission Scope

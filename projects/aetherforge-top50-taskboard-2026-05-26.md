@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-PROJECTS-AETHERFORGE-TOP50-TASKBOARD-2026-05-26-MD-2026-05-27
+title: ⚡ Aetherforge Top-50 Public Launch Taskboard
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # ⚡ Aetherforge Top-50 Public Launch Taskboard
 
 > **Mission:** Make all Atlas Lattice Foundation work public, open-source, and world-class.

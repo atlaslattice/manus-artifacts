@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-GITHUB-CONTRIBUTING-MD-2026-05-27
+title: Contributing to Manus Artifacts
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-27
+last_updated: 2026-05-27
+source_of_truth: GitHub
+---
 # Contributing to Manus Artifacts
 
 Thank you for your interest in contributing to the **Atlas Lattice Foundation**
