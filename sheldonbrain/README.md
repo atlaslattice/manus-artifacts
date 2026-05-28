@@ -1,7 +1,7 @@
 # SheldonBrain Index
 
-> **Status:** Candidate  
-> **Purpose:** Entry point for SheldonBrain system architecture artifacts.  
+> **Status:** Candidate
+> **Purpose:** Entry point for SheldonBrain system architecture artifacts.
 > **Start here:** [Repository root](../README.md) → [Start Here](../docs/START_HERE.md)
 
 ## Key artifact

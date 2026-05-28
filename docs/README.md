@@ -1,8 +1,8 @@
 # Docs Index
 
-> **Status:** Candidate  
-> **Last reviewed:** 2026-05-28  
-> **Provenance:** Maintained in-repo as the documentation hub for public navigation artifacts.  
+> **Status:** Candidate
+> **Last reviewed:** 2026-05-28
+> **Provenance:** Maintained in-repo as the documentation hub for public navigation artifacts.
 > **Start here:** [Repository root](../README.md) → [Start Here](./START_HERE.md)
 
 ## Core navigation

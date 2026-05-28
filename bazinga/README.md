@@ -1,7 +1,7 @@
 # BAZINGA Index
 
-> **Status:** Candidate  
-> **Purpose:** Entry point for BAZINGA middleware and launch protocol artifacts.  
+> **Status:** Candidate
+> **Purpose:** Entry point for BAZINGA middleware and launch protocol artifacts.
 > **Start here:** [Repository root](../README.md) → [Start Here](../docs/START_HERE.md)
 
 ## Key artifact

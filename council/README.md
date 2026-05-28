@@ -1,7 +1,7 @@
 # Council Index
 
-> **Status:** Candidate  
-> **Purpose:** Entry point for Trinity + Pantheon Council session artifacts.  
+> **Status:** Candidate
+> **Purpose:** Entry point for Trinity + Pantheon Council session artifacts.
 > **Start here:** [Repository root](../README.md) → [Start Here](../docs/START_HERE.md)
 
 ## Session archive

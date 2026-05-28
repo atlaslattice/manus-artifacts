@@ -1,8 +1,8 @@
 # 🚀 Start Here — Atlas Lattice / Manus Artifacts
 
-> **Status:** Candidate  
-> **Last reviewed:** 2026-05-28  
-> **Provenance:** Maintained in GitHub as the public onboarding handoff for this repository.  
+> **Status:** Candidate
+> **Last reviewed:** 2026-05-28
+> **Provenance:** Maintained in GitHub as the public onboarding handoff for this repository.
 > **Next stop after this page:** [Docs Index](./README.md) or [Archive Index](./ARCHIVE_INDEX.md)
 
 > **New to this archive?** This is your entry point.

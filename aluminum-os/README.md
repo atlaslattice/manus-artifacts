@@ -1,7 +1,7 @@
 # Aluminum OS Index
 
-> **Status:** Candidate  
-> **Purpose:** Entry point for the Aluminum OS constitutional substrate artifacts.  
+> **Status:** Candidate
+> **Purpose:** Entry point for the Aluminum OS constitutional substrate artifacts.
 > **Start here:** [Repository root](../README.md) → [Start Here](../docs/START_HERE.md) → [Archive Index](../docs/ARCHIVE_INDEX.md)
 
 ## Priority artifacts

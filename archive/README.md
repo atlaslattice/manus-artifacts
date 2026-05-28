@@ -1,7 +1,7 @@
 # Archive Index
 
-> **Status:** Candidate  
-> **Purpose:** Entry point for the deep archive tree spanning protocol, governance, research, and execution artifacts.  
+> **Status:** Candidate
+> **Purpose:** Entry point for the deep archive tree spanning protocol, governance, research, and execution artifacts.
 > **Start here:** [Repository root](../README.md) → [Start Here](../docs/START_HERE.md) → [Public archive map](../docs/PUBLIC_ARCHIVE_MAP.md)
 
 ## Major archive lanes

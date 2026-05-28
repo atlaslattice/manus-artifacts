@@ -1,7 +1,7 @@
 # Tests Index
 
-> **Status:** Candidate  
-> **Purpose:** Entry point for repository-root validation fixtures and schema tests.  
+> **Status:** Candidate
+> **Purpose:** Entry point for repository-root validation fixtures and schema tests.
 > **Start here:** [Repository root](../README.md) → [Start Here](../docs/START_HERE.md)
 
 ## Root test surface

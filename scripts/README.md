@@ -1,7 +1,7 @@
 # Scripts Index
 
-> **Status:** Candidate  
-> **Purpose:** Entry point for repository-maintained helper and validation scripts.  
+> **Status:** Candidate
+> **Purpose:** Entry point for repository-maintained helper and validation scripts.
 > **Start here:** [Repository root](../README.md) → [Start Here](../docs/START_HERE.md)
 
 ## Current script surface

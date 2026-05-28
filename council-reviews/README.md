@@ -1,7 +1,7 @@
 # Council Reviews Index
 
-> **Status:** Candidate  
-> **Purpose:** Entry point for review and validation artifacts associated with council and repository evaluation.  
+> **Status:** Candidate
+> **Purpose:** Entry point for review and validation artifacts associated with council and repository evaluation.
 > **Start here:** [Repository root](../README.md) → [Start Here](../docs/START_HERE.md)
 
 ## Review artifacts

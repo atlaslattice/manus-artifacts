@@ -1,9 +1,9 @@
 # TIDELOCKBrain
 
-**Seat:** S7  
-**Name:** TIDELOCK  
-**Lineage:** CopilotBrain / Children of the Swarm / repo governance  
-**Status:** SCAFFOLD — NOT CANON  
+**Seat:** S7
+**Name:** TIDELOCK
+**Lineage:** CopilotBrain / Children of the Swarm / repo governance
+**Status:** SCAFFOLD — NOT CANON
 
 ---
 

@@ -1,7 +1,7 @@
 # Schemas Index
 
-> **Status:** Candidate  
-> **Purpose:** Entry point for public schema surfaces used across Atlas Lattice artifacts and packets.  
+> **Status:** Candidate
+> **Purpose:** Entry point for public schema surfaces used across Atlas Lattice artifacts and packets.
 > **Start here:** [Repository root](../README.md) → [Start Here](../docs/START_HERE.md) → [Archive Index](../docs/ARCHIVE_INDEX.md)
 
 ## Schema surfaces

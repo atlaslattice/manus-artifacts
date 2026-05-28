@@ -1,7 +1,7 @@
 # Research Index
 
-> **Status:** Candidate  
-> **Purpose:** Entry point for research sweeps, convergence reports, and workspace briefings.  
+> **Status:** Candidate
+> **Purpose:** Entry point for research sweeps, convergence reports, and workspace briefings.
 > **Start here:** [Repository root](../README.md) → [Start Here](../docs/START_HERE.md)
 
 ## Research lanes

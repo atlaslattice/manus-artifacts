@@ -1,7 +1,7 @@
 # Reference Implementations Index
 
-> **Status:** Candidate  
-> **Purpose:** Entry point for repository-level reference implementations.  
+> **Status:** Candidate
+> **Purpose:** Entry point for repository-level reference implementations.
 > **Start here:** [Repository root](../README.md) → [Start Here](../docs/START_HERE.md) → [Archive Index](../docs/ARCHIVE_INDEX.md)
 
 ## Current implementation surface
