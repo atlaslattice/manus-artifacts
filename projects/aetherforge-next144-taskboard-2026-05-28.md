@@ -202,9 +202,9 @@ source_of_truth: GitHub
 **Checkpoint gate:** contributor quest system v2 artifacts published
 
 - [ ] **109.** Publish good-first-issue board v2
-- [ ] **110.** Add issue templates for graph-linking quests
-- [ ] **111.** Add issue templates for metadata quests
-- [ ] **112.** Add issue templates for evidence quests
+- [x] **110.** Add issue templates for graph-linking quests
+- [x] **111.** Add issue templates for metadata quests
+- [x] **112.** Add issue templates for evidence quests
 - [ ] **113.** Define quest difficulty tiers
 - [ ] **114.** Define quest completion “done”
 - [ ] **115.** Add reviewer checklist for quest PRs
