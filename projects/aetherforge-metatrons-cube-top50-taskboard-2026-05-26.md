@@ -40,7 +40,7 @@ Evidence: [CANON_UX_IDENTITY_TOOLKIT](../docs/CANON_UX_IDENTITY_TOOLKIT.md)
 ## Ring III — Validation + CI Hardening (21–30)
 
 21. [x] Metadata schema validator action  
-22. [ ] Canon-state transition validator action  
+22. [x] Canon-state transition validator action  
 23. [x] Broken-anchor checker for markdown headings  
 24. [ ] Required sections linter for governance docs  
 25. [x] Orphaned file detector (unlinked artifacts)  
@@ -109,6 +109,7 @@ Evidence: [CANON_UX_IDENTITY_TOOLKIT](../docs/CANON_UX_IDENTITY_TOOLKIT.md)
 ### Ring III starter receipts
 
 - [Ring III validation workflow](../.github/workflows/ring3-validation-hardening.yml)
+- [Canon-state transition validation script](../scripts/validate_canon_state_transitions.py)
 - [Metadata validation script](../scripts/validate_artifact_metadata.py)
 - [Link integrity script](../scripts/check_markdown_links.py)
 - [Orphan detection script](../scripts/detect_orphaned_artifacts.py)
