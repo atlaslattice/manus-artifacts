@@ -18,7 +18,7 @@
 
 ## Checklist
 
-- [ ] I have read [CONTRIBUTING.md](.github/CONTRIBUTING.md)
+- [ ] I have read [CONTRIBUTING.md](./CONTRIBUTING.md)
 - [ ] My changes follow the style and conventions of this repository
 - [ ] I have not introduced merge-conflict markers (`<<<<<<`, `=======`, `>>>>>>`)
 - [ ] Any new code passes `ruff check` and `python -m pytest -q` (if applicable)

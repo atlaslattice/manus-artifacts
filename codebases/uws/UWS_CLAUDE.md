@@ -1,6 +1,6 @@
 # CLAUDE.md — Claude Integration Guide
 
-When contributing to this repository, follow all guidelines in [AGENTS.md](AGENTS.md).
+When contributing to this repository, follow all guidelines in [UWS_AGENTS.md](./UWS_AGENTS.md).
 
 This file provides Claude (Anthropic) with everything it needs to use `uws` effectively as a tool and to contribute to the codebase.
 
@@ -153,7 +153,7 @@ uws apple-auth setup
 
 ### Adding a New Provider
 
-Implement the `ProviderDriver` trait (see [ALUMINUM.md](ALUMINUM.md)) and register in `src/services.rs`.
+Implement the `ProviderDriver` trait (see [UWS_ALUMINUM.md](./UWS_ALUMINUM.md)) and register in `src/services.rs`.
 
 ### Code Quality
 
@@ -169,6 +169,6 @@ Implement the `ProviderDriver` trait (see [ALUMINUM.md](ALUMINUM.md)) and regist
 
 `uws` is Phase 1 of Aluminum OS — a provider-agnostic command surface for all productivity ecosystems.
 
-Read the full architecture: **[ALUMINUM.md](ALUMINUM.md)**
+Read the full architecture: **[UWS_ALUMINUM.md](./UWS_ALUMINUM.md)**
 
-*See [README.md](README.md) for installation. See [AGENTS.md](AGENTS.md) for multi-agent patterns.*
+*See [UWS_FEATURE_MANIFEST.md](./UWS_FEATURE_MANIFEST.md) for feature coverage. See [UWS_AGENTS.md](./UWS_AGENTS.md) for multi-agent patterns.*

@@ -81,6 +81,12 @@
 | [Agent Lifecycle Spec v0.1](./AGENT_LIFECYCLE_SPEC_v0.1.md) | Candidate |
 | [Swarm Backlog](./SWARM_BACKLOG.md) | Living document |
 | [Failure Ledger Template](./FAILURE_LEDGER_TEMPLATE.md) | Candidate |
+| [Canon Status Model](./CANON_STATUS_MODEL.md) | Candidate |
+| [Ratification Workflow](./RATIFICATION_WORKFLOW.md) | Candidate |
+| [Canon Decision Ledger](./CANON_DECISION_LEDGER.md) | Candidate |
+| [Provenance Requirements](./PROVENANCE_REQUIREMENTS.md) | Candidate |
+| [Artifact Lifecycle States](./ARTIFACT_LIFECYCLE_STATES.md) | Candidate |
+| [Universal Frontmatter Schema](./UNIVERSAL_FRONTMATTER_SCHEMA.md) | Candidate |
 
 ---
 

@@ -10,23 +10,23 @@ status: candidate
 
 ## 📊 Progress
 
-**1 / 144 complete** as of 2026-05-28
+**11 / 144 complete** as of 2026-05-28
 
 ---
 
 ## Face 01 — Governance & Canon
 
-- [ ] **#1** Define canonical status model
-- [ ] **#2** Publish ratification workflow
-- [ ] **#3** Create canon decision ledger
+- [x] **#1** Define canonical status model
+- [x] **#2** Publish ratification workflow
+- [x] **#3** Create canon decision ledger
 - [ ] **#4** Map section ownership
 - [x] **#5** Add RFC proposal template
 - [ ] **#6** Set review SLAs
 - [ ] **#7** Establish council review cadence
 - [ ] **#8** Define change classification rules
 - [ ] **#9** Publish deprecation policy
-- [ ] **#10** Standardize provenance requirements
-- [ ] **#11** Track artifact lifecycle states
+- [x] **#10** Standardize provenance requirements
+- [x] **#11** Track artifact lifecycle states
 - [ ] **#12** Create governance onboarding guide
 
 ## Face 02 — Legal, Privacy, Trust
@@ -47,7 +47,7 @@ status: candidate
 ## Face 03 — Repository Architecture
 
 - [ ] **#25** Normalize top-level navigation
-- [ ] **#26** Complete missing folder READMEs
+- [x] **#26** Complete missing folder READMEs
 - [ ] **#27** Add breadcrumb standards
 - [ ] **#28** Consolidate index pages
 - [ ] **#29** Publish archive taxonomy map
@@ -55,7 +55,7 @@ status: candidate
 - [ ] **#31** Create file placement decision tree
 - [ ] **#32** Triage duplicate docs backlog
 - [ ] **#33** Add stale artifact quarantine lane
-- [ ] **#34** Drive broken links to zero
+- [x] **#34** Drive broken links to zero
 - [ ] **#35** Publish canonical path map
 - [ ] **#36** Build role-based landing paths
 
@@ -76,13 +76,13 @@ status: candidate
 
 ## Face 05 — Knowledge Graph Layer
 
-- [ ] **#49** Adopt universal frontmatter schema
+- [x] **#49** Adopt universal frontmatter schema
 - [ ] **#50** Assign persistent artifact IDs
 - [ ] **#51** Set cross-link density targets
 - [ ] **#52** Define ontology relation types
 - [ ] **#53** Add machine-readable citation blocks
 - [ ] **#54** Implement provenance graph export
-- [ ] **#55** Add KG integrity validation
+- [x] **#55** Add KG integrity validation
 - [ ] **#56** Detect orphan nodes automatically
 - [ ] **#57** Define tag governance rules
 - [ ] **#58** Benchmark search relevance
@@ -92,7 +92,7 @@ status: candidate
 ## Face 06 — CI/CD & Automation
 
 - [ ] **#61** Harden repo hygiene workflow
-- [ ] **#62** Add markdown lint workflow
+- [x] **#62** Add markdown lint workflow
 - [ ] **#63** Add metadata completeness checks
 - [ ] **#64** Enforce link integrity checks
 - [ ] **#65** Add duplicate-doc detection in CI

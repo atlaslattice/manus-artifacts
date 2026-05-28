@@ -1,0 +1,39 @@
+name: Lattice KG Quality Gates
+
+on:
+  push:
+    paths:
+      - 'archive/boot/gptbrain/LATTICE_*.jsonl'
+      - 'archive/boot/gptbrain/reference_impl/test_schema_presence.py'
+      - 'scripts/validate_lattice_quality_gates.py'
+      - '.github/workflows/lattice-kg-quality-gates.yml'
+  pull_request:
+    paths:
+      - 'archive/boot/gptbrain/LATTICE_*.jsonl'
+      - 'archive/boot/gptbrain/reference_impl/test_schema_presence.py'
+      - 'scripts/validate_lattice_quality_gates.py'
+      - '.github/workflows/lattice-kg-quality-gates.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lattice-quality-gates:
+    name: Validate lattice indices and positron coverage
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate lattice quality gates
+        run: python scripts/validate_lattice_quality_gates.py
+
+      - name: Validate schema presence tests
+        run: python -m pytest -q archive/boot/gptbrain/reference_impl/test_schema_presence.py

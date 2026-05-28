@@ -10,7 +10,7 @@ If you discover a security vulnerability in any code or infrastructure contained
 
 Instead, report it privately:
 
-1. **GitHub Private Vulnerability Reporting** — Use the [Security tab](../../security/advisories/new) to submit a private advisory.
+1. **GitHub Private Vulnerability Reporting** — Use the [Security tab](https://github.com/atlaslattice/manus-artifacts/security/advisories/new) to submit a private advisory.
 2. **Email** — Send details to `security@atlaslattice.org`.
 
 Please include:

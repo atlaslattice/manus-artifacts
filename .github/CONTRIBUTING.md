@@ -74,6 +74,11 @@ Use these checks before opening PRs that touch docs, workflows, or GPTBrain arti
 grep -rn --include="*.md" --include="*.yml" --include="*.yaml" -e "^<<<<<<< " -e "^=======$" -e "^>>>>>>> " .
 yamllint -d "{extends: default, rules: {line-length: {max: 200}}}" .github/workflows/
 
+# Metadata and lattice integrity checks
+python scripts/validate_artifact_metadata.py
+python scripts/validate_lattice_quality_gates.py
+python scripts/check_markdown_links.py
+
 # GPTBrain reference checks
 bash archive/boot/gptbrain/reference_impl/run_checks.sh
 ```
