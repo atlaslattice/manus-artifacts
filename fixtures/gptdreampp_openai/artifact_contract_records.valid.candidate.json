@@ -41,6 +41,45 @@
         "awaiting human adjudication receipt"
       ],
       "next_safest_action": "Route through Bullshit Olympics lane and human governance queue before any promotion."
+    },
+    {
+      "artifact_id": "GPTDREAMPP-ACT-002",
+      "artifact_path": "archive/aetherforge/gptdreampp-openai/AETHERFORGE_NOTION_TO_GITHUB_RELAY_QUEUE_2026-05-27.md",
+      "source_pointer": "notion://relay-queue/gptdreampp/openai",
+      "source_system": "notion",
+      "lineage_parent_ids": [
+        "GPTDREAMPP-SRC-002"
+      ],
+      "provenance_receipt_path": "archive/aetherforge/gptdreampp-openai/NOTION_GITHUB_RELAY_RECEIPT_2026-05-27.md",
+      "content_hash_sha256": "f6462ec8abef5176f81f7ecfa64db26ffcf47486aa95ce1880ff3bbf13f01e43",
+      "hash_status": "present",
+      "claim_class": "review",
+      "review_state": "ready_for_governance",
+      "lifecycle_state": "ready_for_adjudication",
+      "promotion_eligibility": "blocked",
+      "contamination_flags": [
+        "none"
+      ],
+      "contradiction_links": [
+        "GPTDREAMPP-REV-002"
+      ],
+      "supersedes_links": [
+        "GPTDREAMPP-ACT-001"
+      ],
+      "tests_required": [
+        "python scripts/build_lattice_global_index.py --repo-root .",
+        "python scripts/validate_lattice_quality_gates.py --repo-root . --index archive/knowledge_graph/lattice_kg/v0_5/lattice_global_index.v0.1.json --max-age-days 7",
+        "python -m pytest -q tests/test_lattice_kg_hypercube_program.py tests/test_world_class_execution_surfaces.py"
+      ],
+      "tests_run": [
+        "python scripts/build_lattice_global_index.py --repo-root . => pass",
+        "python scripts/validate_lattice_quality_gates.py --repo-root . --index archive/knowledge_graph/lattice_kg/v0_5/lattice_global_index.v0.1.json --max-age-days 7 => pass",
+        "python -m pytest -q tests/test_lattice_kg_hypercube_program.py tests/test_world_class_execution_surfaces.py => pass"
+      ],
+      "blockers": [
+        "awaiting human adjudication receipt"
+      ],
+      "next_safest_action": "Route through Bullshit Olympics lane and human governance queue before any promotion."
     }
   ]
 }

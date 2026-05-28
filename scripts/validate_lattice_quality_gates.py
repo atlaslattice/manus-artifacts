@@ -146,6 +146,17 @@ def validate_gptdreampp_staging_fixtures(repo_root: Path) -> list[str]:
     if not records:
         errors.append("fixture check failed: artifact contract fixture has no records")
     else:
+        record_ids = [record.get("artifact_id") for record in records]
+        if len(record_ids) != len(set(record_ids)):
+            errors.append("fixture check failed: artifact contract records contain duplicate artifact_id values")
+
+        allowed_lifecycle_states = {
+            "intake",
+            "in_review",
+            "blocked",
+            "ready_for_adjudication",
+        }
+
         for idx, record in enumerate(records):
             missing = sorted(record_required - set(record))
             if missing:
@@ -156,14 +167,39 @@ def validate_gptdreampp_staging_fixtures(repo_root: Path) -> list[str]:
                 errors.append(
                     f"fixture check failed: artifact contract record {idx} cannot be ratified in candidate fixture"
                 )
-            if record.get("lifecycle_state") not in {
-                "intake",
-                "in_review",
-                "blocked",
-                "ready_for_adjudication",
-            }:
+            if record.get("lifecycle_state") not in allowed_lifecycle_states:
                 errors.append(
                     f"fixture check failed: artifact contract record {idx} has invalid lifecycle_state"
+                )
+
+            relationship_fields = ("lineage_parent_ids", "contradiction_links", "supersedes_links")
+            for field in relationship_fields:
+                value = record.get(field)
+                if not isinstance(value, list):
+                    errors.append(
+                        f"fixture check failed: artifact contract record {idx} field '{field}' must be a list"
+                    )
+                    continue
+                non_str = [entry for entry in value if not isinstance(entry, str)]
+                if non_str:
+                    errors.append(
+                        f"fixture check failed: artifact contract record {idx} field '{field}' must contain only strings"
+                    )
+
+            supersedes = record.get("supersedes_links", [])
+            if isinstance(supersedes, list) and record.get("artifact_id") in supersedes:
+                errors.append(
+                    f"fixture check failed: artifact contract record {idx} cannot supersede itself"
+                )
+            for target in supersedes:
+                if isinstance(target, str) and target not in record_ids:
+                    errors.append(
+                        f"fixture check failed: artifact contract record {idx} supersedes unknown artifact_id '{target}'"
+                    )
+
+            if record.get("lifecycle_state") == "blocked" and not record.get("blockers"):
+                errors.append(
+                    f"fixture check failed: artifact contract record {idx} is blocked but has no blockers"
                 )
 
     notion_fixture = load_json(repo_root / "fixtures/gptdreampp_openai/notion_cargo_queue.valid.candidate.json")

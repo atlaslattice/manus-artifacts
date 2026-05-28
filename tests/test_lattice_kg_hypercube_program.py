@@ -109,6 +109,15 @@ def test_gptdreampp_artifact_fixture_preserves_candidate_boundary() -> None:
     }
     assert required <= set(row)
     assert row["promotion_eligibility"] != "ratified"
+    artifact_ids = {record["artifact_id"] for record in data["records"]}
+    assert len(artifact_ids) == len(data["records"])
+    assert any(record["supersedes_links"] for record in data["records"])
+    for record in data["records"]:
+        for rel in ("lineage_parent_ids", "contradiction_links", "supersedes_links"):
+            assert isinstance(record[rel], list)
+            assert all(isinstance(item, str) for item in record[rel])
+        for target in record["supersedes_links"]:
+            assert target in artifact_ids
 
 
 def test_gptdreampp_bullshit_olympics_fixture_has_required_detectors() -> None:

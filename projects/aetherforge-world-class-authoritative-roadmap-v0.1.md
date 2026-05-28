@@ -47,16 +47,16 @@ Every candidate artifact record must carry:
 
 ## Next 10 sprint tasks (authoritative)
 
-- [ ] AX-01: Mark this roadmap as the single execution authority and align navigation links.
-- [ ] AX-02: Publish contributor start-here guidance with acceptance gates and receipts.
-- [ ] AX-03: Publish glossary of graph/mission terms for consistent vocabulary.
-- [ ] AX-04: Publish query cookbook for deterministic lookup by `artifact_id`, path, and filters.
-- [ ] AX-05: Publish weekly public state-of-graph report with risks and next wave.
-- [ ] AX-06: Extend validator checks for artifact lifecycle and relationship contract fields.
-- [ ] AX-07: Extend fixture contract record to include lifecycle + supersedes fields.
-- [ ] AX-08: Add tests covering roadmap authority and contributor UX surfaces.
-- [ ] AX-09: Expand CI gate to execute execution-surface tests with lattice checks.
-- [ ] AX-10: Rebuild index and validate all lattice gates after contract hardening.
+- [x] AX-01: Mark this roadmap as the single execution authority and align navigation links.
+- [x] AX-02: Publish contributor start-here guidance with acceptance gates and receipts.
+- [x] AX-03: Publish glossary of graph/mission terms for consistent vocabulary.
+- [x] AX-04: Publish query cookbook for deterministic lookup by `artifact_id`, path, and filters.
+- [x] AX-05: Publish weekly public state-of-graph report with risks and next wave.
+- [x] AX-06: Extend validator checks for artifact lifecycle and relationship contract fields.
+- [x] AX-07: Extend fixture contract record to include lifecycle + supersedes fields.
+- [x] AX-08: Add tests covering roadmap authority and contributor UX surfaces.
+- [x] AX-09: Expand CI gate to execute execution-surface tests with lattice checks.
+- [x] AX-10: Rebuild index and validate all lattice gates after contract hardening.
 
 ## Quest-loop receipt standard (required every increment)
 
