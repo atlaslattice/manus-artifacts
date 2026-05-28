@@ -118,7 +118,7 @@ Wave 3 metadata/provenance outputs are now published: [backfill scope](./docs/ME
 3. Scope decision on public content
 4. History rewrite if issues found
 
-Execution queue: [Aetherforge Next-10](./projects/aetherforge-next10-execution-queue-2026-05-27.md) · Checkpoint closure index: [Next-10 Execution Checkpoints](./docs/closeout/NEXT10_EXECUTION_CHECKPOINTS_2026-05-28.md) · Hypercube campaign: [Aetherforge 144 Tasks](./projects/aetherforge-144-task-campaign-2026-05-27.md) · Monthly evidence snapshots: [projects/status-reports/](./projects/status-reports/)
+Execution queue: [Aetherforge Next-10](./projects/aetherforge-next10-execution-queue-2026-05-27.md) · Next 144 taskboard: [Aetherforge Next-144](./projects/aetherforge-next144-taskboard-2026-05-28.md) · Checkpoint closure index: [Next-10 Execution Checkpoints](./docs/closeout/NEXT10_EXECUTION_CHECKPOINTS_2026-05-28.md) · Hypercube campaign: [Aetherforge 144 Tasks](./projects/aetherforge-144-task-campaign-2026-05-27.md) · Monthly evidence snapshots: [projects/status-reports/](./projects/status-reports/)
 
 ---
 
