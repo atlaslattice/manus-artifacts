@@ -72,6 +72,7 @@ Need vocabulary? → **[docs/GLOSSARY.md](./docs/GLOSSARY.md)**
 
 **[Aetherforge 12×12 Hypercube Campaign](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — 144-task public + world-class campaign board
 - **[Aetherforge Next-144 Taskboard (Hypercube v2)](./projects/aetherforge-next144-taskboard-2026-05-28.md)** — next 144 tasks in strict sequence with wave execution blocks
+- **[Aetherforge Next-144 GitHub Issue Seeding Pack](./projects/aetherforge-next144-github-issue-seeding-pack-2026-05-28.md)** — issue-ready blocks for all 144 tasks with milestones, labels, and lane owners
 **[Aetherforge Top-50 Taskboard](./projects/aetherforge-top50-taskboard-2026-05-26.md)** — 18/50 complete
 - **[Aetherforge Game World Onboarding](./projects/aetherforge-game-world/README.md)** — Module 8 candidate layer
 - **[Aetherforge Wave 2–4 Execution Receipts](./projects/aetherforge-wave2-kg-connectivity-2026-05-28.md)** — KG connectivity, trust/provenance, and packaging wave artifacts

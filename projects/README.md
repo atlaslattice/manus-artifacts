@@ -6,6 +6,7 @@ This folder tracks active public project boards, execution maps, and domain proj
 
 - [Aetherforge 12×12 Hypercube Campaign](./aetherforge-144-task-campaign-2026-05-27.md) — 144-task world-class GitHub campaign board.
 - [Aetherforge Next-144 Taskboard (Hypercube v2)](./aetherforge-next144-taskboard-2026-05-28.md) — next-sequence 144-task execution board in strict order.
+- [Aetherforge Next-144 GitHub Issue Seeding Pack](./aetherforge-next144-github-issue-seeding-pack-2026-05-28.md) — issue-ready entries for all 144 tasks with labels, milestones, and lane ownership.
 - [Aetherforge Top-50 Taskboard](./aetherforge-top50-taskboard-2026-05-26.md) — current sprint board.
 - [Aetherforge Open-Source Execution Map](./aetherforge-open-source-gift-execution-map-2026-05-27.md) — public mission framing.
 - [Aetherforge Wave 2 — KG Connectivity](./aetherforge-wave2-kg-connectivity-2026-05-28.md)
