@@ -27,6 +27,16 @@ section below.
 - Candidate artifacts are welcome via pull request. Label your PR clearly
   with the domain (e.g., `aluminum-os`, `gptbrain`, `council`).
 
+## Issue Intake Paths
+
+- Use the **Artifact proposal** issue form for new archive artifacts, docs, and
+  public candidate additions.
+- Use the **Governance / review request** form for provenance review, canon-state
+  routing, archive ingestion, and release-readiness requests.
+- Use the **Community onboarding / help request** form for first-quest routing,
+  navigation help, and newcomer support.
+- Use the **GPTDream / Atlas-ORCS task** form for lane-routed GPTDream work.
+
 ## Pull Request Guidelines
 
 1. One logical change per PR.

@@ -1,1 +1,11 @@
-blank_issues_enabled: true
+blank_issues_enabled: false
+contact_links:
+  - name: Start here
+    url: https://github.com/atlaslattice/manus-artifacts/blob/main/docs/START_HERE.md
+    about: Review the archive onboarding path before opening an issue.
+  - name: Contribution guide
+    url: https://github.com/atlaslattice/manus-artifacts/blob/main/.github/CONTRIBUTING.md
+    about: Read governance, validation, and pull request requirements.
+  - name: Aetherforge onboarding
+    url: https://github.com/atlaslattice/manus-artifacts/blob/main/projects/aetherforge-game-world/HOW_TO_PLAY_AETHERFORGE.md
+    about: Follow the player-facing quest path if you want a guided first contribution.

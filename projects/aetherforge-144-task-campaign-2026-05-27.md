@@ -160,7 +160,7 @@
 
 ## Axis 11 — Community & Contributor Experience (121–132)
 
-- [ ] **#121** Add issue templates for ingestion/governance/review requests.
+- [x] **#121** Add issue templates for ingestion/governance/review requests.
 - [ ] **#122** Add discussion categories aligned to domains.
 - [ ] **#123** Add contributor onboarding journey (first 1 hour).
 - [ ] **#124** Add maintainer onboarding and triage handbook.

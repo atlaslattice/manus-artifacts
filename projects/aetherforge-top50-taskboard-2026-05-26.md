@@ -72,7 +72,7 @@
 - [ ] **#41** Publish roadmap with quarterly milestones
 - [ ] **#42** Publish "State of the Archive" cadence report template
 - [x] **#43** Create Aetherforge Top-50 taskboard (this file)
-- [ ] **#44** Add issue templates for community onboarding and artifact proposals
+- [x] **#44** Add issue templates for community onboarding and artifact proposals
 - [ ] **#45** Add GitHub Discussion categories (governance, build requests, ideas)
 - [ ] **#46** Publish release notes template for major archive updates
 - [ ] **#47** Curate "best-of" canonical collection (top 10 must-reads)
@@ -90,8 +90,8 @@
 | Ring 2 — Structure | 4 | 10 | 40% |
 | Ring 3 — Quality | 0 | 10 | 0% |
 | Ring 4 — Trust | 6 | 10 | 60% |
-| Ring 5 — Reach | 1 | 10 | 10% |
-| **Total** | **18** | **50** | **36%** |
+| Ring 5 — Reach | 2 | 10 | 20% |
+| **Total** | **19** | **50** | **38%** |
 
 ---
 
@@ -99,9 +99,9 @@
 
 1. **#20** Domain landing pages (per-folder READMEs)
 2. **#30** Architecture diagrams
-3. **#44** Issue templates
-4. **#47** Best-of canonical collection
-5. **#50** World-Class v1 milestone
+3. **#47** Best-of canonical collection
+4. **#50** World-Class v1 milestone
+5. **#45** Discussion categories
 
 ---
 

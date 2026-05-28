@@ -1,0 +1,57 @@
+name: "Governance / review request"
+description: "Request governance review, archive ingestion, or trust/provenance adjudication"
+title: "[Review] "
+labels:
+  - governance
+  - needs-review
+  - not-canon
+body:
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: Request type
+      options:
+        - archive_ingestion
+        - provenance_review
+        - canon_state_review
+        - release_readiness
+        - cross-linking_request
+    validations:
+      required: true
+
+  - type: input
+    id: target
+    attributes:
+      label: Target artifact or folder
+      description: Absolute repository path or canonical document link
+      placeholder: /tmp/workspace/atlaslattice/manus-artifacts/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why this review is needed
+      placeholder: Describe the decision, risk, or validation you want reviewed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies and evidence
+      description: Link related issues, PRs, receipts, or validation outputs
+      placeholder: |
+        Related issues/PRs:
+        Validation commands run:
+        Evidence links:
+
+  - type: checkboxes
+    id: governance
+    attributes:
+      label: Governance acknowledgements
+      options:
+        - label: I understand GitHub is the canonical substrate for this review trail.
+          required: true
+        - label: I understand nothing becomes canon until ratified and adjudicated.
+          required: true
