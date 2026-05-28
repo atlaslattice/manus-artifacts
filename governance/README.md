@@ -17,9 +17,11 @@ It is the entry point for review, retention, conflict resolution, audit, risk, a
 
 - [RISK_REGISTER.md](./RISK_REGISTER.md) — active governance and quality risks.
 - [PROVENANCE_REQUIREMENTS.md](./PROVENANCE_REQUIREMENTS.md) — evidence traceability standards for high-impact claims.
+- [PROVENANCE_EVIDENCE_TIERING_MODEL.md](./PROVENANCE_EVIDENCE_TIERING_MODEL.md) — standardized evidence-tier model for claim strength.
 - [TIDELOCK_HARBOR_FLOODGATE_AUDIT.md](./TIDELOCK_HARBOR_FLOODGATE_AUDIT.md) — dedupe, boundary, mergeability-language, and provenance reconciliation audit lane.
 - [EXTERNAL_REVIEW_PROTOCOL.md](./EXTERNAL_REVIEW_PROTOCOL.md) — how external review works for high-stakes artifacts.
 - [INCIDENT_RESPONSE_RUNBOOK.md](./INCIDENT_RESPONSE_RUNBOOK.md) — response path for canon breaches and trust incidents.
+- [GOVERNANCE_RISK_HEATMAP_THRESHOLDS.md](./GOVERNANCE_RISK_HEATMAP_THRESHOLDS.md) — threshold-based escalation bands for governance risks.
 
 ## Continuity and durability
 

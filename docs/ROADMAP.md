@@ -48,3 +48,7 @@ North-star mission: functional lattice knowledge graph + playable Aetherforge ar
 
 The roadmap is not just about adding documents.
 It is about making the archive increasingly legible, auditable, and trustable as a public system.
+
+## Public KPI surface
+
+- [PUBLIC_ROADMAP_KPI_SCOREBOARD.md](./PUBLIC_ROADMAP_KPI_SCOREBOARD.md)

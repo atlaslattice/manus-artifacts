@@ -47,3 +47,4 @@ Date:
 
 - [Aetherforge Metatron Top 50 Taskboard](./aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
 - [Aetherforge Council Taskboard (Top 10)](./aetherforge-top10-taskboard-2026-05-26.md)
+- [External Contributor Questboard (First 10)](./AETHERFORGE_EXTERNAL_CONTRIBUTOR_QUESTBOARD_FIRST10_v0.1.md)

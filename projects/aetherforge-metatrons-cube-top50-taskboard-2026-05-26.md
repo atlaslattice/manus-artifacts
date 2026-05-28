@@ -42,13 +42,13 @@ Evidence: [CANON_UX_IDENTITY_TOOLKIT](../docs/CANON_UX_IDENTITY_TOOLKIT.md)
 21. [x] Metadata schema validator action  
 22. [x] Canon-state transition validator action  
 23. [x] Broken-anchor checker for markdown headings  
-24. [ ] Required sections linter for governance docs  
+24. [x] Required sections linter for governance docs  
 25. [x] Orphaned file detector (unlinked artifacts)  
-26. [ ] External-link policy checker (timeouts/retries)  
-27. [ ] Sensitive-claim provenance checker  
+26. [x] External-link policy checker (timeouts/retries)  
+27. [x] Sensitive-claim provenance checker  
 28. [ ] Staleness severity levels + SLA policy  
-29. [ ] Critical script regression suite scaffold  
-30. [ ] Quality dashboard auto-refresh data pipeline  
+29. [x] Critical script regression suite scaffold  
+30. [x] Quality dashboard auto-refresh data pipeline  
 
 ## Ring IV — Public Product Layer (31–40)
 
@@ -57,17 +57,17 @@ Evidence: [CANON_UX_IDENTITY_TOOLKIT](../docs/CANON_UX_IDENTITY_TOOLKIT.md)
 33. [ ] Top-25 reading path with skill-level tags  
 34. [ ] Primer trilogy v2 with diagrams  
 35. [ ] Doctrine-in-practice playbook cards  
-36. [ ] External contributor questboard (first 10 quests)  
+36. [x] External contributor questboard (first 10 quests)  
 37. [ ] Media kit press-ready asset checklist  
 38. [ ] Monthly state-of-archive report template  
-39. [ ] Candidate→canon release notes format  
-40. [ ] Public roadmap KPI scoreboard page  
+39. [x] Candidate→canon release notes format  
+40. [x] Public roadmap KPI scoreboard page  
 
 ## Ring V — Governance + Continuity Operations (41–50)
 
 41. [ ] Council meeting packet template  
-42. [ ] Governance risk heatmap with thresholds  
-43. [ ] Provenance evidence tiering model  
+42. [x] Governance risk heatmap with thresholds  
+43. [x] Provenance evidence tiering model  
 44. [ ] External review intake + adjudication queue  
 45. [ ] Retention class matrix (immutable/rolling/ephemeral)  
 46. [ ] Steward succession drill checklist  
@@ -113,3 +113,20 @@ Evidence: [CANON_UX_IDENTITY_TOOLKIT](../docs/CANON_UX_IDENTITY_TOOLKIT.md)
 - [Metadata validation script](../scripts/validate_artifact_metadata.py)
 - [Link integrity script](../scripts/check_markdown_links.py)
 - [Orphan detection script](../scripts/detect_orphaned_artifacts.py)
+- [Governance required sections linter](../scripts/validate_governance_required_sections.py)
+- [External link policy checker](../scripts/check_external_link_policy.py)
+- [Sensitive claim provenance checker](../scripts/validate_sensitive_claim_provenance.py)
+- [Critical script regression scaffold](../tests/test_critical_scripts_regression.py)
+- [Quality dashboard data pipeline script](../scripts/build_quality_dashboard_data.py)
+- [Quality dashboard auto-refresh workflow](../.github/workflows/quality-dashboard-auto-refresh.yml)
+
+### Ring IV selected receipts
+
+- [External contributor questboard (first 10)](./AETHERFORGE_EXTERNAL_CONTRIBUTOR_QUESTBOARD_FIRST10_v0.1.md)
+- [Candidate to canon release notes format](../docs/CANDIDATE_TO_CANON_RELEASE_NOTES_FORMAT.md)
+- [Public roadmap KPI scoreboard](../docs/PUBLIC_ROADMAP_KPI_SCOREBOARD.md)
+
+### Ring V selected receipts
+
+- [Governance risk heatmap with thresholds](../governance/GOVERNANCE_RISK_HEATMAP_THRESHOLDS.md)
+- [Provenance evidence tiering model](../governance/PROVENANCE_EVIDENCE_TIERING_MODEL.md)

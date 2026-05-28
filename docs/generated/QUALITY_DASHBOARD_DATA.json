@@ -1,0 +1,39 @@
+{
+  "generated_at_utc": "2026-05-28T17:30:01Z",
+  "repository_health": {
+    "docs_markdown_files": 44,
+    "governance_markdown_files": 15,
+    "project_markdown_files": 4
+  },
+  "top50_execution": {
+    "ring_iii": {
+      "done": 4,
+      "total": 10
+    },
+    "ring_iv": {
+      "done": 0,
+      "total": 10
+    },
+    "ring_v": {
+      "done": 0,
+      "total": 10
+    }
+  },
+  "roadmap_kpis": {
+    "count": 9,
+    "anchors": [
+      "newcomer orientation time",
+      "metadata coverage percentage",
+      "link integrity rate",
+      "stale artifact review completion rate",
+      "number of fully documented canon decisions",
+      "frequency of public state-of-archive reporting",
+      "cross-domain link density across major domains",
+      "quest completion receipts published per week",
+      "GPTDream++ protocol-pack validation pass rate"
+    ]
+  },
+  "public_questboard": {
+    "open_quests": 10
+  }
+}

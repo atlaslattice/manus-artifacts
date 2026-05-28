@@ -70,3 +70,67 @@ jobs:
         run: python -m pip install --upgrade pip
       - name: Validate canon-state transitions
         run: python scripts/validate_canon_state_transitions.py
+
+  governance-required-sections:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+      - name: Lint required governance sections
+        run: python scripts/validate_governance_required_sections.py
+
+  external-link-policy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+      - name: Check external-link policy
+        run: python scripts/check_external_link_policy.py
+
+  sensitive-claim-provenance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+      - name: Validate sensitive-claim provenance markers
+        run: python scripts/validate_sensitive_claim_provenance.py
+
+  quality-dashboard-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+      - name: Build quality dashboard data snapshot
+        run: python scripts/build_quality_dashboard_data.py
+      - name: Assert generated snapshot is committed
+        run: git diff --exit-code docs/generated/QUALITY_DASHBOARD_DATA.json
+
+  critical-script-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install test dependencies
+        run: python -m pip install --upgrade pip pytest
+      - name: Run critical script regression scaffold
+        run: python -m pytest -q tests/test_critical_scripts_regression.py

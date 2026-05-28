@@ -38,6 +38,12 @@ It should help contributors, reviewers, and public readers see whether the repos
 | 2026-05-26 | Newcomer-path review | Onboarding, doctrine map, and best-of list added |
 | 2026-05-26 | Quality instrumentation pass | Integrity and stale-content workflows added |
 
+## Auto-refresh data snapshot
+
+- Data artifact: [generated/QUALITY_DASHBOARD_DATA.json](./generated/QUALITY_DASHBOARD_DATA.json)
+- Pipeline command: `python /tmp/workspace/atlaslattice/manus-artifacts/scripts/build_quality_dashboard_data.py`
+- CI guards: `ring3-validation-hardening.yml` and `quality-dashboard-auto-refresh.yml`
+
 ## How to read this dashboard
 
 Coverage percentages are directional estimates, not legal guarantees.
