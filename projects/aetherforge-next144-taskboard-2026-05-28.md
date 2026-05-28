@@ -45,18 +45,18 @@
 
 ## Wave 1 — Program Framing (1–12)
 
-- [ ] **#1** Create “Hypercube v2” master board.
-- [ ] **#2** Add v1→v2 dependency map.
-- [ ] **#3** Define v2 completion criteria.
-- [ ] **#4** Define v2 governance checkpoints.
-- [ ] **#5** Define v2 trust checkpoints.
-- [ ] **#6** Define v2 quality checkpoints.
-- [ ] **#7** Define v2 release checkpoints.
-- [ ] **#8** Define v2 public-impact KPIs.
-- [ ] **#9** Define v2 contributor KPIs.
-- [ ] **#10** Define v2 archive growth KPIs.
-- [ ] **#11** Define v2 risk register template.
-- [ ] **#12** Publish v2 execution charter.
+- [x] **#1** Create “Hypercube v2” master board.
+- [x] **#2** Add v1→v2 dependency map.
+- [x] **#3** Define v2 completion criteria.
+- [x] **#4** Define v2 governance checkpoints.
+- [x] **#5** Define v2 trust checkpoints.
+- [x] **#6** Define v2 quality checkpoints.
+- [x] **#7** Define v2 release checkpoints.
+- [x] **#8** Define v2 public-impact KPIs.
+- [x] **#9** Define v2 contributor KPIs.
+- [x] **#10** Define v2 archive growth KPIs.
+- [x] **#11** Define v2 risk register template.
+- [x] **#12** Publish v2 execution charter.
 
 ## Wave 2 — Carryover Control (13–24)
 
@@ -225,12 +225,18 @@
 
 ---
 
+## Wave 1 Execution Artifact (2026-05-28)
+
+- [Wave 1 — Program Framing & Charter](./aetherforge-wave1-program-framing-2026-05-28.md)
+
+---
+
 ## Progress Scoreboard
 
-- Complete: **0 / 144**
+- Complete: **12 / 144**
 - In progress: **0 / 144**
-- Remaining: **144 / 144**
-- Current phase: **Wave 1 setup**
+- Remaining: **132 / 144**
+- Current phase: **Wave 2 carryover control**
 
 ---
 

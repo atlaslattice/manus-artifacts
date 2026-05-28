@@ -9,6 +9,7 @@ This folder tracks active public project boards, execution maps, and domain proj
 - [Aetherforge Next-144 GitHub Issue Seeding Pack](./aetherforge-next144-github-issue-seeding-pack-2026-05-28.md) — issue-ready entries for all 144 tasks with labels, milestones, and lane ownership.
 - [Aetherforge Top-50 Taskboard](./aetherforge-top50-taskboard-2026-05-26.md) — current sprint board.
 - [Aetherforge Open-Source Execution Map](./aetherforge-open-source-gift-execution-map-2026-05-27.md) — public mission framing.
+- [Aetherforge Wave 1 — Program Framing & Charter](./aetherforge-wave1-program-framing-2026-05-28.md)
 - [Aetherforge Wave 2 — KG Connectivity](./aetherforge-wave2-kg-connectivity-2026-05-28.md)
 - [Aetherforge Wave 3 — Trust & Provenance](./aetherforge-wave3-trust-provenance-2026-05-28.md)
 - [Aetherforge Wave 4 — Packaging & Public Release](./aetherforge-wave4-packaging-release-2026-05-28.md)
