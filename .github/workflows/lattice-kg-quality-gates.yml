@@ -20,10 +20,16 @@ on:
       - ".github/workflows/lattice-kg-quality-gates.yml"
   workflow_dispatch:
 
+# Minimal default permissions — jobs that need write access override explicitly.
+permissions:
+  contents: read
+
 jobs:
   graph-link-integrity:
     name: Graph Link Integrity
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -35,6 +41,8 @@ jobs:
   artifact-metadata:
     name: Artifact Metadata Coverage
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -46,6 +54,8 @@ jobs:
   markdown-links:
     name: Markdown Link Check
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -57,6 +67,8 @@ jobs:
   orphan-detection:
     name: Orphaned Artifact Detection
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -70,6 +82,8 @@ jobs:
     runs-on: ubuntu-latest
     # Only regenerate index on pushes to main, not PRs
     if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
