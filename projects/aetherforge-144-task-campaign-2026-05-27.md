@@ -10,7 +10,7 @@ status: candidate
 
 ## 📊 Progress
 
-**0 / 144 complete** as of 2026-05-27
+**1 / 144 complete** as of 2026-05-28
 
 ---
 
@@ -20,7 +20,7 @@ status: candidate
 - [ ] **#2** Publish ratification workflow
 - [ ] **#3** Create canon decision ledger
 - [ ] **#4** Map section ownership
-- [ ] **#5** Add RFC proposal template
+- [x] **#5** Add RFC proposal template
 - [ ] **#6** Set review SLAs
 - [ ] **#7** Establish council review cadence
 - [ ] **#8** Define change classification rules
@@ -204,4 +204,4 @@ status: candidate
 
 ---
 
-*Taskboard maintained by Atlas Lattice Foundation · Updated: 2026-05-27*
+*Taskboard maintained by Atlas Lattice Foundation · Updated: 2026-05-28*

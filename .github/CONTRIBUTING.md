@@ -16,10 +16,11 @@ Thank you for your interest in contributing. This repository is the **canonical 
 ## How to Contribute
 
 ### Reporting Bugs or Issues
-Use the [Issue Tracker](../../issues) with the appropriate template:
+Use the [Issue Tracker](https://github.com/atlaslattice/manus-artifacts/issues) with the appropriate template:
 - 🐛 **Bug Report** — Something is broken or incorrect
 - ✨ **Feature Request** — An improvement or new capability
 - 📜 **Artifact Proposal** — Proposing a new artifact for archive consideration
+- 🧭 **RFC Proposal** — Proposing governance, process, or architecture changes for review
 
 ### Submitting Changes
 
