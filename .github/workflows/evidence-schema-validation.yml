@@ -1,0 +1,114 @@
+name: Evidence Schema Validation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/evidence/**'
+      - 'docs/knowledge-graph/ai_evidence_ledger.schema.v0_1.json'
+      - 'docs/knowledge-graph/ai_evidence_ledger.seed.v0_1.json'
+      - '.github/workflows/evidence-schema-validation.yml'
+  pull_request:
+    paths:
+      - 'docs/evidence/**'
+      - 'docs/knowledge-graph/ai_evidence_ledger.schema.v0_1.json'
+      - 'docs/knowledge-graph/ai_evidence_ledger.seed.v0_1.json'
+      - '.github/workflows/evidence-schema-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-evidence:
+    name: Validate evidence entries
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate docs/evidence JSON entries
+        run: |
+          python3 <<'PY'
+          import json
+          import sys
+          from pathlib import Path
+
+          repo = Path('.')
+          schema_path = repo / 'docs/knowledge-graph/ai_evidence_ledger.schema.v0_1.json'
+          seed_path = repo / 'docs/knowledge-graph/ai_evidence_ledger.seed.v0_1.json'
+          evidence_dir = repo / 'docs/evidence'
+
+          try:
+              ledger_schema = json.loads(schema_path.read_text(encoding='utf-8'))
+              seed = json.loads(seed_path.read_text(encoding='utf-8'))
+          except FileNotFoundError as exc:
+              print(f'❌ Missing ledger file: {exc}')
+              sys.exit(1)
+          except json.JSONDecodeError as exc:
+              print(f'❌ Invalid JSON in ledger file: {exc}')
+              sys.exit(1)
+
+          expected_version = seed.get('schema_version', '0.1')
+          if ledger_schema.get('title') != 'AI Evidence Ledger Entry v0.1':
+              print('❌ Unexpected ledger schema title')
+              sys.exit(1)
+
+          required_fields = {
+              'schema_version',
+              'evidence_id',
+              'artifact_id',
+              'artifact_title',
+              'artifact_path',
+              'claim',
+              'evidence_type',
+              'evidence_date',
+              'evidence_source',
+              'ai_systems_involved',
+              'verification_method'
+          }
+
+          files = sorted(evidence_dir.glob('*.json'))
+          if not files:
+              print('❌ No evidence JSON files found in docs/evidence')
+              sys.exit(1)
+
+          seen_ids = set()
+          for path in files:
+              try:
+                  payload = json.loads(path.read_text(encoding='utf-8'))
+              except json.JSONDecodeError as exc:
+                  print(f'❌ Invalid JSON in {path}: {exc}')
+                  sys.exit(1)
+
+              missing = sorted(field for field in required_fields if field not in payload)
+              if missing:
+                  print(f'❌ {path} is missing required fields: {", ".join(missing)}')
+                  sys.exit(1)
+
+              if payload.get('schema_version') != expected_version:
+                  print(f'❌ {path} schema_version={payload.get("schema_version")} expected={expected_version}')
+                  sys.exit(1)
+
+              if not isinstance(payload.get('ai_systems_involved'), list) or not payload['ai_systems_involved']:
+                  print(f'❌ {path} must declare at least one AI system')
+                  sys.exit(1)
+
+              if payload['evidence_id'] in seen_ids:
+                  print(f'❌ Duplicate evidence_id found: {payload["evidence_id"]}')
+                  sys.exit(1)
+              seen_ids.add(payload['evidence_id'])
+
+              if payload.get('evidence_type') == 'build_receipt' and 'test_command' not in payload:
+                  print(f'❌ {path} build_receipt entries must include test_command')
+                  sys.exit(1)
+
+          print(f'✅ Validated {len(files)} evidence entries against ledger version {expected_version}')
+          PY

@@ -1,14 +1,22 @@
 {
   "schema_version": "0.1",
-  "artifact_count": 33,
-  "artifacts": [
+  "generated_from": "docs/knowledge-graph/artifact_registry.v0_1.json",
+  "node_count": 33,
+  "edge_count": 51,
+  "density_score": 0.048295,
+  "largest_hub": {
+    "id": "AL-MISSION-001",
+    "title": "Aetherforge + Lattice + GPTDream++ Mission Charter v0.1",
+    "connections": 11
+  },
+  "nodes": [
     {
       "id": "AL-MISSION-001",
       "title": "Aetherforge + Lattice + GPTDream++ Mission Charter v0.1",
-      "artifact_type": "doctrine",
+      "type": "doctrine",
       "status": "CANDIDATE",
       "path": "projects/AETHERFORGE_LATTICE_GPTDREAM_MISSION_CHARTER_v0.1.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "defines",
           "target_id": "AL-KG-001"
@@ -25,15 +33,45 @@
           "relation": "defines",
           "target_id": "AL-RT-001"
         }
+      ],
+      "in_edges": [
+        {
+          "relation": "indexes",
+          "source_id": "AL-KG-002"
+        },
+        {
+          "relation": "governs",
+          "source_id": "AL-RT-001"
+        },
+        {
+          "relation": "operationalizes",
+          "source_id": "AL-EXEC-144-001"
+        },
+        {
+          "relation": "governs",
+          "source_id": "AL-GOV-002"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-GOV-003"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-GOV-004"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-GOV-005"
+        }
       ]
     },
     {
       "id": "AL-KG-001",
       "title": "Artifact Taxonomy v0.1",
-      "artifact_type": "schema",
+      "type": "schema",
       "status": "CANDIDATE",
       "path": "docs/knowledge-graph/artifact_taxonomy.v0_1.json",
-      "links": [
+      "out_edges": [
         {
           "relation": "referenced_by",
           "target_id": "AL-KG-002"
@@ -42,15 +80,29 @@
           "relation": "extends",
           "target_id": "AL-KG-003"
         }
+      ],
+      "in_edges": [
+        {
+          "relation": "defines",
+          "source_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "prioritizes",
+          "source_id": "AL-EXEC-001"
+        },
+        {
+          "relation": "extends",
+          "source_id": "AL-KG-003"
+        }
       ]
     },
     {
       "id": "AL-KG-002",
       "title": "Artifact Registry v0.1",
-      "artifact_type": "registry",
+      "type": "registry",
       "status": "CANDIDATE",
       "path": "docs/knowledge-graph/artifact_registry.v0_1.json",
-      "links": [
+      "out_edges": [
         {
           "relation": "indexes",
           "target_id": "AL-MISSION-001"
@@ -67,67 +119,133 @@
           "relation": "indexes",
           "target_id": "AL-RT-001"
         }
+      ],
+      "in_edges": [
+        {
+          "relation": "referenced_by",
+          "source_id": "AL-KG-001"
+        },
+        {
+          "relation": "prioritizes",
+          "source_id": "AL-EXEC-001"
+        },
+        {
+          "relation": "validates",
+          "source_id": "AL-CI-002"
+        },
+        {
+          "relation": "supports",
+          "source_id": "AL-KG-003"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-BRAIN-001"
+        }
       ]
     },
     {
       "id": "AL-AF-001",
       "title": "Aetherforge Game Loop Spec v0.1",
-      "artifact_type": "spec",
+      "type": "spec",
       "status": "CANDIDATE",
       "path": "projects/aetherforge-game-world/AETHERFORGE_GAME_LOOP_SPEC_v0.1.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "implemented_by",
           "target_id": "AL-EXEC-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "defines",
+          "source_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-KG-002"
         }
       ]
     },
     {
       "id": "AL-GP-001",
       "title": "GPTDream++ Open Gift Package Guide v0.1",
-      "artifact_type": "guide",
+      "type": "guide",
       "status": "CANDIDATE",
       "path": "archive/spec/gptdream/OPEN_GIFT_PACKAGE_GUIDE_v0.1.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "depends_on",
           "target_id": "AL-GP-002"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "defines",
+          "source_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-KG-002"
+        },
+        {
+          "relation": "summarized_by",
+          "source_id": "AL-GP-002"
         }
       ]
     },
     {
       "id": "AL-GP-002",
       "title": "GPTDream++ Vault Manifest",
-      "artifact_type": "registry",
+      "type": "registry",
       "status": "CANDIDATE",
       "path": "archive/spec/gptdream/VAULT_MANIFEST_2026-05-26.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "summarized_by",
           "target_id": "AL-GP-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "depends_on",
+          "source_id": "AL-GP-001"
+        },
+        {
+          "relation": "implements",
+          "source_id": "AL-SCHEMA-001"
         }
       ]
     },
     {
       "id": "AL-RT-001",
       "title": "Ratification and Trust Flow",
-      "artifact_type": "doctrine",
+      "type": "doctrine",
       "status": "CANDIDATE",
       "path": "docs/RATIFICATION_AND_TRUST_FLOW.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "governs",
           "target_id": "AL-MISSION-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "defines",
+          "source_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-KG-002"
         }
       ]
     },
     {
       "id": "AL-EXEC-001",
       "title": "Aetherforge Rolling Sprints",
-      "artifact_type": "blueprint",
+      "type": "blueprint",
       "status": "CANDIDATE",
       "path": "projects/AETHERFORGE_ROLLING_SPRINTS_v0.1.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "prioritizes",
           "target_id": "AL-KG-001"
@@ -140,41 +258,71 @@
           "relation": "prioritizes",
           "target_id": "AL-KG-003"
         }
+      ],
+      "in_edges": [
+        {
+          "relation": "implemented_by",
+          "source_id": "AL-AF-001"
+        },
+        {
+          "relation": "extends",
+          "source_id": "AL-EXEC-144-001"
+        },
+        {
+          "relation": "implements",
+          "source_id": "AL-EXEC-002"
+        }
       ]
     },
     {
       "id": "AL-CI-001",
       "title": "Artifact Graph Checks Workflow",
-      "artifact_type": "schema",
+      "type": "schema",
       "status": "CANDIDATE",
       "path": ".github/workflows/artifact-graph-checks.yml",
-      "links": [
+      "out_edges": [
         {
           "relation": "runs",
           "target_id": "AL-CI-002"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "generated_by",
+          "source_id": "AL-HEALTH-001"
         }
       ]
     },
     {
       "id": "AL-CI-002",
       "title": "Artifact Graph Validator",
-      "artifact_type": "spec",
+      "type": "spec",
       "status": "CANDIDATE",
       "path": ".github/scripts/validate_artifact_graph.py",
-      "links": [
+      "out_edges": [
         {
           "relation": "validates",
           "target_id": "AL-KG-002"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "runs",
+          "source_id": "AL-CI-001"
+        },
+        {
+          "relation": "generated_by",
+          "source_id": "AL-EVID-003"
         }
       ]
     },
     {
       "id": "AL-EXEC-144-001",
       "title": "Aetherforge 144-Task Execution Campaign",
-      "artifact_type": "roadmap",
+      "type": "roadmap",
       "status": "CANDIDATE",
       "path": "projects/aetherforge-144-task-campaign-2026-05-27.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "extends",
           "target_id": "AL-EXEC-001"
@@ -183,15 +331,33 @@
           "relation": "operationalizes",
           "target_id": "AL-MISSION-001"
         }
+      ],
+      "in_edges": [
+        {
+          "relation": "governs",
+          "source_id": "AL-GOV-002"
+        },
+        {
+          "relation": "receipts_for",
+          "source_id": "AL-LOG-001"
+        },
+        {
+          "relation": "governs",
+          "source_id": "AL-KG-003"
+        },
+        {
+          "relation": "receipts_for",
+          "source_id": "AL-LOG-002"
+        }
       ]
     },
     {
       "id": "AL-GOV-002",
       "title": "Atlas Lattice Public Open-Source Baseline v0.1",
-      "artifact_type": "doctrine",
+      "type": "doctrine",
       "status": "CANDIDATE",
       "path": "docs/governance/ATLAS_LATTICE_PUBLIC_OPEN_SOURCE_BASELINE_v0.1.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "governs",
           "target_id": "AL-MISSION-001"
@@ -200,15 +366,25 @@
           "relation": "governs",
           "target_id": "AL-EXEC-144-001"
         }
+      ],
+      "in_edges": [
+        {
+          "relation": "supports",
+          "source_id": "AL-EVID-001"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-ADR-001"
+        }
       ]
     },
     {
       "id": "AL-EVID-001",
       "title": "AI Evidence Ledger Schema v0.1",
-      "artifact_type": "schema",
+      "type": "schema",
       "status": "CANDIDATE",
       "path": "docs/knowledge-graph/ai_evidence_ledger.schema.v0_1.json",
-      "links": [
+      "out_edges": [
         {
           "relation": "constrains",
           "target_id": "AL-EVID-002"
@@ -217,15 +393,21 @@
           "relation": "supports",
           "target_id": "AL-GOV-002"
         }
+      ],
+      "in_edges": [
+        {
+          "relation": "validated_by",
+          "source_id": "AL-EVID-002"
+        }
       ]
     },
     {
       "id": "AL-EVID-002",
       "title": "AI Evidence Ledger Seed v0.1",
-      "artifact_type": "evidence",
+      "type": "evidence",
       "status": "CANDIDATE",
       "path": "docs/knowledge-graph/ai_evidence_ledger.seed.v0_1.json",
-      "links": [
+      "out_edges": [
         {
           "relation": "validated_by",
           "target_id": "AL-EVID-001"
@@ -234,15 +416,25 @@
           "relation": "recorded_in",
           "target_id": "AL-LOG-001"
         }
+      ],
+      "in_edges": [
+        {
+          "relation": "constrains",
+          "source_id": "AL-EVID-001"
+        },
+        {
+          "relation": "evidence_for",
+          "source_id": "AL-LOG-001"
+        }
       ]
     },
     {
       "id": "AL-LOG-001",
       "title": "TIDELOCK Wave 1 Receipt 2026-05-27",
-      "artifact_type": "receipt",
+      "type": "receipt",
       "status": "CANDIDATE",
       "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_WAVE1_144_TASK_EXECUTION_RECEIPT_2026-05-27.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "receipts_for",
           "target_id": "AL-EXEC-144-001"
@@ -251,15 +443,21 @@
           "relation": "evidence_for",
           "target_id": "AL-EVID-002"
         }
+      ],
+      "in_edges": [
+        {
+          "relation": "recorded_in",
+          "source_id": "AL-EVID-002"
+        }
       ]
     },
     {
       "id": "AL-KG-003",
       "title": "Artifact ID and Lifecycle Contract v0.1",
-      "artifact_type": "spec",
+      "type": "spec",
       "status": "CANDIDATE",
       "path": "docs/knowledge-graph/ARTIFACT_ID_AND_LIFECYCLE_CONTRACT_v0_1.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "extends",
           "target_id": "AL-KG-001"
@@ -272,15 +470,29 @@
           "relation": "governs",
           "target_id": "AL-EXEC-144-001"
         }
+      ],
+      "in_edges": [
+        {
+          "relation": "extends",
+          "source_id": "AL-KG-001"
+        },
+        {
+          "relation": "prioritizes",
+          "source_id": "AL-EXEC-001"
+        },
+        {
+          "relation": "evidence_for",
+          "source_id": "AL-LOG-002"
+        }
       ]
     },
     {
       "id": "AL-LOG-002",
       "title": "TIDELOCK Wave 2 Receipt 2026-05-27",
-      "artifact_type": "receipt",
+      "type": "receipt",
       "status": "CANDIDATE",
       "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_WAVE2_144_TASK_EXECUTION_RECEIPT_2026-05-27.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "receipts_for",
           "target_id": "AL-EXEC-144-001"
@@ -289,132 +501,169 @@
           "relation": "evidence_for",
           "target_id": "AL-KG-003"
         }
-      ]
+      ],
+      "in_edges": []
     },
     {
       "id": "AL-GOV-001",
       "title": "Aluminum OS v4.0 Unified Field",
-      "artifact_type": "spec",
+      "type": "spec",
       "status": "CANDIDATE",
       "path": "aluminum-os/v4.0-unified-field.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "implemented_by",
           "target_id": "AL-SYS-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "spec",
+          "source_id": "AL-SYS-001"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-SYS-002"
         }
       ]
     },
     {
       "id": "AL-SYS-001",
       "title": "Aluminum OS Core README",
-      "artifact_type": "readme",
+      "type": "readme",
       "status": "CANDIDATE",
       "path": "aluminum-os-core/README.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "spec",
           "target_id": "AL-GOV-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "implemented_by",
+          "source_id": "AL-GOV-001"
         }
       ]
     },
     {
       "id": "AL-SYS-002",
       "title": "BAZINGA v0.1 Launch Decree",
-      "artifact_type": "spec",
+      "type": "spec",
       "status": "CANDIDATE",
       "path": "bazinga/v0.1-launch-decree.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "part_of",
           "target_id": "AL-GOV-001"
         }
-      ]
+      ],
+      "in_edges": []
     },
     {
       "id": "AL-GOV-003",
       "title": "Three-Tier Autonomy Doctrine",
-      "artifact_type": "doctrine",
+      "type": "doctrine",
       "status": "CANDIDATE",
       "path": "projects/three-tier-autonomy/doctrine.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "relates_to",
           "target_id": "AL-MISSION-001"
         }
-      ]
+      ],
+      "in_edges": []
     },
     {
       "id": "AL-GOV-004",
       "title": "Free Bank Banking Revolution Archive",
-      "artifact_type": "archive",
+      "type": "archive",
       "status": "CANDIDATE",
       "path": "projects/free-bank/banking-revolution-archive.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "relates_to",
           "target_id": "AL-MISSION-001"
         }
-      ]
+      ],
+      "in_edges": []
     },
     {
       "id": "AL-GOV-005",
       "title": "Chinook Guardian v1.0",
-      "artifact_type": "spec",
+      "type": "spec",
       "status": "CANDIDATE",
       "path": "projects/chinook-guardian/v1.0.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "relates_to",
           "target_id": "AL-MISSION-001"
         }
-      ]
+      ],
+      "in_edges": []
     },
     {
       "id": "AL-BRAIN-001",
       "title": "GPTBrain Manifest 2026-05-09",
-      "artifact_type": "manifest",
+      "type": "manifest",
       "status": "CANDIDATE",
       "path": "archive/boot/gptbrain/GPTBRAIN_MANIFEST_2026-05-09.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "relates_to",
           "target_id": "AL-KG-002"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "part_of",
+          "source_id": "AL-BRAIN-002"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-BRAIN-003"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-LOG-003"
         }
       ]
     },
     {
       "id": "AL-BRAIN-002",
       "title": "REM-8 Dream Protocol",
-      "artifact_type": "protocol",
+      "type": "protocol",
       "status": "CANDIDATE",
       "path": "archive/boot/gptbrain/REM8_DREAM_PROTOCOL.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "part_of",
           "target_id": "AL-BRAIN-001"
         }
-      ]
+      ],
+      "in_edges": []
     },
     {
       "id": "AL-BRAIN-003",
       "title": "Council Brain Index",
-      "artifact_type": "index",
+      "type": "index",
       "status": "CANDIDATE",
       "path": "archive/boot/COUNCIL_BRAIN_INDEX.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "indexes",
           "target_id": "AL-BRAIN-001"
         }
-      ]
+      ],
+      "in_edges": []
     },
     {
       "id": "AL-SCHEMA-001",
       "title": "Atlas ORCS Schema Suite v0.1",
-      "artifact_type": "schema",
+      "type": "schema",
       "status": "CANDIDATE",
       "path": "schemas/atlas_orcs/v0_1",
-      "links": [
+      "out_edges": [
         {
           "relation": "tested_by",
           "target_id": "AL-TEST-001"
@@ -423,85 +672,102 @@
           "relation": "implements",
           "target_id": "AL-GP-002"
         }
+      ],
+      "in_edges": [
+        {
+          "relation": "tests",
+          "source_id": "AL-TEST-001"
+        }
       ]
     },
     {
       "id": "AL-TEST-001",
       "title": "GPTDream++ Adversarial Test Suite",
-      "artifact_type": "test",
+      "type": "test",
       "status": "CANDIDATE",
       "path": "tests/adversarial",
-      "links": [
+      "out_edges": [
         {
           "relation": "tests",
           "target_id": "AL-SCHEMA-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "tested_by",
+          "source_id": "AL-SCHEMA-001"
         }
       ]
     },
     {
       "id": "AL-EXEC-002",
       "title": "Aetherforge 144-Task Campaign 2026-05-28",
-      "artifact_type": "roadmap",
+      "type": "roadmap",
       "status": "CANDIDATE",
       "path": "projects/aetherforge-144-task-campaign-2026-05-27.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "implements",
           "target_id": "AL-EXEC-001"
         }
-      ]
+      ],
+      "in_edges": []
     },
     {
       "id": "AL-ADR-001",
       "title": "ADR-0001 Public Scope Decision",
-      "artifact_type": "adr",
+      "type": "adr",
       "status": "CANDIDATE",
       "path": "docs/decisions/ADR-0001-public-scope-decision.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "relates_to",
           "target_id": "AL-GOV-002"
         }
-      ]
+      ],
+      "in_edges": []
     },
     {
       "id": "AL-LOG-003",
       "title": "TIDELOCK Brain Index",
-      "artifact_type": "index",
+      "type": "index",
       "status": "CANDIDATE",
       "path": "archive/boot/gptbrain/TIDELOCKBrain/README.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "part_of",
           "target_id": "AL-BRAIN-001"
         }
-      ]
+      ],
+      "in_edges": []
     },
     {
       "id": "AL-HEALTH-001",
       "title": "Archive Health Status 2026-05-28",
-      "artifact_type": "report",
+      "type": "report",
       "status": "CANDIDATE",
       "path": "docs/archive-health-status-2026-05-28.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "generated_by",
           "target_id": "AL-CI-001"
         }
-      ]
+      ],
+      "in_edges": []
     },
     {
       "id": "AL-EVID-003",
       "title": "Metadata Coverage Report 2026-05-28",
-      "artifact_type": "report",
+      "type": "report",
       "status": "CANDIDATE",
       "path": "docs/metadata-coverage-report-2026-05-28.md",
-      "links": [
+      "out_edges": [
         {
           "relation": "generated_by",
           "target_id": "AL-CI-002"
         }
-      ]
+      ],
+      "in_edges": []
     }
   ]
 }

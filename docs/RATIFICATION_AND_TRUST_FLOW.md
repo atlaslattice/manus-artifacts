@@ -1,5 +1,13 @@
 # Ratification and Trust Flow
 
+<!-- METADATA
+stable_id: AL-RT-001
+lifecycle_state: CANDIDATE
+owner: @atlaslattice
+date_created: 2026-05-28
+canon_status: candidate
+-->
+
 > **Status:** CANDIDATE
 > **Artifact Type:** doctrine
 > **Stable ID:** AL-RT-001

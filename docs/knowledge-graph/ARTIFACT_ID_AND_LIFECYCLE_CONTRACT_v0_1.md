@@ -14,7 +14,7 @@ Define a shared ID grammar, relation vocabulary, and lifecycle progression contr
 `AL-<DOMAIN>-<SEQ>`
 
 - Prefix: `AL`
-- Domain: uppercase code (`MISSION`, `KG`, `AF`, `GP`, `RT`, `CI`, `EXEC`, `GOV`, `EVID`, `LOG`)
+- Domain: uppercase code (`MISSION`, `KG`, `AF`, `GP`, `RT`, `CI`, `EXEC`, `GOV`, `EVID`, `LOG`, `SYS`, `BRAIN`, `SCHEMA`, `TEST`, `ADR`, `HEALTH`)
 - Sequence: three-digit zero-padded integer (`001`, `002`, ...)
 
 ### Domain Namespace (Current)
@@ -31,6 +31,12 @@ Define a shared ID grammar, relation vocabulary, and lifecycle progression contr
 | GOV | governance policy/baseline artifacts |
 | EVID | machine-readable evidence artifacts |
 | LOG | execution receipts and audit logs |
+| SYS | subsystem documentation and implementation entrypoints |
+| BRAIN | multi-agent manifests, protocols, and indexes |
+| SCHEMA | schema bundles and suites |
+| TEST | executable validation and adversarial suites |
+| ADR | architecture decision records |
+| HEALTH | generated health and coverage reports |
 
 ## Relation Vocabulary (v0.1)
 
@@ -56,6 +62,12 @@ Allowed relation verbs:
 - `receipts_for`
 - `evidence_for`
 - `recorded_in`
+- `part_of`
+- `relates_to`
+- `tested_by`
+- `tests`
+- `generated_by`
+- `spec`
 
 ## Lifecycle Progression Contract
 

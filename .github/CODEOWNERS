@@ -1,0 +1,17 @@
+# Atlas Lattice CODEOWNERS
+# Global owner — all paths require @atlaslattice review
+* @atlaslattice
+
+# Governance-critical paths
+/docs/knowledge-graph/ @atlaslattice
+/docs/decisions/ @atlaslattice
+/archive/boot/governance/ @atlaslattice
+/projects/AETHERFORGE_LATTICE_GPTDREAM_MISSION_CHARTER_v0.1.md @atlaslattice
+
+# Schemas — require schema review
+/schemas/ @atlaslattice
+/reference_impl/ @atlaslattice
+
+# CI/Workflows
+/.github/workflows/ @atlaslattice
+/scripts/ @atlaslattice

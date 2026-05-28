@@ -48,6 +48,38 @@
     {
       "type": "roadmap",
       "description": "Wave/task campaign plans and sequencing boards"
+    },
+    {
+      "type": "readme",
+      "description": "Primary package or subsystem entrypoint documentation"
+    },
+    {
+      "type": "archive",
+      "description": "Archival collection or project corpus"
+    },
+    {
+      "type": "manifest",
+      "description": "Manifest or generated package inventory"
+    },
+    {
+      "type": "protocol",
+      "description": "Operational protocol or execution contract"
+    },
+    {
+      "type": "index",
+      "description": "Navigation index or curated directory surface"
+    },
+    {
+      "type": "test",
+      "description": "Executable validation or adversarial test surface"
+    },
+    {
+      "type": "adr",
+      "description": "Architecture decision record"
+    },
+    {
+      "type": "report",
+      "description": "Generated health, coverage, or status report"
     }
   ],
   "lifecycle_states": [
@@ -109,6 +141,30 @@
     {
       "domain": "LOG",
       "description": "Execution receipts and logs"
+    },
+    {
+      "domain": "SYS",
+      "description": "System implementation and subsystem documentation"
+    },
+    {
+      "domain": "BRAIN",
+      "description": "Multi-agent brain manifests, protocols, and indexes"
+    },
+    {
+      "domain": "SCHEMA",
+      "description": "Schema suites and validation bundles"
+    },
+    {
+      "domain": "TEST",
+      "description": "Test harnesses and adversarial suites"
+    },
+    {
+      "domain": "ADR",
+      "description": "Architecture decision records"
+    },
+    {
+      "domain": "HEALTH",
+      "description": "Health and metadata coverage reporting artifacts"
     }
   ],
   "relation_vocabulary": [
@@ -131,7 +187,13 @@
     "validates",
     "receipts_for",
     "evidence_for",
-    "recorded_in"
+    "recorded_in",
+    "part_of",
+    "relates_to",
+    "tested_by",
+    "tests",
+    "generated_by",
+    "spec"
   ],
   "lifecycle_transitions": [
     {

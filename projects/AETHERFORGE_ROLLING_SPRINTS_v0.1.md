@@ -1,5 +1,13 @@
 # Aetherforge Rolling Sprints v0.1
 
+<!-- METADATA
+stable_id: AL-EXEC-001
+lifecycle_state: CANDIDATE
+owner: @atlaslattice
+date_created: 2026-05-28
+canon_status: candidate
+-->
+
 > **Status:** CANDIDATE
 > **Artifact Type:** blueprint
 > **Stable ID:** AL-EXEC-001
