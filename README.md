@@ -94,6 +94,7 @@ This expectation is enforced through our [Code of Conduct](./CODE_OF_CONDUCT.md)
 | [Security Posture Pack](./docs/security/README.md) | Wave 7 security/automation pack: posture, policies, branch protection |
 | [Metadata Backfill Scope](./docs/METADATA_BACKFILL_SCOPE_2026-05-27.md) | Wave 3 top-50 and next-100 metadata queue |
 | [Metadata Coverage Report](./docs/METADATA_COVERAGE_REPORT_2026-05-27.md) | Current frontmatter and provenance coverage |
+| [Master Source Registry](./docs/MASTER_SOURCE_REGISTRY.md) | Multi-source KG synthesis intake ledger (this repo + gits + Notion + Drive) |
 
 ---
 

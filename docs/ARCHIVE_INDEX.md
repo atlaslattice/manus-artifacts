@@ -111,7 +111,8 @@ source_of_truth: GitHub
 | [Contributor Quickstart](./CONTRIBUTOR_QUICKSTART.md) | Contributor onboarding and validation |
 | [FAQ](./FAQ.md) | Common contributor and governance questions |
 | [Folder Taxonomy Audit](./FOLDER_TAXONOMY_AUDIT_2026-05-27.md) | Wave 1 taxonomy baseline |
-| [Lattice Global Index](./LATTICE_GLOBAL_INDEX.md) | Generated cross-domain markdown index |
+| [Lattice Global Index](./LATTICE_GLOBAL_INDEX.md) | Full deep index of all 374+ artifacts (with title/status/artifact_id) |
+| [Master Source Registry](./MASTER_SOURCE_REGISTRY.md) | Multi-source KG synthesis intake ledger (this repo + gits + Notion + Drive) |
 | [Roadmap](./ROADMAP.md) | Now/Next/Later execution roadmap |
 | [Public Charter (500+ IP)](./ATLAS_LATTICE_PUBLIC_CHARTER_500IP.md) | Public scope, inclusion, evidence rules |
 | [AI Systems Evidence Index](./AI_SYSTEMS_EVIDENCE_INDEX.md) | AI claim lineage and evidence spine |
@@ -124,4 +125,4 @@ source_of_truth: GitHub
 
 ---
 
-*Index last updated: 2026-05-27. To propose a new artifact, open an [Artifact Proposal issue](https://github.com/atlaslattice/manus-artifacts/issues/new?template=artifact_proposal.md).*
+*Index last updated: 2026-05-28. To propose a new artifact, open an [Artifact Proposal issue](https://github.com/atlaslattice/manus-artifacts/issues/new?template=artifact_proposal.md).*
