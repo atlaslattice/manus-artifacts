@@ -8,8 +8,9 @@ AUTHORITY: NONE
 
 ## Alignment contract
 
-- Program board: `projects/aetherforge-144-task-campaign-2026-05-27.md`
-- Portfolio board: `projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md`
+- Program board: [`projects/aetherforge-144-task-campaign-2026-05-27.md`](./aetherforge-144-task-campaign-2026-05-27.md)
+- Portfolio board: [`projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md`](./aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
+- Authority board: [`projects/aetherforge-world-class-authoritative-roadmap-v0.1.md`](./aetherforge-world-class-authoritative-roadmap-v0.1.md)
 - Sprint board (this file): top-priority next 10 executable tasks
 
 ## Top-10 sprint tasks
