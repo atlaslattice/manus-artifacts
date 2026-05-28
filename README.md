@@ -35,6 +35,7 @@ This repository contains research, health data, and system artifacts generated a
 - **[Council](./council/)** — Trinity and Pantheon Council session archives.
 - **[Council Reviews](./council-reviews/)** — External reviews and validation.
 - **[Council Brain Index](./archive/boot/COUNCIL_BRAIN_INDEX.md)** — Brain seat registry, guardrails, and canon boundary.
+- **[Governance Docs](./docs/governance/README.md)** — Canon lifecycle, registries, trust-state glossary, ratification procedures.
 
 ### AtlasLattice World-Class Operating Core
 - **CouncilBrain (S2 review trail):** [`archive/boot/councilbrain/COUNCILBRAIN_S2_BOOT_REVIEW_TRAIL_2026-05-09.md`](./archive/boot/councilbrain/COUNCILBRAIN_S2_BOOT_REVIEW_TRAIL_2026-05-09.md)

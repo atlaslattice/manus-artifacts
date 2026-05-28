@@ -6,18 +6,18 @@ This board implements the next 12x12 execution sequence for making the repositor
 
 ## Wave 1 — Canon + governance core
 
-1. Finalize canon lifecycle state machine — `queued`
-2. Standardize canon metadata fields repo-wide — `queued`
-3. Build canonical artifact registry — `queued`
-4. Build candidate artifact registry — `queued`
-5. Add adjudication receipt template — `queued`
-6. Add ratification event template — `queued`
-7. Add claim verification checklist — `queued`
-8. Add conflict-resolution playbook — `queued`
-9. Add source-of-truth mirror policy — `queued`
-10. Add governance decision index — `queued`
-11. Add trust-state glossary — `queued`
-12. Publish governance operations handbook — `queued`
+1. Finalize canon lifecycle state machine — `done` → [CANON_LIFECYCLE_STATE_MACHINE.md](../docs/governance/CANON_LIFECYCLE_STATE_MACHINE.md)
+2. Standardize canon metadata fields repo-wide — `done` → [CANON_METADATA_STANDARD.md](../docs/governance/CANON_METADATA_STANDARD.md)
+3. Build canonical artifact registry — `done` → [CANON_REGISTRY.md](../docs/governance/CANON_REGISTRY.md)
+4. Build candidate artifact registry — `done` → [CANDIDATE_REGISTRY.md](../docs/governance/CANDIDATE_REGISTRY.md)
+5. Add adjudication receipt template — `done` → [ADJUDICATION_RECEIPT_TEMPLATE.md](../docs/governance/ADJUDICATION_RECEIPT_TEMPLATE.md)
+6. Add ratification event template — `done` → [RATIFICATION_EVENT_TEMPLATE.md](../docs/governance/RATIFICATION_EVENT_TEMPLATE.md)
+7. Add claim verification checklist — `done` → [CLAIM_VERIFICATION_CHECKLIST.md](../docs/governance/CLAIM_VERIFICATION_CHECKLIST.md)
+8. Add conflict-resolution playbook — `done` → [CONFLICT_RESOLUTION_PLAYBOOK.md](../docs/governance/CONFLICT_RESOLUTION_PLAYBOOK.md)
+9. Add source-of-truth mirror policy — `done` → [SOURCE_OF_TRUTH_MIRROR_POLICY.md](../docs/governance/SOURCE_OF_TRUTH_MIRROR_POLICY.md)
+10. Add governance decision index — `done` → [GOVERNANCE_DECISION_INDEX.md](../docs/governance/GOVERNANCE_DECISION_INDEX.md)
+11. Add trust-state glossary — `done` → [TRUST_STATE_GLOSSARY.md](../docs/governance/TRUST_STATE_GLOSSARY.md)
+12. Publish governance operations handbook — `done` → [GOVERNANCE_OPERATIONS_HANDBOOK.md](../docs/governance/GOVERNANCE_OPERATIONS_HANDBOOK.md)
 
 ## Wave 2 — Knowledge graph substrate
 
