@@ -336,11 +336,16 @@ def validate_surface_link_integrity(repo_root: Path) -> list[str]:
 
 def validate_metadata_consistency(repo_root: Path) -> list[str]:
     errors: list[str] = []
-    files = {
+    # AX-15: expanded metadata consistency checks across project, spec, and governance surfaces
+    files: dict[str, tuple[str, ...]] = {
         "projects/aetherforge-world-class-authoritative-roadmap-v0.1.md": ("AUTHORITY: NONE", "NOT CANON"),
         "projects/aetherforge-144-task-campaign-2026-05-27.md": ("AUTHORITY: NONE", "NOT CANON"),
         "projects/aetherforge-top10-taskboard-2026-05-28.md": ("AUTHORITY: NONE", "NOT CANON"),
         "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md": ("AUTHORITY: NONE", "NOT CANON"),
+        # Next-144 taskboard must carry candidate/no-authority markers
+        "projects/aetherforge-next144-taskboard-2026-05-28.md": ("AUTHORITY: NONE", "NOT CANON"),
+        # Quarantine surface must carry its routing directive
+        "quarantine/README.md": ("QUARANTINE", "PRIVATE"),
     }
     for rel, required_tokens in files.items():
         target = repo_root / rel
@@ -351,6 +356,37 @@ def validate_metadata_consistency(repo_root: Path) -> list[str]:
         for token in required_tokens:
             if token not in text:
                 errors.append(f"metadata check failed: {rel} missing token '{token}'")
+    return errors
+
+
+def validate_quarantine_governance(repo_root: Path) -> list[str]:
+    """AX-14: Governance-state drift check — quarantine surface must be properly marked."""
+    errors: list[str] = []
+    quarantine_root = repo_root / "quarantine"
+    if not quarantine_root.exists():
+        # Quarantine dir is optional; only validate if it exists
+        return errors
+
+    readme = quarantine_root / "README.md"
+    if not readme.exists():
+        errors.append("governance drift check failed: quarantine/README.md is missing")
+        return errors
+
+    text = readme.read_text(encoding="utf-8", errors="ignore")
+    required_tokens = ("QUARANTINE", "PENDING PRIVATE REPO MIGRATION", "PRIVATE")
+    for token in required_tokens:
+        if token not in text:
+            errors.append(f"governance drift check failed: quarantine/README.md missing token '{token}'")
+
+    # Every file inside quarantine/ (except README) must NOT appear in REQUIRED_SURFACE_PATHS
+    for quarantine_file in sorted(quarantine_root.rglob("*")):
+        if not quarantine_file.is_file():
+            continue
+        rel = quarantine_file.relative_to(repo_root).as_posix()
+        if rel in REQUIRED_SURFACE_PATHS:
+            errors.append(
+                f"governance drift check failed: quarantined file is in REQUIRED_SURFACE_PATHS: {rel}"
+            )
     return errors
 
 
@@ -416,6 +452,7 @@ def validate_index(repo_root: Path, index_path: Path, max_age_days: int) -> list
     errors.extend(validate_metadata_consistency(repo_root))
     errors.extend(validate_surface_link_integrity(repo_root))
     errors.extend(validate_gptdreampp_staging_fixtures(repo_root))
+    errors.extend(validate_quarantine_governance(repo_root))
 
     return errors
 

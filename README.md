@@ -39,7 +39,7 @@ Guardrails:
   - [v0.1 Launch Decree](./bazinga/v0.1-launch-decree.md)
 
 ### Projects
-- **[Free Bank](./projects/free-bank/)** — Banking revolution and financial sovereignty.
+- **[Free Bank](./quarantine/projects/free-bank/)** ⚠️ _quarantined — pending private repo migration_ — Banking revolution and financial sovereignty.
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
 - **[Aetherforge World-Class Authoritative Roadmap v0.1](./projects/aetherforge-world-class-authoritative-roadmap-v0.1.md)** — Single authoritative execution roadmap for world-class sequencing.

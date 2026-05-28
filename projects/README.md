@@ -10,7 +10,7 @@ Execution surfaces for project-specific strategy and delivery artifacts.
 - [Aetherforge Top-10 Sprint Board](./aetherforge-top10-taskboard-2026-05-28.md)
 - [Aetherforge Metatron's Cube Top 50 Taskboard](./aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
 - [GPTDream++ OpenAI Public Staging Lane](../archive/aetherforge/gptdreampp-openai/README.md)
-- [Free Bank](./free-bank/)
+- [Free Bank](../quarantine/projects/free-bank/) ⚠️ _quarantined — pending private repo migration_
 - [Chinook Guardian](./chinook-guardian/)
 - [Three-Tier Autonomy](./three-tier-autonomy/)
 
