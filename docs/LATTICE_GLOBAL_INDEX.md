@@ -10,14 +10,14 @@ source_of_truth: GitHub
 
 # Lattice Global Index
 
-Generated at: `2026-05-28T18:08:15+00:00`
+Generated at: `2026-05-28T18:30:18+00:00`
 
 ## Domain Summary
 
 | Domain | Markdown Artifacts |
 |---|---:|
 | `(root)` | 8 |
-| `.github` | 5 |
+| `.github` | 8 |
 | `about` | 1 |
 | `aluminum-os` | 22 |
 | `aluminum-os-core` | 1 |
@@ -50,7 +50,10 @@ Generated at: `2026-05-28T18:08:15+00:00`
 - `.github/CONTRIBUTING.md`
 - `.github/ISSUE_TEMPLATE/artifact_proposal.md`
 - `.github/ISSUE_TEMPLATE/bug_report.md`
+- `.github/ISSUE_TEMPLATE/evidence_quest.md`
 - `.github/ISSUE_TEMPLATE/feature_request.md`
+- `.github/ISSUE_TEMPLATE/graph_linking_quest.md`
+- `.github/ISSUE_TEMPLATE/metadata_quest.md`
 - `.github/PULL_REQUEST_TEMPLATE.md`
 
 ### about
