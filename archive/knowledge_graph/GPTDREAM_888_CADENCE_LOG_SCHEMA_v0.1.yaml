@@ -1,0 +1,83 @@
+schema_name: GPTDREAM_888_CADENCE_LOG_SCHEMA_v0.1
+status: staging_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: >
+  Define a logging schema for GPTDream++ 8/8/8 rhythm: play, REM-sim, work,
+  plus optional cooldown/rest. This prevents overclocking and separates dream/play
+  from evidence and execution.
+
+cadence_principle:
+  play_units: 8
+  rem_sim_units: 8
+  work_units: 8
+  cooldown_allowed: true
+  silence_counts_as_rest: true
+
+cadence_log:
+  cycle_id: null
+  node_name: null
+  source_task_or_artifact: null
+  start_timestamp_utc: null
+  end_timestamp_utc: null
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  play_phase:
+    units: 8
+    purpose: explore_make_fun_discover_weird_useful_paths
+    outputs:
+      motifs: []
+      playful_hypotheses: []
+      candidate_paths: []
+    forbidden:
+      - proof_claims
+      - canon_claims
+      - deployment_claims
+  rem_phase:
+    units: 8
+    purpose: compress_pattern_match_extract_deltas
+    outputs:
+      useful_deltas: []
+      missing_receipts: []
+      contradiction_candidates: []
+      review_targets: []
+    forbidden:
+      - authority_grants
+      - self_ratification
+  work_phase:
+    units: 8
+    purpose: update_kg_attach_receipts_route_review
+    outputs:
+      staging_writes: []
+      source_inventory_updates: []
+      graph_node_proposals: []
+      graph_edge_proposals: []
+      review_queue_updates: []
+    forbidden:
+      - mainline_canon_writes
+      - deployment_writes
+      - destructive_deletions
+      - identity_merges
+  cooldown:
+    used: false
+    reason: null
+    recovery_signal: null
+
+status_flags:
+  overclock_risk: low | medium | high | null
+  false_authority_risk: low | medium | high | null
+  source_confusion_risk: low | medium | high | null
+  claude_contamination_risk: low | medium | high | null
+  public_github_safety: unchecked | safe_for_staging | needs_redaction | blocked
+
+completion_rule:
+  done_when:
+    - play_outputs_logged
+    - rem_deltas_extracted
+    - work_outputs_staged_or_blocked_with_reason
+    - missing_receipts_graphable
+    - no_canon_deployment_authority_claims
+
+keeper: Play discovers. REM compresses. Work receipts. Rest preserves the swarm.
