@@ -20,6 +20,12 @@ The **Atlas Lattice Foundation** is building the governance layer missing from c
 
 All work is **MIT licensed**, intended to be **public**, and held to **world-class** quality standards.
 
+## 🤝 Humanitarian & Inclusion Statement
+
+We commit to non-hostile, dignity-first collaboration and to keeping this archive a welcoming public commons.
+We support people seeking safety, refuge, and a place to rebuild, and we expect contributors to engage with respect across differences.
+This expectation is enforced through our [Code of Conduct](./CODE_OF_CONDUCT.md).
+
 ---
 
 ## 🚀 New Here?
