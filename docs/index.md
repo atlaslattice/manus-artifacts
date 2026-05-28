@@ -5,6 +5,7 @@ Status: candidate navigation index (not canon)
 ## Start Here
 
 - Vision: `/PHILOSOPHY.md`
+- Mission + Vision statement: `/docs/mission-vision.md`
 - Governance and canon flow: `/GOVERNANCE.md`
 - Contribution process: `/.github/CONTRIBUTING.md`
 - Security process: `/.github/SECURITY.md`
@@ -26,6 +27,7 @@ Status: candidate navigation index (not canon)
 - Portfolio (launch): `/projects/aetherforge-top50-taskboard-2026-05-26.md`
 - Sprint Wave 1: `/projects/aetherforge-top10-taskboard-2026-05-26.md`
 - Sprint Wave 2: `/projects/aetherforge-top10-taskboard-2026-05-26-wave2.md`
+- Sprint Wave 3: `/projects/aetherforge-top10-taskboard-2026-05-28.md`
 
 ## Information Architecture Standards
 
@@ -49,3 +51,14 @@ Status: candidate navigation index (not canon)
 - Redact/remove matrix: `/docs/security/REDACT_REMOVE_DECISION_MATRIX.md`
 - Public-readiness gate checklist: `/docs/security/PUBLIC_READINESS_GATE_CHECKLIST.md`
 - Branch protection controls: `/.github/BRANCH_PROTECTION.md`
+- Secret/Leak incident response: `/docs/security/INCIDENT_RESPONSE_RUNBOOK_LEAKS.md`
+- Signed tag/release policy: `/docs/security/SIGNED_TAG_RELEASE_POLICY.md`
+- Dependency vulnerability triage SLA: `/docs/security/DEPENDENCY_VULNERABILITY_TRIAGE_SLA.md`
+- License compliance scan policy: `/docs/security/LICENSE_COMPLIANCE_SCAN_POLICY.md`
+- Artifact checksum policy: `/docs/security/ARTIFACT_INTEGRITY_CHECKSUM_POLICY.md`
+- Repo publication threat model: `/docs/security/REPO_PUBLICATION_THREAT_MODEL.md`
+
+## Quality and Operations Registers
+
+- Known issues and errata: `/docs/known-issues-errata.md`
+- Owner settings action list (settings-only tasks): `/docs/owner-settings-action-list.md`

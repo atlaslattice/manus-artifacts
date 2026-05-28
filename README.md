@@ -49,6 +49,7 @@ by @atlaslattice. See [GOVERNANCE.md](./GOVERNANCE.md).
 | Want to… | Go here |
 |---|---|
 | Understand the vision | [PHILOSOPHY.md](./PHILOSOPHY.md) |
+| Read mission + vision | [docs/mission-vision.md](./docs/mission-vision.md) |
 | Onboard as a contributor | [docs/contributor-onboarding-journey.md](./docs/contributor-onboarding-journey.md) |
 | See the active sprint | [Wave-3 Board](./projects/aetherforge-top10-taskboard-2026-05-28.md) |
 | Understand governance | [GOVERNANCE.md](./GOVERNANCE.md) |
@@ -58,6 +59,7 @@ by @atlaslattice. See [GOVERNANCE.md](./GOVERNANCE.md).
 | Navigate project hierarchy | [projects/README.md](./projects/README.md) |
 | Log AI evidence artifacts | [docs/ai-evidence/README.md](./docs/ai-evidence/README.md) |
 | Check repository health | [docs/HEALTH_DASHBOARD.md](./docs/HEALTH_DASHBOARD.md) |
+| Review owner settings actions | [docs/owner-settings-action-list.md](./docs/owner-settings-action-list.md) |
 | Report a security issue | [.github/SECURITY.md](./.github/SECURITY.md) |
 | Cite this work | [CITATION.cff](./CITATION.cff) |
 
@@ -107,6 +109,7 @@ by @atlaslattice. See [GOVERNANCE.md](./GOVERNANCE.md).
 - **[Manus Vault](./manus-vault/)** — Internal session summaries and Noah's Ark protocols.
 - **[AI Evidence Logging](./docs/ai-evidence/README.md)** — provenance-first AI build/eval logging templates.
 - **[TIDELOCKBrain Logs](./archive/boot/gptbrain/TIDELOCKBrain/ARTIFACT_INDEX.md)** — dream/play/execution log archive.
+- **[Known Issues & Errata](./docs/known-issues-errata.md)** — active documentation and validation caveats.
 
 ### About
 - **[David Sheldon](./about/david-sheldon.md)** — Visionary and system architect.

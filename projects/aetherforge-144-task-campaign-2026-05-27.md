@@ -22,14 +22,14 @@ Target: make `atlaslattice/manus-artifacts` fully public, provenance-first, and 
 - [x] 13. Run full-history secret scan.
 - [x] 14. Run full-history PII scan.
 - [x] 15. Create redact/remove decision matrix.
-- [ ] 16. Create incident response runbook for leaks.
+- [x] 16. Create incident response runbook for leaks.
 - [ ] 17. Enforce branch protection on main.
 - [ ] 18. Enforce required reviews and checks.
-- [ ] 19. Add signed-tag/release policy.
-- [ ] 20. Add dependency vulnerability triage SLA.
-- [ ] 21. Add license compliance scan policy.
-- [ ] 22. Add artifact integrity checksum policy.
-- [ ] 23. Add threat model for repo publication.
+- [x] 19. Add signed-tag/release policy.
+- [x] 20. Add dependency vulnerability triage SLA.
+- [x] 21. Add license compliance scan policy.
+- [x] 22. Add artifact integrity checksum policy.
+- [x] 23. Add threat model for repo publication.
 - [x] 24. Add public-readiness gate checklist.
 
 ## Axis 03 — Repository Information Architecture (25-36)
@@ -45,7 +45,7 @@ Target: make `atlaslattice/manus-artifacts` fully public, provenance-first, and 
 - [x] 33. Add directory-level maturity labels.
 - [x] 34. Add canonical navigation index page.
 - [x] 35. Add path-level purpose registry.
-- [ ] 36. Add structure lint rules for docs layout.
+- [x] 36. Add structure lint rules for docs layout.
 
 ## Axis 04 — Metadata & Indexing (37-48)
 
@@ -150,7 +150,7 @@ Target: make `atlaslattice/manus-artifacts` fully public, provenance-first, and 
 - [x] 117. Add AI claims-to-evidence matrix.
 - [x] 118. Add third-party validation log section.
 - [x] 119. Add AI evidence index page.
-- [ ] 120. Add AI evidence integrity checker.
+- [x] 120. Add AI evidence integrity checker.
 
 ## Axis 11 — Open Source Publishing & Community (121-132)
 
@@ -186,7 +186,7 @@ Target: make `atlaslattice/manus-artifacts` fully public, provenance-first, and 
 
 - [ ] Wave 01 complete
 - [ ] Wave 02 complete
-- [ ] Wave 03 complete
+- [x] Wave 03 complete
 - [ ] Wave 04 complete
 - [ ] Wave 05 complete
 - [ ] Wave 06 complete

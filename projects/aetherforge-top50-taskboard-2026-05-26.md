@@ -47,7 +47,7 @@
 - [x] 24. Archive-wide `docs/SUMMARY.md` or `docs/index.md` — navigable map of every major section
 - [x] 25. Glossary of all domain-specific terms (Aetherforge, GPTBrain, Children of the Swarm, REM-8, etc.)
 - [x] 26. Document the canon-trust hierarchy — single authoritative page
-- [ ] 27. Mission and vision statement doc — why this archive exists, what world it builds toward
+- [x] 27. Mission and vision statement doc — why this archive exists, what world it builds toward
 - [x] 28. Architecture decision records (ADRs) — brief records for each major structural choice
 - [x] 29. Timeline / changelog of major milestones — from first commit to now
 - [x] 30. Full contributor onboarding guide — expand `CONTRIBUTING.md` into a journey doc
@@ -64,7 +64,7 @@
 - [x] 36. `SECURITY.md` with escalation matrix and secret scanning guidance
 - [ ] 37. Enable branch protection on `main` (require status checks, no force-push) — via Settings
 - [ ] 38. Sign releases with GPG — makes artifacts verifiable by downstream users
-- [ ] 39. Publish a known-issues / errata list — intellectual honesty builds trust
+- [x] 39. Publish a known-issues / errata list — intellectual honesty builds trust
 - [x] 40. `GOVERNANCE.md` — merge rights, decision process, ratification workflow
 - [x] 41. Document the canon adjudication process — @atlaslattice ratification workflow made explicit
 
@@ -91,10 +91,10 @@
 | Center (Pre-flight) | 5 | 5 | 100% |
 | Inner Ring 1 (First Impression) | 3 | 8 | 38% |
 | Inner Ring 2 (CI/CD) | 6 | 10 | 60% |
-| Middle Ring (Docs & Knowledge) | 9 | 10 | 90% |
-| Outer Ring 1 (Security) | 4 | 8 | 50% |
+| Middle Ring (Docs & Knowledge) | 10 | 10 | 100% |
+| Outer Ring 1 (Security) | 5 | 8 | 63% |
 | Outer Ring 2 (Community) | 1 | 9 | 11% |
-| **Total** | **28** | **50** | **56%** |
+| **Total** | **30** | **50** | **60%** |
 
 ---
 
@@ -108,8 +108,20 @@ public visibility promotion.
 **🟡 Quick wins (items 7, 8, 21, 37):** Add repo topics/description, social preview
 image, OpenSSF badge, and branch protection — each takes < 5 minutes in Settings.
 
-**🟢 Next agent sprint:** finish remaining Middle Ring item 27 (mission/vision
-single doc) and advance security hardening + launch/community items.
+**🟢 Next agent sprint:** advance remaining security hardening and
+launch/community items.
+
+## Owner Settings-Only Actions (exact click-paths)
+
+These cannot be completed via repository file edits:
+
+1. **Description + Topics** — Settings → General → Repository details
+2. **Social preview image** — Settings → General → Social preview
+3. **Branch protection (`main`)** — Settings → Branches → Add branch protection rule
+4. **Discussions enablement/categories** — Settings → Features (enable Discussions), then Discussions → Categories
+5. **GitHub Pages for `/docs`** — Settings → Pages
+
+Reference runbook: `docs/owner-settings-action-list.md`.
 
 ---
 

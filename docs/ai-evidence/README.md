@@ -1,6 +1,6 @@
 # AI Evidence Logging (Axis 10)
 
-Status: candidate implementation set for Aetherforge Axis 10 tasks (109-119).
+Status: candidate implementation set for Aetherforge Axis 10 tasks (109-120).
 
 This folder provides a provenance-first template system for logging AI system
 build evidence in public, auditable, non-overclaim form.
@@ -18,6 +18,7 @@ build evidence in public, auditable, non-overclaim form.
 - `templates/AI_CLAIMS_TO_EVIDENCE_MATRIX_TEMPLATE.md`
 - `templates/THIRD_PARTY_VALIDATION_LOG_TEMPLATE.md`
 - `templates/AI_EVIDENCE_INDEX_TEMPLATE.md`
+- `scripts/check_ai_evidence_integrity.py` — template/schema integrity gate
 
 ## Usage
 

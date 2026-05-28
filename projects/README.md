@@ -19,6 +19,11 @@ Execution hierarchy for Aetherforge delivery:
 
 - `/projects/aetherforge-arc3-wave3-gameplay.md` — Arc 3: The Graph Weaver's Trial
 
+## Program Support Docs
+
+- `/docs/mission-vision.md` — single mission/vision statement for public launch
+- `/docs/owner-settings-action-list.md` — exact click-paths for settings-only tasks
+
 ## Domain Initiatives
 
 - `/projects/free-bank/`

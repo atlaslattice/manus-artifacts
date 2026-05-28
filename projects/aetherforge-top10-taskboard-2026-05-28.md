@@ -14,19 +14,19 @@ quality, discoverability, and playability back into the knowledge graph.
 
 ## Center Node — Graph Integrity Core
 
-- [ ] 1. Ship `scripts/check_graph_link_integrity.py` and validate in CI
+- [x] 1. Ship `scripts/check_graph_link_integrity.py` and validate in CI
 
 ## Surrounding Nodes
 
-- [ ] 2. Ship `scripts/validate_artifact_metadata.py` — metadata completeness
-- [ ] 3. Ship `scripts/build_lattice_global_index.py` — global KG index generation
-- [ ] 4. Ship `scripts/check_markdown_links.py` — broken link detection
-- [ ] 5. Ship `scripts/detect_orphaned_artifacts.py` — orphan node detection
-- [ ] 6. Publish `docs/gptdream-cross-links.md` — GPTDream spec ↔ schema ↔ impl map
-- [ ] 7. Publish `docs/canon-candidate-register.md` — canon promotion tracking
-- [ ] 8. Update `docs/contributor-onboarding-journey.md` — first-task flow + issue forms
-- [ ] 9. Create `archive/boot/gptbrain/TIDELOCKBrain/ARTIFACT_INDEX.md` — consistent log index
-- [ ] 10. Ship `projects/aetherforge-arc3-wave3-gameplay.md` — next playable arc design
+- [x] 2. Ship `scripts/validate_artifact_metadata.py` — metadata completeness
+- [x] 3. Ship `scripts/build_lattice_global_index.py` — global KG index generation
+- [x] 4. Ship `scripts/check_markdown_links.py` — broken link detection
+- [x] 5. Ship `scripts/detect_orphaned_artifacts.py` — orphan node detection
+- [x] 6. Publish `docs/gptdream-cross-links.md` — GPTDream spec ↔ schema ↔ impl map
+- [x] 7. Publish `docs/canon-candidate-register.md` — canon promotion tracking
+- [x] 8. Update `docs/contributor-onboarding-journey.md` — first-task flow + issue forms
+- [x] 9. Create `archive/boot/gptbrain/TIDELOCKBrain/ARTIFACT_INDEX.md` — consistent log index
+- [x] 10. Ship `projects/aetherforge-arc3-wave3-gameplay.md` — next playable arc design
 
 ---
 
@@ -53,7 +53,7 @@ Wave-3 delivers the quality-gate scaffolding layer: scripts, CI hooks, and
 cross-link documentation so the KG hypercube is machine-verifiable and
 game-playable simultaneously.
 
-**Wave-3 status: 🔄 In progress.**
+**Wave-3 status: ✅ Completed (all 10 tasks delivered).**
 
 ---
 

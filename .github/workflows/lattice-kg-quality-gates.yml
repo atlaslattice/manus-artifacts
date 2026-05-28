@@ -64,6 +64,19 @@ jobs:
       - name: Check markdown links
         run: python scripts/check_markdown_links.py
 
+  docs-layout-structure:
+    name: Docs Layout Structure
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check docs layout structure
+        run: python scripts/check_docs_layout_structure.py
+
   orphan-detection:
     name: Orphaned Artifact Detection
     runs-on: ubuntu-latest
@@ -76,6 +89,19 @@ jobs:
           python-version: "3.12"
       - name: Detect orphaned artifacts
         run: python scripts/detect_orphaned_artifacts.py
+
+  ai-evidence-integrity:
+    name: AI Evidence Integrity
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check AI evidence integrity
+        run: python scripts/check_ai_evidence_integrity.py
 
   build-global-index:
     name: Build Lattice Global Index
