@@ -1,0 +1,61 @@
+name: Monthly Archive Integrity Audit
+
+on:
+  schedule:
+    - cron: "0 6 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  integrity-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate workflow YAML syntax
+        run: |
+          python3 - <<'PY'
+          import pathlib, yaml
+          for p in pathlib.Path('.github/workflows').glob('*.yml'):
+            yaml.safe_load(p.read_text())
+          print('All workflow YAML files valid.')
+          PY
+
+      - name: Validate artifact metadata and graph consistency
+        run: python3 scripts/validate_artifact_metadata.py
+
+      - name: Run PKT-SUNDYA Layer-1 fixture harness
+        run: python3 scripts/test_sundya_runner.py tests/pkt_sundya_0_fixtures.json
+
+      - name: Check markdown internal links
+        run: |
+          python3 - <<'PY'
+          import pathlib, re, sys
+          root = pathlib.Path(".")
+          link_re = re.compile(r'\[([^\]]*)\]\(([^)]+)\)')
+          errors = []
+          for md in root.rglob("*.md"):
+            for m in link_re.finditer(md.read_text(errors="replace")):
+              target = m.group(2)
+              if target.startswith("http") or target.startswith("#"):
+                continue
+              path_part = target.split("#")[0]
+              if not path_part:
+                continue
+              resolved = (md.parent / path_part).resolve()
+              if not resolved.exists():
+                errors.append(f"{md}: broken link -> {target}")
+          if errors:
+            print(f"Found {len(errors)} broken internal link(s)")
+            for e in errors[:50]:
+              print(e)
+            sys.exit(1)
+          print("Internal markdown links valid.")
+          PY
+

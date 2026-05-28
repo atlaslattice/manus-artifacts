@@ -10,15 +10,15 @@
 ## Ring 1 — Foundation (Public-Ready Core)
 
 - [x] **#1** Add MIT LICENSE to repository
-- [ ] **#2** Finalize and publish CODE_OF_CONDUCT
+- [x] **#2** Finalize and publish CODE_OF_CONDUCT
 - [x] **#3** Add CONTRIBUTING guide for outside contributors
 - [x] **#4** Add SECURITY policy and responsible disclosure path
-- [ ] **#5** Define canonical vs candidate artifact states in governance doc
+- [x] **#5** Define canonical vs candidate artifact states in governance doc
 - [ ] **#6** Add support/contact paths (issue templates, discussion categories)
 - [ ] **#7** Add versioning + release policy doc
 - [ ] **#8** Add legal/privacy boundaries note for health and personal content
-- [ ] **#9** Publish governance/ratification process as standalone doc
-- [ ] **#10** Nail down artifact provenance header template
+- [x] **#9** Publish governance/ratification process as standalone doc
+- [x] **#10** Nail down artifact provenance header template
 
 ---
 
@@ -58,12 +58,12 @@
 - [x] **#32** Add `docs-link-checks.yml` CI workflow (internal link validation)
 - [ ] **#33** Add metadata validation checks in CI (frontmatter schema)
 - [x] **#34** Add secret scanning guard in repo-hygiene CI
-- [ ] **#35** Add required PR templates with domain checklist
-- [ ] **#36** Add CODEOWNERS for critical archive paths
+- [x] **#35** Add required PR templates with domain checklist
+- [x] **#36** Add CODEOWNERS for critical archive paths
 - [ ] **#37** Add dependency scanning for Python scripts in codebases/
 - [ ] **#38** Add release artifact validation checklist
 - [ ] **#39** Add reproducibility checks for GPTBrain reference_impl
-- [ ] **#40** Schedule monthly archive integrity audit (GitHub Actions cron)
+- [x] **#40** Schedule monthly archive integrity audit (GitHub Actions cron)
 
 ---
 
@@ -86,25 +86,22 @@
 
 | Ring | Complete | Total | % |
 |---|---|---|---|
-| Ring 1 — Foundation | 3 | 10 | 30% |
+| Ring 1 — Foundation | 7 | 10 | 70% |
 | Ring 2 — Structure | 4 | 10 | 40% |
 | Ring 3 — Quality | 0 | 10 | 0% |
-| Ring 4 — Trust | 3 | 10 | 30% |
+| Ring 4 — Trust | 6 | 10 | 60% |
 | Ring 5 — Reach | 1 | 10 | 10% |
-| **Total** | **11** | **50** | **22%** |
+| **Total** | **18** | **50** | **36%** |
 
 ---
 
 ## Next Sprint (Priority Queue)
 
-1. **#2** CODE_OF_CONDUCT finalized and linked
-2. **#5** Governance/ratification process doc
-3. **#20** Domain landing pages (per-folder READMEs)
-4. **#30** Architecture diagrams
-5. **#35** PR templates with domain checklists
-6. **#44** Issue templates
-7. **#47** Best-of canonical collection
-8. **#50** World-Class v1 milestone
+1. **#20** Domain landing pages (per-folder READMEs)
+2. **#30** Architecture diagrams
+3. **#44** Issue templates
+4. **#47** Best-of canonical collection
+5. **#50** World-Class v1 milestone
 
 ---
 

@@ -11,16 +11,16 @@
 ## Axis 1 — Governance Core (1–12)
 
 - [ ] **#1** Publish a single repository governance constitution.
-- [ ] **#2** Define candidate/reviewed/ratified state machine in one canonical doc.
-- [ ] **#3** Add ratification roles and decision rights matrix.
+- [x] **#2** Define candidate/reviewed/ratified state machine in one canonical doc.
+- [x] **#3** Add ratification roles and decision rights matrix.
 - [ ] **#4** Add canon escalation and appeal process.
 - [ ] **#5** Add deprecation/supersession policy for old artifacts.
 - [ ] **#6** Add policy for archive content with privacy/legal sensitivity.
 - [ ] **#7** Add governance changelog with versioned policy history.
 - [ ] **#8** Add governance glossary aligned with existing docs glossary.
 - [ ] **#9** Add governance FAQ for external contributors.
-- [ ] **#10** Add governance quick-checklist for PR reviewers.
-- [ ] **#11** Add mandatory governance header template for major artifacts.
+- [x] **#10** Add governance quick-checklist for PR reviewers.
+- [x] **#11** Add mandatory governance header template for major artifacts.
 - [ ] **#12** Add governance conformance scorecard.
 
 ## Axis 2 — Canon & Adjudication Pipeline (13–24)
@@ -117,9 +117,9 @@
 
 - [ ] **#85** Add unified “quality gates” workflow summary output.
 - [ ] **#86** Add workflow matrix for Python/schema/docs checks.
-- [ ] **#87** Add workflow ownership map and CODEOWNERS alignment.
+- [x] **#87** Add workflow ownership map and CODEOWNERS alignment.
 - [ ] **#88** Add CI-required checks policy per path.
-- [ ] **#89** Add scheduled integrity audits (weekly/monthly).
+- [x] **#89** Add scheduled integrity audits (weekly/monthly).
 - [ ] **#90** Add change-impact routing to targeted validations.
 - [ ] **#91** Add release-candidate validation workflow.
 - [ ] **#92** Add artifact receipt presence check on PRs.
@@ -164,7 +164,7 @@
 - [ ] **#122** Add discussion categories aligned to domains.
 - [ ] **#123** Add contributor onboarding journey (first 1 hour).
 - [ ] **#124** Add maintainer onboarding and triage handbook.
-- [ ] **#125** Add PR templates with trust/provenance checklist.
+- [x] **#125** Add PR templates with trust/provenance checklist.
 - [ ] **#126** Add labeling strategy and automation rules.
 - [ ] **#127** Add community code examples for schema usage.
 - [ ] **#128** Add contribution quality rubric and examples.
@@ -219,10 +219,10 @@
 
 ## Progress Scoreboard
 
-- Complete: **12 / 144**
-- In progress: **24 / 144**
+- Complete: **19 / 144**
+- In progress: **17 / 144**
 - Remaining: **108 / 144**
-- Current phase: **Wave 2–4 execution artifacts established**
+- Current phase: **Wave 5 governance + trust controls hardened**
 
 ---
 

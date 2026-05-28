@@ -52,6 +52,8 @@ Need vocabulary? → **[docs/GLOSSARY.md](./docs/GLOSSARY.md)**
 ### Governance & Council
 - **[Council](./council/)** — Trinity and Pantheon Council session archives.
 - **[Council Reviews](./council-reviews/)** — External reviews and validation.
+- **[Governance & Ratification Process](./docs/governance-ratification-process.md)** — candidate/reviewed/ratified flow, roles, and adjudication path.
+- **[Artifact Provenance Header Template](./docs/artifact-provenance-header-template.md)** — reusable governance/provenance metadata template.
 
 ### Archives & Research
 - **[Archive (boot)](./archive/)** — Boot sequences, GPTBrain, governance, blueprints, and more.
@@ -69,7 +71,7 @@ Need vocabulary? → **[docs/GLOSSARY.md](./docs/GLOSSARY.md)**
 ## 📋 Active Sprint
 
 **[Aetherforge 12×12 Hypercube Campaign](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — 144-task public + world-class campaign board
-**[Aetherforge Top-50 Taskboard](./projects/aetherforge-top50-taskboard-2026-05-26.md)** — 11/50 complete
+**[Aetherforge Top-50 Taskboard](./projects/aetherforge-top50-taskboard-2026-05-26.md)** — 18/50 complete
 - **[Aetherforge Game World Onboarding](./projects/aetherforge-game-world/README.md)** — Module 8 candidate layer
 - **[Aetherforge Wave 2–4 Execution Receipts](./projects/aetherforge-wave2-kg-connectivity-2026-05-28.md)** — KG connectivity, trust/provenance, and packaging wave artifacts
 
