@@ -51,3 +51,48 @@ def test_validate_files_reports_links_anchors_headings_and_code_fences(
     assert "broken relative link: ./missing.md" in messages
     assert "broken anchor target: #nope" in messages
     assert "code fence is missing a language tag" in messages
+
+
+def test_validate_files_requires_executive_summary_for_long_docs_pages(
+    tmp_path: Path,
+) -> None:
+    docs_dir = tmp_path / "docs"
+    docs_dir.mkdir()
+    target = docs_dir / "guide.md"
+    body = "\n".join(f"Line {index}" for index in range(130))
+    target.write_text(f"# Guide\n\n## Details\n\n{body}\n", encoding="utf-8")
+
+    original_root = MODULE.REPO_ROOT
+    MODULE.REPO_ROOT = tmp_path
+    try:
+        issues = validate_files([target.resolve()])
+    finally:
+        MODULE.REPO_ROOT = original_root
+
+    assert [
+        issue.message
+        for issue in issues
+        if "Executive Summary" in issue.message or "## Summary" in issue.message
+    ] == [
+        "long docs pages under /docs must include a ## Executive Summary or ## Summary section"
+    ]
+
+
+def test_validate_files_allows_executive_summary_for_long_docs_pages(
+    tmp_path: Path,
+) -> None:
+    docs_dir = tmp_path / "docs"
+    docs_dir.mkdir()
+    target = docs_dir / "guide.md"
+    body = "\n".join(f"Line {index}" for index in range(130))
+    target.write_text(
+        f"# Guide\n\n## Executive Summary\n\nShort summary.\n\n## Details\n\n{body}\n",
+        encoding="utf-8",
+    )
+
+    original_root = MODULE.REPO_ROOT
+    MODULE.REPO_ROOT = tmp_path
+    try:
+        assert validate_files([target.resolve()]) == []
+    finally:
+        MODULE.REPO_ROOT = original_root

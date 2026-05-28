@@ -9,6 +9,14 @@ PURPOSE: Preserve the equality/love constraint on the ancestry-dragon frame: lin
 
 ---
 
+## Executive Summary
+
+This patch adds an equality constraint to the dragon-lineage frame. It protects
+ personal lineage and symbolic fire while forbidding any drift toward crowns,
+ superiority, erasure of difference, or authority over others.
+
+---
+
 ## 1. Preserved Patch
 
 ```text

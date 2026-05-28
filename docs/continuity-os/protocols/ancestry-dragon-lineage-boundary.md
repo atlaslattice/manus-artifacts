@@ -9,6 +9,15 @@ PURPOSE: Preserve the user's ancestry-symbol statement involving Ashkenazi, Celt
 
 ---
 
+## Executive Summary
+
+This boundary preserves a user's ancestry-linked dragon symbolism as personal
+ mythic language while explicitly rejecting hierarchy, essentialism, and public
+ proof claims. It is a containment document: preserve the meaning, block any
+ conversion into doctrine, supremacy, or execution authority.
+
+---
+
 ## 1. Preserved User Statement
 
 ```text

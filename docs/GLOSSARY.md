@@ -5,6 +5,13 @@
 
 ---
 
+## Executive Summary
+
+This glossary is the shared vocabulary layer for the public archive. Use it to
+normalize governance, system, and gameplay language before interpreting deeper
+artifacts, especially where canon status, council structures, or Aetherforge
+framing could otherwise be misunderstood.
+
 ## A
 
 **Aetherforge**

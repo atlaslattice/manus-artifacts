@@ -197,6 +197,15 @@
 
 ## Execution receipts (2026-05-28)
 
+- **Task 32 (Executive summaries):**  
+  - `/docs/GLOSSARY.md`  
+  - `/docs/ARCHIVE_INDEX.md`  
+  - `/docs/unified-field-v4.0.md`  
+  - `/docs/continuity-os/protocols/hyperspace-traversal-proof-of-work.md`  
+  - `/docs/continuity-os/protocols/ancestry-dragon-lineage-boundary.md`  
+  - `/docs/continuity-os/protocols/dragon-earth-root-mythic-boundary.md`  
+  - `/docs/continuity-os/protocols/equal-love-dragon-lineage-patch.md`  
+  - `/docs/continuity-os/protocols/spiritual-source-boundary-protocol.md`
 - **Task 33 (Read-next sections):**  
   - `/docs/README.md`  
   - `/docs/START_HERE.md`  

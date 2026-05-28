@@ -10,6 +10,15 @@
 
 ---
 
+## Executive Summary
+
+This index is the fastest route to the repository's major systems, councils,
+projects, and archive lanes. Use it when you need to locate the authoritative
+GitHub path for a public artifact before drilling into subsystem-specific
+documentation.
+
+---
+
 ## Core Systems
 
 | Artifact | Path | Status |

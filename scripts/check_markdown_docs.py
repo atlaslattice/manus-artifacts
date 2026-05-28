@@ -24,6 +24,8 @@ DEFAULT_TARGETS = (
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
 INLINE_LINK_RE = re.compile(r"(?<!!)\[[^\]]*]\(([^)]+)\)")
 FENCE_RE = re.compile(r"^```(\S*)\s*$")
+SUMMARY_RE = re.compile(r"^## (Executive Summary|Summary)\b", re.MULTILINE)
+SUMMARY_REQUIRED_LINE_COUNT = 120
 
 
 @dataclass(frozen=True)
@@ -159,6 +161,25 @@ def validate_links(
     return issues
 
 
+def validate_executive_summary(path: Path, text: str) -> list[Issue]:
+    if not path.is_relative_to(REPO_ROOT):
+        return []
+    relative_path = path.relative_to(REPO_ROOT)
+    if relative_path.parts[0] != "docs":
+        return []
+    if len(text.splitlines()) < SUMMARY_REQUIRED_LINE_COUNT:
+        return []
+    if SUMMARY_RE.search(text):
+        return []
+    return [
+        Issue(
+            path,
+            1,
+            "long docs pages under /docs must include a ## Executive Summary or ## Summary section",
+        )
+    ]
+
+
 def validate_files(paths: list[Path]) -> list[Issue]:
     texts = {path: path.read_text(encoding="utf-8") for path in paths}
     anchor_map = {path: build_anchor_index(text) for path, text in texts.items()}
@@ -168,6 +189,7 @@ def validate_files(paths: list[Path]) -> list[Issue]:
         issues.extend(validate_heading_hierarchy(path, text))
         issues.extend(validate_code_fences(path, text))
         issues.extend(validate_links(path, text, anchor_map))
+        issues.extend(validate_executive_summary(path, text))
     return sorted(
         issues, key=lambda issue: (str(issue.path), issue.line, issue.message)
     )
