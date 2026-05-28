@@ -10,7 +10,7 @@ status: candidate
 
 ## 📊 Progress
 
-**12 / 144 complete** as of 2026-05-28
+**24 / 144 complete** as of 2026-05-28
 
 ---
 
@@ -19,30 +19,30 @@ status: candidate
 - [x] **#1** Define canonical status model
 - [x] **#2** Publish ratification workflow
 - [x] **#3** Create canon decision ledger
-- [ ] **#4** Map section ownership
+- [x] **#4** Map section ownership
 - [x] **#5** Add RFC proposal template
-- [ ] **#6** Set review SLAs
-- [ ] **#7** Establish council review cadence
-- [ ] **#8** Define change classification rules
-- [ ] **#9** Publish deprecation policy
+- [x] **#6** Set review SLAs
+- [x] **#7** Establish council review cadence
+- [x] **#8** Define change classification rules
+- [x] **#9** Publish deprecation policy
 - [x] **#10** Standardize provenance requirements
 - [x] **#11** Track artifact lifecycle states
-- [ ] **#12** Create governance onboarding guide
+- [x] **#12** Create governance onboarding guide
 
 ## Face 02 — Legal, Privacy, Trust
 
-- [ ] **#13** Complete license header audit
-- [ ] **#14** Build third-party attribution inventory
-- [ ] **#15** Publish trademark usage guide
-- [ ] **#16** Create PII redaction rubric
-- [ ] **#17** Define sensitive-content review process
-- [ ] **#18** Add export-control screening checklist
-- [ ] **#19** Publish data retention policy
-- [ ] **#20** Expand vulnerability disclosure process
-- [ ] **#21** Create incident response runbook
-- [ ] **#22** Build compliance evidence index
-- [ ] **#23** Publish public risk register
-- [ ] **#24** Run quarterly legal/trust audits
+- [x] **#13** Complete license header audit
+- [x] **#14** Build third-party attribution inventory
+- [x] **#15** Publish trademark usage guide
+- [x] **#16** Create PII redaction rubric
+- [x] **#17** Define sensitive-content review process
+- [x] **#18** Add export-control screening checklist
+- [x] **#19** Publish data retention policy
+- [x] **#20** Expand vulnerability disclosure process
+- [x] **#21** Create incident response runbook
+- [x] **#22** Build compliance evidence index
+- [x] **#23** Publish public risk register
+- [x] **#24** Run quarterly legal/trust audits
 
 ## Face 03 — Repository Architecture
 

@@ -10,31 +10,31 @@ status: candidate
 
 ## 🎯 Top 25 Now (dependency-first strike sequence)
 
-1. #4 Map section ownership  
-2. #6 Set review SLAs  
-3. #7 Establish council review cadence  
-4. #8 Define change classification rules  
-5. #9 Publish deprecation policy  
-6. #12 Create governance onboarding guide  
-7. #13 Complete license header audit  
-8. #14 Build third-party attribution inventory  
-9. #16 Create PII redaction rubric  
-10. #17 Define sensitive-content review process  
-11. #19 Publish data retention policy  
-12. #20 Expand vulnerability disclosure process  
-13. #21 Create incident response runbook  
-14. #22 Build compliance evidence index  
-15. #23 Publish public risk register  
-16. #24 Run quarterly legal/trust audits  
-17. #25 Normalize top-level navigation  
-18. #27 Add breadcrumb standards  
-19. #28 Consolidate index pages  
-20. #29 Publish archive taxonomy map  
+1. ✅ #4 Map section ownership  
+2. ✅ #6 Set review SLAs  
+3. ✅ #7 Establish council review cadence  
+4. ✅ #8 Define change classification rules  
+5. ✅ #9 Publish deprecation policy  
+6. ✅ #12 Create governance onboarding guide  
+7. ✅ #13 Complete license header audit  
+8. ✅ #14 Build third-party attribution inventory  
+9. ✅ #16 Create PII redaction rubric  
+10. ✅ #17 Define sensitive-content review process  
+11. ✅ #19 Publish data retention policy  
+12. ✅ #20 Expand vulnerability disclosure process  
+13. ✅ #21 Create incident response runbook  
+14. ✅ #22 Build compliance evidence index  
+15. ✅ #23 Publish public risk register  
+16. ✅ #24 Run quarterly legal/trust audits  
+17. [ ] #25 Normalize top-level navigation  
+18. [ ] #27 Add breadcrumb standards  
+19. [ ] #28 Consolidate index pages  
+20. [ ] #29 Publish archive taxonomy map  
 21. ✅ #30 Define naming conventions  
-22. #31 Create file placement decision tree  
-23. #32 Triage duplicate docs backlog  
-24. #33 Add stale artifact quarantine lane  
-25. #35 Publish canonical path map  
+22. [ ] #31 Create file placement decision tree  
+23. [ ] #32 Triage duplicate docs backlog  
+24. [ ] #33 Add stale artifact quarantine lane  
+25. [ ] #35 Publish canonical path map  
 
 ---
 
@@ -61,29 +61,29 @@ status: candidate
 - [x] #1 Define canonical status model
 - [x] #2 Publish ratification workflow
 - [x] #3 Create canon decision ledger
-- [ ] #4 Map section ownership
+- [x] #4 Map section ownership
 - [x] #5 Add RFC proposal template
-- [ ] #6 Set review SLAs
-- [ ] #7 Establish council review cadence
-- [ ] #8 Define change classification rules
-- [ ] #9 Publish deprecation policy
+- [x] #6 Set review SLAs
+- [x] #7 Establish council review cadence
+- [x] #8 Define change classification rules
+- [x] #9 Publish deprecation policy
 - [x] #10 Standardize provenance requirements
 - [x] #11 Track artifact lifecycle states
-- [ ] #12 Create governance onboarding guide
+- [x] #12 Create governance onboarding guide
 
 ### Face 02 — Legal, Privacy, Trust
-- [ ] #13 Complete license header audit
-- [ ] #14 Build third-party attribution inventory
-- [ ] #15 Publish trademark usage guide
-- [ ] #16 Create PII redaction rubric
-- [ ] #17 Define sensitive-content review process
-- [ ] #18 Add export-control screening checklist
-- [ ] #19 Publish data retention policy
-- [ ] #20 Expand vulnerability disclosure process
-- [ ] #21 Create incident response runbook
-- [ ] #22 Build compliance evidence index
-- [ ] #23 Publish public risk register
-- [ ] #24 Run quarterly legal/trust audits
+- [x] #13 Complete license header audit
+- [x] #14 Build third-party attribution inventory
+- [x] #15 Publish trademark usage guide
+- [x] #16 Create PII redaction rubric
+- [x] #17 Define sensitive-content review process
+- [x] #18 Add export-control screening checklist
+- [x] #19 Publish data retention policy
+- [x] #20 Expand vulnerability disclosure process
+- [x] #21 Create incident response runbook
+- [x] #22 Build compliance evidence index
+- [x] #23 Publish public risk register
+- [x] #24 Run quarterly legal/trust audits
 
 ### Face 03 — Repository Architecture
 - [ ] #25 Normalize top-level navigation
