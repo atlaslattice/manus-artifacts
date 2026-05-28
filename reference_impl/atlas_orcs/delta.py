@@ -25,6 +25,8 @@ def apply_delta(artifact: dict, delta: dict, now: datetime | None = None) -> tup
     for key, value in delta.items():
         if key in {"contradiction_claim", "contradiction_reason", "contradiction_event_id", "quarantine_reason"}:
             continue
+        if key == "trust_state" and value == "quarantined":
+            continue
         after[key] = value
 
     if delta.get("trust_state") == "quarantined":

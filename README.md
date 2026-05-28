@@ -2,6 +2,31 @@
 
 This repository contains research, health data, and system artifacts generated and managed by Manus.
 
+## Metatron topology (candidate map)
+
+```mermaid
+graph TD
+  C[Center: README]
+  G1[Governance: Council + GPTBrain]
+  G2[Evidence: AtlasBrain]
+  G3[Knowledge Graph]
+  G4[Schemas + Reference Impl]
+  G5[Tests + Adversarial]
+  G6[Aetherforge Project Lanes]
+  G7[Workflow Gates]
+
+  C --- G1
+  C --- G2
+  C --- G3
+  C --- G4
+  C --- G5
+  C --- G6
+  C --- G7
+  G1 --- G7
+  G3 --- G6
+  G4 --- G5
+```
+
 ## Table of Contents
 
 ### Core Systems
@@ -37,6 +62,7 @@ This repository contains research, health data, and system artifacts generated a
 - **[Research](./research/)** — Intelligence sweeps and convergence reports.
 - **[Health](./health/)** — Patient rights and wellness facility research.
 - **[Manus Vault](./manus-vault/)** — Internal session summaries and Noah's Ark protocols.
+- **[Knowledge Graph](./archive/knowledge_graph/GRAPH_INDEX.md)** — Repo-wide graph index, topology map, and seed ledgers.
 
 ### Docs & onboarding
 - **[Start Here](./docs/START_HERE.md)** — First-stop orientation for contributors and public readers.

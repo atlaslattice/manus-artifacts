@@ -1,0 +1,27 @@
+{"record_type":"node","node_id":"repo:root","kind":"repository","label":"manus-artifacts","path":"/tmp/workspace/atlaslattice/manus-artifacts"}
+{"record_type":"node","node_id":"doc:readme","kind":"document","label":"Repository README","path":"README.md"}
+{"record_type":"node","node_id":"doc:council-index","kind":"document","label":"Council Brain Index","path":"archive/boot/COUNCIL_BRAIN_INDEX.md"}
+{"record_type":"node","node_id":"doc:gptbrain-index","kind":"document","label":"GPTBrain Index of Indexes","path":"archive/boot/gptbrain/GPTBRAIN_INDEX_OF_INDEXES_2026-05-26.md"}
+{"record_type":"node","node_id":"doc:atlasbrain-index","kind":"document","label":"AtlasBrain Index","path":"archive/boot/atlasbrain/ATLASBRAIN_INDEX_2026-05-26.md"}
+{"record_type":"node","node_id":"seed:gates","kind":"seed_jsonl","label":"Krakoa Gate Index","path":"archive/boot/gptbrain/KRAKOA_GATE_INDEX.seed.jsonl"}
+{"record_type":"node","node_id":"doc:metatron-topology","kind":"document","label":"Metatron Cube Topology","path":"archive/knowledge_graph/METATRON_CUBE_TOPOLOGY.md"}
+{"record_type":"node","node_id":"seed:orcs-routes","kind":"seed_jsonl","label":"Knowledge Graph ORCS Route Index","path":"archive/knowledge_graph/ORCS_ROUTE_INDEX.seed.jsonl"}
+{"record_type":"node","node_id":"code:reference-impl","kind":"code_dir","label":"Reference Implementation","path":"reference_impl"}
+{"record_type":"node","node_id":"code:atlas-orcs","kind":"code_dir","label":"Atlas ORCS impl","path":"reference_impl/atlas_orcs"}
+{"record_type":"node","node_id":"code:o-ai","kind":"code_dir","label":"O_AI impl","path":"reference_impl/o_ai"}
+{"record_type":"node","node_id":"code:native-thread","kind":"code_dir","label":"Native thread impl","path":"reference_impl/native_thread"}
+{"record_type":"node","node_id":"test:gptdream","kind":"test_dir","label":"GPTDream tests","path":"tests/gptdream"}
+{"record_type":"node","node_id":"test:adversarial","kind":"test_file","label":"Adversarial T13-T20 tests","path":"tests/adversarial/test_t13_t20_failure_modes.py"}
+{"record_type":"node","node_id":"project:aetherforge-world","kind":"project_doc","label":"Aetherforge Game World","path":"projects/aetherforge-game-world/README.md"}
+{"record_type":"edge","edge_id":"e1","from":"repo:root","to":"doc:readme","relation":"contains"}
+{"record_type":"edge","edge_id":"e2","from":"doc:readme","to":"doc:council-index","relation":"routes_to"}
+{"record_type":"edge","edge_id":"e3","from":"doc:readme","to":"doc:gptbrain-index","relation":"routes_to"}
+{"record_type":"edge","edge_id":"e4","from":"doc:readme","to":"doc:atlasbrain-index","relation":"routes_to"}
+{"record_type":"edge","edge_id":"e5","from":"doc:gptbrain-index","to":"seed:gates","relation":"indexes"}
+{"record_type":"edge","edge_id":"e6","from":"doc:metatron-topology","to":"seed:orcs-routes","relation":"maps"}
+{"record_type":"edge","edge_id":"e7","from":"code:reference-impl","to":"code:atlas-orcs","relation":"contains"}
+{"record_type":"edge","edge_id":"e8","from":"code:reference-impl","to":"code:o-ai","relation":"contains"}
+{"record_type":"edge","edge_id":"e9","from":"code:reference-impl","to":"code:native-thread","relation":"contains"}
+{"record_type":"edge","edge_id":"e10","from":"test:gptdream","to":"code:reference-impl","relation":"validates"}
+{"record_type":"edge","edge_id":"e11","from":"test:adversarial","to":"code:atlas-orcs","relation":"stress_tests"}
+{"record_type":"edge","edge_id":"e12","from":"project:aetherforge-world","to":"doc:metatron-topology","relation":"frames"}
