@@ -10,7 +10,7 @@ status: candidate
 
 ## 📊 Progress
 
-**11 / 144 complete** as of 2026-05-28
+**12 / 144 complete** as of 2026-05-28
 
 ---
 
@@ -51,7 +51,7 @@ status: candidate
 - [ ] **#27** Add breadcrumb standards
 - [ ] **#28** Consolidate index pages
 - [ ] **#29** Publish archive taxonomy map
-- [ ] **#30** Define naming conventions
+- [x] **#30** Define naming conventions
 - [ ] **#31** Create file placement decision tree
 - [ ] **#32** Triage duplicate docs backlog
 - [ ] **#33** Add stale artifact quarantine lane

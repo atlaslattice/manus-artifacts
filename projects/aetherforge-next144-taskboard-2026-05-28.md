@@ -30,7 +30,7 @@ status: candidate
 18. #27 Add breadcrumb standards  
 19. #28 Consolidate index pages  
 20. #29 Publish archive taxonomy map  
-21. #30 Define naming conventions  
+21. ✅ #30 Define naming conventions  
 22. #31 Create file placement decision tree  
 23. #32 Triage duplicate docs backlog  
 24. #33 Add stale artifact quarantine lane  
@@ -91,7 +91,7 @@ status: candidate
 - [ ] #27 Add breadcrumb standards
 - [ ] #28 Consolidate index pages
 - [ ] #29 Publish archive taxonomy map
-- [ ] #30 Define naming conventions
+- [x] #30 Define naming conventions
 - [ ] #31 Create file placement decision tree
 - [ ] #32 Triage duplicate docs backlog
 - [ ] #33 Add stale artifact quarantine lane

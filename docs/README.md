@@ -18,6 +18,7 @@ Navigation, governance, and operational documentation for the public archive.
 - [Canon Decision Ledger](./CANON_DECISION_LEDGER.md)
 - [Provenance Requirements](./PROVENANCE_REQUIREMENTS.md)
 - [Artifact Lifecycle States](./ARTIFACT_LIFECYCLE_STATES.md)
+- [Naming Conventions](./NAMING_CONVENTIONS.md)
 - [Universal Frontmatter Schema](./UNIVERSAL_FRONTMATTER_SCHEMA.md)
 
 All artifacts remain candidate state unless explicitly ratified as canon.
