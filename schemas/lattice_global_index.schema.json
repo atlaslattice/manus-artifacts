@@ -10,6 +10,7 @@
     "repository_root",
     "snapshot_fingerprint",
     "routes",
+    "link_health",
     "artifacts"
   ],
   "properties": {
@@ -32,6 +33,16 @@
         "additionalProperties": false
       }
     },
+    "link_health": {
+      "type": "object",
+      "required": ["markdown_artifacts_total", "underlinked_markdown_artifacts", "unresolved_repo_links"],
+      "properties": {
+        "markdown_artifacts_total": {"type": "integer", "minimum": 0},
+        "underlinked_markdown_artifacts": {"type": "integer", "minimum": 0},
+        "unresolved_repo_links": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
     "artifacts": {
       "type": "array",
       "items": {
@@ -48,6 +59,9 @@
           "canon_status",
           "deployment_status",
           "trust_state",
+          "outbound_repo_links",
+          "unresolved_repo_links",
+          "inbound_repo_links",
           "source_receipt"
         ],
         "properties": {
@@ -62,6 +76,9 @@
           "canon_status": {"type": "string", "const": "not_canon"},
           "deployment_status": {"type": "string", "const": "not_deployable"},
           "trust_state": {"type": "string", "const": "candidate_unverified"},
+          "outbound_repo_links": {"type": "array", "items": {"type": "string"}},
+          "unresolved_repo_links": {"type": "array", "items": {"type": "string"}},
+          "inbound_repo_links": {"type": "array", "items": {"type": "string"}},
           "source_receipt": {"type": "string"}
         },
         "additionalProperties": false

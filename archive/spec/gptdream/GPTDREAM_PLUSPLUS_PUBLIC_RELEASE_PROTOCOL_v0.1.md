@@ -28,6 +28,14 @@ python -m pytest -q
 bash run_checks.sh
 ```
 
+## Schema and reference-implementation parity checks
+
+Before candidate release packets are advanced:
+
+- confirm schema lane exists (`schemas/atlas_orcs/v0_1/`, `schemas/o_ai/v0_1/`, `schemas/native_thread/v0_1/`)
+- confirm matching reference implementations exist (`reference_impl/atlas_orcs/`, `reference_impl/native_thread/`, `reference_impl/execution_gate/`)
+- run lattice quality gates to keep cross-lane retrieval and governance checks intact
+
 ## Boundary rules
 
 - A protocol draft is not a ratification event.

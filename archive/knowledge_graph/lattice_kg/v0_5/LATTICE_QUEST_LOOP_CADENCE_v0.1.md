@@ -40,6 +40,15 @@ Ship one bounded improvement per loop and always attach a TIDELOCK receipt.
 - Do not collapse blockers into narrative text; list them as actionable items.
 - Do not claim canon/deployment authority in loop receipts.
 
+## Task-to-artifact quest loop tightening
+
+Each sprint task should point to explicit artifacts:
+
+- planning artifact (`projects/aetherforge-top10-taskboard-2026-05-28.md`)
+- execution artifact(s) changed in-repo
+- validation artifact (tests/validator output)
+- TIDELOCK triplet (`dream` + `wake` + `delta`) for recovery-grade traceability
+
 ## Definition of done
 
 Each loop can be audited from objective to tests to blockers to next action using receipt links.

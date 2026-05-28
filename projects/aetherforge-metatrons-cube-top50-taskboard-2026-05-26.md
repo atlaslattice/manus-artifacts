@@ -12,6 +12,11 @@ BOUNDARY: advisory planning artifact; no canon/merge/deploy authority
 - Next 20 Queued: integrity, automation, and review operations
 - Final 20 Backlog: maturity, publication, and long-range governance
 
+Program/sprint linkage:
+
+- Program board: [`aetherforge-144-task-campaign-2026-05-27.md`](./aetherforge-144-task-campaign-2026-05-27.md)
+- Sprint board: [`aetherforge-top10-taskboard-2026-05-28.md`](./aetherforge-top10-taskboard-2026-05-28.md)
+
 ## Top 10 Now
 
 - [ ] 1. Create a canonical repo-wide knowledge-graph charter artifact.

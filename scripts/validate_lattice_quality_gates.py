@@ -6,15 +6,36 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 from datetime import UTC, datetime
 from pathlib import Path
 
 EXCLUDE_PARTS = {".git", ".pytest_cache", "__pycache__"}
 EXCLUDE_PATHS = {"archive/knowledge_graph/lattice_kg/v0_5/lattice_global_index.v0.1.json"}
+MARKDOWN_LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 GPTDREAMPP_FIXTURE_PATHS = {
     "fixtures/gptdreampp_openai/artifact_contract_records.valid.candidate.json",
     "fixtures/gptdreampp_openai/notion_cargo_queue.valid.candidate.json",
     "fixtures/gptdreampp_openai/bullshit_olympics_review.valid.candidate.json",
+}
+REQUIRED_SURFACE_PATHS = {
+    "README.md",
+    "projects/README.md",
+    "projects/aetherforge-world-class-authoritative-roadmap-v0.1.md",
+    "projects/aetherforge-144-task-campaign-2026-05-27.md",
+    "projects/aetherforge-top10-taskboard-2026-05-28.md",
+    "projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md",
+    "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md",
+}
+REQUIRED_LINK_RELATIONSHIPS = {
+    ("README.md", "projects/aetherforge-world-class-authoritative-roadmap-v0.1.md"),
+    ("README.md", "projects/aetherforge-144-task-campaign-2026-05-27.md"),
+    ("README.md", "projects/aetherforge-top10-taskboard-2026-05-28.md"),
+    ("projects/README.md", "projects/aetherforge-world-class-authoritative-roadmap-v0.1.md"),
+    ("projects/README.md", "projects/aetherforge-144-task-campaign-2026-05-27.md"),
+    ("projects/README.md", "projects/aetherforge-top10-taskboard-2026-05-28.md"),
+    ("projects/aetherforge-top10-taskboard-2026-05-28.md", "projects/aetherforge-144-task-campaign-2026-05-27.md"),
+    ("projects/aetherforge-top10-taskboard-2026-05-28.md", "projects/aetherforge-world-class-authoritative-roadmap-v0.1.md"),
 }
 
 
@@ -53,6 +74,140 @@ def compute_fingerprint(repo_root: Path, files: list[str]) -> str:
     return hashlib.sha256("\n".join(lines).encode("utf-8")).hexdigest()
 
 
+def _extract_repo_links(repo_root: Path, relative_path: str) -> tuple[set[str], set[str]]:
+    if not relative_path.endswith(".md"):
+        return set(), set()
+
+    source = repo_root / relative_path
+    text = source.read_text(encoding="utf-8", errors="ignore")
+    source_parent = Path(relative_path).parent
+    resolved: set[str] = set()
+    unresolved: set[str] = set()
+
+    for match in MARKDOWN_LINK_RE.finditer(text):
+        target = match.group(1).strip()
+        if not target or target.startswith("#"):
+            continue
+        if "://" in target or target.startswith("mailto:"):
+            continue
+        target = target.split("#", 1)[0].strip()
+        if not target:
+            continue
+
+        if target.startswith("/"):
+            normalized = Path(target.lstrip("/"))
+        else:
+            candidate_abs = (repo_root / source_parent / target).resolve()
+            try:
+                normalized = candidate_abs.relative_to(repo_root.resolve())
+            except ValueError:
+                unresolved.add(target)
+                continue
+
+        normalized_posix = normalized.as_posix()
+        if (repo_root / normalized_posix).exists():
+            resolved.add(normalized_posix)
+        else:
+            unresolved.add(normalized_posix)
+
+    return resolved, unresolved
+
+
+def validate_candidate_governance_state(indexed_artifacts: list[dict]) -> list[str]:
+    errors: list[str] = []
+    for item in indexed_artifacts:
+        if item.get("canon_status") != "not_canon":
+            errors.append(f"governance check failed: {item.get('path')} has canon_status drift")
+        if item.get("deployment_status") != "not_deployable":
+            errors.append(f"governance check failed: {item.get('path')} has deployment_status drift")
+        if item.get("trust_state") != "candidate_unverified":
+            errors.append(f"governance check failed: {item.get('path')} has trust_state drift")
+    return errors
+
+
+def validate_cross_reference_contract(index: dict) -> list[str]:
+    errors: list[str] = []
+    artifacts = index.get("artifacts", [])
+    markdown_rows = [row for row in artifacts if str(row.get("path", "")).endswith(".md")]
+
+    unresolved_count = 0
+    underlinked_count = 0
+    for row in markdown_rows:
+        for field in ("outbound_repo_links", "unresolved_repo_links", "inbound_repo_links"):
+            if field not in row:
+                errors.append(
+                    f"cross-reference check failed: markdown artifact missing '{field}' field: {row.get('path')}"
+                )
+                continue
+            if not isinstance(row[field], list):
+                errors.append(
+                    f"cross-reference check failed: markdown artifact field '{field}' must be a list: {row.get('path')}"
+                )
+
+        outbound = row.get("outbound_repo_links", [])
+        unresolved = row.get("unresolved_repo_links", [])
+        if isinstance(outbound, list) and len(outbound) == 0:
+            underlinked_count += 1
+        if isinstance(unresolved, list):
+            unresolved_count += len(unresolved)
+
+    health = index.get("link_health", {})
+    if health.get("markdown_artifacts_total") != len(markdown_rows):
+        errors.append("cross-reference check failed: markdown_artifacts_total does not match indexed markdown count")
+    if health.get("underlinked_markdown_artifacts") != underlinked_count:
+        errors.append("cross-reference check failed: underlinked_markdown_artifacts mismatch")
+    if health.get("unresolved_repo_links") != unresolved_count:
+        errors.append("cross-reference check failed: unresolved_repo_links mismatch")
+
+    return errors
+
+
+def validate_surface_link_integrity(repo_root: Path) -> list[str]:
+    errors: list[str] = []
+    links_by_source: dict[str, set[str]] = {}
+    unresolved_by_source: dict[str, set[str]] = {}
+
+    for rel in REQUIRED_SURFACE_PATHS:
+        if not (repo_root / rel).exists():
+            errors.append(f"link integrity check failed: required surface missing: {rel}")
+            continue
+        resolved, unresolved = _extract_repo_links(repo_root, rel)
+        links_by_source[rel] = resolved
+        unresolved_by_source[rel] = unresolved
+        if unresolved:
+            errors.append(
+                f"link integrity check failed: {rel} contains unresolved repo links: {sorted(unresolved)}"
+            )
+
+    for source, target in sorted(REQUIRED_LINK_RELATIONSHIPS):
+        if source not in links_by_source:
+            continue
+        if target not in links_by_source[source]:
+            errors.append(f"link integrity check failed: missing required link {source} -> {target}")
+
+    return errors
+
+
+def validate_metadata_consistency(repo_root: Path) -> list[str]:
+    errors: list[str] = []
+    files = {
+        "projects/aetherforge-world-class-authoritative-roadmap-v0.1.md": ("AUTHORITY: NONE", "NOT CANON"),
+        "projects/aetherforge-144-task-campaign-2026-05-27.md": ("AUTHORITY: NONE", "NOT CANON"),
+        "projects/aetherforge-top10-taskboard-2026-05-28.md": ("AUTHORITY: NONE", "NOT CANON"),
+        "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md": ("AUTHORITY: NONE", "NOT CANON"),
+    }
+    for rel, required_tokens in files.items():
+        target = repo_root / rel
+        if not target.exists():
+            errors.append(f"metadata check failed: required file missing: {rel}")
+            continue
+        text = target.read_text(encoding="utf-8", errors="ignore")
+        for token in required_tokens:
+            if token not in text:
+                errors.append(f"metadata check failed: {rel} missing token '{token}'")
+    return errors
+
+
 def validate_index(repo_root: Path, index_path: Path, max_age_days: int) -> list[str]:
     errors: list[str] = []
     index = load_json(index_path)
@@ -86,7 +241,11 @@ def validate_index(repo_root: Path, index_path: Path, max_age_days: int) -> list
 
     required_paths = {
         "README.md",
+        "projects/README.md",
         "projects/aetherforge-world-class-authoritative-roadmap-v0.1.md",
+        "projects/aetherforge-144-task-campaign-2026-05-27.md",
+        "projects/aetherforge-top10-taskboard-2026-05-28.md",
+        "projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md",
         "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_AETHERFORGE_GPTDREAM_UNIFIED_MISSION_CHARTER_v0.1.md",
         "archive/knowledge_graph/lattice_kg/v0_5/lattice_hypercube_144_scoreboard.v0.1.json",
         "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_WORLD_CLASS_CONTRIBUTOR_START_HERE_v0.1.md",
@@ -105,6 +264,10 @@ def validate_index(repo_root: Path, index_path: Path, max_age_days: int) -> list
         if record["artifact_id"] not in index_by_id:
             errors.append(f"retrieval check failed: artifact_id lookup missing for {required}")
 
+    errors.extend(validate_candidate_governance_state(indexed_artifacts))
+    errors.extend(validate_cross_reference_contract(index))
+    errors.extend(validate_metadata_consistency(repo_root))
+    errors.extend(validate_surface_link_integrity(repo_root))
     errors.extend(validate_gptdreampp_staging_fixtures(repo_root))
 
     return errors

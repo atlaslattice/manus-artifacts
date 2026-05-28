@@ -10,8 +10,12 @@ on:
       - 'tests/test_lattice_kg_hypercube_program.py'
       - 'tests/test_world_class_execution_surfaces.py'
       - 'tests/test_unified_mission_frame.py'
+      - 'tests/test_lattice_quality_gate_adversarial.py'
       - 'fixtures/gptdreampp_openai/**'
+      - 'archive/spec/gptdream/**'
       - 'projects/aetherforge-world-class-authoritative-roadmap-v0.1.md'
+      - 'projects/aetherforge-144-task-campaign-2026-05-27.md'
+      - 'projects/aetherforge-top10-taskboard-2026-05-28.md'
       - 'projects/README.md'
       - 'README.md'
       - '.github/workflows/lattice-kg-quality-gates.yml'
@@ -24,8 +28,12 @@ on:
       - 'tests/test_lattice_kg_hypercube_program.py'
       - 'tests/test_world_class_execution_surfaces.py'
       - 'tests/test_unified_mission_frame.py'
+      - 'tests/test_lattice_quality_gate_adversarial.py'
       - 'fixtures/gptdreampp_openai/**'
+      - 'archive/spec/gptdream/**'
       - 'projects/aetherforge-world-class-authoritative-roadmap-v0.1.md'
+      - 'projects/aetherforge-144-task-campaign-2026-05-27.md'
+      - 'projects/aetherforge-top10-taskboard-2026-05-28.md'
       - 'projects/README.md'
       - 'README.md'
       - '.github/workflows/lattice-kg-quality-gates.yml'
@@ -54,4 +62,4 @@ jobs:
         run: python scripts/validate_lattice_quality_gates.py --repo-root . --index archive/knowledge_graph/lattice_kg/v0_5/lattice_global_index.v0.1.json --max-age-days 7
 
       - name: Run focused lattice execution tests
-        run: python -m pytest -q tests/test_lattice_kg_hypercube_program.py tests/test_world_class_execution_surfaces.py tests/test_unified_mission_frame.py
+        run: python -m pytest -q tests/test_lattice_kg_hypercube_program.py tests/test_world_class_execution_surfaces.py tests/test_unified_mission_frame.py tests/test_lattice_quality_gate_adversarial.py

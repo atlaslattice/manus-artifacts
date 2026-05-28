@@ -40,6 +40,26 @@ def test_global_index_schema_declares_candidate_boundary() -> None:
     assert schema["title"] == "Lattice Global Artifact and Log Index"
     assert "CANDIDATE ONLY" in schema["description"]
     assert "NOT CANON" in schema["description"]
+    artifact_required = set(schema["properties"]["artifacts"]["items"]["required"])
+    assert "outbound_repo_links" in artifact_required
+    assert "unresolved_repo_links" in artifact_required
+    assert "inbound_repo_links" in artifact_required
+    assert "link_health" in schema["required"]
+
+
+def test_global_index_has_cross_reference_and_governance_fields() -> None:
+    data = _read_json(ROOT / "archive/knowledge_graph/lattice_kg/v0_5/lattice_global_index.v0.1.json")
+    assert "link_health" in data
+    assert data["link_health"]["markdown_artifacts_total"] >= 1
+    assert data["link_health"]["underlinked_markdown_artifacts"] >= 0
+    assert data["link_health"]["unresolved_repo_links"] >= 0
+    row = data["artifacts"][0]
+    assert "outbound_repo_links" in row
+    assert "unresolved_repo_links" in row
+    assert "inbound_repo_links" in row
+    assert row["canon_status"] == "not_canon"
+    assert row["deployment_status"] == "not_deployable"
+    assert row["trust_state"] == "candidate_unverified"
 
 
 def test_quality_gate_validator_runs_clean() -> None:

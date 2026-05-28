@@ -15,7 +15,9 @@ Historical boards are preserved for lineage and context, but execution priority 
 
 ## Historical boards (preserved, not deleted)
 
+- `projects/aetherforge-144-task-campaign-2026-05-27.md` (program board)
 - `projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md` (historical source board)
+- `projects/aetherforge-top10-taskboard-2026-05-28.md` (active sprint board)
 
 ## World-class measurable targets by domain
 
@@ -68,3 +70,9 @@ Every candidate artifact record must carry:
 ## Definition of done for this roadmap loop
 
 Execution is unambiguous, world-class targets are measurable, contract checks are enforced in CI, and contributor onboarding surfaces are present and linked.
+
+## Program-to-sprint alignment update (2026-05-28)
+
+- Program: `aetherforge-144-task-campaign-2026-05-27.md` (12-wave / 144-task surface)
+- Portfolio: `aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md`
+- Sprint: `aetherforge-top10-taskboard-2026-05-28.md` (AX-11 through AX-20)
