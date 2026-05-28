@@ -4,7 +4,7 @@ title: Atlas Lattice Foundation — Manus Artifacts
 status: CANDIDATE
 owner: atlaslattice
 created: 2026-05-27
-last_updated: 2026-05-27
+last_updated: 2026-05-28
 source_of_truth: GitHub
 ---
 # Atlas Lattice Foundation — Manus Artifacts
@@ -108,7 +108,7 @@ See [CONTRIBUTING.md](./.github/CONTRIBUTING.md) for branch naming, commit conve
 
 ## 📊 Public Launch Progress
 
-29 / 50 tasks complete — see the [Aetherforge Top-50 Taskboard](./projects/aetherforge-top50-taskboard-2026-05-26.md).
+32 / 50 tasks complete — see the [Aetherforge Top-50 Taskboard](./projects/aetherforge-top50-taskboard-2026-05-26.md).
 
 Wave 3 metadata/provenance outputs are now published: [backfill scope](./docs/METADATA_BACKFILL_SCOPE_2026-05-27.md), [coverage report](./docs/METADATA_COVERAGE_REPORT_2026-05-27.md), [provenance completeness](./docs/PROVENANCE_COMPLETENESS_REPORT_2026-05-27.md), and [monthly drift snapshot](./projects/status-reports/PROVENANCE_DRIFT_REPORT_2026-05.md).
 
@@ -118,7 +118,7 @@ Wave 3 metadata/provenance outputs are now published: [backfill scope](./docs/ME
 3. Scope decision on public content
 4. History rewrite if issues found
 
-Execution queue: [Aetherforge Next-10](./projects/aetherforge-next10-execution-queue-2026-05-27.md) · Hypercube campaign: [Aetherforge 144 Tasks](./projects/aetherforge-144-task-campaign-2026-05-27.md) · Monthly evidence snapshots: [projects/status-reports/](./projects/status-reports/)
+Execution queue: [Aetherforge Next-10](./projects/aetherforge-next10-execution-queue-2026-05-27.md) · Checkpoint closure index: [Next-10 Execution Checkpoints](./docs/closeout/NEXT10_EXECUTION_CHECKPOINTS_2026-05-28.md) · Hypercube campaign: [Aetherforge 144 Tasks](./projects/aetherforge-144-task-campaign-2026-05-27.md) · Monthly evidence snapshots: [projects/status-reports/](./projects/status-reports/)
 
 ---
 
