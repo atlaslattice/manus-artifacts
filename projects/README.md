@@ -8,6 +8,14 @@ This directory tracks project-specific execution boards and implementation strea
 - [Aetherforge Metatron's Cube Top-50 Taskboard (2026-05-26)](./aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
 - [Aetherforge Top-10 Taskboard (2026-05-26)](./aetherforge-top10-taskboard-2026-05-26.md)
 
+## Board Hierarchy
+
+- **Program board:** 144-Task Campaign (12 waves)
+- **Portfolio board:** Top-50 Taskboard
+- **Sprint board:** Top-10 Taskboard
+
+Keep status and receipt links synchronized across all three boards.
+
 ## Project Folders
 
 - [Free Bank](./free-bank/)

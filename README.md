@@ -34,6 +34,8 @@
 - **[Aetherforge Top-10 Taskboard](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — High-leverage council task sprint board.
 - **[Aetherforge 144-Task Campaign](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — Full public/world-class implementation campaign.
 
+Execution hierarchy: 144-Task Campaign (program) → Top-50 (portfolio) → Top-10 (sprint).
+
 ## Mission Triad (Current Framing)
 
 - **Functional knowledge graph:** [Lattice Knowledge Graph Node Index](./docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md)

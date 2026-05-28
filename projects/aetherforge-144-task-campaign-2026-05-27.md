@@ -17,7 +17,7 @@
 ## Wave Tracker
 
 - [x] Wave 01 started
-- [ ] Wave 01 completed
+- [x] Wave 01 completed
 - [ ] Wave 02 completed
 - [ ] Wave 03 completed
 - [ ] Wave 04 completed
@@ -220,6 +220,16 @@
 - `/docs/PUBLIC_EXCELLENCE_PLAYBOOK.md`
 - `/.github/CODEOWNERS`
 - `/README.md`
+
+## Wave 01 Closure Notes (2026-05-28)
+
+- Scope closed at the **bootstrap implementation** level with the receipt set above.
+- Board hierarchy alignment confirmed across:
+  - `/projects/aetherforge-144-task-campaign-2026-05-27.md`
+  - `/projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md`
+  - `/projects/aetherforge-top10-taskboard-2026-05-26.md`
+  - `/projects/README.md`
+  - `/README.md`
 
 ## Acceptance Rule
 
