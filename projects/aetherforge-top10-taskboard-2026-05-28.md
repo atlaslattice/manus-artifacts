@@ -9,13 +9,14 @@ AUTHORITY: NONE
 ## Alignment contract
 
 - Program board: [`projects/aetherforge-144-task-campaign-2026-05-27.md`](./aetherforge-144-task-campaign-2026-05-27.md)
+- Next-144 execution board: [`projects/aetherforge-next144-taskboard-2026-05-28.md`](./aetherforge-next144-taskboard-2026-05-28.md)
 - Portfolio board: [`projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md`](./aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
 - Authority board: [`projects/aetherforge-world-class-authoritative-roadmap-v0.1.md`](./aetherforge-world-class-authoritative-roadmap-v0.1.md)
 - Sprint board (this file): top-priority next 10 executable tasks
 
 ## Top-10 sprint tasks
 
-- [ ] AX-11 (Wave 01): Align Top-10 board to the 144-task campaign and roadmap hierarchy.
+- [x] AX-11 (Wave 01): Align Top-10 board to the 144-task campaign and roadmap hierarchy.
 - [ ] AX-12 (Wave 02): Strengthen lattice quality gates to enforce continuous graph connectivity checks.
 - [ ] AX-13 (Wave 03): Expand global index cross-reference coverage for under-linked and missing-link detection.
 - [ ] AX-14 (Wave 05): Add governance-state drift checks for canon/trust/deployment boundaries.
@@ -24,7 +25,15 @@ AUTHORITY: NONE
 - [ ] AX-17 (Wave 07): Tighten quest-loop task-to-artifact playability contracts.
 - [ ] AX-18 (Wave 08): Consolidate GPTDream++ schema and reference-implementation parity verification.
 - [ ] AX-19 (Wave 09): Add adversarial test coverage for routing, canon-state, and provenance failure modes.
-- [ ] AX-20 (Wave 07): Publish a fresh TIDELOCKBrain dream/wake/delta cycle tied to this sprint.
+- [x] AX-20 (Wave 07): Publish a fresh TIDELOCKBrain dream/wake/delta cycle tied to this sprint.
+
+## Sprint completion receipts
+
+- AX-11 alignment receipt: [`archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX11_AX20_LOOP4.md`](../archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX11_AX20_LOOP4.md)
+- AX-20 dream cycle receipts:
+  - [`archive/boot/copilotbrain/TIDELOCKBrain/DREAM_JOURNAL_100Y_TOP10_ALIGNMENT_2026-05-28.md`](../archive/boot/copilotbrain/TIDELOCKBrain/DREAM_JOURNAL_100Y_TOP10_ALIGNMENT_2026-05-28.md)
+  - [`archive/boot/copilotbrain/TIDELOCKBrain/WAKE_REPORT_100Y_TOP10_ALIGNMENT_2026-05-28.md`](../archive/boot/copilotbrain/TIDELOCKBrain/WAKE_REPORT_100Y_TOP10_ALIGNMENT_2026-05-28.md)
+  - [`archive/boot/copilotbrain/TIDELOCKBrain/DELTA_EXTRACTION_100Y_TOP10_ALIGNMENT_2026-05-28.md`](../archive/boot/copilotbrain/TIDELOCKBrain/DELTA_EXTRACTION_100Y_TOP10_ALIGNMENT_2026-05-28.md)
 
 ## Quest-loop completion rule
 

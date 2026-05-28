@@ -74,5 +74,6 @@ Execution is unambiguous, world-class targets are measurable, contract checks ar
 ## Program-to-sprint alignment update (2026-05-28)
 
 - Program: `aetherforge-144-task-campaign-2026-05-27.md` (12-wave / 144-task surface)
+- Next-144 execution board: `aetherforge-next144-taskboard-2026-05-28.md`
 - Portfolio: `aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md`
 - Sprint: `aetherforge-top10-taskboard-2026-05-28.md` (AX-11 through AX-20)
