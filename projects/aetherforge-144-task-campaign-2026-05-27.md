@@ -10,7 +10,7 @@ status: candidate
 
 ## 📊 Progress
 
-**96 / 144 complete** as of 2026-05-28
+**108 / 144 complete** as of 2026-05-28
 
 ---
 
@@ -136,18 +136,18 @@ status: candidate
 
 ## Face 09 — Accessibility & Global Reach
 
-- [ ] **#97** Define docs accessibility rubric
-- [ ] **#98** Complete alt text/caption pass
-- [ ] **#99** Expand plain-language versions
-- [ ] **#100** Prioritize multilingual docs
-- [ ] **#101** Build localization glossary
-- [ ] **#102** Enforce inclusive language policy
-- [ ] **#103** Validate mobile readability
-- [ ] **#104** Create low-bandwidth docs mode
-- [ ] **#105** Add timezone-aware operations docs
-- [ ] **#106** Publish regional legal notices
-- [ ] **#107** Add accessibility feedback loop
-- [ ] **#108** Run annual accessibility audit
+- [x] **#97** Define docs accessibility rubric
+- [x] **#98** Complete alt text/caption pass
+- [x] **#99** Expand plain-language versions
+- [x] **#100** Prioritize multilingual docs
+- [x] **#101** Build localization glossary
+- [x] **#102** Enforce inclusive language policy
+- [x] **#103** Validate mobile readability
+- [x] **#104** Create low-bandwidth docs mode
+- [x] **#105** Add timezone-aware operations docs
+- [x] **#106** Publish regional legal notices
+- [x] **#107** Add accessibility feedback loop
+- [x] **#108** Run annual accessibility audit
 
 ## Face 10 — Developer Experience
 
