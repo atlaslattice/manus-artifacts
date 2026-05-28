@@ -1,0 +1,66 @@
+schema_id: artifact_status.schema.v0.1
+status: candidate_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: Standard artifact status block for knowledge graph and archive packets.
+
+type: object
+required:
+  - canon_status
+  - deployment_status
+  - review_state
+  - authority_scope
+  - provenance_type
+properties:
+  canon_status:
+    type: string
+    allowed:
+      - not_canon
+      - candidate
+      - review_candidate
+      - ratified
+      - deprecated
+      - source_locked_code_artifact
+  deployment_status:
+    type: string
+    allowed:
+      - none
+      - not_deployed
+      - not_deployable
+      - non_operational_scaffold
+      - unknown
+  review_state:
+    type: string
+    examples:
+      - source_root
+      - inspected
+      - candidate_operation
+      - adversarial_review_needed
+      - pending_human_root_ratification
+      - high_risk_adversarial_review
+  authority_scope:
+    type: string
+    allowed:
+      - none
+      - advisory
+      - review
+      - ratification_required
+      - execution_forbidden
+  provenance_type:
+    type: string
+    examples:
+      - git_repository
+      - git_file
+      - drive_file
+      - drive_google_doc
+      - drive_pdf
+      - notion_page
+      - user_reported
+      - external_source
+
+hard_rules:
+  - canon_status ratified requires explicit human-root ratification receipt.
+  - deployment_status cannot imply deployment unless deployment receipt exists.
+  - authority_scope none is default.
+  - storage is not ratification.
