@@ -1,0 +1,55 @@
+schema_name: PUBLIC_RELEASE_STATUS_SCHEMA_v0.1
+status: public_candidate_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: >
+  Define public release readiness states for Atlas Lattice knowledge graph artifacts.
+
+release_status_values:
+  private_raw:
+    meaning: raw artifact not approved for public release
+  private_quarantine:
+    meaning: sensitive or contaminated artifact preserved but withheld pending review
+  public_summary_candidate:
+    meaning: public-safe summary candidate exists; raw may remain private
+  public_candidate:
+    meaning: low-risk candidate artifact may be public but is not canon
+  public_reviewed_candidate:
+    meaning: reviewed public candidate still not canon
+  website_canon_candidate:
+    meaning: candidate for website-level canon review
+  canon:
+    meaning: explicitly human-root/website promoted; rare and out of scope for this bundle
+
+artifact_release_record:
+  artifact_id: null
+  title: null
+  source_surface: github | drive | notion | gamma | chat | external | uploaded_file | unknown
+  raw_export_status: null
+  public_release_status: public_candidate
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  sensitivity_flags:
+    security_intrusion_language: false
+    financial_institution_language: false
+    credential_like_content: false
+    private_personal_data: false
+    unreviewed_claude_governance: false
+    openai_officiality_risk: false
+  review_required: true
+  review_lanes: []
+  public_summary_allowed: unknown
+  raw_public_allowed: unknown
+  human_root_required_for_canon: true
+
+release_rules:
+  - public_candidate_does_not_equal_canon
+  - public_summary_does_not_equal_raw_release
+  - quarantine_is_not_condemnation
+  - critique_is_not_destructive_intent
+  - sensitive_artifacts_are_preserved_then_reviewed
+  - website_canon_requires_explicit_human_root_promotion
+
+keeper: Public by default where safe. Quarantine where necessary. Canon only by explicit gate.
