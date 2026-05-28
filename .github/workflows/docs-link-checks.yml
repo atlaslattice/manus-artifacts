@@ -19,27 +19,16 @@ permissions:
 
 jobs:
   link-check:
-    name: Check markdown links
+    name: Check markdown quality
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Check internal relative links
-        run: |
-          # Scan all markdown files for broken relative links
-          failed=0
-          while IFS= read -r mdfile; do
-            # Extract relative links (not http/https/mailto/anchor-only)
-            grep -oP '\[.*?\]\(\K[^)]+' "$mdfile" | grep -v '^http' | grep -v '^#' | grep -v '^mailto' | while read -r link; do
-              # Strip anchor
-              target="${link%%#*}"
-              [ -z "$target" ] && continue
-              dir="$(dirname "$mdfile")"
-              resolved="$dir/$target"
-              if [ ! -e "$resolved" ]; then
-                echo "::warning file=$mdfile::Broken relative link: $link"
-              fi
-            done
-          done < <(find . -name "*.md" -not -path "./.git/*")
-          echo "Relative link scan complete."
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run markdown quality checks
+        run: python scripts/check_markdown_docs.py

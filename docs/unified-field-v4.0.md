@@ -56,7 +56,7 @@ v4 expands from six to **eight** non-negotiable principles:
 
 ## 3. Four-Ring Architecture
 
-```
+```text
 Ring 0 — FORGE CORE (Rust microkernel)
   └── Constitutional Engine (constitutional_engine.rs)
   └── Invariant Enforcement (invariants_registry.py — 39 invariants)

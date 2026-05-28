@@ -8,6 +8,7 @@
 
 | Script | Purpose |
 |---|---|
+| [check_markdown_docs.py](./check_markdown_docs.py) | Validates core markdown docs for links, anchors, headings, and fenced code block language tags |
 | [test_sundya_runner.py](./test_sundya_runner.py) | PKT-SUNDYA runner test helper |
 
 ## Related artifacts

@@ -20,7 +20,7 @@ Thank you for helping build the Atlas Lattice public knowledge archive. 🌐
 
 ## Branch Naming
 
-```
+```text
 <github-username>/<short-description>
 ```
 
@@ -30,7 +30,7 @@ Example: `atlaslattice/fix-aluminum-os-links`
 
 Use the [Conventional Commits](https://www.conventionalcommits.org/) format:
 
-```
+```text
 <type>: <short summary>
 
 Types: feat | fix | docs | chore | refactor | test | ci
@@ -42,7 +42,7 @@ Before opening a PR:
 
 - [ ] Title follows Conventional Commits format
 - [ ] No secrets, credentials, or PII committed
-- [ ] Markdown files are well-formed (no broken relative links)
+- [ ] Markdown files are well-formed (`python scripts/check_markdown_docs.py`)
 - [ ] New Python code passes `ruff check` and `ruff format --check`
 - [ ] GPTBrain scaffold checks pass (if touching `archive/boot/gptbrain/`):
   ```bash
@@ -63,6 +63,14 @@ Before opening a PR:
 - Python: formatted with [ruff](https://docs.astral.sh/ruff/) (`ruff format`)
 - Markdown: ATX headings (`#`), fenced code blocks, no trailing whitespace
 - YAML: 2-space indent
+
+## Docs Quality Check
+
+Run this before opening a PR that changes repository documentation surfaces:
+
+```bash
+python scripts/check_markdown_docs.py
+```
 
 ## Community
 
