@@ -22,6 +22,8 @@ PURPOSE: top 10 unblocked tasks from W1 + W2
 
 ## Sprint completion gate
 
+Sprint closed after Wave 2 lattice automation landed.
+
 - [x] All in-progress items merged
-- [ ] `python -m pytest -q` passes
-- [ ] Board hierarchy links are valid from root README
+- [x] `python -m pytest -q` passes
+- [x] Board hierarchy links are valid from root README

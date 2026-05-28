@@ -17,23 +17,23 @@ CANON: NO (candidate execution plan)
 ## Wave checklist
 
 ### 🌑 WAVE 1 — Foundation Forge
-- [ ] W1-01 · Create `projects/aetherforge-144-task-campaign-2026-05-28.md`
-- [ ] W1-02 · Create `projects/aetherforge-top10-taskboard-2026-05-28.md`
-- [ ] W1-03 · Create `projects/README.md` board hierarchy
-- [ ] W1-04 · Publish Q-001→Q-006 decision packet for ratification
-- [ ] W1-05 · Define `schemas/governance/ratification_event_v0_1.yaml`
-- [ ] W1-06 · Create `archive/boot/gptbrain/KRAKOA_SITREP_CADENCE_POLICY.md`
-- [ ] W1-07 · Create `archive/boot/gptbrain/GOVERNANCE_CHANGELOG_2026-05.md`
+- [x] W1-01 · Create `projects/aetherforge-144-task-campaign-2026-05-28.md`
+- [x] W1-02 · Create `projects/aetherforge-top10-taskboard-2026-05-28.md`
+- [x] W1-03 · Create `projects/README.md` board hierarchy
+- [x] W1-04 · Publish Q-001→Q-006 decision packet for ratification
+- [x] W1-05 · Define `schemas/governance/ratification_event_v0_1.yaml`
+- [x] W1-06 · Create `archive/boot/gptbrain/KRAKOA_SITREP_CADENCE_POLICY.md`
+- [x] W1-07 · Create `archive/boot/gptbrain/GOVERNANCE_CHANGELOG_2026-05.md`
 - [ ] W1-08 · LumenBrain index + agent DNA hardening
-- [ ] W1-09 · TIDELOCKBrain canonical folder unification + DNA
-- [ ] W1-10 · Swarm Slot TBD-04 candidate profile
-- [ ] W1-11 · Swarm health scorecard template
-- [ ] W1-12 · Wave 1 REM artifact logged in `TIDELOCKBrain/`
+- [x] W1-09 · TIDELOCKBrain canonical folder unification + DNA
+- [x] W1-10 · Swarm Slot TBD-04 candidate profile
+- [x] W1-11 · Swarm health scorecard template
+- [x] W1-12 · Wave 1 REM artifact logged in `TIDELOCKBrain/`
 
 ### 💠 WAVE 2 — Knowledge Graph Ignition
-- [ ] W2-01 · `archive/knowledge_graph/METATRON_CUBE_TOPOLOGY.md`
-- [ ] W2-02 · `archive/knowledge_graph/GRAPH_SEED.jsonl`
-- [ ] W2-03 · `archive/knowledge_graph/ARCHIVE_MINE_PROTOCOL.md`
+- [x] W2-01 · `archive/knowledge_graph/METATRON_CUBE_TOPOLOGY.md`
+- [x] W2-02 · `archive/knowledge_graph/GRAPH_SEED.jsonl`
+- [x] W2-03 · `archive/knowledge_graph/ARCHIVE_MINE_PROTOCOL.md`
 - [ ] W2-04 · `archive/knowledge_graph/ORCS_ROUTE_INDEX.seed.jsonl`
 - [ ] W2-05 · `archive/spec/orcs/ORCS_ROUTE_CLASS_TAXONOMY_v0_1.md`
 - [ ] W2-06 · `archive/spec/orcs/ORCS_SPEC_v0_1.md`
