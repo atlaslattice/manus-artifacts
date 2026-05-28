@@ -6,6 +6,7 @@ Execution surfaces for project-specific strategy and delivery artifacts.
 
 - [Aetherforge World-Class Authoritative Roadmap v0.1](./aetherforge-world-class-authoritative-roadmap-v0.1.md)
 - [Aetherforge 144-Task Campaign Board](./aetherforge-144-task-campaign-2026-05-27.md)
+- [Aetherforge Next-144 Taskboard](./aetherforge-next144-taskboard-2026-05-28.md)
 - [Aetherforge Top-10 Sprint Board](./aetherforge-top10-taskboard-2026-05-28.md)
 - [Aetherforge Metatron's Cube Top 50 Taskboard](./aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
 - [GPTDream++ OpenAI Public Staging Lane](../archive/aetherforge/gptdreampp-openai/README.md)
@@ -16,5 +17,5 @@ Execution surfaces for project-specific strategy and delivery artifacts.
 ## Board authority notes
 
 - Authoritative sequencing: `aetherforge-world-class-authoritative-roadmap-v0.1.md`
-- Board hierarchy: `aetherforge-144-task-campaign-2026-05-27.md` → `aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md` → `aetherforge-top10-taskboard-2026-05-28.md`
+- Board hierarchy: `aetherforge-144-task-campaign-2026-05-27.md` → `aetherforge-next144-taskboard-2026-05-28.md` → `aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md` → `aetherforge-top10-taskboard-2026-05-28.md`
 - Historical board preserved for lineage: `aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md`

@@ -37,6 +37,7 @@ Guardrails:
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
 - **[Aetherforge World-Class Authoritative Roadmap v0.1](./projects/aetherforge-world-class-authoritative-roadmap-v0.1.md)** — Single authoritative execution roadmap for world-class sequencing.
 - **[Aetherforge 144-Task Campaign Board](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — Program-level 12-wave campaign board (144 total tasks).
+- **[Aetherforge Next-144 Taskboard](./projects/aetherforge-next144-taskboard-2026-05-28.md)** — Full sequenced execution queue for the next 144 tasks.
 - **[Aetherforge Top-10 Sprint Board](./projects/aetherforge-top10-taskboard-2026-05-28.md)** — Immediate sprint execution queue aligned to campaign and roadmap.
 - **[Aetherforge Metatron's Cube Top 50 Taskboard](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)** — Prioritized world-class OSS knowledge-graph execution board.
 - **[GPTDream++ OpenAI Public Staging Lane](./archive/aetherforge/gptdreampp-openai/README.md)** — GitHub-first ingestion control board, artifact contract, and review-lane staging package (candidate/non-canon).

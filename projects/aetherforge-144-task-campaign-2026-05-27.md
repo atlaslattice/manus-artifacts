@@ -35,6 +35,7 @@ Program-level sequencing surface for the full 144-category execution campaign.
 
 ## Linked sprint and portfolio boards
 
+- [`projects/aetherforge-next144-taskboard-2026-05-28.md`](./aetherforge-next144-taskboard-2026-05-28.md)
 - [`projects/aetherforge-top10-taskboard-2026-05-28.md`](./aetherforge-top10-taskboard-2026-05-28.md)
 - [`projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md`](./aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
 - [`projects/aetherforge-world-class-authoritative-roadmap-v0.1.md`](./aetherforge-world-class-authoritative-roadmap-v0.1.md)
