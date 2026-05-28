@@ -7,6 +7,7 @@
 ## Key artifacts
 
 - `aetherforge-144-task-campaign-2026-05-27.md`
+- `aetherforge-next144-taskboard-2026-05-28.md`
 - `aetherforge-wave1-foundation-public-readiness-2026-05-27.md`
 - `aetherforge-wave2-information-architecture-navigation-2026-05-27.md`
 

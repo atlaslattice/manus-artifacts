@@ -24,6 +24,7 @@ This repository contains research, health data, and system artifacts generated a
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
 - **[Aetherforge Council Taskboard](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — Top-10 council execution board.
 - **[Aetherforge 144-Task Hypercube Campaign](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — 12 waves of 12 tasks for public + world-class execution.
+- **[Aetherforge Next-144 Taskboard](./projects/aetherforge-next144-taskboard-2026-05-28.md)** — Successor 12x12 execution sequence with queued/active/done tracking.
 - **[Aetherforge Wave 1 Foundation Pack](./projects/aetherforge-wave1-foundation-public-readiness-2026-05-27.md)** — Public-readiness rubric, policy, glossary, KPIs, and launch cadence.
 - **[Aetherforge Wave 2 IA & Navigation Pack](./projects/aetherforge-wave2-information-architecture-navigation-2026-05-27.md)** — Topology audit, domain indexes, start-here path, and repo maps.
 - **[Aetherforge Game World (Candidate)](./projects/aetherforge-game-world-omnispec-archive-bowl-2026-05-26.md)** — Playable quest map, Omnispec candidate boundary, and Archive Bowl roadmap.
