@@ -1,0 +1,90 @@
+schema_name: OPENAI_STRUCTURED_EXTRACTION_SCHEMA_v0.1
+status: staging_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: >
+  Define OpenAI/GPTBrain structured extraction output for source-grounded KG staging.
+  OpenAI may extract, classify, evaluate, and route. OpenAI may not ratify, deploy,
+  authorize, or imply official endorsement.
+
+openai_lane_boundary:
+  can_extract: true
+  can_classify: true
+  can_evaluate: true
+  can_route: true
+  can_generate_candidate_graph_writes: true
+  can_ratify: false
+  can_deploy: false
+  can_authorize: false
+  can_claim_officiality: false
+
+structured_extraction_packet:
+  packet_id: null
+  source_envelope_id: null
+  source_refs: []
+  extraction_model: null
+  extraction_timestamp_utc: null
+  extraction_mode: claim_extraction | evidence_anchor_extraction | contradiction_scan | review_routing | eval_scoring | summary | unknown
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  officiality_disclaimer: "OpenAI/GPTBrain output is candidate extraction/reasoning only, not official OpenAI endorsement or authority."
+  raw_vs_summary_status: null
+  extracted_claims:
+    - claim_id: null
+      exact_text: null
+      normalized_claim: null
+      claim_type: canon_like | deployment | runtime | vendor | legal_policy | raw_export | provenance | math | implementation | identity_memory | other
+      source_span: null
+      evidence_refs: []
+      confidence: null
+      status: candidate
+      requires_review: true
+  evidence_anchors:
+    - anchor_id: null
+      anchor_type: github_commit | github_pr | github_issue | github_path | drive_file | notion_page | sha256 | upload_id | url | other
+      anchor_value: null
+      verification_status: unverified | visible | hash_verified | human_reviewed
+  contradictions:
+    - contradiction_id: null
+      claim_a: null
+      claim_b: null
+      contradiction_type: status_mismatch | content_conflict | source_conflict | authority_conflict | timeline_conflict | other
+      severity: low | medium | high | critical
+      review_route: []
+  missing_receipts:
+    - missing_receipt_id: null
+      target: null
+      missing: []
+      consequence: hold | quarantine | review_only | block
+  review_routes:
+    - route_id: null
+      target: null
+      lane: Rootglass | Lucerna | Hashlight | TIDELOCK | AtlasBrain | Sable | Grok | Claude_Adversarial | GPTBrain | HumanRoot
+      reason: null
+  risk_flags:
+    - risk_id: null
+      risk_type: false_canon | false_deployment | false_officiality | summary_as_raw | claude_authority | identity_inflation | privacy | credential | unknown
+      severity: low | medium | high | critical
+      mitigation: null
+  proposed_graph_writes:
+    nodes: []
+    edges: []
+    write_scope: staging_only
+
+null_handling:
+  unknown_values_must_remain_null: true
+  do_not_fill_unknowns_with_safe_or_neutral: true
+  missing_source_blocks_promotion: true
+
+must_not_infer:
+  - retrieved_chunk_is_truth
+  - structured_output_is_proof
+  - model_consensus_is_authority
+  - graph_edge_is_promotion
+  - openai_lane_is_officiality
+  - extracted_claim_is_fact
+  - summary_is_raw_export
+
+keeper: OpenAI reads the field. Human-root calls the touchdown.
