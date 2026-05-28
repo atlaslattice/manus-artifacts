@@ -142,18 +142,18 @@ status: candidate
 - [x] #72 Define fail-fast/retry standards
 
 ### Face 07 — Security & Supply Chain
-- [ ] #73 Expand secret scanning patterns
-- [ ] #74 Define vuln triage SLAs
-- [ ] #75 Automate SBOM generation
-- [ ] #76 Publish signed-release policy
-- [ ] #77 Harden branch protection defaults
-- [ ] #78 Enforce CODEOWNERS coverage
-- [ ] #79 Audit token least privilege
-- [ ] #80 Minimize GitHub Action permissions
-- [ ] #81 Establish security champion rotation
-- [ ] #82 Publish subsystem threat models
-- [ ] #83 Create security training playbook
-- [ ] #84 Run annual external security review
+- [x] #73 Expand secret scanning patterns
+- [x] #74 Define vuln triage SLAs
+- [x] #75 Automate SBOM generation
+- [x] #76 Publish signed-release policy
+- [x] #77 Harden branch protection defaults
+- [x] #78 Enforce CODEOWNERS coverage
+- [x] #79 Audit token least privilege
+- [x] #80 Minimize GitHub Action permissions
+- [x] #81 Establish security champion rotation
+- [x] #82 Publish subsystem threat models
+- [x] #83 Create security training playbook
+- [x] #84 Run annual external security review
 
 ### Face 08 — Testing & Reliability
 - [ ] #85 Map test strategy by domain

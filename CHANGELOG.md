@@ -15,7 +15,20 @@ status: candidate
 - Wave 3 Repository Architecture Pack: navigation standards, breadcrumb standards, index of indexes, archive taxonomy map, file placement decision tree, duplicate docs triage, stale artifact quarantine lane, canonical path map, role-based landing paths (#25–#36)
 - Wave 2 Legal/Trust Pack: license audit, attribution inventory, trademark guide, PII redaction rubric, sensitive content review process, export control checklist, data retention policy, vulnerability disclosure process, incident response runbook, compliance evidence index, public risk register, quarterly audit template (#13–#24)
 - Wave 1 Governance Completion: section ownership map, review SLA policy, council review cadence, change classification rules, deprecation policy, governance onboarding guide (#4–#12)
-- Wave 6 CI/CD Pack (tasks #61–#72): 11 new CI/CD governance artifacts completing the CI/CD & Automation wave
+- Wave 7 Security Pack (tasks #73–#84): 12 new security/supply-chain governance artifacts
+  - `archive/governance/SECRET_SCANNING_PATTERNS_POLICY.md` — custom patterns + alert SLAs (#73)
+  - `archive/governance/VULNERABILITY_TRIAGE_SLAS.md` — CVSS-based response times (#74)
+  - `archive/governance/SBOM_GENERATION_POLICY.md` — SPDX + CycloneDX generation (#75)
+  - `archive/governance/SIGNED_RELEASE_POLICY.md` — Sigstore/cosign signing (#76)
+  - `archive/governance/BRANCH_PROTECTION_DEFAULTS.md` — required branch rules (#77)
+  - `archive/governance/CODEOWNERS_COVERAGE_POLICY.md` — ownership map (#78)
+  - `archive/governance/TOKEN_LEAST_PRIVILEGE_POLICY.md` — PAT/token scoping rules (#79)
+  - `archive/governance/GITHUB_ACTION_PERMISSIONS_POLICY.md` — `permissions:` minimization (#80)
+  - `archive/governance/SECURITY_CHAMPION_ROTATION_POLICY.md` — quarterly rotation (#81)
+  - `archive/governance/SUBSYSTEM_THREAT_MODELS.md` — STRIDE threat model (#82)
+  - `archive/governance/SECURITY_TRAINING_PLAYBOOK.md` — 5-module training guide (#83)
+  - `archive/governance/ANNUAL_EXTERNAL_SECURITY_REVIEW_POLICY.md` — annual review process (#84)
+- Wave 6 CI/CD Pack (tasks #61–#72): 11 new CI/CD governance artifacts
   - `archive/governance/REPO_HYGIENE_WORKFLOW_POLICY.md` — hygiene checks and cadence (#61)
   - `archive/governance/METADATA_COMPLETENESS_CHECK_POLICY.md` — required frontmatter fields (#63)
   - `archive/governance/LINK_INTEGRITY_CHECK_POLICY.md` — broken link detection (#64)
