@@ -1,0 +1,30 @@
+schema_id: raw_export_status.schema.v0.1
+status: candidate_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: Normalize raw export status across GitHub, Drive, Notion, chat, Gamma, and external sources.
+
+raw_export_status:
+  allowed:
+    - not_exported
+    - partial_export
+    - full_raw_export_attached
+    - full_raw_export_hashed
+    - redacted_raw_export_attached
+    - unavailable
+
+field_meanings:
+  not_exported: Source exists, but no export has been captured.
+  partial_export: Some content or preview was captured, but completeness is unknown.
+  full_raw_export_attached: Raw export is attached or accessible, but hash may be missing.
+  full_raw_export_hashed: Raw export is attached and hash/stable ID is recorded.
+  redacted_raw_export_attached: Redacted raw export is available and redaction status must be declared.
+  unavailable: Raw export cannot be obtained or source type does not support export.
+
+hard_rules:
+  - Summary is not raw export.
+  - Parser output is not raw export.
+  - Model memory is not raw export.
+  - Fossilization requires full_raw_export_attached or full_raw_export_hashed.
+  - Public claims should prefer full_raw_export_hashed when possible.
