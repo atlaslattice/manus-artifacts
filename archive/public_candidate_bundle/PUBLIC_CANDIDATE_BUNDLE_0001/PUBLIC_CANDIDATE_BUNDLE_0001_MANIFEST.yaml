@@ -1,0 +1,58 @@
+bundle_id: PUBLIC_CANDIDATE_BUNDLE_0001
+status: public_candidate_bundle
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+created_utc: 2026-05-28
+purpose: >
+  Provide the first low-risk, public-safe seed package for the Atlas Lattice public knowledge graph surface.
+
+release_class: low_risk_meta_structural
+public_safe_default: true
+human_root_required_for_canon: true
+
+included_artifacts:
+  - path: README.md
+    type: bundle_readme
+    risk: low
+  - path: PUBLIC_CANDIDATE_BUNDLE_0001_MANIFEST.yaml
+    type: manifest
+    risk: low
+  - path: GRAPH_IS_NOT_CANON_FAQ.md
+    type: public_faq
+    risk: low
+  - path: PUBLIC_RELEASE_STATUS_SCHEMA_v0.1.yaml
+    type: schema
+    risk: low
+
+excluded_artifact_classes:
+  - private_raw_transcripts
+  - credential_like_material
+  - security_intrusion_operational_detail
+  - financial_institution_sensitive_operational_detail
+  - unreviewed_claude_governance_artifacts
+  - artifacts_claiming_openai_officiality
+  - artifacts_claiming_deployment
+  - artifacts_claiming_canon_without_human_root
+
+release_gates:
+  - gate_id: PRG-001
+    name: public_safety_review
+    required: true
+  - gate_id: PRG-002
+    name: raw_vs_summary_status_present
+    required: true
+  - gate_id: PRG-003
+    name: canon_status_not_canon_by_default
+    required: true
+  - gate_id: PRG-004
+    name: deployment_status_not_deployed_by_default
+    required: true
+  - gate_id: PRG-005
+    name: authority_scope_none_by_default
+    required: true
+  - gate_id: PRG-006
+    name: sensitive_term_gate_passed_or_quarantined
+    required: true
+
+keeper: Public-safe means reviewable, not ratified.
