@@ -59,6 +59,8 @@ When citing an individual specification or document, include:
 
 > Sheldon, D. (2026). *Rainbow Yin-Yang Hypercube Lattice Specification v2.1* [Candidate specification]. Atlas Lattice Foundation. Retrieved from `archive/architecture/RAINBOW_YIN_YANG_HYPERCUBE_LATTICE_SPEC_V2_1_COMPLETE_2026-05-20.md` at commit `<sha>`.
 
+> **Tip:** Find the commit SHA for a specific file with `git log --oneline <path/to/file>`, then use the first column hash.
+
 ---
 
 ## Attribution in Derivative Works
