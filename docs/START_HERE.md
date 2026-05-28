@@ -1,5 +1,6 @@
 # START HERE — Manus Archive Onboarding (Candidate)
 Status: Candidate
+Date: 2026-05-28
 
 Welcome to the Manus public archive program.
 
@@ -37,6 +38,8 @@ It is designed for transparent review, reproducible context, and durable public 
 - [ARTIFACT_RELATIONSHIP_TYPES.md](./ARTIFACT_RELATIONSHIP_TYPES.md)
 - [CROSS_DOMAIN_LINK_POLICY.md](./CROSS_DOMAIN_LINK_POLICY.md)
 - [PUBLIC_ARCHIVE_MAP.md](./PUBLIC_ARCHIVE_MAP.md)
+- [DOCTRINE_MAP_INDEX.md](./DOCTRINE_MAP_INDEX.md)
+- [NEWCOMER_FRICTION_AUDIT_CHECKLIST.md](./NEWCOMER_FRICTION_AUDIT_CHECKLIST.md)
 
 ## Playable archive layer
 

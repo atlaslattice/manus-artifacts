@@ -21,15 +21,15 @@ Pick high-fun, high-impact tasks that implement one mission: functional lattice 
    Strengthen docs language that distinguishes canonical vs relay substrates.
 4. [x] **Knowledge graph ring-II docs pack**  
    Publish node index, relationship taxonomy, cross-domain policy, and archive map.
-5. [ ] **Artifact sync edge-case testing**  
+5. [x] **Artifact sync edge-case testing**  
    Expand confidence around unusual payloads and sync retries.
-6. [ ] **Pinecone sync reliability pass**  
+6. [x] **Pinecone sync reliability pass**  
    Validate environment assumptions and improve operational guardrails.
-7. [ ] **Swarm index gap resolution plan**  
+7. [x] **Swarm index gap resolution plan**  
    Advance assignments for unresolved TBD-08 to TBD-11 slots.
-8. [ ] **Adapter safety perimeter audit**  
+8. [x] **Adapter safety perimeter audit**  
    Re-verify dry-run enforcement and trace-only protections.
-9. [ ] **Cross-project deployment pack review**  
+9. [x] **Cross-project deployment pack review**  
    Reconcile Free Bank, Chinook, and Three-Tier pack consistency.
 10. [x] **Mission control weekly checkpoint template**  
     Publish a reusable weekly delta template for rhythm and receipts.
@@ -45,3 +45,8 @@ Pick high-fun, high-impact tasks that implement one mission: functional lattice 
 - This board is intended as a living execution artifact.
 - Keep status updates in checklist form for rapid council review.
 - Receipts: `docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md`, `docs/ARTIFACT_RELATIONSHIP_TYPES.md`, `docs/CROSS_DOMAIN_LINK_POLICY.md`, `docs/PUBLIC_ARCHIVE_MAP.md`, `docs/WEEKLY_DELTA_DIGEST_TEMPLATE.md`.
+- Task 5 receipt: `docs/ARTIFACT_SYNC_EDGE_CASE_TESTING_RECEIPT.md`
+- Task 6 receipt: `docs/PINECONE_SYNC_RELIABILITY_PASS.md`
+- Task 7 receipt: `docs/SWARM_INDEX_GAP_RESOLUTION_PLAN.md`
+- Task 8 receipt: `docs/ADAPTER_SAFETY_PERIMETER_AUDIT.md`
+- Task 9 receipt: `docs/CROSS_PROJECT_DEPLOYMENT_PACK_REVIEW.md`

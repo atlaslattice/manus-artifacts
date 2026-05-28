@@ -6,6 +6,13 @@ This glossary is the single authoritative term reference for the Manus archive p
 When a term appears across multiple documents, this file governs the canonical definition.
 All domain primers, governance docs, and reader guides should link here for consistency.
 
+## Authority and dispute process
+
+- Source of truth: this file is the active Candidate glossary authority for repository terminology.
+- Dispute intake: open a documented glossary dispute in governance review channels with the conflicting term, context, and proposed definition.
+- Decision path: domain steward review -> council review -> adjudication by @atlaslattice for contested authority outcomes.
+- Preservation rule: deprecated definitions are not deleted; they are retained with supersession notes and forward pointers.
+
 ---
 
 ## Archive Program Terms

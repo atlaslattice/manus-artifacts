@@ -26,24 +26,24 @@ Evidence: [CANON_UX_IDENTITY_TOOLKIT](../docs/CANON_UX_IDENTITY_TOOLKIT.md)
 
 ## Ring II — Navigation + Knowledge Graph (11–20)
 
-11. [ ] Domain README for every top-level major folder  
+11. [x] Domain README for every top-level major folder  
 12. [x] Cross-domain “See also” minimum-link policy  
 13. [x] Knowledge-graph seed index (node list)  
 14. [x] Artifact relationship types spec (supersedes/supports/depends)  
-15. [ ] Auto-generated doctrine map index file  
+15. [x] Auto-generated doctrine map index file  
 16. [x] “Start by role” landing page hardening v2  
-17. [ ] Glossary authority + dispute process  
+17. [x] Glossary authority + dispute process  
 18. [x] Public archive map SVG/mermaid view  
 19. [x] Weekly delta digest template by domain  
-20. [ ] Newcomer friction audit checklist + scoring  
+20. [x] Newcomer friction audit checklist + scoring  
 
 ## Ring III — Validation + CI Hardening (21–30)
 
-21. [ ] Metadata schema validator action  
+21. [x] Metadata schema validator action  
 22. [ ] Canon-state transition validator action  
-23. [ ] Broken-anchor checker for markdown headings  
+23. [x] Broken-anchor checker for markdown headings  
 24. [ ] Required sections linter for governance docs  
-25. [ ] Orphaned file detector (unlinked artifacts)  
+25. [x] Orphaned file detector (unlinked artifacts)  
 26. [ ] External-link policy checker (timeouts/retries)  
 27. [ ] Sensitive-claim provenance checker  
 28. [ ] Staleness severity levels + SLA policy  
@@ -79,8 +79,8 @@ Evidence: [CANON_UX_IDENTITY_TOOLKIT](../docs/CANON_UX_IDENTITY_TOOLKIT.md)
 ## Active Sprint
 
 - [x] Execute Ring I (1–10) as first sprint
-- [ ] Execute Ring II (11–20) (in progress; core docs completed with receipts)
-- [ ] Execute Ring III (21–30)
+- [x] Execute Ring II (11–20) (completed with receipts)
+- [ ] Execute Ring III (21–30) (started: 21, 23, 25 complete)
 - [ ] Execute Ring IV (31–40)
 - [ ] Execute Ring V (41–50)
 - [x] Execute TIDELOCK Harbor Floodgate requirement (dedupe, supersession, boundary audit, mergeability language, identifier/history reconciliation)
@@ -101,3 +101,14 @@ Evidence: [CANON_UX_IDENTITY_TOOLKIT](../docs/CANON_UX_IDENTITY_TOOLKIT.md)
 - [Public Archive Map](../docs/PUBLIC_ARCHIVE_MAP.md)
 - [Weekly Delta Digest Template](../docs/WEEKLY_DELTA_DIGEST_TEMPLATE.md)
 - [START_HERE](../docs/START_HERE.md)
+- [Doctrine Map Index (auto-generated)](../docs/DOCTRINE_MAP_INDEX.md)
+- [Newcomer Friction Audit Checklist + Scoring](../docs/NEWCOMER_FRICTION_AUDIT_CHECKLIST.md)
+- [Glossary authority + dispute process](../docs/GLOSSARY.md)
+- [Top-level domain README surfaces](../projects/README.md)
+
+### Ring III starter receipts
+
+- [Ring III validation workflow](../.github/workflows/ring3-validation-hardening.yml)
+- [Metadata validation script](../scripts/validate_artifact_metadata.py)
+- [Link integrity script](../scripts/check_markdown_links.py)
+- [Orphan detection script](../scripts/detect_orphaned_artifacts.py)

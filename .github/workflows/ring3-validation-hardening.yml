@@ -1,0 +1,58 @@
+name: Ring III validation hardening
+
+on:
+  push:
+    paths:
+      - "scripts/**"
+      - "docs/**"
+      - "projects/**"
+      - "README.md"
+      - ".github/workflows/ring3-validation-hardening.yml"
+  pull_request:
+    paths:
+      - "scripts/**"
+      - "docs/**"
+      - "projects/**"
+      - "README.md"
+      - ".github/workflows/ring3-validation-hardening.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  metadata-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip
+      - name: Validate artifact metadata on key surfaces
+        run: python scripts/validate_artifact_metadata.py
+
+  link-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip
+      - name: Validate markdown links on seed navigation files
+        run: python scripts/check_markdown_links.py
+
+  orphan-detection:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip
+      - name: Detect orphaned critical artifacts
+        run: python scripts/detect_orphaned_artifacts.py

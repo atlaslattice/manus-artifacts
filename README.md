@@ -28,6 +28,7 @@ Governance status: nothing is canon until ratified by the full council and adjud
 7. Navigate the lattice through [Lattice Knowledge Graph Node Index](./docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md), [Artifact Relationship Types](./docs/ARTIFACT_RELATIONSHIP_TYPES.md), [Cross-Domain Link Policy](./docs/CROSS_DOMAIN_LINK_POLICY.md), and [Public Archive Map](./docs/PUBLIC_ARCHIVE_MAP.md).
 8. Join quest-driven contribution through the [Aetherforge Public Questboard](./projects/AETHERFORGE_PUBLIC_QUESTBOARD_v0.1.md).
 9. Use the [GPTDream++ Open Protocol Surface](./archive/spec/gptdream/README.md) for specs, schemas, reference implementations, and tests.
+10. Use [Projects index](./projects/README.md) for active pointers and preserved deprecated-reference vault routing.
 
 ## Intent-Based Paths
 
@@ -42,6 +43,7 @@ Governance status: nothing is canon until ratified by the full council and adjud
 - [Executive Summaries](./docs/EXECUTIVE_SUMMARIES.md) — concise briefings on flagship systems and projects.
 - [Top 25 Reading Path](./docs/TOP25_READING_PATH.md) — ranked route into the archive.
 - [Glossary](./docs/GLOSSARY.md) — single authoritative term reference for the archive.
+- [Doctrine Map Index](./docs/DOCTRINE_MAP_INDEX.md) — auto-generated index of doctrine surfaces.
 - [Roadmap](./docs/ROADMAP.md) — measurable public outcomes and future direction.
 - [Lattice Knowledge Graph Node Index](./docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md) — seed nodes and navigation topology.
 - [Public Archive Map](./docs/PUBLIC_ARCHIVE_MAP.md) — visual graph map of domain relationships.
