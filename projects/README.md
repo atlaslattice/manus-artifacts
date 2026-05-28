@@ -16,7 +16,7 @@ This directory tracks project-specific execution boards and implementation strea
 - **Portfolio board:** Top-50 Taskboard
 - **Sprint board:** Top-10 Taskboard
 
-Keep status and receipt links synchronized across all three boards.
+Keep status and receipt links synchronized across all four boards.
 
 ## Project Folders
 

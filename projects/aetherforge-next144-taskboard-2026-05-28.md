@@ -192,6 +192,5 @@
 
 ## Immediate execution sequence (next 24 to ship first)
 
-1. Tasks 25–36 (Wave 03, full)  
-2. Tasks 37–48 (Wave 04, full)
-
+- **Priority 1:** Tasks 25–36 (Wave 03, full)  
+- **Priority 2:** Tasks 37–48 (Wave 04, full)
