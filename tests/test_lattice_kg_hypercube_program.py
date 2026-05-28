@@ -45,6 +45,10 @@ def test_global_index_schema_declares_candidate_boundary() -> None:
     assert "unresolved_repo_links" in artifact_required
     assert "inbound_repo_links" in artifact_required
     assert "link_health" in schema["required"]
+    link_health_required = set(schema["properties"]["link_health"]["required"])
+    assert "isolated_markdown_artifacts" in link_health_required
+    assert "connected_markdown_components" in link_health_required
+    assert "root_reachable_markdown_artifacts" in link_health_required
 
 
 def test_global_index_has_cross_reference_and_governance_fields() -> None:
@@ -53,6 +57,9 @@ def test_global_index_has_cross_reference_and_governance_fields() -> None:
     assert data["link_health"]["markdown_artifacts_total"] >= 1
     assert data["link_health"]["underlinked_markdown_artifacts"] >= 0
     assert data["link_health"]["unresolved_repo_links"] >= 0
+    assert data["link_health"]["isolated_markdown_artifacts"] >= 0
+    assert data["link_health"]["connected_markdown_components"] >= 1
+    assert data["link_health"]["root_reachable_markdown_artifacts"] >= 1
     row = data["artifacts"][0]
     assert "outbound_repo_links" in row
     assert "unresolved_repo_links" in row

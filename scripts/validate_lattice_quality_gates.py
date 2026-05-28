@@ -166,6 +166,9 @@ def validate_cross_reference_contract(index: dict) -> list[str]:
     errors: list[str] = []
     artifacts = index.get("artifacts", [])
     markdown_rows = [row for row in artifacts if str(row.get("path", "")).endswith(".md")]
+    markdown_paths = {row["path"] for row in markdown_rows}
+    directed_graph: dict[str, set[str]] = {path: set() for path in markdown_paths}
+    undirected_graph: dict[str, set[str]] = {path: set() for path in markdown_paths}
 
     unresolved_count = 0
     underlinked_count = 0
@@ -187,14 +190,120 @@ def validate_cross_reference_contract(index: dict) -> list[str]:
             underlinked_count += 1
         if isinstance(unresolved, list):
             unresolved_count += len(unresolved)
+        if isinstance(outbound, list):
+            outbound_markdown = {target for target in outbound if target in markdown_paths}
+            directed_graph[row["path"]].update(outbound_markdown)
+            undirected_graph[row["path"]].update(outbound_markdown)
+            for target in outbound_markdown:
+                undirected_graph[target].add(row["path"])
 
     health = index.get("link_health", {})
+    isolated_count = sum(1 for path in markdown_paths if not directed_graph[path] and not undirected_graph[path])
+    connected_components = 0
+    seen: set[str] = set()
+    for path in sorted(markdown_paths):
+        if path in seen:
+            continue
+        connected_components += 1
+        stack = [path]
+        while stack:
+            node = stack.pop()
+            if node in seen:
+                continue
+            seen.add(node)
+            stack.extend(sorted(undirected_graph[node] - seen))
+
+    root_reachable: set[str] = set()
+    if "README.md" in directed_graph:
+        stack = ["README.md"]
+        while stack:
+            node = stack.pop()
+            if node in root_reachable:
+                continue
+            root_reachable.add(node)
+            stack.extend(sorted(directed_graph[node] - root_reachable))
+
     if health.get("markdown_artifacts_total") != len(markdown_rows):
         errors.append("cross-reference check failed: markdown_artifacts_total does not match indexed markdown count")
     if health.get("underlinked_markdown_artifacts") != underlinked_count:
         errors.append("cross-reference check failed: underlinked_markdown_artifacts mismatch")
     if health.get("unresolved_repo_links") != unresolved_count:
         errors.append("cross-reference check failed: unresolved_repo_links mismatch")
+    if health.get("isolated_markdown_artifacts") != isolated_count:
+        errors.append("cross-reference check failed: isolated_markdown_artifacts mismatch")
+    if health.get("connected_markdown_components") != connected_components:
+        errors.append("cross-reference check failed: connected_markdown_components mismatch")
+    if health.get("root_reachable_markdown_artifacts") != len(root_reachable):
+        errors.append("cross-reference check failed: root_reachable_markdown_artifacts mismatch")
+
+    return errors
+
+
+def validate_required_surface_connectivity(index: dict) -> list[str]:
+    errors: list[str] = []
+    artifacts = index.get("artifacts", [])
+    markdown_rows = [row for row in artifacts if str(row.get("path", "")).endswith(".md")]
+    markdown_by_path = {row["path"]: row for row in markdown_rows}
+    required_surfaces = sorted(path for path in REQUIRED_SURFACE_PATHS if path in markdown_by_path)
+    if not required_surfaces:
+        return ["connectivity check failed: no required surfaces were present in the index"]
+
+    directed_graph: dict[str, set[str]] = {path: set() for path in required_surfaces}
+    undirected_graph: dict[str, set[str]] = {path: set() for path in required_surfaces}
+    for path in required_surfaces:
+        outbound = set(markdown_by_path[path].get("outbound_repo_links", []))
+        inbound = set(markdown_by_path[path].get("inbound_repo_links", []))
+        outbound_required = outbound & set(required_surfaces)
+        inbound_required = inbound & set(required_surfaces)
+        directed_graph[path].update(outbound_required)
+        undirected_graph[path].update(outbound_required | inbound_required)
+        for target in outbound_required:
+            undirected_graph[target].add(path)
+
+    root_reachable: set[str] = set()
+    if "README.md" in directed_graph:
+        stack = ["README.md"]
+        while stack:
+            node = stack.pop()
+            if node in root_reachable:
+                continue
+            root_reachable.add(node)
+            stack.extend(sorted(directed_graph[node] - root_reachable))
+
+    missing_root_paths = [path for path in required_surfaces if path not in root_reachable]
+    if missing_root_paths:
+        errors.append(
+            "connectivity check failed: required surfaces are not root-reachable: "
+            + ", ".join(missing_root_paths)
+        )
+
+    isolated_required = [
+        path for path in required_surfaces if path != "README.md" and not directed_graph[path] and not undirected_graph[path]
+    ]
+    if isolated_required:
+        errors.append(
+            "connectivity check failed: required surfaces are isolated from the required navigation graph: "
+            + ", ".join(isolated_required)
+        )
+
+    components = 0
+    seen: set[str] = set()
+    for path in required_surfaces:
+        if path in seen:
+            continue
+        components += 1
+        stack = [path]
+        while stack:
+            node = stack.pop()
+            if node in seen:
+                continue
+            seen.add(node)
+            stack.extend(sorted(undirected_graph[node] - seen))
+
+    if components != 1:
+        errors.append(
+            f"connectivity check failed: required surfaces split across {components} components"
+        )
 
     return errors
 
@@ -303,6 +412,7 @@ def validate_index(repo_root: Path, index_path: Path, max_age_days: int) -> list
 
     errors.extend(validate_candidate_governance_state(indexed_artifacts))
     errors.extend(validate_cross_reference_contract(index))
+    errors.extend(validate_required_surface_connectivity(index))
     errors.extend(validate_metadata_consistency(repo_root))
     errors.extend(validate_surface_link_integrity(repo_root))
     errors.extend(validate_gptdreampp_staging_fixtures(repo_root))

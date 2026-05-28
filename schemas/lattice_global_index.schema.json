@@ -35,11 +35,21 @@
     },
     "link_health": {
       "type": "object",
-      "required": ["markdown_artifacts_total", "underlinked_markdown_artifacts", "unresolved_repo_links"],
+      "required": [
+        "markdown_artifacts_total",
+        "underlinked_markdown_artifacts",
+        "unresolved_repo_links",
+        "isolated_markdown_artifacts",
+        "connected_markdown_components",
+        "root_reachable_markdown_artifacts"
+      ],
       "properties": {
         "markdown_artifacts_total": {"type": "integer", "minimum": 0},
         "underlinked_markdown_artifacts": {"type": "integer", "minimum": 0},
-        "unresolved_repo_links": {"type": "integer", "minimum": 0}
+        "unresolved_repo_links": {"type": "integer", "minimum": 0},
+        "isolated_markdown_artifacts": {"type": "integer", "minimum": 0},
+        "connected_markdown_components": {"type": "integer", "minimum": 0},
+        "root_reachable_markdown_artifacts": {"type": "integer", "minimum": 0}
       },
       "additionalProperties": false
     },

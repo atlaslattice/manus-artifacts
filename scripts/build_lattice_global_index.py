@@ -188,11 +188,47 @@ def build_index(repo_root: Path) -> dict[str, object]:
 
     artifact_payload = [record.as_dict() for record in records]
     underlinked_markdown = 0
+    markdown_paths = {payload["path"] for payload in artifact_payload if payload["path"].endswith(".md")}
+    directed_graph: dict[str, set[str]] = {path: set() for path in markdown_paths}
+    undirected_graph: dict[str, set[str]] = {path: set() for path in markdown_paths}
     for payload in artifact_payload:
         inbound = sorted(inbound_link_map.get(payload["path"], set()))
         payload["inbound_repo_links"] = inbound
         if payload["path"].endswith(".md") and not payload["outbound_repo_links"]:
             underlinked_markdown += 1
+        if payload["path"] not in markdown_paths:
+            continue
+        outbound_markdown = {link for link in payload["outbound_repo_links"] if link in markdown_paths}
+        directed_graph[payload["path"]].update(outbound_markdown)
+        undirected_graph[payload["path"]].update(outbound_markdown)
+        for target in outbound_markdown:
+            undirected_graph[target].add(payload["path"])
+
+    isolated_markdown = sum(1 for path in markdown_paths if not directed_graph[path] and not undirected_graph[path])
+
+    connected_components = 0
+    seen: set[str] = set()
+    for path in sorted(markdown_paths):
+        if path in seen:
+            continue
+        connected_components += 1
+        stack = [path]
+        while stack:
+            node = stack.pop()
+            if node in seen:
+                continue
+            seen.add(node)
+            stack.extend(sorted(undirected_graph[node] - seen))
+
+    root_reachable: set[str] = set()
+    if "README.md" in directed_graph:
+        stack = ["README.md"]
+        while stack:
+            node = stack.pop()
+            if node in root_reachable:
+                continue
+            root_reachable.add(node)
+            stack.extend(sorted(directed_graph[node] - root_reachable))
 
     return {
         "schema_id": "lattice_global_index.v0.1",
@@ -204,6 +240,9 @@ def build_index(repo_root: Path) -> dict[str, object]:
             "markdown_artifacts_total": sum(1 for payload in artifact_payload if payload["path"].endswith(".md")),
             "underlinked_markdown_artifacts": underlinked_markdown,
             "unresolved_repo_links": unresolved_link_count,
+            "isolated_markdown_artifacts": isolated_markdown,
+            "connected_markdown_components": connected_components,
+            "root_reachable_markdown_artifacts": len(root_reachable),
         },
         "artifacts": artifact_payload,
     }

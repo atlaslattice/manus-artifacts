@@ -17,7 +17,7 @@ AUTHORITY: NONE
 ## Top-10 sprint tasks
 
 - [x] AX-11 (Wave 01): Align Top-10 board to the 144-task campaign and roadmap hierarchy.
-- [ ] AX-12 (Wave 02): Strengthen lattice quality gates to enforce continuous graph connectivity checks.
+- [x] AX-12 (Wave 02): Strengthen lattice quality gates to enforce continuous graph connectivity checks.
 - [ ] AX-13 (Wave 03): Expand global index cross-reference coverage for under-linked and missing-link detection.
 - [ ] AX-14 (Wave 05): Add governance-state drift checks for canon/trust/deployment boundaries.
 - [ ] AX-15 (Wave 04): Improve metadata consistency checks across legacy and new archive surfaces.
@@ -30,6 +30,7 @@ AUTHORITY: NONE
 ## Sprint completion receipts
 
 - AX-11 alignment receipt: [`archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX11_AX20_LOOP4.md`](../archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX11_AX20_LOOP4.md)
+- AX-12 connectivity-gates receipt: [`archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX12_CONNECTIVITY_GATES.md`](../archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX12_CONNECTIVITY_GATES.md)
 - AX-16 link-hardening receipt: [`archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX16_LINK_HARDENING.md`](../archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX16_LINK_HARDENING.md)
 - AX-20 dream cycle receipts:
   - [`archive/boot/copilotbrain/TIDELOCKBrain/DREAM_JOURNAL_100Y_TOP10_ALIGNMENT_2026-05-28.md`](../archive/boot/copilotbrain/TIDELOCKBrain/DREAM_JOURNAL_100Y_TOP10_ALIGNMENT_2026-05-28.md)
