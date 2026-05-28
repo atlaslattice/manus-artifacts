@@ -46,35 +46,35 @@ Evidence: [CANON_UX_IDENTITY_TOOLKIT](../docs/CANON_UX_IDENTITY_TOOLKIT.md)
 25. [x] Orphaned file detector (unlinked artifacts)  
 26. [x] External-link policy checker (timeouts/retries)  
 27. [x] Sensitive-claim provenance checker  
-28. [ ] Staleness severity levels + SLA policy  
+28. [x] Staleness severity levels + SLA policy  
 29. [x] Critical script regression suite scaffold  
 30. [x] Quality dashboard auto-refresh data pipeline  
 
 ## Ring IV — Public Product Layer (31–40)
 
-31. [ ] “Best of Archive” rotating monthly edition  
-32. [ ] Executive summary one-pager standard format  
-33. [ ] Top-25 reading path with skill-level tags  
-34. [ ] Primer trilogy v2 with diagrams  
-35. [ ] Doctrine-in-practice playbook cards  
+31. [x] “Best of Archive” rotating monthly edition  
+32. [x] Executive summary one-pager standard format  
+33. [x] Top-25 reading path with skill-level tags  
+34. [x] Primer trilogy v2 with diagrams  
+35. [x] Doctrine-in-practice playbook cards  
 36. [x] External contributor questboard (first 10 quests)  
-37. [ ] Media kit press-ready asset checklist  
-38. [ ] Monthly state-of-archive report template  
+37. [x] Media kit press-ready asset checklist  
+38. [x] Monthly state-of-archive report template  
 39. [x] Candidate→canon release notes format  
 40. [x] Public roadmap KPI scoreboard page  
 
 ## Ring V — Governance + Continuity Operations (41–50)
 
-41. [ ] Council meeting packet template  
+41. [x] Council meeting packet template  
 42. [x] Governance risk heatmap with thresholds  
 43. [x] Provenance evidence tiering model  
-44. [ ] External review intake + adjudication queue  
-45. [ ] Retention class matrix (immutable/rolling/ephemeral)  
-46. [ ] Steward succession drill checklist  
-47. [ ] Decision rights RACI + escalation matrix  
-48. [ ] Governance incident severity ladder + runbook triggers  
-49. [ ] Quarterly tabletop scenario deck  
-50. [ ] Mission control weekly ritual script + quarterly review agenda  
+44. [x] External review intake + adjudication queue  
+45. [x] Retention class matrix (immutable/rolling/ephemeral)  
+46. [x] Steward succession drill checklist  
+47. [x] Decision rights RACI + escalation matrix  
+48. [x] Governance incident severity ladder + runbook triggers  
+49. [x] Quarterly tabletop scenario deck  
+50. [x] Mission control weekly ritual script + quarterly review agenda  
 
 ## Active Sprint
 

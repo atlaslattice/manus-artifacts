@@ -24,7 +24,7 @@ Governance status: nothing is canon until ratified by the full council and adjud
 3. Review canon authority boundaries in [CANON_BOUNDARY](./docs/CANON_BOUNDARY.md).
 4. Use the normalized [ARCHIVE_TAXONOMY](./docs/ARCHIVE_TAXONOMY.md) to navigate by domain.
 5. Explore the curated [BEST_OF_ARCHIVE](./docs/BEST_OF_ARCHIVE.md).
-6. Track active execution in the [Aetherforge Metatron Top 50 Taskboard](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md).
+6. Track active execution in the [Aetherforge Metatron Top 50 Taskboard](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md) and [Aetherforge Next-144 Taskboard](./projects/aetherforge-next144-taskboard-2026-05-28.md).
 7. Navigate the lattice through [Lattice Knowledge Graph Node Index](./docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md), [Artifact Relationship Types](./docs/ARTIFACT_RELATIONSHIP_TYPES.md), [Cross-Domain Link Policy](./docs/CROSS_DOMAIN_LINK_POLICY.md), and [Public Archive Map](./docs/PUBLIC_ARCHIVE_MAP.md).
 8. Join quest-driven contribution through the [Aetherforge Public Questboard](./projects/AETHERFORGE_PUBLIC_QUESTBOARD_v0.1.md).
 9. Use the [GPTDream++ Open Protocol Surface](./archive/spec/gptdream/README.md) for specs, schemas, reference implementations, and tests.

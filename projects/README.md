@@ -6,6 +6,7 @@ Project execution boards and playable archive workstreams.
 
 ## Active boards
 - [Aetherforge Metatron Top 50](./aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
+- [Aetherforge Next-144 Taskboard](./aetherforge-next144-taskboard-2026-05-28.md)
 - [Aetherforge Top 10](./aetherforge-top10-taskboard-2026-05-26.md)
 - [Aetherforge Public Questboard](./AETHERFORGE_PUBLIC_QUESTBOARD_v0.1.md)
 - [Aetherforge External Contributor Questboard (First 10)](./AETHERFORGE_EXTERNAL_CONTRIBUTOR_QUESTBOARD_FIRST10_v0.1.md)

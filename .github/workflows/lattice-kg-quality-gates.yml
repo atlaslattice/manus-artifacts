@@ -1,0 +1,38 @@
+name: Lattice KG quality gates
+
+on:
+  push:
+    paths:
+      - "docs/**"
+      - "scripts/**"
+      - "tests/**"
+      - ".github/workflows/lattice-kg-quality-gates.yml"
+  pull_request:
+    paths:
+      - "docs/**"
+      - "scripts/**"
+      - "tests/**"
+      - ".github/workflows/lattice-kg-quality-gates.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  kg-quality-gates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+      - name: Graph link integrity
+        run: python scripts/check_graph_link_integrity.py
+      - name: Build lattice global index
+        run: python scripts/build_lattice_global_index.py
+      - name: Validate lattice quality gates
+        run: python scripts/validate_lattice_quality_gates.py
+      - name: Run lattice topology tests
+        run: python -m pytest -q tests/test_lattice_kg_hypercube_program.py

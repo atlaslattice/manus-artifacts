@@ -1,0 +1,252 @@
+{
+  "status": "Candidate",
+  "source": "docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md",
+  "metrics": {
+    "node_count": 21,
+    "edge_count": 48,
+    "edge_density": 2.286,
+    "orphan_node_count": 0,
+    "unknown_link_count": 0
+  },
+  "orphan_nodes": [],
+  "unknown_links": [],
+  "nodes": [
+    {
+      "id": "N-README",
+      "type": "Program",
+      "title": "../README.md",
+      "path": "../README.md",
+      "exists": true,
+      "links": [
+        "N-ROADMAP",
+        "N-TOP50",
+        "N-START"
+      ]
+    },
+    {
+      "id": "N-ROADMAP",
+      "type": "Program",
+      "title": "./ROADMAP.md",
+      "path": "./ROADMAP.md",
+      "exists": true,
+      "links": [
+        "N-TOP50",
+        "N-QUEST",
+        "N-MISSION"
+      ]
+    },
+    {
+      "id": "N-START",
+      "type": "Program",
+      "title": "./START_HERE.md",
+      "path": "./START_HERE.md",
+      "exists": true,
+      "links": [
+        "N-KG-POLICY",
+        "N-MAP",
+        "N-QUEST"
+      ]
+    },
+    {
+      "id": "N-TOP50",
+      "type": "Program",
+      "title": "../projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md",
+      "path": "../projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md",
+      "exists": true,
+      "links": [
+        "N-TOP10",
+        "N-QUEST",
+        "N-QUALITY"
+      ]
+    },
+    {
+      "id": "N-TOP10",
+      "type": "Program",
+      "title": "../projects/aetherforge-top10-taskboard-2026-05-26.md",
+      "path": "../projects/aetherforge-top10-taskboard-2026-05-26.md",
+      "exists": true,
+      "links": [
+        "N-TOP50",
+        "N-QUALITY"
+      ]
+    },
+    {
+      "id": "N-QUEST",
+      "type": "Program",
+      "title": "../projects/AETHERFORGE_PUBLIC_QUESTBOARD_v0.1.md",
+      "path": "../projects/AETHERFORGE_PUBLIC_QUESTBOARD_v0.1.md",
+      "exists": true,
+      "links": [
+        "N-TOP50",
+        "N-WEEKLY",
+        "N-QUALITY"
+      ]
+    },
+    {
+      "id": "N-KG-POLICY",
+      "type": "Governance",
+      "title": "./CROSS_DOMAIN_LINK_POLICY.md",
+      "path": "./CROSS_DOMAIN_LINK_POLICY.md",
+      "exists": true,
+      "links": [
+        "N-MAP",
+        "N-REL-TYPES"
+      ]
+    },
+    {
+      "id": "N-REL-TYPES",
+      "type": "Governance",
+      "title": "./ARTIFACT_RELATIONSHIP_TYPES.md",
+      "path": "./ARTIFACT_RELATIONSHIP_TYPES.md",
+      "exists": true,
+      "links": [
+        "N-LINEAGE",
+        "N-KG-POLICY"
+      ]
+    },
+    {
+      "id": "N-MAP",
+      "type": "Program",
+      "title": "./PUBLIC_ARCHIVE_MAP.md",
+      "path": "./PUBLIC_ARCHIVE_MAP.md",
+      "exists": true,
+      "links": [
+        "N-TAXONOMY",
+        "N-KG-POLICY"
+      ]
+    },
+    {
+      "id": "N-TAXONOMY",
+      "type": "Doctrine",
+      "title": "./ARCHIVE_TAXONOMY.md",
+      "path": "./ARCHIVE_TAXONOMY.md",
+      "exists": true,
+      "links": [
+        "N-MAP",
+        "N-START"
+      ]
+    },
+    {
+      "id": "N-LINEAGE",
+      "type": "Governance",
+      "title": "./ARTIFACT_LINEAGE.md",
+      "path": "./ARTIFACT_LINEAGE.md",
+      "exists": true,
+      "links": [
+        "N-REL-TYPES",
+        "N-CANON-LIFECYCLE"
+      ]
+    },
+    {
+      "id": "N-CANON-LIFECYCLE",
+      "type": "Governance",
+      "title": "./CANON_LIFECYCLE.md",
+      "path": "./CANON_LIFECYCLE.md",
+      "exists": true,
+      "links": [
+        "N-CANON-BOUNDARY",
+        "N-QUALITY"
+      ]
+    },
+    {
+      "id": "N-CANON-BOUNDARY",
+      "type": "Governance",
+      "title": "./CANON_BOUNDARY.md",
+      "path": "./CANON_BOUNDARY.md",
+      "exists": true,
+      "links": [
+        "N-CANON-LIFECYCLE",
+        "N-MISSION"
+      ]
+    },
+    {
+      "id": "N-QUALITY",
+      "type": "Validation",
+      "title": "./QUALITY_GATES.md",
+      "path": "./QUALITY_GATES.md",
+      "exists": true,
+      "links": [
+        "N-VALIDATION",
+        "N-WEEKLY"
+      ]
+    },
+    {
+      "id": "N-VALIDATION",
+      "type": "Validation",
+      "title": "./VALIDATION_PLAYBOOK.md",
+      "path": "./VALIDATION_PLAYBOOK.md",
+      "exists": true,
+      "links": [
+        "N-QUALITY",
+        "N-GPTDREAM-SURFACE"
+      ]
+    },
+    {
+      "id": "N-WEEKLY",
+      "type": "Governance",
+      "title": "./WEEKLY_DELTA_DIGEST_TEMPLATE.md",
+      "path": "./WEEKLY_DELTA_DIGEST_TEMPLATE.md",
+      "exists": true,
+      "links": [
+        "N-QUEST",
+        "N-MISSION"
+      ]
+    },
+    {
+      "id": "N-GPTDREAM-SURFACE",
+      "type": "Protocol",
+      "title": "../archive/spec/gptdream/README.md",
+      "path": "../archive/spec/gptdream/README.md",
+      "exists": true,
+      "links": [
+        "N-SCHEMAS",
+        "N-REFERENCE",
+        "N-TESTS"
+      ]
+    },
+    {
+      "id": "N-SCHEMAS",
+      "type": "Protocol",
+      "title": "../schemas/README.md",
+      "path": "../schemas/README.md",
+      "exists": true,
+      "links": [
+        "N-GPTDREAM-SURFACE",
+        "N-REFERENCE"
+      ]
+    },
+    {
+      "id": "N-REFERENCE",
+      "type": "Protocol",
+      "title": "../reference_impl/README.md",
+      "path": "../reference_impl/README.md",
+      "exists": true,
+      "links": [
+        "N-GPTDREAM-SURFACE",
+        "N-TESTS"
+      ]
+    },
+    {
+      "id": "N-TESTS",
+      "type": "Validation",
+      "title": "../tests/README.md",
+      "path": "../tests/README.md",
+      "exists": true,
+      "links": [
+        "N-REFERENCE",
+        "N-VALIDATION"
+      ]
+    },
+    {
+      "id": "N-MISSION",
+      "type": "Governance",
+      "title": "../governance/MISSION_CONTROL_CADENCE.md",
+      "path": "../governance/MISSION_CONTROL_CADENCE.md",
+      "exists": true,
+      "links": [
+        "N-WEEKLY",
+        "N-TOP50"
+      ]
+    }
+  ]
+}
