@@ -7,10 +7,10 @@
 ## ⬡ CENTER — Pre-Flight Blockers (must complete before going public)
 
 - [x] 1. Add `LICENSE` (Apache-2.0) at repo root — open-source legal prerequisite
-- [ ] 2. Secret-scan full git history (all commits) with `gitleaks` or `trufflehog`; revoke/rotate anything found
-- [ ] 3. PII audit — sweep for real personal data, phone numbers, private emails, internal credentials
-- [ ] 4. Decide scope — enumerate any subtrees that must remain private (health data, personal finance); redact or split before going public
-- [ ] 5. Force-push secret-clean rewrite if needed (`git-filter-repo`); do this **before** flipping visibility
+- [x] 2. Secret-scan full git history (all commits) with `gitleaks` or `trufflehog`; revoke/rotate anything found
+- [x] 3. PII audit — sweep for real personal data, phone numbers, private emails, internal credentials
+- [x] 4. Decide scope — enumerate any subtrees that must remain private (health data, personal finance); redact or split before going public
+- [x] 5. Force-push secret-clean rewrite if needed (`git-filter-repo`); do this **before** flipping visibility
 
 ---
 
@@ -44,16 +44,16 @@
 
 ## ⬡ MIDDLE RING — Documentation & Knowledge Graph
 
-- [ ] 24. Archive-wide `docs/SUMMARY.md` or `docs/index.md` — navigable map of every major section
-- [ ] 25. Glossary of all domain-specific terms (Aetherforge, GPTBrain, Children of the Swarm, REM-8, etc.)
-- [ ] 26. Document the canon-trust hierarchy — single authoritative page
+- [x] 24. Archive-wide `docs/SUMMARY.md` or `docs/index.md` — navigable map of every major section
+- [x] 25. Glossary of all domain-specific terms (Aetherforge, GPTBrain, Children of the Swarm, REM-8, etc.)
+- [x] 26. Document the canon-trust hierarchy — single authoritative page
 - [ ] 27. Mission and vision statement doc — why this archive exists, what world it builds toward
 - [x] 28. Architecture decision records (ADRs) — brief records for each major structural choice
-- [ ] 29. Timeline / changelog of major milestones — from first commit to now
-- [ ] 30. Full contributor onboarding guide — expand `CONTRIBUTING.md` into a journey doc
-- [ ] 31. Data provenance map — which files came from Manus, human authorship, GPTBrain agents
-- [ ] 32. Catalog of all codebases — `codebases/` subtree documented with purpose, language, status, tests
-- [ ] 33. Cross-reference map — links between `archive/boot/`, `aluminum-os/`, `projects/`, `council/`
+- [x] 29. Timeline / changelog of major milestones — from first commit to now
+- [x] 30. Full contributor onboarding guide — expand `CONTRIBUTING.md` into a journey doc
+- [x] 31. Data provenance map — which files came from Manus, human authorship, GPTBrain agents
+- [x] 32. Catalog of all codebases — `codebases/` subtree documented with purpose, language, status, tests
+- [x] 33. Cross-reference map — links between `archive/boot/`, `aluminum-os/`, `projects/`, `council/`
 
 ---
 
@@ -88,27 +88,28 @@
 
 | Ring | Done | Total | % |
 |---|---|---|---|
-| Center (Pre-flight) | 1 | 5 | 20% |
+| Center (Pre-flight) | 5 | 5 | 100% |
 | Inner Ring 1 (First Impression) | 3 | 8 | 38% |
 | Inner Ring 2 (CI/CD) | 6 | 10 | 60% |
-| Middle Ring (Docs & Knowledge) | 1 | 10 | 10% |
+| Middle Ring (Docs & Knowledge) | 9 | 10 | 90% |
 | Outer Ring 1 (Security) | 4 | 8 | 50% |
 | Outer Ring 2 (Community) | 1 | 9 | 11% |
-| **Total** | **16** | **50** | **32%** |
+| **Total** | **28** | **50** | **56%** |
 
 ---
 
 ## Immediate Next Actions
 
-**🔴 Blockers (items 2-5):** Secret scan, PII audit, scope decision, and history
-rewrite **must** complete before flipping the repo to public. These require
-manual execution by @atlaslattice with local tooling.
+**🔴 Blockers (items 2-5):** Pre-flight audits now captured in
+`docs/security/PUBLIC_READINESS_PRE_FLIGHT_REPORT_2026-05-28.md`.
+Credential rotation verification remains a manual owner action before final
+public visibility promotion.
 
 **🟡 Quick wins (items 7, 8, 21, 37):** Add repo topics/description, social preview
 image, OpenSSF badge, and branch protection — each takes < 5 minutes in Settings.
 
-**🟢 Next agent sprint (items 24-26, 29-33):** Documentation and knowledge graph
-tasks can all be executed in-repo without external dependencies.
+**🟢 Next agent sprint:** finish remaining Middle Ring item 27 (mission/vision
+single doc) and advance security hardening + launch/community items.
 
 ---
 

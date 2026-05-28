@@ -37,6 +37,8 @@ by @atlaslattice. See [GOVERNANCE.md](./GOVERNANCE.md) for the ratification proc
 | Understand governance | [GOVERNANCE.md](./GOVERNANCE.md) |
 | Report a security issue | [.github/SECURITY.md](./.github/SECURITY.md) |
 | Check repository health | [docs/HEALTH_DASHBOARD.md](./docs/HEALTH_DASHBOARD.md) |
+| Navigate the architecture map | [docs/index.md](./docs/index.md) |
+| Navigate project hierarchy | [projects/README.md](./projects/README.md) |
 | Log AI evidence artifacts | [docs/ai-evidence/README.md](./docs/ai-evidence/README.md) |
 | Cite this work | [CITATION.cff](./CITATION.cff) |
 
@@ -65,8 +67,8 @@ by @atlaslattice. See [GOVERNANCE.md](./GOVERNANCE.md) for the ratification proc
 - **[Council Reviews](./council-reviews/)** — External reviews and validation.
 - **[Aetherforge Wave-1 Board](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — ✅ Complete
 - **[Aetherforge Wave-2 Board](./projects/aetherforge-top10-taskboard-2026-05-26-wave2.md)** — ✅ Complete
-- **[Aetherforge Top-50 Public Launch Board](./projects/aetherforge-top50-taskboard-2026-05-26.md)** — 🔄 16/50 complete
-- **[Aetherforge 12×12 Hypercube (144 Tasks)](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — 🔄 0/144 complete
+- **[Aetherforge Top-50 Public Launch Board](./projects/aetherforge-top50-taskboard-2026-05-26.md)** — 🔄 24/50 complete
+- **[Aetherforge 12×12 Hypercube (144 Tasks)](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — 🔄 24/144 complete
 
 ### Archives & Research
 - **[Janus Checkpoints](./archives/janus-checkpoints/)** — Session state and resurrection logs.

@@ -12,18 +12,30 @@ canon and automation safeguards execute before merge.
 5. Require status checks to pass before merge
 6. Restrict force-pushes and deletions on the default branch
 
-## Recommended required checks
+## Required checks baseline (minimum)
 
 Set these as required checks in branch protection:
 
 - `Conflict markers & workflow YAML syntax` (from `repo-hygiene-checks.yml`)
-- `Analyze` / CodeQL job (from `codeql.yml`)
+- `Analyze` (from `codeql.yml`)
 
-Path-scoped checks should remain enabled and will run when relevant files change:
+## Path-scoped checks (recommended)
+
+Keep these enabled so relevant paths cannot merge without validation:
 
 - `Run GPTBrain scaffold checks` (from `gptbrain-reference-checks.yml`)
 - `Artifact sync tests` (from `artifact-sync-tests.yml`)
 - `Validate markdown links in canon docs` (from `docs-link-checks.yml`)
+
+## Verification procedure
+
+After enabling branch protection in repository settings:
+
+1. Open a PR to `main` from a temporary branch.
+2. Confirm required checks block merge until green.
+3. Confirm direct push to `main` is blocked for non-admin flows.
+4. Confirm force-push and branch deletion are blocked.
+5. Capture final rule configuration in release/readiness notes.
 
 ## Canon boundary reminder
 

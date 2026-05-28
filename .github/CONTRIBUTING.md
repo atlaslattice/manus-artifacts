@@ -42,6 +42,8 @@ print("All workflow files are valid YAML.")
 EOF
 ```
 
+For a full onboarding path, see: [`docs/contributor-onboarding-journey.md`](../docs/contributor-onboarding-journey.md)
+
 ## Pull Request Checklist
 
 - [ ] No merge-conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) in committed files

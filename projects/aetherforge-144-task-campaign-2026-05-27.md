@@ -19,9 +19,9 @@ Target: make `atlaslattice/manus-artifacts` fully public, provenance-first, and 
 
 ## Axis 02 — Public Readiness & Security (13-24)
 
-- [ ] 13. Run full-history secret scan.
-- [ ] 14. Run full-history PII scan.
-- [ ] 15. Create redact/remove decision matrix.
+- [x] 13. Run full-history secret scan.
+- [x] 14. Run full-history PII scan.
+- [x] 15. Create redact/remove decision matrix.
 - [ ] 16. Create incident response runbook for leaks.
 - [ ] 17. Enforce branch protection on main.
 - [ ] 18. Enforce required reviews and checks.
@@ -30,21 +30,21 @@ Target: make `atlaslattice/manus-artifacts` fully public, provenance-first, and 
 - [ ] 21. Add license compliance scan policy.
 - [ ] 22. Add artifact integrity checksum policy.
 - [ ] 23. Add threat model for repo publication.
-- [ ] 24. Add public-readiness gate checklist.
+- [x] 24. Add public-readiness gate checklist.
 
 ## Axis 03 — Repository Information Architecture (25-36)
 
-- [ ] 25. Build top-level map of every subtree.
+- [x] 25. Build top-level map of every subtree.
 - [ ] 26. Standardize README schema for all folders.
-- [ ] 27. Add cross-link graph between major domains.
-- [ ] 28. Add “start here” entrypoint for new readers.
-- [ ] 29. Add archive section ownership map.
-- [ ] 30. Add naming convention standard.
-- [ ] 31. Add file lifecycle statuses.
-- [ ] 32. Add deprecation/retirement policy.
-- [ ] 33. Add directory-level maturity labels.
-- [ ] 34. Add canonical navigation index page.
-- [ ] 35. Add path-level purpose registry.
+- [x] 27. Add cross-link graph between major domains.
+- [x] 28. Add “start here” entrypoint for new readers.
+- [x] 29. Add archive section ownership map.
+- [x] 30. Add naming convention standard.
+- [x] 31. Add file lifecycle statuses.
+- [x] 32. Add deprecation/retirement policy.
+- [x] 33. Add directory-level maturity labels.
+- [x] 34. Add canonical navigation index page.
+- [x] 35. Add path-level purpose registry.
 - [ ] 36. Add structure lint rules for docs layout.
 
 ## Axis 04 — Metadata & Indexing (37-48)
