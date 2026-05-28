@@ -10,7 +10,7 @@ status: candidate
 
 ## 📊 Progress
 
-**108 / 144 complete** as of 2026-05-28
+**120 / 144 complete** as of 2026-05-28
 
 ---
 
@@ -151,18 +151,18 @@ status: candidate
 
 ## Face 10 — Developer Experience
 
-- [ ] **#109** Deliver one-command bootstrap
-- [ ] **#110** Map contributor journey
-- [ ] **#111** Build “first issue” fast lane
-- [ ] **#112** Standardize templates set
-- [ ] **#113** Automate issue/PR triage labeling
-- [ ] **#114** Improve local dev environment docs
-- [ ] **#115** Index architecture decisions
-- [ ] **#116** Publish mentorship playbook
-- [ ] **#117** Define office-hours protocol
-- [ ] **#118** Add welcome automation
-- [ ] **#119** Launch contributor recognition loop
-- [ ] **#120** Measure onboarding success
+- [x] **#109** Deliver one-command bootstrap
+- [x] **#110** Map contributor journey
+- [x] **#111** Build "first issue" fast lane
+- [x] **#112** Standardize templates set
+- [x] **#113** Automate issue/PR triage labeling
+- [x] **#114** Improve local dev environment docs
+- [x] **#115** Index architecture decisions
+- [x] **#116** Publish mentorship playbook
+- [x] **#117** Define office-hours protocol
+- [x] **#118** Add welcome automation
+- [x] **#119** Launch contributor recognition loop
+- [x] **#120** Measure onboarding success
 
 ## Face 11 — Community & Ecosystem
 
