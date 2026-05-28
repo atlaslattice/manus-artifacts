@@ -1,21 +1,21 @@
 {
-  "generated_at_utc": "2026-05-28T17:36:15Z",
+  "generated_at_utc": "2026-05-28T18:42:53Z",
   "repository_health": {
-    "docs_markdown_files": 46,
-    "governance_markdown_files": 17,
-    "project_markdown_files": 5
+    "docs_markdown_files": 56,
+    "governance_markdown_files": 27,
+    "project_markdown_files": 6
   },
   "top50_execution": {
     "ring_iii": {
-      "done": 9,
+      "done": 10,
       "total": 10
     },
     "ring_iv": {
-      "done": 3,
+      "done": 10,
       "total": 10
     },
     "ring_v": {
-      "done": 2,
+      "done": 10,
       "total": 10
     }
   },
