@@ -67,6 +67,20 @@ This log records practical non-canon infrastructure changes made to the simulati
 - Added repo-side compact manifest `children_swarm_original_deduped_lattice_v0_2.json`.
 - Added repo-side handoff document `CHILDREN_SWARM_ORIGINAL_DEDUPED_LATTICE_v0_2.md`.
 
+### Executed Children of the Swarm graph follow-through
+
+- Commented receipt update on GitHub issue #188 instead of duplicating the existing lattice knowledge graph build board.
+- Opened issue #215 for the Children Swarm derived-lattice graph exporter.
+- Opened issue #216 for derived-lattice validation tests in CI.
+- Added `children_swarm_graph_export.py`.
+- Exporter deterministically expands the v0.2 compact manifest into KG nodes and edges.
+- Exporter emits project, raw workbook, derived lattice, swarm node, source surface, derived task, and boundary nodes.
+- Exporter emits contains, source_for, constrains, belongs_to_node, belongs_to_surface, and compresses_raw_rows edges.
+- Added pytest coverage for derived-lattice manifest integrity and graph export integrity.
+- Added CLI coverage for `children_swarm_graph_export.py --json`.
+- Updated `.github/workflows/aetherforge-simulation.yml` to export and inspect `children-swarm-graph.generated.json`.
+- CI now asserts 12 swarm nodes, 12 source surfaces, 144 derived tasks, and 1,728 raw rows covered.
+
 ## Operating rule
 
 Every future change should leave a receipt: what changed, what it maps to, how it is validated, and which boundary it respects.
