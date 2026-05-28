@@ -1,0 +1,57 @@
+{
+  "schema_version": "children_swarm.original_deduped_lattice.v0_2",
+  "source_raw_file": "children_of_the_swarm_12x12_execution_management_matrix_candidate_v0_1(4).xlsx",
+  "boundary": {
+    "raw_logs_unchanged": true,
+    "canon_adjustments": false,
+    "deployment_claims": false,
+    "authority_claims": false,
+    "mode": "separate derived version after raw logs"
+  },
+  "dimensions": {
+    "nodes": 12,
+    "source_surfaces": 12,
+    "derived_tasks": 144,
+    "raw_rows_covered": 1728,
+    "raw_rows_per_derived_task": 12
+  },
+  "uniqueness": {
+    "derived_task_ids": 144,
+    "unique_derived_titles": 144,
+    "duplicate_titles": 0
+  },
+  "node_order": [
+    "Ledgerwake",
+    "Hashlight",
+    "KairoBrain",
+    "Tidelock",
+    "Rootglass",
+    "Forgekid",
+    "Domechild",
+    "GammaSprite",
+    "NotionMoth",
+    "GitShelf",
+    "ClaudeCatcher",
+    "JoySignal"
+  ],
+  "source_surfaces": [
+    "Notion",
+    "Drive",
+    "GitHub",
+    "Gamma",
+    "Chat",
+    "External Web",
+    "Planetarium",
+    "Sheldonbrain",
+    "Aetherforge",
+    "Human-Root",
+    "Automation",
+    "Risk / Safety"
+  ],
+  "derived_task_contract": {
+    "task_id_pattern": "ORIG-NN-SS",
+    "each_task_maps_to": "one swarm node x one source surface",
+    "each_task_compresses_raw_rows": 12,
+    "derived_language_rule": "original task language only; do not copy raw row titles"
+  }
+}
