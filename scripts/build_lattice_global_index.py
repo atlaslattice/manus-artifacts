@@ -9,6 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 NODE_INDEX = ROOT / "docs" / "LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md"
 OUTPUT = ROOT / "docs" / "generated" / "LATTICE_GLOBAL_INDEX.json"
+ADJ_OUTPUT = ROOT / "docs" / "generated" / "KG_ADJACENCY_MATRIX.json"
 ROW_RE = re.compile(r"^\|\s*(N-[^|]+?)\s*\|\s*([^|]+?)\s*\|\s*\[(.*?)\]\((.*?)\)\s*\|\s*(.*?)\s*\|$")
 
 
@@ -69,7 +70,12 @@ def main() -> int:
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+
+    adjacency = {node["id"]: node["links"] for node in nodes}
+    ADJ_OUTPUT.write_text(json.dumps({"status": "Candidate", "adjacency": adjacency}, indent=2) + "\n", encoding="utf-8")
+
     print(f"wrote {OUTPUT.relative_to(ROOT)}")
+    print(f"wrote {ADJ_OUTPUT.relative_to(ROOT)}")
     return 0
 
 

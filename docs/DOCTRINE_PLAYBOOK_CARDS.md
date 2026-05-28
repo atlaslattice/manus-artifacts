@@ -33,3 +33,8 @@ Five one-page doctrine cards for operations and onboarding.
 
 - [DOCTRINE_MAP.md](./DOCTRINE_MAP.md)
 - [../governance/MISSION_CONTROL_CADENCE.md](../governance/MISSION_CONTROL_CADENCE.md)
+
+## Sources
+
+- Source: [DOCTRINE_MAP.md](./DOCTRINE_MAP.md)
+- Source: [../governance/PROVENANCE_EVIDENCE_TIERING_MODEL.md](../governance/PROVENANCE_EVIDENCE_TIERING_MODEL.md)

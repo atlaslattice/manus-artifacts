@@ -1,0 +1,237 @@
+{
+  "status": "Candidate",
+  "average_score": 100.0,
+  "node_scores": [
+    {
+      "id": "N-README",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-ROADMAP",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-START",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-TOP50",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-TOP10",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-QUEST",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-KG-POLICY",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-REL-TYPES",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-MAP",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-TAXONOMY",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-LINEAGE",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-CANON-LIFECYCLE",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-CANON-BOUNDARY",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-QUALITY",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-VALIDATION",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-WEEKLY",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-GPTDREAM-SURFACE",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-SCHEMAS",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-REFERENCE",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-TESTS",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-MISSION",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    }
+  ]
+}

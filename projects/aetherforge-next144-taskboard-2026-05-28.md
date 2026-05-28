@@ -8,7 +8,8 @@ Campaign board for the Next-144 sequence.
 
 - Wave 1 (tasks 1-12): implemented
 - Wave 2 (tasks 13-24): implemented
-- Wave 3-12 (tasks 25-144): queued
+- Wave 3 (tasks 25-36): implemented
+- Wave 4-12 (tasks 37-144): queued
 
 ## Tasks 1-24 execution receipts
 
@@ -38,3 +39,20 @@ Campaign board for the Next-144 sequence.
 | 22 | ../docs/canon-candidate-register.md |
 | 23 | ../governance/CANON_PROMOTION_CEREMONY_SOP.md |
 | 24 | ../governance/CANON_REVOCATION_PROCESS.md |
+
+## Tasks 25-36 execution receipts
+
+| Task | Artifact |
+| --- | --- |
+| 25 | ../scripts/kg_node_batch_importer.py |
+| 26 | ../scripts/kg_mermaid_autogen.py |
+| 27 | ../docs/PUBLIC_ARCHIVE_MAP_v2.md |
+| 28 | ../docs/KG_DOMAIN_SUBGRAPHS.md (Systems section) |
+| 29 | ../docs/KG_DOMAIN_SUBGRAPHS.md (Governance section) |
+| 30 | ../docs/KG_DOMAIN_SUBGRAPHS.md (GPTDream++ section) |
+| 31 | ../docs/KG_DOMAIN_SUBGRAPHS.md (TIDELOCKBrain section) |
+| 32 | ../scripts/kg_bidirectional_audit.py |
+| 33 | ../scripts/kg_node_quality_scorer.py |
+| 34 | ../scripts/kg_dangling_ref_detector.py |
+| 35 | ../docs/generated/KG_ADJACENCY_MATRIX.json |
+| 36 | ../docs/KG_TOPOLOGY_GUIDE.md |

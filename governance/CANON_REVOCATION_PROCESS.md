@@ -22,3 +22,8 @@ At least one of:
 1. Publish revocation notice with reason and affected artifacts.
 2. Update register status and link superseding candidate.
 3. Route remediation through weekly mission-control and quarterly review.
+
+## Sources
+
+- Source: [COUNCIL_REVIEW_WORKFLOW.md](./COUNCIL_REVIEW_WORKFLOW.md)
+- Source: [PROVENANCE_REQUIREMENTS.md](./PROVENANCE_REQUIREMENTS.md)

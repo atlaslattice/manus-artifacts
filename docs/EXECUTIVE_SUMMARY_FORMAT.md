@@ -24,3 +24,8 @@ One-pager standard format for flagship artifacts.
 
 - [EXECUTIVE_SUMMARIES.md](./EXECUTIVE_SUMMARIES.md)
 - [CANON_BOUNDARY.md](./CANON_BOUNDARY.md)
+
+## Citations
+
+- Citations: [EXECUTIVE_SUMMARIES.md](./EXECUTIVE_SUMMARIES.md)
+- Citations: [CANON_BOUNDARY.md](./CANON_BOUNDARY.md)

@@ -15,3 +15,8 @@ Defines P0-P3 governance incident levels and runbook routing.
 
 - Any missing canon-trust fields on promoted artifacts is at least P1.
 - Repeated SLA misses on governance-critical docs escalate one level.
+
+## Evidence reviewed
+
+- Evidence reviewed: [INCIDENT_RESPONSE_RUNBOOK.md](./INCIDENT_RESPONSE_RUNBOOK.md)
+- Evidence reviewed: [GOVERNANCE_RISK_HEATMAP_THRESHOLDS.md](./GOVERNANCE_RISK_HEATMAP_THRESHOLDS.md)

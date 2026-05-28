@@ -19,3 +19,8 @@ Nine scenario cards for governance resilience rehearsals.
 ## Required capture per scenario
 
 Record trigger, participants, expected response path, and remediation receipt.
+
+## Citations
+
+- Citations: [GOVERNANCE_FIRE_DRILLS.md](./GOVERNANCE_FIRE_DRILLS.md)
+- Citations: [SUCCESSION_STEWARDSHIP.md](./SUCCESSION_STEWARDSHIP.md)

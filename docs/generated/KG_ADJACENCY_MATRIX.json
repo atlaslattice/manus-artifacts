@@ -1,0 +1,95 @@
+{
+  "status": "Candidate",
+  "adjacency": {
+    "N-README": [
+      "N-ROADMAP",
+      "N-TOP50",
+      "N-START"
+    ],
+    "N-ROADMAP": [
+      "N-TOP50",
+      "N-QUEST",
+      "N-MISSION"
+    ],
+    "N-START": [
+      "N-KG-POLICY",
+      "N-MAP",
+      "N-QUEST"
+    ],
+    "N-TOP50": [
+      "N-TOP10",
+      "N-QUEST",
+      "N-QUALITY"
+    ],
+    "N-TOP10": [
+      "N-TOP50",
+      "N-QUALITY"
+    ],
+    "N-QUEST": [
+      "N-TOP50",
+      "N-WEEKLY",
+      "N-QUALITY"
+    ],
+    "N-KG-POLICY": [
+      "N-MAP",
+      "N-REL-TYPES"
+    ],
+    "N-REL-TYPES": [
+      "N-LINEAGE",
+      "N-KG-POLICY"
+    ],
+    "N-MAP": [
+      "N-TAXONOMY",
+      "N-KG-POLICY"
+    ],
+    "N-TAXONOMY": [
+      "N-MAP",
+      "N-START"
+    ],
+    "N-LINEAGE": [
+      "N-REL-TYPES",
+      "N-CANON-LIFECYCLE"
+    ],
+    "N-CANON-LIFECYCLE": [
+      "N-CANON-BOUNDARY",
+      "N-QUALITY"
+    ],
+    "N-CANON-BOUNDARY": [
+      "N-CANON-LIFECYCLE",
+      "N-MISSION"
+    ],
+    "N-QUALITY": [
+      "N-VALIDATION",
+      "N-WEEKLY"
+    ],
+    "N-VALIDATION": [
+      "N-QUALITY",
+      "N-GPTDREAM-SURFACE"
+    ],
+    "N-WEEKLY": [
+      "N-QUEST",
+      "N-MISSION"
+    ],
+    "N-GPTDREAM-SURFACE": [
+      "N-SCHEMAS",
+      "N-REFERENCE",
+      "N-TESTS"
+    ],
+    "N-SCHEMAS": [
+      "N-GPTDREAM-SURFACE",
+      "N-REFERENCE"
+    ],
+    "N-REFERENCE": [
+      "N-GPTDREAM-SURFACE",
+      "N-TESTS"
+    ],
+    "N-TESTS": [
+      "N-REFERENCE",
+      "N-VALIDATION"
+    ],
+    "N-MISSION": [
+      "N-WEEKLY",
+      "N-TOP50"
+    ]
+  }
+}

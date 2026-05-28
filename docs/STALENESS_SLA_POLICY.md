@@ -31,3 +31,8 @@ Defines severity, service-level targets, and escalation triggers for stale artif
 
 - [QUALITY_GATES.md](./QUALITY_GATES.md)
 - [../governance/INCIDENT_RESPONSE_RUNBOOK.md](../governance/INCIDENT_RESPONSE_RUNBOOK.md)
+
+## Evidence reviewed
+
+- Evidence reviewed: [QUALITY_GATES.md](./QUALITY_GATES.md)
+- Evidence reviewed: [../governance/INCIDENT_RESPONSE_RUNBOOK.md](../governance/INCIDENT_RESPONSE_RUNBOOK.md)
