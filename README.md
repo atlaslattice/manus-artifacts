@@ -47,6 +47,9 @@ graph TD
 - **[Aetherforge Top-10 Taskboard](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — Task valuation, bounty/trophy model, and deployed solution map.
 - **[Aetherforge Game World (Module 8)](./projects/aetherforge-game-world/README.md)** — Quest taxonomy, Archive Bowl index, Omnispec candidate framing, and onboarding template.
 - **[Aetherforge Top-100 Quest Ledger](./projects/aetherforge-game-world/AETHERFORGE_TOP100_QUEST_LEDGER_v0.1.md)** — Optimal next-100 tasks across all repo components in Metatron's Cube ring topology.
+- **[Aetherforge 144-Task Campaign (2026-05-28)](./projects/aetherforge-144-task-campaign-2026-05-28.md)** — 12 waves of 12 tasks sequenced for world-class execution.
+- **[Aetherforge Top-10 Sprint Board (2026-05-28)](./projects/aetherforge-top10-taskboard-2026-05-28.md)** — Current top-10 unblocked sprint execution list.
+- **[Projects Board Hierarchy](./projects/README.md)** — Routing map linking 144→100→50→10 boards and project lanes.
 
 ### Governance & Council
 - **[Council](./council/)** — Trinity and Pantheon Council session archives.
