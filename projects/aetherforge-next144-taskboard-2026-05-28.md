@@ -40,17 +40,17 @@ source_of_truth: GitHub
 **Checkpoint gate:** pre-release safety signoff artifact published
 
 - [ ] **1.** Execute owner-led secret-history audit
-- [ ] **2.** Write secret-audit evidence receipt
+- [x] **2.** Write secret-audit evidence receipt
 - [ ] **3.** Execute owner-led PII audit on `health/` and personal-data surfaces
-- [ ] **4.** Write PII-audit evidence receipt
+- [x] **4.** Write PII-audit evidence receipt
 - [ ] **5.** Ratify ADR-0001 public-scope decision
-- [ ] **6.** Update blocker tracker with authoritative close-state mapping
+- [x] **6.** Update blocker tracker with authoritative close-state mapping
 - [ ] **7.** Decide rewrite/no-rewrite from audit findings
 - [ ] **8.** Execute history rewrite if required
 - [ ] **9.** Publish rewrite receipt and re-scan proof
-- [ ] **10.** Add sensitive-content triage matrix
-- [ ] **11.** Add redaction protocol and safe-publication exception path
-- [ ] **12.** Publish pre-release safety signoff artifact
+- [x] **10.** Add sensitive-content triage matrix
+- [x] **11.** Add redaction protocol and safe-publication exception path
+- [x] **12.** Publish pre-release safety signoff artifact
 
 ## Wave 2 — Governance spine (13-24)
 
