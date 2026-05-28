@@ -10,7 +10,7 @@ status: candidate
 
 ## 📊 Progress
 
-**60 / 144 complete** as of 2026-05-28
+**72 / 144 complete** as of 2026-05-28
 
 ---
 
@@ -91,18 +91,18 @@ status: candidate
 
 ## Face 06 — CI/CD & Automation
 
-- [ ] **#61** Harden repo hygiene workflow
+- [x] **#61** Harden repo hygiene workflow
 - [x] **#62** Add markdown lint workflow
-- [ ] **#63** Add metadata completeness checks
-- [ ] **#64** Enforce link integrity checks
-- [ ] **#65** Add duplicate-doc detection in CI
-- [ ] **#66** Add schema validation in CI
-- [ ] **#67** Create docs preview builds
-- [ ] **#68** Schedule drift detection scans
-- [ ] **#69** Pin and audit action versions
-- [ ] **#70** Tune Dependabot policies
-- [ ] **#71** Track workflow runtime metrics
-- [ ] **#72** Define fail-fast/retry standards
+- [x] **#63** Add metadata completeness checks
+- [x] **#64** Enforce link integrity checks
+- [x] **#65** Add duplicate-doc detection in CI
+- [x] **#66** Add schema validation in CI
+- [x] **#67** Create docs preview builds
+- [x] **#68** Schedule drift detection scans
+- [x] **#69** Pin and audit action versions
+- [x] **#70** Tune Dependabot policies
+- [x] **#71** Track workflow runtime metrics
+- [x] **#72** Define fail-fast/retry standards
 
 ## Face 07 — Security & Supply Chain
 

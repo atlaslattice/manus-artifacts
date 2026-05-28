@@ -15,7 +15,19 @@ status: candidate
 - Wave 3 Repository Architecture Pack: navigation standards, breadcrumb standards, index of indexes, archive taxonomy map, file placement decision tree, duplicate docs triage, stale artifact quarantine lane, canonical path map, role-based landing paths (#25–#36)
 - Wave 2 Legal/Trust Pack: license audit, attribution inventory, trademark guide, PII redaction rubric, sensitive content review process, export control checklist, data retention policy, vulnerability disclosure process, incident response runbook, compliance evidence index, public risk register, quarterly audit template (#13–#24)
 - Wave 1 Governance Completion: section ownership map, review SLA policy, council review cadence, change classification rules, deprecation policy, governance onboarding guide (#4–#12)
-- Wave 5 Knowledge Graph Pack (tasks #50–#60): 10 new KG governance/spec artifacts completing the KG Layer wave
+- Wave 6 CI/CD Pack (tasks #61–#72): 11 new CI/CD governance artifacts completing the CI/CD & Automation wave
+  - `archive/governance/REPO_HYGIENE_WORKFLOW_POLICY.md` — hygiene checks and cadence (#61)
+  - `archive/governance/METADATA_COMPLETENESS_CHECK_POLICY.md` — required frontmatter fields (#63)
+  - `archive/governance/LINK_INTEGRITY_CHECK_POLICY.md` — broken link detection (#64)
+  - `archive/governance/DUPLICATE_DOC_DETECTION_CI_POLICY.md` — similarity-based duplicate finder (#65)
+  - `archive/governance/SCHEMA_VALIDATION_CI_POLICY.md` — JSON Schema meta-validation (#66)
+  - `archive/governance/DOCS_PREVIEW_BUILDS_POLICY.md` — PR preview build phases (#67)
+  - `archive/governance/DRIFT_DETECTION_SCAN_POLICY.md` — weekly scheduled drift scans (#68)
+  - `archive/governance/GITHUB_ACTIONS_VERSION_PINNING_POLICY.md` — SHA pinning rules (#69)
+  - `archive/governance/DEPENDABOT_POLICY.md` — auto-merge and review rules (#70)
+  - `archive/governance/WORKFLOW_RUNTIME_METRICS_POLICY.md` — P50/P95 runtime targets (#71)
+  - `archive/governance/FAIL_FAST_RETRY_STANDARDS.md` — fail-fast and retry rules (#72)
+- Wave 5 Knowledge Graph Pack (tasks #50–#60): 10 new KG governance/spec artifacts
   - `archive/governance/PERSISTENT_ARTIFACT_ID_STANDARD.md` — artifact ID scheme (#50)
   - `archive/governance/CROSSLINK_DENSITY_TARGETS.md` — min link requirements (#51)
   - `archive/governance/ONTOLOGY_RELATION_TYPES.md` — 14 typed KG relations (#52)
