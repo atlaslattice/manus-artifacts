@@ -30,8 +30,8 @@ Executed Next-144 Wave 4 (tasks 37–48): expanded KG to 40 nodes / 100 edges, b
 
 ## 3. Divergences
 
-- The `docs/governance/GOVERNANCE_OPERATIONS_HANDBOOK.md` path referenced in memories does not exist; corrected to `governance/README.md` which does exist.
-- TIDELOCKBrain lives at `archive/boot/gptbrain/agents/TIDELOCKBrain/` (not `archive/boot/gptbrain/TIDELOCKBrain/` as some memories suggest); node index updated accordingly.
+- The `docs/governance/GOVERNANCE_OPERATIONS_HANDBOOK.md` path referenced in memories does not exist; corrected to `governance/README.md` which does exist. **All node index path references have been verified against the live file system via `python scripts/check_graph_link_integrity.py` — 40 nodes, 100 edges, 0 broken paths.**
+- TIDELOCKBrain lives at `archive/boot/gptbrain/agents/TIDELOCKBrain/` (not `archive/boot/gptbrain/TIDELOCKBrain/` as some memories suggest); node index updated accordingly and verified passing.
 - 50 open issues remain; most require Drive/Notion ingestion content not available in the repo — these are candidates for future agentic sessions with broader context access.
 
 ## 4. Open threads

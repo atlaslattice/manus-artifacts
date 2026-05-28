@@ -87,10 +87,10 @@ Game state snapshots are stored at:
   "xp_total": 1400,
   "rings_cleared": ["Wave 4"],
   "kg_nodes_added": ["N-SHELDON", "N-ALUMINUM", "N-BAZINGA", "N-COUNCIL", "N-GOV-INDEX", "N-RISK", "N-TIDELOCK", "N-GPTBRAIN", "N-SWARM", "N-CHILDREN-SWARM", "N-EVIDENCE", "N-KG-SUBGRAPHS", "N-NEXT144", "N-AETHER-GAME", "N-FREE-BANK", "N-CHINOOK", "N-RESEARCH", "N-HEALTH", "N-GOVERNANCE-OPS"],
-  "kg_edge_count_delta": 48,
+  "kg_edge_count_delta": 52,
   "lattice_health": {
     "node_count": 40,
-    "edge_density": 2.4,
+    "edge_density": 2.5,
     "orphan_ratio": 0.0
   },
   "provenance": {
