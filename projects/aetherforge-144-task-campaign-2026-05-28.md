@@ -37,9 +37,9 @@ CANON: NO (candidate execution plan)
 - [ ] W2-04 · `archive/knowledge_graph/ORCS_ROUTE_INDEX.seed.jsonl`
 - [ ] W2-05 · `archive/spec/orcs/ORCS_ROUTE_CLASS_TAXONOMY_v0_1.md`
 - [ ] W2-06 · `archive/spec/orcs/ORCS_SPEC_v0_1.md`
-- [ ] W2-07 · `scripts/build_lattice_global_index.py`
-- [ ] W2-08 · `.github/workflows/lattice-kg-quality-gates.yml`
-- [ ] W2-09 · `scripts/kg_query.py`
+- [x] W2-07 · `scripts/build_lattice_global_index.py`
+- [x] W2-08 · `.github/workflows/lattice-kg-quality-gates.yml`
+- [x] W2-09 · `scripts/kg_query.py`
 - [ ] W2-10 · root `CHANGELOG.md` milestone update
 - [ ] W2-11 · README Metatron topology diagram upgrade
 - [ ] W2-12 · Wave 2 REM artifact logged in `TIDELOCKBrain/`
