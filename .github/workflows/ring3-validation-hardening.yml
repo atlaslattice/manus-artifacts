@@ -28,7 +28,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Install dependencies
+      - name: Upgrade pip
         run: python -m pip install --upgrade pip
       - name: Validate artifact metadata on key surfaces
         run: python scripts/validate_artifact_metadata.py
@@ -40,7 +40,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Install dependencies
+      - name: Upgrade pip
         run: python -m pip install --upgrade pip
       - name: Validate markdown links on seed navigation files
         run: python scripts/check_markdown_links.py
@@ -52,7 +52,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Install dependencies
+      - name: Upgrade pip
         run: python -m pip install --upgrade pip
       - name: Detect orphaned critical artifacts
         run: python scripts/detect_orphaned_artifacts.py

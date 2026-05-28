@@ -28,7 +28,7 @@ for src in SOURCE_FILES:
     txt = src.read_text(encoding="utf-8")
     for raw in LINK_RE.findall(txt):
         link = raw.split("#", 1)[0].strip()
-        if not link or link.startswith("http://") or link.startswith("https://") or link.startswith("mailto:"):
+        if not link or link.startswith(("http://", "https://", "mailto:")):
             continue
         linked.add((src.parent / link).resolve())
 
