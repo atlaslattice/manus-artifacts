@@ -50,7 +50,7 @@ bash archive/boot/gptbrain/reference_impl/run_checks.sh
 ## Code of Conduct
 
 All contributors are expected to follow our
-[Code of Conduct](.github/CODE_OF_CONDUCT.md).
+[Code of Conduct](./CODE_OF_CONDUCT.md).
 
 ## License
 

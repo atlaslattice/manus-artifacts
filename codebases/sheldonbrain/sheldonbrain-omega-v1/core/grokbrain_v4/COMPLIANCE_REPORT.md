@@ -71,7 +71,7 @@ def auto_parse_exports(...):
 - JSON artifacts with complete traceability: ✓
 
 **Evidence:**
-- [artifacts.json](artifacts.json) - 4 structured artifacts
+- `artifacts.json` (artifact snapshot reference) - 4 structured artifacts
 - Test result: "Correctly extracted 3 separate pairs (not entire chat log)"
 
 **Sample Structure:**
@@ -114,7 +114,7 @@ def auto_parse_exports(...):
 - Optimization tracking: ✓
 
 **Evidence:**
-- [parsed/mars_terraforming.json](parsed/mars_terraforming.json) - Timeline with start/end timestamps
+- `parsed/mars_terraforming.json` (timeline example) - Timeline with start/end timestamps
 - 6 project aggregates with chronological ordering
 - All aggregates include mission reports and optimization notes
 
@@ -222,7 +222,7 @@ def auto_parse_exports(...):
 
 **Evidence:**
 - 5 god-specific files in `./parsed/by_god/`
-- Examples: [icarus.json](parsed/by_god/icarus.json), mercury.json, prometheus.json, hecate.json
+- Examples: `parsed/by_god/icarus.json`, mercury.json, prometheus.json, hecate.json
 
 ---
 
@@ -276,7 +276,7 @@ def auto_parse_exports(...):
 **Evidence:**
 - 6 files with timeline structures
 - All include `time_range` with start/end timestamps
-- Example: [mars_terraforming.json](parsed/mars_terraforming.json)
+- Example: `parsed/mars_terraforming.json`
 
 ```json
 {
@@ -366,8 +366,8 @@ def auto_parse_exports(...):
 - Sample artifacts contain correct redundancies
 
 **Evidence:**
-- [logs/test_results.json](logs/test_results.json)
-- [logs/twelve_step_validation.json](logs/twelve_step_validation.json)
+- `logs/test_results.json`
+- `logs/twelve_step_validation.json`
 
 ---
 
@@ -631,5 +631,5 @@ The system successfully implements:
 **Test Files:**
 - [test_suite.py](test_suite.py)
 - [twelve_step_validation.py](twelve_step_validation.py)
-- [logs/test_results.json](logs/test_results.json)
-- [logs/twelve_step_validation.json](logs/twelve_step_validation.json)
+- `logs/test_results.json`
+- `logs/twelve_step_validation.json`

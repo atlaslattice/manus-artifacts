@@ -45,6 +45,7 @@ Need vocabulary? → **[docs/GLOSSARY.md](./docs/GLOSSARY.md)**
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
 - **[Aetherforge Game World](./projects/aetherforge-game-world/README.md)** — Gameplay framing, Archive Bowl routing, and quest templates.
+- **[How to Play Aetherforge](./projects/aetherforge-game-world/HOW_TO_PLAY_AETHERFORGE.md)** — Player-facing onboarding for quest-based contribution.
 - **[Aetherforge Open-Source Execution Map](./projects/aetherforge-open-source-gift-execution-map-2026-05-27.md)** — Knowledge graph + game + GPTDream++ world-class execution framing.
 - **[GPTDream++ OpenAI Staging Package](./archive/aetherforge/gptdreampp-openai/README.md)** — Drive→GitHub promotion gate, review lane, and receipts-first staging.
 
@@ -70,6 +71,7 @@ Need vocabulary? → **[docs/GLOSSARY.md](./docs/GLOSSARY.md)**
 **[Aetherforge 12×12 Hypercube Campaign](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — 144-task public + world-class campaign board
 **[Aetherforge Top-50 Taskboard](./projects/aetherforge-top50-taskboard-2026-05-26.md)** — 11/50 complete
 - **[Aetherforge Game World Onboarding](./projects/aetherforge-game-world/README.md)** — Module 8 candidate layer
+- **[Aetherforge Wave 2–4 Execution Receipts](./projects/aetherforge-wave2-kg-connectivity-2026-05-28.md)** — KG connectivity, trust/provenance, and packaging wave artifacts
 
 ---
 

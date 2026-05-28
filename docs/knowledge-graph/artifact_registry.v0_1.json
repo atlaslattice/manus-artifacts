@@ -1,0 +1,116 @@
+{
+  "schema_version": "0.1",
+  "status": "candidate",
+  "generated_utc": "2026-05-28T00:00:00Z",
+  "description": "Repository artifact registry for core Aetherforge + GPTDream++ + TIDELOCK continuity assets.",
+  "artifacts": [
+    {
+      "artifact_id": "AL-KG-REG-0001",
+      "title": "Aetherforge 12x12 Hypercube Campaign",
+      "path": "projects/aetherforge-144-task-campaign-2026-05-27.md",
+      "artifact_type": "taskboard",
+      "canon_status": "candidate",
+      "tags": ["aetherforge", "campaign", "hypercube", "144-tasks"],
+      "links_to": ["AL-KG-WAVE-0002", "AL-KG-WAVE-0003", "AL-KG-WAVE-0004", "AL-KG-EDGE-0001"]
+    },
+    {
+      "artifact_id": "AL-KG-WAVE-0002",
+      "title": "Aetherforge Wave 2 — KG Connectivity",
+      "path": "projects/aetherforge-wave2-kg-connectivity-2026-05-28.md",
+      "artifact_type": "execution_wave",
+      "canon_status": "candidate",
+      "tags": ["wave2", "knowledge-graph", "connectivity"],
+      "links_to": ["AL-KG-REG-0001", "AL-KG-EDGE-0001"]
+    },
+    {
+      "artifact_id": "AL-KG-WAVE-0003",
+      "title": "Aetherforge Wave 3 — Trust and Provenance",
+      "path": "projects/aetherforge-wave3-trust-provenance-2026-05-28.md",
+      "artifact_type": "execution_wave",
+      "canon_status": "candidate",
+      "tags": ["wave3", "provenance", "ci", "trust"],
+      "links_to": ["AL-KG-REG-0001", "AL-KG-EDGE-0001"]
+    },
+    {
+      "artifact_id": "AL-KG-WAVE-0004",
+      "title": "Aetherforge Wave 4 — Packaging and Public Release",
+      "path": "projects/aetherforge-wave4-packaging-release-2026-05-28.md",
+      "artifact_type": "execution_wave",
+      "canon_status": "candidate",
+      "tags": ["wave4", "packaging", "release", "oss"],
+      "links_to": ["AL-KG-REG-0001", "AL-KG-EDGE-0001", "AL-GPTDREAM-README-0001"]
+    },
+    {
+      "artifact_id": "AL-GPTDREAM-README-0001",
+      "title": "GPTDream++ Spec README",
+      "path": "archive/spec/gptdream/README.md",
+      "artifact_type": "spec_index",
+      "canon_status": "candidate",
+      "tags": ["gptdream", "spec", "readme"],
+      "links_to": ["AL-GPTDREAM-VAULT-0001", "AL-ATLAS-PKG-0001"]
+    },
+    {
+      "artifact_id": "AL-GPTDREAM-VAULT-0001",
+      "title": "GPTDream++ Vault Manifest",
+      "path": "archive/spec/gptdream/VAULT_MANIFEST_2026-05-26.md",
+      "artifact_type": "manifest",
+      "canon_status": "candidate",
+      "tags": ["gptdream", "manifest"],
+      "links_to": ["AL-GPTDREAM-README-0001"]
+    },
+    {
+      "artifact_id": "AL-TIDELOCK-REM-100Y-0001",
+      "title": "TIDELOCK REM 100Y Dream Journal",
+      "path": "archive/boot/gptbrain/TIDELOCKBrain/DREAM_JOURNAL_100Y_AETHERFORGE_PLAY_2026-05-27.md",
+      "artifact_type": "dream_journal",
+      "canon_status": "candidate",
+      "tags": ["tidelock", "rem", "100y"],
+      "links_to": ["AL-TIDELOCK-REM-100Y-0002", "AL-TIDELOCK-REM-100Y-0003", "AL-KG-EDGE-0001"]
+    },
+    {
+      "artifact_id": "AL-TIDELOCK-REM-100Y-0002",
+      "title": "TIDELOCK REM 100Y Wake Report",
+      "path": "archive/boot/gptbrain/TIDELOCKBrain/WAKE_REPORT_100Y_AETHERFORGE_PLAY_2026-05-27.md",
+      "artifact_type": "wake_report",
+      "canon_status": "candidate",
+      "tags": ["tidelock", "rem", "100y"],
+      "links_to": ["AL-TIDELOCK-REM-100Y-0001", "AL-TIDELOCK-REM-100Y-0003"]
+    },
+    {
+      "artifact_id": "AL-TIDELOCK-REM-100Y-0003",
+      "title": "TIDELOCK REM 100Y Delta Extraction",
+      "path": "archive/boot/gptbrain/TIDELOCKBrain/DELTA_EXTRACTION_100Y_AETHERFORGE_PLAY_2026-05-27.md",
+      "artifact_type": "delta_extraction",
+      "canon_status": "candidate",
+      "tags": ["tidelock", "rem", "100y"],
+      "links_to": ["AL-TIDELOCK-REM-100Y-0001", "AL-TIDELOCK-REM-100Y-0002"]
+    },
+    {
+      "artifact_id": "AL-ATLAS-PKG-0001",
+      "title": "Atlas ORCS Reference Implementation",
+      "path": "reference_impl/atlas_orcs",
+      "artifact_type": "reference_impl",
+      "canon_status": "candidate",
+      "tags": ["atlas-orcs", "python", "reference-impl"],
+      "links_to": ["AL-ATLAS-PKG-0002", "AL-GPTDREAM-README-0001"]
+    },
+    {
+      "artifact_id": "AL-ATLAS-PKG-0002",
+      "title": "Atlas ORCS Packaging Metadata",
+      "path": "reference_impl/pyproject.toml",
+      "artifact_type": "packaging",
+      "canon_status": "candidate",
+      "tags": ["python", "packaging", "pyproject"],
+      "links_to": ["AL-ATLAS-PKG-0001"]
+    },
+    {
+      "artifact_id": "AL-KG-EDGE-0001",
+      "title": "Knowledge Graph Edge Map",
+      "path": "graph.json",
+      "artifact_type": "graph",
+      "canon_status": "candidate",
+      "tags": ["knowledge-graph", "edges", "adjacency"],
+      "links_to": ["AL-KG-REG-0001", "AL-TIDELOCK-REM-100Y-0001", "AL-KG-WAVE-0002", "AL-KG-WAVE-0003", "AL-KG-WAVE-0004"]
+    }
+  ]
+}

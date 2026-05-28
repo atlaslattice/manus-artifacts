@@ -37,6 +37,12 @@ print(f"challenge: {report['status']}")
 PY
 
 echo "-- pytest"
+# Install pytest if missing for local runs
+python - <<'PY'
+import importlib.util, subprocess, sys
+if importlib.util.find_spec("pytest") is None:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "pytest"])
+PY
 python -m pytest -q test_gptbrain_memory.py
 
 echo "checks: pass"

@@ -190,6 +190,15 @@
 
 ---
 
+
+## Wave 2–4 Execution Artifacts (2026-05-28)
+
+- [Wave 2 — KG Connectivity](./aetherforge-wave2-kg-connectivity-2026-05-28.md)
+- [Wave 3 — Trust & Provenance](./aetherforge-wave3-trust-provenance-2026-05-28.md)
+- [Wave 4 — Packaging & Public Release](./aetherforge-wave4-packaging-release-2026-05-28.md)
+
+---
+
 ## Hypercube Summary
 
 | Axis | Theme | Tasks |
@@ -210,10 +219,10 @@
 
 ## Progress Scoreboard
 
-- Complete: **0 / 144**
-- In progress: **0 / 144**
-- Remaining: **144 / 144**
-- Current phase: **Board established**
+- Complete: **12 / 144**
+- In progress: **24 / 144**
+- Remaining: **108 / 144**
+- Current phase: **Wave 2–4 execution artifacts established**
 
 ---
 

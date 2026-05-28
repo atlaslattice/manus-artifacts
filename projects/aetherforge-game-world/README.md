@@ -14,6 +14,8 @@ Welcome to the Aetherforge layer where execution work is framed as playable ques
    - `./ARCHIVE_BOWL_PROBLEM_INDEX_v0.1.md`
 3. Use the mission template for new modules:
    - `./templates/FUN_FRAMING_SERIOUS_ACCEPTANCE_TEMPLATE_v0.1.md`
+4. Follow the player-facing onboarding guide:
+   - `./HOW_TO_PLAY_AETHERFORGE.md`
 
 ## Core Rules
 
@@ -22,6 +24,10 @@ Welcome to the Aetherforge layer where execution work is framed as playable ques
 - Boss fights are adversarial tests.
 - Loot/reward is a merged, reviewable artifact.
 - Omnispec Prime remains a candidate worldbuilding artifact until ratified.
+
+## Standard Quest Schema
+
+- `./templates/QUEST_CARD_SCHEMA_v0.1.yaml`
 
 ## Governance
 

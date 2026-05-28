@@ -1,0 +1,31 @@
+{
+  "version": "0.1",
+  "description": "Machine-readable adjacency map derived from docs/knowledge-graph/artifact_registry.v0_1.json",
+  "nodes": [
+    "AL-KG-REG-0001",
+    "AL-KG-WAVE-0002",
+    "AL-KG-WAVE-0003",
+    "AL-KG-WAVE-0004",
+    "AL-GPTDREAM-README-0001",
+    "AL-GPTDREAM-VAULT-0001",
+    "AL-TIDELOCK-REM-100Y-0001",
+    "AL-TIDELOCK-REM-100Y-0002",
+    "AL-TIDELOCK-REM-100Y-0003",
+    "AL-ATLAS-PKG-0001",
+    "AL-ATLAS-PKG-0002",
+    "AL-KG-EDGE-0001"
+  ],
+  "edges": [
+    {"from": "AL-KG-REG-0001", "to": "AL-KG-WAVE-0002", "relation": "tracks"},
+    {"from": "AL-KG-REG-0001", "to": "AL-KG-WAVE-0003", "relation": "tracks"},
+    {"from": "AL-KG-REG-0001", "to": "AL-KG-WAVE-0004", "relation": "tracks"},
+    {"from": "AL-KG-REG-0001", "to": "AL-KG-EDGE-0001", "relation": "feeds"},
+    {"from": "AL-GPTDREAM-README-0001", "to": "AL-GPTDREAM-VAULT-0001", "relation": "indexes"},
+    {"from": "AL-TIDELOCK-REM-100Y-0001", "to": "AL-TIDELOCK-REM-100Y-0002", "relation": "wakes_to"},
+    {"from": "AL-TIDELOCK-REM-100Y-0002", "to": "AL-TIDELOCK-REM-100Y-0003", "relation": "extracts_to"},
+    {"from": "AL-ATLAS-PKG-0001", "to": "AL-ATLAS-PKG-0002", "relation": "packaged_by"},
+    {"from": "AL-KG-EDGE-0001", "to": "AL-KG-WAVE-0002", "relation": "maps"},
+    {"from": "AL-KG-EDGE-0001", "to": "AL-KG-WAVE-0003", "relation": "maps"},
+    {"from": "AL-KG-EDGE-0001", "to": "AL-KG-WAVE-0004", "relation": "maps"}
+  ]
+}
