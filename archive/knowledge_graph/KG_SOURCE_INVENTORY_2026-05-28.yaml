@@ -1,0 +1,414 @@
+schema_version: "0.1"
+artifact_id: KG_SOURCE_INVENTORY_2026-05-28
+title: "AETHERFORGE / GPTDream++ Source Inventory — OpenAI-first graph habitat"
+created_at_utc: "2026-05-28T00:00:00Z"
+status: staging_inventory
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+parent_issues:
+  - "https://github.com/atlaslattice/manus-artifacts/issues/196"
+  - "https://github.com/atlaslattice/manus-artifacts/issues/209"
+
+keeper: "The graph shows where review is needed. It does not decide what is true."
+
+rules:
+  - "A graph edge is not a promotion."
+  - "A cluster is not canon."
+  - "A central node is not authority."
+  - "A coordinate is not permission."
+  - "A task is not execution."
+  - "Claude-originated governance artifacts are routed to adversarial review by default."
+  - "Notion, Drive, GitHub, and model memory are source surfaces, not root authority."
+
+allowed_raw_export_status:
+  - not_exported
+  - partial_export
+  - full_raw_export_attached
+  - full_raw_export_hashed
+  - redacted_raw_export_attached
+  - unavailable
+  - source_file_visible_not_hashed
+
+source_records:
+  - source_id: github_manus_artifacts_repo_001
+    title: "atlaslattice/manus-artifacts"
+    surface: github
+    url_or_path: "https://github.com/atlaslattice/manus-artifacts"
+    type: repository
+    created_or_modified: unknown
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: not_deployed
+      review_state: active_receipt_substrate
+      authority_scope: none
+      provenance_type: repo_receipt_surface
+    source_class: receipt_schema_artifact_repo
+    related_lane: aetherforge / gptdream / knowledge_graph
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts:
+      - "repo-wide inventory not complete"
+      - "open PR statuses need periodic refresh"
+    suggested_nodes: [SourceRoot, SourceArtifact, RepoReceipt]
+    suggested_edges: [belongs_to_lane, has_status]
+
+  - source_id: github_sheldonbrain_rag_api_repo_001
+    title: "atlaslattice/sheldonbrain-rag-api"
+    surface: github
+    url_or_path: "https://github.com/atlaslattice/sheldonbrain-rag-api"
+    type: repository
+    created_or_modified: unknown
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: not_deployed
+      review_state: ingestion_engine_candidate
+      authority_scope: none
+      provenance_type: repo_code_doc_surface
+    source_class: ingestion_engine_candidate
+    related_lane: sheldonbrain / openai_tool_contract
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts:
+      - "parser/adapters not yet fully inventoried"
+      - "production-ready language needs deployment evidence audit"
+    suggested_nodes: [SourceRoot, IngestionEngine, Claim]
+    suggested_edges: [derived_from, requires_review]
+
+  - source_id: github_pr_145_receipt_habitat_001
+    title: "PR #145 — Receipt Habitat v0.1 local schema validator and overclaim gate"
+    surface: github
+    url_or_path: "https://github.com/atlaslattice/manus-artifacts/pull/145"
+    type: pull_request
+    created_or_modified: "2026-05-24"
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: not_deployed
+      review_state: draft_pr
+      authority_scope: none
+      provenance_type: code_pr_receipt
+    source_class: local_validator_prototype
+    related_lane: receipt_habitat / openai_first_graph
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts:
+      - "tests not yet independently run in this inventory pass"
+      - "__init__.py missing from first draft due tool guard note"
+    suggested_nodes: [SourceArtifact, SchemaArtifact, Action]
+    suggested_edges: [patches, belongs_to_lane, requires_review]
+
+  - source_id: github_pr_190_notion_cartography_001
+    title: "PR #190 — Aetherforge Notion source cartography inventory"
+    surface: github
+    url_or_path: "https://github.com/atlaslattice/manus-artifacts/pull/190"
+    type: pull_request
+    created_or_modified: "2026-05-27"
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: not_deployed
+      review_state: open_draft
+      authority_scope: none
+      provenance_type: mirror_inventory_pr
+    source_class: source_cartography_seed
+    related_lane: aetherforge / notion_mirror
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts:
+      - "full linked child Notion pages not fetched"
+    suggested_nodes: [SourceArtifact, MirrorRecord]
+    suggested_edges: [mirrored_to, missing_receipt, requires_review]
+
+  - source_id: github_pr_24_kg_scaffold_001
+    title: "PR #24 — Notion mirror and source-grounded KG scaffolding"
+    surface: github
+    url_or_path: "https://github.com/atlaslattice/manus-artifacts/pull/24"
+    type: pull_request
+    created_or_modified: unknown
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: not_deployed
+      review_state: open_draft
+      authority_scope: none
+      provenance_type: kg_scaffold_pr
+    source_class: graph_schema_scaffold
+    related_lane: knowledge_graph / notion_mirror
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts:
+      - "broad diff needs targeted extraction"
+    suggested_nodes: [SchemaArtifact, SourceArtifact]
+    suggested_edges: [derived_from, requires_review]
+
+  - source_id: notion_master_index_001
+    title: "MASTER INDEX — Notion → GitHub Complete Artifact Map — Atlas Lattice Foundation"
+    surface: notion
+    url_or_path: "https://www.notion.so/3290c1de73d981ac8ebfd4c8e86da6b8"
+    type: notion_page
+    created_or_modified: "2026-03-20"
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: not_deployed
+      review_state: needs_row_extraction_and_github_verification
+      authority_scope: none
+      provenance_type: historical_index
+    source_class: master_index
+    related_lane: notion_mirror / source_cartography
+    review_priority: high
+    mirrored_to_github: partially
+    missing_receipts:
+      - "full raw page export"
+      - "child page fetches"
+      - "independent GitHub path checks for rows"
+    risk_flags:
+      - single_source_of_truth_language
+    suggested_nodes: [SourceRoot, MirrorRecord, Claim]
+    suggested_edges: [parsed_from, missing_receipt, requires_review]
+
+  - source_id: notion_migration_plan_001
+    title: "TRIAGE — Notion → GitHub Migration Plan — March 20, 2026"
+    surface: notion
+    url_or_path: "https://www.notion.so/3290c1de73d98140a4d4c71b5c88b136"
+    type: notion_page
+    created_or_modified: "2026-03-20"
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: not_deployed
+      review_state: needs_row_extraction
+      authority_scope: none
+      provenance_type: migration_plan
+    source_class: migration_plan
+    related_lane: notion_mirror / github_verification
+    review_priority: high
+    mirrored_to_github: unknown
+    missing_receipts:
+      - "row-level export"
+      - "current GitHub status validation"
+    suggested_nodes: [SourceArtifact, MirrorRecord]
+    suggested_edges: [mirrored_to, missing_receipt]
+
+  - source_id: notion_sheldonbrain_12x12_index_001
+    title: "SHELDONBRAIN OS — 12×12 Master Index — 144 Spheres"
+    surface: notion
+    url_or_path: "https://www.notion.so/3210c1de73d981a7b04cdced2cc61515"
+    type: notion_page
+    created_or_modified: "2026-03-12"
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: not_deployed
+      review_state: needs_schema_crosswalk
+      authority_scope: none
+      provenance_type: ontology_index
+    source_class: lattice_ontology_source
+    related_lane: lattice / sheldonbrain
+    review_priority: high
+    mirrored_to_github: unknown
+    missing_receipts:
+      - "full raw export"
+      - "sphere mapping crosswalk"
+    suggested_nodes: [SourceRoot, SchemaArtifact]
+    suggested_edges: [belongs_to_lane, requires_review]
+
+  - source_id: notion_sheldonbrain_mcp_001
+    title: "SHELDONBRAIN MCP SERVER - Universal Invocability Infrastructure"
+    surface: notion
+    url_or_path: "https://www.notion.so/03d0e664028c492a9ed8b7c74d8199f3"
+    type: notion_page
+    created_or_modified: "2026-01-22"
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: not_deployed
+      review_state: needs_code_path_verification
+      authority_scope: none
+      provenance_type: mcp_candidate
+    source_class: sheldonbrain_mcp_candidate
+    related_lane: mcp / openai_interop / sheldonbrain
+    review_priority: high
+    mirrored_to_github: unknown
+    missing_receipts:
+      - "actual code path in GitHub"
+      - "tool registration evidence"
+    suggested_nodes: [SourceArtifact, Claim, ReviewQueue]
+    suggested_edges: [requires_review, missing_receipt]
+
+  - source_id: notion_pinecone_sync_001
+    title: "Notion-Pinecone Sync Infrastructure"
+    surface: notion
+    url_or_path: "https://www.notion.so/2dc0c1de73d981039b61c08c6c4502af"
+    type: notion_page
+    created_or_modified: "2026-01-02"
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: not_deployed
+      review_state: needs_deployment_language_audit
+      authority_scope: none
+      provenance_type: sync_infrastructure_candidate
+    source_class: sync_infrastructure_candidate
+    related_lane: sheldonbrain / notion / pinecone
+    review_priority: medium
+    mirrored_to_github: unknown
+    missing_receipts:
+      - "deployment evidence"
+      - "current code path"
+    risk_flags:
+      - old_ready_for_deployment_language
+    suggested_nodes: [SourceArtifact, Claim]
+    suggested_edges: [requires_review, missing_receipt]
+
+  - source_id: notion_claude_ratification_package_001
+    title: "Module 1 — Council Ratification Package Top-Sheet"
+    surface: notion
+    url_or_path: "https://www.notion.so/3560c1de73d9815f8cc0f70f79c99338"
+    type: notion_page
+    created_or_modified: "2026-05-04"
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon_until_reverified
+      deployment_status: not_deployed
+      review_state: route_to_adversarial_review
+      authority_scope: none
+      provenance_type: claude_originated_governance_artifact
+    source_class: claude_review_required
+    related_lane: claude_adversarial_review / governance
+    review_priority: critical
+    mirrored_to_github: unknown
+    missing_receipts:
+      - "full raw export"
+      - "independent ratification event verification"
+    suggested_nodes: [SourceArtifact, ReviewQueue, Claim]
+    suggested_edges: [requires_review, missing_receipt]
+
+  - source_id: drive_gangaseek_namespace_packet_001
+    title: "GANGASEEK_NAMESPACE_RATIFICATION_PACKET_v0.1.txt"
+    surface: drive
+    url_or_path: "https://drive.google.com/file/d/17-9TTGzITZWecSL5MCusDF-0LvSjBxsD"
+    type: text_file
+    created_or_modified: "2026-05-23"
+    raw_export_status: source_file_visible_not_hashed
+    artifact_status:
+      canon_status: not_canon_until_reviewed
+      deployment_status: not_deployed
+      review_state: needs_hash_and_claim_extraction
+      authority_scope: none
+      provenance_type: drive_source_file
+    source_class: gangaseek_namespace_packet
+    related_lane: gangaseek / namespace / standards
+    review_priority: high
+    mirrored_to_github: unknown
+    missing_receipts:
+      - "sha256"
+      - "claim packet"
+      - "GitHub mirror path"
+    suggested_nodes: [SourceArtifact, EvidenceAnchor, Claim]
+    suggested_edges: [raw_export_of, missing_receipt]
+
+  - source_id: drive_gangaseek_inv_clm_catalog_001
+    title: "GANGASEEK_INV_CLM_CATALOG_CANDIDATE_v0.1.txt"
+    surface: drive
+    url_or_path: "https://drive.google.com/file/d/1QW1Yd3YHzpb8bxRCU-w_yjtJlFpNujmp"
+    type: text_file
+    created_or_modified: "2026-05-23"
+    raw_export_status: source_file_visible_not_hashed
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: not_deployed
+      review_state: needs_id_definition_check
+      authority_scope: none
+      provenance_type: drive_source_file
+    source_class: inv_clm_catalog_candidate
+    related_lane: gangaseek / invariant_catalog
+    review_priority: high
+    mirrored_to_github: unknown
+    missing_receipts:
+      - "sha256"
+      - "undefined ID review"
+    suggested_nodes: [SourceArtifact, Claim]
+    suggested_edges: [missing_receipt, requires_review]
+
+  - source_id: drive_orcs_research_cluster_001
+    title: "ORCS research / build / quest board cluster"
+    surface: drive
+    url_or_path: "Drive search: ORCS"
+    type: cluster
+    created_or_modified: "2026-04-26..2026-05-26"
+    raw_export_status: source_file_visible_not_hashed
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: not_deployed
+      review_state: needs_source_comparison
+      authority_scope: none
+      provenance_type: drive_cluster
+    source_class: orcs_recovery_cluster
+    related_lane: orcs / standards / aetherforge
+    review_priority: high
+    mirrored_to_github: partially_unknown
+    missing_receipts:
+      - "ORC 1-12 exact source map"
+      - "hashes"
+      - "GitHub mirror status"
+    suggested_nodes: [SourceRoot, SourceArtifact, ReviewQueue]
+    suggested_edges: [missing_receipt, requires_review]
+
+  - source_id: drive_copilot_chat_cluster_001
+    title: "Copilot Chat / TIDELOCK handoff cluster"
+    surface: drive
+    url_or_path: "Drive search: Copilot Chat"
+    type: cluster
+    created_or_modified: "2026-05-11..2026-05-26"
+    raw_export_status: source_file_visible_not_hashed
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: not_deployed
+      review_state: route_to_tidelock_and_hashlight
+      authority_scope: none
+      provenance_type: drive_chat_export_cluster
+    source_class: raw_or_semi_raw_copilot_continuity
+    related_lane: tidelock / copilot / repo_execution
+    review_priority: critical
+    mirrored_to_github: unknown
+    missing_receipts:
+      - "sha256"
+      - "raw export completeness check"
+      - "PR/branch mapping"
+    suggested_nodes: [RawExport, SourceArtifact, ReviewQueue]
+    suggested_edges: [raw_export_of, requires_review, missing_receipt]
+
+  - source_id: drive_claude_governance_cluster_001
+    title: "Claude-related governance / synthesis cluster"
+    surface: drive
+    url_or_path: "Drive search: Claude governance"
+    type: cluster
+    created_or_modified: "2026-04-22..2026-05-12"
+    raw_export_status: source_files_visible_not_hashed
+    artifact_status:
+      canon_status: not_canon_until_reverified
+      deployment_status: not_deployed
+      review_state: route_to_claude_adversarial_review
+      authority_scope: none
+      provenance_type: drive_cluster
+    source_class: claude_review_required
+    related_lane: governance / adversarial_review
+    review_priority: critical
+    mirrored_to_github: unknown
+    missing_receipts:
+      - "full raw exports"
+      - "hashes"
+      - "counter-review records"
+    suggested_nodes: [ReviewQueue, Claim, SourceArtifact]
+    suggested_edges: [requires_review, contradicts, missing_receipt]
+
+next_safe_actions:
+  - "Extract PR #190 rows into normalized SourceRoot nodes."
+  - "Create CLAUDE_ADVERSARIAL_REVIEW_QUEUE_2026-05-28.md."
+  - "Create OPENAI_GRAPH_EXTRACTION_AGENT_SPEC_v0.1.md."
+  - "Extend Receipt Habitat to emit graph-node candidate packets."
+  - "Generate demo query: artifacts mentioning GangaSeek that lack hashes."
