@@ -34,5 +34,5 @@ Defines severity, service-level targets, and escalation triggers for stale artif
 
 ## Evidence reviewed
 
-- Evidence reviewed: [QUALITY_GATES.md](./QUALITY_GATES.md)
-- Evidence reviewed: [../governance/INCIDENT_RESPONSE_RUNBOOK.md](../governance/INCIDENT_RESPONSE_RUNBOOK.md)
+- Evidence reviewed: [governance/GOVERNANCE_RISK_HEATMAP_THRESHOLDS.md](../governance/GOVERNANCE_RISK_HEATMAP_THRESHOLDS.md)
+- Evidence reviewed: [governance/MISSION_CONTROL_CADENCE.md](../governance/MISSION_CONTROL_CADENCE.md)

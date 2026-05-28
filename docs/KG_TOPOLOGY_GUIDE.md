@@ -30,3 +30,8 @@ Guide for the Metatron-oriented lattice topology, ring layout, and traversal rul
 
 - [PUBLIC_ARCHIVE_MAP_v2.md](./PUBLIC_ARCHIVE_MAP_v2.md)
 - [KG_DOMAIN_SUBGRAPHS.md](./KG_DOMAIN_SUBGRAPHS.md)
+
+## Citations
+
+- Citations: [CROSS_DOMAIN_LINK_POLICY.md](./CROSS_DOMAIN_LINK_POLICY.md)
+- Citations: [../governance/PROVENANCE_REQUIREMENTS.md](../governance/PROVENANCE_REQUIREMENTS.md)

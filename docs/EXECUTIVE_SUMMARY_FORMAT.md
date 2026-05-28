@@ -27,5 +27,5 @@ One-pager standard format for flagship artifacts.
 
 ## Citations
 
-- Citations: [EXECUTIVE_SUMMARIES.md](./EXECUTIVE_SUMMARIES.md)
-- Citations: [CANON_BOUNDARY.md](./CANON_BOUNDARY.md)
+- Citations: [QUALITY_GATES.md](./QUALITY_GATES.md)
+- Citations: [../governance/PROVENANCE_REQUIREMENTS.md](../governance/PROVENANCE_REQUIREMENTS.md)

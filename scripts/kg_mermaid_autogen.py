@@ -10,7 +10,11 @@ OUTPUT_MERMAID = ROOT / "docs" / "generated" / "KG_MERMAID_GRAPH.md"
 
 
 def label(node_id: str) -> str:
-    return node_id.replace("N-", "")
+    return node_id.removeprefix("N-")
+
+
+def node_key(node_id: str) -> str:
+    return node_id.replace("-", "_")
 
 
 def main() -> int:
@@ -23,12 +27,12 @@ def main() -> int:
     lines = ["```mermaid", "graph TD"]
     for node in nodes:
         node_id = node["id"]
-        lines.append(f"    {node_id}[{label(node_id)}]")
+        lines.append(f"    {node_key(node_id)}[{label(node_id)}]")
 
     for node in nodes:
         node_id = node["id"]
         for linked in node.get("links", []):
-            lines.append(f"    {node_id} --> {linked}")
+            lines.append(f"    {node_key(node_id)} --> {node_key(linked)}")
 
     lines.append("```")
     OUTPUT_MERMAID.parent.mkdir(parents=True, exist_ok=True)

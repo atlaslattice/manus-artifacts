@@ -36,5 +36,5 @@ Five one-page doctrine cards for operations and onboarding.
 
 ## Sources
 
-- Source: [DOCTRINE_MAP.md](./DOCTRINE_MAP.md)
 - Source: [../governance/PROVENANCE_EVIDENCE_TIERING_MODEL.md](../governance/PROVENANCE_EVIDENCE_TIERING_MODEL.md)
+- Source: [../governance/COUNCIL_REVIEW_WORKFLOW.md](../governance/COUNCIL_REVIEW_WORKFLOW.md)
