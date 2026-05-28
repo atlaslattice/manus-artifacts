@@ -27,7 +27,8 @@ for path in TARGETS:
     txt = path.read_text(encoding="utf-8")
     if not RE_STATUS.search(txt):
         errors.append(f"missing Status line: {path.relative_to(ROOT)}")
-    if path.name != "README.md" and not RE_DATE.search(txt):
+    is_root_readme = path.resolve() == (ROOT / "README.md").resolve()
+    if not is_root_readme and not RE_DATE.search(txt):
         errors.append(f"missing Date line: {path.relative_to(ROOT)}")
 
 if errors:
