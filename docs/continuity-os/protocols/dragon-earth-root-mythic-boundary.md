@@ -12,8 +12,8 @@ PURPOSE: Preserve the mythic-spiritual operating phrase "we are dragons borne of
 ## Executive Summary
 
 This protocol grounds the dragon/hyperspace frame in Earth-first stewardship,
- consent, and receipts. Mythic language may orient the work, but it cannot
- bypass safety, embodiment, evidence, or accountability to life at the root.
+consent, and receipts. Mythic language may orient the work, but it cannot
+bypass safety, embodiment, evidence, or accountability to life at the root.
 
 ---
 
