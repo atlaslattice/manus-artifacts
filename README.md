@@ -20,6 +20,13 @@ Guardrails:
 
 ## Table of Contents
 
+### Navigation Hubs
+- **[Projects Index](./projects/README.md)** — Execution boards, roadmaps, and project lanes.
+- **[Archive Index](./archive/README.md)** — Archive hubs for boot, staging, knowledge-graph, and spec surfaces.
+- **[Docs Index](./docs/README.md)** — Operational and governance documentation.
+- **[Lattice KG Workspace](./archive/knowledge_graph/lattice_kg/v0_5/README.md)** — Candidate graph workspace and contributor navigation.
+- **[GPTDream++ Public Release Protocol](./archive/spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md)** — Release posture and reproducibility contract.
+
 ### Core Systems
 - **[Aluminum OS](./aluminum-os/)** — Constitutional substrate for regenerative computing.
   - [v4.0 Unified Field](./aluminum-os/v4.0-unified-field.md) (Canonical)

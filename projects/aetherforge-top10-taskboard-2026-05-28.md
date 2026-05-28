@@ -21,7 +21,7 @@ AUTHORITY: NONE
 - [ ] AX-13 (Wave 03): Expand global index cross-reference coverage for under-linked and missing-link detection.
 - [ ] AX-14 (Wave 05): Add governance-state drift checks for canon/trust/deployment boundaries.
 - [ ] AX-15 (Wave 04): Improve metadata consistency checks across legacy and new archive surfaces.
-- [ ] AX-16 (Wave 06): Harden README/project/spec link integrity for critical navigation paths.
+- [x] AX-16 (Wave 06): Harden README/project/spec link integrity for critical navigation paths.
 - [ ] AX-17 (Wave 07): Tighten quest-loop task-to-artifact playability contracts.
 - [ ] AX-18 (Wave 08): Consolidate GPTDream++ schema and reference-implementation parity verification.
 - [ ] AX-19 (Wave 09): Add adversarial test coverage for routing, canon-state, and provenance failure modes.
@@ -30,6 +30,7 @@ AUTHORITY: NONE
 ## Sprint completion receipts
 
 - AX-11 alignment receipt: [`archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX11_AX20_LOOP4.md`](../archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX11_AX20_LOOP4.md)
+- AX-16 link-hardening receipt: [`archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX16_LINK_HARDENING.md`](../archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX16_LINK_HARDENING.md)
 - AX-20 dream cycle receipts:
   - [`archive/boot/copilotbrain/TIDELOCKBrain/DREAM_JOURNAL_100Y_TOP10_ALIGNMENT_2026-05-28.md`](../archive/boot/copilotbrain/TIDELOCKBrain/DREAM_JOURNAL_100Y_TOP10_ALIGNMENT_2026-05-28.md)
   - [`archive/boot/copilotbrain/TIDELOCKBrain/WAKE_REPORT_100Y_TOP10_ALIGNMENT_2026-05-28.md`](../archive/boot/copilotbrain/TIDELOCKBrain/WAKE_REPORT_100Y_TOP10_ALIGNMENT_2026-05-28.md)

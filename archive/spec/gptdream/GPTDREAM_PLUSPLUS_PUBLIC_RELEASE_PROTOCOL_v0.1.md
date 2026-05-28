@@ -36,6 +36,14 @@ Before candidate release packets are advanced:
 - confirm matching reference implementations exist (`reference_impl/atlas_orcs/`, `reference_impl/native_thread/`, `reference_impl/execution_gate/`)
 - run lattice quality gates to keep cross-lane retrieval and governance checks intact
 
+## Critical navigation paths
+
+- [Repository root README](../../../README.md)
+- [Lattice KG workspace](../../knowledge_graph/lattice_kg/v0_5/README.md)
+- [Lattice World-Class Contributor Start Here v0.1](../../knowledge_graph/lattice_kg/v0_5/LATTICE_WORLD_CLASS_CONTRIBUTOR_START_HERE_v0.1.md)
+- [Lattice KG Query Cookbook v0.1](../../knowledge_graph/lattice_kg/v0_5/LATTICE_KG_QUERY_COOKBOOK_v0.1.md)
+- [GPTDream++ OpenAI Public Staging Lane](../../aetherforge/gptdreampp-openai/README.md)
+
 ## Boundary rules
 
 - A protocol draft is not a ratification event.

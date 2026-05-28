@@ -45,3 +45,9 @@ Every staged artifact must include or link:
 - `python scripts/build_lattice_global_index.py --repo-root .`
 - `python scripts/validate_lattice_quality_gates.py --repo-root . --index archive/knowledge_graph/lattice_kg/v0_5/lattice_global_index.v0.1.json --max-age-days 7`
 - `python -m pytest -q tests/test_lattice_kg_hypercube_program.py`
+
+## Critical navigation paths
+
+- [Aetherforge staging index](../README.md)
+- [GPTDream++ Public Release Protocol](../../spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md)
+- [Lattice KG workspace](../../knowledge_graph/lattice_kg/v0_5/README.md)
