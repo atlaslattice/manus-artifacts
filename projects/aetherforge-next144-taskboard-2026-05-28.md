@@ -26,15 +26,15 @@ status: candidate
 14. ✅ #22 Build compliance evidence index  
 15. ✅ #23 Publish public risk register  
 16. ✅ #24 Run quarterly legal/trust audits  
-17. [ ] #25 Normalize top-level navigation  
-18. [ ] #27 Add breadcrumb standards  
-19. [ ] #28 Consolidate index pages  
-20. [ ] #29 Publish archive taxonomy map  
+17. ✅ #25 Normalize top-level navigation  
+18. ✅ #27 Add breadcrumb standards  
+19. ✅ #28 Consolidate index pages  
+20. ✅ #29 Publish archive taxonomy map  
 21. ✅ #30 Define naming conventions  
-22. [ ] #31 Create file placement decision tree  
-23. [ ] #32 Triage duplicate docs backlog  
-24. [ ] #33 Add stale artifact quarantine lane  
-25. [ ] #35 Publish canonical path map  
+22. ✅ #31 Create file placement decision tree  
+23. ✅ #32 Triage duplicate docs backlog  
+24. ✅ #33 Add stale artifact quarantine lane  
+25. ✅ #35 Publish canonical path map  
 
 ---
 
@@ -86,18 +86,18 @@ status: candidate
 - [x] #24 Run quarterly legal/trust audits
 
 ### Face 03 — Repository Architecture
-- [ ] #25 Normalize top-level navigation
+- [x] #25 Normalize top-level navigation
 - [x] #26 Complete missing folder READMEs
-- [ ] #27 Add breadcrumb standards
-- [ ] #28 Consolidate index pages
-- [ ] #29 Publish archive taxonomy map
+- [x] #27 Add breadcrumb standards
+- [x] #28 Consolidate index pages
+- [x] #29 Publish archive taxonomy map
 - [x] #30 Define naming conventions
-- [ ] #31 Create file placement decision tree
-- [ ] #32 Triage duplicate docs backlog
-- [ ] #33 Add stale artifact quarantine lane
+- [x] #31 Create file placement decision tree
+- [x] #32 Triage duplicate docs backlog
+- [x] #33 Add stale artifact quarantine lane
 - [x] #34 Drive broken links to zero
-- [ ] #35 Publish canonical path map
-- [ ] #36 Build role-based landing paths
+- [x] #35 Publish canonical path map
+- [x] #36 Build role-based landing paths
 
 ### Face 04 — Documentation Excellence
 - [ ] #37 Standardize metadata headers

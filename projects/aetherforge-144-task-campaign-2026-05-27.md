@@ -10,7 +10,7 @@ status: candidate
 
 ## 📊 Progress
 
-**24 / 144 complete** as of 2026-05-28
+**36 / 144 complete** as of 2026-05-28
 
 ---
 
@@ -46,18 +46,18 @@ status: candidate
 
 ## Face 03 — Repository Architecture
 
-- [ ] **#25** Normalize top-level navigation
+- [x] **#25** Normalize top-level navigation
 - [x] **#26** Complete missing folder READMEs
-- [ ] **#27** Add breadcrumb standards
-- [ ] **#28** Consolidate index pages
-- [ ] **#29** Publish archive taxonomy map
+- [x] **#27** Add breadcrumb standards
+- [x] **#28** Consolidate index pages
+- [x] **#29** Publish archive taxonomy map
 - [x] **#30** Define naming conventions
-- [ ] **#31** Create file placement decision tree
-- [ ] **#32** Triage duplicate docs backlog
-- [ ] **#33** Add stale artifact quarantine lane
+- [x] **#31** Create file placement decision tree
+- [x] **#32** Triage duplicate docs backlog
+- [x] **#33** Add stale artifact quarantine lane
 - [x] **#34** Drive broken links to zero
-- [ ] **#35** Publish canonical path map
-- [ ] **#36** Build role-based landing paths
+- [x] **#35** Publish canonical path map
+- [x] **#36** Build role-based landing paths
 
 ## Face 04 — Documentation Excellence
 
