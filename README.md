@@ -91,6 +91,7 @@ This expectation is enforced through our [Code of Conduct](./CODE_OF_CONDUCT.md)
 | [World-Class Readiness Gates](./docs/WORLD_CLASS_READINESS_GATES.md) | 50/75/pre-release go-no-go gates |
 | [Good First Issues](./docs/GOOD_FIRST_ISSUES.md) | Public contributor lanes for high-impact work |
 | [Governance Spine](./docs/governance/README.md) | Wave 2 governance spine: ratification, canon, ownership, SLAs |
+| [Security Posture Pack](./docs/security/README.md) | Wave 7 security/automation pack: posture, policies, branch protection |
 | [Metadata Backfill Scope](./docs/METADATA_BACKFILL_SCOPE_2026-05-27.md) | Wave 3 top-50 and next-100 metadata queue |
 | [Metadata Coverage Report](./docs/METADATA_COVERAGE_REPORT_2026-05-27.md) | Current frontmatter and provenance coverage |
 
@@ -109,7 +110,7 @@ See [CONTRIBUTING.md](./.github/CONTRIBUTING.md) for branch naming, commit conve
 
 ## 📊 Public Launch Progress
 
-32 / 50 tasks complete on original board — Wave 2 governance spine (12 artifacts) drafted 2026-05-28. See the [Aetherforge Next-144 Taskboard](./projects/aetherforge-next144-taskboard-2026-05-28.md).
+32 / 50 tasks complete on original board — Wave 2 governance spine and Wave 7 security posture pack drafted on 2026-05-28. See the [Aetherforge Next-144 Taskboard](./projects/aetherforge-next144-taskboard-2026-05-28.md).
 
 Wave 3 metadata/provenance outputs are now published: [backfill scope](./docs/METADATA_BACKFILL_SCOPE_2026-05-27.md), [coverage report](./docs/METADATA_COVERAGE_REPORT_2026-05-27.md), [provenance completeness](./docs/PROVENANCE_COMPLETENESS_REPORT_2026-05-27.md), and [monthly drift snapshot](./projects/status-reports/PROVENANCE_DRIFT_REPORT_2026-05.md).
 

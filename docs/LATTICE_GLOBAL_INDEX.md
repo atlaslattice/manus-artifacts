@@ -10,7 +10,7 @@ source_of_truth: GitHub
 
 # Lattice Global Index
 
-Generated at: `2026-05-28T18:05:10+00:00`
+Generated at: `2026-05-28T18:08:15+00:00`
 
 ## Domain Summary
 
@@ -21,13 +21,13 @@ Generated at: `2026-05-28T18:05:10+00:00`
 | `about` | 1 |
 | `aluminum-os` | 22 |
 | `aluminum-os-core` | 1 |
-| `archive` | 169 |
+| `archive` | 170 |
 | `archives` | 1 |
 | `bazinga` | 1 |
 | `codebases` | 57 |
 | `council` | 1 |
 | `council-reviews` | 2 |
-| `docs` | 57 |
+| `docs` | 69 |
 | `health` | 4 |
 | `manus-vault` | 12 |
 | `projects` | 9 |
@@ -83,7 +83,7 @@ Generated at: `2026-05-28T18:05:10+00:00`
 - `archive/boot/COUNCIL_BRAIN_FULL_SYNTHESIS_2026-05-09.md`
 - `archive/boot/COUNCIL_BRAIN_INDEX.md`
 - `archive/boot/agents/TUCKER_GPT_GEMINI_DEFENSE_INTERFACE_SPEC_2026-05-09.md`
-- ... 159 more
+- ... 160 more
 
 ### archives
 - `archives/janus-checkpoints/latest-checkpoint.md`
@@ -122,7 +122,7 @@ Generated at: `2026-05-28T18:05:10+00:00`
 - `docs/FAQ.md`
 - `docs/FOLDER_TAXONOMY_AUDIT_2026-05-27.md`
 - `docs/GLOSSARY.md`
-- ... 47 more
+- ... 59 more
 
 ### health
 - `health/austin-in-home-pt.md`

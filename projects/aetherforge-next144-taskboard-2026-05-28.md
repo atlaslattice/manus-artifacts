@@ -27,7 +27,7 @@ source_of_truth: GitHub
 | 4 (37-48) | Graph integrity | Wave 3 gate | Graph Integrity Review Published | 🟨 TODO |
 | 5 (49-60) | AI evidence spine | Wave 3 gate | AI Evidence Snapshot v2 Published | 🟨 TODO |
 | 6 (61-72) | Docs/navigation/public UX | Wave 4+5 gates | Public UX Path Complete | 🟨 TODO |
-| 7 (73-84) | CI/security/automation | Wave 1+6 gates | Security Posture Pack Published | 🟨 TODO |
+| 7 (73-84) | CI/security/automation | Wave 1+6 gates | Security Posture Pack Published | 🟨 IN PROGRESS (11/12 drafted) |
 | 8 (85-96) | Tests/quality gates | Wave 4+7 gates | Quality Gate Calibration Complete | 🟨 TODO |
 | 9 (97-108) | Search/discovery/retrieval | Wave 3+4+6 gates | Discoverability Scorecard Published | 🟨 TODO |
 | 10 (109-120) | Contributor system/playability | Wave 6+8+9 gates | Quest System v2 Live | 🟨 TODO |
@@ -147,18 +147,18 @@ source_of_truth: GitHub
 **Dependency:** Waves 1 and 6 complete  
 **Checkpoint gate:** security posture report + branch protection recommendation + exceptions ledger published
 
-- [ ] **73.** Verify secret-scan workflow branch coverage
-- [ ] **74.** Add secret-scan false-positive triage doc
-- [ ] **75.** Define dependency-alert response SLA
-- [ ] **76.** Audit GitHub Actions pinning
+- [x] **73.** Verify secret-scan workflow branch coverage
+- [x] **74.** Add secret-scan false-positive triage doc
+- [x] **75.** Define dependency-alert response SLA
+- [x] **76.** Audit GitHub Actions pinning
 - [ ] **77.** Optimize CI runtimes
-- [ ] **78.** Publish CI failure triage playbook
-- [ ] **79.** Map workflow ownership
-- [ ] **80.** Add required-check policy proposal
-- [ ] **81.** Publish periodic security posture report
-- [ ] **82.** Recommend branch-protection settings
-- [ ] **83.** Add release artifact integrity checklist
-- [ ] **84.** Add security exceptions ledger
+- [x] **78.** Publish CI failure triage playbook
+- [x] **79.** Map workflow ownership
+- [x] **80.** Add required-check policy proposal
+- [x] **81.** Publish periodic security posture report
+- [x] **82.** Recommend branch-protection settings
+- [x] **83.** Add release artifact integrity checklist
+- [x] **84.** Add security exceptions ledger
 
 ## Wave 8 — Tests and quality gates (85-96)
 
