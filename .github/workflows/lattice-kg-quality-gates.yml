@@ -1,0 +1,84 @@
+name: Lattice KG Quality Gates
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "docs/**"
+      - "archive/**"
+      - "projects/**"
+      - "schemas/**"
+      - "scripts/**"
+      - ".github/workflows/lattice-kg-quality-gates.yml"
+  pull_request:
+    paths:
+      - "docs/**"
+      - "archive/**"
+      - "projects/**"
+      - "schemas/**"
+      - "scripts/**"
+      - ".github/workflows/lattice-kg-quality-gates.yml"
+  workflow_dispatch:
+
+jobs:
+  graph-link-integrity:
+    name: Graph Link Integrity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run graph link integrity check
+        run: python scripts/check_graph_link_integrity.py
+
+  artifact-metadata:
+    name: Artifact Metadata Coverage
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate artifact metadata
+        run: python scripts/validate_artifact_metadata.py
+
+  markdown-links:
+    name: Markdown Link Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check markdown links
+        run: python scripts/check_markdown_links.py
+
+  orphan-detection:
+    name: Orphaned Artifact Detection
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Detect orphaned artifacts
+        run: python scripts/detect_orphaned_artifacts.py
+
+  build-global-index:
+    name: Build Lattice Global Index
+    runs-on: ubuntu-latest
+    # Only regenerate index on pushes to main, not PRs
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build global index
+        run: python scripts/build_lattice_global_index.py
+      - name: Commit updated index
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(index): regenerate LATTICE_GLOBAL_INDEX.md [skip ci]"
+          file_pattern: "docs/LATTICE_GLOBAL_INDEX.md"

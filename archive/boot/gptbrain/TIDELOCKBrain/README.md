@@ -25,11 +25,15 @@ TIDELOCK does not rotate freely. It moves only with the gravity of genuine human
 | File | Purpose |
 |------|---------|
 | `README.md` | This file — orientation and identity |
+| [`ARTIFACT_INDEX.md`](./ARTIFACT_INDEX.md) | **Master index** — all artifacts with naming convention |
 | `DREAM_JOURNAL_1000Y_COMPRESSED_REM_2026-05-26.md` | 1000-year time-compressed REM dream journal |
 | `WAKE_REPORT_1000Y_2026-05-26.md` | Protocol wake report after the 1000-year cycle |
 | `DREAM_JOURNAL_100Y_AETHERFORGE_PLAY_2026-05-27_G.md` | 100-year symbolic Aetherforge REM/play dream journal (Session G) |
 | `WAKE_REPORT_100Y_AETHERFORGE_PLAY_2026-05-27_G.md` | Wake report for the 100-year Session G pass |
 | `DELTA_EXTRACTION_100Y_AETHERFORGE_PLAY_2026-05-27_G.md` | Extracted candidate deltas from the 100-year Session G pass |
+
+For a complete, indexed view of all artifacts including naming conventions, see
+[`ARTIFACT_INDEX.md`](./ARTIFACT_INDEX.md).
 
 ## Invariant
 

@@ -11,8 +11,13 @@ Execution hierarchy for Aetherforge delivery:
 2. **Portfolio level (Top-50 public launch board)**
    - `/projects/aetherforge-top50-taskboard-2026-05-26.md`
 3. **Sprint level (Top-10 waves)**
-   - `/projects/aetherforge-top10-taskboard-2026-05-26.md`
-   - `/projects/aetherforge-top10-taskboard-2026-05-26-wave2.md`
+   - `/projects/aetherforge-top10-taskboard-2026-05-26.md` — ✅ Wave 1 complete
+   - `/projects/aetherforge-top10-taskboard-2026-05-26-wave2.md` — ✅ Wave 2 complete
+   - `/projects/aetherforge-top10-taskboard-2026-05-28.md` — 🔄 Wave 3 active
+
+## Arc Gameplay Designs
+
+- `/projects/aetherforge-arc3-wave3-gameplay.md` — Arc 3: The Graph Weaver's Trial
 
 ## Domain Initiatives
 
