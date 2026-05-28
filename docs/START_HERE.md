@@ -25,7 +25,7 @@ This repository is the **canonical archive** of that work. Everything here is li
 2. [README.md](../README.md) — the public landing page
 3. [State of the Union Briefing](../State_of_the_Union_Briefing.md) — current status
 4. [Glossary](./GLOSSARY.md) — decode the terminology
-5. [Free Bank overview](../projects/free-bank/banking-revolution-archive.md) — the most accessible project entry point
+5. [Aetherforge Game Loop](../projects/aetherforge-game-world/AETHERFORGE_GAME_LOOP_SPEC_v0.1.md) — the most accessible project entry point
 
 ---
 

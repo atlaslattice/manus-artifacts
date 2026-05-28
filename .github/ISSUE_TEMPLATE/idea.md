@@ -16,7 +16,8 @@ assignees: ''
 - [ ] Aluminum OS / kernel
 - [ ] Agent / brain design
 - [ ] Governance / council
-- [ ] Project (Free Bank / Chinook / 3-Tier / other)
+<!-- Free Bank quarantined to private repo -->
+- [ ] Project (Chinook / 3-Tier / other)
 - [ ] Research
 - [ ] Health sovereignty
 - [ ] Infrastructure / CI

@@ -22,7 +22,7 @@
 | [Boot Archive — Geometry](#boot-archive--geometry) | ~3 | Metatron scaffolding scripts |
 | [Boot Archive — Culture](#boot-archive--culture) | ~8 | Laser rave, Burning Man, poetry |
 | [Council](#council) | ~20 | Trinity & Pantheon session archives |
-| [Projects — Free Bank](#projects--free-bank) | ~2 | Zero-fee banking revolution |
+| [Projects — Free Bank](#projects--free-bank) | ~2 | 🔒 Quarantined (banking) |
 | [Projects — Chinook Guardian](#projects--chinook-guardian) | ~2 | Aerospace sovereignty |
 | [Projects — Three-Tier Autonomy](#projects--three-tier-autonomy) | ~4 | Agentic policy framework |
 | [Research](#research) | ~20 | Intelligence sweeps |
@@ -213,12 +213,8 @@
 
 ## Projects — Free Bank
 
-**Path:** `projects/free-bank/`
-**Mission:** Eliminate extractive banking through zero-fee DeFi, MIT licensed, BRICS-compatible.
-
-| File | Description |
-|---|---|
-| `banking-revolution-archive.md` | 7-document attack on traditional banking: history, feature deconstruction, AI blueprint, economic case, BRICS alignment |
+> **🔒 QUARANTINED** — Banking content must live in a private repository.
+> Files moved to `quarantine/projects/free-bank/`. See [quarantine/README.md](../quarantine/README.md).
 
 ---
 

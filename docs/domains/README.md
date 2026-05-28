@@ -11,7 +11,7 @@
 | [Aluminum OS](./aluminum-os.md) | Constitutional OS doctrine, implementation notes, and core system entrypoints. |
 | [Archive](./archive.md) | GPTBrain, council, governance, and archival subtrees. |
 | [Governance](./governance.md) | Policy, ratification, ADRs, and canon boundary surfaces. |
-| [Projects](./projects.md) | Aetherforge, Chinook Guardian, Free Bank, and other project workstreams. |
+| [Projects](./projects.md) | Aetherforge, Chinook Guardian, and other project workstreams. |
 
 ## Related Topics
 

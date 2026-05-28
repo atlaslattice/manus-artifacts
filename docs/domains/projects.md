@@ -6,14 +6,13 @@
 
 ## Scope
 
-This domain gathers project-specific artifacts, including Aetherforge gameplay work, Three-Tier Autonomy governance, Free Bank research, and Chinook Guardian.
+This domain gathers project-specific artifacts, including Aetherforge gameplay work, Three-Tier Autonomy governance, and Chinook Guardian.
 
 ## Key Files
 
 - [Mission Charter](../../projects/AETHERFORGE_LATTICE_GPTDREAM_MISSION_CHARTER_v0.1.md)
 - [Aetherforge Game Loop Spec](../../projects/aetherforge-game-world/AETHERFORGE_GAME_LOOP_SPEC_v0.1.md)
 - [Three-Tier Autonomy Doctrine](../../projects/three-tier-autonomy/doctrine.md)
-- [Free Bank Banking Revolution Archive](../../projects/free-bank/banking-revolution-archive.md)
 - [Chinook Guardian v1.0](../../projects/chinook-guardian/v1.0.md)
 
 ## Start Here

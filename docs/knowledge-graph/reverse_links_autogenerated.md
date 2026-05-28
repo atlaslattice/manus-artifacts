@@ -29,7 +29,7 @@
 | `AL-SYS-001` | Aluminum OS Core README | `AL-GOV-001` (implemented_by) |
 | `AL-SYS-002` | BAZINGA v0.1 Launch Decree | — |
 | `AL-GOV-003` | Three-Tier Autonomy Doctrine | — |
-| `AL-GOV-004` | Free Bank Banking Revolution Archive | — |
+| `AL-GOV-004` | Free Bank Banking Revolution Archive 🔒 QUARANTINED | — |
 | `AL-GOV-005` | Chinook Guardian v1.0 | — |
 | `AL-BRAIN-001` | GPTBrain Manifest 2026-05-09 | `AL-BRAIN-002` (part_of)<br>`AL-BRAIN-003` (indexes)<br>`AL-LOG-003` (part_of) |
 | `AL-BRAIN-002` | REM-8 Dream Protocol | — |

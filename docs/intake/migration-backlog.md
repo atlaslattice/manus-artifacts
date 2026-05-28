@@ -27,7 +27,7 @@ Strategic value is scored by: flagship importance, public legibility, dependency
 | 9 | BAZINGA v0.2 supporting notes | bazinga | Bridges governance theory and executable middleware. |
 | 9 | Additional KG registry candidate artifacts | knowledge-graph | Expands discoverability and machine-readable coverage. |
 | 9 | Ratification packet source evidence imports | ratification | Needed to move core candidates into review. |
-| 9 | Free Bank strategy annexes | free-bank | High public-interest value and strong differentiator. |
+| 9 | Free Bank strategy annexes | free-bank | 🔒 QUARANTINED — banking content; move to private repo. |
 | 8 | Health sovereignty source materials | health | Mission-critical for patient-rights framing and sensitive provenance handling. |
 | 8 | Constitutional convention notes | governance | Supports legitimacy and governance transparency. |
 | 8 | Chinook Guardian supporting documents | aerospace | Expands domain diversity and flagship breadth. |

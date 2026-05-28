@@ -95,7 +95,28 @@ Before private repo details can be surfaced publicly:
 [ ] export logged
 ```
 
-## 6. Madden booth call
+## 6. Quarantine Policy (2026-05-28)
+
+Atlas Lattice mandates quarantine for any artifact meeting either criterion:
+
+```text
+QUARANTINE_TRIGGER_A: artifact contains the word "hacker" or "Hacker"
+QUARANTINE_TRIGGER_B: artifact primarily refers to banking, banks, or financial system disruption
+```
+
+Quarantined artifacts must be:
+1. Moved to `quarantine/` staging directory in the public repo (transitional only)
+2. Migrated to a dedicated **private** GitHub repository as soon as possible
+3. Removed from `quarantine/` once the private repo is confirmed
+
+Current quarantined artifacts (2026-05-28):
+- `quarantine/projects/free-bank/` — banking revolution content
+- `quarantine/codebases/free-bank/` — Free Bank Technical Blueprint
+- `quarantine/codebases/other/fill_forms.py` — bank form references
+- `quarantine/codebases/other/overlay_text_form29.py` — bank form references
+- `quarantine/codebases/other/biohacker_sheldon_grok_v5.json` — contains word "hacker"
+
+## 7. Madden booth call
 
 BOOM. Public islands go on the tourist map.
 Private islands stay under fog until Dave opens the gate.

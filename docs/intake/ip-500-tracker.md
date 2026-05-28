@@ -26,7 +26,7 @@ canon_status: candidate
 | IP-007 | Aetherforge Game Loop Spec | aetherforge | Repo | MIGRATED | 9 | 2026-Q3 |
 | IP-008 | Mission Charter | mission | Repo | PUBLISHED | 10 | 2026-Q3 |
 | IP-009 | Three-Tier Autonomy Doctrine | governance | Repo | PUBLISHED | 9 | 2026-Q3 |
-| IP-010 | Free Bank Banking Revolution Archive | free-bank | Repo | MIGRATED | 8 | 2026-Q4 |
+| IP-010 | Free Bank Banking Revolution Archive | free-bank | Repo | QUARANTINED | 8 | 2026-Q4 |
 | IP-011 | Chinook Guardian v1.0 | aerospace | Repo | MIGRATED | 7 | 2026-Q4 |
 | IP-012 | Texas Neuro Rehab Patient Rights | health | Repo | QUEUED | 8 | 2026-Q4 |
 | IP-013 | Austin In-Home PT Guide | health | Repo | QUEUED | 6 | 2026-Q4 |

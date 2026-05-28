@@ -347,14 +347,15 @@
       "id": "AL-GOV-004",
       "title": "Free Bank Banking Revolution Archive",
       "artifact_type": "archive",
-      "status": "CANDIDATE",
-      "path": "projects/free-bank/banking-revolution-archive.md",
+      "status": "quarantined",
+      "path": "quarantine/projects/free-bank/banking-revolution-archive.md",
       "links": [
         {
           "relation": "relates_to",
           "target_id": "AL-MISSION-001"
         }
-      ]
+      ],
+      "visibility": "private"
     },
     {
       "id": "AL-GOV-005",

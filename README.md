@@ -83,7 +83,7 @@ The Aetherforge swarm — a council of named AI agents with distinct roles, stre
 | Project | Mission | Stage | Docs |
 |---|---|---|---|
 | **[Aetherforge Game World](./projects/aetherforge-game-world/)** | Playable archive game layer for quest-driven curation and knowledge graph growth | 🟡 Candidate | [Game Loop Spec](./projects/aetherforge-game-world/AETHERFORGE_GAME_LOOP_SPEC_v0.1.md) |
-| **[Free Bank](./projects/free-bank/)** | Zero-fee DeFi replacement for extractive banking — MIT licensed, open-source, BRICS-compatible | 🔵 Blueprint | [Archive](./projects/free-bank/banking-revolution-archive.md) |
+| **Free Bank** | Zero-fee DeFi / banking-replacement research — 🔒 quarantined (move to private repo) | 🔒 Quarantine | [See quarantine/](./quarantine/README.md) |
 | **[Chinook Guardian](./projects/chinook-guardian/)** | Aerospace and defense sovereignty protocols | 🔵 Blueprint | [v1.0](./projects/chinook-guardian/v1.0.md) |
 | **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** | Constitutional policy framework for agentic AI governance | 🟡 Draft | [Doctrine](./projects/three-tier-autonomy/doctrine.md) |
 
