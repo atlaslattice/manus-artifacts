@@ -21,6 +21,7 @@ TARGET_GLOBS = [
 PROBE_HTTP = os.environ.get("EXTERNAL_LINK_HTTP_PROBE", "0") == "1"
 REQUEST_TIMEOUT_SECONDS = 8
 MAX_RETRIES = 3
+RETRY_DELAY_BASE_SECONDS = 0.3
 
 
 def find_targets() -> list[Path]:
@@ -48,15 +49,15 @@ def probe_url(url: str) -> tuple[bool, str | None]:
                         if 200 <= status < 400:
                             return True, None
                         return False, f"unexpected status {status}"
-                except Exception as get_exc:  # noqa: BLE001
+                except (error.URLError, TimeoutError, OSError) as get_exc:
                     if attempt == MAX_RETRIES:
                         return False, f"{type(get_exc).__name__}: {get_exc}"
             elif attempt == MAX_RETRIES:
                 return False, f"HTTPError {exc.code}"
-        except Exception as exc:  # noqa: BLE001
+        except (error.URLError, TimeoutError, OSError) as exc:
             if attempt == MAX_RETRIES:
                 return False, f"{type(exc).__name__}: {exc}"
-        time.sleep(0.3 * attempt)
+        time.sleep(RETRY_DELAY_BASE_SECONDS * attempt)
     return False, "exhausted retries"
 
 

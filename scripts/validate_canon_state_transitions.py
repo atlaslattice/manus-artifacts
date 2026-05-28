@@ -110,7 +110,15 @@ def main() -> int:
             continue
 
         transition_count += 1
-        if before_state is None or after_state is None:
+        if before_state is None:
+            if after_state in {"draft", "candidate"}:
+                continue
+            errors.append(
+                f"{rel_path}: unable to classify state transition "
+                f"({before_state or 'missing/unknown'} -> {after_state or 'missing/unknown'})"
+            )
+            continue
+        if after_state is None:
             errors.append(
                 f"{rel_path}: unable to classify state transition "
                 f"({before_state or 'missing/unknown'} -> {after_state or 'missing/unknown'})"

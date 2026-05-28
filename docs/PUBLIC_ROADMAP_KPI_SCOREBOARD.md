@@ -23,7 +23,7 @@ Public scoreboard for roadmap KPI visibility and trend tracking.
 This scoreboard is backed by auto-generated data:
 
 - [QUALITY_DASHBOARD_DATA.json](./generated/QUALITY_DASHBOARD_DATA.json)
-- Generation command: `python /tmp/workspace/atlaslattice/manus-artifacts/scripts/build_quality_dashboard_data.py`
+- Generation command: `python scripts/build_quality_dashboard_data.py`
 
 ## Related
 

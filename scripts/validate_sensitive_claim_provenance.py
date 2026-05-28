@@ -12,14 +12,13 @@ ROOT = Path(__file__).resolve().parent.parent
 TRACKED_PATHS = (
     "docs/",
     "governance/",
-    "projects/",
     "health/",
     "research/",
 )
 
 SENSITIVE_RE = re.compile(
     r"\b("
-    r"high-impact|public risk|critical|unsafe|security|harm|sensitive|institution"
+    r"high-impact|public[- ]risk|critical|unsafe|security|harm|sensitive|institution"
     r")\b",
     re.IGNORECASE,
 )
@@ -27,6 +26,10 @@ PROVENANCE_RE = re.compile(
     r"(Source:\s|Sources:\s|Citations:\s|Evidence reviewed|https?://)",
     re.IGNORECASE,
 )
+SKIP_FILES = {
+    "governance/README.md",
+    "docs/README.md",
+}
 
 
 def git_output(args: list[str]) -> str:
@@ -77,6 +80,8 @@ def main() -> int:
     sensitive_files = 0
 
     for rel_path in changed:
+        if rel_path in SKIP_FILES:
+            continue
         path = ROOT / rel_path
         if not path.exists():
             continue

@@ -41,7 +41,7 @@ It should help contributors, reviewers, and public readers see whether the repos
 ## Auto-refresh data snapshot
 
 - Data artifact: [generated/QUALITY_DASHBOARD_DATA.json](./generated/QUALITY_DASHBOARD_DATA.json)
-- Pipeline command: `python /tmp/workspace/atlaslattice/manus-artifacts/scripts/build_quality_dashboard_data.py`
+- Pipeline command: `python scripts/build_quality_dashboard_data.py`
 - CI guards: `ring3-validation-hardening.yml` and `quality-dashboard-auto-refresh.yml`
 
 ## How to read this dashboard
