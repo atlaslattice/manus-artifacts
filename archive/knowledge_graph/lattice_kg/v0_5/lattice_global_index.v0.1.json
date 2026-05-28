@@ -1,8 +1,8 @@
 {
   "schema_id": "lattice_global_index.v0.1",
-  "generated_at_utc": "2026-05-28T17:39:34.706692Z",
+  "generated_at_utc": "2026-05-28T17:40:49.798961Z",
   "repository_root": "/tmp/workspace/atlaslattice/manus-artifacts",
-  "snapshot_fingerprint": "87baf4bd20b6d68becb05ea508bfa197aa136c2e5c1a552c571c8977b9ebf795",
+  "snapshot_fingerprint": "0b3e59cd68b4c8317326a71db5af798f89a28ec131aad04e61a76c26eb33be3f",
   "routes": [
     {
       "route_id": "ROUTE-.GITHUB-CI_GOVERNANCE",
@@ -155,7 +155,7 @@
       "route_id": "ROUTE-PROJECTS-PROJECT_EXECUTION",
       "domain": "projects",
       "lane": "project_execution",
-      "artifact_count": 8,
+      "artifact_count": 9,
       "log_count": 0
     },
     {
@@ -202,7 +202,7 @@
     }
   ],
   "link_health": {
-    "markdown_artifacts_total": 775,
+    "markdown_artifacts_total": 776,
     "underlinked_markdown_artifacts": 752,
     "unresolved_repo_links": 11
   },
@@ -417,9 +417,9 @@
       "domain": "_root",
       "lane": "general",
       "is_log": false,
-      "size_bytes": 5130,
-      "sha256": "8155807cf6cc192da228e88a5794a960d79d193361353ad28de48be7aed9a369",
-      "last_modified_utc": "2026-05-28T17:38:14.788903Z",
+      "size_bytes": 5284,
+      "sha256": "e6b768af8de6033475122a59853172eeba2ecfba8974f4c858dbbf85d23f6c54",
+      "last_modified_utc": "2026-05-28T17:40:24.431670Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
@@ -450,6 +450,7 @@
         "manus-vault",
         "projects/aetherforge-144-task-campaign-2026-05-27.md",
         "projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md",
+        "projects/aetherforge-next144-taskboard-2026-05-28.md",
         "projects/aetherforge-top10-taskboard-2026-05-28.md",
         "projects/aetherforge-world-class-authoritative-roadmap-v0.1.md",
         "projects/chinook-guardian",
@@ -17886,9 +17887,9 @@
       "domain": "projects",
       "lane": "project_execution",
       "is_log": false,
-      "size_bytes": 1095,
-      "sha256": "de2c94223db761f8b110d856ba3a312712c4c0f4466175958864719b85a74f21",
-      "last_modified_utc": "2026-05-28T17:38:14.912620Z",
+      "size_bytes": 1227,
+      "sha256": "e6b96e4ea4ed4df6c37b70c89b82652a3040ed8254ed9f92aefccf5c5af6e07c",
+      "last_modified_utc": "2026-05-28T17:40:30.111615Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
@@ -17896,6 +17897,7 @@
         "archive/aetherforge/gptdreampp-openai/README.md",
         "projects/aetherforge-144-task-campaign-2026-05-27.md",
         "projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md",
+        "projects/aetherforge-next144-taskboard-2026-05-28.md",
         "projects/aetherforge-top10-taskboard-2026-05-28.md",
         "projects/aetherforge-world-class-authoritative-roadmap-v0.1.md",
         "projects/chinook-guardian",
@@ -17912,14 +17914,15 @@
       "domain": "projects",
       "lane": "project_execution",
       "is_log": false,
-      "size_bytes": 1663,
-      "sha256": "0bc2dfa79183c2dd46994e6600ba2b3554af24c9ee94d92f9e6ce40e85cace7d",
-      "last_modified_utc": "2026-05-28T17:38:14.912755Z",
+      "size_bytes": 1769,
+      "sha256": "e846588ba03662b578aab7bd8e70fbc639ebc0ec8f403d3ebde6f7b9625e91e2",
+      "last_modified_utc": "2026-05-28T17:40:35.210558Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
       "outbound_repo_links": [
         "projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md",
+        "projects/aetherforge-next144-taskboard-2026-05-28.md",
         "projects/aetherforge-top10-taskboard-2026-05-28.md",
         "projects/aetherforge-world-class-authoritative-roadmap-v0.1.md"
       ],
@@ -17928,6 +17931,7 @@
         "README.md",
         "projects/README.md",
         "projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md",
+        "projects/aetherforge-next144-taskboard-2026-05-28.md",
         "projects/aetherforge-top10-taskboard-2026-05-28.md"
       ],
       "source_receipt": "projects/aetherforge-144-task-campaign-2026-05-27.md"
@@ -17961,6 +17965,31 @@
       "source_receipt": "projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md"
     },
     {
+      "artifact_id": "ATLAS-KG-f093250f8e58ea79",
+      "path": "projects/aetherforge-next144-taskboard-2026-05-28.md",
+      "domain": "projects",
+      "lane": "project_execution",
+      "is_log": false,
+      "size_bytes": 8419,
+      "sha256": "d4c89971e9d3dd9fc630f45b6f72947868762e60eba3817b43748ab8cf0207a0",
+      "last_modified_utc": "2026-05-28T17:40:20.240707Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "outbound_repo_links": [
+        "projects/aetherforge-144-task-campaign-2026-05-27.md",
+        "projects/aetherforge-top10-taskboard-2026-05-28.md",
+        "projects/aetherforge-world-class-authoritative-roadmap-v0.1.md"
+      ],
+      "unresolved_repo_links": [],
+      "inbound_repo_links": [
+        "README.md",
+        "projects/README.md",
+        "projects/aetherforge-144-task-campaign-2026-05-27.md"
+      ],
+      "source_receipt": "projects/aetherforge-next144-taskboard-2026-05-28.md"
+    },
+    {
       "artifact_id": "ATLAS-KG-c3de83596f709d6c",
       "path": "projects/aetherforge-top10-taskboard-2026-05-28.md",
       "domain": "projects",
@@ -17982,7 +18011,8 @@
         "README.md",
         "projects/README.md",
         "projects/aetherforge-144-task-campaign-2026-05-27.md",
-        "projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md"
+        "projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md",
+        "projects/aetherforge-next144-taskboard-2026-05-28.md"
       ],
       "source_receipt": "projects/aetherforge-top10-taskboard-2026-05-28.md"
     },
@@ -18004,6 +18034,7 @@
         "README.md",
         "projects/README.md",
         "projects/aetherforge-144-task-campaign-2026-05-27.md",
+        "projects/aetherforge-next144-taskboard-2026-05-28.md",
         "projects/aetherforge-top10-taskboard-2026-05-28.md"
       ],
       "source_receipt": "projects/aetherforge-world-class-authoritative-roadmap-v0.1.md"
