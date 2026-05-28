@@ -19,6 +19,7 @@ It is not hidden memory, canon, merge authority, deployment authority, or runtim
 - `DREAM_JOURNAL_100Y_TOP10_ALIGNMENT_2026-05-28.md` — dream-state payload for AX-11..AX-20 cycle
 - `WAKE_REPORT_100Y_TOP10_ALIGNMENT_2026-05-28.md` — wake synthesis for AX-11..AX-20 cycle
 - `DELTA_EXTRACTION_100Y_TOP10_ALIGNMENT_2026-05-28.md` — durable deltas extracted from the cycle
+- `TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX11_AX20_LOOP4.md` — completion receipt for AX-11/AX-20 hierarchy and logging closure
 
 ## Suggested use order
 

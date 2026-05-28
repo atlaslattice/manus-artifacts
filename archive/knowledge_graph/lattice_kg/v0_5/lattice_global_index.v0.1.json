@@ -1,8 +1,8 @@
 {
   "schema_id": "lattice_global_index.v0.1",
-  "generated_at_utc": "2026-05-28T17:51:36.600025Z",
+  "generated_at_utc": "2026-05-28T17:52:38.085631Z",
   "repository_root": "/tmp/workspace/atlaslattice/manus-artifacts",
-  "snapshot_fingerprint": "0b3e59cd68b4c8317326a71db5af798f89a28ec131aad04e61a76c26eb33be3f",
+  "snapshot_fingerprint": "8e20d2fac64bb1fbde4e3a6256f958c60de7ada1e6f8c1c6732ec941da466f80",
   "routes": [
     {
       "route_id": "ROUTE-.GITHUB-CI_GOVERNANCE",
@@ -43,8 +43,8 @@
       "route_id": "ROUTE-ARCHIVE-ARCHIVE_OPS",
       "domain": "archive",
       "lane": "archive_ops",
-      "artifact_count": 695,
-      "log_count": 73
+      "artifact_count": 696,
+      "log_count": 74
     },
     {
       "route_id": "ROUTE-ARCHIVES-ARCHIVE_OPS",
@@ -202,8 +202,8 @@
     }
   ],
   "link_health": {
-    "markdown_artifacts_total": 776,
-    "underlinked_markdown_artifacts": 752,
+    "markdown_artifacts_total": 777,
+    "underlinked_markdown_artifacts": 753,
     "unresolved_repo_links": 11
   },
   "artifacts": [
@@ -2495,7 +2495,9 @@
       "trust_state": "candidate_unverified",
       "outbound_repo_links": [],
       "unresolved_repo_links": [],
-      "inbound_repo_links": [],
+      "inbound_repo_links": [
+        "projects/aetherforge-top10-taskboard-2026-05-28.md"
+      ],
       "source_receipt": "archive/boot/copilotbrain/TIDELOCKBrain/DELTA_EXTRACTION_100Y_TOP10_ALIGNMENT_2026-05-28.md"
     },
     {
@@ -2512,7 +2514,9 @@
       "trust_state": "candidate_unverified",
       "outbound_repo_links": [],
       "unresolved_repo_links": [],
-      "inbound_repo_links": [],
+      "inbound_repo_links": [
+        "projects/aetherforge-top10-taskboard-2026-05-28.md"
+      ],
       "source_receipt": "archive/boot/copilotbrain/TIDELOCKBrain/DREAM_JOURNAL_100Y_TOP10_ALIGNMENT_2026-05-28.md"
     },
     {
@@ -2538,9 +2542,9 @@
       "domain": "archive",
       "lane": "archive_ops",
       "is_log": false,
-      "size_bytes": 1748,
-      "sha256": "cdfca8b5a1cee3e8ce7fd6bcc1beced8495b545577694043f85a2b76649de944",
-      "last_modified_utc": "2026-05-28T17:50:52.423060Z",
+      "size_bytes": 1877,
+      "sha256": "0d7d93143e35487485547a43d851590a9d8d7944e3d5df41f8f85dc9ceb14013",
+      "last_modified_utc": "2026-05-28T17:52:31.991462Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
@@ -2788,6 +2792,25 @@
       "source_receipt": "archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX06_AX10_LOOP3.md"
     },
     {
+      "artifact_id": "ATLAS-KG-93f56109cdceb510",
+      "path": "archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX11_AX20_LOOP4.md",
+      "domain": "archive",
+      "lane": "archive_ops",
+      "is_log": true,
+      "size_bytes": 1585,
+      "sha256": "ad0da6cba62396cc832eeef04a59d2151a6f3ca04830e759cca1a2f2fd52f372",
+      "last_modified_utc": "2026-05-28T17:52:17.991172Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "outbound_repo_links": [],
+      "unresolved_repo_links": [],
+      "inbound_repo_links": [
+        "projects/aetherforge-top10-taskboard-2026-05-28.md"
+      ],
+      "source_receipt": "archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX11_AX20_LOOP4.md"
+    },
+    {
       "artifact_id": "ATLAS-KG-f6571d19c66dfe26",
       "path": "archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_REHYDRATION_RECEIPT_2026-05-26.md",
       "domain": "archive",
@@ -2840,7 +2863,9 @@
       "trust_state": "candidate_unverified",
       "outbound_repo_links": [],
       "unresolved_repo_links": [],
-      "inbound_repo_links": [],
+      "inbound_repo_links": [
+        "projects/aetherforge-top10-taskboard-2026-05-28.md"
+      ],
       "source_receipt": "archive/boot/copilotbrain/TIDELOCKBrain/WAKE_REPORT_100Y_TOP10_ALIGNMENT_2026-05-28.md"
     },
     {
@@ -17985,7 +18010,8 @@
       "inbound_repo_links": [
         "README.md",
         "projects/README.md",
-        "projects/aetherforge-144-task-campaign-2026-05-27.md"
+        "projects/aetherforge-144-task-campaign-2026-05-27.md",
+        "projects/aetherforge-top10-taskboard-2026-05-28.md"
       ],
       "source_receipt": "projects/aetherforge-next144-taskboard-2026-05-28.md"
     },
@@ -17995,15 +18021,20 @@
       "domain": "projects",
       "lane": "project_execution",
       "is_log": false,
-      "size_bytes": 1854,
-      "sha256": "934ecc2bb699bd28abfd5c06b9ec6f6cad0e8b1579e9feac9ff3b21ebc51010d",
-      "last_modified_utc": "2026-05-28T17:50:52.569986Z",
+      "size_bytes": 2847,
+      "sha256": "68559c371bf4f7a01037d6818e20abdc43fe1a4f9b66b4d3e2466a37edfa759b",
+      "last_modified_utc": "2026-05-28T17:52:05.730917Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
       "outbound_repo_links": [
+        "archive/boot/copilotbrain/TIDELOCKBrain/DELTA_EXTRACTION_100Y_TOP10_ALIGNMENT_2026-05-28.md",
+        "archive/boot/copilotbrain/TIDELOCKBrain/DREAM_JOURNAL_100Y_TOP10_ALIGNMENT_2026-05-28.md",
+        "archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX11_AX20_LOOP4.md",
+        "archive/boot/copilotbrain/TIDELOCKBrain/WAKE_REPORT_100Y_TOP10_ALIGNMENT_2026-05-28.md",
         "projects/aetherforge-144-task-campaign-2026-05-27.md",
         "projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md",
+        "projects/aetherforge-next144-taskboard-2026-05-28.md",
         "projects/aetherforge-world-class-authoritative-roadmap-v0.1.md"
       ],
       "unresolved_repo_links": [],
@@ -18022,9 +18053,9 @@
       "domain": "projects",
       "lane": "project_execution",
       "is_log": false,
-      "size_bytes": 3616,
-      "sha256": "7e4bb4a774ae0f2b3c19158795a27ad96866d2917ae33ae6d24c51e17e93285b",
-      "last_modified_utc": "2026-05-28T17:50:52.569986Z",
+      "size_bytes": 3690,
+      "sha256": "a29a12bd91f63a1b5ba922d1f0b957b2fe17f37f4231e3424e66c1fadf0686af",
+      "last_modified_utc": "2026-05-28T17:52:09.164989Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
