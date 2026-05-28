@@ -194,3 +194,18 @@
 
 - **Priority 1:** Tasks 25–36 (Wave 03, full)  
 - **Priority 2:** Tasks 37–48 (Wave 04, full)
+
+## Execution receipts (2026-05-28)
+
+- **Task 33 (Read-next sections):**  
+  - `/docs/README.md`  
+  - `/docs/START_HERE.md`  
+  - `/docs/PUBLIC_REPO_NORTH_STAR.md`  
+  - `/docs/REPOSITORY_ARCHITECTURE_OVERVIEW.md`  
+  - `/docs/PUBLIC_EXCELLENCE_PLAYBOOK.md`
+- **Task 34 (FAQ):**  
+  - `/docs/FAQ.md`
+- **Task 35 (Anti-confusion terminology notes):**  
+  - `/docs/ANTI_CONFUSION_TERMINOLOGY_NOTES.md`
+- **Task 36 (Docs style guide):**  
+  - `/docs/DOCS_STYLE_GUIDE.md`

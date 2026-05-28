@@ -16,11 +16,14 @@
 | Explore knowledge-graph node types | [LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md](./LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md) |
 | Understand relation vocabulary | [ARTIFACT_RELATIONSHIP_TYPES.md](./ARTIFACT_RELATIONSHIP_TYPES.md) |
 | Look up key terms | [GLOSSARY.md](./GLOSSARY.md) |
+| Check recurring contributor questions | [FAQ.md](./FAQ.md) |
 
 ## Standards and policy
 
 - [CANON_SOURCE_OF_TRUTH_POLICY.md](./CANON_SOURCE_OF_TRUTH_POLICY.md)
 - [CROSS_DOMAIN_LINK_POLICY.md](./CROSS_DOMAIN_LINK_POLICY.md)
+- [DOCS_STYLE_GUIDE.md](./DOCS_STYLE_GUIDE.md)
+- [ANTI_CONFUSION_TERMINOLOGY_NOTES.md](./ANTI_CONFUSION_TERMINOLOGY_NOTES.md)
 - [PUBLIC_EXCELLENCE_PLAYBOOK.md](./PUBLIC_EXCELLENCE_PLAYBOOK.md)
 - [PUBLIC_REPO_NORTH_STAR.md](./PUBLIC_REPO_NORTH_STAR.md)
 
@@ -36,3 +39,9 @@
 - [Projects index](../projects/README.md)
 - [Archive index](../archive/README.md)
 - [Schemas index](../schemas/README.md)
+
+## Read next
+
+- [START_HERE.md](./START_HERE.md)
+- [FAQ.md](./FAQ.md)
+- [DOCS_STYLE_GUIDE.md](./DOCS_STYLE_GUIDE.md)

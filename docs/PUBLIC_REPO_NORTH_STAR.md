@@ -23,3 +23,9 @@ Build and maintain a public, open-source, world-class knowledge archive that is 
 ## Current Campaign
 
 Execution is tracked in [Aetherforge 144-Task Campaign](../projects/aetherforge-144-task-campaign-2026-05-27.md).
+
+## Read next
+
+- [Public Excellence Playbook](./PUBLIC_EXCELLENCE_PLAYBOOK.md)
+- [Repository Architecture Overview](./REPOSITORY_ARCHITECTURE_OVERVIEW.md)
+- [Aetherforge Next-144 Taskboard](../projects/aetherforge-next144-taskboard-2026-05-28.md)

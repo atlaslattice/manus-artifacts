@@ -36,3 +36,9 @@ A change is considered complete only when it is:
 - Coverage and reliability of quality gates.
 - Artifact provenance and citation quality.
 - Public discoverability and onboarding success.
+
+## Read next
+
+- [Public Repository North Star](./PUBLIC_REPO_NORTH_STAR.md)
+- [Documentation FAQ](./FAQ.md)
+- [Aetherforge Next-144 Taskboard](../projects/aetherforge-next144-taskboard-2026-05-28.md)

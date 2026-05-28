@@ -63,6 +63,12 @@ See the full [Glossary](./GLOSSARY.md) for definitions.
 - [Repository Architecture Overview](./REPOSITORY_ARCHITECTURE_OVERVIEW.md)
 - [Projects Index](../projects/README.md)
 
+## Read next
+
+- [Documentation FAQ](./FAQ.md)
+- [Docs Style Guide](./DOCS_STYLE_GUIDE.md)
+- [Anti-Confusion Terminology Notes](./ANTI_CONFUSION_TERMINOLOGY_NOTES.md)
+
 ---
 
 *This file is part of the Atlas Lattice public archive. All content is MIT licensed.*

@@ -35,7 +35,7 @@ This document provides a one-page architecture map of the Manus Artifacts reposi
 - **Automation quality:** Workflow checks for formatting, links, and safety controls.
 - **Knowledge graph quality:** Node/index consistency and relationship integrity.
 
-## Related
+## Read next
 
 - [Docs Index](./README.md)
 - [Start Here](./START_HERE.md)
