@@ -101,6 +101,7 @@ Individual brain folders for swarm agents.
 | [Unified Field v4.0](unified-field-v4.0.md) | 🔶 Candidate |
 | [Operational Manifest v1.0.0-alpha](operational-manifest-v1.0.0-alpha.md) | 🔶 Candidate |
 | [Governance and Ratification Process](governance-ratification-process.md) | 🔶 Candidate |
+| [Versioning and Release Policy](versioning-release-policy.md) | 🔶 Candidate |
 | [Artifact Provenance Header Template](artifact-provenance-header-template.md) | 🔶 Candidate |
 | [Asset Catalogue March 2026](asset-catalogue-march-2026.md) | 📁 Collection |
 

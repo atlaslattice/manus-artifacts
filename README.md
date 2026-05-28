@@ -53,6 +53,7 @@ Need vocabulary? → **[docs/GLOSSARY.md](./docs/GLOSSARY.md)**
 - **[Council](./council/)** — Trinity and Pantheon Council session archives.
 - **[Council Reviews](./council-reviews/)** — External reviews and validation.
 - **[Governance & Ratification Process](./docs/governance-ratification-process.md)** — candidate/reviewed/ratified flow, roles, and adjudication path.
+- **[Versioning & Release Policy](./docs/versioning-release-policy.md)** — version classes, release lanes, and supersession rules for archive artifacts.
 - **[Artifact Provenance Header Template](./docs/artifact-provenance-header-template.md)** — reusable governance/provenance metadata template.
 
 ### Archives & Research

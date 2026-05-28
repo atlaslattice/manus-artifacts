@@ -24,6 +24,8 @@ section below.
   relay/working-vault layers, not canon authorities.
 - Follow the repository governance flow in
   [`docs/governance-ratification-process.md`](../docs/governance-ratification-process.md).
+- Follow the repository versioning and release guidance in
+  [`docs/versioning-release-policy.md`](../docs/versioning-release-policy.md).
 - Candidate artifacts are welcome via pull request. Label your PR clearly
   with the domain (e.g., `aluminum-os`, `gptbrain`, `council`).
 

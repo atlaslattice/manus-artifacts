@@ -60,6 +60,7 @@ It is organized around several major domains:
 
 - [Archive Index](ARCHIVE_INDEX.md) — full domain index
 - [Glossary](GLOSSARY.md) — vocabulary of this universe
+- [Versioning and Release Policy](versioning-release-policy.md) — release and supersession rules for living artifacts
 - [Aetherforge Taskboard](../projects/aetherforge-top50-taskboard-2026-05-26.md) — active sprint
 
 ---

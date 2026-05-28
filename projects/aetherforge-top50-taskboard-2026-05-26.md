@@ -15,7 +15,7 @@
 - [x] **#4** Add SECURITY policy and responsible disclosure path
 - [x] **#5** Define canonical vs candidate artifact states in governance doc
 - [ ] **#6** Add support/contact paths (issue templates, discussion categories)
-- [ ] **#7** Add versioning + release policy doc
+- [x] **#7** Add versioning + release policy doc
 - [ ] **#8** Add legal/privacy boundaries note for health and personal content
 - [x] **#9** Publish governance/ratification process as standalone doc
 - [x] **#10** Nail down artifact provenance header template
@@ -86,12 +86,12 @@
 
 | Ring | Complete | Total | % |
 |---|---|---|---|
-| Ring 1 — Foundation | 7 | 10 | 70% |
+| Ring 1 — Foundation | 8 | 10 | 80% |
 | Ring 2 — Structure | 4 | 10 | 40% |
 | Ring 3 — Quality | 0 | 10 | 0% |
 | Ring 4 — Trust | 6 | 10 | 60% |
 | Ring 5 — Reach | 2 | 10 | 20% |
-| **Total** | **19** | **50** | **38%** |
+| **Total** | **20** | **50** | **40%** |
 
 ---
 
