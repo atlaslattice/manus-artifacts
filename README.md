@@ -46,8 +46,9 @@
 - **[Aetherforge Metatron's Cube Top-50](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)** — World-class public archive execution board.
 - **[Aetherforge Top-10 Taskboard](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — High-leverage council task sprint board.
 - **[Aetherforge 144-Task Campaign](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — Full public/world-class implementation campaign.
+- **[Aetherforge Next-144 Taskboard](./projects/aetherforge-next144-taskboard-2026-05-28.md)** — Ordered execution queue for the most enjoyable world-class 144-task run.
 
-Execution hierarchy: 144-Task Campaign (program) → Top-50 (portfolio) → Top-10 (sprint).
+Execution hierarchy: 144-Task Campaign (program) → Next-144 (execution queue) → Top-50 (portfolio) → Top-10 (sprint).
 
 ## Mission Triad (Current Framing)
 
