@@ -4,6 +4,9 @@
 [![CI: Repo Hygiene](https://github.com/atlaslattice/manus-artifacts/actions/workflows/repo-hygiene-checks.yml/badge.svg)](https://github.com/atlaslattice/manus-artifacts/actions/workflows/repo-hygiene-checks.yml)
 [![CI: CodeQL](https://github.com/atlaslattice/manus-artifacts/actions/workflows/codeql.yml/badge.svg)](https://github.com/atlaslattice/manus-artifacts/actions/workflows/codeql.yml)
 [![CI: KG Quality Gates](https://github.com/atlaslattice/manus-artifacts/actions/workflows/lattice-kg-quality-gates.yml/badge.svg)](https://github.com/atlaslattice/manus-artifacts/actions/workflows/lattice-kg-quality-gates.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/atlaslattice/manus-artifacts/badge)](https://scorecard.dev/viewer/?uri=github.com/atlaslattice/manus-artifacts)
+[![Last Commit](https://img.shields.io/github/last-commit/atlaslattice/manus-artifacts)](https://github.com/atlaslattice/manus-artifacts/commits/main)
+[![GitHub Discussions](https://img.shields.io/github/discussions/atlaslattice/manus-artifacts)](https://github.com/atlaslattice/manus-artifacts/discussions)
 
 A **world-class, fully public, open-source** knowledge-graph archive of research,
 governance frameworks, AI system architectures, dream protocols, and constitutional

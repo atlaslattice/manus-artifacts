@@ -35,8 +35,8 @@
 - [x] 17. Wave-2 task 8: SBOM generation workflow (`.github/workflows/sbom.yml`)
 - [x] 18. Wave-2 task 9: Repository health dashboard doc (`docs/HEALTH_DASHBOARD.md`)
 - [x] 19. Wave-2 task 10: Aetherforge mission intake template (`.github/ISSUE_TEMPLATE/mission_intake.yml`)
-- [ ] 20. Add OpenSSF Scorecard CI action (`.github/workflows/scorecard.yml`)
-- [ ] 21. Add `shields.io` badges to README — OpenSSF score, last commit, discussions
+- [x] 20. Add OpenSSF Scorecard CI action (`.github/workflows/scorecard.yml`)
+- [x] 21. Add `shields.io` badges to README — OpenSSF score, last commit, discussions
 - [ ] 22. Add semantic versioning + changelog workflow (`release-please` or `semantic-release`)
 - [ ] 23. Add performance/regression CI for Python codebases (benchmark tracking)
 
@@ -89,12 +89,12 @@
 | Ring | Done | Total | % |
 |---|---|---|---|
 | Center (Pre-flight) | 5 | 5 | 100% |
-| Inner Ring 1 (First Impression) | 3 | 8 | 38% |
-| Inner Ring 2 (CI/CD) | 6 | 10 | 60% |
+| Inner Ring 1 (First Impression) | 4 | 8 | 50% |
+| Inner Ring 2 (CI/CD) | 7 | 10 | 70% |
 | Middle Ring (Docs & Knowledge) | 10 | 10 | 100% |
 | Outer Ring 1 (Security) | 5 | 8 | 63% |
 | Outer Ring 2 (Community) | 1 | 9 | 11% |
-| **Total** | **30** | **50** | **60%** |
+| **Total** | **32** | **50** | **64%** |
 
 ---
 
@@ -105,8 +105,8 @@
 Credential rotation verification remains a manual owner action before final
 public visibility promotion.
 
-**🟡 Quick wins (items 7, 8, 21, 37):** Add repo topics/description, social preview
-image, OpenSSF badge, and branch protection — each takes < 5 minutes in Settings.
+**🟡 Quick wins (items 7, 8, 37):** Add repo topics/description, social preview
+image, and branch protection — each takes < 5 minutes in Settings.
 
 **🟢 Next agent sprint:** advance remaining security hardening and
 launch/community items.
