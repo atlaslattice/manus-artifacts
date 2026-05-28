@@ -1,0 +1,41 @@
+{
+  "snapshot_id": "SNAP-W4-2026-05-28",
+  "session_date": "2026-05-28",
+  "wave": 4,
+  "agent_id": "copilot-wave4-2026-05-28",
+  "status": "Candidate",
+  "campaign": "Next-144",
+  "completed_tasks": [
+    { "task_number": 37, "title": "Expand KG node index v0.2 (40 nodes)", "artifact": "docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md", "xp_earned": 100 },
+    { "task_number": 38, "title": "Sheldonbrain KG subgraph doc", "artifact": "docs/SHELDONBRAIN_KG_SUBGRAPH.md", "xp_earned": 100 },
+    { "task_number": 39, "title": "Aluminum OS KG subgraph doc", "artifact": "docs/ALUMINUM_OS_KG_SUBGRAPH.md", "xp_earned": 100 },
+    { "task_number": 40, "title": "Agent identity card spec", "artifact": "docs/AGENT_IDENTITY_CARD_SPEC.md", "xp_earned": 100 },
+    { "task_number": 41, "title": "Children Swarm derived-lattice exporter", "artifact": "scripts/export_children_swarm_lattice.py", "xp_earned": 150 },
+    { "task_number": 42, "title": "Children Swarm validation tests (14 passing)", "artifact": "tests/test_children_swarm_lattice.py", "xp_earned": 150 },
+    { "task_number": 43, "title": "Evidence bundle format for AI systems", "artifact": "docs/EVIDENCE_BUNDLE_FORMAT.md", "xp_earned": 100 },
+    { "task_number": 44, "title": "Aetherforge game state snapshot format", "artifact": "docs/AETHERFORGE_GAME_STATE_SNAPSHOT.md", "xp_earned": 100 },
+    { "task_number": 45, "title": "GPTDream++ protocol index extension", "artifact": "docs/GPTDREAM_PROTOCOL_INDEX.md", "xp_earned": 100 },
+    { "task_number": 46, "title": "KG hypercube search query spec", "artifact": "docs/KG_SEARCH_QUERY_SPEC.md", "xp_earned": 100 },
+    { "task_number": 47, "title": "Rebuild KG adjacency matrix (40 nodes, 100 edges)", "artifact": "docs/generated/KG_ADJACENCY_MATRIX.json", "xp_earned": 100 },
+    { "task_number": 48, "title": "TIDELOCKBrain Wave-4 REM wake artifact", "artifact": "archive/boot/gptbrain/agents/TIDELOCKBrain/WAKE_REPORT_WAVE4_2026-05-28.md", "xp_earned": 200 }
+  ],
+  "xp_total": 1400,
+  "rings_cleared": ["Wave 4"],
+  "kg_nodes_added": [
+    "N-SHELDON", "N-ALUMINUM", "N-BAZINGA", "N-COUNCIL", "N-GOV-INDEX",
+    "N-RISK", "N-TIDELOCK", "N-GPTBRAIN", "N-SWARM", "N-CHILDREN-SWARM",
+    "N-EVIDENCE", "N-KG-SUBGRAPHS", "N-NEXT144", "N-AETHER-GAME",
+    "N-FREE-BANK", "N-CHINOOK", "N-RESEARCH", "N-HEALTH", "N-GOVERNANCE-OPS"
+  ],
+  "kg_edge_count_delta": 52,
+  "lattice_health": {
+    "node_count": 40,
+    "edge_density": 2.5,
+    "orphan_ratio": 0.0
+  },
+  "provenance": {
+    "taskboard_artifact": "projects/aetherforge-next144-taskboard-2026-05-28.md",
+    "tidelock_wake_artifact": "archive/boot/gptbrain/agents/TIDELOCKBrain/WAKE_REPORT_WAVE4_2026-05-28.md",
+    "pr_url": null
+  }
+}

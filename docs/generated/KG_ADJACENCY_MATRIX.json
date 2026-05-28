@@ -90,6 +90,96 @@
     "N-MISSION": [
       "N-WEEKLY",
       "N-TOP50"
+    ],
+    "N-SHELDON": [
+      "N-ALUMINUM",
+      "N-TIDELOCK",
+      "N-KG-SUBGRAPHS"
+    ],
+    "N-ALUMINUM": [
+      "N-SHELDON",
+      "N-COUNCIL",
+      "N-BAZINGA"
+    ],
+    "N-BAZINGA": [
+      "N-ALUMINUM",
+      "N-MISSION"
+    ],
+    "N-COUNCIL": [
+      "N-GOV-INDEX",
+      "N-CANON-LIFECYCLE",
+      "N-MISSION"
+    ],
+    "N-GOV-INDEX": [
+      "N-COUNCIL",
+      "N-CANON-BOUNDARY",
+      "N-RISK"
+    ],
+    "N-RISK": [
+      "N-GOV-INDEX",
+      "N-QUALITY"
+    ],
+    "N-TIDELOCK": [
+      "N-GPTBRAIN",
+      "N-SHELDON",
+      "N-SWARM"
+    ],
+    "N-GPTBRAIN": [
+      "N-TIDELOCK",
+      "N-GPTDREAM-SURFACE",
+      "N-REFERENCE"
+    ],
+    "N-SWARM": [
+      "N-TIDELOCK",
+      "N-GPTBRAIN",
+      "N-CHILDREN-SWARM"
+    ],
+    "N-CHILDREN-SWARM": [
+      "N-SWARM",
+      "N-TIDELOCK",
+      "N-EVIDENCE"
+    ],
+    "N-EVIDENCE": [
+      "N-CHILDREN-SWARM",
+      "N-GPTBRAIN",
+      "N-LINEAGE"
+    ],
+    "N-KG-SUBGRAPHS": [
+      "N-SHELDON",
+      "N-MAP",
+      "N-SWARM"
+    ],
+    "N-NEXT144": [
+      "N-TOP50",
+      "N-QUEST",
+      "N-MISSION"
+    ],
+    "N-AETHER-GAME": [
+      "N-NEXT144",
+      "N-QUEST",
+      "N-SHELDON"
+    ],
+    "N-FREE-BANK": [
+      "N-README",
+      "N-ALUMINUM"
+    ],
+    "N-CHINOOK": [
+      "N-README",
+      "N-ALUMINUM"
+    ],
+    "N-RESEARCH": [
+      "N-README",
+      "N-EVIDENCE",
+      "N-LINEAGE"
+    ],
+    "N-HEALTH": [
+      "N-README",
+      "N-RESEARCH"
+    ],
+    "N-GOVERNANCE-OPS": [
+      "N-GOV-INDEX",
+      "N-COUNCIL",
+      "N-MISSION"
     ]
   }
 }

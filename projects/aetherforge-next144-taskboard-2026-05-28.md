@@ -9,7 +9,8 @@ Campaign board for the Next-144 sequence.
 - Wave 1 (tasks 1-12): implemented
 - Wave 2 (tasks 13-24): implemented
 - Wave 3 (tasks 25-36): implemented
-- Wave 4-12 (tasks 37-144): queued
+- Wave 4 (tasks 37-48): implemented
+- Wave 5-12 (tasks 49-144): queued
 
 ## Tasks 1-24 execution receipts
 
@@ -56,3 +57,28 @@ Campaign board for the Next-144 sequence.
 | 34 | ../scripts/kg_dangling_ref_detector.py |
 | 35 | ../docs/generated/KG_ADJACENCY_MATRIX.json |
 | 36 | ../docs/KG_TOPOLOGY_GUIDE.md |
+
+## Tasks 37-48 execution receipts (Wave 4 — Agent Intelligence + KG Expansion)
+
+| Task | Artifact |
+| --- | --- |
+| 37 | ../docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md (v0.2, 40 nodes) |
+| 38 | ../docs/SHELDONBRAIN_KG_SUBGRAPH.md |
+| 39 | ../docs/ALUMINUM_OS_KG_SUBGRAPH.md |
+| 40 | ../docs/AGENT_IDENTITY_CARD_SPEC.md |
+| 41 | ../scripts/export_children_swarm_lattice.py |
+| 42 | ../tests/test_children_swarm_lattice.py (14 tests) |
+| 43 | ../docs/EVIDENCE_BUNDLE_FORMAT.md |
+| 44 | ../docs/AETHERFORGE_GAME_STATE_SNAPSHOT.md |
+| 45 | ../docs/GPTDREAM_PROTOCOL_INDEX.md |
+| 46 | ../docs/KG_SEARCH_QUERY_SPEC.md |
+| 47 | ../docs/generated/KG_ADJACENCY_MATRIX.json (40 nodes, 100 edges) |
+| 48 | ../archive/boot/gptbrain/agents/TIDELOCKBrain/WAKE_REPORT_WAVE4_2026-05-28.md |
+
+### Wave 4 lattice health
+
+- node_count: 40
+- edge_density: 2.500
+- orphan_ratio: 0.000
+- new tests: 14 (Children Swarm suite)
+- XP earned: 1,400

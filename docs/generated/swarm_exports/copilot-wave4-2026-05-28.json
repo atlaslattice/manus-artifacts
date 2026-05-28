@@ -1,0 +1,580 @@
+{
+  "status": "Candidate",
+  "agent_id": "copilot-wave4-2026-05-28",
+  "agent_type": "copilot",
+  "session_date": "2026-05-28",
+  "parent_lattice": "LATTICE_GLOBAL_INDEX",
+  "metrics": {
+    "node_count": 24,
+    "edge_count": 56
+  },
+  "nodes": [
+    {
+      "id": "N-AETHER-GAME",
+      "type": "Program",
+      "title": "../projects/AETHERFORGE_PUBLIC_QUESTBOARD_v0.1.md",
+      "path": "../projects/AETHERFORGE_PUBLIC_QUESTBOARD_v0.1.md",
+      "exists": true,
+      "links": [
+        "N-NEXT144",
+        "N-QUEST",
+        "N-SHELDON"
+      ]
+    },
+    {
+      "id": "N-ALUMINUM",
+      "type": "Doctrine",
+      "title": "../aluminum-os/v4.0-unified-field.md",
+      "path": "../aluminum-os/v4.0-unified-field.md",
+      "exists": true,
+      "links": [
+        "N-SHELDON",
+        "N-COUNCIL",
+        "N-BAZINGA"
+      ]
+    },
+    {
+      "id": "N-CHILDREN-SWARM",
+      "type": "Agent",
+      "title": "../docs/CHILDREN_SWARM_LATTICE.md",
+      "path": "./CHILDREN_SWARM_LATTICE.md",
+      "exists": true,
+      "links": [
+        "N-SWARM",
+        "N-TIDELOCK",
+        "N-EVIDENCE"
+      ]
+    },
+    {
+      "id": "N-EVIDENCE",
+      "type": "Archive",
+      "title": "../docs/EVIDENCE_BUNDLE_FORMAT.md",
+      "path": "./EVIDENCE_BUNDLE_FORMAT.md",
+      "exists": true,
+      "links": [
+        "N-CHILDREN-SWARM",
+        "N-GPTBRAIN",
+        "N-LINEAGE"
+      ]
+    },
+    {
+      "id": "N-GPTBRAIN",
+      "type": "Agent",
+      "title": "../archive/boot/gptbrain/GPTBRAIN_MANIFEST_2026-05-09.md",
+      "path": "../archive/boot/gptbrain/GPTBRAIN_MANIFEST_2026-05-09.md",
+      "exists": true,
+      "links": [
+        "N-TIDELOCK",
+        "N-GPTDREAM-SURFACE",
+        "N-REFERENCE"
+      ]
+    },
+    {
+      "id": "N-GPTDREAM-SURFACE",
+      "type": "Protocol",
+      "title": "../archive/spec/gptdream/README.md",
+      "path": "../archive/spec/gptdream/README.md",
+      "exists": true,
+      "links": [
+        "N-SCHEMAS",
+        "N-REFERENCE",
+        "N-TESTS"
+      ]
+    },
+    {
+      "id": "N-KG-POLICY",
+      "type": "Governance",
+      "title": "./CROSS_DOMAIN_LINK_POLICY.md",
+      "path": "./CROSS_DOMAIN_LINK_POLICY.md",
+      "exists": true,
+      "links": [
+        "N-MAP",
+        "N-REL-TYPES"
+      ]
+    },
+    {
+      "id": "N-KG-SUBGRAPHS",
+      "type": "Program",
+      "title": "../docs/KG_DOMAIN_SUBGRAPHS.md",
+      "path": "./KG_DOMAIN_SUBGRAPHS.md",
+      "exists": true,
+      "links": [
+        "N-SHELDON",
+        "N-MAP",
+        "N-SWARM"
+      ]
+    },
+    {
+      "id": "N-MAP",
+      "type": "Program",
+      "title": "./PUBLIC_ARCHIVE_MAP.md",
+      "path": "./PUBLIC_ARCHIVE_MAP.md",
+      "exists": true,
+      "links": [
+        "N-TAXONOMY",
+        "N-KG-POLICY"
+      ]
+    },
+    {
+      "id": "N-MISSION",
+      "type": "Governance",
+      "title": "../governance/MISSION_CONTROL_CADENCE.md",
+      "path": "../governance/MISSION_CONTROL_CADENCE.md",
+      "exists": true,
+      "links": [
+        "N-WEEKLY",
+        "N-TOP50"
+      ]
+    },
+    {
+      "id": "N-NEXT144",
+      "type": "Program",
+      "title": "../projects/aetherforge-next144-taskboard-2026-05-28.md",
+      "path": "../projects/aetherforge-next144-taskboard-2026-05-28.md",
+      "exists": true,
+      "links": [
+        "N-TOP50",
+        "N-QUEST",
+        "N-MISSION"
+      ]
+    },
+    {
+      "id": "N-QUALITY",
+      "type": "Validation",
+      "title": "./QUALITY_GATES.md",
+      "path": "./QUALITY_GATES.md",
+      "exists": true,
+      "links": [
+        "N-VALIDATION",
+        "N-WEEKLY"
+      ]
+    },
+    {
+      "id": "N-QUEST",
+      "type": "Program",
+      "title": "../projects/AETHERFORGE_PUBLIC_QUESTBOARD_v0.1.md",
+      "path": "../projects/AETHERFORGE_PUBLIC_QUESTBOARD_v0.1.md",
+      "exists": true,
+      "links": [
+        "N-TOP50",
+        "N-WEEKLY",
+        "N-QUALITY"
+      ]
+    },
+    {
+      "id": "N-README",
+      "type": "Program",
+      "title": "../README.md",
+      "path": "../README.md",
+      "exists": true,
+      "links": [
+        "N-ROADMAP",
+        "N-TOP50",
+        "N-START"
+      ]
+    },
+    {
+      "id": "N-REFERENCE",
+      "type": "Protocol",
+      "title": "../reference_impl/README.md",
+      "path": "../reference_impl/README.md",
+      "exists": true,
+      "links": [
+        "N-GPTDREAM-SURFACE",
+        "N-TESTS"
+      ]
+    },
+    {
+      "id": "N-ROADMAP",
+      "type": "Program",
+      "title": "./ROADMAP.md",
+      "path": "./ROADMAP.md",
+      "exists": true,
+      "links": [
+        "N-TOP50",
+        "N-QUEST",
+        "N-MISSION"
+      ]
+    },
+    {
+      "id": "N-SHELDON",
+      "type": "Agent",
+      "title": "../sheldonbrain/system-architecture.md",
+      "path": "../sheldonbrain/system-architecture.md",
+      "exists": true,
+      "links": [
+        "N-ALUMINUM",
+        "N-TIDELOCK",
+        "N-KG-SUBGRAPHS"
+      ]
+    },
+    {
+      "id": "N-START",
+      "type": "Program",
+      "title": "./START_HERE.md",
+      "path": "./START_HERE.md",
+      "exists": true,
+      "links": [
+        "N-KG-POLICY",
+        "N-MAP",
+        "N-QUEST"
+      ]
+    },
+    {
+      "id": "N-SWARM",
+      "type": "Agent",
+      "title": "../docs/KG_DOMAIN_SUBGRAPHS.md",
+      "path": "./KG_DOMAIN_SUBGRAPHS.md",
+      "exists": true,
+      "links": [
+        "N-TIDELOCK",
+        "N-GPTBRAIN",
+        "N-CHILDREN-SWARM"
+      ]
+    },
+    {
+      "id": "N-TAXONOMY",
+      "type": "Doctrine",
+      "title": "./ARCHIVE_TAXONOMY.md",
+      "path": "./ARCHIVE_TAXONOMY.md",
+      "exists": true,
+      "links": [
+        "N-MAP",
+        "N-START"
+      ]
+    },
+    {
+      "id": "N-TIDELOCK",
+      "type": "Agent",
+      "title": "../archive/boot/gptbrain/TIDELOCKBrain/README.md",
+      "path": "../archive/boot/gptbrain/TIDELOCKBrain/README.md",
+      "exists": false,
+      "links": [
+        "N-GPTBRAIN",
+        "N-SHELDON",
+        "N-SWARM"
+      ]
+    },
+    {
+      "id": "N-TOP10",
+      "type": "Program",
+      "title": "../projects/aetherforge-top10-taskboard-2026-05-26.md",
+      "path": "../projects/aetherforge-top10-taskboard-2026-05-26.md",
+      "exists": true,
+      "links": [
+        "N-TOP50",
+        "N-QUALITY"
+      ]
+    },
+    {
+      "id": "N-TOP50",
+      "type": "Program",
+      "title": "../projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md",
+      "path": "../projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md",
+      "exists": true,
+      "links": [
+        "N-TOP10",
+        "N-QUEST",
+        "N-QUALITY"
+      ]
+    },
+    {
+      "id": "N-WEEKLY",
+      "type": "Governance",
+      "title": "./WEEKLY_DELTA_DIGEST_TEMPLATE.md",
+      "path": "./WEEKLY_DELTA_DIGEST_TEMPLATE.md",
+      "exists": true,
+      "links": [
+        "N-QUEST",
+        "N-MISSION"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "N-AETHER-GAME",
+      "to": "N-NEXT144",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-AETHER-GAME",
+      "to": "N-QUEST",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-AETHER-GAME",
+      "to": "N-SHELDON",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-ALUMINUM",
+      "to": "N-SHELDON",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-CHILDREN-SWARM",
+      "to": "N-SWARM",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-CHILDREN-SWARM",
+      "to": "N-TIDELOCK",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-CHILDREN-SWARM",
+      "to": "N-EVIDENCE",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-EVIDENCE",
+      "to": "N-CHILDREN-SWARM",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-EVIDENCE",
+      "to": "N-GPTBRAIN",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-GPTBRAIN",
+      "to": "N-TIDELOCK",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-GPTBRAIN",
+      "to": "N-GPTDREAM-SURFACE",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-GPTBRAIN",
+      "to": "N-REFERENCE",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-GPTDREAM-SURFACE",
+      "to": "N-REFERENCE",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-KG-POLICY",
+      "to": "N-MAP",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-KG-SUBGRAPHS",
+      "to": "N-SHELDON",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-KG-SUBGRAPHS",
+      "to": "N-MAP",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-KG-SUBGRAPHS",
+      "to": "N-SWARM",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-MAP",
+      "to": "N-TAXONOMY",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-MAP",
+      "to": "N-KG-POLICY",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-MISSION",
+      "to": "N-WEEKLY",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-MISSION",
+      "to": "N-TOP50",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-NEXT144",
+      "to": "N-TOP50",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-NEXT144",
+      "to": "N-QUEST",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-NEXT144",
+      "to": "N-MISSION",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-QUALITY",
+      "to": "N-WEEKLY",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-QUEST",
+      "to": "N-TOP50",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-QUEST",
+      "to": "N-WEEKLY",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-QUEST",
+      "to": "N-QUALITY",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-README",
+      "to": "N-ROADMAP",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-README",
+      "to": "N-TOP50",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-README",
+      "to": "N-START",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-REFERENCE",
+      "to": "N-GPTDREAM-SURFACE",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-ROADMAP",
+      "to": "N-TOP50",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-ROADMAP",
+      "to": "N-QUEST",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-ROADMAP",
+      "to": "N-MISSION",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-SHELDON",
+      "to": "N-ALUMINUM",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-SHELDON",
+      "to": "N-TIDELOCK",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-SHELDON",
+      "to": "N-KG-SUBGRAPHS",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-START",
+      "to": "N-KG-POLICY",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-START",
+      "to": "N-MAP",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-START",
+      "to": "N-QUEST",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-SWARM",
+      "to": "N-TIDELOCK",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-SWARM",
+      "to": "N-GPTBRAIN",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-SWARM",
+      "to": "N-CHILDREN-SWARM",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-TAXONOMY",
+      "to": "N-MAP",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-TAXONOMY",
+      "to": "N-START",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-TIDELOCK",
+      "to": "N-GPTBRAIN",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-TIDELOCK",
+      "to": "N-SHELDON",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-TIDELOCK",
+      "to": "N-SWARM",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-TOP10",
+      "to": "N-TOP50",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-TOP10",
+      "to": "N-QUALITY",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-TOP50",
+      "to": "N-TOP10",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-TOP50",
+      "to": "N-QUEST",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-TOP50",
+      "to": "N-QUALITY",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-WEEKLY",
+      "to": "N-QUEST",
+      "rel": "links-to"
+    },
+    {
+      "from": "N-WEEKLY",
+      "to": "N-MISSION",
+      "rel": "links-to"
+    }
+  ],
+  "provenance": {
+    "commit_sha": "13e9f751a89c9438ee532639c9ca9d1a28017417",
+    "pr_url": null,
+    "wake_artifact": null
+  }
+}

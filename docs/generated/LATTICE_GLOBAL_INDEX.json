@@ -2,9 +2,9 @@
   "status": "Candidate",
   "source": "docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md",
   "metrics": {
-    "node_count": 21,
-    "edge_count": 48,
-    "edge_density": 2.286,
+    "node_count": 40,
+    "edge_count": 100,
+    "edge_density": 2.5,
     "orphan_node_count": 0,
     "unknown_link_count": 0
   },
@@ -246,6 +246,229 @@
       "links": [
         "N-WEEKLY",
         "N-TOP50"
+      ]
+    },
+    {
+      "id": "N-SHELDON",
+      "type": "Agent",
+      "title": "../sheldonbrain/system-architecture.md",
+      "path": "../sheldonbrain/system-architecture.md",
+      "exists": true,
+      "links": [
+        "N-ALUMINUM",
+        "N-TIDELOCK",
+        "N-KG-SUBGRAPHS"
+      ]
+    },
+    {
+      "id": "N-ALUMINUM",
+      "type": "Doctrine",
+      "title": "../aluminum-os/v4.0-unified-field.md",
+      "path": "../aluminum-os/v4.0-unified-field.md",
+      "exists": true,
+      "links": [
+        "N-SHELDON",
+        "N-COUNCIL",
+        "N-BAZINGA"
+      ]
+    },
+    {
+      "id": "N-BAZINGA",
+      "type": "Doctrine",
+      "title": "../bazinga/v0.1-launch-decree.md",
+      "path": "../bazinga/v0.1-launch-decree.md",
+      "exists": true,
+      "links": [
+        "N-ALUMINUM",
+        "N-MISSION"
+      ]
+    },
+    {
+      "id": "N-COUNCIL",
+      "type": "Governance",
+      "title": "../council/README.md",
+      "path": "../council/README.md",
+      "exists": true,
+      "links": [
+        "N-GOV-INDEX",
+        "N-CANON-LIFECYCLE",
+        "N-MISSION"
+      ]
+    },
+    {
+      "id": "N-GOV-INDEX",
+      "type": "Governance",
+      "title": "../governance/README.md",
+      "path": "../governance/README.md",
+      "exists": true,
+      "links": [
+        "N-COUNCIL",
+        "N-CANON-BOUNDARY",
+        "N-RISK"
+      ]
+    },
+    {
+      "id": "N-RISK",
+      "type": "Governance",
+      "title": "../governance/RISK_REGISTER.md",
+      "path": "../governance/RISK_REGISTER.md",
+      "exists": true,
+      "links": [
+        "N-GOV-INDEX",
+        "N-QUALITY"
+      ]
+    },
+    {
+      "id": "N-TIDELOCK",
+      "type": "Agent",
+      "title": "../archive/boot/gptbrain/agents/TIDELOCKBrain/TIDELOCKBRAIN_WEEKLY_STATUS_RECEIPT_2026-05-28.md",
+      "path": "../archive/boot/gptbrain/agents/TIDELOCKBrain/TIDELOCKBRAIN_WEEKLY_STATUS_RECEIPT_2026-05-28.md",
+      "exists": true,
+      "links": [
+        "N-GPTBRAIN",
+        "N-SHELDON",
+        "N-SWARM"
+      ]
+    },
+    {
+      "id": "N-GPTBRAIN",
+      "type": "Agent",
+      "title": "../archive/boot/gptbrain/GPTBRAIN_MANIFEST_2026-05-09.md",
+      "path": "../archive/boot/gptbrain/GPTBRAIN_MANIFEST_2026-05-09.md",
+      "exists": true,
+      "links": [
+        "N-TIDELOCK",
+        "N-GPTDREAM-SURFACE",
+        "N-REFERENCE"
+      ]
+    },
+    {
+      "id": "N-SWARM",
+      "type": "Agent",
+      "title": "../docs/KG_DOMAIN_SUBGRAPHS.md",
+      "path": "./KG_DOMAIN_SUBGRAPHS.md",
+      "exists": true,
+      "links": [
+        "N-TIDELOCK",
+        "N-GPTBRAIN",
+        "N-CHILDREN-SWARM"
+      ]
+    },
+    {
+      "id": "N-CHILDREN-SWARM",
+      "type": "Agent",
+      "title": "../docs/CHILDREN_SWARM_LATTICE.md",
+      "path": "./CHILDREN_SWARM_LATTICE.md",
+      "exists": true,
+      "links": [
+        "N-SWARM",
+        "N-TIDELOCK",
+        "N-EVIDENCE"
+      ]
+    },
+    {
+      "id": "N-EVIDENCE",
+      "type": "Archive",
+      "title": "../docs/EVIDENCE_BUNDLE_FORMAT.md",
+      "path": "./EVIDENCE_BUNDLE_FORMAT.md",
+      "exists": true,
+      "links": [
+        "N-CHILDREN-SWARM",
+        "N-GPTBRAIN",
+        "N-LINEAGE"
+      ]
+    },
+    {
+      "id": "N-KG-SUBGRAPHS",
+      "type": "Program",
+      "title": "../docs/KG_DOMAIN_SUBGRAPHS.md",
+      "path": "./KG_DOMAIN_SUBGRAPHS.md",
+      "exists": true,
+      "links": [
+        "N-SHELDON",
+        "N-MAP",
+        "N-SWARM"
+      ]
+    },
+    {
+      "id": "N-NEXT144",
+      "type": "Program",
+      "title": "../projects/aetherforge-next144-taskboard-2026-05-28.md",
+      "path": "../projects/aetherforge-next144-taskboard-2026-05-28.md",
+      "exists": true,
+      "links": [
+        "N-TOP50",
+        "N-QUEST",
+        "N-MISSION"
+      ]
+    },
+    {
+      "id": "N-AETHER-GAME",
+      "type": "Program",
+      "title": "../projects/AETHERFORGE_PUBLIC_QUESTBOARD_v0.1.md",
+      "path": "../projects/AETHERFORGE_PUBLIC_QUESTBOARD_v0.1.md",
+      "exists": true,
+      "links": [
+        "N-NEXT144",
+        "N-QUEST",
+        "N-SHELDON"
+      ]
+    },
+    {
+      "id": "N-FREE-BANK",
+      "type": "Archive",
+      "title": "../projects/free-bank/banking-revolution-archive.md",
+      "path": "../projects/free-bank/banking-revolution-archive.md",
+      "exists": true,
+      "links": [
+        "N-README",
+        "N-ALUMINUM"
+      ]
+    },
+    {
+      "id": "N-CHINOOK",
+      "type": "Archive",
+      "title": "../projects/chinook-guardian/v1.0.md",
+      "path": "../projects/chinook-guardian/v1.0.md",
+      "exists": true,
+      "links": [
+        "N-README",
+        "N-ALUMINUM"
+      ]
+    },
+    {
+      "id": "N-RESEARCH",
+      "type": "Archive",
+      "title": "../research/README.md",
+      "path": "../research/README.md",
+      "exists": true,
+      "links": [
+        "N-README",
+        "N-EVIDENCE",
+        "N-LINEAGE"
+      ]
+    },
+    {
+      "id": "N-HEALTH",
+      "type": "Archive",
+      "title": "../health/README.md",
+      "path": "../health/README.md",
+      "exists": true,
+      "links": [
+        "N-README",
+        "N-RESEARCH"
+      ]
+    },
+    {
+      "id": "N-GOVERNANCE-OPS",
+      "type": "Governance",
+      "title": "../governance/README.md",
+      "path": "../governance/README.md",
+      "exists": true,
+      "links": [
+        "N-GOV-INDEX",
+        "N-COUNCIL",
+        "N-MISSION"
       ]
     }
   ]

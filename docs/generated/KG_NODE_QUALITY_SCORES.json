@@ -232,6 +232,215 @@
         "path_exists": true,
         "has_links": true
       }
+    },
+    {
+      "id": "N-SHELDON",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-ALUMINUM",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-BAZINGA",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-COUNCIL",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-GOV-INDEX",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-RISK",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-TIDELOCK",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-GPTBRAIN",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-SWARM",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-CHILDREN-SWARM",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-EVIDENCE",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-KG-SUBGRAPHS",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-NEXT144",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-AETHER-GAME",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-FREE-BANK",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-CHINOOK",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-RESEARCH",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-HEALTH",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
+    },
+    {
+      "id": "N-GOVERNANCE-OPS",
+      "score": 100.0,
+      "checks": {
+        "has_id": true,
+        "has_type": true,
+        "has_path": true,
+        "path_exists": true,
+        "has_links": true
+      }
     }
   ]
 }

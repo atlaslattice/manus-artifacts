@@ -45,9 +45,14 @@ Governance status: nothing is canon until ratified by the full council and adjud
 - [Glossary](./docs/GLOSSARY.md) — single authoritative term reference for the archive.
 - [Doctrine Map Index](./docs/DOCTRINE_MAP_INDEX.md) — auto-generated index of doctrine surfaces.
 - [Roadmap](./docs/ROADMAP.md) — measurable public outcomes and future direction.
-- [Lattice Knowledge Graph Node Index](./docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md) — seed nodes and navigation topology.
+- [Lattice Knowledge Graph Node Index](./docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md) — seed nodes and navigation topology (v0.2: 40 nodes, 100 edges).
+- [KG Search Query Spec](./docs/KG_SEARCH_QUERY_SPEC.md) — hypercube traversal and retrieval query language.
 - [Public Archive Map](./docs/PUBLIC_ARCHIVE_MAP.md) — visual graph map of domain relationships.
 - [Cross-Domain Link Policy](./docs/CROSS_DOMAIN_LINK_POLICY.md) — minimum linking rules across domains.
+- [GPTDream++ Protocol Index](./docs/GPTDREAM_PROTOCOL_INDEX.md) — full protocol surface, schemas, reference impls, and tests.
+- [Children Swarm Lattice](./docs/CHILDREN_SWARM_LATTICE.md) — swarm agent derived-lattice architecture and export format.
+- [Evidence Bundle Format](./docs/EVIDENCE_BUNDLE_FORMAT.md) — canonical format for AI system authorship evidence.
+- [Agent Identity Card Spec](./docs/AGENT_IDENTITY_CARD_SPEC.md) — identity card standard for TIDELOCK swarm agents.
 
 ## Taxonomy Navigation
 
