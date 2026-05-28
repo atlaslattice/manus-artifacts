@@ -1,0 +1,109 @@
+register_name: MISSING_RECEIPT_NODE_REGISTER_2026-05-28
+status: staging_register
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: >
+  Track missing receipts as first-class graph nodes. Missing evidence is not a footnote;
+  it is graphable review pressure.
+
+missing_receipt_nodes:
+  - receipt_id: MR-001
+    target: Notion Master Index
+    target_surface: notion
+    missing:
+      - Notion page ID
+      - full raw export
+      - block tree export
+      - content hash
+    consequence: hold
+    review_route: [Hashlight, KairoBrain]
+  - receipt_id: MR-002
+    target: SHELDONBRAIN OS 12x12 Master Index
+    target_surface: notion
+    missing:
+      - Notion page ID
+      - full raw export
+      - block tree export
+      - content hash
+    consequence: hold
+    review_route: [Hashlight, SheldonBrain]
+  - receipt_id: MR-003
+    target: Claude-origin governance artifacts
+    target_surface: mixed
+    missing:
+      - source inventory
+      - raw export status
+      - adversarial review packet
+      - clean-room rewrite link if used
+    consequence: quarantine
+    review_route: [Grok, Rootglass, Lucerna]
+  - receipt_id: MR-004
+    target: Drive staging docs
+    target_surface: drive
+    missing:
+      - row-level hashes
+      - full export package
+      - GitHub mirror paths
+    consequence: review_only
+    review_route: [Hashlight, TIDELOCK]
+  - receipt_id: MR-005
+    target: OpenAI-first claims
+    target_surface: drive_or_github
+    missing:
+      - officiality disclaimer
+      - no-endorsement banner
+      - citation boundary
+      - human-root status note
+    consequence: hold
+    review_route: [Rootglass, Lucerna]
+  - receipt_id: MR-006
+    target: Aetherforge OMNISPEC uploaded receipt shell
+    target_surface: drive
+    missing:
+      - full-fidelity PDF preservation
+      - raw file hash
+      - GitHub mirror path
+    consequence: review_only
+    review_route: [Hashlight, Aetherforge]
+  - receipt_id: MR-007
+    target: Atlas Lattice / Aetherforge / GPTDream retrieval architecture report shell
+    target_surface: drive
+    missing:
+      - full-fidelity PDF preservation
+      - raw file hash
+      - GitHub mirror path
+    consequence: review_only
+    review_route: [Hashlight, GPTBrain]
+  - receipt_id: MR-008
+    target: GitHub PR references PR #190 and PR #24
+    target_surface: github
+    missing:
+      - direct PR metadata snapshot
+      - changed file list
+      - merge/draft/open state
+    consequence: hold
+    review_route: [TIDELOCK]
+  - receipt_id: MR-009
+    target: Issue #104 Atlas MCP smoke-test packet
+    target_surface: github
+    missing:
+      - direct issue body snapshot
+      - comments
+      - linked file receipts
+    consequence: review_only
+    review_route: [TIDELOCK, AtlasBrain]
+
+node_schema:
+  missing_receipt_node:
+    receipt_id: null
+    target: null
+    target_surface: null
+    missing: []
+    consequence: hold | quarantine | review_only | block
+    review_route: []
+    resolved_by: null
+    resolution_receipt: null
+    status: open | partially_resolved | resolved | superseded
+
+keeper: Missing is not failure. Missing is a node.
