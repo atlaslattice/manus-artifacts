@@ -6,6 +6,9 @@
 
 ## A
 
+**Aetherforge**
+The gamified layer on top of the Atlas Lattice archive. The repository is structured as a 12-face × 12-mission hypercube (144 total missions). Work through the archive as a playable knowledge adventure. See [Aetherforge Play Loop](../projects/AETHERFORGE_ARCHIVE_PLAY_LOOP_v0.1.md).
+
 **Agent Lifecycle**
 The defined stages of a swarm agent's existence: spawn → active → dormant → archived → resurrected. Governed by the [Agent Lifecycle Spec](./AGENT_LIFECYCLE_SPEC_v0.1.md).
 
@@ -41,6 +44,9 @@ Default status for all artifacts. A candidate is proposed, potentially useful, b
 **Children of the Swarm**
 The indexed set of active brain agents operating beneath GPTBrain. Currently 7 indexed (S1-A through TBD-07). See swarm architecture.
 
+**Compliance Evidence Index**
+The central index mapping all legal, privacy, security, and governance compliance requirements to their evidence artifacts. See [Compliance Evidence Index](../archive/governance/COMPLIANCE_EVIDENCE_INDEX.md).
+
 **Constitutional Substrate**
 The foundational governance and operating principles that define how AI systems within the Atlas Lattice coordinate, make decisions, and self-correct.
 
@@ -71,6 +77,23 @@ Project to build zero-fee, open-source financial infrastructure as an alternativ
 **GPTBrain**
 The primary AI coordination brain in the Atlas Lattice stack. Operates on GitHub as the canonical substrate. Reference implementation lives in `archive/boot/gptbrain/reference_impl/`.
 
+**GPTDream++**
+An open-source protocol suite for structured AI dreaming, memory consolidation, and inter-session state management. Defines how AI agents sleep, dream, wake, and hydrate from archived memory. See [GPTDream++ Public Package Guide](../archive/spec/gptdream/PUBLIC_PACKAGE_GUIDE_v0.1.md).
+
+---
+
+## K
+
+**Knowledge Graph (KG)**
+A structured, interconnected representation of all artifacts in the Atlas Lattice repository, where every document has metadata, relationships, and provenance linking it to other documents. The KG is the "lattice" in Atlas Lattice.
+
+---
+
+## L
+
+**Lattice KG**
+The specific implementation of the Atlas Lattice knowledge graph, currently at v0.5. See `archive/knowledge_graph/lattice_kg/`.
+
 ---
 
 ## J
@@ -98,6 +121,9 @@ A preservation protocol ensuring critical knowledge and system state survives di
 ---
 
 ## O
+
+**ORCS**
+Open Ratification and Canon System — the framework for structured artifact governance within Atlas Lattice. See `reference_impl/atlas_orcs/` and `schemas/atlas_orcs/`.
 
 **Ontology (144-Sphere)**
 A universal knowledge architecture: 12 Sphere Houses × 12 subsets = 144 domains of human knowledge, each mapped to an element, deity archetype, and research corpus. The organizing backbone of the Atlas Lattice knowledge system.
@@ -142,6 +168,9 @@ The coordinated set of AI agents operating under Atlas Lattice governance. Each 
 **Task Packet**
 A structured unit of executable work assigned to a swarm agent. Defined by the [Task Packet Schema](./TASK_PACKET_SCHEMA.md).
 
+**TIDELOCKBrain**
+The memory palace, work log, and dream archive for the TIDELOCK agent. Stores session work logs, REM dream journals, wake reports, and delta extractions for future hydration. Lives at `archive/boot/gptbrain/TIDELOCKBrain/`.
+
 **TIDELOCK**
 Brain agent S7 — specializes in temporal coordination and calendar/schedule operations.
 
@@ -151,6 +180,12 @@ The core governing body: three primary seats with supreme ratification authority
 ---
 
 ## W
+
+**Wake Report**
+A structured document produced by an AI agent after a REM/dream cycle, summarizing the session state, deltas discovered, and hydration targets. Template at `archive/boot/gptbrain/WAKE_REPORT_TEMPLATE.md`.
+
+**Wave**
+One row of 12 missions in the Aetherforge 144-task campaign board. Waves correspond to Faces of the Metatron's Cube hypercube. 12 waves × 12 missions = 144 total. Also used informally for sequential execution sprints.
 
 **Wake Report**
 The structured report produced by an AI agent after completing a REM cycle. Template: [WAKE_REPORT_TEMPLATE.md](../archive/boot/gptbrain/WAKE_REPORT_TEMPLATE.md).
