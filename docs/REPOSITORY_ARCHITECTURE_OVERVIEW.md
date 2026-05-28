@@ -1,5 +1,11 @@
 # Repository Architecture Overview
 
+> **Status:** Candidate
+> **Last reviewed:** 2026-05-28
+> **Provenance:** Maintained in GitHub as the one-page system-domain architecture map.
+> **Start here:** [START_HERE.md](./START_HERE.md)
+> **Docs hub:** [README.md](./README.md)
+
 ## Purpose
 
 This document provides a one-page architecture map of the Manus Artifacts repository.
@@ -31,6 +37,7 @@ This document provides a one-page architecture map of the Manus Artifacts reposi
 
 ## Related
 
+- [Docs Index](./README.md)
 - [Start Here](./START_HERE.md)
 - [Public Archive Map](./PUBLIC_ARCHIVE_MAP.md)
 - [Lattice Knowledge Graph Node Index](./LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md)

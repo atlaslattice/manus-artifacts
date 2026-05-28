@@ -1,5 +1,11 @@
 # 📚 Archive Index — Manus Artifacts
 
+> **Status:** Candidate
+> **Last reviewed:** 2026-05-28
+> **Provenance:** Maintained in GitHub as the primary repository-wide artifact index.
+> **Start here:** [START_HERE.md](./START_HERE.md)
+> **Docs hub:** [README.md](./README.md)
+
 > A structured map of all content in this repository. For the onboarding entry point, see [START_HERE.md](./START_HERE.md).
 
 ---
@@ -13,8 +19,8 @@
 | Aluminum OS v3.0 Unified Field | [aluminum-os/v3.0-unified-field.md](../aluminum-os/v3.0-unified-field.md) | Archived |
 | Aluminum OS v2.0 Constitutional Substrate | [aluminum-os/v2.0-integrated-constitutional-substrate.md](../aluminum-os/v2.0-integrated-constitutional-substrate.md) | Archived |
 | Aluminum OS Core | [aluminum-os-core/](../aluminum-os-core/) | Candidate |
-| SheldonBrain System Architecture | [sheldonbrain/system-architecture.md](../sheldonbrain/system-architecture.md) | Candidate |
-| BAZINGA v0.1 Launch Decree | [bazinga/v0.1-launch-decree.md](../bazinga/v0.1-launch-decree.md) | Candidate |
+| SheldonBrain System Index | [sheldonbrain/README.md](../sheldonbrain/README.md) | Candidate |
+| BAZINGA Index | [bazinga/README.md](../bazinga/README.md) | Candidate |
 
 ---
 
@@ -69,7 +75,7 @@
 
 | Artifact | Path |
 |---|---|
-| Research Sweeps | [research/](../research/) |
+| Research Index | [research/README.md](../research/README.md) |
 | Health / Patient Rights | [health/](../health/) |
 | Manus Vault | [manus-vault/](../manus-vault/) |
 | Janus Checkpoints | [archives/janus-checkpoints/](../archives/janus-checkpoints/) |
@@ -82,8 +88,9 @@
 |---|---|
 | Codebases | [codebases/](../codebases/) |
 | Integrations | [integrations/](../integrations/) |
-| Scripts | [scripts/](../scripts/) |
-| Schemas | [schemas/](../schemas/) |
+| Scripts | [scripts/README.md](../scripts/README.md) |
+| Schemas | [schemas/README.md](../schemas/README.md) |
+| Reference implementations | [reference_impl/README.md](../reference_impl/README.md) |
 
 ---
 
@@ -105,4 +112,11 @@
 
 ---
 
-*Last updated: 2026-05-26. This index is maintained as a living document.*
+*Last updated: 2026-05-28. This index is maintained as a living document.*
+
+## Related artifacts
+
+- [Docs Index](./README.md)
+- [Public Archive Map](./PUBLIC_ARCHIVE_MAP.md)
+- [Repository Architecture Overview](./REPOSITORY_ARCHITECTURE_OVERVIEW.md)
+- [Archive subsystem index](../archive/README.md)

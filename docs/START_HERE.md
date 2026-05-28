@@ -1,5 +1,10 @@
 # 🚀 Start Here — Atlas Lattice / Manus Artifacts
 
+> **Status:** Candidate  
+> **Last reviewed:** 2026-05-28  
+> **Provenance:** Maintained in GitHub as the public onboarding handoff for this repository.  
+> **Next stop after this page:** [Docs Index](./README.md) or [Archive Index](./ARCHIVE_INDEX.md)
+
 > **New to this archive?** This is your entry point.
 
 ## What is this repository?
@@ -48,6 +53,15 @@ All major artifacts require council review before canonization. See [Council Arc
 - **Lattice Knowledge Graph** — explicit node and relationship architecture for discoverability and reuse
 
 See the full [Glossary](./GLOSSARY.md) for definitions.
+
+---
+
+## Related artifacts
+
+- [Docs Index](./README.md)
+- [Public Archive Map](./PUBLIC_ARCHIVE_MAP.md)
+- [Repository Architecture Overview](./REPOSITORY_ARCHITECTURE_OVERVIEW.md)
+- [Projects Index](../projects/README.md)
 
 ---
 

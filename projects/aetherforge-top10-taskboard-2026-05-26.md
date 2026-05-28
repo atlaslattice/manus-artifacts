@@ -44,8 +44,9 @@
 - [x] Ship first receipt-linked update
 - [x] Execute triad slice: KG navigation + board continuity + 8/8/8 logging receipt
 - [x] Build and land GitHub-side execution packet (Session G)
+- [x] Launch Wave 02 docs system sprint (Session H)
 
-### Active execution slice (2026-05-27 / Session D–G)
+### Active execution slice (2026-05-27 to 2026-05-28 / Session D–H)
 
 1. **Cross-link integrity + KG hardening (Ring A / Task 3)**
    - Receipts:
@@ -70,3 +71,23 @@
       - `/archive/aetherforge/gptdreampp-openai/ANTI_OVERCLAIM_CHECKLIST_2026-05-27.md`
       - `/docs/ARCHIVE_INDEX.md`
       - `/archive/boot/gptbrain/TIDELOCKBrain/dreams/TIDELOCK_WORKLOG_2026-05-27_G.md`
+5. **Docs navigation + subsystem README pass (Wave 02 / Session H)**
+   - Receipts:
+      - `/README.md`
+      - `/docs/README.md`
+      - `/docs/START_HERE.md`
+      - `/docs/ARCHIVE_INDEX.md`
+      - `/docs/PUBLIC_ARCHIVE_MAP.md`
+      - `/docs/REPOSITORY_ARCHITECTURE_OVERVIEW.md`
+      - `/archive/README.md`
+      - `/aluminum-os/README.md`
+      - `/sheldonbrain/README.md`
+      - `/bazinga/README.md`
+      - `/council/README.md`
+      - `/council-reviews/README.md`
+      - `/research/README.md`
+      - `/schemas/README.md`
+      - `/scripts/README.md`
+      - `/tests/README.md`
+      - `/reference_impl/README.md`
+      - `/archive/boot/gptbrain/TIDELOCKBrain/dreams/TIDELOCK_WORKLOG_2026-05-28_H.md`

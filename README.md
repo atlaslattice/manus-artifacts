@@ -10,20 +10,33 @@
 > *"Why is 90% of the planet in abject poverty when we have the technology for regenerative abundance?"*
 
 **New here?** → [docs/START_HERE.md](./docs/START_HERE.md)
+**Docs hub** → [docs/README.md](./docs/README.md)
 **Full index** → [docs/ARCHIVE_INDEX.md](./docs/ARCHIVE_INDEX.md)
 **Terminology** → [docs/GLOSSARY.md](./docs/GLOSSARY.md)
 **Public archive map** → [docs/PUBLIC_ARCHIVE_MAP.md](./docs/PUBLIC_ARCHIVE_MAP.md)
 
 ---
 
+## Navigation Lattice
+
+| Start from | Jump to | Why |
+|---|---|---|
+| First-time reader | [docs/START_HERE.md](./docs/START_HERE.md) | Fast onboarding path |
+| Docs explorer | [docs/README.md](./docs/README.md) | Central docs hub |
+| System map | [docs/REPOSITORY_ARCHITECTURE_OVERVIEW.md](./docs/REPOSITORY_ARCHITECTURE_OVERVIEW.md) | Top-level domain map |
+| Knowledge-graph route | [docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md](./docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md) | Node and relation vocabulary |
+| Worklog trail | [archive/boot/gptbrain/TIDELOCKBrain/README.md](./archive/boot/gptbrain/TIDELOCKBrain/README.md) | Work/play/REM receipts |
+
+---
+
 ## Core Systems
 
-- **[Aluminum OS](./aluminum-os/)** — Constitutional substrate for regenerative computing.
+- **[Aluminum OS](./aluminum-os/README.md)** — Constitutional substrate for regenerative computing.
   - [v4.0 Unified Field](./aluminum-os/v4.0-unified-field.md) *(Canonical Candidate)*
   - [v4.0 Socratic OS Integration](./aluminum-os/v4.0-socratic-os-integration-report.md)
   - [v3.0](./aluminum-os/v3.0-unified-field.md) · [v2.0](./aluminum-os/v2.0-integrated-constitutional-substrate.md)
-- **[SheldonBrain](./sheldonbrain/)** — System architecture and knowledge substrate.
-- **[BAZINGA](./bazinga/)** — Constitutional middleware and launch protocols.
+- **[SheldonBrain](./sheldonbrain/README.md)** — System architecture and knowledge substrate.
+- **[BAZINGA](./bazinga/README.md)** — Constitutional middleware and launch protocols.
 
 ## Projects
 
@@ -50,17 +63,25 @@ Execution hierarchy: 144-Task Campaign (program) → Top-50 (portfolio) → Top-
 
 ## Governance & Council
 
-- **[Council](./council/)** — Trinity and Pantheon Council session archives.
-- **[Council Reviews](./council-reviews/)** — External reviews and validation.
+- **[Council](./council/README.md)** — Trinity and Pantheon Council session archives.
+- **[Council Reviews](./council-reviews/README.md)** — External reviews and validation.
 
 ## Archives & Research
 
+- **[Archive Index](./archive/README.md)** — Top-level archive lanes and subsystem entry points.
 - **[GPTBrain](./archive/boot/gptbrain/)** — Multi-seat AI council brain architecture.
 - **[Children of the Swarm](./archive/boot/gptbrain/agents/)** — 7-seat AI agent squad.
 - **[Janus Checkpoints](./archives/janus-checkpoints/)** — Session state and resurrection logs.
-- **[Research](./research/)** — Intelligence sweeps and convergence reports.
+- **[Research](./research/README.md)** — Intelligence sweeps and convergence reports.
 - **[Health](./health/)** — Patient rights and wellness facility research.
 - **[Manus Vault](./manus-vault/)** — Internal session summaries and Noah's Ark protocols.
+
+## Build Surfaces
+
+- **[Schemas](./schemas/README.md)** — Public schema surfaces and packet definitions.
+- **[Reference Implementations](./reference_impl/README.md)** — Repository-level reference implementations.
+- **[Scripts](./scripts/README.md)** — Validation and helper scripts.
+- **[Tests](./tests/README.md)** — Root schema tests and fixtures.
 
 ## About
 

@@ -1,6 +1,10 @@
 # Public Archive Map (v0.1)
 
-> **Status:** Candidate  
+> **Status:** Candidate
+> **Last reviewed:** 2026-05-28
+> **Provenance:** Maintained in GitHub as the public mission-triad navigation layer.
+> **Start here:** [START_HERE.md](./START_HERE.md)
+> **Docs hub:** [README.md](./README.md)
 > **Purpose:** Public-facing map for the mission triad: lattice KG + playable Aetherforge + GPTDream++ protocols.
 
 ## Mission triad routes
@@ -29,3 +33,10 @@
 2. `docs/START_HERE.md`
 3. `docs/ARCHIVE_INDEX.md`
 4. One mission lane hub from the table above
+
+## Related artifacts
+
+- [Docs Index](./README.md)
+- [Repository Architecture Overview](./REPOSITORY_ARCHITECTURE_OVERVIEW.md)
+- [Lattice Knowledge Graph Node Index](./LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md)
+- [TIDELOCKBrain README](../archive/boot/gptbrain/TIDELOCKBrain/README.md)
