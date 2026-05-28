@@ -1,0 +1,83 @@
+schema_name: SHELDONBRAIN_INGESTION_ENVELOPE_SPEC_v0.1
+status: staging_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: >
+  Define the minimum envelope required before any artifact is ingested into
+  Sheldonbrain / Atlas Lattice knowledge graph staging.
+
+required_fields:
+  - envelope_id
+  - source_id
+  - source_title
+  - source_surface
+  - source_url_or_path
+  - raw_export_status
+  - canon_status
+  - deployment_status
+  - authority_scope
+  - provenance_type
+  - source_class
+  - review_state
+  - missing_receipts
+  - proposed_nodes
+  - proposed_edges
+  - overclaims_to_avoid
+
+envelope:
+  envelope_id: null
+  source_id: null
+  source_title: null
+  source_surface: github | drive | notion | gamma | chat | external | uploaded_file | unknown
+  source_url_or_path: null
+  source_type: repository | file | google_doc | google_sheet | page | page_set | issue | pull_request | chat_export | unknown
+  created_or_modified: null
+  raw_export_status: available | partial_export | not_exported | drive_staged_native_doc | receipt_shell_not_full_fidelity | unknown
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  provenance_type: raw | mirrored | parsed | summarized | inferred | synthetic | user_reported | mixed | unknown
+  source_class: SourceRoot | SourceArtifact | RawExport | ParsedPacket | Claim | EvidenceAnchor | ReviewFinding | Decision | Action | CanonCandidate | TaskLattice | Runbook | SchemaArtifact | ReviewQueue | unknown
+  review_state: unreviewed | candidate_review | active_staging | blocked | needs_human_root | reviewed | unknown
+  missing_receipts: []
+  overclaims_to_avoid: []
+  proposed_nodes: []
+  proposed_edges: []
+  review_lanes: []
+  privacy_public_safety:
+    public_github_safe: unknown
+    contains_private_data: unknown
+    contains_credentials_or_tokens: unknown
+    requires_redaction: unknown
+  parser_state:
+    parser_used: null
+    parser_version: null
+    parser_output_not_canon: true
+    extraction_confidence: null
+  openai_lane:
+    used_for_extraction: false
+    officiality_claim_allowed: false
+    can_ratify: false
+    can_deploy: false
+    can_authorize: false
+
+admission_rules:
+  - raw_export_status_must_be_declared
+  - canon_status_defaults_to_not_canon
+  - deployment_status_defaults_to_not_deployed
+  - authority_scope_defaults_to_none
+  - parser_output_not_canon_must_be_true
+  - missing_receipts_must_be_graphable
+  - public_github_safety_must_be_checked_before_public_mirror
+
+rejection_or_hold_conditions:
+  - missing_source_surface
+  - missing_source_url_or_path
+  - unknown_public_safety_for_public_write
+  - credential_like_content_detected
+  - self_ratifying_language_without_human_root
+  - deployment_claim_without_receipt
+  - raw_export_claim_without_hash_or_source_ref
+
+keeper: Sheldonbrain ingests lineage, not crowns.
