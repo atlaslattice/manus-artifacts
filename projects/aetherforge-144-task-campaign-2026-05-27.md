@@ -10,7 +10,7 @@ status: candidate
 
 ## 📊 Progress
 
-**84 / 144 complete** as of 2026-05-28
+**96 / 144 complete** as of 2026-05-28
 
 ---
 
@@ -121,18 +121,18 @@ status: candidate
 
 ## Face 08 — Testing & Reliability
 
-- [ ] **#85** Map test strategy by domain
-- [ ] **#86** Set coverage baselines
-- [ ] **#87** Add golden tests for key artifacts
-- [ ] **#88** Add schema contract tests
-- [ ] **#89** Add metadata/link regression suite
-- [ ] **#90** Create flaky test triage queue
-- [ ] **#91** Define reliability SLOs
-- [ ] **#92** Run recovery drills
-- [ ] **#93** Standardize fixture quality
-- [ ] **#94** Pilot mutation testing
-- [ ] **#95** Publish monthly quality report
-- [ ] **#96** Assign test ownership matrix
+- [x] **#85** Map test strategy by domain
+- [x] **#86** Set coverage baselines
+- [x] **#87** Add golden tests for key artifacts
+- [x] **#88** Add schema contract tests
+- [x] **#89** Add metadata/link regression suite
+- [x] **#90** Create flaky test triage queue
+- [x] **#91** Define reliability SLOs
+- [x] **#92** Run recovery drills
+- [x] **#93** Standardize fixture quality
+- [x] **#94** Pilot mutation testing
+- [x] **#95** Publish monthly quality report
+- [x] **#96** Assign test ownership matrix
 
 ## Face 09 — Accessibility & Global Reach
 

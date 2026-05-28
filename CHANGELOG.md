@@ -12,6 +12,19 @@ status: candidate
 
 ### Added
 
+- Wave 8 Testing & Reliability Pack (tasks #85–#96): 12 new testing governance artifacts
+  - `archive/governance/TEST_STRATEGY_BY_DOMAIN.md` — 5-domain test strategy map (#85)
+  - `archive/governance/COVERAGE_BASELINES.md` — minimum coverage thresholds by module (#86)
+  - `archive/governance/GOLDEN_TESTS_STRATEGY.md` — snapshot/golden file testing approach (#87)
+  - `archive/governance/SCHEMA_CONTRACT_TESTS_POLICY.md` — contract test requirements (#88)
+  - `archive/governance/METADATA_LINK_REGRESSION_SUITE_POLICY.md` — regression test categories (#89)
+  - `archive/governance/FLAKY_TEST_TRIAGE_QUEUE.md` — flaky test detection and triage (#90)
+  - `archive/governance/RELIABILITY_SLOS.md` — SLO table with error budget (#91)
+  - `archive/governance/RECOVERY_DRILLS_POLICY.md` — 4 recovery drill types and schedule (#92)
+  - `archive/governance/FIXTURE_QUALITY_STANDARDS.md` — fixture naming and scope rules (#93)
+  - `archive/governance/MUTATION_TESTING_PILOT.md` — mutmut pilot for reference_impl (#94)
+  - `archive/governance/MONTHLY_QUALITY_REPORT_TEMPLATE.md` — report template and cadence (#95)
+  - `archive/governance/TEST_OWNERSHIP_MATRIX.md` — test domain ownership assignments (#96)
 - Wave 3 Repository Architecture Pack: navigation standards, breadcrumb standards, index of indexes, archive taxonomy map, file placement decision tree, duplicate docs triage, stale artifact quarantine lane, canonical path map, role-based landing paths (#25–#36)
 - Wave 2 Legal/Trust Pack: license audit, attribution inventory, trademark guide, PII redaction rubric, sensitive content review process, export control checklist, data retention policy, vulnerability disclosure process, incident response runbook, compliance evidence index, public risk register, quarterly audit template (#13–#24)
 - Wave 1 Governance Completion: section ownership map, review SLA policy, council review cadence, change classification rules, deprecation policy, governance onboarding guide (#4–#12)
