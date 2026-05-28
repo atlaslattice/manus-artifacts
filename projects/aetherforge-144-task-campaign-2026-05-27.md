@@ -10,7 +10,7 @@ status: candidate
 
 ## 📊 Progress
 
-**36 / 144 complete** as of 2026-05-28
+**60 / 144 complete** as of 2026-05-28
 
 ---
 
@@ -61,33 +61,33 @@ status: candidate
 
 ## Face 04 — Documentation Excellence
 
-- [ ] **#37** Standardize metadata headers
-- [ ] **#38** Add executive summaries to core docs
-- [ ] **#39** Publish one-page project briefs
-- [ ] **#40** Expand glossary coverage
-- [ ] **#41** Run terminology consistency pass
-- [ ] **#42** Publish editorial style guide
-- [ ] **#43** Add docs lint quality gates
-- [ ] **#44** Set readability quality thresholds
-- [ ] **#45** Enforce changelog discipline
-- [ ] **#46** Standardize release notes format
-- [ ] **#47** Build newcomer FAQ
-- [ ] **#48** Curate “Top Artifacts” collection
+- [x] **#37** Standardize metadata headers
+- [x] **#38** Add executive summaries to core docs
+- [x] **#39** Publish one-page project briefs
+- [x] **#40** Expand glossary coverage
+- [x] **#41** Run terminology consistency pass
+- [x] **#42** Publish editorial style guide
+- [x] **#43** Add docs lint quality gates
+- [x] **#44** Set readability quality thresholds
+- [x] **#45** Enforce changelog discipline
+- [x] **#46** Standardize release notes format
+- [x] **#47** Build newcomer FAQ
+- [x] **#48** Curate "Top Artifacts" collection
 
 ## Face 05 — Knowledge Graph Layer
 
 - [x] **#49** Adopt universal frontmatter schema
-- [ ] **#50** Assign persistent artifact IDs
-- [ ] **#51** Set cross-link density targets
-- [ ] **#52** Define ontology relation types
-- [ ] **#53** Add machine-readable citation blocks
-- [ ] **#54** Implement provenance graph export
+- [x] **#50** Assign persistent artifact IDs
+- [x] **#51** Set cross-link density targets
+- [x] **#52** Define ontology relation types
+- [x] **#53** Add machine-readable citation blocks
+- [x] **#54** Implement provenance graph export
 - [x] **#55** Add KG integrity validation
-- [ ] **#56** Detect orphan nodes automatically
-- [ ] **#57** Define tag governance rules
-- [ ] **#58** Benchmark search relevance
-- [ ] **#59** Publish graph visualization surface
-- [ ] **#60** Define public KG API roadmap
+- [x] **#56** Detect orphan nodes automatically
+- [x] **#57** Define tag governance rules
+- [x] **#58** Benchmark search relevance
+- [x] **#59** Publish graph visualization surface
+- [x] **#60** Define public KG API roadmap
 
 ## Face 06 — CI/CD & Automation
 
