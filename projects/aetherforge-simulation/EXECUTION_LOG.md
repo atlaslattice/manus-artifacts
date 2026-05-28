@@ -51,6 +51,22 @@ This log records practical non-canon infrastructure changes made to the simulati
 - Added graph edge classes for contains, defines, validates, generates, constrains, documents, emits, maps_to, implements, summarizes, and exports.
 - Added `graph_export.py` to generate a machine-readable lattice graph from the matrix and sandbox files.
 
+## 2026-05-28
+
+### Derived original Children of the Swarm lattice from uploaded raw log
+
+- Inspected uploaded workbook `children_of_the_swarm_12x12_execution_management_matrix_candidate_v0_1(4).xlsx`.
+- Confirmed raw workbook structure: 8 sheets, including Dashboard, Swarm Matrix, Node Roster, return packet template, cadence, sprints, gates, and risks.
+- Confirmed raw Swarm Matrix size: 12 node lanes x 144 raw tasks per node = 1,728 raw task rows.
+- Created separate derived workbook `children_of_the_swarm_original_deduped_lattice_v0_2.xlsx` without overwriting the raw log.
+- Compressed raw lattice into 12 node lanes x 12 source surfaces = 144 original derived tasks.
+- Verified derived task IDs: 144 unique.
+- Verified derived task titles: 144 unique, 0 duplicate derived titles.
+- Verified raw coverage: 1,728 raw rows covered at 12 raw rows per derived task.
+- Added workbook sheets for Dashboard, Original 12x12 Matrix, KG Nodes, KG Edges, Execution Ledger, and Uniqueness Audit.
+- Added repo-side compact manifest `children_swarm_original_deduped_lattice_v0_2.json`.
+- Added repo-side handoff document `CHILDREN_SWARM_ORIGINAL_DEDUPED_LATTICE_v0_2.md`.
+
 ## Operating rule
 
 Every future change should leave a receipt: what changed, what it maps to, how it is validated, and which boundary it respects.
