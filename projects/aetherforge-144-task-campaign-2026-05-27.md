@@ -10,7 +10,7 @@ status: candidate
 
 ## 📊 Progress
 
-**120 / 144 complete** as of 2026-05-28
+**132 / 144 complete** as of 2026-05-28
 
 ---
 
@@ -166,18 +166,18 @@ status: candidate
 
 ## Face 11 — Community & Ecosystem
 
-- [ ] **#121** Publish public roadmap cadence
-- [ ] **#122** Design discussion category system
-- [ ] **#123** Ship monthly community update
-- [ ] **#124** Publish governance transparency reports
-- [ ] **#125** Create partner integration guide
-- [ ] **#126** Launch API consumer program
-- [ ] **#127** Provide research collaboration templates
-- [ ] **#128** Publish open data export packs
-- [ ] **#129** Build educational learning paths
-- [ ] **#130** Launch showcase/demo gallery
-- [ ] **#131** Refresh code-of-practice cadence
-- [ ] **#132** Plan annual open-source summit
+- [x] **#121** Publish public roadmap cadence
+- [x] **#122** Design discussion category system
+- [x] **#123** Ship monthly community update
+- [x] **#124** Publish governance transparency reports
+- [x] **#125** Create partner integration guide
+- [x] **#126** Launch API consumer program
+- [x] **#127** Provide research collaboration templates
+- [x] **#128** Publish open data export packs
+- [x] **#129** Build educational learning paths
+- [x] **#130** Launch showcase/demo gallery
+- [x] **#131** Refresh code-of-practice cadence
+- [x] **#132** Plan annual open-source summit
 
 ## Face 12 — Launch & World-Class Operations
 
