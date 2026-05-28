@@ -50,7 +50,6 @@ documentation.
 
 | Project | Path | Status |
 |---|---|---|
-| Free Bank | [projects/free-bank/](../projects/free-bank/) | Active |
 | Chinook Guardian | [projects/chinook-guardian/](../projects/chinook-guardian/) | Active |
 | Three-Tier Autonomy | [projects/three-tier-autonomy/](../projects/three-tier-autonomy/) | Active |
 | Aetherforge Metatron's Cube Top-50 | [projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md](../projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md) | Active |
@@ -114,6 +113,9 @@ documentation.
 | [LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md](./LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md) | Priority graph nodes |
 | [ARTIFACT_RELATIONSHIP_TYPES.md](./ARTIFACT_RELATIONSHIP_TYPES.md) | Relation vocabulary |
 | [CROSS_DOMAIN_LINK_POLICY.md](./CROSS_DOMAIN_LINK_POLICY.md) | Cross-linking standards |
+| [REUSE_GUIDELINES.md](./REUSE_GUIDELINES.md) | IP, license, and reuse policy |
+| [CITATION_GUIDE.md](./CITATION_GUIDE.md) | How to cite this work |
+| [DEPRECATION_POLICY.md](./DEPRECATION_POLICY.md) | Artifact lifecycle and deprecation rules |
 | [WEEKLY_DELTA_DIGEST_TEMPLATE.md](./WEEKLY_DELTA_DIGEST_TEMPLATE.md) | Weekly triad progress receipt template |
 | [asset-catalogue-march-2026.md](./asset-catalogue-march-2026.md) | Asset catalogue snapshot |
 | [operational-manifest-v1.0.0-alpha.md](./operational-manifest-v1.0.0-alpha.md) | Operational manifest |

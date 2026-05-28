@@ -471,7 +471,7 @@ if __name__ == "__main__":
     publisher = SocialPublisher()
     thread = publisher.draft_thread(
         "The Stryker cyberattack of March 2026 represents the first confirmed case of Iranian cyber "
-        "retaliation in the current conflict. The Handala hacking group executed a destructive wiper "
+        "retaliation in the current conflict. [redacted] executed a destructive wiper "
         "attack against a $25B medical device company. This is warfare conducted entirely in the "
         "cognitive and informational domain. The AI-Native OS architecture provides the counter: "
         "Tier 1 personal defense through cognitive filtering, Tier 2 systemic defense through "

@@ -751,7 +751,7 @@ def test_all():
     print("  Innovation #10: The Noosphere Gateway")
     print("=" * 50)
     ng = NoosphereGateway()
-    ng.store_personal_memory("stryker", "Handala hacking group attacked Stryker Corp on March 11, 2026")
+    ng.store_personal_memory("stryker", "[redacted group] attacked Stryker Corp on March 11, 2026")
     ng.store_personal_memory("stryker", "Stryker acquired Israeli company OrthoSpace in 2019")
     ng.store_personal_memory("noosphere", "The noosphere is the sphere of human thought")
     ng.store_swarm_insight("stryker", "Multiple cybersecurity firms confirm Iranian state sponsorship")

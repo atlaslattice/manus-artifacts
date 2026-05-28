@@ -218,3 +218,15 @@
   - `/docs/ANTI_CONFUSION_TERMINOLOGY_NOTES.md`
 - **Task 36 (Docs style guide):**  
   - `/docs/DOCS_STYLE_GUIDE.md`
+- **Governance task — Quarantine sweep (2026-05-28):**  
+  - Sensitive content identified, staged in `quarantine/` folder  
+  - `projects/free-bank/` and `codebases/free-bank/` moved to `quarantine/free-bank/`  
+  - Hacking group references redacted in 4 codebase files  
+  - All index cross-references cleaned (README, projects/README, docs/ARCHIVE_INDEX, synthesis_plan)  
+  - See: `archive/boot/gptbrain/TIDELOCKBrain/WAKE_REPORT_QUARANTINE_SWEEP_2026-05-28.md`
+- **Task 38/39/40 (SPDX / Attribution / Reuse guidelines):**  
+  - `/docs/REUSE_GUIDELINES.md`
+- **Task 47 (Citation guide):**  
+  - `/docs/CITATION_GUIDE.md`
+- **Task 45/46 (Stability tiers / Deprecation policy):**  
+  - `/docs/DEPRECATION_POLICY.md`

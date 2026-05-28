@@ -59,7 +59,6 @@ The following table summarizes every codebase directory reviewed, its primary la
 | `codebases/colab-notebooks/` | 4 | Python (Jupyter) | Prototype | INGEST |
 | `codebases/atlas-vault/` | 3 | Python | Mixed | INGEST, COMPILER, VAULT, INFRASTRUCTURE |
 | `codebases/project-symbiote/` | 1 | JavaScript | Prototype | BUILD, ROUTER, TASK_GEN |
-| `codebases/free-bank/` | 1 | Markdown | Spec | OTHER |
 | `codebases/other/` | 48 | Python, JS, Markdown | Mixed | INGEST, BUILD, REVIEW, VAULT |
 | `aluminum-os-core/` | 12 | Rust | **Working** | GOVERNANCE, REVIEW, VAULT |
 
@@ -111,11 +110,7 @@ This small but valuable codebase contains three distinct components. The `automa
 
 Project Symbiote is a Chrome extension prototype (`src_background.js`) that functions as an in-browser AI assistant. It uses the Anthropic Claude API to interpret user commands and the Google Drive API for file operations. It includes a constitutional safety layer for action approval. The extension is missing its UI (side panel, options page) and content script. It represents the Ring 3 Experience Layer's browser-based interface and should be developed further as the primary user-facing surface.
 
-### 3.12 free-bank (1 file)
-
-A single Markdown blueprint for an open-source, AI-powered banking application. It outlines a vision for decentralized finance using blockchain, DeFi, and AI, but contains no executable code. This falls outside the immediate scope of the Aluminum OS pipeline and should be archived.
-
-### 3.13 codebases/other (48 files)
+### 3.12 codebases/other (48 files)
 
 A mixed collection including another copy of `artifact_sync.py`, a Claude RAG specification (`claude_rag.py`), Chrome extension files (Vite + TypeScript + Gemini integration), Markdown knowledge base articles, and video files. The Chrome extension files represent an earlier or parallel iteration of Project Symbiote using Gemini instead of Claude. The `artifact_sync.py` duplicate confirms the need for consolidation.
 
@@ -243,7 +238,6 @@ manus-artifacts/
 │
 ├── archive/                             # Deprecated codebases (preserved, not active)
 │   ├── colab-notebooks/
-│   ├── free-bank/
 │   └── legacy-email-processing/
 │
 ├── scripts/                             # Deployment and utility scripts
@@ -274,7 +268,6 @@ The following table specifies the disposition of every current codebase director
 | `codebases/aluminum-os/` | **ARCHIVE** | `specs/constitution/` + `specs/architecture/` | Spec-only; canonical vision documents |
 | `codebases/project-symbiote/` | **KEEP** | `ring3-experience/symbiote/` | Prototype Chrome extension for Ring 3 |
 | `codebases/colab-notebooks/` | **DEPRECATE** | `archive/colab-notebooks/` | Interactive tutorial, not pipeline-compatible |
-| `codebases/free-bank/` | **DEPRECATE** | `archive/free-bank/` | Out of scope; no executable code |
 | `codebases/other/` | **MERGE** | Various | Extract Chrome extension to symbiote; archive rest |
 
 ---

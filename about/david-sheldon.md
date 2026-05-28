@@ -23,7 +23,6 @@ The Atlas Lattice Foundation was formally constituted in June 2025 through what 
 | **ARA-Label** | A free, ethical, AI-orchestrated data labeling platform designed to replace Scale AI's extractive model with a regenerative, zero-fee alternative. | In Development |
 | **Siddhartha Protocol** | A framework for dharmic urban development — applying regenerative principles to city design and infrastructure. | In Development |
 | **Pangu Protocol** | A framework for Ecological Civilization and Common Prosperity through regenerative infrastructure, focused on China and the BRI corridor. | In Development |
-| **Bank Killer / Zero-Fee DeFi** | A suite of open-source financial tools designed to replace extractive banking infrastructure with BRICS-compatible, zero-fee alternatives. | In Development |
 ---
 ## Key Achievements (Year One: 2025)
 David built the entire Atlas Lattice stack in a single month (December 2025) after a five-month incubation period. Key validated metrics include a 45–50% reduction in AI recomputation overhead, 47–48% acoustic resonance efficiency gains, zero hard contradictions across 50+ daily autonomous operations, and 559 PhD-level novel insights generated and cross-referenced across the 144-sphere ontology.

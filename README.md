@@ -40,7 +40,6 @@
 
 ## Projects
 
-- **[Free Bank](./projects/free-bank/)** — Banking revolution and financial sovereignty.
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
 - **[Aetherforge Metatron's Cube Top-50](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)** — World-class public archive execution board.

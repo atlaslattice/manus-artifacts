@@ -20,7 +20,6 @@ Keep status and receipt links synchronized across all four boards.
 
 ## Project Folders
 
-- [Free Bank](./free-bank/)
 - [Chinook Guardian](./chinook-guardian/)
 - [Three-Tier Autonomy](./three-tier-autonomy/)
 
