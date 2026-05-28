@@ -1,8 +1,8 @@
 {
   "schema_id": "lattice_global_index.v0.1",
-  "generated_at_utc": "2026-05-28T18:05:31.066179Z",
+  "generated_at_utc": "2026-05-28T18:07:05.686217Z",
   "repository_root": "/tmp/workspace/atlaslattice/manus-artifacts",
-  "snapshot_fingerprint": "8e20d2fac64bb1fbde4e3a6256f958c60de7ada1e6f8c1c6732ec941da466f80",
+  "snapshot_fingerprint": "b464289a4d607829008eb4b7de848ee98257ed413008a7814035b7c30fbb9729",
   "routes": [
     {
       "route_id": "ROUTE-.GITHUB-CI_GOVERNANCE",
@@ -43,8 +43,8 @@
       "route_id": "ROUTE-ARCHIVE-ARCHIVE_OPS",
       "domain": "archive",
       "lane": "archive_ops",
-      "artifact_count": 696,
-      "log_count": 74
+      "artifact_count": 697,
+      "log_count": 75
     },
     {
       "route_id": "ROUTE-ARCHIVES-ARCHIVE_OPS",
@@ -202,8 +202,8 @@
     }
   ],
   "link_health": {
-    "markdown_artifacts_total": 777,
-    "underlinked_markdown_artifacts": 753,
+    "markdown_artifacts_total": 778,
+    "underlinked_markdown_artifacts": 752,
     "unresolved_repo_links": 11
   },
   "artifacts": [
@@ -417,9 +417,9 @@
       "domain": "_root",
       "lane": "general",
       "is_log": false,
-      "size_bytes": 5284,
-      "sha256": "e6b768af8de6033475122a59853172eeba2ecfba8974f4c858dbbf85d23f6c54",
-      "last_modified_utc": "2026-05-28T18:03:55.328022Z",
+      "size_bytes": 5907,
+      "sha256": "96b56a0f7b5143f489b38e773f5cdc83762a63d5c665a028aa9bfc339e68ad82",
+      "last_modified_utc": "2026-05-28T18:06:54.609875Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
@@ -430,6 +430,7 @@
         "aluminum-os/v3.0-unified-field.md",
         "aluminum-os/v4.0-socratic-os-integration-report.md",
         "aluminum-os/v4.0-unified-field.md",
+        "archive/README.md",
         "archive/aetherforge/gptdreampp-openai/README.md",
         "archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_REHYDRATION_RECEIPT_2026-05-26.md",
         "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_AETHERFORGE_GPTDREAM_UNIFIED_MISSION_CHARTER_v0.1.md",
@@ -440,14 +441,18 @@
         "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_STATE_OF_GRAPH_WEEKLY_REPORT_2026-05-27.md",
         "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_UNIFIED_MISSION_DASHBOARD_v0.1.md",
         "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_WORLD_CLASS_CONTRIBUTOR_START_HERE_v0.1.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md",
+        "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md",
         "archives/janus-checkpoints",
         "bazinga",
         "bazinga/v0.1-launch-decree.md",
         "council",
         "council-reviews",
         "docs",
+        "docs/README.md",
         "health",
         "manus-vault",
+        "projects/README.md",
         "projects/aetherforge-144-task-campaign-2026-05-27.md",
         "projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md",
         "projects/aetherforge-next144-taskboard-2026-05-28.md",
@@ -461,7 +466,11 @@
         "sheldonbrain/system-architecture.md"
       ],
       "unresolved_repo_links": [],
-      "inbound_repo_links": [],
+      "inbound_repo_links": [
+        "archive/README.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md",
+        "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md"
+      ],
       "source_receipt": "README.md"
     },
     {
@@ -1109,21 +1118,27 @@
       "domain": "archive",
       "lane": "archive_ops",
       "is_log": false,
-      "size_bytes": 515,
-      "sha256": "dc14c0d218f7ef8bffada436be678e5f514ef23c9c547a2492636ad6db25a6bc",
-      "last_modified_utc": "2026-05-28T18:03:55.331831Z",
+      "size_bytes": 924,
+      "sha256": "bd2d27e9c754530601eff06e15c48804db0a43d361550b7f3e8e67d095a1cef1",
+      "last_modified_utc": "2026-05-28T18:06:54.611875Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
       "outbound_repo_links": [
-        "archive/aetherforge",
-        "archive/boot",
-        "archive/knowledge_graph",
-        "archive/spec",
-        "archive/validation"
+        "README.md",
+        "archive/aetherforge/README.md",
+        "archive/aetherforge/gptdreampp-openai/README.md",
+        "archive/boot/copilotbrain/TIDELOCKBrain/README.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md",
+        "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md",
+        "archive/validation",
+        "projects/README.md"
       ],
       "unresolved_repo_links": [],
-      "inbound_repo_links": [],
+      "inbound_repo_links": [
+        "README.md",
+        "archive/aetherforge/README.md"
+      ],
       "source_receipt": "archive/README.md"
     },
     {
@@ -1132,17 +1147,22 @@
       "domain": "archive",
       "lane": "archive_ops",
       "is_log": false,
-      "size_bytes": 181,
-      "sha256": "0f8012d60fa97bc2f5c2e02c9469df353eeffce89069ff9c186540b6167a8c03",
-      "last_modified_utc": "2026-05-28T18:03:55.332713Z",
+      "size_bytes": 351,
+      "sha256": "4e457880d85eaea42c94757f7ecb1d9e672d35a293b9f805e8cdbb2ac0cf7758",
+      "last_modified_utc": "2026-05-28T18:06:54.613875Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
       "outbound_repo_links": [
-        "archive/aetherforge/gptdreampp-openai/README.md"
+        "archive/README.md",
+        "archive/aetherforge/gptdreampp-openai/README.md",
+        "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md"
       ],
       "unresolved_repo_links": [],
-      "inbound_repo_links": [],
+      "inbound_repo_links": [
+        "archive/README.md",
+        "archive/aetherforge/gptdreampp-openai/README.md"
+      ],
       "source_receipt": "archive/aetherforge/README.md"
     },
     {
@@ -1189,15 +1209,18 @@
       "domain": "archive",
       "lane": "archive_ops",
       "is_log": false,
-      "size_bytes": 1931,
-      "sha256": "2d35e114b76f22f33dd65fbd92341fb08362346d6f6941ac6fff84cf63dd08b2",
-      "last_modified_utc": "2026-05-28T18:03:55.332841Z",
+      "size_bytes": 2190,
+      "sha256": "f919174fed2cfd7bdcc081f9bb93929a2b641f853fe28891771999e48414a9aa",
+      "last_modified_utc": "2026-05-28T18:06:54.614875Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
       "outbound_repo_links": [
+        "archive/aetherforge/README.md",
         "archive/aetherforge/gptdreampp-openai/AETHERFORGE_SHELDONBRAIN_LATTICE_INGESTION_CONTROL_BOARD_2026-05-27.md",
         "archive/aetherforge/gptdreampp-openai/GPTDREAMPP_INGESTION_ARTIFACT_CONTRACT_v0.1.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md",
+        "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md",
         "fixtures/gptdreampp_openai/artifact_contract_records.valid.candidate.json",
         "fixtures/gptdreampp_openai/bullshit_olympics_review.valid.candidate.json",
         "fixtures/gptdreampp_openai/notion_cargo_queue.valid.candidate.json"
@@ -1205,7 +1228,10 @@
       "unresolved_repo_links": [],
       "inbound_repo_links": [
         "README.md",
+        "archive/README.md",
         "archive/aetherforge/README.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md",
+        "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md",
         "projects/README.md"
       ],
       "source_receipt": "archive/aetherforge/gptdreampp-openai/README.md"
@@ -2635,7 +2661,9 @@
       "trust_state": "candidate_unverified",
       "outbound_repo_links": [],
       "unresolved_repo_links": [],
-      "inbound_repo_links": [],
+      "inbound_repo_links": [
+        "archive/README.md"
+      ],
       "source_receipt": "archive/boot/copilotbrain/TIDELOCKBrain/README.md"
     },
     {
@@ -2809,6 +2837,25 @@
         "projects/aetherforge-top10-taskboard-2026-05-28.md"
       ],
       "source_receipt": "archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX11_AX20_LOOP4.md"
+    },
+    {
+      "artifact_id": "ATLAS-KG-1f81538f42344e18",
+      "path": "archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX16_LINK_HARDENING.md",
+      "domain": "archive",
+      "lane": "archive_ops",
+      "is_log": true,
+      "size_bytes": 1743,
+      "sha256": "2c31585ec503cdc2007bb903a423b28a7570c9386ac810f7d8249b500c73d6fe",
+      "last_modified_utc": "2026-05-28T18:06:54.648874Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "outbound_repo_links": [],
+      "unresolved_repo_links": [],
+      "inbound_repo_links": [
+        "projects/aetherforge-top10-taskboard-2026-05-28.md"
+      ],
+      "source_receipt": "archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX16_LINK_HARDENING.md"
     },
     {
       "artifact_id": "ATLAS-KG-f6571d19c66dfe26",
@@ -9549,7 +9596,8 @@
       "outbound_repo_links": [],
       "unresolved_repo_links": [],
       "inbound_repo_links": [
-        "README.md"
+        "README.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md"
       ],
       "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_AETHERFORGE_GPTDREAM_UNIFIED_MISSION_CHARTER_v0.1.md"
     },
@@ -9568,7 +9616,8 @@
       "outbound_repo_links": [],
       "unresolved_repo_links": [],
       "inbound_repo_links": [
-        "README.md"
+        "README.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md"
       ],
       "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_HYPERCUBE_144_SCOREBOARD_v0.1.md"
     },
@@ -9587,7 +9636,8 @@
       "outbound_repo_links": [],
       "unresolved_repo_links": [],
       "inbound_repo_links": [
-        "README.md"
+        "README.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md"
       ],
       "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_GLOSSARY_v0.1.md"
     },
@@ -9606,7 +9656,8 @@
       "outbound_repo_links": [],
       "unresolved_repo_links": [],
       "inbound_repo_links": [
-        "README.md"
+        "README.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md"
       ],
       "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_PRIMITIVES_AND_INGESTION_PROTOCOL_v0.1.md"
     },
@@ -9625,7 +9676,9 @@
       "outbound_repo_links": [],
       "unresolved_repo_links": [],
       "inbound_repo_links": [
-        "README.md"
+        "README.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md",
+        "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md"
       ],
       "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_QUERY_COOKBOOK_v0.1.md"
     },
@@ -9643,7 +9696,9 @@
       "trust_state": "candidate_unverified",
       "outbound_repo_links": [],
       "unresolved_repo_links": [],
-      "inbound_repo_links": [],
+      "inbound_repo_links": [
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md"
+      ],
       "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_QUEST_LOOP_CADENCE_v0.1.md"
     },
     {
@@ -9661,7 +9716,8 @@
       "outbound_repo_links": [],
       "unresolved_repo_links": [],
       "inbound_repo_links": [
-        "README.md"
+        "README.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md"
       ],
       "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_STATE_OF_GRAPH_WEEKLY_REPORT_2026-05-27.md"
     },
@@ -9680,7 +9736,8 @@
       "outbound_repo_links": [],
       "unresolved_repo_links": [],
       "inbound_repo_links": [
-        "README.md"
+        "README.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md"
       ],
       "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_UNIFIED_MISSION_DASHBOARD_v0.1.md"
     },
@@ -9699,7 +9756,9 @@
       "outbound_repo_links": [],
       "unresolved_repo_links": [],
       "inbound_repo_links": [
-        "README.md"
+        "README.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md",
+        "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md"
       ],
       "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_WORLD_CLASS_CONTRIBUTOR_START_HERE_v0.1.md"
     },
@@ -9743,15 +9802,36 @@
       "domain": "archive",
       "lane": "archive_ops",
       "is_log": false,
-      "size_bytes": 1158,
-      "sha256": "4fa37ee0ea73d85d138dbffe721ecf02062f6f13a90ed20ef6adc4a54bcf6e74",
-      "last_modified_utc": "2026-05-28T18:03:55.364675Z",
+      "size_bytes": 1991,
+      "sha256": "1b57c24f75ecc268fc1e33ee25971e104f7331b090a874db5379687db6178911",
+      "last_modified_utc": "2026-05-28T18:06:54.616875Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
-      "outbound_repo_links": [],
+      "outbound_repo_links": [
+        "README.md",
+        "archive/aetherforge/gptdreampp-openai/README.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_AETHERFORGE_GPTDREAM_UNIFIED_MISSION_CHARTER_v0.1.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_HYPERCUBE_144_SCOREBOARD_v0.1.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_GLOSSARY_v0.1.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_PRIMITIVES_AND_INGESTION_PROTOCOL_v0.1.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_QUERY_COOKBOOK_v0.1.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_QUEST_LOOP_CADENCE_v0.1.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_STATE_OF_GRAPH_WEEKLY_REPORT_2026-05-27.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_UNIFIED_MISSION_DASHBOARD_v0.1.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_WORLD_CLASS_CONTRIBUTOR_START_HERE_v0.1.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/lattice_global_index.v0.1.json",
+        "archive/knowledge_graph/lattice_kg/v0_5/lattice_hypercube_144_scoreboard.v0.1.json",
+        "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md",
+        "projects/README.md"
+      ],
       "unresolved_repo_links": [],
-      "inbound_repo_links": [],
+      "inbound_repo_links": [
+        "README.md",
+        "archive/README.md",
+        "archive/aetherforge/gptdreampp-openai/README.md",
+        "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md"
+      ],
       "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/README.md"
     },
     {
@@ -9802,7 +9882,9 @@
       "trust_state": "candidate_unverified",
       "outbound_repo_links": [],
       "unresolved_repo_links": [],
-      "inbound_repo_links": [],
+      "inbound_repo_links": [
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md"
+      ],
       "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/lattice_hypercube_144_scoreboard.v0.1.json"
     },
     {
@@ -12004,15 +12086,27 @@
       "domain": "archive",
       "lane": "archive_ops",
       "is_log": false,
-      "size_bytes": 1808,
-      "sha256": "3f042076c9992103a3a07f8fd7e70a458d9ed7d6e55edf3f86d1e0d6aa3b9091",
-      "last_modified_utc": "2026-05-28T18:03:55.376992Z",
+      "size_bytes": 2299,
+      "sha256": "e9370bcf0c1960d45b960f9c6ef0616e9c62162aeaf87dda10363a98593cde6c",
+      "last_modified_utc": "2026-05-28T18:06:54.618875Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
-      "outbound_repo_links": [],
+      "outbound_repo_links": [
+        "README.md",
+        "archive/aetherforge/gptdreampp-openai/README.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_QUERY_COOKBOOK_v0.1.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_WORLD_CLASS_CONTRIBUTOR_START_HERE_v0.1.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md"
+      ],
       "unresolved_repo_links": [],
-      "inbound_repo_links": [],
+      "inbound_repo_links": [
+        "README.md",
+        "archive/README.md",
+        "archive/aetherforge/README.md",
+        "archive/aetherforge/gptdreampp-openai/README.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md"
+      ],
       "source_receipt": "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md"
     },
     {
@@ -17034,7 +17128,9 @@
         "docs/unified-field-v4.0.md"
       ],
       "unresolved_repo_links": [],
-      "inbound_repo_links": [],
+      "inbound_repo_links": [
+        "README.md"
+      ],
       "source_receipt": "docs/README.md"
     },
     {
@@ -17930,7 +18026,11 @@
         "projects/three-tier-autonomy"
       ],
       "unresolved_repo_links": [],
-      "inbound_repo_links": [],
+      "inbound_repo_links": [
+        "README.md",
+        "archive/README.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/README.md"
+      ],
       "source_receipt": "projects/README.md"
     },
     {
@@ -18021,9 +18121,9 @@
       "domain": "projects",
       "lane": "project_execution",
       "is_log": false,
-      "size_bytes": 2847,
-      "sha256": "68559c371bf4f7a01037d6818e20abdc43fe1a4f9b66b4d3e2466a37edfa759b",
-      "last_modified_utc": "2026-05-28T18:03:55.480097Z",
+      "size_bytes": 3087,
+      "sha256": "dcf892923a93f045d540c7eaa1197617f91d8cf3264fe7e9bb003d779aa9d360",
+      "last_modified_utc": "2026-05-28T18:06:54.646874Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
@@ -18031,6 +18131,7 @@
         "archive/boot/copilotbrain/TIDELOCKBrain/DELTA_EXTRACTION_100Y_TOP10_ALIGNMENT_2026-05-28.md",
         "archive/boot/copilotbrain/TIDELOCKBrain/DREAM_JOURNAL_100Y_TOP10_ALIGNMENT_2026-05-28.md",
         "archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX11_AX20_LOOP4.md",
+        "archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_ACTIVITY_RECEIPT_2026-05-28_AX16_LINK_HARDENING.md",
         "archive/boot/copilotbrain/TIDELOCKBrain/WAKE_REPORT_100Y_TOP10_ALIGNMENT_2026-05-28.md",
         "projects/aetherforge-144-task-campaign-2026-05-27.md",
         "projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md",
@@ -18955,9 +19056,9 @@
       "domain": "scripts",
       "lane": "tooling",
       "is_log": false,
-      "size_bytes": 18164,
-      "sha256": "a2018a658ad032d1f6c78cc25a7441d0c725f7101e257af228f4c6694daa9a97",
-      "last_modified_utc": "2026-05-28T18:03:55.483531Z",
+      "size_bytes": 20785,
+      "sha256": "a6a26c101e1a6b15aa8116688d529e976021840827887cf10ad1ec6b6710cce9",
+      "last_modified_utc": "2026-05-28T18:06:54.638874Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
@@ -19433,9 +19534,9 @@
       "domain": "tests",
       "lane": "validation",
       "is_log": false,
-      "size_bytes": 2706,
-      "sha256": "626e7aa64b71c53fd554663501afc644b3b161f3fdb39b3558d76aa0be7a15e3",
-      "last_modified_utc": "2026-05-28T18:03:55.485170Z",
+      "size_bytes": 3636,
+      "sha256": "750f67aa32dd133f88f6b2479627bfbf43250ae5da2c13b1695caa69a9d22762",
+      "last_modified_utc": "2026-05-28T18:06:54.642874Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
