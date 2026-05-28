@@ -144,4 +144,4 @@ domain subfolders: `atlas-lattice/`, `atlas-vault/`, `other/`, `free-bank/`,
 
 ---
 
-*Index last updated: 2026-05-26. All artifacts are candidates until ratified.*
+*Index last updated: 2026-05-28. All artifacts are candidates until ratified.*

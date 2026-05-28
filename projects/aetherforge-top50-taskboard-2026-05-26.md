@@ -105,5 +105,5 @@
 
 ---
 
-*Board updated: 2026-05-26. Governed by Aetherforge council rules.*
+*Board updated: 2026-05-28. Governed by Aetherforge council rules.*
 *Nothing is canon until ratified by @atlaslattice.*
