@@ -202,6 +202,8 @@ jobs:
               Path('archive/boot/gptbrain/CLAIM_LEDGER.seed.jsonl'),
               Path('archive/boot/gptbrain/ARTIFACT_REGISTRY.seed.jsonl'),
               Path('archive/boot/gptbrain/MEMORY_OBJECTS.seed.jsonl'),
+              Path('archive/boot/gptbrain/LATTICE_ORCS_ROUTE_INDEX.seed.jsonl'),
+              Path('archive/boot/gptbrain/LATTICE_POSITRON_REVIEW_INDEX.seed.jsonl'),
           ]
 
           for ledger in ledgers:
