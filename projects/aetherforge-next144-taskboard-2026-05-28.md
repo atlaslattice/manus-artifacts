@@ -9,7 +9,7 @@ source_of_truth: GitHub
 ---
 # Aetherforge Next-144 Taskboard (12x12 Sequence)
 
-> Baseline state: **32 / 50 done** with **4 hard blockers open**.
+> Baseline state: **44 / 50 done** (Wave 2 governance spine drafted 2026-05-28) with **4 hard blockers open**.
 
 ## Status Key
 
@@ -22,7 +22,7 @@ source_of_truth: GitHub
 | Wave | Scope | Dependency | Gate to close wave | Status |
 |---|---|---|---|---|
 | 1 (1-12) | Safety unblock | None | Safety Signoff Published | 🟥 BLOCKED |
-| 2 (13-24) | Governance spine | Wave 1 gate | Governance Spine Operational | 🟨 TODO |
+| 2 (13-24) | Governance spine | Wave 1 gate | Governance Spine Operational | 🟩 DRAFTED (pending Wave 1 gate) |
 | 3 (25-36) | Metadata/provenance scale | Wave 2 gate | Metadata v2 Coverage Published | 🟨 TODO |
 | 4 (37-48) | Graph integrity | Wave 3 gate | Graph Integrity Review Published | 🟨 TODO |
 | 5 (49-60) | AI evidence spine | Wave 3 gate | AI Evidence Snapshot v2 Published | 🟨 TODO |
@@ -57,18 +57,18 @@ source_of_truth: GitHub
 **Dependency:** Wave 1 complete  
 **Checkpoint gate:** governance decision index + unresolved decision register published
 
-- [ ] **13.** Publish ratification lifecycle one-pager
-- [ ] **14.** Add canon-promotion checklist
-- [ ] **15.** Add canon-demotion/rollback policy
-- [ ] **16.** Add adjudication evidence template
-- [ ] **17.** Build governance decision index
-- [ ] **18.** Define council vote recording format
-- [ ] **19.** Map canon ownership by domain
-- [ ] **20.** Define candidate expiration rules
-- [ ] **21.** Add canon conflict-resolution process
-- [ ] **22.** Define governance SLA targets
-- [ ] **23.** Publish governance FAQ addendum
-- [ ] **24.** Add unresolved decision register
+- [x] **13.** Publish ratification lifecycle one-pager
+- [x] **14.** Add canon-promotion checklist
+- [x] **15.** Add canon-demotion/rollback policy
+- [x] **16.** Add adjudication evidence template
+- [x] **17.** Build governance decision index
+- [x] **18.** Define council vote recording format
+- [x] **19.** Map canon ownership by domain
+- [x] **20.** Define candidate expiration rules
+- [x] **21.** Add canon conflict-resolution process
+- [x] **22.** Define governance SLA targets
+- [x] **23.** Publish governance FAQ addendum
+- [x] **24.** Add unresolved decision register
 
 ## Wave 3 — Metadata and provenance scale (25-36)
 
