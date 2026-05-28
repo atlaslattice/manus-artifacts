@@ -15,6 +15,7 @@ The **Atlas Lattice Foundation** is an independent AI governance and knowledge a
 - 📚 **[Glossary](./docs/GLOSSARY.md)** — Key terms, concepts, and abbreviations
 - 🏛️ **[Canon Status Model](./docs/CANON_STATUS_MODEL.md)** — Repository governance state model and canon boundaries
 - 🧩 **[Aetherforge 12×12 Hypercube Campaign (144 Missions)](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — Full world-class public roadmap across 12 faces
+- ⚡ **[Aetherforge Next-144 Execution Taskboard](./projects/aetherforge-next144-taskboard-2026-05-28.md)** — Immediate dependency-first execution queue and Top-25 strike sequence
 - 🗺️ **[Aetherforge Top-50 Taskboard](./projects/aetherforge-top50-taskboard-2026-05-26.md)** — Roadmap to world-class public archive status
 
 ---
