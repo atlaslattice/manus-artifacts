@@ -54,13 +54,13 @@ receipt-path reconstruction
 Aetherforge play loop design
 ```
 
-The uploaded retrieval architecture report states that Aetherforge is already visible as a serious candidate interface layer, with the cycle:
+The retrieval architecture report frames Aetherforge as a serious candidate interface layer, not merely flavor text, with the cycle:
 
 ```text
 WAKE -> CLEAN -> LISTEN -> DREAM -> LABEL -> PLAY -> PROVE -> SHARE -> GROW -> RETURN
 ```
 
-It also treats OpenAI as a strong reasoning/retrieval lane, not a governance lane. This bounty board follows that separation.
+It also treats OpenAI as a reasoning/retrieval lane, not a governance lane. This board follows that separation.
 
 ## Valuation scale
 
