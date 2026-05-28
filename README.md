@@ -58,6 +58,9 @@ by @atlaslattice. See [GOVERNANCE.md](./GOVERNANCE.md).
 | Understand governance | [GOVERNANCE.md](./GOVERNANCE.md) |
 | Track canon candidates | [docs/canon-candidate-register.md](./docs/canon-candidate-register.md) |
 | Navigate the full architecture | [docs/index.md](./docs/index.md) |
+| Browse every artifact (367 indexed) | [docs/LATTICE_GLOBAL_INDEX.md](./docs/LATTICE_GLOBAL_INDEX.md) |
+| See ingestion sources (GitHub/Notion/Drive) | [docs/INGESTION_SOURCES_REGISTRY.md](./docs/INGESTION_SOURCES_REGISTRY.md) |
+| Understand artifact metadata standard | [docs/ARTIFACT_METADATA_STANDARD.md](./docs/ARTIFACT_METADATA_STANDARD.md) |
 | Explore GPTDream++ cross-links | [docs/gptdream-cross-links.md](./docs/gptdream-cross-links.md) |
 | Navigate project hierarchy | [projects/README.md](./projects/README.md) |
 | Log AI evidence artifacts | [docs/ai-evidence/README.md](./docs/ai-evidence/README.md) |

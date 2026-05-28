@@ -62,3 +62,10 @@ Status: candidate navigation index (not canon)
 
 - Known issues and errata: `/docs/known-issues-errata.md`
 - Owner settings action list (settings-only tasks): `/docs/owner-settings-action-list.md`
+
+## Knowledge Graph & Ingestion
+
+- Full repo artifact index (auto-generated): `/docs/LATTICE_GLOBAL_INDEX.md`
+- Ingestion sources registry (GitHub/Notion/Drive): `/docs/INGESTION_SOURCES_REGISTRY.md`
+- Universal artifact metadata standard: `/docs/ARTIFACT_METADATA_STANDARD.md`
+- Source map (known repos): `/archive/integrations/lattice/LATTICE_REPO_SOURCE_MAP_2026-05-09.md`

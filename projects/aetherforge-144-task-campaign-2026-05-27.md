@@ -49,18 +49,18 @@ Target: make `atlaslattice/manus-artifacts` fully public, provenance-first, and 
 
 ## Axis 04 — Metadata & Indexing (37-48)
 
-- [ ] 37. Define universal artifact metadata schema.
+- [x] 37. Define universal artifact metadata schema.
 - [ ] 38. Backfill metadata on top-priority artifacts.
 - [ ] 39. Add unique artifact IDs for all records.
-- [ ] 40. Add source_system field (Drive/Notion/GitHub/etc.).
-- [ ] 41. Add created/updated/ratified timestamps.
-- [ ] 42. Add topic/ontology tags vocabulary.
-- [ ] 43. Add retrieval-optimized summary fields.
-- [ ] 44. Add related_artifacts linkage field.
-- [ ] 45. Add confidence score rubric.
-- [ ] 46. Add lineage depth marker.
-- [ ] 47. Generate global artifact index file.
-- [ ] 48. Automate index regeneration in CI.
+- [x] 40. Add source_system field (Drive/Notion/GitHub/etc.).
+- [x] 41. Add created/updated/ratified timestamps.
+- [x] 42. Add topic/ontology tags vocabulary.
+- [x] 43. Add retrieval-optimized summary fields.
+- [x] 44. Add related_artifacts linkage field.
+- [x] 45. Add confidence score rubric.
+- [x] 46. Add lineage depth marker.
+- [x] 47. Generate global artifact index file.
+- [x] 48. Automate index regeneration in CI.
 
 ## Axis 05 — Provenance & Receipts (49-60)
 
@@ -79,8 +79,8 @@ Target: make `atlaslattice/manus-artifacts` fully public, provenance-first, and 
 
 ## Axis 06 — Ingestion & Normalization (61-72)
 
-- [ ] 61. Create 500+ archive intake queue.
-- [ ] 62. Define batch prioritization rubric.
+- [x] 61. Create 500+ archive intake queue.
+- [x] 62. Define batch prioritization rubric.
 - [ ] 63. Normalize filenames to standard slug format.
 - [ ] 64. Normalize date/time formats.
 - [ ] 65. Normalize author/source metadata.
