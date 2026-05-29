@@ -1,0 +1,12 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-contradiction-ledger
+schema_version: "0.1"
+type: object
+required: [schema_version, contradiction_id, claim_a, claim_b]
+properties:
+  schema_version: { const: "0.1" }
+  contradiction_id: { type: string }
+  claim_a: { type: string }
+  claim_b: { type: string }
+  overwrite_prior: { const: false, default: false }
+additionalProperties: true

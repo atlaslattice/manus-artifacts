@@ -1,0 +1,11 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-trust-state
+schema_version: "0.1"
+type: object
+required: [schema_version, artifact_id, trust_state]
+properties:
+  schema_version: { const: "0.1" }
+  artifact_id: { type: string }
+  trust_state:
+    enum: [raw, parsed, candidate, reviewed, ratified, active, under_review, superseded, revoked, quarantined, rejected]
+additionalProperties: true

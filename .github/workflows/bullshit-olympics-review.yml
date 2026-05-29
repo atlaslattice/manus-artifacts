@@ -1,0 +1,27 @@
+name: Bullshit Olympics Review Lane
+
+on:
+  pull_request:
+    paths:
+      - "archive/aetherforge/gptdreampp-openai/**"
+      - "scripts/validate_gptdreampp_promotion_gate.py"
+      - "tests/test_gptdreampp_promotion_gate.py"
+  push:
+    paths:
+      - "archive/aetherforge/gptdreampp-openai/**"
+      - "scripts/validate_gptdreampp_promotion_gate.py"
+      - "tests/test_gptdreampp_promotion_gate.py"
+
+permissions:
+  contents: read
+
+jobs:
+  review:
+    name: Overclaim/Authority Drift Review
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Bullshit Olympics checks
+        run: |
+          python3 scripts/validate_gptdreampp_promotion_gate.py

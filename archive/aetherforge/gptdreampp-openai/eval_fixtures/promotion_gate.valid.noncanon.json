@@ -1,0 +1,40 @@
+{
+  "record_id": "PG-AETHERFORGE_CONTROL_BOARD",
+  "artifact_class": "work",
+  "source_uri": "drive://aetherforge/sheldonbrain/lattice-ingestion-control-board",
+  "source_hash": "sha256:9f8d2cba61a4eaf8ce8f3d53eec8fdfab2645f252f5f2181f6f1604f224f3b93",
+  "receipt": {
+    "receipt_id": "RCPT-2026-05-27-001",
+    "captured_at": "2026-05-27T20:00:00Z",
+    "captured_by": "atlaslattice",
+    "receipt_uri": "archive/aetherforge/gptdreampp-openai/receipts/high_priority_drive_sync_receipts.json"
+  },
+  "provenance": {
+    "lineage": "Drive control board -> staging manifest -> GitHub candidate package",
+    "extraction_method": "manual_capture_with_hash_and_receipt",
+    "authority_notes": "Candidate only; no canon authority assigned."
+  },
+  "canon_status": "NOT_CANON",
+  "reviewer": null,
+  "ratification_event": null,
+  "github_target_path": "archive/aetherforge/gptdreampp-openai/manifests/high_priority_drive_sync_manifest.json",
+  "required_validations": [
+    "non_canon_default",
+    "receipt_present",
+    "source_hash_present",
+    "provenance_lineage_present",
+    "kg_mapping_attached",
+    "bullshit_olympics_pass"
+  ],
+  "completed_validations": [
+    "non_canon_default",
+    "receipt_present",
+    "source_hash_present",
+    "provenance_lineage_present"
+  ],
+  "bullshit_olympics_review": {
+    "status": "PENDING",
+    "reviewed_at": null,
+    "notes": "Queued for review lane."
+  }
+}

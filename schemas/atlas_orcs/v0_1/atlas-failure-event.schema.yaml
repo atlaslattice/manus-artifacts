@@ -1,0 +1,11 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-failure-event
+schema_version: "0.1"
+type: object
+required: [schema_version, failure_event_id, artifact_id, reason]
+properties:
+  schema_version: { const: "0.1" }
+  failure_event_id: { type: string }
+  artifact_id: { type: string }
+  reason: { type: string }
+additionalProperties: true

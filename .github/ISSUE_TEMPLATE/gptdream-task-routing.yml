@@ -1,0 +1,79 @@
+name: "GPTDream / Atlas-ORCS task"
+description: "Create a lane-routed, gate-aware GPTDream/Atlas/ORCS task"
+title: "[GPTDream] "
+labels:
+  - gptdream
+  - needs-review
+  - not-canon
+  - not-deployable
+body:
+  - type: dropdown
+    id: lane
+    attributes:
+      label: Lane assignment
+      description: Required lane assignment for this task
+      options:
+        - LucernaBrain
+        - RootglassBrain
+        - TIDELOCKBrain
+        - HashlightBrain
+        - AtlasBrain
+    validations:
+      required: true
+
+  - type: dropdown
+    id: task_type
+    attributes:
+      label: Task type
+      options:
+        - chatgpt_synthesis
+        - codex_patch
+        - raw_export
+        - benchmark_claim
+        - public_statement
+        - execution_request
+    validations:
+      required: true
+
+  - type: dropdown
+    id: raw_export_status
+    attributes:
+      label: raw_export_status
+      options:
+        - full_raw
+        - partial_raw
+        - summary_only
+        - unavailable
+    validations:
+      required: true
+
+  - type: textarea
+    id: access_scope
+    attributes:
+      label: access_scope
+      description: Include visible_sources, unavailable_sources, assumed_context
+      placeholder: |
+        visible_sources:
+        unavailable_sources:
+        assumed_context:
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: execution_gates
+    attributes:
+      label: Execution gates (required for execution_request)
+      options:
+        - label: provenance_gate = pass
+        - label: safety_gate = pass
+        - label: governance_gate = pass
+        - label: data_residency_gate = pass
+        - label: human_permission_gate = pass
+        - label: receipt_gate = pass
+
+  - type: textarea
+    id: routing
+    attributes:
+      label: Routing trace
+      value: |
+        Execution request -> D-Φ-1 / CAS-001-A / human gate -> Atlas / ORCS audit -> TIDELOCK if repo-related

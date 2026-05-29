@@ -1,0 +1,58 @@
+name: "Community onboarding / help request"
+description: "Ask for help getting started, choosing a first quest, or navigating the archive"
+title: "[Onboarding] "
+labels:
+  - onboarding
+  - good-first-issue
+body:
+  - type: dropdown
+    id: experience
+    attributes:
+      label: Experience level
+      options:
+        - first-time contributor
+        - returning contributor
+        - domain expert
+        - maintainer / steward
+    validations:
+      required: true
+
+  - type: dropdown
+    id: interest_area
+    attributes:
+      label: Interest area
+      options:
+        - archive organization
+        - governance and provenance
+        - GPTDream / Atlas-ORCS
+        - Aetherforge gameplay
+        - documentation and onboarding
+        - unsure yet
+    validations:
+      required: true
+
+  - type: textarea
+    id: goals
+    attributes:
+      label: What do you want to do?
+      description: Describe the contribution, question, or first-hour goal
+      placeholder: I want to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: blockers
+    attributes:
+      label: Current blockers
+      description: Explain what is confusing, missing, or preventing progress
+      placeholder: I'm blocked because...
+
+  - type: checkboxes
+    id: prep
+    attributes:
+      label: Before submitting
+      options:
+        - label: I reviewed `README.md`, `docs/START_HERE.md`, and `.github/CONTRIBUTING.md`.
+          required: true
+        - label: I understand contributions stay candidate-state until ratified.
+          required: true

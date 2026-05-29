@@ -1,0 +1,13 @@
+schema_version: "0.1"
+packet_type: analysis_request
+raw_export_status: partial_raw
+thread_time_range: {start: "2026-05-25T00:00:00Z", end: "2026-05-25T01:00:00Z", timezone: "UTC"}
+epistemic_label: bounded
+authority_scope: none
+gates:
+  provenance_gate: pass
+  safety_gate: pass
+  governance_gate: pass
+  data_residency_gate: pass
+  human_permission_gate: pass
+  receipt_gate: pass

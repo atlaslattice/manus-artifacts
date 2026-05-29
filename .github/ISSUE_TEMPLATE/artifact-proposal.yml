@@ -1,0 +1,67 @@
+name: "Artifact proposal"
+description: "Propose a new public artifact, archive addition, or documentation candidate"
+title: "[Artifact] "
+labels:
+  - artifact-proposal
+  - needs-review
+  - not-canon
+body:
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      description: Select the closest repository domain for this artifact
+      options:
+        - GPTBrain / Aetherforge
+        - Aluminum OS
+        - SheldonBrain
+        - Council / Governance
+        - Research / Archive
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Describe the artifact and why it should exist in the public archive
+      placeholder: One-paragraph summary of the proposed artifact.
+    validations:
+      required: true
+
+  - type: textarea
+    id: source_material
+    attributes:
+      label: Source material and provenance
+      description: Link or describe the source material, authorship, and current location
+      placeholder: |
+        Source links:
+        Current location:
+        Author / steward:
+        Provenance notes:
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Requested artifact status
+      options:
+        - candidate
+        - reviewed
+        - ratification-ready
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Intake checks
+      options:
+        - label: I understand this proposal creates a candidate artifact, not canon.
+          required: true
+        - label: I linked the nearest existing docs, boards, or schemas above.
+          required: true
+        - label: I included provenance details sufficient for review.
+          required: true

@@ -1,0 +1,38 @@
+{
+  "record_id": "PG-INVALID_CANON_NO_ADJUDICATION",
+  "artifact_class": "play",
+  "source_uri": "drive://aetherforge/mission-control/12x12x12-hub",
+  "source_hash": "sha256:7d808c40430f5765530f761d4ab7b2f15195f39b3f5cb67d9666f1cb665f68be",
+  "receipt": {
+    "receipt_id": "RCPT-2026-05-27-002",
+    "captured_at": "2026-05-27T20:05:00Z",
+    "captured_by": "atlaslattice",
+    "receipt_uri": "archive/aetherforge/gptdreampp-openai/receipts/high_priority_drive_sync_receipts.json"
+  },
+  "provenance": {
+    "lineage": "Drive mission control hub -> staging manifest",
+    "extraction_method": "manual_capture_with_hash_and_receipt",
+    "authority_notes": "Invalid test fixture for missing canon adjudication fields."
+  },
+  "canon_status": "RATIFIED_CANON",
+  "reviewer": null,
+  "ratification_event": null,
+  "github_target_path": "archive/aetherforge/gptdreampp-openai/manifests/high_priority_drive_sync_manifest.json",
+  "required_validations": [
+    "non_canon_default",
+    "receipt_present",
+    "source_hash_present",
+    "provenance_lineage_present",
+    "source_mapping_attached",
+    "bullshit_olympics_pass"
+  ],
+  "completed_validations": [
+    "non_canon_default",
+    "receipt_present"
+  ],
+  "bullshit_olympics_review": {
+    "status": "FAIL",
+    "reviewed_at": "2026-05-27T20:09:00Z",
+    "notes": "Invalid: canon claim without adjudication."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "manifest_id": "HP-DRIVE-SYNC-2026-05-27",
+  "status": "CANDIDATE",
+  "canon_status": "NOT_CANON",
+  "items": [
+    {
+      "record_id": "PG-AETHERFORGE_CONTROL_BOARD",
+      "artifact_class": "work",
+      "source_uri": "drive://aetherforge/sheldonbrain/lattice-ingestion-control-board",
+      "receipt_id": "RCPT-2026-05-27-001",
+      "github_target_path": "archive/aetherforge/gptdreampp-openai/manifests/high_priority_drive_sync_manifest.json"
+    },
+    {
+      "record_id": "PG-MISSION_CONTROL_HUB",
+      "artifact_class": "play",
+      "source_uri": "drive://children-of-the-swarm/mission-control-12x12x12",
+      "receipt_id": "RCPT-2026-05-27-002",
+      "github_target_path": "archive/aetherforge/gptdreampp-openai/manifests/high_priority_drive_sync_manifest.json"
+    },
+    {
+      "record_id": "PG-TASK_MATRIX_TRACKER",
+      "artifact_class": "work",
+      "source_uri": "drive://children-of-the-swarm/task-matrix-tracker",
+      "receipt_id": "RCPT-2026-05-27-003",
+      "github_target_path": "archive/aetherforge/gptdreampp-openai/manifests/high_priority_drive_sync_manifest.json"
+    },
+    {
+      "record_id": "PG-KG_SOURCE_INVENTORY_PASS1",
+      "artifact_class": "work",
+      "source_uri": "drive://aetherforge/kg-source-inventory-pass1",
+      "receipt_id": "RCPT-2026-05-27-004",
+      "github_target_path": "archive/aetherforge/gptdreampp-openai/manifests/high_priority_drive_sync_manifest.json"
+    },
+    {
+      "record_id": "PG-DREAM_COMPRESSION_DELTA",
+      "artifact_class": "dream",
+      "source_uri": "drive://aetherforge/dream-compression-delta",
+      "receipt_id": "RCPT-2026-05-27-005",
+      "github_target_path": "archive/aetherforge/gptdreampp-openai/manifests/high_priority_drive_sync_manifest.json"
+    },
+    {
+      "record_id": "PG-SOURCE_MAPPING_SHEET",
+      "artifact_class": "play",
+      "source_uri": "drive://aetherforge/source-mapping-sheet",
+      "receipt_id": "RCPT-2026-05-27-006",
+      "github_target_path": "archive/aetherforge/gptdreampp-openai/manifests/high_priority_drive_sync_manifest.json"
+    }
+  ]
+}

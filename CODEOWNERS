@@ -1,0 +1,12 @@
+# Core governance and process
+/.github/ @atlaslattice
+/RATIFICATION_LOG.md @atlaslattice
+/docs/governance-ratification-process.md @atlaslattice
+/docs/artifact-provenance-header-template.md @atlaslattice
+/projects/aetherforge-*.md @atlaslattice
+
+# Validation and schemas
+/scripts/*.py @atlaslattice
+/schemas/ @atlaslattice
+/reference_impl/ @atlaslattice
+

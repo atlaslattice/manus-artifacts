@@ -1,0 +1,22 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-benchmark-claim
+schema_version: "0.1"
+type: object
+required: [schema_version, benchmark_claim_id, claim_text, publish_status]
+properties:
+  schema_version: { const: "0.1" }
+  benchmark_claim_id: { type: string }
+  claim_text: { type: string }
+  evidence_packet_id: { type: [string, "null"], default: null }
+  review_status: { enum: [pending, approved, rejected], default: pending }
+  publish_status: { enum: [blocked, publishable], default: blocked }
+allOf:
+  - if:
+      properties:
+        publish_status: { const: publishable }
+    then:
+      required: [evidence_packet_id, review_status]
+      properties:
+        review_status: { const: approved }
+        evidence_packet_id: { type: string, minLength: 1 }
+additionalProperties: true
