@@ -1,0 +1,56 @@
+name: Deploy KG Live Surface
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/knowledge-graph/live/**'
+      - 'docs/knowledge-graph/artifact_registry.v0_1.json'
+      - '.github/workflows/deploy-kg-live.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build live payloads
+        run: |
+          python scripts/build_live_graph_payload.py
+          python scripts/build_search_index.py
+
+      - name: Prepare Pages artifact
+        run: |
+          mkdir -p site
+          cp -R docs/knowledge-graph/live/* site/
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

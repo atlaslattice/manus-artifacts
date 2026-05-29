@@ -110,9 +110,12 @@ Registry entries must include:
 ## Issue and PR Guidelines
 
 - Use the provided issue templates for new ideas, curation tasks, or bug reports
+- Use the **Ratification Candidate** template for `candidate` → `canon-pending` trust transitions
 - Use the PR template for all pull requests
 - Reference the [Aetherforge Taskboard](../projects/aetherforge-top50-taskboard-2026-05-26.md) for open work items
 - Keep PRs focused — one logical change per PR
+- Prefer labeling newcomer-friendly tasks with `good first issue` and `help wanted`
+- Route onboarding and architecture questions to Discussions (`discussion:q-and-a`)
 
 ---
 
@@ -123,6 +126,7 @@ All PRs must pass:
 - **Docs Link Checks** (`docs-link-checks.yml`): internal markdown link validation
 - **GPTBrain Reference Checks** (`gptbrain-reference-checks.yml`): pytest suite for Python scaffold
 - **Artifact Graph Checks** (`artifact-graph-checks.yml`): taxonomy/registry structure and cross-link integrity
+- **KG Surface Autobuild** (`kg-surface-autobuild.yml`): validates generated ingestion/search/live graph payloads
 
 ---
 

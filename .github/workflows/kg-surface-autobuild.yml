@@ -1,0 +1,49 @@
+name: KG Surface Autobuild
+
+on:
+  push:
+    paths:
+      - 'scripts/build_ingestion_queue.py'
+      - 'scripts/build_live_graph_payload.py'
+      - 'scripts/build_search_index.py'
+      - 'docs/knowledge-graph/artifact_registry.v0_1.json'
+      - 'docs/knowledge-graph/live/**'
+      - 'docs/intake/**'
+      - '.github/workflows/kg-surface-autobuild.yml'
+  pull_request:
+    paths:
+      - 'scripts/build_ingestion_queue.py'
+      - 'scripts/build_live_graph_payload.py'
+      - 'scripts/build_search_index.py'
+      - 'docs/knowledge-graph/artifact_registry.v0_1.json'
+      - 'docs/knowledge-graph/live/**'
+      - 'docs/intake/**'
+      - '.github/workflows/kg-surface-autobuild.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-surfaces:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build ingestion queue
+        run: python scripts/build_ingestion_queue.py
+
+      - name: Build live graph payload
+        run: python scripts/build_live_graph_payload.py
+
+      - name: Build static search index
+        run: python scripts/build_search_index.py
+
+      - name: Verify generated files are current
+        run: git diff --exit-code

@@ -1,0 +1,47 @@
+name: Ratification Candidate
+about: Submit an artifact for formal council ratification workflow.
+title: "[Ratification]: "
+labels: ["candidate", "trust:candidate"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue tracks the candidate -> canon-pending -> adjudicated flow.
+  - type: input
+    id: artifact_id
+    attributes:
+      label: Artifact ID
+      description: Stable artifact ID (example: AL-KG-002)
+      placeholder: AL-XXXX-000
+    validations:
+      required: true
+  - type: input
+    id: artifact_path
+    attributes:
+      label: Artifact path
+      description: Repository-relative path to the candidate artifact.
+      placeholder: docs/knowledge-graph/example.md
+    validations:
+      required: true
+  - type: textarea
+    id: council_signoff
+    attributes:
+      label: Council sign-off evidence
+      description: Link council discussion and sign-off logs.
+      placeholder: |
+        - Council thread:
+        - Vote evidence:
+        - Reviewer notes:
+    validations:
+      required: true
+  - type: textarea
+    id: adjudication_request
+    attributes:
+      label: Human adjudication request (@atlaslattice)
+      description: Include trust-state recommendation and ratification summary.
+      placeholder: |
+        Recommended trust state:
+        Ratification event reference:
+        Adjudication rationale:
+    validations:
+      required: true
