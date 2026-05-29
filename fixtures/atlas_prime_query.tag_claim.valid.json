@@ -1,0 +1,22 @@
+{
+  "jsonrpc": "2.0",
+  "id": "apq-tag-claim-001",
+  "method": "TAG_CLAIM",
+  "params": {
+    "claim_text": "Appendix I v0.3 is preserved as a candidate epistemic profile artifact, not canon or deployment proof.",
+    "claim_class": "parsed_artifact",
+    "confidence": "C2_SOURCE_ARTIFACT_EXISTS",
+    "source_ref": {
+      "kind": "repo_file",
+      "path": "archive/boot/orcs/APPENDIX_I_ATLAS_ORCS_EPISTEMIC_PROFILE_v0.3.md",
+      "commit_sha": "ee843d27a6125712dd3fe893b5dfcecd3d538f94",
+      "raw_export_status": "RAW_NOT_EXPORTED"
+    },
+    "boundary": {
+      "canon": false,
+      "deployment": false,
+      "authority": "query_only",
+      "human_root_final_authority": true
+    }
+  }
+}

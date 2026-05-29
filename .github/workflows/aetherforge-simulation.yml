@@ -1,0 +1,84 @@
+name: Aetherforge Simulation Sandbox
+
+on:
+  pull_request:
+    paths:
+      - "projects/aetherforge-simulation/**"
+      - ".github/workflows/aetherforge-simulation.yml"
+  push:
+    paths:
+      - "projects/aetherforge-simulation/**"
+      - ".github/workflows/aetherforge-simulation.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/aetherforge-simulation
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate matrix
+        run: python -m aetherforge_sim validate
+      - name: Run deterministic simulation
+        run: python -m aetherforge_sim --json simulate --steps 12 --seed 144
+      - name: Export lattice graph
+        run: python graph_export.py --json > lattice-graph.generated.json
+      - name: Inspect lattice graph summary
+        run: python - <<'PY'
+          import json
+          from pathlib import Path
+          graph = json.loads(Path('lattice-graph.generated.json').read_text())
+          assert graph['validation']['ok'] is True
+          assert graph['summary']['domains'] == 12
+          assert graph['summary']['tasks'] == 144
+          print(graph['summary'])
+          PY
+      - name: Export Children Swarm graph
+        run: python children_swarm_graph_export.py --json > children-swarm-graph.generated.json
+      - name: Inspect Children Swarm graph summary
+        run: python - <<'PY'
+          import json
+          from pathlib import Path
+          graph = json.loads(Path('children-swarm-graph.generated.json').read_text())
+          assert graph['validation']['ok'] is True
+          assert graph['summary']['swarm_nodes'] == 12
+          assert graph['summary']['source_surfaces'] == 12
+          assert graph['summary']['derived_tasks'] == 144
+          assert graph['summary']['raw_rows_covered'] == 1728
+          print(graph['summary'])
+          PY
+      - name: Export Lucerna missing receipt graph
+        run: python missing_receipt_graph_export.py --json > lucerna-gap-register-graph.generated.json
+      - name: Inspect Lucerna missing receipt graph summary
+        run: python - <<'PY'
+          import json
+          from pathlib import Path
+          graph = json.loads(Path('lucerna-gap-register-graph.generated.json').read_text())
+          assert graph['validation']['ok'] is True
+          assert graph['summary']['missing_receipts'] == 7
+          assert graph['summary']['human_root_blockers'] == 4
+          print(graph['summary'])
+          PY
+      - name: Run REM 100-year simulation
+        run: python rem_100_year_simulation.py --json --seed 144 > rem-100-year.generated.json
+      - name: Inspect REM 100-year simulation summary
+        run: python - <<'PY'
+          import json
+          from pathlib import Path
+          rem = json.loads(Path('rem-100-year.generated.json').read_text())
+          assert rem['duration_years'] == 100
+          assert len(rem['yearly_states']) == 100
+          assert rem['boundary']['canon'] is False
+          assert rem['boundary']['deployment'] is False
+          assert rem['boundary']['authority'] == 'none'
+          assert rem['boundary']['prediction'] is False
+          print({'years': rem['duration_years'], 'final_receipt_head': rem['final_receipt_head']})
+          PY
+      - name: Install test tooling
+        run: python -m pip install pytest
+      - name: Run tests
+        run: pytest

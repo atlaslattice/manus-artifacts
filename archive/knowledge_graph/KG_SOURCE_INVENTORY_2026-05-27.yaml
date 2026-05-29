@@ -1,0 +1,459 @@
+# Aetherforge / Sheldonbrain Knowledge Graph Source Inventory
+
+inventory_id: KG_SOURCE_INVENTORY_2026-05-27
+status: CANDIDATE_OPERATION_NOT_CANON
+mode: READ_ONLY_SOURCE_MAPPING_TO_MASS_INGESTION_PREP
+created_utc: "2026-05-27T00:00:00Z"
+keeper: >
+  The graph shows where review is needed. It does not decide what is true.
+
+invariants:
+  - GitHub receipt is not canon.
+  - Notion source root is not truth authority.
+  - PR existence is not ratification.
+  - Mirror status is not source completeness.
+  - Parser output is a retrieval aid, not raw evidence.
+  - Graph edge is not promotion.
+  - Cluster density is not truth.
+  - Graph centrality is not authority.
+  - Nothing dies: missing receipts, contradictions, stale pages, and negative results must be recorded.
+
+allowed_raw_export_status:
+  - not_exported
+  - partial_export
+  - full_raw_export_attached
+  - full_raw_export_hashed
+  - redacted_raw_export_attached
+  - unavailable
+
+artifact_status_defaults:
+  canon_status: not_ratified
+  deployment_status: not_deployed
+  review_state: inventory_seed
+  authority_scope: none
+  provenance_type: candidate_source_mapping
+
+sources:
+  - source_id: SRC-GH-MANUS-ARTIFACTS
+    title: atlaslattice/manus-artifacts
+    surface: github
+    url_or_path: atlaslattice/manus-artifacts
+    type: repository
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_ratified
+      deployment_status: not_deployed
+      review_state: source_root_identified
+      authority_scope: durable_versioned_substrate_only
+      provenance_type: github_repository_receipt
+    source_class: SourceRoot
+    related_lane: artifact_receipts_schema_substrate
+    review_priority: P0
+    mirrored_to_github: true
+    missing_receipts:
+      - repository tree hash manifest
+      - branch inventory
+      - PR/issue relationship export
+    suggested_nodes:
+      - node_id: SRC-GH-MANUS-ARTIFACTS
+        type: SourceRoot
+    suggested_edges:
+      - from: SRC-GH-MANUS-ARTIFACTS
+        type: has_status
+        to: STATUS-NOT-RATIFIED
+
+  - source_id: SRC-GH-SHELDONBRAIN-RAG-API
+    title: atlaslattice/sheldonbrain-rag-api
+    surface: github
+    url_or_path: atlaslattice/sheldonbrain-rag-api
+    type: repository
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_ratified
+      deployment_status: not_deployed
+      review_state: source_root_identified
+      authority_scope: ingestion_engine_candidate_only
+      provenance_type: github_repository_receipt
+    source_class: SourceRoot
+    related_lane: ingestion_engine_candidate
+    review_priority: P0
+    mirrored_to_github: true
+    missing_receipts:
+      - repository tree hash manifest
+      - runtime smoke-test report
+      - dependency/security scan
+    suggested_nodes:
+      - node_id: SRC-GH-SHELDONBRAIN-RAG-API
+        type: SourceRoot
+    suggested_edges:
+      - from: SRC-GH-SHELDONBRAIN-RAG-API
+        type: has_status
+        to: STATUS-INGESTION-ENGINE-CANDIDATE
+
+  - source_id: SRC-GH-ALUMINUM-OS
+    title: atlaslattice/aluminum-os
+    surface: github
+    url_or_path: atlaslattice/aluminum-os
+    type: repository
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: not_deployed, review_state: source_root_listed_uninspected, authority_scope: none, provenance_type: user_dispatch_source_list}
+    source_class: SourceRoot
+    related_lane: aluminum_os
+    review_priority: P2
+    mirrored_to_github: true
+    missing_receipts: [repo inventory, tree hash manifest, canonical path review]
+    suggested_nodes: [{node_id: SRC-GH-ALUMINUM-OS, type: SourceRoot}]
+    suggested_edges: [{from: SRC-GH-ALUMINUM-OS, type: missing_receipt, to: RECEIPT-REPO-INVENTORY}]
+
+  - source_id: SRC-GH-ATLAS-LATTICE-FOUNDATION
+    title: atlaslattice/atlas-lattice-foundation
+    surface: github
+    url_or_path: atlaslattice/atlas-lattice-foundation
+    type: repository
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: not_deployed, review_state: source_root_listed_uninspected, authority_scope: none, provenance_type: user_dispatch_source_list}
+    source_class: SourceRoot
+    related_lane: foundation_governance
+    review_priority: P2
+    mirrored_to_github: true
+    missing_receipts: [repo inventory, tree hash manifest]
+    suggested_nodes: [{node_id: SRC-GH-ATLAS-LATTICE-FOUNDATION, type: SourceRoot}]
+    suggested_edges: [{from: SRC-GH-ATLAS-LATTICE-FOUNDATION, type: missing_receipt, to: RECEIPT-REPO-INVENTORY}]
+
+  - source_id: SRC-GH-NOOSPHERE-ARCHIVE
+    title: atlaslattice/noosphere-archive
+    surface: github
+    url_or_path: atlaslattice/noosphere-archive
+    type: repository
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: not_deployed, review_state: source_root_listed_uninspected, authority_scope: none, provenance_type: user_dispatch_source_list}
+    source_class: SourceRoot
+    related_lane: archive_noosphere
+    review_priority: P2
+    mirrored_to_github: true
+    missing_receipts: [repo inventory, tree hash manifest]
+    suggested_nodes: [{node_id: SRC-GH-NOOSPHERE-ARCHIVE, type: SourceRoot}]
+    suggested_edges: [{from: SRC-GH-NOOSPHERE-ARCHIVE, type: missing_receipt, to: RECEIPT-REPO-INVENTORY}]
+
+  - source_id: SRC-GH-MANUS-2-TOOLKIT
+    title: atlaslattice/manus-2.0-toolkit
+    surface: github
+    url_or_path: atlaslattice/manus-2.0-toolkit
+    type: repository
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: not_deployed, review_state: source_root_listed_uninspected, authority_scope: none, provenance_type: user_dispatch_source_list}
+    source_class: SourceRoot
+    related_lane: manus_execution_tools
+    review_priority: P2
+    mirrored_to_github: true
+    missing_receipts: [repo inventory, tree hash manifest]
+    suggested_nodes: [{node_id: SRC-GH-MANUS-2-TOOLKIT, type: SourceRoot}]
+    suggested_edges: [{from: SRC-GH-MANUS-2-TOOLKIT, type: missing_receipt, to: RECEIPT-REPO-INVENTORY}]
+
+  - source_id: SRC-GH-CONSTITUTIONAL-OS
+    title: atlaslattice/constitutional-os
+    surface: github
+    url_or_path: atlaslattice/constitutional-os
+    type: repository
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: not_deployed, review_state: source_root_listed_uninspected, authority_scope: none, provenance_type: user_dispatch_source_list}
+    source_class: SourceRoot
+    related_lane: constitutional_os
+    review_priority: P2
+    mirrored_to_github: true
+    missing_receipts: [repo inventory, tree hash manifest]
+    suggested_nodes: [{node_id: SRC-GH-CONSTITUTIONAL-OS, type: SourceRoot}]
+    suggested_edges: [{from: SRC-GH-CONSTITUTIONAL-OS, type: missing_receipt, to: RECEIPT-REPO-INVENTORY}]
+
+  - source_id: SRC-GH-UWS
+    title: atlaslattice/uws
+    surface: github
+    url_or_path: atlaslattice/uws
+    type: repository
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: not_deployed, review_state: source_root_listed_uninspected, authority_scope: none, provenance_type: user_dispatch_source_list}
+    source_class: SourceRoot
+    related_lane: universal_workspace
+    review_priority: P2
+    mirrored_to_github: true
+    missing_receipts: [repo inventory, tree hash manifest]
+    suggested_nodes: [{node_id: SRC-GH-UWS, type: SourceRoot}]
+    suggested_edges: [{from: SRC-GH-UWS, type: missing_receipt, to: RECEIPT-REPO-INVENTORY}]
+
+  - source_id: SRC-NOTION-MASTER-INDEX
+    title: MASTER INDEX — Notion → GitHub Complete Artifact Map
+    surface: notion
+    url_or_path: title_only_from_user_dispatch
+    type: notion_page_candidate
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: not_deployed, review_state: source_root_listed_uninspected, authority_scope: none, provenance_type: user_dispatch_source_list}
+    source_class: SourceRoot
+    related_lane: notion_to_github_migration
+    review_priority: P0
+    mirrored_to_github: unknown
+    missing_receipts: [notion_page_url, full_raw_export, sha256_hash, mirror_record]
+    suggested_nodes: [{node_id: SRC-NOTION-MASTER-INDEX, type: SourceRoot}]
+    suggested_edges: [{from: SRC-NOTION-MASTER-INDEX, type: missing_receipt, to: RECEIPT-NOTION-RAW-EXPORT}]
+
+  - source_id: SRC-NOTION-MIGRATION-PLAN
+    title: Notion → GitHub Migration Plan
+    surface: notion
+    url_or_path: title_only_from_user_dispatch
+    type: notion_page_candidate
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: not_deployed, review_state: source_root_listed_uninspected, authority_scope: none, provenance_type: user_dispatch_source_list}
+    source_class: SourceRoot
+    related_lane: notion_to_github_migration
+    review_priority: P0
+    mirrored_to_github: unknown
+    missing_receipts: [notion_page_url, full_raw_export, sha256_hash]
+    suggested_nodes: [{node_id: SRC-NOTION-MIGRATION-PLAN, type: SourceRoot}]
+    suggested_edges: [{from: SRC-NOTION-MIGRATION-PLAN, type: missing_receipt, to: RECEIPT-NOTION-RAW-EXPORT}]
+
+  - source_id: SRC-NOTION-SHELDONBRAIN-OS-12X12
+    title: SHELDONBRAIN OS — 12x12 Master Index
+    surface: notion
+    url_or_path: title_only_from_user_dispatch
+    type: notion_page_candidate
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: not_deployed, review_state: source_root_listed_uninspected, authority_scope: none, provenance_type: user_dispatch_source_list}
+    source_class: SourceRoot
+    related_lane: sphere144_ontology
+    review_priority: P0
+    mirrored_to_github: unknown
+    missing_receipts: [notion_page_url, full_raw_export, sha256_hash, crosswalk_to_github_12x12_schema]
+    suggested_nodes: [{node_id: SRC-NOTION-SHELDONBRAIN-OS-12X12, type: SourceRoot}]
+    suggested_edges: [{from: SRC-NOTION-SHELDONBRAIN-OS-12X12, type: requires_review, to: REVIEW-SPHERE144-CROSSWALK}]
+
+  - source_id: SRC-NOTION-GEMINI-SHELDONBRAIN-PROTOCOL
+    title: GEMINI SHELDONBRAIN PROTOCOL SPEC v1.0
+    surface: notion
+    url_or_path: title_only_from_user_dispatch
+    type: notion_page_candidate
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: not_deployed, review_state: source_root_listed_uninspected, authority_scope: none, provenance_type: user_dispatch_source_list}
+    source_class: SourceRoot
+    related_lane: gemini_simulation_systems
+    review_priority: P1
+    mirrored_to_github: unknown
+    missing_receipts: [notion_page_url, full_raw_export, sha256_hash]
+    suggested_nodes: [{node_id: SRC-NOTION-GEMINI-SHELDONBRAIN-PROTOCOL, type: SourceRoot}]
+    suggested_edges: [{from: SRC-NOTION-GEMINI-SHELDONBRAIN-PROTOCOL, type: missing_receipt, to: RECEIPT-NOTION-RAW-EXPORT}]
+
+  - source_id: SRC-NOTION-EPISTEMIC-LABELING-STANDARD
+    title: Sheldonbrain Canon — Epistemic Labeling Standard
+    surface: notion
+    url_or_path: search_candidate_34b0c1de73d9815d8637c69c3c52407d
+    type: notion_page_candidate
+    created_or_modified: "2026-04-23"
+    raw_export_status: not_exported
+    artifact_status: {canon_status: title_contains_canon_not_ratified_here, deployment_status: not_deployed, review_state: canon_language_review_required, authority_scope: none, provenance_type: notion_search_result}
+    source_class: SourceArtifact
+    related_lane: epistemic_labeling
+    review_priority: P0
+    mirrored_to_github: unknown
+    missing_receipts: [full_raw_export, sha256_hash, ratification_receipt]
+    suggested_nodes: [{node_id: SRC-NOTION-EPISTEMIC-LABELING-STANDARD, type: SourceArtifact}]
+    suggested_edges: [{from: SRC-NOTION-EPISTEMIC-LABELING-STANDARD, type: requires_review, to: REVIEW-LUCERNA-CANON-LANGUAGE}]
+
+  - source_id: SRC-NOTION-PINECONE-SYNC-INFRASTRUCTURE
+    title: Notion-Pinecone Sync Infrastructure
+    surface: notion
+    url_or_path: title_only_from_user_dispatch
+    type: notion_page_candidate
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: unknown_claim_requires_review, review_state: source_root_listed_uninspected, authority_scope: none, provenance_type: user_dispatch_source_list}
+    source_class: SourceRoot
+    related_lane: notion_vector_sync
+    review_priority: P1
+    mirrored_to_github: unknown
+    missing_receipts: [notion_page_url, full_raw_export, code_path, runtime_receipt]
+    suggested_nodes: [{node_id: SRC-NOTION-PINECONE-SYNC-INFRASTRUCTURE, type: SourceRoot}]
+    suggested_edges: [{from: SRC-NOTION-PINECONE-SYNC-INFRASTRUCTURE, type: requires_review, to: REVIEW-ATLASBRAIN-RUNTIME-CLAIMS}]
+
+  - source_id: SRC-NOTION-GROKBRAIN-V4-INTEGRATION
+    title: Grokbrain v4.0 Integration
+    surface: notion
+    url_or_path: https://www.notion.so/fa4103e45bb240c6a4daa7bbde21d022
+    type: notion_page_candidate
+    created_or_modified: "2025-12-24"
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: unknown_claim_requires_review, review_state: source_root_search_result, authority_scope: none, provenance_type: notion_search_result}
+    source_class: SourceArtifact
+    related_lane: grokbrain_integration
+    review_priority: P1
+    mirrored_to_github: unknown
+    missing_receipts: [full_raw_export, sha256_hash, credential_redaction_review]
+    suggested_nodes: [{node_id: SRC-NOTION-GROKBRAIN-V4-INTEGRATION, type: SourceArtifact}]
+    suggested_edges: [{from: SRC-NOTION-GROKBRAIN-V4-INTEGRATION, type: requires_review, to: REVIEW-SECRET-SCAN}]
+
+  - source_id: SRC-NOTION-SHELDONBRAIN-MCP-SERVER
+    title: Sheldonbrain MCP Server
+    surface: notion
+    url_or_path: title_only_from_user_dispatch
+    type: notion_page_candidate
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: unknown_claim_requires_review, review_state: source_root_listed_uninspected, authority_scope: none, provenance_type: user_dispatch_source_list}
+    source_class: SourceRoot
+    related_lane: mcp_tool_bridge
+    review_priority: P1
+    mirrored_to_github: unknown
+    missing_receipts: [notion_page_url, full_raw_export, code_path, smoke_test_receipt]
+    suggested_nodes: [{node_id: SRC-NOTION-SHELDONBRAIN-MCP-SERVER, type: SourceRoot}]
+    suggested_edges: [{from: SRC-NOTION-SHELDONBRAIN-MCP-SERVER, type: requires_review, to: REVIEW-TIDELOCK-CODEPATH-TRUTH}]
+
+  - source_id: SRC-NOTION-SHELDONBRAIN-SYSTEM-ARCHITECTURE
+    title: SHELDONBRAIN SYSTEM ARCHITECTURE
+    surface: notion
+    url_or_path: https://www.notion.so/2d90c1de73d98147b866eea11aaa2a67
+    type: notion_page_candidate
+    created_or_modified: "2025-12-30"
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: not_deployed, review_state: parse_incomplete_in_search_snippet, authority_scope: none, provenance_type: notion_search_result}
+    source_class: SourceArtifact
+    related_lane: sheldonbrain_architecture
+    review_priority: P0
+    mirrored_to_github: unknown
+    missing_receipts: [full_raw_export, sha256_hash, graph_import_receipt]
+    suggested_nodes: [{node_id: SRC-NOTION-SHELDONBRAIN-SYSTEM-ARCHITECTURE, type: SourceArtifact}]
+    suggested_edges: [{from: SRC-NOTION-SHELDONBRAIN-SYSTEM-ARCHITECTURE, type: missing_receipt, to: RECEIPT-NOTION-RAW-EXPORT}]
+
+  - source_id: SRC-NOTION-GANGASEEK-ORCS-COUNCIL-RATIFICATION
+    title: GangaSeek / ORCS / Council ratification pages
+    surface: notion
+    url_or_path: title_cluster_only_from_user_dispatch
+    type: notion_page_cluster_candidate
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: contains_ratification_language_unverified, deployment_status: not_deployed, review_state: adversarial_review_required, authority_scope: none, provenance_type: user_dispatch_source_list}
+    source_class: SourceRoot
+    related_lane: governance_ratification_claims
+    review_priority: P0
+    mirrored_to_github: unknown
+    missing_receipts: [exact_page_urls, full_raw_exports, ratification_receipts, decision_log]
+    suggested_nodes: [{node_id: SRC-NOTION-GANGASEEK-ORCS-COUNCIL-RATIFICATION, type: SourceRootCluster}]
+    suggested_edges: [{from: SRC-NOTION-GANGASEEK-ORCS-COUNCIL-RATIFICATION, type: requires_review, to: REVIEW-CLAUDE-GOVERNANCE-ADVERSARIAL}]
+
+  - source_id: SRC-GH-PR-190
+    title: PR #190 — Aetherforge source cartography inventory / Notion source-root inventory
+    surface: github
+    url_or_path: atlaslattice/manus-artifacts#190
+    type: pull_request_candidate
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: not_deployed, review_state: pr_listed_uninspected, authority_scope: none, provenance_type: user_dispatch_pr_reference}
+    source_class: MirrorRecord
+    related_lane: source_cartography
+    review_priority: P0
+    mirrored_to_github: true
+    missing_receipts: [pr_fetch, changed_files, merge_status, commit_shas]
+    suggested_nodes: [{node_id: SRC-GH-PR-190, type: PullRequest}]
+    suggested_edges: [{from: SRC-GH-PR-190, type: requires_review, to: REVIEW-TIDELOCK-PR-TRUTH}]
+
+  - source_id: SRC-GH-PR-24
+    title: PR #24 — Notion mirror + source-grounded KG scaffolding
+    surface: github
+    url_or_path: atlaslattice/manus-artifacts#24
+    type: pull_request_candidate
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: not_deployed, review_state: pr_listed_uninspected, authority_scope: none, provenance_type: user_dispatch_pr_reference}
+    source_class: MirrorRecord
+    related_lane: notion_mirror_kg_scaffold
+    review_priority: P0
+    mirrored_to_github: true
+    missing_receipts: [pr_fetch, changed_files, merge_status, commit_shas]
+    suggested_nodes: [{node_id: SRC-GH-PR-24, type: PullRequest}]
+    suggested_edges: [{from: SRC-GH-PR-24, type: requires_review, to: REVIEW-TIDELOCK-PR-TRUTH}]
+
+  - source_id: SRC-GH-ISSUE-104
+    title: Issue #104 — Atlas MCP v0.1 review-only local smoke-test packet
+    surface: github
+    url_or_path: atlaslattice/manus-artifacts#104
+    type: issue_candidate
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: not_deployed, review_state: issue_listed_uninspected, authority_scope: none, provenance_type: user_dispatch_issue_reference}
+    source_class: ReviewQueue
+    related_lane: mcp_smoke_test_review
+    review_priority: P1
+    mirrored_to_github: true
+    missing_receipts: [issue_fetch, comments_export, smoke_test_artifacts]
+    suggested_nodes: [{node_id: SRC-GH-ISSUE-104, type: Issue}]
+    suggested_edges: [{from: SRC-GH-ISSUE-104, type: requires_review, to: REVIEW-ATLAS-MCP-SMOKE-TEST}]
+
+  - source_id: SRC-GH-KG-NODE-EDGE-SCHEMA
+    title: KG_NODE_EDGE_SCHEMA_v0.1.yaml
+    surface: github
+    url_or_path: archive/knowledge_graph/KG_NODE_EDGE_SCHEMA_v0.1.yaml
+    type: schema_artifact_candidate
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: not_deployed, review_state: path_listed_unverified, authority_scope: none, provenance_type: user_dispatch_path_reference}
+    source_class: SchemaArtifact
+    related_lane: knowledge_graph_schema
+    review_priority: P0
+    mirrored_to_github: true
+    missing_receipts: [file_fetch, blob_sha, schema_validation]
+    suggested_nodes: [{node_id: SRC-GH-KG-NODE-EDGE-SCHEMA, type: SchemaArtifact}]
+    suggested_edges: [{from: SRC-GH-KG-NODE-EDGE-SCHEMA, type: requires_review, to: REVIEW-SCHEMA-VALIDATION}]
+
+  - source_id: SRC-GH-EDGE-TYPES
+    title: EDGE_TYPES_v0_1.yaml
+    surface: github
+    url_or_path: archive/graph/EDGE_TYPES_v0_1.yaml
+    type: schema_artifact_candidate
+    created_or_modified: unknown_from_inventory_pass
+    raw_export_status: not_exported
+    artifact_status: {canon_status: not_ratified, deployment_status: not_deployed, review_state: path_listed_unverified, authority_scope: none, provenance_type: user_dispatch_path_reference}
+    source_class: SchemaArtifact
+    related_lane: knowledge_graph_schema
+    review_priority: P0
+    mirrored_to_github: true
+    missing_receipts: [file_fetch, blob_sha, schema_validation]
+    suggested_nodes: [{node_id: SRC-GH-EDGE-TYPES, type: SchemaArtifact}]
+    suggested_edges: [{from: SRC-GH-EDGE-TYPES, type: requires_review, to: REVIEW-SCHEMA-VALIDATION}]
+
+risk_routes:
+  - lane: Claude-originated governance artifacts
+    route_to: adversarial_review
+    seats: [Grok, Lucerna, Rootglass, GPTBrain]
+  - lane: canon-like language without ratification
+    route_to: canon_language_review
+    seats: [Lucerna, Rootglass]
+  - lane: deployment/runtime claims
+    route_to: runtime_receipt_review
+    seats: [AtlasBrain, Lucerna]
+  - lane: math/operator claims
+    route_to: math_review
+    seats: [Sable_Vesper]
+  - lane: repo path / PR / commit claims
+    route_to: repo_truth_review
+    seats: [TIDELOCK]
+  - lane: raw export / hash claims
+    route_to: lineage_review
+    seats: [Hashlight]
+  - lane: identity / memory inflation
+    route_to: memory_inflation_review
+    seats: [Fossilbranch, GPTBrain]
+
+next_actions:
+  - Fetch PR #190, PR #24, and Issue #104 metadata before asserting status.
+  - Fetch KG_NODE_EDGE_SCHEMA_v0.1.yaml and EDGE_TYPES_v0_1.yaml to verify file-path truth.
+  - Fetch/export Notion source roots and compute SHA-256 hashes before claim extraction.
+  - Add secret scan / redaction pass before broad Notion or Drive ingestion.
+  - Add graph emitter outputs: GRAPH_NODES.generated.jsonl, GRAPH_EDGES.generated.jsonl, GRAPH_IMPORT_REPORT.json.

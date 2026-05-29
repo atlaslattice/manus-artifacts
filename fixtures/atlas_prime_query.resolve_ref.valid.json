@@ -1,0 +1,20 @@
+{
+  "jsonrpc": "2.0",
+  "id": "apq-resolve-ref-001",
+  "method": "RESOLVE_REF",
+  "params": {
+    "ref": {
+      "kind": "repo_file",
+      "path": "archive/boot/orcs/APPENDIX_I_ATLAS_ORCS_EPISTEMIC_PROFILE_v0.3.md",
+      "commit_sha": "ee843d27a6125712dd3fe893b5dfcecd3d538f94",
+      "raw_export_status": "RAW_NOT_EXPORTED"
+    },
+    "expected_kind": "repo_file",
+    "boundary": {
+      "canon": false,
+      "deployment": false,
+      "authority": "query_only",
+      "human_root_final_authority": true
+    }
+  }
+}

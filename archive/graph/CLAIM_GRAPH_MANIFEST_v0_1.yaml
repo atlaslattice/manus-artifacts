@@ -1,0 +1,92 @@
+artifact_id: CLAIM_GRAPH_MANIFEST_v0_1
+status: candidate_schema
+canon_status: not_canon
+deployment_status: not_deployable
+authority_scope: none
+purpose: >
+  Define a claim graph manifest for extracting, typing, linking, and reviewing
+  claims without treating claims as truth or canon by default.
+
+core_invariant: >
+  A claim node records an assertion and its support state. It does not make the assertion true.
+
+claim_node_fields:
+  claim_id: required
+  claim_text: required
+  claim_type:
+    allowed:
+      - technical_claim
+      - governance_claim
+      - performance_claim
+      - IP_claim
+      - external_signal_claim
+      - historical_lineage_claim
+      - implementation_claim
+      - deployment_claim
+      - canon_claim
+      - metaphor_or_resonance_claim
+  claim_owner:
+    allowed:
+      - user
+      - GPT
+      - Grok
+      - Claude
+      - Gemini
+      - DeepSeek
+      - Copilot
+      - Manus
+      - external_source
+      - unknown
+  source_artifact_id: required
+  raw_export_status: required
+  source_refs: []
+  supporting_artifacts: []
+  contradicting_artifacts: []
+  confidence_level:
+    allowed: [C0, C1, C2, C3, C4, C5]
+  review_status:
+    allowed: [unreviewed, in_review, reviewed, disputed, ratified, rejected]
+  canon_status:
+    allowed: [not_canon, candidate, ratified]
+  authority_scope:
+    allowed: [none, advisory, review, ratification, execution]
+  strongest_safe_wording: required
+  forbidden_wording: []
+  missing_receipts: []
+  next_review_action: null
+
+confidence_levels:
+  C0: unsupported_or_do_not_claim
+  C1: user_reported_or_model_reported
+  C2: source_artifact_exists
+  C3: multiple_source_artifacts_converge
+  C4: scored_or_reviewed_internally
+  C5: independently_verified_or_operationally_demonstrated
+
+review_policies:
+  claude_originated_artifact:
+    default_review_required: true
+    required_reviewers:
+      - Grok_or_adversarial_stress
+      - GPT_or_Fossilbranch_claim_calibration
+      - Lucerna_receipt_check
+      - TIDELOCK_repo_visibility_check
+    blocked_until:
+      - raw_source_linked
+      - overclaims_to_avoid_generated
+      - canon_language_scanned
+      - authority_scope_checked
+
+forbidden_claim_promotions:
+  - model_output_to_canon_without_receipt
+  - summary_only_to_raw_lineage
+  - github_visibility_to_canon
+  - centrality_to_authority
+  - aesthetic_coherence_to_truth
+
+example_queries:
+  - "Claims supported only by model output."
+  - "Claims with canon-like wording but canon_status not ratified."
+  - "Claims missing raw source refs."
+  - "Claims contradicted by newer artifacts."
+  - "Claude-originated claims awaiting adversarial review."

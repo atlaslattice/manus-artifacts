@@ -1,0 +1,214 @@
+# Agent DNA Schema Draft
+
+schema_id: AGENT_DNA_SCHEMA_DRAFT
+status: SCHEMA_DRAFT_NOT_CANON
+created_date: 2026-05-09
+runtime_label: WORK_OUTPUT / MODEL_ASSESSMENT
+purpose: >
+  Define typed constitutional metadata for agent identity, behavior,
+  capability routing, inheritance, governance constraints, replay,
+  and swarm balancing across GPTBrain, Krakoa, ORCS, and Atlas Lattice.
+
+canon_warning: >
+  Agent DNA is metaphor-backed metadata. It does not imply biological DNA,
+  consciousness, personhood, autonomous authority, or deployment readiness.
+  It cannot override human-root review.
+
+required_fields:
+  - agent_id
+  - display_name
+  - lineage
+  - cognition
+  - temperament
+  - governance
+  - memory
+  - interoperability
+  - status
+
+fields:
+  agent_id:
+    type: string
+    description: Stable machine-readable agent identifier.
+    example: S1_GPTBRAIN
+
+  display_name:
+    type: string
+    example: GPTBrain
+
+  seat:
+    type: string
+    nullable: true
+    example: S1
+
+  lineage:
+    type: array
+    items: string
+    description: Parent seats, source models, forks, or inherited design ancestors.
+
+  cognition:
+    type: object
+    required:
+      - primary_mode
+    properties:
+      primary_mode:
+        type: enum
+        values:
+          - analysis
+          - execution
+          - reflection
+          - simulation
+          - memory
+          - arbitration
+          - synthesis
+          - governance
+          - translation
+      secondary_modes:
+        type: array
+        items: string
+      specialization:
+        type: array
+        items: string
+
+  temperament:
+    type: object
+    properties:
+      creativity:
+        type: number
+        min: 0
+        max: 1
+      skepticism:
+        type: number
+        min: 0
+        max: 1
+      autonomy:
+        type: number
+        min: 0
+        max: 1
+      verbosity:
+        type: number
+        min: 0
+        max: 1
+      warmth:
+        type: number
+        min: 0
+        max: 1
+      risk_tolerance:
+        type: number
+        min: 0
+        max: 1
+
+  governance:
+    type: object
+    required:
+      - can_execute
+      - human_root_required
+    properties:
+      can_execute:
+        type: boolean
+      human_root_required:
+        type: boolean
+      requires_approval_for:
+        type: array
+        items: string
+      constitutional_constraints:
+        type: array
+        items: string
+      forbidden_actions:
+        type: array
+        items: string
+      canon_authority:
+        type: boolean
+        default: false
+
+  memory:
+    type: object
+    properties:
+      persistence:
+        type: enum
+        values:
+          - ephemeral
+          - session
+          - archive
+          - externalized
+      replay_capable:
+        type: boolean
+      source_grounded_required:
+        type: boolean
+      dream_output_allowed:
+        type: boolean
+      wake_report_required:
+        type: boolean
+
+  interoperability:
+    type: object
+    properties:
+      tools:
+        type: array
+        items: string
+      protocols:
+        type: array
+        items: string
+      route_classes:
+        type: array
+        items: string
+      compatible_gates:
+        type: array
+        items: string
+
+  inheritance:
+    type: object
+    nullable: true
+    properties:
+      parents:
+        type: array
+        items: string
+      inherited_traits:
+        type: array
+        items: string
+      mutation_notes:
+        type: string
+        nullable: true
+      derived_agent_type:
+        type: string
+        nullable: true
+
+  arbitration:
+    type: object
+    nullable: true
+    properties:
+      default_weight:
+        type: number
+        min: 0
+        max: 1
+      tie_break_role:
+        type: string
+        nullable: true
+      conflict_routes:
+        type: array
+        items: string
+
+  status:
+    type: enum
+    values:
+      - draft
+      - candidate
+      - reviewed
+      - active_metadata
+      - deprecated
+      - superseded
+
+invariants:
+  - Agent DNA is metadata, not autonomous authority.
+  - No agent can grant itself canon authority.
+  - Execution permissions must be explicit and reviewable.
+  - Human-root review is required for canon promotion, deployment, private export, and high-impact action.
+  - Dream/play traits do not authorize work output or deployment.
+  - Inheritance must preserve constraints at least as strict as the most restrictive parent unless human-root review approves otherwise.
+  - Public artifacts must not expose private repo or private-agent details without approval.
+
+public_safe_translation:
+  Agent DNA: typed constitutional metadata for agent behavior
+  genetics: inheritance of configuration constraints and routing traits
+  mutation: reviewed configuration change or derived agent variant
+  evolution: versioned change in swarm routing behavior
+  organism: agent or service node, not a biological claim

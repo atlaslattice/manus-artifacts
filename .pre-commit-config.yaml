@@ -1,0 +1,12 @@
+# Candidate local pre-commit hooks for Atlas Lattice / Manus Artifacts.
+# Status: reviewable implementation support, not production canon.
+
+repos:
+  - repo: local
+    hooks:
+      - id: pkt-sundya-v2-1-layer1-harness
+        name: PKT-SUNDYA-0 v2.1 Layer-1 harness
+        entry: python3 scripts/test_sundya_runner.py tests/pkt_sundya_0_fixtures.json
+        language: system
+        pass_filenames: false
+        files: ^(scripts/test_sundya_runner\.py|tests/pkt_sundya_0_fixtures\.json)$

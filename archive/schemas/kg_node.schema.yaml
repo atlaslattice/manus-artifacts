@@ -1,0 +1,60 @@
+schema_id: kg_node.schema.v0.1
+status: candidate_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: Candidate schema for knowledge graph nodes.
+
+type: object
+required:
+  - node_id
+  - node_type
+  - label
+  - source_surface
+  - status
+properties:
+  node_id:
+    type: string
+    description: Stable graph-local identifier.
+  node_type:
+    type: string
+    allowed:
+      - SourceRoot
+      - SourceArtifact
+      - RawExport
+      - ParsedPacket
+      - Claim
+      - EvidenceAnchor
+      - ReviewFinding
+      - ReviewQueue
+      - Decision
+      - Action
+      - NegativeResult
+      - MissingReceipt
+      - SchemaArtifact
+  label:
+    type: string
+  source_surface:
+    type: string
+    allowed:
+      - github
+      - drive
+      - notion
+      - gamma
+      - chat
+      - external
+      - mixed
+  status:
+    type: string
+  artifact_status_ref:
+    type: string
+    optional: true
+  source_uri:
+    type: string
+    optional: true
+
+hard_rules:
+  - Node existence is not truth.
+  - Node centrality is not authority.
+  - ReviewQueue nodes are not verdicts.
+  - MissingReceipt nodes must be preserved until resolved or deprecated.

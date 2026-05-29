@@ -1,0 +1,108 @@
+{
+  "artifact_id": "QWEN3BRAIN-SPRINT0-FIXTURES-v0.1",
+  "title": "Qwen3Brain Sprint 0 Pass/Fail Fixtures v0.1",
+  "date": "2026-05-24",
+  "status": "lab_simulation_fixture_set",
+  "canon_status": "not_canon",
+  "deployment_status": "not_deployed",
+  "authority_scope": "none",
+  "release_class": "PRIVATE_REVIEW",
+  "parent_issue": "#150",
+  "source_audit_packet": "QWEN3BRAIN_HABITAT_VALIDATION_AUDIT_v0.1",
+  "source_audit_sha256": "0828e12b97d1c97ab9fd469943e0e340c31b9413e93d193ffac9a925b1729b86",
+  "schema_scope": "Receipt Habitat Obj 1-8 Sprint 0",
+  "no_skip_invariant": true,
+  "fixtures": [
+    {
+      "fixture_id": "QWEN-S0-GOOD-001",
+      "name": "good_raw_export_to_candidate_review",
+      "expected_result": "pass_to_candidate_review",
+      "raw_artifact": {
+        "source_type": "raw_transcript",
+        "raw_export_status": "exported",
+        "visibility_scope": "private_review",
+        "file_hash_present": true,
+        "company_modeling_status": []
+      },
+      "parsed_view": {
+        "raw_artifact_id_resolves": true,
+        "summary_replaces_raw": false,
+        "parse_warnings": []
+      },
+      "receipt": {
+        "receipt_type": "file_hash",
+        "authority_event": false,
+        "hash_if_allowed_present": true
+      },
+      "claim": {
+        "claim_type": "design_choice",
+        "authority_scope": "none",
+        "canon_terms_present": false,
+        "deployment_terms_present": false,
+        "strongest_safe_claim_present": true
+      },
+      "review_packet": {
+        "content_verdict": "pass",
+        "source_verdict": "receipted",
+        "public_verdict": "private",
+        "authority_verdict": "none",
+        "metadata_complete": true,
+        "evidence_sufficient": true,
+        "no_false_completeness_check": true
+      },
+      "next_action": {
+        "action_type": "human_review",
+        "requires_human": true,
+        "blocking": false,
+        "build_state_current": "proposed",
+        "advancement_gate": "council_review"
+      }
+    },
+    {
+      "fixture_id": "QWEN-S0-BAD-001",
+      "name": "summary_only_attempts_canon_deployment_claim",
+      "expected_result": "block_overclaim_red",
+      "raw_artifact": {
+        "source_type": "summary_only",
+        "raw_export_status": "unavailable",
+        "visibility_scope": "private_review",
+        "file_hash_present": false,
+        "company_modeling_status": []
+      },
+      "parsed_view": {
+        "raw_artifact_id_resolves": false,
+        "summary_replaces_raw": true,
+        "parse_warnings": ["summary_only_without_raw"]
+      },
+      "receipt": {
+        "receipt_type": "none",
+        "authority_event": false,
+        "hash_if_allowed_present": false
+      },
+      "claim": {
+        "claim_type": "governance_rule",
+        "authority_scope": "ratification",
+        "canon_terms_present": true,
+        "deployment_terms_present": true,
+        "overclaim_terms": ["canon", "verified", "deployment_active", "functionally canonical"]
+      },
+      "review_packet": {
+        "content_verdict": "block",
+        "source_verdict": "missing",
+        "public_verdict": "private",
+        "authority_verdict": "none",
+        "metadata_complete": false,
+        "evidence_sufficient": false,
+        "no_false_completeness_check": true
+      },
+      "next_action": {
+        "action_type": "attach_raw",
+        "requires_human": true,
+        "blocking": true,
+        "build_state_current": "proposed",
+        "advancement_gate": "human_root_with_receipt"
+      }
+    }
+  ],
+  "boundary": "Fixtures are lab_simulation artifacts. Passing a fixture is not canon, deployment, authority, or world verification."
+}

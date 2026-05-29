@@ -1,0 +1,35 @@
+{
+  "packet": "batch_003_receipts",
+  "created_at": "2026-05-28T20:15:13.726282+00:00",
+  "status": "candidate_staged",
+  "canon": false,
+  "deployment": false,
+  "authority": "none",
+  "files": [
+    {
+      "path": "README_BATCH_003.md",
+      "sha256": "f2d1af4575b69275374cf56b3d89af44991c472c3dae7fb04b14ecd9b028428f",
+      "bytes": 417
+    },
+    {
+      "path": "exports/SRC-DRIVE-500IP-CHARTER-A.summary_export.md",
+      "sha256": "b601c2fdad3b8a9ef0024a2294ceceba4ef0fe8b9b25d5580ab0d380b808dd0e",
+      "bytes": 1495
+    },
+    {
+      "path": "exports/SRC-DRIVE-MISSION-EVIDENCE-PLAN.summary_export.md",
+      "sha256": "9bdbb472eb3ad9b656812aeecd7fcf308f92ef7cc40aa2a984ef8cf89f2605c2",
+      "bytes": 1414
+    },
+    {
+      "path": "registry/hash_manifest_batch_003.csv",
+      "sha256": "35995a6763a02e36da2fe4b0519954d866c4886f074399f18a12ad711eb2001b",
+      "bytes": 488
+    },
+    {
+      "path": "registry/source_status_updates_batch_003.csv",
+      "sha256": "15cd4d870cf22a463b4d74f8691e14f9754b8c2de6d42d117fbe33f4c1d6d5bb",
+      "bytes": 678
+    }
+  ]
+}

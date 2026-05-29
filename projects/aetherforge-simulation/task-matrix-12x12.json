@@ -1,0 +1,26 @@
+{
+  "schema_version": "aetherforge.task_matrix.compact.v1",
+  "name": "Aetherforge Simulation Sandbox 12x12 Task Matrix",
+  "boundary": {
+    "canon_adjustments": false,
+    "runtime_claims": false,
+    "authority_claims": false,
+    "runtime_scope": "local deterministic simulation"
+  },
+  "dimensions": {"domains": 12, "tasks_per_domain": 12, "total_tasks": 144},
+  "status": "candidate_non_canon_simulation_infrastructure",
+  "domains": [
+    {"id":"D01","name":"Repository hygiene","tasks":["README quickstart","Subtree license note","Contribution path","Collaboration norms","Changelog skeleton","Bug report template","Task proposal template","PR checklist","Repository map","Dependency policy","Maintainer contact note","Release tagging convention"]},
+    {"id":"D02","name":"Simulation kernel","tasks":["Deterministic state model","Seeded scenario generator","Step transition function","Invariant checks","Receipt hash chain","Seed replay","Scenario variation hooks","Bounded randomness wrapper","Stable JSON serialization","Run summary metrics","CLI simulate command","Fixture output command"]},
+    {"id":"D03","name":"Task matrix integrity","tasks":["Balanced matrix data file","Domain-count validator","Tasks-per-domain validator","Unique-ID validator","Stable-order validator","Balance score validator","Status vocabulary validator","Field presence validator","Boundary field validator","Milestone mapper","Export format validator","Matrix CLI command"]},
+    {"id":"D04","name":"Quality gates","tasks":["Pytest suite","CLI smoke tests","Replay tests","Matrix schema tests","Receipt chain tests","Offline runtime test","Lint target docs","Type-check target docs","CI workflow","Coverage target docs","Regression tests","Local validation script"]},
+    {"id":"D05","name":"Open-source onboarding","tasks":["Contributor quickstart","First-good-task guide","Architecture overview","Glossary","Examples walkthrough","Troubleshooting notes","Maintainer notes","Review expectations","Decision log template","Roadmap template","Release notes template","Packaging notes"]},
+    {"id":"D06","name":"Data and schemas","tasks":["Task matrix schema","Scenario schema","Result schema","Receipt schema","Invariant schema","Metrics schema","Fixture schema","Status enum schema","Domain taxonomy schema","Compatibility manifest","Schema examples","Schema evolution notes"]},
+    {"id":"D07","name":"Boundary discipline","tasks":["Non-canon boundary note","No-release boundary note","No-authority boundary note","Cultural respect boundary","Privacy boundary","Sensitive-data exclusion","Synthetic-data default","Sandbox execution model","Human review note","Claims discipline","Audit trail expectations","Rollback expectations"]},
+    {"id":"D08","name":"Developer experience","tasks":["Make-free command notes","Module CLI help","JSON output mode","Text output mode","Seed examples","Compact validation errors","Structured exceptions","Examples directory","Editorconfig guidance","Formatting notes","Dependency-free install path","Python version policy"]},
+    {"id":"D09","name":"Observability","tasks":["Run metadata","Invariant summary","Receipt head","Task completion summary","Reproducibility fingerprint","Scenario fingerprint","Transition counts","Warning list","Validation report","JSON-lines option","Timing placeholder","Audit-friendly summary"]},
+    {"id":"D10","name":"Examples and fixtures","tasks":["Minimal scenario example","Twelve-step example","Variation example","Matrix inspection example","Validation report example","Replay example","Receipt inspection example","Invariant example","Contributor task example","CI smoke example","Screenshot placeholder note","Fixture refresh notes"]},
+    {"id":"D11","name":"Interoperability","tasks":["Stable JSON outputs","Plain-text summaries","Importable Python API","CLI exit codes","Deterministic fixture paths","Schema version fields","Metadata envelope","External-tool notes","Notebook-safe output guidance","CI artifact guidance","Downstream contract","Compatibility test plan"]},
+    {"id":"D12","name":"World-class hardening","tasks":["Risk model stub","Reproducibility statement","Neutral review loop","Maintainability scoring","Performance budget","Accessibility docs","Localization readiness notes","Archival strategy","Provenance strategy","Benchmark plan","Release readiness checklist","Excellence rubric"]}
+  ]
+}

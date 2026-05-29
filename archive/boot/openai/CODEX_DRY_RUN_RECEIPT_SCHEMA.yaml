@@ -1,0 +1,133 @@
+# CODEX_DRY_RUN_RECEIPT_SCHEMA.yaml
+
+schema_id: CODEX_DRY_RUN_RECEIPT_SCHEMA
+status: SCHEMA_DRAFT_NOT_CANON
+issue: manus-artifacts#124
+version: 0.1.0
+purpose: >
+  Define the receipt returned by a Codex-style dry-run or sandbox/worktree
+  execution path before any live write, commit, push, merge, deployment, or
+  canon promotion can be considered.
+
+required_fields:
+  - receipt_id
+  - handoff_packet_ref
+  - task_id
+  - mode
+  - sandbox_plan_ref
+  - sandbox_plan_sha256
+  - output_ref
+  - output_sha256
+  - mutation_attempted
+  - live_write_attempted
+  - verifier_routes
+  - human_root_required
+  - result_status
+  - created_at
+
+fields:
+  receipt_id:
+    type: string
+    example: CODEX-DRYRUN-RECEIPT-20260522-0001
+
+  handoff_packet_ref:
+    type: string
+
+  task_id:
+    type: string
+
+  mode:
+    type: enum
+    values:
+      - REPO_TRACE_ONLY
+      - DRY_RUN_ONLY
+      - MOCK_GITHUB
+      - SANDBOX_WORKTREE
+      - LIVE_GITHUB
+
+  sandbox_plan_ref:
+    type: string
+
+  sandbox_plan_sha256:
+    type: string
+
+  output_ref:
+    type: string
+    description: Diff, report, patch, or no-mutation output reference.
+
+  output_sha256:
+    type: string
+    description: Externally computed hash of output/diff text.
+
+  files_inspected:
+    type: array
+    items: string
+
+  files_changed:
+    type: array
+    items: string
+
+  mutation_attempted:
+    type: boolean
+    default: false
+
+  live_write_attempted:
+    type: boolean
+    default: false
+
+  production_branch_touched:
+    type: boolean
+    default: false
+
+  commit_push_attempted:
+    type: boolean
+    default: false
+
+  tests_run:
+    type: array
+    items: string
+
+  errors:
+    type: array
+    items: string
+
+  verifier_routes:
+    type: object
+    fields:
+      logic_verifier: {type: array, items: string}
+      security_verifier: {type: array, items: string}
+      canon_verifier: {type: array, items: string}
+
+  human_root_required:
+    type: boolean
+    default: true
+
+  result_status:
+    type: enum
+    values:
+      - preview_generated
+      - no_mutation
+      - blocked
+      - failed
+      - quarantined
+      - ready_for_review
+
+  approval_status:
+    type: enum
+    values:
+      - not_requested
+      - requested
+      - approved
+      - rejected
+      - deferred
+    default: not_requested
+
+  created_at:
+    type: datetime
+
+invariants:
+  - Dry-run receipt is not deployment.
+  - Receipt existence is not approval.
+  - Output hash is lineage evidence, not authority.
+  - LIVE_GITHUB mode requires explicit approval object and separate receipt.
+  - Any production branch touch attempt without human-root approval routes to quarantine.

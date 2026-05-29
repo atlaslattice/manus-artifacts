@@ -1,0 +1,132 @@
+# S1 GPTBrain Contradiction Ledger Schema
+
+schema_id: S1_CONTRADICTION_LEDGER_SCHEMA
+status: SCHEMA_DRAFT_NOT_CANON
+issue: manus-artifacts#30
+version: 0.1.0
+seat: S1
+seat_name: GPTBrain
+purpose: >
+  Preserve contradictions, contested claims, path conflicts, and unresolved tensions
+  as first-class review objects. Contradictions are not deletion pressure;
+  contradictions are routing pressure.
+
+required_fields:
+  - contradiction_id
+  - summary
+  - claim_a
+  - claim_b
+  - status
+  - severity
+  - resolution_strategy
+  - human_review_required
+  - created_at
+
+fields:
+  contradiction_id:
+    type: string
+    example: S1-CONTRA-2026-0509-0001
+
+  summary:
+    type: string
+
+  contradiction_type:
+    type: enum
+    values:
+      - claim_conflict
+      - path_conflict
+      - status_conflict
+      - canon_conflict
+      - evidence_conflict
+      - implementation_conflict
+      - privacy_conflict
+      - governance_conflict
+      - wording_conflict
+
+  claim_a:
+    type: object
+    fields:
+      id:
+        type: string
+        nullable: true
+      text:
+        type: string
+      source_refs:
+        type: array
+        items: string
+      confidence:
+        type: enum
+        values: [C0, C1, C2, C3, C4, C5]
+
+  claim_b:
+    type: object
+    fields:
+      id:
+        type: string
+        nullable: true
+      text:
+        type: string
+      source_refs:
+        type: array
+        items: string
+      confidence:
+        type: enum
+        values: [C0, C1, C2, C3, C4, C5]
+
+  status:
+    type: enum
+    values:
+      - open
+      - routed
+      - under_review
+      - resolved
+      - superseded
+      - rejected
+      - quarantined
+
+  severity:
+    type: enum
+    values:
+      - low
+      - medium
+      - high
+      - critical
+
+  resolution_strategy:
+    type: enum
+    values:
+      - preserve_both
+      - prefer_higher_confidence
+      - require_source_review
+      - require_human_root_decision
+      - split_paths
+      - supersede_with_successor
+      - quarantine_pending_review
+
+  review_route:
+    type: array
+    items:
+      type: enum
+      values: [S1, S2, S3, S4, S5, S6, S7, HUMAN_ROOT]
+
+  human_review_required:
+    type: boolean
+    default: true
+
+  resolution_notes:
+    type: string
+    nullable: true
+
+  created_at:
+    type: datetime
+
+  resolved_at:
+    type: datetime
+    nullable: true
+
+invariants:
+  - Contradictions must be linked, not silently overwritten.
+  - Lower-confidence claims must not erase higher-provenance records without review.
+  - Canon-impacting contradictions require human-root review.
+  - Path conflicts should route to topology / alias decision notes.
+  - Privacy conflicts require redaction or quarantine before public use.

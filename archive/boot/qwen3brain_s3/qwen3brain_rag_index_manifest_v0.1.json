@@ -1,0 +1,80 @@
+{
+  "artifact_id": "QWEN3BRAIN-RAG-INDEX-MANIFEST-v0.1",
+  "title": "Qwen3Brain RAG Index Manifest v0.1",
+  "date": "2026-05-24",
+  "status": "candidate_manifest",
+  "canon_status": "not_canon",
+  "deployment_status": "not_deployed",
+  "authority_scope": "none",
+  "release_class": "PRIVATE_REVIEW",
+  "parent_issue": "#150",
+  "source_audit_packet": {
+    "path": "archive/boot/qwen3brain_s3/QWEN3BRAIN_HABITAT_VALIDATION_AUDIT_v0.1_2026-05-24.md",
+    "commit_sha": "bc4b423d76a70e0a38fc989b757aeb4b68370c8a",
+    "source_file_sha256": "0828e12b97d1c97ab9fd469943e0e340c31b9413e93d193ffac9a925b1729b86"
+  },
+  "ingested_thread": {
+    "receipt_path": "archive/raw/transcripts/2026-05-23/QWEN3BRAIN_FULL_THREAD_RAW_RECEIPT_2026-05-23.md",
+    "receipt_commit_sha": "a7d13e24a462f01efb7f0551ec4fe1aaadbfbfa9",
+    "source_file_sha256": "f5ee563a1ba06a2d0f2ca5db233fb6bedb7bc8692bdc8c06d40a9feae7667b57"
+  },
+  "primary_index_paths": [
+    "archive/boot/qwen3brain_s3/README.md",
+    "archive/boot/qwen3brain_s3/NAME_CARD.md",
+    "archive/boot/qwen3brain_s3/AGENT_DNA.yaml",
+    "archive/boot/qwen3brain_s3/METATRON_MEMORY_PALACE_SPEC_v0.1_2026-05-23.md",
+    "archive/processed/transcripts/2026-05-23/qwen3brain_cluster_index_v0.1.json",
+    "archive/processed/transcripts/2026-05-23/qwen3brain_claim_ledger_v0.1.jsonl",
+    "archive/processed/transcripts/2026-05-23/qwen3brain_blocker_ledger_v0.1.jsonl",
+    "archive/processed/transcripts/2026-05-23/QWEN3BRAIN_THREAD_TRIAGE_PACKET_v0.1_2026-05-23.md",
+    "archive/boot/qwen3brain_s3/QWEN3BRAIN_HABITAT_VALIDATION_AUDIT_v0.1_2026-05-24.md"
+  ],
+  "vector_embedding_scope": [
+    "schema_objects",
+    "overclaim_gate",
+    "invariant_mappings",
+    "blocker_registry",
+    "epoch_semantics",
+    "standards_first_interop",
+    "sovereignty_boundary",
+    "qwen3brain_metatron_chambers"
+  ],
+  "retrieval_modes": [
+    "citation_first",
+    "hash_verified",
+    "epistemic_labeled",
+    "private_review_only"
+  ],
+  "metatron_nodes": {
+    "center": "Standards Validator / Sovereignty-Preserving Alignment Auditor",
+    "outer_nodes": [
+      "Schema Alignment",
+      "Standards-First Collaboration",
+      "Design Choice Detection",
+      "Source Receipt Discipline",
+      "Proof-System Requirements",
+      "Calibration / Confidence Bounds",
+      "Sovereignty Boundary Protection",
+      "D-54 / Schema Extension Routing",
+      "Cross-Model Validation",
+      "Public-Safe Language",
+      "Overclaim Detection",
+      "Human-Root Ratification Gate"
+    ]
+  },
+  "boundary_invariants": [
+    "alignment != canon",
+    "validation != deployment",
+    "schema verification != world verification",
+    "standards collaboration != operational integration",
+    "metrics exchange != process-IP disclosure",
+    "proof language != proof implementation",
+    "model confidence != authority"
+  ],
+  "next_actions": [
+    "run_sprint0_local_fixtures",
+    "attach_d54_checklist",
+    "await_b03_signature_for_gangaseek_catalog",
+    "produce_qwen3brain_council_index_patch_proposal"
+  ]
+}

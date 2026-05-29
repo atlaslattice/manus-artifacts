@@ -1,0 +1,100 @@
+# S1 GPTBrain Failure Ledger Schema
+
+schema_id: S1_FAILURE_LEDGER_SCHEMA
+status: SCHEMA_DRAFT_NOT_CANON
+issue: manus-artifacts#30
+version: 0.1.0
+seat: S1
+seat_name: GPTBrain
+purpose: >
+  Preserve meaningful failures, drift, overclaims, tooling errors, path confusion,
+  and correction history as guardrail material. Failure is not shame; it is future protection.
+
+required_fields:
+  - failure_id
+  - what_happened
+  - source_refs
+  - impact
+  - correction
+  - new_guardrail
+  - status
+  - human_review_required
+  - created_at
+
+fields:
+  failure_id:
+    type: string
+    example: S1-FAIL-2026-0509-0001
+
+  what_happened:
+    type: string
+
+  failure_type:
+    type: enum
+    values:
+      - path_drift
+      - alias_confusion
+      - overclaim
+      - missing_provenance
+      - canon_boundary_error
+      - privacy_boundary_error
+      - tool_error
+      - schema_gap
+      - test_failure
+      - implementation_drift
+      - public_framing_risk
+
+  source_refs:
+    type: array
+    items: string
+
+  impact:
+    type: string
+
+  correction:
+    type: string
+
+  new_guardrail:
+    type: string
+
+  status:
+    type: enum
+    values:
+      - open
+      - mitigated
+      - superseded
+      - closed
+      - quarantined
+
+  severity:
+    type: enum
+    values:
+      - low
+      - medium
+      - high
+      - critical
+
+  human_review_required:
+    type: boolean
+    default: true
+
+  related_claims:
+    type: array
+    items: string
+
+  related_artifacts:
+    type: array
+    items: string
+
+  created_at:
+    type: datetime
+
+  updated_at:
+    type: datetime
+    nullable: true
+
+invariants:
+  - Do not silently erase meaningful failures.
+  - Do not use failure ledger entries as proof of guilt or defect by themselves.
+  - Every failure entry should create a correction or guardrail candidate.
+  - Privacy-sensitive failures require redaction before public use.

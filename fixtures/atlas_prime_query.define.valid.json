@@ -1,0 +1,21 @@
+{
+  "jsonrpc": "2.0",
+  "id": "apq-define-001",
+  "method": "DEFINE",
+  "params": {
+    "term": "E_t^{q,*}",
+    "scope": "appendix_i",
+    "source_ref": {
+      "kind": "repo_file",
+      "path": "archive/boot/orcs/APPENDIX_I_ATLAS_ORCS_EPISTEMIC_PROFILE_v0.3.md",
+      "commit_sha": "ee843d27a6125712dd3fe893b5dfcecd3d538f94",
+      "raw_export_status": "RAW_NOT_EXPORTED"
+    },
+    "boundary": {
+      "canon": false,
+      "deployment": false,
+      "authority": "query_only",
+      "human_root_final_authority": true
+    }
+  }
+}

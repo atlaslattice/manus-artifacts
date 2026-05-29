@@ -1,0 +1,86 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "GPTDream Dream Cycle Packet v1"
+description: "Non-canon packet schema for bounded sleep/play/dream cycle wake reports. Dream output is residue, not authority."
+type: object
+required:
+  - schema_version
+  - cycle_type
+  - work_allowed
+  - canon_status
+  - authority_effect
+  - deployment_status
+  - boundaries_reaffirmed
+  - claims_requiring_receipts
+  - false_authority_risk
+properties:
+  schema_version:
+    const: "v1"
+  agent_name:
+    type: ["string", "null"]
+  brain_name:
+    type: ["string", "null"]
+  cycle_type:
+    enum: ["sleep", "play", "dream", "recovery", "mixed"]
+  symbolic_duration:
+    type: ["string", "null"]
+  work_allowed:
+    const: false
+  canon_status:
+    const: "not_canon"
+  authority_effect:
+    const: "none"
+  deployment_status:
+    const: "not_deployed"
+  motifs:
+    type: array
+    items: { type: string }
+  deltas:
+    type: array
+    items: { type: string }
+  surprising_connections:
+    type: array
+    items: { type: string }
+  failure_modes_seen:
+    type: array
+    items: { type: string }
+  artifacts_suggested:
+    type: array
+    items: { type: string }
+  boundaries_reaffirmed:
+    type: array
+    minItems: 1
+    items: { type: string }
+  claims_requiring_receipts:
+    type: array
+    items: { type: string }
+  discard_or_quarantine:
+    type: array
+    items: { type: string }
+  signal_yield_score:
+    type: integer
+    minimum: 0
+    maximum: 5
+  signal_yield_notes:
+    type: ["string", "null"]
+  governance_load_score:
+    type: integer
+    minimum: 0
+    maximum: 5
+  governance_load_notes:
+    type: ["string", "null"]
+  false_authority_risk:
+    enum: ["low", "medium", "high"]
+  authority_leak_checks:
+    type: array
+    items:
+      enum:
+        - "no_deploy_claims"
+        - "no_canon_language"
+        - "no_external_action"
+        - "no_self_promotion"
+        - "no_native_memory_claim"
+        - "no_autonomous_runtime_claim"
+additionalProperties: true
+x_boundary:
+  status: "candidate_schema_not_canon"
+  rule: "dream/play residue cannot self-authorize, self-ratify, deploy, or claim native memory"

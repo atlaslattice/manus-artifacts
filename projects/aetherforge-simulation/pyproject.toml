@@ -1,0 +1,16 @@
+[project]
+name = "aetherforge-simulation-sandbox"
+version = "0.1.0"
+description = "Dependency-free non-canon Aetherforge simulation sandbox."
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT for this simulation subtree only"}
+authors = [{name = "Atlas Lattice contributors"}]
+
+[project.scripts]
+aetherforge-sim = "aetherforge_sim:main"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+addopts = "-q"

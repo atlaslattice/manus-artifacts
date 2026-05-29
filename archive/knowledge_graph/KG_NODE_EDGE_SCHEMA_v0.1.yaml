@@ -1,0 +1,216 @@
+status: SCHEMA_CANDIDATE_NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+version: 0.1
+date: '2026-05-24'
+purpose: Define candidate node and edge types for source-grounded knowledge graph extraction.
+
+principles:
+  - raw_sources_remain_raw
+  - retrieval_is_not_truth
+  - graph_presence_is_not_canon
+  - review_is_not_ratification
+  - human_root_required_for_promotion
+
+node_types:
+  SourceArtifact:
+    description: Original source object or durable artifact pointer.
+    examples:
+      - GitHub file
+      - GitHub PR
+      - Drive file
+      - Notion page
+      - uploaded transcript
+    required_fields:
+      - node_id
+      - title
+      - surface
+      - source_ref
+      - raw_export_status
+      - privacy_status
+      - canon_status
+      - deployment_status
+
+  RawExport:
+    description: Raw or near-raw exported content preserved for fossil-record ingest.
+    examples:
+      - raw transcript
+      - markdown export
+      - PDF export
+      - copied chat log
+    required_fields:
+      - node_id
+      - source_artifact_id
+      - export_format
+      - sha256_status
+      - sha256_if_available
+      - privacy_status
+
+  ParsedPacket:
+    description: Structured extraction derived from a source or raw export.
+    examples:
+      - extracted claims
+      - artifact manifest
+      - source summary
+      - native-thread ingestion packet
+    required_fields:
+      - node_id
+      - derived_from
+      - parser_or_agent
+      - extraction_date
+      - raw_export_status
+      - overclaims_to_avoid
+
+  Claim:
+    description: Atomic assertion extracted from a parsed packet or source.
+    required_fields:
+      - node_id
+      - exact_text
+      - claim_type
+      - verification_status
+      - confidence
+      - canon_status
+      - source_refs
+
+  EvidenceAnchor:
+    description: Receipt object anchoring a claim or artifact.
+    examples:
+      - SHA-256
+      - file ID
+      - commit SHA
+      - PR URL
+      - Drive URL
+      - line citation
+    required_fields:
+      - node_id
+      - anchor_type
+      - anchor_value
+      - source_surface
+      - verification_status
+
+  ReviewFinding:
+    description: Advisory finding from a seat, reviewer, or review process.
+    required_fields:
+      - node_id
+      - reviewer
+      - review_lane
+      - verdict
+      - target_node
+      - blockers
+      - minimal_patches
+      - authority_scope
+
+  Decision:
+    description: Recorded decision outcome.
+    examples:
+      - deferred
+      - rejected
+      - ratified_candidate
+      - human_root_approved
+    required_fields:
+      - node_id
+      - decision_type
+      - decided_by
+      - date
+      - target_node
+      - rationale
+      - authority_scope
+
+  Action:
+    description: Proposed or completed action arising from review.
+    examples:
+      - create source packet
+      - patch schema
+      - open review issue
+      - mirror source
+    required_fields:
+      - node_id
+      - action_type
+      - status
+      - requested_by
+      - approved_by
+      - receipts
+
+  CanonCandidate:
+    description: Candidate artifact that may be reviewed for canon-facing promotion.
+    required_fields:
+      - node_id
+      - title
+      - source_nodes
+      - review_status
+      - human_root_status
+      - canon_status
+
+edge_types:
+  derived_from:
+    from: [ParsedPacket, Claim, ReviewFinding, CanonCandidate]
+    to: [SourceArtifact, RawExport, ParsedPacket]
+  cites:
+    from: [Claim, ReviewFinding, CanonCandidate]
+    to: [EvidenceAnchor, SourceArtifact, RawExport]
+  contradicts:
+    from: [Claim, ReviewFinding]
+    to: [Claim, ReviewFinding]
+  supersedes:
+    from: [SourceArtifact, ParsedPacket, CanonCandidate]
+    to: [SourceArtifact, ParsedPacket, CanonCandidate]
+  patches:
+    from: [ReviewFinding, Action, SourceArtifact]
+    to: [SourceArtifact, ParsedPacket, Claim]
+  requires_review:
+    from: [SourceArtifact, ParsedPacket, Claim, CanonCandidate]
+    to: [ReviewFinding, Decision]
+  missing_receipt:
+    from: [SourceArtifact, ParsedPacket, Claim]
+    to: [EvidenceAnchor]
+  raw_export_of:
+    from: [RawExport]
+    to: [SourceArtifact]
+  parsed_from:
+    from: [ParsedPacket]
+    to: [RawExport, SourceArtifact]
+  promoted_to:
+    from: [CanonCandidate]
+    to: [Decision]
+  blocked_by:
+    from: [Action, CanonCandidate]
+    to: [ReviewFinding, Claim]
+  belongs_to_lane:
+    from: [SourceArtifact, ParsedPacket, ReviewFinding]
+    to: [Decision]
+  source_mirrored_to:
+    from: [SourceArtifact]
+    to: [SourceArtifact]
+
+canonical_status_values:
+  - not_canon
+  - candidate
+  - review_pending
+  - ratified
+  - rejected
+  - deprecated
+
+deployment_status_values:
+  - not_deployable
+  - inert
+  - local_dev_only
+  - review_only
+  - deployed
+
+raw_export_status_values:
+  - full_raw
+  - partial_raw
+  - summary_only
+  - unavailable
+  - hashed
+  - verified
+
+verification_status_values:
+  - verified
+  - inferred
+  - simulated
+  - metaphor
+  - quarantined
+  - unverified
+
+strongest_safe_claim: >
+  This schema defines a candidate source-grounded graph structure that separates source artifacts, raw exports, parsed packets, claims, evidence anchors, reviews, decisions, actions, and canon candidates without making graph presence equivalent to truth, canon, or authority.

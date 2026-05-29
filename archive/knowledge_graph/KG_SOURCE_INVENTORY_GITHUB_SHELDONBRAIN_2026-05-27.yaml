@@ -1,0 +1,177 @@
+artifact_id: KG-SOURCE-INVENTORY-GITHUB-SHELDONBRAIN-2026-05-27
+status: candidate_inventory
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+mode: read_only_source_mapping_to_mass_ingestion_prep
+notes:
+  - GitHub-only seed inventory for Aetherforge / Sheldonbrain graph ingestion.
+  - This is not a complete graph and not a canon registry.
+  - Every source row is a review target, not a promotion.
+
+source_inventory:
+  - source_id: github:atlaslattice/manus-artifacts
+    title: atlaslattice/manus-artifacts
+    surface: github
+    url_or_path: https://github.com/atlaslattice/manus-artifacts
+    type: repository
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: none
+      review_state: source_root
+      authority_scope: none
+      provenance_type: git_repository
+    source_class: receipt_substrate
+    related_lane: manus-artifacts
+    review_priority: high
+    mirrored_to_github: true
+    suggested_nodes:
+      - SourceRoot:manus-artifacts
+    suggested_edges:
+      - belongs_to_lane:artifact_receipts
+
+  - source_id: github:atlaslattice/sheldonbrain-rag-api
+    title: atlaslattice/sheldonbrain-rag-api
+    surface: github
+    url_or_path: https://github.com/atlaslattice/sheldonbrain-rag-api
+    type: repository
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: none
+      review_state: codebase_source_root
+      authority_scope: none
+      provenance_type: git_repository
+    source_class: ingestion_engine_candidate
+    related_lane: Sheldonbrain
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts:
+      - runtime deployment status not established
+      - full parser adapter inventory incomplete
+    suggested_nodes:
+      - SourceRoot:sheldonbrain-rag-api
+      - Codebase:Sheldonbrain
+    suggested_edges:
+      - contains:rag_api_gemini.py
+      - contains:canonical/lattice_ontology_v2.py
+
+  - source_id: github:sheldonbrain-rag-api:canonical/lattice_ontology_v2.py
+    title: Lattice Ontology v2.0 canonical 12x12+1 sphere constants
+    surface: github
+    url_or_path: https://github.com/atlaslattice/sheldonbrain-rag-api/blob/master/canonical/lattice_ontology_v2.py
+    type: code_file
+    artifact_status:
+      canon_status: source_locked_code_artifact
+      deployment_status: none
+      review_state: inspected
+      authority_scope: none
+      provenance_type: git_file
+    source_class: ontology_source
+    related_lane: lattice_ontology
+    review_priority: high
+    mirrored_to_github: true
+    suggested_nodes:
+      - OntologySource:lattice_ontology_v2
+      - HouseSet:12
+      - SphereSet:144
+      - Element:E145
+    suggested_edges:
+      - replaces:grokbrain_v4_categories
+      - imported_by:rag_api_gemini.py
+
+  - source_id: github:sheldonbrain-rag-api:rag_api_gemini.py
+    title: RAG API with Gemini embeddings — lattice-aware v2.1
+    surface: github
+    url_or_path: https://github.com/atlaslattice/sheldonbrain-rag-api/blob/master/rag_api_gemini.py
+    type: code_file
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: unknown
+      review_state: inspected
+      authority_scope: none
+      provenance_type: git_file
+    source_class: ingestion_api
+    related_lane: Sheldonbrain
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts:
+      - live environment/API deployment not verified
+      - Pinecone/Gemini runtime state not checked
+    suggested_nodes:
+      - IngestionAPI:rag_api_gemini
+      - Invariant:memory_ne_permission
+    suggested_edges:
+      - imports:lattice_ontology_v2.py
+      - stores_vectors:Pinecone
+      - uses_embeddings:Gemini_text_embedding_004
+      - returns:retrieval_receipt
+
+  - source_id: github:sheldonbrain-rag-api:tests/test_ontology_migration.py
+    title: Phase 1.1 ontology migration tests
+    surface: github
+    url_or_path: https://github.com/atlaslattice/sheldonbrain-rag-api/blob/master/tests/test_ontology_migration.py
+    type: test_file
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: none
+      review_state: inspected
+      authority_scope: none
+      provenance_type: git_file
+    source_class: test_surface
+    related_lane: Sheldonbrain
+    review_priority: medium
+    mirrored_to_github: true
+    missing_receipts:
+      - latest CI run not attached in this inventory
+    suggested_nodes:
+      - TestSurface:ontology_migration
+    suggested_edges:
+      - validates:lattice_ontology_v2.py
+      - validates:rag_api_gemini.py
+
+  - source_id: github:aetherforge_sync
+    title: Aetherforge Sheldonbrain graph ingestion sync
+    surface: github
+    url_or_path: archive/operations/aetherforge/AETHERFORGE_SHELDONBRAIN_GRAPH_INGESTION_SYNC_2026-05-27.md
+    type: operation_packet
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: none
+      review_state: candidate_operation
+      authority_scope: none
+      provenance_type: git_file
+    source_class: operation_sync
+    related_lane: Aetherforge
+    review_priority: high
+    mirrored_to_github: true
+    suggested_nodes:
+      - Operation:AetherforgeSync
+    suggested_edges:
+      - requires:KG_SOURCE_INVENTORY
+
+  - source_id: github:aetherforge_1000_year_lattice_dream
+    title: Aetherforge 1000-year lattice dream task generation dispatch
+    surface: github
+    url_or_path: archive/operations/aetherforge/AETHERFORGE_1000_YEAR_LATTICE_DREAM_TASK_GENERATION_2026-05-27.md
+    type: dream_play_operation_packet
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: none
+      review_state: candidate_operation
+      authority_scope: none
+      provenance_type: git_file
+    source_class: dreamstate_delta_generator
+    related_lane: Aetherforge
+    review_priority: medium
+    mirrored_to_github: true
+    suggested_nodes:
+      - Operation:Aetherforge1000YearDream
+    suggested_edges:
+      - generates:TaskLatticeCandidates
+      - forbidden_from:CanonWrites
+
+next_required_actions:
+  - Inventory additional Sheldonbrain parser and adapter modules.
+  - Add Drive and Notion source inventories in separate sanitized manifests.
+  - Add Claude adversarial review queue as separate sanitized file.
+  - Compute SHA-256 for raw exports where possible.

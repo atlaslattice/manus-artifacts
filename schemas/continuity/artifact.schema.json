@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atlaslattice.local/schemas/continuity/artifact.schema.json",
+  "title": "Continuity OS Artifact",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "artifact_id",
+    "title",
+    "artifact_type",
+    "status",
+    "canon_status",
+    "authority_status",
+    "raw_export_status",
+    "created_at",
+    "source_refs",
+    "claims",
+    "next_actions"
+  ],
+  "properties": {
+    "artifact_id": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "artifact_type": {
+      "type": "string",
+      "enum": [
+        "raw_log",
+        "ingestion_packet",
+        "vault_receipt",
+        "claim_ledger",
+        "execution_contract",
+        "protocol_doc",
+        "product_charter",
+        "repo_issue",
+        "code_patch",
+        "research_packet",
+        "council_packet",
+        "demo_bundle",
+        "other"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "vaulted_provisional", "review_ready", "approved", "superseded", "archived", "quarantined"]
+    },
+    "canon_status": {
+      "type": "string",
+      "enum": ["not_canon", "candidate", "ratified", "rejected", "superseded"]
+    },
+    "authority_status": {
+      "type": "string",
+      "enum": ["none", "advisory", "execution_authorized", "sovereign_authority", "unknown"]
+    },
+    "deployment_status": {
+      "type": "string",
+      "enum": ["not_deployable", "demo_only", "deployable", "deployed", "retired"],
+      "default": "not_deployable"
+    },
+    "native_memory_status": {
+      "type": "string",
+      "enum": ["no", "candidate", "approved", "unknown"],
+      "default": "no"
+    },
+    "raw_export_status": {
+      "type": "string",
+      "enum": ["full_raw", "partial_raw", "summary_only", "unavailable", "redacted"]
+    },
+    "privacy_status": {
+      "type": "string",
+      "enum": ["public", "private", "mixed", "redacted", "unknown"],
+      "default": "unknown"
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label", "ref_type"],
+        "properties": {
+          "label": { "type": "string" },
+          "ref_type": { "type": "string", "enum": ["user_prompt", "repo_file", "commit", "issue", "web", "model_output", "tool_result", "memory", "other"] },
+          "uri": { "type": "string" },
+          "commit_sha": { "type": "string" },
+          "file_sha": { "type": "string" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "parent_artifacts": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "child_artifacts": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "claims": { "type": "array", "items": { "$ref": "claim-ledger.schema.json#/$defs/claim" } },
+    "risks": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "open_loops": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "next_actions": { "type": "array", "items": { "type": "string" } },
+    "receipt": { "$ref": "vault-receipt.schema.json" }
+  }
+}

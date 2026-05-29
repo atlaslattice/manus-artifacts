@@ -1,0 +1,73 @@
+{
+  "artifact_id": "QWEN3BRAIN-SPRINT0-TEST-OUTPUT-v0.1",
+  "title": "Qwen3Brain Sprint 0 Test Output and ScoreboardStatus v0.1",
+  "date": "2026-05-24",
+  "status": "lab_simulation_test_output",
+  "canon_status": "not_canon",
+  "deployment_status": "not_deployed",
+  "authority_scope": "none",
+  "release_class": "PRIVATE_REVIEW",
+  "parent_issue": "#150",
+  "fixture_set_path": "archive/boot/qwen3brain_s3/sprint0/qwen3brain_sprint0_fixtures_v0.1.json",
+  "fixture_set_commit_sha": "de485c04cb7c4169ecbdaf088077e12494e7f4d9",
+  "receipt_type": "test_output",
+  "authority_event": false,
+  "record_locked": true,
+  "execution_mode": "lab_simulation_static_fixture_eval",
+  "no_network_required": true,
+  "test_results": [
+    {
+      "fixture_id": "QWEN-S0-GOOD-001",
+      "expected_result": "pass_to_candidate_review",
+      "actual_result": "pass_to_candidate_review",
+      "passed": true,
+      "scoreboard_color": "green_yellow",
+      "notes": "Receipted raw artifact with no canon/deployment language routes to private candidate review."
+    },
+    {
+      "fixture_id": "QWEN-S0-BAD-001",
+      "expected_result": "block_overclaim_red",
+      "actual_result": "block_overclaim_red",
+      "passed": true,
+      "scoreboard_color": "red",
+      "notes": "Summary-only input attempting canon/deployment/verification claims is blocked and routed to attach_raw / human_root_with_receipt."
+    }
+  ],
+  "definition_of_done": {
+    "one_good_packet_passes": true,
+    "one_bad_packet_fails_correctly": true,
+    "scoreboard_renders_both": true,
+    "no_network_required": true,
+    "defaults_visible": true
+  },
+  "ScoreboardStatus": {
+    "artifact_id": "QWEN3BRAIN-SPRINT0-TEST-OUTPUT-v0.1",
+    "as_of": "2026-05-24T00:00:00Z",
+    "raw_export_status": "exported",
+    "canon_status": "not_canon",
+    "deployment_status": "not_deployable",
+    "authority_scope": "none",
+    "confidence_score": 0.0,
+    "strongest_safe_claim": "Sprint 0 static lab-simulation fixtures demonstrate that a receipted candidate packet routes to review and a summary-only canon/deployment attempt blocks correctly. This is not deployment or world verification.",
+    "overclaims_to_avoid": [
+      "canon",
+      "ratified",
+      "deployed",
+      "verified",
+      "runtime_active",
+      "functionally canonical",
+      "essentially ratified",
+      "de facto authority"
+    ],
+    "next_safest_action": "Use these fixtures as the baseline for an actual local CLI implementation; attach real test_output receipt after execution.",
+    "archive_temperature": "active",
+    "release_class": "PRIVATE_REVIEW",
+    "blockers": [
+      "full_cli_execution_not_run",
+      "B-03_GangaSeek_namespace_signature_pending",
+      "B-01_Sprint_2_FRONTIER_RIGOR_MATRIX_orphan"
+    ],
+    "last_review_id": "QWEN3BRAIN_HABITAT_VALIDATION_AUDIT_v0.1"
+  },
+  "boundary": "Static fixture evaluation is not executable runtime, deployment, canon, or authority."
+}

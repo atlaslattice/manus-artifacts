@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atlaslattice.local/schemas/atlas-artifact-registry-overlay.schema.json",
+  "title": "Atlas Artifact Registry Overlay",
+  "description": "Candidate overlay schema for indexing artifacts across Notion, Drive, GitHub, website canon, Gamma, and swarm outputs. Non-canon until reviewed and ratified.",
+  "type": "object",
+  "required": [
+    "registry_id",
+    "title",
+    "source_surface",
+    "source_locator",
+    "raw_export_status",
+    "epistemic_label",
+    "authority_scope",
+    "canon_status",
+    "deployment_status",
+    "privacy_status",
+    "review_lane",
+    "hashes"
+  ],
+  "properties": {
+    "registry_id": {"type": "string"},
+    "title": {"type": "string"},
+    "source_surface": {
+      "type": "string",
+      "enum": ["notion", "google_drive", "github", "website", "gamma", "chat_upload", "swarm_output", "unknown"]
+    },
+    "source_locator": {
+      "type": "object",
+      "properties": {
+        "url": {"type": ["string", "null"]},
+        "id": {"type": ["string", "null"]},
+        "path": {"type": ["string", "null"]},
+        "commit_sha": {"type": ["string", "null"]},
+        "file_sha": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "raw_export_status": {
+      "type": "string",
+      "enum": ["full_raw", "partial_raw", "summary_only", "proxy_reference", "unavailable", "unknown"]
+    },
+    "epistemic_label": {
+      "type": "string",
+      "enum": ["VERIFIABLE", "DESIGN_CHOICE", "CREATIVE_OVERLAY", "SIMULATION_ONLY", "SOURCE_NEEDED", "UNKNOWN"]
+    },
+    "authority_scope": {
+      "type": "string",
+      "enum": ["none", "advisory", "review", "enterprise", "sovereign", "unknown"]
+    },
+    "canon_status": {
+      "type": "string",
+      "enum": ["not_canon", "candidate", "proposed", "ratified", "website_canonical", "deprecated", "unknown"]
+    },
+    "deployment_status": {
+      "type": "string",
+      "enum": ["not_deployed", "design_only", "sandbox", "pilot", "deployed", "unknown"]
+    },
+    "privacy_status": {
+      "type": "string",
+      "enum": ["public", "internal", "private", "sensitive", "redacted", "unknown"]
+    },
+    "review_lane": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "hashes": {
+      "type": "object",
+      "properties": {
+        "sha256": {"type": ["string", "null"]},
+        "content_hash": {"type": ["string", "null"]},
+        "file_sha": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["relation_type", "target"],
+        "properties": {
+          "relation_type": {"type": "string"},
+          "target": {"type": "string"},
+          "evidence": {"type": ["string", "null"]}
+        }
+      },
+      "default": []
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {"type": "string"},
+      "default": []
+    },
+    "next_action": {"type": ["string", "null"]},
+    "created_at": {"type": ["string", "null"]},
+    "updated_at": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

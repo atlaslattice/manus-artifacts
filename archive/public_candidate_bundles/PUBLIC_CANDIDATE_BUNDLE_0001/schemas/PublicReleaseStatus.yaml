@@ -1,0 +1,77 @@
+# PublicReleaseStatus schema
+# Status: candidate staging material
+# Canon: no
+# Deployment: no
+# Authority: none
+
+schema_id: PublicReleaseStatus_v0_1
+status: candidate
+required_fields:
+  - public_release_status
+  - privacy_status
+  - redaction_status
+  - license_status
+  - source_receipt_status
+  - review_state
+  - authority_scope
+
+enums:
+  public_release_status:
+    - unknown
+    - public_ready
+    - redact_first
+    - private_hold
+    - rights_unclear
+    - third_party_review_required
+    - do_not_publish
+  privacy_status:
+    - unknown
+    - public_safe
+    - personal_data_possible
+    - private
+    - sensitive
+    - secret_or_credential_risk
+  redaction_status:
+    - not_checked
+    - clean
+    - redactions_required
+    - redacted
+    - blocked
+  license_status:
+    - unknown
+    - original_by_dave
+    - open_license_candidate
+    - third_party_material_present
+    - rights_unclear
+    - do_not_publish
+  source_receipt_status:
+    - missing
+    - partial
+    - present
+    - verified
+    - stale
+  review_state:
+    - unreviewed
+    - review_pending
+    - reviewed
+    - blocked
+    - approved_for_public_candidate
+    - rejected_for_public_release
+  authority_scope:
+    - none
+    - advisory
+    - human_root_required
+    - approved_scope_only
+
+rules:
+  publish_allowed_only_if:
+    public_release_status: public_ready
+    privacy_status: public_safe
+    redaction_status: clean
+    source_receipt_status: [present, verified]
+    authority_scope: approved_scope_only
+  publish_blocked_if_any:
+    - license_status in [unknown, rights_unclear, third_party_material_present, do_not_publish]
+    - privacy_status in [unknown, personal_data_possible, private, sensitive, secret_or_credential_risk]
+    - redaction_status in [not_checked, redactions_required, blocked]
+    - source_receipt_status in [missing, partial, stale]

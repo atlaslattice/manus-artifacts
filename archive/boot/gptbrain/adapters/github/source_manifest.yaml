@@ -1,0 +1,70 @@
+# source_manifest.yaml
+# STATUS: ADAPTER SOURCE MANIFEST — NOT CANON
+# PURPOSE: machine-readable source map for GitHub adapter scaffold
+
+adapter: github
+status: adapter_scaffold_not_canon
+mode: work_output
+integration_status: candidate_adapter_spec_created_not_live_authority
+human_root_gate: required_before_live_write_actions
+
+default_mode: DRY_RUN_ONLY
+allowed_modes:
+  - REPO_TRACE_ONLY
+  - DRY_RUN_ONLY
+  - MOCK_GITHUB
+blocked_modes_by_default:
+  - LIVE_GITHUB
+
+source_surfaces:
+  primary_repository:
+    repo: atlaslattice/manus-artifacts
+    default_branch: master
+    coordination_issue: https://github.com/atlaslattice/manus-artifacts/issues/11
+    s7_pr: https://github.com/atlaslattice/manus-artifacts/pull/15
+  adapter_files:
+    spec: archive/boot/gptbrain/adapters/github/GITHUB_RUNTIME_ADAPTER_SPEC_2026-05-09.md
+    readme: archive/boot/gptbrain/adapters/github/README.md
+    manifest: archive/boot/gptbrain/adapters/github/source_manifest.yaml
+  related_patterns:
+    tucker_adapter: archive/boot/gptbrain/adapters/tucker_gemini/
+    council_packet_schema: archive/boot/council/schemas/COUNCIL_PACKET_SCHEMA_2026-05-09.yaml
+    route_to_seat_schema: archive/boot/council/schemas/ROUTE_TO_SEAT_PACKET_SCHEMA_2026-05-09.yaml
+
+safe_claims:
+  - GitHub API access should be represented as a bounded, auditable adapter.
+  - Read access and write authority are separate capabilities.
+  - Token presence does not authorize mutation.
+
+forbidden_claims:
+  - GitHub writes are automatically authorized because a token exists.
+  - GitHub adapter live mode is enabled by default.
+  - GitHub connector access is equivalent to human-root approval.
+  - A successful dry run is a successful mutation.
+
+runtime_boundary:
+  live_call_attempted_by_default: false
+  write_mutation_allowed_by_default: false
+  token_values_logged: false
+  human_root_required_for_live_writes: true
+
+recommended_permissions:
+  metadata: read
+  contents: read
+  issues: read_write_only_if_needed
+  pull_requests: read_write_only_if_needed
+  actions: read_only_if_needed
+
+review_routes:
+  S1: adapter receipt schema / evidence boundary / claim calibration
+  S2: authority language / non-claims / consent boundary
+  S4: API simulation / validation harness
+  S6: audit log / continuity / handoff
+  S7: repo scaffold / CI / templates / implementation
+  human_root: live write approval
+
+next_actions:
+  - Add github_adapter.py scaffold with DRY_RUN_ONLY default.
+  - Add test_github_adapter.py with no-network tests.
+  - Add GitHub adapter tests to CI only after PR #15 stabilizes.
+  - Keep live writes blocked unless explicit approval and task reference exist.

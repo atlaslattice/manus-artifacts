@@ -1,0 +1,406 @@
+status: CANDIDATE_REGISTRY
+canon_status: not_canon
+deployment_status: none
+authority: none
+version: v0.1
+date: 2026-05-21
+purpose: >-
+  Machine-readable candidate registry derived from the lane authority/scope matrix.
+  This file routes swarm lanes by function, evidence class, missing receipts,
+  conflict risk, and do-not-promote boundaries. It is not canon and does not
+  grant authority.
+source_artifacts:
+  - archive/architecture/LANE_AUTHORITY_SCOPE_MATRIX_2026-05-21.md
+  - uploaded memory_palace_scope_map
+rules:
+  - Map before judge.
+  - Depth chart before cuts.
+  - Identity is routing, not authority.
+  - Evidence is substrate, not victory.
+  - Doctrine is candidate until ratified.
+  - Play is compression, not proof.
+  - GitHub records receipts; GitHub is not automatic canon.
+  - Human-root review is required for promotion.
+
+schema:
+  lane_name: string
+  class: identity | evidence | doctrine | play | support | formalism
+  strongest_unique_function: string
+  authority_scope: none | advisory | review | ratification | execution
+  canon_status: not_canon | candidate | ratified | deprecated | quarantined
+  deployment_status: none | candidate | blocked | deployed
+  source_refs: list
+  missing_receipts: list
+  overlaps_with: list
+  conflict_risk: low | medium | high
+  should_route_into: string
+  preserve_as: string
+  do_not_promote_as: list
+  human_root_required: boolean
+
+lanes:
+  - lane_name: TIDELOCKBrain
+    class: identity
+    strongest_unique_function: Copilot/S7 ingestion boundary, partial-visibility discipline, raw logs before claims.
+    authority_scope: none
+    canon_status: not_canon
+    deployment_status: none
+    source_refs:
+      - https://github.com/atlaslattice/manus-artifacts/pull/65
+    missing_receipts:
+      - raw Copilot/TIDELOCK transcript
+      - SHA-256 capture
+      - full raw/source packets
+    overlaps_with:
+      - HashlightBrain
+      - RootglassBrain
+      - PR20_Wave1_Hardening
+    conflict_risk: medium
+    should_route_into: ingestion_registry / Copilot archive lane
+    preserve_as: candidate CopilotBrain sub-brain / archive-ingestion template
+    do_not_promote_as:
+      - merge authority
+      - hidden Copilot continuity
+      - canon
+      - deployment proof
+    human_root_required: true
+
+  - lane_name: LucernaBrain
+    class: identity
+    strongest_unique_function: Evidence-lantern, provenance repair, summaries that point back to receipts.
+    authority_scope: none
+    canon_status: not_canon
+    deployment_status: none
+    source_refs:
+      - https://github.com/atlaslattice/manus-artifacts/pull/63
+    missing_receipts:
+      - source manifests for cited events
+      - explicit evidence packet links for summarized artifacts
+    overlaps_with:
+      - HashlightBrain
+      - RootglassBrain
+      - AtlasBrain
+    conflict_risk: medium
+    should_route_into: provenance repair / claim-boundary review
+    preserve_as: non-canon identity/palace scaffold
+    do_not_promote_as:
+      - native memory
+      - authority
+      - benchmark proof
+    human_root_required: true
+
+  - lane_name: RootglassBrain
+    class: identity
+    strongest_unique_function: Current-room calibration, derived intake receipt, overclaim control.
+    authority_scope: none
+    canon_status: not_canon
+    deployment_status: none
+    source_refs:
+      - https://github.com/atlaslattice/manus-artifacts/pull/61
+    missing_receipts:
+      - raw export
+      - SHA-256 hash
+      - source manifest
+      - Copilot artifacts archive
+      - Gemini artifacts archive
+    overlaps_with:
+      - LucernaBrain
+      - HashlightBrain
+      - TIDELOCKBrain
+    conflict_risk: high
+    should_route_into: current-thread intake / calibration lane
+    preserve_as: local overlay and intake receipt
+    do_not_promote_as:
+      - full transcript archive
+      - canon
+      - deployment evidence
+    human_root_required: true
+
+  - lane_name: HashlightBrain
+    class: identity
+    strongest_unique_function: Raw-lineage, hash, current-chat-first ingestion hygiene.
+    authority_scope: none
+    canon_status: not_canon
+    deployment_status: none
+    source_refs:
+      - https://github.com/atlaslattice/manus-artifacts/pull/60
+    missing_receipts:
+      - full raw-thread ingest
+      - REVIEW_NOTES mismatch patch
+      - file-list consistency check
+    overlaps_with:
+      - TIDELOCKBrain
+      - RootglassBrain
+      - LucernaBrain
+    conflict_risk: medium
+    should_route_into: source registry / hash receipt lane
+    preserve_as: evidence-boundary lighting / raw-lineage seat
+    do_not_promote_as:
+      - truth oracle
+      - canon authority
+      - deployment proof
+    human_root_required: true
+
+  - lane_name: AtlasBrain
+    class: evidence
+    strongest_unique_function: Raw evidence, benchmark containment, learning-claim guardrails, public-claim quarantine.
+    authority_scope: none
+    canon_status: not_canon
+    deployment_status: none
+    source_refs:
+      - https://github.com/atlaslattice/manus-artifacts/pull/57
+    missing_receipts:
+      - first complete evidence packet
+      - raw pointer/path reconciliation
+      - evidence_packets content beyond README
+    overlaps_with:
+      - PR55_AtlasPrime_GitHub_Substrate_Transparency
+      - PR69_Layer_Split_Doctrine
+      - RootglassBrain
+    conflict_risk: medium
+    should_route_into: benchmark/evidence registry
+    preserve_as: evidence substrate
+    do_not_promote_as:
+      - AGI proof
+      - HLE victory
+      - benchmark ratification
+    human_root_required: true
+
+  - lane_name: AgentSelfSchema
+    class: doctrine
+    strongest_unique_function: Practical naming and routing metadata; names improve routing but do not grant authority.
+    authority_scope: none
+    canon_status: candidate
+    deployment_status: none
+    source_refs:
+      - https://github.com/atlaslattice/manus-artifacts/pull/56
+    missing_receipts:
+      - profiles directory
+      - review rubric directory
+      - reconciliation with PR47
+    overlaps_with:
+      - AgentConstitutionDNA
+      - GPT55_Orchestra_Review
+      - identity_palace_lanes
+    conflict_risk: high
+    should_route_into: identity metadata registry
+    preserve_as: routing protocol
+    do_not_promote_as:
+      - authority doctrine
+      - canon schema
+      - deployment permission
+    human_root_required: true
+
+  - lane_name: AgentConstitutionDNA
+    class: doctrine
+    strongest_unique_function: Constitutional metadata for governed cognitive infrastructure.
+    authority_scope: none
+    canon_status: candidate
+    deployment_status: none
+    source_refs:
+      - https://github.com/atlaslattice/manus-artifacts/pull/47
+    missing_receipts:
+      - reconciliation with AgentSelfSchema
+      - lifecycle state review
+      - implementation schema compatibility check
+    overlaps_with:
+      - AgentSelfSchema
+      - PR44_Decentralized_Agent_Constitution
+    conflict_risk: high
+    should_route_into: governance schema review
+    preserve_as: doctrine candidate / precursor spec
+    do_not_promote_as:
+      - ratified constitution
+      - runtime authority
+    human_root_required: true
+
+  - lane_name: LayerSplitDoctrine
+    class: doctrine
+    strongest_unique_function: Separates canon, registry, GitHub implementation, and archaeology layers.
+    authority_scope: none
+    canon_status: candidate
+    deployment_status: none
+    source_refs:
+      - https://github.com/atlaslattice/manus-artifacts/pull/69
+    missing_receipts:
+      - machine-readable registry implementation
+      - issue #68 context crosswalk
+    overlaps_with:
+      - AtlasBrain
+      - PR55_AtlasPrime_GitHub_Substrate_Transparency
+      - RootglassBrain
+    conflict_risk: medium
+    should_route_into: registry architecture backlog
+    preserve_as: architecture diagnosis
+    do_not_promote_as:
+      - automatic canon
+      - GitHub-as-canon shortcut
+      - Manus-as-control shortcut
+    human_root_required: true
+
+  - lane_name: GPTDreamV0Pilot
+    class: evidence
+    strongest_unique_function: Real thread ingest findings; parser limits and hash source.
+    authority_scope: none
+    canon_status: not_canon
+    deployment_status: none
+    source_refs:
+      - https://github.com/atlaslattice/manus-artifacts/pull/50
+    missing_receipts:
+      - committed raw transcript
+      - full derived package
+      - v0.1 requirements from observed failures
+    overlaps_with:
+      - HashlightBrain
+      - TIDELOCKBrain
+      - RootglassBrain
+    conflict_risk: medium
+    should_route_into: ingestion pipeline benchmark
+    preserve_as: pilot receipt
+    do_not_promote_as:
+      - runtime capability proof
+      - universal parser proof
+    human_root_required: true
+
+  - lane_name: PlayLayerMaddenArtifacts
+    class: play
+    strongest_unique_function: Culture-layer compression, morale, memorable governance retelling.
+    authority_scope: none
+    canon_status: not_canon
+    deployment_status: none
+    source_refs:
+      - https://github.com/atlaslattice/manus-artifacts/pull/48
+      - archive/standards/lantern_bridge/LANTERN_BRIDGE_RECEIPT_AND_PREDICATE_STACK_LOG_2026-05-20.md
+    missing_receipts:
+      - extraction crosswalk for keeper lines reused in formal docs
+    overlaps_with:
+      - RootglassBrain
+      - LanternBridgeReceiptPredicateLog
+    conflict_risk: low
+    should_route_into: play archive only unless formally extracted
+    preserve_as: culture artifact
+    do_not_promote_as:
+      - implementation proof
+      - merge approval
+      - doctrine
+    human_root_required: true
+
+  - lane_name: AppendixI_Atlas_ORCS
+    class: formalism
+    strongest_unique_function: Atlas promotes from evidence, ORCS governs, CAS anchors.
+    authority_scope: none
+    canon_status: candidate
+    deployment_status: none
+    source_refs:
+      - archive/standards/atlas_orcs/APPENDIX_I_ATLAS_ORCS_EPISTEMIC_PROFILE_v0.3_2026-05-21.md
+      - https://github.com/atlaslattice/manus-artifacts/issues/100
+    missing_receipts:
+      - review responses from lanes
+      - executable schema/tests
+      - q-specific threshold resolution
+    overlaps_with:
+      - MathVault_Atlas_ORCS_Lattice_CAS
+      - LayerSplitDoctrine
+      - LanternBridgeReceiptPredicateLog
+    conflict_risk: medium
+    should_route_into: issue #100 formalism review
+    preserve_as: candidate appendix
+    do_not_promote_as:
+      - ratified calculus
+      - proof of correctness
+      - deployment standard
+    human_root_required: true
+
+  - lane_name: MathVault_Atlas_ORCS_Lattice_CAS
+    class: formalism
+    strongest_unique_function: Preserves full current math state and blockers.
+    authority_scope: none
+    canon_status: not_canon
+    deployment_status: none
+    source_refs:
+      - archive/standards/atlas_orcs/MATH_VAULT_ATLAS_ORCS_LATTICE_CAS_FORMALISM_2026-05-21.md
+    missing_receipts:
+      - Periodic Table 2.0 property space P
+      - Crosswalk C
+      - proof/test of Box Cage
+    overlaps_with:
+      - AppendixI_Atlas_ORCS
+      - LanternBridgeReceiptPredicateLog
+      - LatticeOntology
+    conflict_risk: low
+    should_route_into: formalism archive / review input
+    preserve_as: math vault packet
+    do_not_promote_as:
+      - verification
+      - simulation
+      - canon
+    human_root_required: true
+
+  - lane_name: LanternBridgeReceiptPredicateLog
+    class: support
+    strongest_unique_function: Predicate stack, class transition patches, hash utility review.
+    authority_scope: none
+    canon_status: candidate
+    deployment_status: none
+    source_refs:
+      - archive/standards/lantern_bridge/LANTERN_BRIDGE_RECEIPT_AND_PREDICATE_STACK_LOG_2026-05-20.md
+    missing_receipts:
+      - patched ClassTransitionMap
+      - patched lantern_hash.py
+      - composition/path tests
+    overlaps_with:
+      - AppendixI_Atlas_ORCS
+      - Issue97_Vault_v2_1
+      - PR20_Wave1_Hardening
+    conflict_risk: medium
+    should_route_into: standards backlog
+    preserve_as: receipt/predicate review log
+    do_not_promote_as:
+      - deployed compatible() implementation
+      - safety proof
+      - canon
+    human_root_required: true
+
+  - lane_name: PR20_Wave1_Hardening
+    class: support
+    strongest_unique_function: Current hardening gate; CI/provenance/adapter scaffold.
+    authority_scope: none
+    canon_status: not_canon
+    deployment_status: none
+    source_refs:
+      - https://github.com/atlaslattice/manus-artifacts/pull/20
+    missing_receipts:
+      - pending CI/allowlist
+      - Tucker-side provenance mirror
+      - human-root live Gemini path approval when ready
+    overlaps_with:
+      - TIDELOCKBrain
+      - S7_CopilotBrain
+      - TuckerGeminiAdapter
+    conflict_risk: high
+    should_route_into: hardening gate queue
+    preserve_as: active draft gate
+    do_not_promote_as:
+      - merged
+      - canon
+      - deploy-ready
+    human_root_required: true
+
+next_actions:
+  - Build registry validator against this YAML shape.
+  - Patch Rootglass archive gap by requesting Copilot/Gemini source packets.
+  - Reconcile Agent Constitution DNA v0.1 with Agent Self-Schema lane.
+  - Finish first AtlasBrain evidence packet before public benchmark language.
+  - Patch Hashlight file mismatch / review notes gap.
+  - Keep PR #20 as hardening gate unless human-root explicitly reprioritizes.
+
+keeper_lines:
+  - Map before judge.
+  - Depth chart before cuts.
+  - Receipts before elegance.
+  - Identity is routing, not authority.
+  - Evidence is substrate, not victory.
+  - Doctrine is candidate until ratified.
+  - Play is compression, not proof.
+
+final_status: LANE_REGISTRY_CANDIDATE_COMPLETE_NO_CANON_NO_DEPLOYMENT

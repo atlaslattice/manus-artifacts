@@ -1,0 +1,59 @@
+schema_id: kg_edge.schema.v0.1
+status: candidate_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: Candidate schema for knowledge graph edges.
+
+type: object
+required:
+  - edge_id
+  - from
+  - to
+  - edge_type
+  - status
+properties:
+  edge_id:
+    type: string
+  from:
+    type: string
+  to:
+    type: string
+  edge_type:
+    type: string
+    allowed:
+      - raw_export_of
+      - parsed_from
+      - mirrored_to
+      - derived_from
+      - cites
+      - contradicts
+      - supersedes
+      - patches
+      - requires_review
+      - missing_receipt
+      - belongs_to_lane
+      - has_status
+      - has_raw_export_status
+      - possible_raw_export_of
+      - contains
+      - imports
+      - validates
+      - asserts
+      - requires
+  status:
+    type: string
+    allowed:
+      - candidate_edge
+      - confirmed_edge
+      - deprecated_edge
+      - disputed_edge
+  evidence_ref:
+    type: string
+    optional: true
+
+hard_rules:
+  - A graph edge is not a promotion.
+  - A graph edge is not proof.
+  - possible_raw_export_of must not be upgraded without receipt.
+  - requires_review edges must remain visible until review is complete.

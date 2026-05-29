@@ -1,0 +1,120 @@
+artifact_id: ARTIFACT_GRAPH_MANIFEST_v0_1
+status: candidate_schema
+canon_status: not_canon
+deployment_status: not_deployable
+authority_scope: none
+purpose: >
+  Define the provenance-first artifact graph manifest for mapping artifacts across
+  website, GitHub, Notion, Drive, chat, and external sources without turning the
+  graph into a truth graph.
+
+core_invariant: >
+  Map everything to everything without letting anything become canon by being connected.
+
+node_types:
+  CanonPage:
+    description: Public or ratified canon surface, usually from website /canon when reachable.
+    authority_source: explicit canon surface only
+
+  Artifact:
+    description: Any document, code file, transcript, model output, issue, PR, commit, notion page, or drive file.
+    examples:
+      - white_paper
+      - spec
+      - protocol
+      - codebase
+      - transcript
+      - model_output
+      - issue
+      - pr
+      - commit
+      - notion_page
+      - drive_file
+
+  Claim:
+    description: Atomic assertion extracted from an artifact or source.
+    examples:
+      - technical_claim
+      - governance_claim
+      - performance_claim
+      - IP_claim
+      - external_signal_claim
+
+  Concept:
+    description: Named idea, doctrine, protocol, invariant, architecture, or ontology element.
+    examples:
+      - INV-0
+      - GPTDream++
+      - D-Φ-1
+      - Atlas Prime
+      - ORCS
+      - TIDELOCK
+      - Horizon Ledger
+
+  PersonOrSeat:
+    description: Human, AI seat, reviewer lane, or named brain role.
+    examples:
+      - Dave
+      - ClaudeBrain
+      - GPTBrain
+      - TIDELOCK
+      - Lucerna
+      - Hashlight
+      - AtlasBrain
+
+  SourceSurface:
+    description: Origin surface from which artifact was retrieved or created.
+    examples:
+      - website
+      - github
+      - notion
+      - drive
+      - chat
+      - external_web
+
+artifact_status_required:
+  canon_status:
+    allowed: [not_canon, candidate, ratified]
+  deployment_status:
+    allowed: [not_deployable, experimental, deployed]
+  review_status:
+    allowed: [unreviewed, in_review, reviewed, blocked, approved]
+  lineage_status:
+    allowed: [raw, derived, summarized, superseded, quarantined, unknown]
+  authority_scope:
+    allowed: [none, advisory, review, ratification, execution]
+  provenance_class:
+    allowed: [website_canon, github_receipt, notion_working, drive_file, chat_transcript, external_signal, unknown]
+  raw_export_status:
+    allowed: [full_raw, partial_raw, summary_only, unavailable, unknown]
+
+minimum_artifact_node_fields:
+  - artifact_id
+  - title
+  - path_or_url
+  - source_surface
+  - provenance_class
+  - canon_status
+  - deployment_status
+  - review_status
+  - lineage_status
+  - authority_scope
+  - raw_export_status
+  - created_or_observed_date
+  - strongest_safe_claim
+  - overclaims_to_avoid
+
+forbidden_interpretations:
+  - graph_edge_is_promotion
+  - cluster_is_canon
+  - central_node_is_authority
+  - github_is_canon
+  - model_memory_is_canon
+  - summary_replaces_raw_source
+
+priority_queries:
+  - "Show all artifacts with canon-like language but canon_status != ratified."
+  - "Show all Claude-originated governance claims not adversarially reviewed."
+  - "Show all IP concepts with no raw source pointer."
+  - "Show all claims supported only by model output."
+  - "Show duplicate or superseded D-Φ variants."

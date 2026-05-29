@@ -1,0 +1,94 @@
+artifact_id: EDGE_TYPES_v0_1
+status: candidate_schema
+canon_status: not_canon
+deployment_status: not_deployable
+authority_scope: none
+purpose: >
+  Define provenance-first graph edge types for Atlas Lattice artifact, claim,
+  review, and canon-surface mapping. Edges do not promote truth, canon, or authority.
+
+core_invariant: >
+  A graph edge is not a promotion. A cluster is not canon. A central node is not authority.
+
+edge_types:
+  CITES:
+    from: Artifact
+    to: Artifact | CanonPage | ExternalSource
+    meaning: Source artifact references another artifact or external source.
+    authority_effect: none
+
+  DERIVED_FROM:
+    from: ParsedView | Summary | Claim | Artifact
+    to: RawArtifact | SourceRecord
+    meaning: Downstream object is derived from an upstream source.
+    authority_effect: none
+    required_metadata:
+      - raw_export_status
+      - source_ref
+
+  SUPPORTS:
+    from: Artifact | Claim
+    to: Claim | Concept
+    meaning: Artifact or claim provides supporting evidence for another claim or concept.
+    authority_effect: none
+    caution: Support is not ratification.
+
+  CONTRADICTS:
+    from: Artifact | Claim
+    to: Claim | Concept
+    meaning: Artifact or claim creates tension or contradiction with another node.
+    authority_effect: none
+    review_effect: increases_review_priority
+
+  SUPERSEDES:
+    from: Artifact
+    to: Artifact
+    meaning: Newer artifact replaces older artifact for a specified scope.
+    authority_effect: none
+    required_metadata:
+      - supersession_scope
+      - reviewer_or_source
+
+  DUPLICATES:
+    from: Artifact
+    to: Artifact
+    meaning: Artifacts appear substantially overlapping or duplicate.
+    authority_effect: none
+    review_effect: dedupe_candidate
+
+  BELONGS_TO_SPHERE:
+    from: Artifact | Claim
+    to: Sphere144
+    meaning: Artifact or claim maps to a 144-sphere ontology coordinate.
+    authority_effect: none
+
+  HAS_STATUS:
+    from: Artifact | Claim
+    to: Status
+    meaning: Artifact or claim has declared artifact_status metadata.
+    authority_effect: none
+
+  NEEDS_REVIEW_BY:
+    from: Artifact | Claim
+    to: PersonOrSeat
+    meaning: Artifact or claim should be reviewed by a seat or reviewer lane.
+    authority_effect: none
+
+  CANONIZES:
+    from: HumanRootRatificationReceipt
+    to: CanonPage | CanonClaim
+    meaning: Explicit ratification receipt promotes candidate content into canon surface.
+    authority_effect: canon_promotion_possible
+    required_metadata:
+      - human_root_receipt
+      - ratification_timestamp
+      - target_canon_surface
+      - provenance_chain
+
+forbidden_edge_interpretations:
+  - retrieval_implies_canon
+  - citation_implies_truth
+  - centrality_implies_authority
+  - cluster_implies_canon
+  - model_output_implies_ratification
+  - github_visibility_implies_canon

@@ -1,0 +1,116 @@
+# PUBLIC_CANDIDATE_BUNDLE_0001
+# Status: candidate staging material
+# Canon: no
+# Deployment: no
+# Authority: none
+# Purpose: create the first public-safe inspection doorway before mass ingestion.
+
+bundle_id: PUBLIC_CANDIDATE_BUNDLE_0001
+status: candidate_staging
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+sprint: SPR-001_RECEIPT_SPINE
+created_from:
+  - user_sideline_packet: Pasted markdown(376).md
+  - prior_receipt_packet: archive/knowledge_graph/receipts/batch_003/
+mission: >
+  Establish a public candidate bundle that makes Atlas Lattice inspectable,
+  forkable, and receipt-driven without publishing unreviewed raw cargo or
+  treating graph structure as truth.
+
+required_boundary:
+  - graph_edge_is_not_promotion
+  - cluster_is_not_canon
+  - public_repo_is_not_proof
+  - model_output_is_not_authority
+  - public_visibility_requires_release_review
+  - human_root_has_final_authority
+
+files_planned:
+  - path: README.md
+    status: planned
+    purpose: public-safe bundle landing page
+    blocker: content_review
+  - path: LICENSE_STRATEGY_PENDING.md
+    status: planned
+    purpose: mark licensing unresolved before public reuse claims
+    blocker: license_review
+  - path: schemas/PublicReleaseStatus.yaml
+    status: planned
+    purpose: require public/private/sensitive/release status before mirroring
+    blocker: schema_review
+  - path: schemas/IPArtifact.yaml
+    status: planned
+    purpose: typed IP registry object for 500+ archive candidates
+    blocker: schema_review
+  - path: schemas/EvidenceLog.yaml
+    status: planned
+    purpose: typed evidence packet for AI-built/workflow claims
+    blocker: schema_review
+  - path: docs/GRAPH_IS_NOT_CANON_FAQ.md
+    status: planned
+    purpose: public explanation of review-pressure graph doctrine
+    blocker: wording_review
+  - path: docs/ARCHIVIST_TRUST_FAILURE_PROTOCOL.md
+    status: planned
+    purpose: handle Claude/model contamination without deletion
+    blocker: adversarial_review
+  - path: docs/SENSITIVE_TERM_RELEASE_GATE.md
+    status: planned
+    purpose: protect sensitive/private/high-risk terms before publication
+    blocker: public_safety_review
+  - path: examples/toy_graph_demo/README.md
+    status: planned
+    purpose: tiny demonstrator graph with no private cargo
+    blocker: demo_design
+  - path: issues/FIRST_12_PUBLIC_INSPECTION_ISSUES.md
+    status: planned
+    purpose: seed first 12 issue templates for representative artifacts
+    blocker: issue_review
+  - path: PR_CHECKLIST.md
+    status: planned
+    purpose: require receipts, status fields, and safety review before merge
+    blocker: review
+
+source_inputs:
+  - source_id: SRC-DRIVE-500IP-CHARTER-A
+    status: content_fetched_summary_export
+    receipt_path: archive/knowledge_graph/receipts/batch_003/exports/SRC-DRIVE-500IP-CHARTER-A.summary_export.md
+  - source_id: SRC-DRIVE-MISSION-EVIDENCE-PLAN
+    status: content_fetched_summary_export
+    receipt_path: archive/knowledge_graph/receipts/batch_003/exports/SRC-DRIVE-MISSION-EVIDENCE-PLAN.summary_export.md
+
+blockers:
+  - blocker_id: BUNDLE001-BLOCK-001
+    blocker: full_raw_exports_missing
+    applies_to: [SRC-DRIVE-500IP-CHARTER-A, SRC-DRIVE-MISSION-EVIDENCE-PLAN]
+    next_action: export full native docs and hash raw exports
+  - blocker_id: BUNDLE001-BLOCK-002
+    blocker: public_release_status_missing
+    applies_to: all_artifacts
+    next_action: classify each artifact before public mirror
+  - blocker_id: BUNDLE001-BLOCK-003
+    blocker: license_strategy_pending
+    applies_to: all_public_reuse
+    next_action: define license and rights status before release claims
+  - blocker_id: BUNDLE001-BLOCK-004
+    blocker: claude_contamination_risk
+    applies_to: model_originated_governance_artifacts
+    next_action: route to adversarial review before authority use
+
+review_lanes:
+  Hashlight: raw lineage / hashes / receipts
+  Lucerna: public-safe wording / provenance / omissions
+  TIDELOCK: GitHub path truth / commits / merge order
+  Rootglass: canon boundary / room state / overclaim pressure
+  Grok: adversarial review / Claude contamination / contradictions
+  GPTBrain: schema calibration / claim packet structure
+  HumanRoot: final authority only
+
+next_play:
+  - create LICENSE_STRATEGY_PENDING.md
+  - create PublicReleaseStatus schema
+  - create Graph-is-not-canon FAQ
+  - create PR checklist
+  - open GitHub review issue for Bundle 0001

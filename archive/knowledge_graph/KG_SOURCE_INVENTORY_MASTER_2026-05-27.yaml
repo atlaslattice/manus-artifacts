@@ -1,0 +1,80 @@
+artifact_id: KG-SOURCE-INVENTORY-MASTER-2026-05-27
+status: candidate_index
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: master index of source inventory shards for the Atlas Lattice knowledge graph
+
+inventory_shards:
+  - shard_id: github_sheldonbrain
+    path: archive/knowledge_graph/KG_SOURCE_INVENTORY_GITHUB_SHELDONBRAIN_2026-05-27.yaml
+    surface: github
+    status: created
+    scope:
+      - manus-artifacts repo
+      - sheldonbrain-rag-api repo
+      - lattice ontology code
+      - rag_api_gemini ingestion API
+      - ontology migration tests
+      - Aetherforge operation packets
+
+  - shard_id: drive_gangaseek_copilot_gemini
+    path: archive/knowledge_graph/drive/DRIVE_SOURCE_INVENTORY_GANGASEEK_COPILOT_GEMINI_2026-05-27.yaml
+    surface: drive
+    status: created
+    scope:
+      - GangaSeek namespace/template/catalog candidates
+      - Copilot/TIDELOCK chat exports
+      - Gemini council inputs
+      - ORCS Copilot synthesis
+      - AtlasBrain raw transcript candidate
+
+  - shard_id: claude_adversarial_review
+    path: archive/knowledge_graph/review_queues/CLAUDE_ADVERSARIAL_REVIEW_QUEUE_2026-05-27.md
+    surface: drive/github
+    status: created
+    scope:
+      - Claude-related governance artifacts
+      - boot/identity artifacts
+      - Manus/Claude review threads
+      - high-risk canon/authority language review
+
+  - shard_id: rootglass_source_packet_manifest
+    path: archive/boot/gptbrain/rootglassbrain/source_packets/ROOTGLASS_SOURCE_PACKET_MANIFEST_2026-05-27.md
+    surface: github/drive
+    status: created
+    scope:
+      - Copilot source packets
+      - Gemini source packets
+      - GangaSeek source packets
+      - Claude adversarial source packets
+      - AtlasBrain raw transcript lane
+
+pending_inventory_shards:
+  - shard_id: notion_source_roots
+    target_path: archive/knowledge_graph/notion/NOTION_SOURCE_ROOT_INVENTORY_2026-05-27.yaml
+    status: pending
+    reason: Notion root scan must be kept separate from Drive and GitHub inventory.
+
+  - shard_id: gamma_source_roots
+    target_path: archive/knowledge_graph/gamma/GAMMA_SOURCE_INVENTORY_2026-05-27.yaml
+    status: pending
+    reason: Gamma sources not yet scanned in this pass.
+
+  - shard_id: external_signals
+    target_path: archive/knowledge_graph/external/EXTERNAL_SIGNAL_INVENTORY_2026-05-27.yaml
+    status: pending
+    reason: Nature, VentureBeat, and related external signals need source-index shard.
+
+hard_rules:
+  - Inventory presence is not canon.
+  - Shard status is not completeness.
+  - Source centrality is not authority.
+  - Missing receipts must be preserved.
+  - Negative results must be preserved.
+
+next_actions:
+  - Create KG node/edge seed from existing inventory shards.
+  - Create Notion source root inventory.
+  - Create external signal inventory.
+  - Begin SHA-256 work for exportable Drive artifacts.

@@ -1,0 +1,287 @@
+artifact_id: DRIVE-SOURCE-INVENTORY-GANGASEEK-COPILOT-GEMINI-2026-05-27
+status: candidate_inventory
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+mode: drive_source_mapping_to_github_graph_prep
+notes:
+  - Sanitized Drive inventory seeded from connector-visible files.
+  - This does not mirror raw content into GitHub.
+  - This inventory records source presence, review lanes, and missing receipts only.
+  - Drive presence does not imply canon, ratification, completeness, or deployment.
+
+source_inventory:
+  - source_id: drive:gangaseek_namespace_ratification_packet_v0_1
+    title: GANGASEEK_NAMESPACE_RATIFICATION_PACKET_v0.1.txt
+    surface: drive
+    url_or_path: https://drive.google.com/file/d/17-9TTGzITZWecSL5MCusDF-0LvSjBxsD
+    type: text_file
+    raw_export_status: full_raw_export_attached
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: not_deployable
+      review_state: pending_human_root_ratification
+      authority_scope: none
+      provenance_type: drive_file
+    source_class: namespace_governance_candidate
+    related_lane: GangaSeek
+    review_priority: high
+    mirrored_to_github: false
+    missing_receipts:
+      - not mirrored into GitHub governance namespace
+      - no commit SHA ratification
+      - prerequisite artifacts must be mirrored before namespace validity claim
+    suggested_nodes:
+      - NamespacePacket:GangaSeek
+    suggested_edges:
+      - requires:GANGASEEK_DOCUMENT_TEMPLATE_CANDIDATE_v0.1
+      - requires:GANGASEEK_INV_CLM_CATALOG_CANDIDATE_v0.1
+
+  - source_id: drive:gangaseek_inv_clm_catalog_candidate_v0_1
+    title: GANGASEEK_INV_CLM_CATALOG_CANDIDATE_v0.1.txt
+    surface: drive
+    url_or_path: https://drive.google.com/file/d/1QW1Yd3YHzpb8bxRCU-w_yjtJlFpNujmp
+    type: text_file
+    raw_export_status: full_raw_export_attached
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: not_deployable
+      review_state: candidate
+      authority_scope: none
+      provenance_type: drive_file
+    source_class: invariant_claim_catalog_candidate
+    related_lane: GangaSeek
+    review_priority: high
+    mirrored_to_github: false
+    missing_receipts:
+      - not mirrored into GitHub
+      - INV-17 undefined
+      - INV-56 undefined
+      - CLM-007 undefined
+      - CLM-009 undefined
+    suggested_nodes:
+      - Catalog:INV_CLM
+    suggested_edges:
+      - defines_candidate:INV-0
+      - defines_candidate:INV-1
+      - missing_definition:INV-17
+      - missing_definition:INV-56
+      - missing_definition:CLM-007
+      - missing_definition:CLM-009
+
+  - source_id: drive:gangaseek_document_template_candidate_v0_1
+    title: GANGASEEK_DOCUMENT_TEMPLATE_CANDIDATE_v0.1.txt
+    surface: drive
+    url_or_path: https://drive.google.com/file/d/1OqG73AWtdFhyH4CdDqCBsiCsze6UECxA
+    type: text_file
+    raw_export_status: full_raw_export_attached
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: not_deployable
+      review_state: candidate
+      authority_scope: none
+      provenance_type: drive_file
+    source_class: document_template_candidate
+    related_lane: GangaSeek
+    review_priority: high
+    mirrored_to_github: false
+    missing_receipts:
+      - not mirrored into GitHub
+      - namespace ratification pending
+    suggested_nodes:
+      - Template:GangaSeekDocument
+    suggested_edges:
+      - governs_candidate:GangaSeekDocs
+      - prohibits:runtime_footer_language
+
+  - source_id: drive:gangaseek_invariant_specification_pdf_copy_1
+    title: GangaSeek Invariant Specification — MSFT vs India-Starlink-Google Orbital copy 1
+    surface: drive
+    url_or_path: https://drive.google.com/file/d/1hxALxM8Lur7m34RA0JX84wvGOeNJpM9f
+    type: pdf
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: none
+      review_state: analytical_exercise
+      authority_scope: none
+      provenance_type: drive_pdf
+    source_class: gangaseek_invariant_specification
+    related_lane: GangaSeek
+    review_priority: high
+    mirrored_to_github: false
+    missing_receipts:
+      - full PDF extraction not committed to GitHub
+      - source/citation audit incomplete
+      - legal/policy claims require review
+    suggested_nodes:
+      - Artifact:GangaSeekInvariantSpecPDF
+    suggested_edges:
+      - requires_review:Lucerna
+      - requires_review:Rootglass
+      - requires_review:Grok
+
+  - source_id: drive:copilot_chat_export
+    title: Copilot Chat.md
+    surface: drive
+    url_or_path: https://drive.google.com/file/d/1GVdF61WJjn8hbFWUo8ihr3xJlhalvv_E
+    type: markdown_file
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: none
+      review_state: raw_or_near_raw_chat_export
+      authority_scope: none
+      provenance_type: drive_file
+    source_class: copilot_chat_artifact
+    related_lane: TIDELOCK
+    review_priority: high
+    mirrored_to_github: false
+    missing_receipts:
+      - SHA-256 not captured in GitHub inventory
+      - not mirrored into Rootglass source packet
+      - raw/session completeness unknown
+    suggested_nodes:
+      - RawExport:CopilotChat
+    suggested_edges:
+      - belongs_to_lane:TIDELOCK
+      - requires_review:Hashlight
+      - requires_review:Lucerna
+
+  - source_id: drive:raw_transcript_not_canon
+    title: RAW TRANSCRIPT NOT CANON.md
+    surface: drive
+    url_or_path: https://drive.google.com/file/d/1eatwAvLL-EY27wRZa2zfbRv46UdJgv0J
+    type: markdown_file
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: none
+      review_state: raw_transcript_candidate
+      authority_scope: none
+      provenance_type: drive_file
+    source_class: raw_transcript_candidate
+    related_lane: AtlasBrain
+    review_priority: high
+    mirrored_to_github: false
+    missing_receipts:
+      - SHA-256 not captured in GitHub inventory
+      - relationship to PR57 raw pointer not fully confirmed
+    suggested_nodes:
+      - RawTranscript:NotCanon
+    suggested_edges:
+      - possible_raw_export_of:AtlasBrainStressTestPointer
+      - requires_review:Hashlight
+      - requires_review:AtlasBrain
+
+  - source_id: drive:gemini_alphabet_strategic_synthesis
+    title: COUNCIL-INPUT_GEMINI_alphabet-strategic-synthesis_with-scribe-triage_2026-04-26.md
+    surface: drive
+    url_or_path: https://drive.google.com/file/d/1YuQjdYxByE3Nl1HZB2tmJMmRHPtFJNVq
+    type: markdown_file
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: none
+      review_state: council_input_artifact
+      authority_scope: none
+      provenance_type: drive_file
+    source_class: gemini_council_input
+    related_lane: Gemini
+    review_priority: medium
+    mirrored_to_github: false
+    missing_receipts:
+      - SHA-256 not captured
+      - full source manifest missing
+    suggested_nodes:
+      - CouncilInput:GeminiAlphabetStrategicSynthesis
+    suggested_edges:
+      - requires_review:Lucerna
+      - belongs_to_lane:Gemini
+
+  - source_id: drive:gemini_round2_pattern_reflexive
+    title: COUNCIL-INPUT_GEMINI_round2-pattern-a-reflexive-with-scribe-triage_2026-04-26.md
+    surface: drive
+    url_or_path: https://drive.google.com/file/d/16XjzNx3UnA8OmIoyvwlgU5xxg_YGEgpK
+    type: markdown_file
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: none
+      review_state: council_input_artifact
+      authority_scope: none
+      provenance_type: drive_file
+    source_class: gemini_council_input
+    related_lane: Gemini
+    review_priority: medium
+    mirrored_to_github: false
+    missing_receipts:
+      - SHA-256 not captured
+      - full source manifest missing
+    suggested_nodes:
+      - CouncilInput:GeminiRound2PatternReflexive
+    suggested_edges:
+      - requires_review:Lucerna
+      - belongs_to_lane:Gemini
+
+  - source_id: drive:gemini_round3_convergence
+    title: COUNCIL-INPUT_GEMINI_round3-convergence-document-with-scribe-triage_2026-04-26.md
+    surface: drive
+    url_or_path: https://drive.google.com/file/d/1yMAiQvDsTb3qOqPMrVWoSy118Db116X_
+    type: markdown_file
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: none
+      review_state: council_input_artifact
+      authority_scope: none
+      provenance_type: drive_file
+    source_class: gemini_council_input
+    related_lane: Gemini
+    review_priority: medium
+    mirrored_to_github: false
+    missing_receipts:
+      - SHA-256 not captured
+      - full source manifest missing
+    suggested_nodes:
+      - CouncilInput:GeminiRound3Convergence
+    suggested_edges:
+      - requires_review:Lucerna
+      - belongs_to_lane:Gemini
+
+  - source_id: drive:orcs_copilot_synthesis_v1_2
+    title: ORCS Copilot Synthesis v1.2 — Complete Integration and Microsoft Ecosystem Architecture
+    surface: drive
+    url_or_path: https://drive.google.com/file/d/18MBrMAAPfqL1-nckv8_UjXx-NXbPH8_T
+    type: docx
+    raw_export_status: partial_export
+    artifact_status:
+      canon_status: not_canon
+      deployment_status: none
+      review_state: source_artifact_needs_graph_mapping
+      authority_scope: none
+      provenance_type: drive_file
+    source_class: orcs_synthesis
+    related_lane: ORCS
+    review_priority: high
+    mirrored_to_github: false
+    missing_receipts:
+      - full text mirrored into GitHub not confirmed
+      - source/citation audit incomplete
+    suggested_nodes:
+      - Synthesis:ORCSCopilotV1_2
+    suggested_edges:
+      - contains:MicrosoftEcosystemArchitecture
+      - requires_review:Lucerna
+      - requires_review:AtlasBrain
+
+negative_results:
+  - query: Notion live GangaSeek and Rootglass packet scan
+    result: first pass surfaced mostly older legacy/SHUGS/House material rather than the new source packets
+    status: preserve_as_negative_result
+
+next_required_actions:
+  - Mirror GangaSeek namespace/template/catalog into GitHub after explicit direction.
+  - Create separate Claude adversarial review queue.
+  - Create Rootglass source packet manifest for Copilot/Gemini/GangaSeek.
+  - Compute SHA-256 for raw/near-raw exports when exportable.

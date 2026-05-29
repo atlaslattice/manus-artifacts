@@ -1,0 +1,38 @@
+{
+  "schema_id": "crosswalk_index.v0.1",
+  "status": "CANDIDATE",
+  "canon_status": "RATIFIED_CANON",
+  "deployment_status": "NON_DEPLOYABLE",
+  "authority_status": "FORMALIZATION_ONLY",
+  "crosswalk_id": "CW-INVALID_RATIFIED_PENDING_SIGNATURE",
+  "source_ref": {
+    "kind": "repo_file",
+    "path": "archive/boot/orcs/APPENDIX_I_ATLAS_ORCS_EPISTEMIC_PROFILE_v0.3.md",
+    "commit_sha": "ee843d27a6125712dd3fe893b5dfcecd3d538f94",
+    "raw_export_status": "RAW_NOT_EXPORTED"
+  },
+  "promotion_target": {
+    "q": "atlas_profile",
+    "description": "Invalid fixture: ratified canon claimed without completed human-root signature"
+  },
+  "evidence_set": {
+    "notation": "E_t^{q,*}",
+    "subset_of": "E(S_t)",
+    "items": [
+      {
+        "evidence_id": "INVALID_RATIFIED_PENDING_SIGNATURE",
+        "score": 0.91,
+        "threshold": 0.75,
+        "eligible": true
+      }
+    ]
+  },
+  "human_root_review_required": true,
+  "human_root_signature": {
+    "status": "PENDING",
+    "signed_by": null,
+    "signed_at": null
+  },
+  "canon_promotion_receipt": null,
+  "notes": "This fixture must fail because RATIFIED_CANON requires completed human-root signature and promotion receipt."
+}

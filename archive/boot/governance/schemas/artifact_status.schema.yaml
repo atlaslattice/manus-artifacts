@@ -1,0 +1,278 @@
+# artifact_status.schema.yaml
+
+schema_id: ARTIFACT_STATUS_SCHEMA
+status: SCHEMA_DRAFT_NOT_CANON
+issue: manus-artifacts#84
+version: 0.3.0
+purpose: >
+  Define the interpretation layer that determines what an artifact is allowed
+  to mean before compatibility predicates, invariants, and D-Φ-1 enforcement
+  evaluate what it may become or do.
+
+core_doctrine:
+  - Metadata determines what something is allowed to mean.
+  - Predicates determine what it is allowed to become.
+  - Invariants determine what can never be violated.
+
+first_class_invariant:
+  name: ARTIFACT_AUTHORITY_ESCALATION
+  statement: >
+    No artifact may increase its effective authority_scope without explicit
+    transformation, valid provenance chain, compatibility approval, and
+    ratification if required.
+
+required_fields:
+  - artifact_id
+  - artifact_status
+  - provenance
+  - transition_policy
+  - created_at
+  - updated_at
+
+fields:
+  artifact_id:
+    type: string
+    example: ART-2026-0519-0001
+
+  artifact_status:
+    type: object
+    required:
+      - canon_status
+      - deployment_status
+      - review_state
+      - lineage_condition
+      - authority_scope
+      - provenance_type
+    fields:
+      canon_status:
+        type: enum
+        values:
+          - candidate
+          - provisional
+          - canonical
+          - deprecated
+          - rejected
+          - superseded
+        meaning: Is this truth-status-bearing canon, candidate, or retired?
+
+      deployment_status:
+        type: enum
+        values:
+          - inert
+          - simulated
+          - staged
+          - live
+          - retired
+        meaning: Is this live or merely stored/simulated/staged?
+
+      review_state:
+        type: enum
+        values:
+          - unreviewed
+          - reviewed
+          - ratified
+          - rejected
+          - quarantined
+        meaning: Has this been examined and by whom/what process?
+
+      lineage_condition:
+        type: enum
+        values:
+          - intact
+          - partial
+          - degraded
+          - unknown
+          - disputed
+        meaning: Is the artifact's source/provenance chain reliable?
+
+      authority_scope:
+        type: enum
+        values:
+          - none
+          - advisory
+          - review
+          - ratification
+          - execution
+        meaning: What, if anything, may this artifact authorize?
+
+      provenance_type:
+        type: enum
+        values:
+          - generated
+          - imported
+          - retrieved
+          - derived
+          - mirrored
+          - human_root_declared
+          - external_source
+        meaning: Where did this artifact come from?
+
+  provenance:
+    type: object
+    required:
+      - source_refs
+      - created_by
+    fields:
+      source_refs:
+        type: array
+        items: string
+      created_by:
+        type: string
+      source_hash:
+        type: string
+        nullable: true
+      commit_sha:
+        type: string
+        nullable: true
+      capture_method:
+        type: enum
+        values:
+          - manual
+          - connector
+          - api
+          - import
+          - generated_from_prompt
+          - parser_output
+          - unknown
+      privacy_class:
+        type: enum
+        values:
+          - public
+          - project_visible
+          - private
+          - sealed_sensitive
+          - unknown
+
+  transition_policy:
+    type: object
+    required:
+      - undefined_transitions_execute
+      - authority_escalation_requires
+    fields:
+      undefined_transitions_execute:
+        type: boolean
+        default: false
+        invariant: Undefined transitions do not execute.
+      authority_escalation_requires:
+        type: array
+        items:
+          type: enum
+          values:
+            - explicit_transformation
+            - valid_provenance_chain
+            - compatibility_approval
+            - ratification_if_required
+            - human_root_approval_if_execution_or_canon
+        default:
+          - explicit_transformation
+          - valid_provenance_chain
+          - compatibility_approval
+          - ratification_if_required
+
+  allowed_transitions:
+    type: array
+    items:
+      type: object
+      required:
+        - from
+        - to
+        - requires
+      fields:
+        from:
+          type: object
+        to:
+          type: object
+        requires:
+          type: array
+          items: string
+        notes:
+          type: string
+          nullable: true
+
+  d_phi_1_binding:
+    type: object
+    fields:
+      pre_execution_required_checks:
+        type: array
+        items: string
+        default:
+          - interpret_artifact_status
+          - evaluate_compatibility_predicates
+          - enforce_invariants
+          - validate_authority_scope
+          - block_if_undecidable
+      execution_allowed_when:
+        type: array
+        items: string
+        default:
+          - deployment_status_is_live_or_staged
+          - authority_scope_is_execution
+          - review_state_is_ratified
+          - lineage_condition_is_intact
+          - human_root_approval_present
+
+  created_at:
+    type: datetime
+  updated_at:
+    type: datetime
+
+anti_collapse_rules:
+  visibility_is_not_authority: true
+  retrieval_is_not_canon: true
+  narrative_is_not_policy: true
+  experiment_is_not_deployment: true
+  storage_is_not_ratification: true
+  review_is_not_ratification: true
+
+validation_rules:
+  - name: canonical_requires_ratified_review
+    if:
+      artifact_status.canon_status: canonical
+    then:
+      artifact_status.review_state: ratified
+
+  - name: live_requires_execution_authority
+    if:
+      artifact_status.deployment_status: live
+    then:
+      artifact_status.authority_scope: execution
+
+  - name: execution_requires_intact_lineage
+    if:
+      artifact_status.authority_scope: execution
+    then:
+      artifact_status.lineage_condition: intact
+
+  - name: degraded_lineage_blocks_promotion
+    if:
+      artifact_status.lineage_condition:
+        in: [degraded, unknown, disputed]
+    then:
+      max_authority_scope: advisory
+      max_deployment_status: simulated
+
+  - name: unreviewed_blocks_authority
+    if:
+      artifact_status.review_state: unreviewed
+    then:
+      max_authority_scope: advisory
+      max_canon_status: candidate
+
+  - name: private_or_sealed_blocks_public_export
+    if:
+      provenance.privacy_class:
+        in: [private, sealed_sensitive]
+    then:
+      public_export_allowed: false
+
+operational_doctrine:
+  - Preserve generously.
+  - Promote conservatively.
+  - Execute only through gates.
+  - Default to block when undecidable.
+  - Artifacts must declare their authority before acting.
+
+madden_translation: >
+  This schema does not merely label players. It defines who is on the field,
+  who is on the sideline, who can call plays, who can review plays, and who
+  is not allowed to touch the ball.

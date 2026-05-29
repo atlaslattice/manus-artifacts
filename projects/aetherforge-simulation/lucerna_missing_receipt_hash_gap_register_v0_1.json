@@ -1,0 +1,109 @@
+{
+  "schema_version": "lucerna.missing_receipt_hash_gap_register.v0_1",
+  "artifact_id": "LUCERNA_MISSING_RECEIPT_HASH_GAP_REGISTER__AETHERFORGE_SHELDONBRAIN_KG__NON_CANON__2026-05-28",
+  "source_url": "https://docs.google.com/spreadsheets/d/1vk9x0iVuczXzqBSYyQzKOOPv6TWUi1hi5IJtAxiP32M",
+  "status": "candidate_gap_register_not_canon",
+  "boundary": {
+    "canon": false,
+    "deployment": false,
+    "authority": "none",
+    "purpose": "track missing receipts, missing hashes, partial exports, source-completeness gaps, and GitHub mirror gaps as first-class graph nodes"
+  },
+  "tabs": [
+    "Overview",
+    "MissingReceipt_Nodes",
+    "Hash_Gaps",
+    "Export_Gaps",
+    "Next_Actions"
+  ],
+  "missing_receipt_nodes": [
+    {
+      "id": "MR-DRIVE-001",
+      "surface": "Drive",
+      "gap_type": "missing_full_export_hash",
+      "title": "Drive KG source inventory full export/hash missing",
+      "status": "open",
+      "blocks": ["KG_SOURCE_UNIVERSE_INDEX", "source_completeness_verification"]
+    },
+    {
+      "id": "MR-DRIVE-002",
+      "surface": "Drive",
+      "gap_type": "missing_control_board_export_hash",
+      "title": "Aetherforge control board export/hash missing",
+      "status": "open",
+      "blocks": ["aetherforge_control_board_receipt", "control_plane_mirror"]
+    },
+    {
+      "id": "MR-DRIVE-003",
+      "surface": "Drive",
+      "gap_type": "missing_jsonl_export",
+      "title": "v0.4 machine index JSONL export missing",
+      "status": "open",
+      "blocks": ["machine_index_backfill", "jsonl_ingestion"]
+    },
+    {
+      "id": "MR-DRIVE-004",
+      "surface": "Drive",
+      "gap_type": "missing_github_mirror",
+      "title": "ontology v0.5 GitHub mirror missing",
+      "status": "open",
+      "blocks": ["ontology_v0_5_receipt_mirror", "github_source_parity"]
+    },
+    {
+      "id": "MR-GITHUB-001",
+      "surface": "GitHub",
+      "gap_type": "mergeability_review_needed",
+      "title": "PR #190 mergeability review needed",
+      "status": "open",
+      "blocks": ["pr_190_merge_path", "repo_hardening_status"]
+    },
+    {
+      "id": "MR-NOTION-001",
+      "surface": "Notion",
+      "gap_type": "child_pages_not_fetched",
+      "title": "Notion Master Index child pages not fetched",
+      "status": "open",
+      "blocks": ["notion_master_index_inventory", "legacy_archive_crosswalk"]
+    },
+    {
+      "id": "MR-NOTION-002",
+      "surface": "Notion",
+      "gap_type": "artifact_rows_unverified",
+      "title": "SheldonBrain 12x12 artifact rows unverified",
+      "status": "open",
+      "blocks": ["sheldonbrain_artifact_row_confidence", "task_38_metadata_backfill"]
+    }
+  ],
+  "human_root_blockers": [
+    {
+      "id": "EXP-001",
+      "title": "6 Notion database exports needed",
+      "surface": "Notion",
+      "status": "blocked_on_human_root_export"
+    },
+    {
+      "id": "EXP-002",
+      "title": "6 Drive folder exports needed",
+      "surface": "Drive",
+      "status": "blocked_on_human_root_export"
+    },
+    {
+      "id": "EXP-003",
+      "title": "repo visibility confirmation needed",
+      "surface": "GitHub",
+      "status": "blocked_on_human_root_confirmation"
+    },
+    {
+      "id": "EXP-004",
+      "title": "P0 canon-candidate set needed before Task 38 metadata backfill",
+      "surface": "Human-Root",
+      "status": "blocked_on_human_root_selection"
+    }
+  ],
+  "graph_rules": {
+    "missing_receipt": "node",
+    "partial_export": "status",
+    "not_found": "result",
+    "blocker_relation": "blocked_by"
+  }
+}

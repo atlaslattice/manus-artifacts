@@ -1,0 +1,207 @@
+artifact_id: KG-NODE-EDGE-SEED-AETHERFORGE-2026-05-27
+status: candidate_seed
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: first graph node and edge proposal seed generated from Aetherforge source inventories
+
+nodes:
+  - node_id: SourceRoot:manus-artifacts
+    node_type: SourceRoot
+    label: atlaslattice/manus-artifacts
+    source_surface: github
+    status: source_root
+
+  - node_id: SourceRoot:sheldonbrain-rag-api
+    node_type: SourceRoot
+    label: atlaslattice/sheldonbrain-rag-api
+    source_surface: github
+    status: source_root
+
+  - node_id: OntologySource:lattice_ontology_v2
+    node_type: SchemaArtifact
+    label: Lattice Ontology v2.0 12x12+1
+    source_surface: github
+    status: source_locked_code_artifact
+
+  - node_id: IngestionAPI:rag_api_gemini
+    node_type: SourceArtifact
+    label: RAG API with Gemini embeddings, lattice-aware v2.1
+    source_surface: github
+    status: inspected_code_artifact
+
+  - node_id: TestSurface:ontology_migration
+    node_type: SourceArtifact
+    label: Phase 1.1 ontology migration tests
+    source_surface: github
+    status: inspected_test_artifact
+
+  - node_id: Operation:AetherforgeSync
+    node_type: SourceArtifact
+    label: Aetherforge Sheldonbrain graph ingestion sync
+    source_surface: github
+    status: candidate_operation
+
+  - node_id: Operation:Aetherforge1000YearDream
+    node_type: SourceArtifact
+    label: Aetherforge 1000-year lattice dream task generation
+    source_surface: github
+    status: candidate_operation
+
+  - node_id: NamespacePacket:GangaSeek
+    node_type: SourceArtifact
+    label: GangaSeek namespace ratification packet
+    source_surface: drive
+    status: pending_human_root_ratification
+
+  - node_id: Catalog:GangaSeek_INV_CLM
+    node_type: SchemaArtifact
+    label: GangaSeek invariant and claim catalog candidate
+    source_surface: drive
+    status: candidate_not_ratified
+
+  - node_id: Template:GangaSeekDocument
+    node_type: SchemaArtifact
+    label: GangaSeek document template candidate
+    source_surface: drive
+    status: candidate_not_ratified
+
+  - node_id: RawExport:CopilotChat
+    node_type: RawExport
+    label: Copilot Chat markdown export
+    source_surface: drive
+    status: partial_export
+
+  - node_id: RawTranscript:NotCanon
+    node_type: RawExport
+    label: Raw transcript not canon
+    source_surface: drive
+    status: partial_export
+
+  - node_id: ReviewQueue:ClaudeAdversarial
+    node_type: ReviewQueue
+    label: Claude adversarial review queue
+    source_surface: github
+    status: seeded
+
+  - node_id: ReviewQueue:SuspectClaudeSaffron
+    node_type: ReviewQueue
+    label: Suspect Claude Saffron governance artifact review
+    source_surface: drive
+    status: high_risk_review
+
+  - node_id: Invariant:memory_ne_permission
+    node_type: Claim
+    label: memory != permission
+    source_surface: github
+    status: governance_invariant_candidate
+
+  - node_id: MissingReceipt:DriveSHA256
+    node_type: MissingReceipt
+    label: Drive raw and near-raw exports need SHA-256 receipts
+    source_surface: drive
+    status: missing_receipt
+
+edges:
+  - edge_id: edge-001
+    from: SourceRoot:sheldonbrain-rag-api
+    to: OntologySource:lattice_ontology_v2
+    edge_type: contains
+    status: candidate_edge
+
+  - edge_id: edge-002
+    from: SourceRoot:sheldonbrain-rag-api
+    to: IngestionAPI:rag_api_gemini
+    edge_type: contains
+    status: candidate_edge
+
+  - edge_id: edge-003
+    from: IngestionAPI:rag_api_gemini
+    to: OntologySource:lattice_ontology_v2
+    edge_type: imports
+    status: candidate_edge
+
+  - edge_id: edge-004
+    from: TestSurface:ontology_migration
+    to: OntologySource:lattice_ontology_v2
+    edge_type: validates
+    status: candidate_edge
+
+  - edge_id: edge-005
+    from: TestSurface:ontology_migration
+    to: IngestionAPI:rag_api_gemini
+    edge_type: validates
+    status: candidate_edge
+
+  - edge_id: edge-006
+    from: IngestionAPI:rag_api_gemini
+    to: Invariant:memory_ne_permission
+    edge_type: asserts
+    status: candidate_edge
+
+  - edge_id: edge-007
+    from: Operation:AetherforgeSync
+    to: SourceRoot:sheldonbrain-rag-api
+    edge_type: requires_review
+    status: candidate_edge
+
+  - edge_id: edge-008
+    from: Operation:Aetherforge1000YearDream
+    to: Operation:AetherforgeSync
+    edge_type: patches
+    status: candidate_edge
+
+  - edge_id: edge-009
+    from: NamespacePacket:GangaSeek
+    to: Template:GangaSeekDocument
+    edge_type: requires
+    status: candidate_edge
+
+  - edge_id: edge-010
+    from: NamespacePacket:GangaSeek
+    to: Catalog:GangaSeek_INV_CLM
+    edge_type: requires
+    status: candidate_edge
+
+  - edge_id: edge-011
+    from: Catalog:GangaSeek_INV_CLM
+    to: MissingReceipt:DriveSHA256
+    edge_type: missing_receipt
+    status: candidate_edge
+
+  - edge_id: edge-012
+    from: RawExport:CopilotChat
+    to: MissingReceipt:DriveSHA256
+    edge_type: missing_receipt
+    status: candidate_edge
+
+  - edge_id: edge-013
+    from: RawTranscript:NotCanon
+    to: MissingReceipt:DriveSHA256
+    edge_type: missing_receipt
+    status: candidate_edge
+
+  - edge_id: edge-014
+    from: ReviewQueue:SuspectClaudeSaffron
+    to: ReviewQueue:ClaudeAdversarial
+    edge_type: belongs_to_lane
+    status: candidate_edge
+
+  - edge_id: edge-015
+    from: ReviewQueue:SuspectClaudeSaffron
+    to: MissingReceipt:DriveSHA256
+    edge_type: missing_receipt
+    status: candidate_edge
+
+hard_rules:
+  - These nodes and edges are proposals only.
+  - A graph edge is not a promotion.
+  - A central node is not authority.
+  - Graph density is not truth.
+  - All review queues remain non-canon.
+
+next_actions:
+  - Validate node and edge IDs against schema.
+  - Add Notion source roots.
+  - Add external signal nodes.
+  - Add SHA-256 receipts for exportable Drive artifacts.

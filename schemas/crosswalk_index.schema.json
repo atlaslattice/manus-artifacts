@@ -1,0 +1,166 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atlaslattice.local/schemas/crosswalk_index.schema.json",
+  "title": "Atlas / ORCS Crosswalk Index",
+  "description": "Candidate schema for mapping source artifacts into Atlas/ORCS evidence, claim, and promotion-target lanes. CANDIDATE ONLY — NOT CANON — NON-DEPLOYABLE.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_id",
+    "status",
+    "canon_status",
+    "deployment_status",
+    "authority_status",
+    "crosswalk_id",
+    "source_ref",
+    "promotion_target",
+    "evidence_set",
+    "human_root_review_required"
+  ],
+  "properties": {
+    "schema_id": {
+      "const": "crosswalk_index.v0.1"
+    },
+    "status": {
+      "enum": ["CANDIDATE", "DRAFT", "REVIEWED", "DEPRECATED"]
+    },
+    "canon_status": {
+      "enum": ["NOT_CANON", "CANDIDATE", "RATIFIED_CANON"]
+    },
+    "deployment_status": {
+      "enum": ["NO_DEPLOYMENT", "NON_DEPLOYABLE", "DEPLOYMENT_CANDIDATE"]
+    },
+    "authority_status": {
+      "enum": ["NONE", "FORMALIZATION_ONLY", "HUMAN_ROOT_REQUIRED"]
+    },
+    "crosswalk_id": {
+      "type": "string",
+      "pattern": "^CW-[A-Z0-9][A-Z0-9_-]*$"
+    },
+    "source_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "path", "raw_export_status"],
+      "properties": {
+        "kind": {
+          "enum": ["repo_file", "notion_page", "raw_thread", "white_paper", "transcript", "manual_note"]
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "commit_sha": {
+          "type": ["string", "null"]
+        },
+        "raw_export_status": {
+          "enum": ["RAW_EXPORTED", "RAW_NOT_EXPORTED", "RAW_PARTIAL", "RAW_UNAVAILABLE", "UNKNOWN"]
+        }
+      }
+    },
+    "promotion_target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["q", "description"],
+      "properties": {
+        "q": {
+          "enum": ["claim", "artifact", "canon_candidate", "orcs_standard", "atlas_profile", "quarantine", "review_queue"]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "evidence_set": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["notation", "subset_of", "items"],
+      "properties": {
+        "notation": {
+          "const": "E_t^{q,*}"
+        },
+        "subset_of": {
+          "const": "E(S_t)"
+        },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["evidence_id", "score", "threshold", "eligible"],
+            "properties": {
+              "evidence_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "score": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "threshold": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
+              "eligible": {
+                "type": "boolean"
+              }
+            }
+          }
+        }
+      }
+    },
+    "human_root_review_required": {
+      "const": true
+    },
+    "human_root_signature": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "enum": ["PENDING", "COMPLETE", "NOT_REQUESTED"]
+        },
+        "signed_by": {
+          "type": ["string", "null"]
+        },
+        "signed_at": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        }
+      }
+    },
+    "canon_promotion_receipt": {
+      "type": ["object", "null"]
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "canon_status": {
+            "const": "RATIFIED_CANON"
+          }
+        },
+        "required": ["canon_status"]
+      },
+      "then": {
+        "required": ["human_root_signature", "canon_promotion_receipt"],
+        "properties": {
+          "human_root_signature": {
+            "required": ["status", "signed_by", "signed_at"],
+            "properties": {
+              "status": {
+                "const": "COMPLETE"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
