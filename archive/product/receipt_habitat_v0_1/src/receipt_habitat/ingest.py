@@ -13,8 +13,10 @@ from typing import Any
 
 try:
     from .packet import apply_v0_defaults, validate_ingestion_packet
+    from .serialize import to_simple_yaml, to_stable_json, write_packet
 except ImportError:  # pragma: no cover - allows direct script use
     from packet import apply_v0_defaults, validate_ingestion_packet
+    from serialize import to_simple_yaml, to_stable_json, write_packet
 
 
 def sha256_text(text: str) -> str:
@@ -73,6 +75,8 @@ def main() -> int:
     parser.add_argument("--timezone", default="America/Chicago")
     parser.add_argument("--seat-name", default="unassigned")
     parser.add_argument("--model-surface", default="unknown")
+    parser.add_argument("--format", choices=["json", "yaml"], default="json")
+    parser.add_argument("--output", help="Optional output path for the generated packet")
     args = parser.parse_args()
 
     packet = build_ingestion_packet(
@@ -88,8 +92,15 @@ def main() -> int:
             print(f"ERROR: {error}")
         return 2
 
-    for key, value in packet.items():
-        print(f"{key}: {value}")
+    if args.output:
+        write_packet(packet, args.output, fmt=args.format)
+        print(f"wrote packet: {args.output}")
+        return 0
+
+    if args.format == "yaml":
+        print(to_simple_yaml(packet), end="")
+    else:
+        print(to_stable_json(packet), end="")
     return 0
 
 
