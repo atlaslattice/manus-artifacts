@@ -1,7 +1,11 @@
-# Manus Artifacts
+# Atlas Lattice · manus-artifacts
 
-> *"The intent is to make all of my work public and open source and world class."*
+> *"The intent is to make all of my work public and open source and world class."*  
 > — David Sheldon (@atlaslattice)
+
+<p align="center">
+  <img src="./docs/assets/metatron-hsn.svg" alt="Metatron's Cube — H-S-N Lattice" width="320"/>
+</p>
 
 **manus-artifacts** is the durable public archive of David Sheldon's research,
 AI operating systems, governance frameworks, and Aetherforge council work.
@@ -9,6 +13,32 @@ Everything is open-source under the [MIT License](./LICENSE).
 
 [![Repo Hygiene](https://github.com/atlaslattice/manus-artifacts/actions/workflows/repo-hygiene-checks.yml/badge.svg)](https://github.com/atlaslattice/manus-artifacts/actions/workflows/repo-hygiene-checks.yml)
 [![Docs Links](https://github.com/atlaslattice/manus-artifacts/actions/workflows/docs-link-checks.yml/badge.svg)](https://github.com/atlaslattice/manus-artifacts/actions/workflows/docs-link-checks.yml)
+[![Docs](https://github.com/atlaslattice/manus-artifacts/actions/workflows/docs.yml/badge.svg)](https://atlaslattice.github.io/manus-artifacts/)
+
+## ⚡ 30-second start
+
+```bash
+pip install atlas-lattice
+```
+
+```python
+from atlas_lattice import Coordinate
+
+coord = Coordinate.parse("H04-S09-N02")
+print(coord)          # H04-S09-N02 — Information Architecture · Knowledge Graph · Artifact Node
+print(coord.address)  # H04-S09-N02
+print(coord.house)    # 4
+```
+
+Or use the CLI:
+
+```bash
+python -m atlas_lattice lookup H04-S09-N02
+python -m atlas_lattice axes
+python -m atlas_lattice explorer          # opens graph-explorer.html
+```
+
+📖 **[Read the docs →](https://atlaslattice.github.io/manus-artifacts/)**
 
 ---
 

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Atlas Lattice — Graph Explorer</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0a001a;
+      color: #c4b5fd;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 12px 20px;
+      background: #130026;
+      border-bottom: 1px solid #4c1d95;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    header h1 { font-size: 18px; color: #e9d5ff; }
+    header span { font-size: 12px; color: #7c3aed; }
+    .badge {
+      background: #2d1b69;
+      border: 1px solid #4c1d95;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-size: 11px;
+      color: #a78bfa;
+    }
+    #main { flex: 1; display: flex; }
+    #graph { flex: 1; }
+    #sidebar {
+      width: 280px;
+      background: #0d0020;
+      border-left: 1px solid #2d1b69;
+      padding: 16px;
+      overflow-y: auto;
+    }
+    #sidebar h2 { font-size: 13px; color: #7c3aed; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 1px; }
+    #node-info { font-size: 12px; line-height: 1.7; }
+    #node-info .coord { font-family: monospace; color: #2dd4bf; font-size: 14px; margin-bottom: 8px; }
+    #node-info .label { color: #e9d5ff; }
+    #node-info .meta { color: #7c3aed; font-size: 11px; }
+    .legend { margin-top: 20px; }
+    .legend-item { display: flex; align-items: center; gap: 8px; margin: 4px 0; font-size: 11px; }
+    .dot { width: 10px; height: 10px; border-radius: 50%; }
+    svg { width: 100%; height: 100%; }
+    .node circle { cursor: pointer; stroke-width: 1.5; }
+    .node text { font-size: 9px; fill: #c4b5fd; pointer-events: none; }
+    .link { stroke: #4c1d95; stroke-opacity: 0.5; }
+    .link.highlight { stroke: #7c3aed; stroke-opacity: 0.9; stroke-width: 2; }
+    .node.selected circle { stroke: #f0abfc !important; stroke-width: 3; }
+    footer {
+      padding: 8px 20px;
+      background: #130026;
+      border-top: 1px solid #4c1d95;
+      font-size: 11px;
+      color: #4c1d95;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>⬡ Atlas Lattice — Graph Explorer</h1>
+    <span>12 × 12 × 12 H-S-N Hypercube</span>
+    <div class="badge">PUBLIC CANDIDATE</div>
+    <div class="badge">NOT CANON</div>
+  </header>
+  <div id="main">
+    <svg id="graph"></svg>
+    <div id="sidebar">
+      <h2>Node Inspector</h2>
+      <div id="node-info">
+        <div style="color:#4c1d95; font-size:12px;">Click a node to inspect</div>
+      </div>
+      <div class="legend">
+        <h2 style="margin-top:16px;">Houses (H-axis)</h2>
+        <div id="legend-items"></div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    Atlas Lattice · manus-artifacts · github.com/atlaslattice/manus-artifacts · STATUS: PUBLIC CANDIDATE — NOT CANON
+  </footer>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    // H-S-N axis definitions
+    const HOUSES = [
+      "Governance Core","Canon & Adjudication","Provenance & Receipts",
+      "Information Architecture","Documentation Excellence","Security, Trust, Integrity",
+      "Testing & Validation","CI/CD & Automation","Knowledge Graph",
+      "Public Packaging & Releases","Community & Contributors","Ops & Living Archive"
+    ];
+    const SPHERES = [
+      "Foundation","Structure","Process","Interface","Evidence","Review",
+      "Validation","Publication","Knowledge Graph","Integration","Archive","Promotion"
+    ];
+    const NODES_N = [
+      "Seed","Artifact","Schema","Receipt","Claim","Evidence",
+      "Review","Ratified","Canon","Quarantine","Missing","Superseded"
+    ];
+
+    // House colors (rainbow yin-yang spectrum)
+    const HOUSE_COLORS = [
+      "#7c3aed","#6d28d9","#5b21b6","#4c1d95",
+      "#2dd4bf","#0d9488","#0f766e","#115e59",
+      "#f59e0b","#d97706","#b45309","#92400e"
+    ];
+
+    // Build demo graph: 12 house seed nodes + 12 sphere nodes + connections
+    const nodes = [];
+    const links = [];
+
+    // House nodes (outer ring)
+    for (let h = 1; h <= 12; h++) {
+      nodes.push({
+        id: `H${String(h).padStart(2,'0')}-S01-N01`,
+        label: `H${String(h).padStart(2,'0')}`,
+        house: h,
+        type: 'house',
+        title: HOUSES[h-1],
+        review_state: 'seed'
+      });
+    }
+
+    // Center node
+    nodes.push({ id: 'CORE', label: 'CORE', house: 0, type: 'core', title: 'Atlas Lattice Core', review_state: 'seed' });
+
+    // Links: each house → core
+    for (let h = 1; h <= 12; h++) {
+      links.push({ source: `H${String(h).padStart(2,'0')}-S01-N01`, target: 'CORE', type: 'lattice_backbone' });
+    }
+    // Ring links between adjacent houses
+    for (let h = 1; h <= 12; h++) {
+      const next = h === 12 ? 1 : h + 1;
+      links.push({
+        source: `H${String(h).padStart(2,'0')}-S01-N01`,
+        target: `H${String(next).padStart(2,'0')}-S01-N01`,
+        type: 'lattice_arm'
+      });
+    }
+
+    const width = document.getElementById('graph').clientWidth || 700;
+    const height = document.getElementById('graph').clientHeight || 600;
+
+    const svg = d3.select('#graph')
+      .attr('viewBox', `0 0 ${width} ${height}`);
+
+    const g = svg.append('g');
+
+    // Zoom
+    svg.call(d3.zoom().scaleExtent([0.3, 4]).on('zoom', e => g.attr('transform', e.transform)));
+
+    const sim = d3.forceSimulation(nodes)
+      .force('link', d3.forceLink(links).id(d => d.id).distance(d => d.type === 'lattice_backbone' ? 160 : 100).strength(0.5))
+      .force('charge', d3.forceManyBody().strength(-300))
+      .force('center', d3.forceCenter(width / 2, height / 2))
+      .force('collision', d3.forceCollide(30));
+
+    const link = g.append('g')
+      .selectAll('line')
+      .data(links)
+      .join('line')
+      .attr('class', 'link')
+      .attr('stroke-width', d => d.type === 'lattice_backbone' ? 1.5 : 0.8);
+
+    const node = g.append('g')
+      .selectAll('g')
+      .data(nodes)
+      .join('g')
+      .attr('class', 'node')
+      .call(d3.drag()
+        .on('start', (e, d) => { if (!e.active) sim.alphaTarget(0.3).restart(); d.fx = d.x; d.fy = d.y; })
+        .on('drag', (e, d) => { d.fx = e.x; d.fy = e.y; })
+        .on('end', (e, d) => { if (!e.active) sim.alphaTarget(0); d.fx = null; d.fy = null; }));
+
+    node.append('circle')
+      .attr('r', d => d.type === 'core' ? 18 : 14)
+      .attr('fill', d => d.type === 'core' ? '#f0abfc' : HOUSE_COLORS[(d.house - 1) % 12])
+      .attr('fill-opacity', 0.85)
+      .attr('stroke', d => d.type === 'core' ? '#e879f9' : '#c4b5fd')
+      .attr('stroke-opacity', 0.6);
+
+    node.append('text')
+      .attr('dy', 4)
+      .attr('text-anchor', 'middle')
+      .text(d => d.label)
+      .style('font-size', d => d.type === 'core' ? '9px' : '8px')
+      .style('font-weight', 'bold')
+      .style('fill', '#fff');
+
+    // Hover title
+    node.append('title').text(d => `${d.id}
+${d.title}
+Review: ${d.review_state}`);
+
+    // Click inspector
+    node.on('click', (e, d) => {
+      d3.selectAll('.node').classed('selected', false);
+      d3.select(e.currentTarget).classed('selected', true);
+      document.getElementById('node-info').innerHTML = `
+        <div class="coord">${d.id}</div>
+        <div class="label">${d.title}</div>
+        <br/>
+        <div class="meta">House: ${d.house > 0 ? HOUSES[d.house-1] : 'Core'}</div>
+        <div class="meta">Type: ${d.type}</div>
+        <div class="meta">Review state: ${d.review_state}</div>
+        <br/>
+        <div class="meta" style="color:#4c1d95; font-size:10px;">
+          Coordinate is address, not canon.<br/>
+          Review state is candidate only.
+        </div>
+      `;
+    });
+
+    sim.on('tick', () => {
+      link.attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+          .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+      node.attr('transform', d => `translate(${d.x},${d.y})`);
+    });
+
+    // Build legend
+    const legendEl = document.getElementById('legend-items');
+    HOUSES.forEach((h, i) => {
+      const div = document.createElement('div');
+      div.className = 'legend-item';
+      div.innerHTML = `<div class="dot" style="background:${HOUSE_COLORS[i]}"></div><span>H${String(i+1).padStart(2,'0')} — ${h}</span>`;
+      legendEl.appendChild(div);
+    });
+  </script>
+</body>
+</html>

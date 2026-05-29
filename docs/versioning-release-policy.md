@@ -132,7 +132,7 @@ Every major new version or public release should include:
 Use the repository's
 [Artifact Provenance Header Template](./artifact-provenance-header-template.md)
 for major artifacts and the
-[pull request template](../.github/pull_request_template.md) for change review.
+[pull request template](https://github.com/atlaslattice/manus-artifacts/blob/main/.github/pull_request_template.md) for change review.
 
 ## Repository Release Policy
 

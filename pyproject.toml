@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atlas-lattice"
+version = "0.1.0"
+description = "H-S-N coordinate system for the 12×12×12 Atlas Lattice knowledge graph"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "David Sheldon", email = "atlaslattice@users.noreply.github.com" }]
+keywords = ["knowledge-graph", "lattice", "ontology", "coordinate-system", "atlas"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://atlaslattice.github.io/manus-artifacts/"
+Repository = "https://github.com/atlaslattice/manus-artifacts"
+Documentation = "https://atlaslattice.github.io/manus-artifacts/"
+Issues = "https://github.com/atlaslattice/manus-artifacts/issues"
+
+[project.scripts]
+atlas-lattice = "atlas_lattice.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["atlas_lattice*"]

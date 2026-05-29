@@ -1,0 +1,61 @@
+name: IP Vault Submission
+description: Submit an IP artifact for the archive/ip-vault/ directory
+title: "[IP] "
+labels: ["ip-vault", "candidate"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## IP Vault Submission
+
+        Submit an artifact for indexing and open-sourcing in `archive/ip-vault/`.
+
+        All submissions are **candidates** — not canon — until ratified by @atlaslattice.
+  - type: input
+    id: title
+    attributes:
+      label: Artifact title
+    validations:
+      required: true
+  - type: input
+    id: hsn
+    attributes:
+      label: Proposed H-S-N coordinate
+      placeholder: "H##-S##-N## — run `python -m atlas_lattice axes` for axis labels"
+    validations:
+      required: true
+  - type: dropdown
+    id: review_state
+    attributes:
+      label: Initial review state
+      options:
+        - seed
+        - candidate
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is this artifact? What claims does it make?
+    validations:
+      required: true
+  - type: textarea
+    id: source_boundary
+    attributes:
+      label: Source boundary
+      description: What is this? What is it NOT? What is the license posture?
+    validations:
+      required: true
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Submission checklist
+      options:
+        - label: Provenance header included (hsn, title, author, date, review_state, license, canon, source_boundary)
+          required: true
+        - label: This is NOT a canon promotion request
+          required: true
+        - label: No secrets or personal data included
+          required: true

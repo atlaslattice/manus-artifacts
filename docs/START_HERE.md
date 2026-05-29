@@ -5,7 +5,7 @@
 
 Welcome to **manus-artifacts**, the durable public archive of David Sheldon's
 research, system design, governance frameworks, and AI-era operating systems.
-Everything here is open-source under the [MIT License](../LICENSE).
+Everything here is open-source under the [MIT License](https://github.com/atlaslattice/manus-artifacts/blob/main/LICENSE).
 
 ---
 
@@ -33,25 +33,25 @@ It is organized around several major domains:
 ## 🚀 Recommended Reading Paths
 
 ### Path A — New Explorer (30 min)
-1. [README](../README.md) — repo map
-2. [Aluminum OS v4.0 Unified Field](../aluminum-os/v4.0-unified-field.md)
-3. [BAZINGA v0.1 Launch Decree](../bazinga/v0.1-launch-decree.md)
+1. [README](https://github.com/atlaslattice/manus-artifacts/blob/main/README.md) — repo map
+2. [Aluminum OS v4.0 Unified Field](https://github.com/atlaslattice/manus-artifacts/blob/main/aluminum-os/v4.0-unified-field.md)
+3. [BAZINGA v0.1 Launch Decree](https://github.com/atlaslattice/manus-artifacts/blob/main/bazinga/v0.1-launch-decree.md)
 
 ### Path B — System Architect (2 hrs)
-1. [Aluminum OS Complete Package](../aluminum-os/ALUMINUM_OS_COMPLETE_PACKAGE.md)
-2. [SheldonBrain System Architecture](../sheldonbrain/system-architecture.md)
-3. [GPTBrain Manifest](../archive/boot/gptbrain/GPTBRAIN_MANIFEST_2026-05-09.md)
-4. [Children of the Swarm Index](../archive/boot/gptbrain/agents/CHILDREN_OF_THE_SWARM_SQUAD_INDEX_2026-05-10.md)
+1. [Aluminum OS Complete Package](https://github.com/atlaslattice/manus-artifacts/blob/main/aluminum-os/ALUMINUM_OS_COMPLETE_PACKAGE.md)
+2. [SheldonBrain System Architecture](https://github.com/atlaslattice/manus-artifacts/blob/main/sheldonbrain/system-architecture.md)
+3. [GPTBrain Manifest](https://github.com/atlaslattice/manus-artifacts/blob/main/archive/boot/gptbrain/GPTBRAIN_MANIFEST_2026-05-09.md)
+4. [Children of the Swarm Index](https://github.com/atlaslattice/manus-artifacts/blob/main/archive/boot/gptbrain/agents/CHILDREN_OF_THE_SWARM_SQUAD_INDEX_2026-05-10.md)
 
 ### Path C — Governance Scholar (1 hr)
 1. [Constitutional Convention Process](constitutional-convention-process.md)
-2. [Council Session Archive](../council/council-session-master-archive.md)
-3. [Three-Tier Autonomy](../projects/three-tier-autonomy/)
-4. [Council Reviews](../council-reviews/)
+2. [Council Session Archive](https://github.com/atlaslattice/manus-artifacts/blob/main/council/council-session-master-archive.md)
+3. [Three-Tier Autonomy](https://github.com/atlaslattice/manus-artifacts/tree/main/projects/three-tier-autonomy/)
+4. [Council Reviews](https://github.com/atlaslattice/manus-artifacts/tree/main/council-reviews/)
 
 ### Path D — Contributor
-1. [CONTRIBUTING](../.github/CONTRIBUTING.md)
-2. [CODE_OF_CONDUCT](../.github/CODE_OF_CONDUCT.md)
+1. [CONTRIBUTING](https://github.com/atlaslattice/manus-artifacts/blob/main/.github/CONTRIBUTING.md)
+2. [CODE_OF_CONDUCT](https://github.com/atlaslattice/manus-artifacts/blob/main/.github/CODE_OF_CONDUCT.md)
 3. [Archive Index](ARCHIVE_INDEX.md) — find what to work on
 
 ---
@@ -61,7 +61,7 @@ It is organized around several major domains:
 - [Archive Index](ARCHIVE_INDEX.md) — full domain index
 - [Glossary](GLOSSARY.md) — vocabulary of this universe
 - [Versioning and Release Policy](versioning-release-policy.md) — release and supersession rules for living artifacts
-- [Aetherforge Taskboard](../projects/aetherforge-top50-taskboard-2026-05-26.md) — active sprint
+- [Aetherforge Taskboard](https://github.com/atlaslattice/manus-artifacts/blob/main/projects/aetherforge-top50-taskboard-2026-05-26.md) — active sprint
 
 ---
 
@@ -74,7 +74,7 @@ GitHub is the durable canonical substrate. Drive and Notion are relay layers.
 
 Status authority:
 - [Artifact Registry](./knowledge-graph/artifact_registry.v0_1.json)
-- [Ratification Log](../RATIFICATION_LOG.md)
+- [Ratification Log](https://github.com/atlaslattice/manus-artifacts/blob/main/RATIFICATION_LOG.md)
 - [Repo Quality Scorecard](./knowledge-graph/repo_quality_scorecard.v0_1.json)
 - Registry path: `docs/knowledge-graph/artifact_registry.v0_1.json`
 

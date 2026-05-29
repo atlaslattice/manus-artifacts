@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a0533"/>
+      <stop offset="100%" stop-color="#0a001a"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="400" fill="url(#bg)" rx="12"/>
+  <!-- Outer circle -->
+  <circle cx="200" cy="200" r="180" fill="none" stroke="#7c3aed" stroke-width="1.5" opacity="0.6"/>
+  <!-- Middle ring -->
+  <circle cx="200" cy="200" r="120" fill="none" stroke="#6d28d9" stroke-width="1" opacity="0.5"/>
+  <!-- Inner circle -->
+  <circle cx="200" cy="200" r="60" fill="none" stroke="#5b21b6" stroke-width="1" opacity="0.5"/>
+  <!-- 6 outer Fruit-of-Life circles at r=120 -->
+  <circle cx="320" cy="200" r="60" fill="none" stroke="#8b5cf6" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="260" cy="96"  r="60" fill="none" stroke="#8b5cf6" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="140" cy="96"  r="60" fill="none" stroke="#8b5cf6" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="80"  cy="200" r="60" fill="none" stroke="#8b5cf6" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="140" cy="304" r="60" fill="none" stroke="#8b5cf6" stroke-width="0.8" opacity="0.4"/>
+  <circle cx="260" cy="304" r="60" fill="none" stroke="#8b5cf6" stroke-width="0.8" opacity="0.4"/>
+  <!-- Star of David lines -->
+  <line x1="200" y1="20"  x2="200" y2="380" stroke="#a78bfa" stroke-width="0.5" opacity="0.3"/>
+  <line x1="26"  y1="110" x2="374" y2="290" stroke="#a78bfa" stroke-width="0.5" opacity="0.3"/>
+  <line x1="26"  y1="290" x2="374" y2="110" stroke="#a78bfa" stroke-width="0.5" opacity="0.3"/>
+  <!-- H axis nodes (outer, purple) -->
+  <circle cx="200" cy="20"  r="6" fill="#c4b5fd" filter="url(#glow)"/>
+  <circle cx="374" cy="110" r="6" fill="#c4b5fd" filter="url(#glow)"/>
+  <circle cx="374" cy="290" r="6" fill="#c4b5fd" filter="url(#glow)"/>
+  <circle cx="200" cy="380" r="6" fill="#c4b5fd" filter="url(#glow)"/>
+  <circle cx="26"  cy="290" r="6" fill="#c4b5fd" filter="url(#glow)"/>
+  <circle cx="26"  cy="110" r="6" fill="#c4b5fd" filter="url(#glow)"/>
+  <!-- S axis nodes (mid, teal) -->
+  <circle cx="320" cy="200" r="5" fill="#2dd4bf" filter="url(#glow)"/>
+  <circle cx="260" cy="96"  r="5" fill="#2dd4bf" filter="url(#glow)"/>
+  <circle cx="140" cy="96"  r="5" fill="#2dd4bf" filter="url(#glow)"/>
+  <circle cx="80"  cy="200" r="5" fill="#2dd4bf" filter="url(#glow)"/>
+  <circle cx="140" cy="304" r="5" fill="#2dd4bf" filter="url(#glow)"/>
+  <circle cx="260" cy="304" r="5" fill="#2dd4bf" filter="url(#glow)"/>
+  <!-- N axis nodes (inner, gold) -->
+  <circle cx="200" cy="140" r="4" fill="#fbbf24" filter="url(#glow)"/>
+  <circle cx="252" cy="170" r="4" fill="#fbbf24" filter="url(#glow)"/>
+  <circle cx="252" cy="230" r="4" fill="#fbbf24" filter="url(#glow)"/>
+  <circle cx="200" cy="260" r="4" fill="#fbbf24" filter="url(#glow)"/>
+  <circle cx="148" cy="230" r="4" fill="#fbbf24" filter="url(#glow)"/>
+  <circle cx="148" cy="170" r="4" fill="#fbbf24" filter="url(#glow)"/>
+  <!-- Center node -->
+  <circle cx="200" cy="200" r="8" fill="#f0abfc" filter="url(#glow)"/>
+  <!-- Labels -->
+  <text x="200" y="8"   text-anchor="middle" fill="#c4b5fd" font-family="monospace" font-size="9" opacity="0.9">H01</text>
+  <text x="384" y="114" text-anchor="start"  fill="#c4b5fd" font-family="monospace" font-size="9" opacity="0.9">H02</text>
+  <text x="384" y="294" text-anchor="start"  fill="#c4b5fd" font-family="monospace" font-size="9" opacity="0.9">H03</text>
+  <text x="200" y="396" text-anchor="middle" fill="#c4b5fd" font-family="monospace" font-size="9" opacity="0.9">H04</text>
+  <text x="16"  y="294" text-anchor="end"    fill="#c4b5fd" font-family="monospace" font-size="9" opacity="0.9">H05</text>
+  <text x="16"  y="114" text-anchor="end"    fill="#c4b5fd" font-family="monospace" font-size="9" opacity="0.9">H06</text>
+  <text x="336" y="196" text-anchor="start"  fill="#2dd4bf" font-family="monospace" font-size="8" opacity="0.8">S</text>
+  <text x="66"  y="196" text-anchor="end"    fill="#2dd4bf" font-family="monospace" font-size="8" opacity="0.8">S</text>
+  <text x="200" y="190" text-anchor="middle" fill="#f0abfc" font-family="monospace" font-size="10" font-weight="bold" opacity="0.9">H·S·N</text>
+  <text x="200" y="205" text-anchor="middle" fill="#a78bfa" font-family="monospace" font-size="7" opacity="0.7">12×12×12</text>
+  <!-- Title -->
+  <text x="200" y="370" text-anchor="middle" fill="#7c3aed" font-family="sans-serif" font-size="11" opacity="0.8">Atlas Lattice — Rainbow Yin-Yang</text>
+</svg>

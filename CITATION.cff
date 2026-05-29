@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this archive or the Atlas Lattice coordinate system in your work, please cite it as below."
+type: software
+title: "Atlas Lattice — manus-artifacts"
+version: "0.1.0"
+date-released: "2026-05-29"
+abstract: >
+  A provenance-first knowledge-graph archive organized by the H-S-N coordinate
+  system — a 12×12×12 hypercube addressing 1,728 cells across Houses, Spheres,
+  and Nodes. Intended as a Periodic Table 2.0 candidate ontology for organizing
+  knowledge, matter, resonance, artifacts, and review state.
+authors:
+  - given-names: David
+    family-names: Sheldon
+    alias: atlaslattice
+    orcid: ""
+license: MIT
+repository-code: "https://github.com/atlaslattice/manus-artifacts"
+url: "https://atlaslattice.github.io/manus-artifacts/"
+keywords:
+  - knowledge-graph
+  - lattice
+  - ontology
+  - coordinate-system
+  - archive
+  - open-source
+  - atlas-lattice
+  - periodic-table-2
+  - rainbow-yin-yang

@@ -1,0 +1,42 @@
+site_name: Atlas Lattice
+site_url: https://atlaslattice.github.io/manus-artifacts/
+site_description: "The Rainbow Yin-Yang Lattice — a 12×12×12 H-S-N knowledge-graph coordinate system and open-source archive."
+repo_url: https://github.com/atlaslattice/manus-artifacts
+repo_name: atlaslattice/manus-artifacts
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Lattice:
+    - Hypercube Explainer: LATTICE_HYPERCUBE_12x12x12.md
+    - Archive Index: ARCHIVE_INDEX.md
+    - Glossary: GLOSSARY.md
+  - Governance:
+    - Ratification Process: governance-ratification-process.md
+    - Versioning Policy: versioning-release-policy.md
+  - Start Here: START_HERE.md

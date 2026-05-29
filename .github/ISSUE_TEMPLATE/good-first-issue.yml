@@ -1,0 +1,58 @@
+name: Good First Issue
+description: Propose a well-scoped task suitable for a new contributor
+title: "[GFI] "
+labels: ["good first issue", "help wanted"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Good First Issue Proposal
+        Use this template to propose a well-scoped, beginner-friendly task.
+  - type: input
+    id: title
+    attributes:
+      label: Task title
+      placeholder: "e.g. Add H-S-N header to governance-core-seed.md"
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Documentation
+        - IP Vault (add artifact)
+        - Tests
+        - Knowledge Graph
+        - CI/CD
+        - Governance
+        - Community
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What exactly needs to be done? Be specific enough that a newcomer can start.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: |
+        - [ ] File X updated with H-S-N header
+        - [ ] Tests pass
+    validations:
+      required: true
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Estimated effort
+      options:
+        - "< 30 min"
+        - "30 min – 2 hrs"
+        - "2–4 hrs"
+    validations:
+      required: true
