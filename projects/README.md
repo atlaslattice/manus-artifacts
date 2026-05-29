@@ -9,6 +9,10 @@ This directory tracks project-specific execution boards and implementation strea
 - [Aetherforge Metatron's Cube Top-50 Taskboard (2026-05-26)](./aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
 - [Aetherforge Top-10 Taskboard (2026-05-26)](./aetherforge-top10-taskboard-2026-05-26.md)
 
+## Swarm Coordination
+
+- [Swarm Intake Divvy Tracker — Issue #229 (2026-05-29)](./swarm-intake-divvy-tracker-issue229-2026-05-29.md)
+
 ## Board Hierarchy
 
 - **Program board:** 144-Task Campaign (12 waves)
