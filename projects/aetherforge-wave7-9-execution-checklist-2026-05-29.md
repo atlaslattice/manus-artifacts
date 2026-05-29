@@ -46,7 +46,7 @@ Execute Waves 7–9 with strict governance boundaries, complete provenance cover
 ### Wave 8 KPIs
 
 - artifacts_with_full_provenance_fields ≥ 95%
-- orphan_ratio = 0.000
+- orphan_ratio ≤ 0.001
 - attribution_completeness ≥ 98%
 
 ---
@@ -65,7 +65,7 @@ Execute Waves 7–9 with strict governance boundaries, complete provenance cover
 ### Wave 9 KPIs
 
 - deterministic_build_pass_rate = 100%
-- median_claim_trace_query_latency_ms (target to define + track weekly)
+- median_claim_trace_query_latency_ms ≤ 250
 - fork_components_with_full_traceability = 100%
 - imported_candidate_modules_validated_before_promotion = 100%
 
