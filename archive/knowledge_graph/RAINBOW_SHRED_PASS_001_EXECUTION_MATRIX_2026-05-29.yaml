@@ -1,0 +1,101 @@
+matrix_name: RAINBOW_SHRED_PASS_001_EXECUTION_MATRIX_2026-05-29
+status: staging_execution_matrix
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: >
+  Convert the Rainbow Yin Yang Lattice Archive Shred Pass 001 broadcast into an executable,
+  inspectable, non-canon staging matrix for public knowledge graph buildout.
+
+broadcast_ref: archive/knowledge_graph/SWARM_HUB_BROADCAST_RAINBOW_YIN_YANG_SHRED_PASS_001_2026-05-29.md
+intake_issue_ref: https://github.com/atlaslattice/manus-artifacts/issues/227
+
+execution_rules:
+  - shred_gently
+  - preserve_lineage
+  - make_it_inspectable
+  - no_canon
+  - no_deployment
+  - no_authority
+  - public_safe_by_default_where_possible
+  - quarantine_sensitive_cargo
+  - claims_become_packets
+  - missing_receipts_become_nodes
+  - contradictions_become_review_edges
+
+modules:
+  - module_id: M01
+    title: Source Passport Module
+    objective: Create source passports for first 144 archive roots.
+    primary_output: archive/knowledge_graph/source_passports/
+    status: active_next
+    first_done_when: Source passport schema exists and first 12 passports are drafted.
+  - module_id: M02
+    title: Public Candidate Bundle Module
+    objective: Convert PUBLIC_CANDIDATE_BUNDLE_0001 into a cleaner GitHub-staged public surface.
+    primary_output: archive/public_candidate_bundle/PUBLIC_CANDIDATE_BUNDLE_0001/
+    status: active
+    first_done_when: README, manifest, FAQ, release status schema, contributing, reporting, license placeholder, toy demo, issue templates, PR checklist exist.
+  - module_id: M03
+    title: Lattice Hypercube Ontology Module
+    objective: Draft public-safe 12x12x12 ontology explainer.
+    primary_output: archive/knowledge_graph/LATTICE_HYPERCUBE_12x12x12_PUBLIC_EXPLAINER_v0.1.md
+    status: queued
+    first_done_when: Explainer distinguishes ontology, coordinate map, semantic scaffold, and non-authority boundary.
+  - module_id: M04
+    title: Schema Spine Module
+    objective: Finish first-pass schemas for public graph ingestion.
+    primary_output: archive/knowledge_graph/schema_spine/
+    status: active_next
+    first_done_when: SourcePassport, ClaimPacket, EvidenceAnchor, ReviewFinding, DecisionRecord, DeltaPacket schemas exist.
+  - module_id: M05
+    title: Sensitive Release Gate Module
+    objective: Convert sensitive-term routing into machine-readable release gate.
+    primary_output: archive/knowledge_graph/SENSITIVE_RELEASE_GATE_v0.1.yaml
+    status: active_next
+    first_done_when: Gate has term classes, action states, quarantine rules, and public-summary path.
+  - module_id: M06
+    title: Claude Quarantine Module
+    objective: Build Claude-originated / Claude-touched adversarial review queue.
+    primary_output: archive/knowledge_graph/CLAUDE_ADVERSARIAL_REVIEW_QUEUE_2026-05-28.md
+    status: active
+    first_done_when: Queue schema and clean-room rewrite rule exist.
+  - module_id: M07
+    title: Claim Shredder Module
+    objective: Extract first 144 claim packets from public-safe or staged artifacts.
+    primary_output: archive/knowledge_graph/claim_packets/
+    status: queued
+    first_done_when: Claim packet schema exists and first 12 claims are extracted.
+  - module_id: M08
+    title: Contradiction / Missing Receipt Module
+    objective: Create contradiction and missing-receipt ledgers from first claim shred.
+    primary_output: archive/knowledge_graph/contradictions_and_missing_receipts/
+    status: active
+    first_done_when: Missing receipt register exists and contradiction ledger schema exists.
+  - module_id: M09
+    title: Toy Graph / Demo Module
+    objective: Build tiny forkable graph demo that teaches the whole system in under 50 lines.
+    primary_output: archive/public_candidate_bundle/PUBLIC_CANDIDATE_BUNDLE_0001/TOY_GRAPH_DEMO_v0.1.json
+    status: active
+    first_done_when: Toy demo contains SourceArtifact, Claim, EvidenceAnchor, ReviewFinding, and non-promotion edges.
+  - module_id: M10
+    title: OpenAI Eval Fixtures Module
+    objective: Create eval fixtures for provenance-aware archive reasoning.
+    primary_output: archive/knowledge_graph/eval_fixtures/
+    status: active_next
+    first_done_when: False authority fixture pack exists and OpenAI structured extraction schema has eval hooks.
+  - module_id: M11
+    title: Public Communication Module
+    objective: Write first 12 public explainers for nontechnical entry.
+    primary_output: archive/public_candidate_bundle/PUBLIC_CANDIDATE_BUNDLE_0001/explainers/
+    status: queued
+    first_done_when: First explainer explains graph-is-not-canon in plain language.
+  - module_id: M12
+    title: Swarm Completion / Scoreboard Module
+    objective: Build first completion scoreboard for the 12 modules.
+    primary_output: archive/knowledge_graph/RAINBOW_SHRED_PASS_001_SCOREBOARD_2026-05-29.yaml
+    status: active_next
+    first_done_when: Scoreboard tracks generated, staged, reviewed, blocked, and missing receipt states.
+
+keeper: >
+  Shred gently. Preserve lineage. Make it inspectable. NOTHING DIES.
