@@ -1,0 +1,11 @@
+# Core governance and workflow controls
+/.github/ @atlaslattice
+/archive/boot/ @atlaslattice
+
+# GPTBrain reference implementation safety-critical path
+/archive/boot/gptbrain/reference_impl/ @atlaslattice
+
+# Repository-level policy documents
+/README.md @atlaslattice
+/SECURITY.md @atlaslattice
+/CHANGELOG.md @atlaslattice

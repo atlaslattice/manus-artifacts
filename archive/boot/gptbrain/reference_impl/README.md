@@ -118,21 +118,35 @@ Variant D reference demo:
 python dream_memory_palace_reference_impl.py
 ```
 
+## Local validation prerequisites
+
+```bash
+python -m pip install pytest
+```
+
+Validation:
+
+```bash
+python -m pytest -q
+bash run_checks.sh
+```
+
+`run_checks.sh` performs CLI smoke checks first, then runs the full pytest suite. Because the harness uses `set -euo pipefail`, it exits immediately if a smoke check fails, and it also exits early with an install hint if `pytest` is unavailable.
+
 ## Intended next steps
 
 ```text
-1. Add pytest tests.
-2. Split reference implementation into package modules.
-3. Add pydantic schemas.
-4. Add SQLite/Postgres storage adapter.
-5. Add graph adapter for claims and contradictions.
-6. Add CLI commands:
+1. Split reference implementation into package modules.
+2. Add pydantic schemas.
+3. Add SQLite/Postgres storage adapter.
+4. Add graph adapter for claims and contradictions.
+5. Add CLI commands:
    gptbrain remember
    gptbrain recall
    gptbrain challenge
    gptbrain diff
    gptbrain synthesize
-7. Add importer from Sheldonbrain RAG artifacts:
+6. Add importer from Sheldonbrain RAG artifacts:
    artifact_registry.jsonl
    claim_ledger.jsonl
    memory_packet.json

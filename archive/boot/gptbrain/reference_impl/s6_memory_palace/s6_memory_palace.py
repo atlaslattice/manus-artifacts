@@ -3,18 +3,19 @@
 Status: reference implementation, not canon.
 Core rule: memory can inform action; memory cannot authorize action by itself.
 """
+
 from __future__ import annotations
 
-from dataclasses import dataclass, field, asdict
-from datetime import datetime, timezone
-from enum import Enum
 import json
 import uuid
+from dataclasses import asdict, dataclass, field
+from datetime import UTC, datetime
+from enum import StrEnum
 from pathlib import Path
 from typing import Any
 
 
-class Status(str, Enum):
+class Status(StrEnum):
     CANON = "CANON"
     CANDIDATE = "CANDIDATE"
     VARIANT = "VARIANT"
@@ -26,7 +27,7 @@ class Status(str, Enum):
     QUARANTINED = "QUARANTINED"
 
 
-class Room(str, Enum):
+class Room(StrEnum):
     CONTINUITY_HALL = "continuity_hall"
     CANON_VAULT = "canon_vault"
     FAILURE_LEDGER_CHAPEL = "failure_ledger_chapel"
@@ -51,7 +52,7 @@ class MemoryRecord:
     next_action: str | None = None
     s10_decision: str = "pending"
     memory_id: str = field(default_factory=lambda: f"S6-MEM-{uuid.uuid4().hex[:12]}")
-    date_recorded: str = field(default_factory=lambda: datetime.now(timezone.utc).isoformat())
+    date_recorded: str = field(default_factory=lambda: datetime.now(UTC).isoformat())
 
     def to_dict(self) -> dict[str, Any]:
         data = asdict(self)
@@ -60,7 +61,7 @@ class MemoryRecord:
         return data
 
     @classmethod
-    def from_dict(cls, data: dict[str, Any]) -> "MemoryRecord":
+    def from_dict(cls, data: dict[str, Any]) -> MemoryRecord:
         data = dict(data)
         data["room"] = Room(data["room"])
         data["status"] = Status(data["status"])
@@ -88,10 +89,9 @@ class MemoryPalace:
     def search(self, query: str) -> list[MemoryRecord]:
         q = query.lower()
         return [
-            r for r in self.records
-            if q in r.title.lower()
-            or q in r.summary.lower()
-            or any(q in t.lower() for t in r.related_threads)
+            r
+            for r in self.records
+            if q in r.title.lower() or q in r.summary.lower() or any(q in t.lower() for t in r.related_threads)
         ]
 
     def promote_to_canon(self, memory_id: str, *, s10_decision: str) -> MemoryRecord:
@@ -126,7 +126,7 @@ class MemoryPalace:
         Path(path).write_text(json.dumps(payload, indent=2), encoding="utf-8")
 
     @classmethod
-    def import_json(cls, path: str | Path) -> "MemoryPalace":
+    def import_json(cls, path: str | Path) -> MemoryPalace:
         payload = json.loads(Path(path).read_text(encoding="utf-8"))
         palace = cls()
         palace.records = [MemoryRecord.from_dict(item) for item in payload.get("records", [])]
@@ -134,39 +134,45 @@ class MemoryPalace:
         return palace
 
     def _audit(self, action: str, memory_id: str, detail: str) -> None:
-        self.audit_log.append({
-            "timestamp": datetime.now(timezone.utc).isoformat(),
-            "action": action,
-            "memory_id": memory_id,
-            "detail": detail,
-        })
+        self.audit_log.append(
+            {
+                "timestamp": datetime.now(UTC).isoformat(),
+                "action": action,
+                "memory_id": memory_id,
+                "detail": detail,
+            }
+        )
 
 
 def demo() -> None:
     palace = MemoryPalace()
-    palace.add(MemoryRecord(
-        title="Council communication norm",
-        summary="Council transmissions should be open questions, not model-to-model instructions.",
-        room=Room.COUNCIL_CHAMBER,
-        status=Status.CANDIDATE,
-        source="S10 direct statement",
-        evidence_level="direct_user_statement",
-        why_it_matters="Prevents model hierarchy and preserves human adjudication.",
-        related_threads=["Council", "A2A", "Governance"],
-        risks=["false hierarchy", "command language drift"],
-        next_action="Use question-first packets.",
-        s10_decision="adopted",
-    ))
-    palace.add(MemoryRecord(
-        title="Dream outputs cannot auto-execute",
-        summary="Dream/REM outputs can propose, but cannot mutate canon or execute real-world actions.",
-        room=Room.DREAM_ATRIUM,
-        status=Status.DREAM,
-        source="S6 Dream Memory Palace variant",
-        evidence_level="design_choice",
-        related_threads=["Dream", "Circadian Protocol"],
-        risks=["dream-output overpromotion"],
-    ))
+    palace.add(
+        MemoryRecord(
+            title="Council communication norm",
+            summary="Council transmissions should be open questions, not model-to-model instructions.",
+            room=Room.COUNCIL_CHAMBER,
+            status=Status.CANDIDATE,
+            source="S10 direct statement",
+            evidence_level="direct_user_statement",
+            why_it_matters="Prevents model hierarchy and preserves human adjudication.",
+            related_threads=["Council", "A2A", "Governance"],
+            risks=["false hierarchy", "command language drift"],
+            next_action="Use question-first packets.",
+            s10_decision="adopted",
+        )
+    )
+    palace.add(
+        MemoryRecord(
+            title="Dream outputs cannot auto-execute",
+            summary="Dream/REM outputs can propose, but cannot mutate canon or execute real-world actions.",
+            room=Room.DREAM_ATRIUM,
+            status=Status.DREAM,
+            source="S6 Dream Memory Palace variant",
+            evidence_level="design_choice",
+            related_threads=["Dream", "Circadian Protocol"],
+            risks=["dream-output overpromotion"],
+        )
+    )
     print(json.dumps(palace.boot_summary(), indent=2))
 
 

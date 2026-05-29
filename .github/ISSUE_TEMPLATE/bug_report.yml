@@ -1,0 +1,59 @@
+name: Bug report
+description: Report a reproducible defect in repository content, workflow, or tooling.
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: One clear sentence describing the bug.
+      placeholder: What is broken?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include exact commands or actions.
+      placeholder: 1) ... 2) ... 3) ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: input
+    id: paths
+    attributes:
+      label: Affected paths
+      placeholder: /home/runner/work/manus-artifacts/manus-artifacts/...
+    validations:
+      required: true
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - low
+        - medium
+        - high
+        - critical
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety checks
+      options:
+        - label: I did not include secrets, credentials, or private personal data.
+          required: true

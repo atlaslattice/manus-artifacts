@@ -11,6 +11,7 @@ Run from this directory:
 from __future__ import annotations
 
 import json
+
 import pytest
 
 from dream_memory_palace_reference_impl import (
@@ -18,12 +19,12 @@ from dream_memory_palace_reference_impl import (
     ClaimConfidence,
     ConsentLevel,
     DreamMemoryPalace,
+    EpistemicCategory,
+    EpistemicStatus,
     MemoryObject,
     MemoryType,
     PermissionPolicy,
     Provenance,
-    EpistemicCategory,
-    EpistemicStatus,
     RecallMode,
     RecallQuery,
     make_claim,

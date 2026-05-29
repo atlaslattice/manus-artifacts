@@ -1,0 +1,36 @@
+{
+  "version": "v1",
+  "generated_on": "2026-05-27",
+  "root": "/tmp/workspace/atlaslattice/manus-artifacts",
+  "start_here": "START_HERE.md",
+  "major_domains": [
+    "about",
+    "aluminum-os",
+    "archive",
+    "archives",
+    "bazinga",
+    "council",
+    "council-reviews",
+    "docs",
+    "health",
+    "manus-vault",
+    "projects",
+    "research",
+    "sheldonbrain"
+  ],
+  "navigation_indexes": [
+    "about/README.md",
+    "aluminum-os/README.md",
+    "archive/README.md",
+    "archives/README.md",
+    "bazinga/README.md",
+    "council/README.md",
+    "council-reviews/README.md",
+    "docs/README.md",
+    "health/README.md",
+    "manus-vault/README.md",
+    "projects/README.md",
+    "research/README.md",
+    "sheldonbrain/README.md"
+  ]
+}

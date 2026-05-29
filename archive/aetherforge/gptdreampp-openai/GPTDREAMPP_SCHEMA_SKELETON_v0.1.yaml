@@ -1,0 +1,32 @@
+schema_id: gptdreampp-openai-staging-v0.1
+schema_status: candidate_not_canon
+human_root_review_required: true
+provenance_policy: receipt_backed_only
+
+artifact:
+  artifact_id: ""
+  artifact_type: field_snapshot | ruleset | eval_fixture | delta | tracker | manifest | review_checklist
+  title: ""
+  created_utc: ""
+  source_system: github | drive | notion | other
+  source_path: ""
+  source_hash: ""
+  source_hash_algo: sha256
+  attribution:
+    author: ""
+    model_lane: ""
+    toolchain: ""
+  canon:
+    canon_status: NOT_CANON
+    ratification_event_id: ""
+    trust_state: unreviewed
+  review:
+    adversarial_review_required: true
+    overclaim_risk: low | medium | high
+    contamination_flags:
+      claude_touched: false
+      corpus_control_mix_risk: false
+  receipts:
+    receipt_id: ""
+    receipt_path: ""
+    receipt_verified: false

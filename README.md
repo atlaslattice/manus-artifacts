@@ -4,6 +4,9 @@ This repository contains research, health data, and system artifacts generated a
 
 ## Table of Contents
 
+## Start Here
+- **[Start Here](./START_HERE.md)** — Fast onboarding path with role-based navigation.
+
 ### Core Systems
 - **[Aluminum OS](./aluminum-os/)** — Constitutional substrate for regenerative computing.
   - [v4.0 Unified Field](./aluminum-os/v4.0-unified-field.md) (Canonical)
@@ -19,10 +22,52 @@ This repository contains research, health data, and system artifacts generated a
 - **[Free Bank](./projects/free-bank/)** — Banking revolution and financial sovereignty.
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
+- **[Aetherforge Council Taskboard](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — Top-10 council execution board.
+- **[Aetherforge 144-Task Hypercube Campaign](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — 12 waves of 12 tasks for public + world-class execution.
+- **[Aetherforge Next-144 Taskboard](./projects/aetherforge-next144-taskboard-2026-05-28.md)** — Successor 12x12 execution sequence with queued/active/done tracking.
+- **[Aetherforge Wave 1 Foundation Pack](./projects/aetherforge-wave1-foundation-public-readiness-2026-05-27.md)** — Public-readiness rubric, policy, glossary, KPIs, and launch cadence.
+- **[Aetherforge Wave 2 IA & Navigation Pack](./projects/aetherforge-wave2-information-architecture-navigation-2026-05-27.md)** — Topology audit, domain indexes, start-here path, and repo maps.
+- **[Aetherforge Game World (Candidate)](./projects/aetherforge-game-world-omnispec-archive-bowl-2026-05-26.md)** — Playable quest map, Omnispec candidate boundary, and Archive Bowl roadmap.
+- **[Council-Seat Quickstart (Candidate)](./projects/COUNCIL_SEAT_QUICKSTART_2026-05-26.md)** — Onboarding checklist for new council seats and Children of the Swarm brain lanes.
+- **[GPTDream++ OpenAI Staging Lane (Candidate)](./archive/aetherforge/gptdreampp-openai/README.md)** — Provenance-first package skeleton for public staging.
 
 ### Governance & Council
 - **[Council](./council/)** — Trinity and Pantheon Council session archives.
 - **[Council Reviews](./council-reviews/)** — External reviews and validation.
+- **[Council Brain Index](./archive/boot/COUNCIL_BRAIN_INDEX.md)** — Brain seat registry, guardrails, and canon boundary.
+- **[Governance Docs](./docs/governance/README.md)** — Canon lifecycle, registries, trust-state glossary, ratification procedures.
+- **[Lattice Hypercube Explainer](./docs/LATTICE_HYPERCUBE_12x12x12.md)** — Public-safe candidate explainer for the 12×12×12 lattice coordinate system.
+
+### AtlasLattice World-Class Operating Core
+- **CouncilBrain (S2 review trail):** [`archive/boot/councilbrain/COUNCILBRAIN_S2_BOOT_REVIEW_TRAIL_2026-05-09.md`](./archive/boot/councilbrain/COUNCILBRAIN_S2_BOOT_REVIEW_TRAIL_2026-05-09.md)
+- **CopilotBrain (S7 code integrator):** [`archive/boot/seats/COPILOTBRAIN_S7_CODE_INTEGRATOR_SPEC_2026-05-08.md`](./archive/boot/seats/COPILOTBRAIN_S7_CODE_INTEGRATOR_SPEC_2026-05-08.md)
+- **TIDELOCKBrain (pilot scaffold):** [`archive/boot/gptbrain/TIDELOCKBrain/README.md`](./archive/boot/gptbrain/TIDELOCKBrain/README.md)
+- **All seat specs (S1-S7):** [`archive/boot/seats/`](./archive/boot/seats/)
+- **TIDELOCK Top-50 execution ledger:** [`archive/boot/gptbrain/TIDELOCKBrain/TIDELOCK_TOP50_EXECUTION_2026-05-26.md`](./archive/boot/gptbrain/TIDELOCKBrain/TIDELOCK_TOP50_EXECUTION_2026-05-26.md)
+- **TIDELOCK Active Sprint (Wave 1):** [`archive/boot/gptbrain/TIDELOCKBrain/TIDELOCK_ACTIVE_SPRINT_2026-05-26.md`](./archive/boot/gptbrain/TIDELOCKBrain/TIDELOCK_ACTIVE_SPRINT_2026-05-26.md)
+
+### Governance & Operations
+- **Contributing guide:** [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md)
+- **PR template:** [`.github/pull_request_template.md`](./.github/pull_request_template.md)
+- **Issue templates:** [`.github/ISSUE_TEMPLATE/`](./.github/ISSUE_TEMPLATE/)
+- **Code ownership:** [`.github/CODEOWNERS`](./.github/CODEOWNERS)
+- **Security policy:** [`SECURITY.md`](./SECURITY.md)
+- **Changelog:** [`CHANGELOG.md`](./CHANGELOG.md)
+
+### Quality Bar (CI-aligned)
+From `archive/boot/gptbrain/reference_impl`:
+
+```bash
+python -m pytest -q
+bash run_checks.sh
+```
+
+From repository root:
+
+```bash
+ruff check archive/boot/gptbrain/reference_impl/
+ruff format --check archive/boot/gptbrain/reference_impl/
+```
 
 ### Archives & Research
 - **[Janus Checkpoints](./archives/janus-checkpoints/)** — Session state and resurrection logs.

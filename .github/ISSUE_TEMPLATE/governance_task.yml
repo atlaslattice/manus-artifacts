@@ -1,0 +1,49 @@
+name: Governance task
+description: Request a governance, canon-boundary, or seat-spec change.
+title: "[Governance] "
+labels:
+  - governance
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What governance outcome is required?
+    validations:
+      required: true
+  - type: input
+    id: canon_scope
+    attributes:
+      label: Canon scope
+      description: Candidate canon, ratified canon, policy, or pilot?
+      placeholder: candidate canon / ratified canon / policy / pilot
+    validations:
+      required: true
+  - type: input
+    id: seat_refs
+    attributes:
+      label: Relevant seat spec(s)
+      placeholder: archive/boot/seats/...
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints and non-negotiables
+      description: Include C0 boundaries, contradiction handling, and approval gates.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: "- [ ] ..."
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Governance acknowledgements
+      options:
+        - label: I acknowledge canon promotion requires human-root approval.
+          required: true
+        - label: I acknowledge C0 claims must not be asserted as fact.
+          required: true

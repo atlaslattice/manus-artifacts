@@ -20,11 +20,11 @@ from __future__ import annotations
 
 import argparse
 import json
+from collections.abc import Iterable
 from dataclasses import dataclass
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
-from typing import Any, Iterable
-
+from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 CLAIM_LEDGER = ROOT / "CLAIM_LEDGER.seed.jsonl"
@@ -49,7 +49,7 @@ class ChallengeReport:
 
 
 def utc_now() -> str:
-    return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    return datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -109,7 +109,7 @@ def list_memories(query: str | None = None, memory_type: str | None = None) -> l
 
 def remember(title: str, memory_type: str, summary: str, source: str, confidence: str = "C1") -> dict[str, Any]:
     rows = load_jsonl(MEMORY_OBJECTS)
-    memory_id = f"S1-MEM-{datetime.now(timezone.utc).strftime('%Y-%m%d-%H%M%S')}-{len(rows)+1:04d}"
+    memory_id = f"S1-MEM-{datetime.now(UTC).strftime('%Y-%m%d-%H%M%S')}-{len(rows) + 1:04d}"
     now = utc_now()
     row = {
         "memory_id": memory_id,

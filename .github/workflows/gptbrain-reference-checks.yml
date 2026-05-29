@@ -6,11 +6,13 @@ on:
       - 'archive/boot/gptbrain/**'
       - 'archive/boot/seats/GPTBRAIN_S1_CANONICAL_CANDIDATE_SPEC_2026-05-09.md'
       - '.github/workflows/gptbrain-reference-checks.yml'
+      - 'pyproject.toml'
   pull_request:
     paths:
       - 'archive/boot/gptbrain/**'
       - 'archive/boot/seats/GPTBRAIN_S1_CANONICAL_CANDIDATE_SPEC_2026-05-09.md'
       - '.github/workflows/gptbrain-reference-checks.yml'
+      - 'pyproject.toml'
   workflow_dispatch:
 
 jobs:
@@ -27,8 +29,14 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install test dependencies
-        run: python -m pip install --upgrade pip pytest
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pytest ruff
+
+      - name: Lint (ruff)
+        run: ruff check archive/boot/gptbrain/reference_impl/
+
+      - name: Format check (ruff)
+        run: ruff format --check archive/boot/gptbrain/reference_impl/
 
       - name: Run pytest suite
         working-directory: archive/boot/gptbrain/reference_impl
