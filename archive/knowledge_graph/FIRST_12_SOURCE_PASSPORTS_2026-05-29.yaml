@@ -1,0 +1,194 @@
+passport_set: FIRST_12_SOURCE_PASSPORTS_2026-05-29
+status: staging_passports
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+source_schema: SOURCE_PASSPORT_SCHEMA_v0.1
+purpose: >
+  Draft the first 12 source passports for public KG staging. Passports make sources inspectable before claim shredding.
+
+passports:
+  - passport_id: SP-001
+    source_id: SRC-001
+    title: atlaslattice/manus-artifacts
+    surface: github
+    url_or_path: atlaslattice/manus-artifacts
+    source_type: repository
+    raw_export_status: not_exported
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    public_release_status: public_candidate
+    source_class: SourceRoot
+    review_lanes: [TIDELOCK, Rootglass]
+    missing_receipts: [branch_ref_snapshot, commit_map]
+    next_action: fetch_repo_metadata_and_branch_map
+  - passport_id: SP-002
+    source_id: SRC-002
+    title: atlaslattice/sheldonbrain-rag-api
+    surface: github
+    url_or_path: atlaslattice/sheldonbrain-rag-api
+    source_type: repository
+    raw_export_status: not_exported
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    public_release_status: public_candidate
+    source_class: SourceRoot
+    review_lanes: [TIDELOCK, SheldonBrain]
+    missing_receipts: [repo_tree_export, parser_module_inventory]
+    next_action: inventory_parser_and_ingestion_modules
+  - passport_id: SP-003
+    source_id: SRC-003
+    title: Notion Master Index
+    surface: notion
+    url_or_path: Notion URL/ID pending
+    source_type: page_or_database
+    raw_export_status: not_exported
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    public_release_status: private_raw
+    source_class: SourceRoot
+    review_lanes: [Hashlight, KairoBrain]
+    missing_receipts: [page_id, full_raw_export, block_tree, content_hash]
+    next_action: obtain_notion_export_and_hash
+  - passport_id: SP-004
+    source_id: SRC-010
+    title: GangaSeek / ORCS / Council ratification pages
+    surface: notion
+    url_or_path: Notion URL/ID pending
+    source_type: page_set
+    raw_export_status: not_exported
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    public_release_status: private_quarantine
+    source_class: SourceRoot
+    review_lanes: [CouncilBrain, AtlasBrain, Lucerna]
+    missing_receipts: [page_IDs, full_exports, ratification_event_receipts]
+    next_action: export_and_route_to_ratification_review
+  - passport_id: SP-005
+    source_id: SRC-016
+    title: Aetherforge / Sheldonbrain Graph Ingestion Sync — Candidate Operation
+    surface: drive
+    url_or_path: https://docs.google.com/document/d/1-SwfJxjqCq_N6sQCHA4a8UvpqA9I5DJ63DjK2yxBrAk
+    source_type: google_doc
+    raw_export_status: full_raw_export_attached
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    public_release_status: public_candidate
+    source_class: SourceArtifact
+    review_lanes: [Aetherforge, SheldonBrain, GPTBrain]
+    missing_receipts: [GitHub_commit_path_confirmation]
+    next_action: mirror_to_github_public_staging
+  - passport_id: SP-006
+    source_id: SRC-018
+    title: Atlas Lattice Knowledge Graph — 12x12 World-Class Task Board v0.1
+    surface: drive
+    url_or_path: https://docs.google.com/spreadsheets/d/1qlj5hbrcXGPTJHf5Ox-9eUut_706g7keVsdb37OvB7w
+    source_type: google_sheet
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    public_release_status: public_candidate
+    source_class: SchemaArtifact
+    review_lanes: [KairoBrain, Ledgerwake, Aetherforge]
+    missing_receipts: [sheet_export, row_hash_policy, GitHub_mirror_path]
+    next_action: export_sheet_to_csv_json_and_hash_rows
+  - passport_id: SP-007
+    source_id: SRC-019
+    title: Copilot Tasks Handoff — Atlas Lattice 12x12 Knowledge Graph Build Spec v0.1
+    surface: drive
+    url_or_path: https://docs.google.com/document/d/1zRUIavvSZvuAhBs-jjOcJ0rLOQ3gaWn9ICfttsAdMJc
+    source_type: google_doc
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    public_release_status: public_summary_candidate
+    source_class: SourceArtifact
+    review_lanes: [Copilot, TIDELOCK, SheldonBrain]
+    missing_receipts: [full_export, task_IDs, repo_issue_PR_links]
+    next_action: extract_work_orders_into_staging_issues
+  - passport_id: SP-008
+    source_id: SRC-020
+    title: Notion Extraction Plan — Atlas Lattice Mass Ingestion v0.1
+    surface: drive
+    url_or_path: https://docs.google.com/document/d/1lI0RPzZaRcv0IXx-Jmc3ihYdcS0M_8ddTjO9AY3sZEA
+    source_type: google_doc
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    public_release_status: public_candidate
+    source_class: SourceRoot
+    review_lanes: [Notion, KairoBrain, Hashlight]
+    missing_receipts: [full_export, Notion_source_IDs, raw_export_manifest]
+    next_action: convert_to_Notion_export_runbook
+  - passport_id: SP-009
+    source_id: SRC-023
+    title: ATLAS_LATTICE_UNIFIED_ONTOLOGY_CANDIDATE_v0_3_3_2026-05-21
+    surface: drive
+    url_or_path: https://drive.google.com/file/d/1gMX9_cZta-LlbB5R1bP3NEaLlhkb5vZJ
+    source_type: text_file
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    public_release_status: public_summary_candidate
+    source_class: SourceArtifact
+    review_lanes: [Lucerna, GPTBrain, Rootglass]
+    missing_receipts: [human_root_ratification_receipt_if_any, GitHub_mirror_path, content_hash]
+    next_action: public_safe_summary_and_status_review
+  - passport_id: SP-010
+    source_id: SRC-024
+    title: Aetherforge 1000-Year Simulation — 144 Candidate Deltas v0.1
+    surface: drive
+    url_or_path: https://docs.google.com/spreadsheets/d/1JHNA9iovmGQdQzVHVIVGQQxxBmF0VBfcLJpd95cTWVc
+    source_type: google_sheet
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    public_release_status: public_candidate
+    source_class: SourceArtifact
+    review_lanes: [Aetherforge, Gemini, GPTBrain]
+    missing_receipts: [sheet_export, row_level_status, simulation_boundary_review]
+    next_action: extract_delta_packets
+  - passport_id: SP-011
+    source_id: SRC-025
+    title: GPTDream++ OpenAI-First Maximum Performance Runbook — Staging v0.1
+    surface: drive
+    url_or_path: https://docs.google.com/document/d/1KLPMFa2nKX_tG5pYfUY_miumMFUuhw7blDqHLhKfsZE
+    source_type: google_doc
+    raw_export_status: drive_staged_native_doc
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    public_release_status: public_candidate
+    source_class: Runbook
+    review_lanes: [GPTDream, OpenAI, SheldonBrain, Aetherforge, Bullshit_Olympics]
+    contamination_flags:
+      openai_officiality_risk: true
+    missing_receipts: [GitHub_Notion_connector_receipts_pending, commit_ready_export_pending]
+    next_action: add_officiality_disclaimer_and_public_summary
+  - passport_id: SP-012
+    source_id: SRC-026
+    title: Murmur-of-Many — 12x12 Aetherforge GPTDream Task Lattice
+    surface: drive
+    url_or_path: https://docs.google.com/document/d/1a8fizmcJovbP88J1HgIXvl2nSf8xQ6qPoAsmMHdiyLE
+    source_type: google_doc
+    raw_export_status: drive_staged_native_doc
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    public_release_status: public_candidate
+    source_class: TaskLattice
+    review_lanes: [Aetherforge, GPTDream, SheldonBrain, Murmur_of_Many]
+    missing_receipts: [GitHub_mirror, task_extraction_packet]
+    next_action: extract_task_cells
+
+keeper: Passport first. Shred second. Believe never without receipts.
