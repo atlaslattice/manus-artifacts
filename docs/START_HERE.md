@@ -42,15 +42,18 @@
 This archive is organized around one integrated mission:
 
 1. **Functional knowledge graph layer**  
-   → [Lattice KG v0.5](../archive/knowledge_graph/lattice_kg/v0_5/README.md)
+   → [Lattice KG v0.6 — Unified 12D Hypercube](../archive/knowledge_graph/lattice_kg/v0_6/README.md)  
+   → [KG Coverage Dashboard](./KG_COVERAGE_DASHBOARD.md)
 2. **Playable archive game layer (Aetherforge)**  
-   → [Aetherforge Top-50 Taskboard](../projects/aetherforge-top50-taskboard-2026-05-26.md)  
+   → [Living Execution Board](../projects/LIVING_EXECUTION_BOARD.md) — always-current execution state  
    → [Aetherforge Archive Play Loop v0.1](../projects/AETHERFORGE_ARCHIVE_PLAY_LOOP_v0.1.md)
 3. **Open-source GPTDream++ protocol layer**  
    → [GPTDream++ Spec Vault](../archive/spec/gptdream/README.md)  
    → [GPTDream++ Public Package Guide](../archive/spec/gptdream/PUBLIC_PACKAGE_GUIDE_v0.1.md)
 
 All layers operate under the same governance boundary: candidate by default, canon only after ratification + adjudication.
+
+See [Canon Surface Map](./CANON_SURFACE_MAP.md) for the current authority model (website = canon, GitHub = workspace).
 
 ---
 
@@ -59,6 +62,7 @@ All layers operate under the same governance boundary: candidate by default, can
 This is a living, open archive. Contributions are welcome.
 
 - Read [CONTRIBUTING.md](../.github/CONTRIBUTING.md) for guidelines
+- Read [Contribution Playbooks](./CONTRIBUTION_PLAYBOOKS.md) for step-by-step guides per contribution type
 - Use [GitHub Issues](https://github.com/atlaslattice/manus-artifacts/issues) to propose artifacts, report errors, or request features
 - All PRs use the provided [PR template](../.github/PULL_REQUEST_TEMPLATE.md)
 

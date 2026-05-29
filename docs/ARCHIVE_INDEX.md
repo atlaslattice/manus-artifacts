@@ -87,6 +87,12 @@
 | [Provenance Requirements](./PROVENANCE_REQUIREMENTS.md) | Candidate |
 | [Artifact Lifecycle States](./ARTIFACT_LIFECYCLE_STATES.md) | Candidate |
 | [Universal Frontmatter Schema](./UNIVERSAL_FRONTMATTER_SCHEMA.md) | Candidate |
+| [Canon Surface Map](./CANON_SURFACE_MAP.md) | Candidate |
+| [Adjudication Trail](./ADJUDICATION_TRAIL.md) | Candidate |
+| [Quality Gate Policy](./QUALITY_GATE_POLICY.md) | Candidate |
+| [KG Coverage Dashboard](./KG_COVERAGE_DASHBOARD.md) | Candidate |
+| [Contribution Playbooks](./CONTRIBUTION_PLAYBOOKS.md) | Candidate |
+| [Fork Policy](../archive/forks/FORK_POLICY.md) | Candidate |
 
 ---
 

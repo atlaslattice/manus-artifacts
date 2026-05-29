@@ -5,6 +5,7 @@ status: candidate
 Public project surfaces and mission execution artifacts.
 
 ## Index
+- **[Living Execution Board](./LIVING_EXECUTION_BOARD.md)** — Always-current single source of operational truth (Intake → Triage → Active → Review → Shipped)
 - [Aetherforge 12×12 Hypercube Campaign (144 Missions)](./aetherforge-144-task-campaign-2026-05-27.md)
 - [Aetherforge Next-144 Execution Taskboard](./aetherforge-next144-taskboard-2026-05-28.md)
 - [Aetherforge Top-50 Taskboard](./aetherforge-top50-taskboard-2026-05-26.md)

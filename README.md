@@ -8,12 +8,19 @@ The **Atlas Lattice Foundation** is an independent AI governance and knowledge a
 
 ---
 
+- 🚀 **[New Here? Start with these](#-new-here-start-with-these)** · 📋 **[Living Execution Board](./projects/LIVING_EXECUTION_BOARD.md)** · 🗺️ **[Canon Surface Map](./docs/CANON_SURFACE_MAP.md)**
+
+---
+
 ## 🚀 New Here? Start with these
 
 - 📖 **[Start Here](./docs/START_HERE.md)** — The best first stop: who built this, what's in it, and how to navigate
 - 📂 **[Archive Index](./docs/ARCHIVE_INDEX.md)** — Complete directory of every major artifact with status markers
 - 📚 **[Glossary](./docs/GLOSSARY.md)** — Key terms, concepts, and abbreviations
+- 🏛️ **[Canon Surface Map](./docs/CANON_SURFACE_MAP.md)** — Authority layer map (website = canon, GitHub = workspace)
 - 🏛️ **[Canon Status Model](./docs/CANON_STATUS_MODEL.md)** — Repository governance state model and canon boundaries
+- 📋 **[Living Execution Board](./projects/LIVING_EXECUTION_BOARD.md)** — Always-current single source of operational truth
+- 🤝 **[Contribution Playbooks](./docs/CONTRIBUTION_PLAYBOOKS.md)** — Step-by-step guides for every contribution type
 - 🧩 **[Aetherforge 12×12 Hypercube Campaign (144 Missions)](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — Full world-class public roadmap across 12 faces
 - ⚡ **[Aetherforge Next-144 Execution Taskboard](./projects/aetherforge-next144-taskboard-2026-05-28.md)** — Immediate dependency-first execution queue and Top-25 strike sequence
 - 🗺️ **[Aetherforge Top-50 Taskboard](./projects/aetherforge-top50-taskboard-2026-05-26.md)** — Roadmap to world-class public archive status
