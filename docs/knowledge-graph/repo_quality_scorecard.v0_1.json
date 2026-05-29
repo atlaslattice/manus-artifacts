@@ -1,14 +1,14 @@
 {
   "schema_version": "0.1",
-  "generated_utc": "2026-05-29T03:31:41Z",
+  "generated_utc": "2026-05-29T16:07:23Z",
   "status_authority": "docs/knowledge-graph/artifact_registry.v0_1.json",
   "totals": {
     "tracked_artifact_files": 848,
     "registry_artifacts": 848,
     "graph_nodes": 848,
-    "graph_edges": 326,
+    "graph_edges": 1231,
     "graph_coverage_pct": 100.0,
-    "linked_artifacts_pct": 16.98,
+    "linked_artifacts_pct": 100.0,
     "top_level_readme_coverage_pct": 8.7
   },
   "status_counts": {

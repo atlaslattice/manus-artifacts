@@ -220,28 +220,35 @@ def resolve_repo_path(root: Path, current_rel_path: Path, raw_target: str) -> st
 
 def extract_links(root: Path, rel_path: Path, known_paths: set[str]) -> set[str]:
     rel_posix = rel_path.as_posix()
-    if rel_posix in GENERATED_LINKS:
-        return {target for target in GENERATED_LINKS[rel_posix] if target in known_paths}
-
-    abs_path = root / rel_path
     links: set[str] = set()
 
-    if rel_path.suffix.lower() == ".md":
-        for match in MARKDOWN_LINK_RE.finditer(load_text(abs_path)):
-            resolved = resolve_repo_path(root, rel_path, match.group(1))
-            if resolved in known_paths and resolved != rel_posix:
-                links.add(resolved)
-    elif rel_path.suffix.lower() in TEXT_SUFFIXES:
-        for match in TEXT_PATH_RE.finditer(load_text(abs_path)):
-            resolved = resolve_repo_path(root, rel_path, match.group("path"))
-            if resolved in known_paths and resolved != rel_posix:
-                links.add(resolved)
+    # Hardcoded cross-links for known generated files
+    if rel_posix in GENERATED_LINKS:
+        links.update(target for target in GENERATED_LINKS[rel_posix] if target in known_paths)
+    else:
+        abs_path = root / rel_path
+        if rel_path.suffix.lower() == ".md":
+            for match in MARKDOWN_LINK_RE.finditer(load_text(abs_path)):
+                resolved = resolve_repo_path(root, rel_path, match.group(1))
+                if resolved in known_paths and resolved != rel_posix:
+                    links.add(resolved)
+        elif rel_path.suffix.lower() in TEXT_SUFFIXES:
+            for match in TEXT_PATH_RE.finditer(load_text(abs_path)):
+                resolved = resolve_repo_path(root, rel_path, match.group("path"))
+                if resolved in known_paths and resolved != rel_posix:
+                    links.add(resolved)
 
-    parent_readme = rel_path.parent / "README.md"
-    if parent_readme != rel_path and parent_readme.as_posix() in known_paths:
-        links.add(parent_readme.as_posix())
-    elif rel_path.parent == Path(".") and rel_posix != "README.md" and "README.md" in known_paths:
-        links.add("README.md")
+    # Walk all ancestor directories and link to every README found so the
+    # entire graph forms one connected component ("one octopus, not legos").
+    p = rel_path.parent
+    while True:
+        ancestor_readme = p / "README.md"
+        ar_posix = ancestor_readme.as_posix()
+        if ar_posix != rel_posix and ar_posix in known_paths:
+            links.add(ar_posix)
+        if p == Path("."):
+            break
+        p = p.parent
 
     return links
 
@@ -267,7 +274,13 @@ def build_registry_bundle(root: Path, generated_utc: str | None = None) -> tuple
             linked_count += 1
 
         for target_path in links_to_paths:
-            relation = "contained_in" if Path(target_path).name == "README.md" and Path(target_path).parent == rel_path.parent else "references"
+            target_p = Path(target_path)
+            try:
+                rel_path.relative_to(target_p.parent)
+                is_ancestor_readme = target_p.name == "README.md"
+            except ValueError:
+                is_ancestor_readme = False
+            relation = "contained_in" if is_ancestor_readme else "references"
             graph_edges.append(
                 {
                     "from": artifact_id_by_path[rel_posix],
