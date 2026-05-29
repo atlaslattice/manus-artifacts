@@ -36,6 +36,7 @@ This repository contains research, health data, and system artifacts generated a
 - **[Council Reviews](./council-reviews/)** — External reviews and validation.
 - **[Council Brain Index](./archive/boot/COUNCIL_BRAIN_INDEX.md)** — Brain seat registry, guardrails, and canon boundary.
 - **[Governance Docs](./docs/governance/README.md)** — Canon lifecycle, registries, trust-state glossary, ratification procedures.
+- **[Lattice Hypercube Explainer](./docs/LATTICE_HYPERCUBE_12x12x12.md)** — Public-safe candidate explainer for the 12×12×12 lattice coordinate system.
 
 ### AtlasLattice World-Class Operating Core
 - **CouncilBrain (S2 review trail):** [`archive/boot/councilbrain/COUNCILBRAIN_S2_BOOT_REVIEW_TRAIL_2026-05-09.md`](./archive/boot/councilbrain/COUNCILBRAIN_S2_BOOT_REVIEW_TRAIL_2026-05-09.md)
