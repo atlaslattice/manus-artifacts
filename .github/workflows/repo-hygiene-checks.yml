@@ -58,6 +58,9 @@ jobs:
           repo = Path('.')
           md_files = [
               Path('README.md'),
+              Path('projects/README.md'),
+              Path('docs/START_HERE.md'),
+              Path('docs/ARCHIVE_INDEX.md'),
               Path('.github/CONTRIBUTING.md'),
               Path('archive/boot/gptbrain/GPTBRAIN_INDEX_OF_INDEXES_2026-05-26.md'),
               Path('archive/boot/atlasbrain/ATLASBRAIN_INDEX_2026-05-26.md'),
@@ -91,6 +94,55 @@ jobs:
               print('\n'.join(failures))
               raise SystemExit(1)
           print(f'markdown-link-check-ok: {len(md_files)} markdown files scanned')
+          PY
+
+      - name: Board routing integrity checks
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          required_refs = {
+              Path('README.md'): [
+                  './projects/aetherforge-144-task-campaign-2026-05-28.md',
+                  './projects/aetherforge-top10-taskboard-2026-05-28.md',
+                  './projects/aetherforge-game-world/AETHERFORGE_TOP100_QUEST_LEDGER_v0.1.md',
+              ],
+              Path('projects/README.md'): [
+                  'projects/aetherforge-144-task-campaign-2026-05-28.md',
+                  'projects/aetherforge-top10-taskboard-2026-05-28.md',
+                  'projects/aetherforge-game-world/AETHERFORGE_TOP100_QUEST_LEDGER_v0.1.md',
+              ],
+          }
+          stale_refs = {
+              Path('projects/README.md'): [
+                  'aetherforge-top10-taskboard-2026-05-26.md',
+                  'aetherforge-144-task-campaign-2026-05-27.md',
+              ],
+          }
+
+          failures = []
+          for path, refs in required_refs.items():
+              if not path.exists():
+                  failures.append(f'missing board surface: {path}')
+                  continue
+              text = path.read_text(encoding='utf-8', errors='ignore')
+              for ref in refs:
+                  if ref not in text:
+                      failures.append(f'{path}: missing required board reference {ref}')
+
+          for path, refs in stale_refs.items():
+              if not path.exists():
+                  failures.append(f'missing board surface: {path}')
+                  continue
+              text = path.read_text(encoding='utf-8', errors='ignore')
+              for ref in refs:
+                  if ref in text:
+                      failures.append(f'{path}: stale board reference {ref}')
+
+          if failures:
+              print('\n'.join(failures))
+              raise SystemExit(1)
+          print('board-routing-integrity-check-ok')
           PY
 
       - name: Warn on stale dated docs

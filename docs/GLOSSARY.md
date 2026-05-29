@@ -19,6 +19,5 @@ PURPOSE: define high-frequency project terms for contributors and public readers
 - **Metatron’s Cube framing**: topology style for organizing work as center + rings.
 - **ORCS**: route and trust-state execution model for moving claims/artifacts across lanes.
 - **REM-8**: dream-cycle protocol with wake report extraction target.
-- **TIDELOCKBrain**: active S7 implementation/work-log lane under `archive/boot/gptbrain/agents/TIDELOCKBrain/`.
+- **TIDELOCKBrain**: active S7 implementation/work-log lane with canonical index in `archive/boot/gptbrain/TIDELOCKBrain/` and legacy artifacts in `archive/boot/gptbrain/agents/TIDELOCKBrain/`.
 - **Wake report**: structured post-dream extraction artifact documenting actionable deltas and risks.
-

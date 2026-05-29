@@ -23,7 +23,7 @@ Thanks for contributing.
 
 Run from:
 
-`/home/runner/work/manus-artifacts/manus-artifacts/archive/boot/gptbrain/reference_impl`
+`archive/boot/gptbrain/reference_impl`
 
 ```bash
 python -m pytest -q

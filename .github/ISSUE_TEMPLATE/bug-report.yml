@@ -1,0 +1,55 @@
+name: Bug report
+description: Report a defect in repository behavior, routing, workflows, or validation.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please keep claims source-linked and mark canon status clearly.
+  - type: input
+    id: lane
+    attributes:
+      label: Aetherforge lane/module
+      description: Example: M6 Tests, M8 Knowledge Graph, M9 Lore Library
+      placeholder: Mx lane
+    validations:
+      required: true
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      placeholder: One-line bug summary
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      description: Include exact commands, files, and observed output.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and references
+      description: Link related files, workflows, logs, or test output.
+    validations:
+      required: true
+  - type: dropdown
+    id: canon
+    attributes:
+      label: Canon status of affected artifact(s)
+      options:
+        - candidate
+        - ratified canon
+        - unknown
+    validations:
+      required: true

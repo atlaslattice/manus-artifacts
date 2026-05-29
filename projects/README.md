@@ -17,6 +17,10 @@ PURPOSE: single routing map for Aetherforge campaign boards
 4. **Top-10 sprint board (current sprint)**  
    `projects/aetherforge-top10-taskboard-2026-05-28.md`
 
+Status semantics across boards:
+- `done` = completed in merged repo state
+- `pending` = planned but not yet completed
+
 ## Project lanes
 
 - `projects/free-bank/`

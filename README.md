@@ -44,7 +44,7 @@ graph TD
 - **[Free Bank](./projects/free-bank/)** — Banking revolution and financial sovereignty.
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
-- **[Aetherforge Top-10 Taskboard](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — Task valuation, bounty/trophy model, and deployed solution map.
+- **[Aetherforge Top-10 Taskboard (2026-05-26)](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — Historical valuation board (archived snapshot).
 - **[Aetherforge Game World (Module 8)](./projects/aetherforge-game-world/README.md)** — Quest taxonomy, Archive Bowl index, Omnispec candidate framing, and onboarding template.
 - **[Aetherforge Top-100 Quest Ledger](./projects/aetherforge-game-world/AETHERFORGE_TOP100_QUEST_LEDGER_v0.1.md)** — Optimal next-100 tasks across all repo components in Metatron's Cube ring topology.
 - **[Aetherforge 144-Task Campaign (2026-05-28)](./projects/aetherforge-144-task-campaign-2026-05-28.md)** — 12 waves of 12 tasks sequenced for world-class execution.

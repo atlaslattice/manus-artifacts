@@ -13,6 +13,7 @@ CANON: NO (candidate execution plan)
 - Mission: functional knowledge graph + playable Aetherforge + GPTDream++ open-source gift
 - Principle: each wave unlocks the next ring
 - Scope: 144 sequenced tasks from W1-01 through W12-12
+- Status semantics: `[x]` = `done`; `[ ]` = `pending`
 
 ## Wave checklist
 

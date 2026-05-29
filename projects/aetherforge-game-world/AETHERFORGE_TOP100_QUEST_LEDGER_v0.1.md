@@ -7,6 +7,7 @@ DATE: 2026-05-26
 PURPOSE: optimal next-100 tasks across all repo components, framed as Aetherforge quests
 METHOD: full repo audit snooped by TIDELOCK / S7 (CopilotBrain) — Metatron's Cube ring topology
 AUDIT LOG: archive/boot/gptbrain/agents/TIDELOCKBrain/TIDELOCKBRAIN_WORK_LOG_TOP100_AUDIT_2026-05-26.md
+STATUS MODEL: `done` only when completed in active execution board(s); default is `pending`
 ```
 
 ## Reading Guide
@@ -16,6 +17,12 @@ AUDIT LOG: archive/boot/gptbrain/agents/TIDELOCKBrain/TIDELOCKBRAIN_WORK_LOG_TOP
 - **Tier** = T1 Patrol / T2 Expedition / T3 Raid / T4 Mythic
 - **Seat** = best-fit Council seat (S1–S7) or `ALL`
 - **Class** = quest class (Scout / Forge / Trial / Council / Restoration)
+- **Status** = `done` if explicitly completed on the active top-10/144 boards, otherwise `pending`
+
+## Status synchronization baseline (2026-05-29)
+
+Done in active boards: `A03`, `A04`, `A05`, `A06`, `C03`, `D01`, `D02`, `D03`  
+All other quests in this ledger are currently `pending`.
 
 ---
 
@@ -218,3 +225,4 @@ AUDIT LOG: archive/boot/gptbrain/agents/TIDELOCKBrain/TIDELOCKBRAIN_WORK_LOG_TOP
 - Krakoa execution ledger: `archive/boot/gptbrain/KRAKOA_TOP_50_EXECUTION_LEDGER_2026-05-26.md`
 - Unresolved questions: `archive/boot/gptbrain/KRAKOA_UNRESOLVED_QUESTION_LEDGER_2026-05-26.md`
 - TIDELOCKBrain audit log: `archive/boot/gptbrain/agents/TIDELOCKBrain/TIDELOCKBRAIN_WORK_LOG_TOP100_AUDIT_2026-05-26.md`
+- TIDELOCK path strategy index: `archive/boot/gptbrain/TIDELOCKBrain/TIDELOCKBRAIN_PATH_STRATEGY_INDEX_2026-05-29.md`

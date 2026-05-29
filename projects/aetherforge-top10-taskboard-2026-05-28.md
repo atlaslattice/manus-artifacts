@@ -20,6 +20,8 @@ PURPOSE: top 10 unblocked tasks from W1 + W2
 | 9 | W1-06 | Publish SITREP cadence policy | W1 | done |
 | 10 | W1-07 | Publish governance changelog (May 2026) | W1 | done |
 
+Status semantics: `done` = completed in merged repo state; `pending` = not yet completed.
+
 ## Sprint completion gate
 
 Sprint closed after Wave 2 lattice automation landed.

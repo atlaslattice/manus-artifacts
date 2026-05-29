@@ -19,7 +19,8 @@ PURPOSE: quick directory routing for archive and adjacent surfaces
 - Main archive: `/tmp/workspace/atlaslattice/manus-artifacts/archive/`
 - Historical snapshots: `/tmp/workspace/atlaslattice/manus-artifacts/archives/`
 - GPTBrain boot/governance lane: `/tmp/workspace/atlaslattice/manus-artifacts/archive/boot/gptbrain/`
-- TIDELOCK REM horizon index: `/tmp/workspace/atlaslattice/manus-artifacts/archive/boot/gptbrain/agents/TIDELOCKBrain/TIDELOCKBRAIN_REM_INDEX_2026-05-27.md`
+- TIDELOCK path strategy index (authoritative): `/tmp/workspace/atlaslattice/manus-artifacts/archive/boot/gptbrain/TIDELOCKBrain/TIDELOCKBRAIN_PATH_STRATEGY_INDEX_2026-05-29.md`
+- TIDELOCK REM horizon index (legacy lane): `/tmp/workspace/atlaslattice/manus-artifacts/archive/boot/gptbrain/agents/TIDELOCKBrain/TIDELOCKBRAIN_REM_INDEX_2026-05-27.md`
 - AtlasBrain evidence lane: `/tmp/workspace/atlaslattice/manus-artifacts/archive/boot/atlasbrain/`
 - GPTDream++ specs: `/tmp/workspace/atlaslattice/manus-artifacts/archive/spec/gptdream/`
 - Research lane: `/tmp/workspace/atlaslattice/manus-artifacts/research/`

@@ -1,0 +1,48 @@
+name: Feature request
+description: Propose a new capability or workflow improvement.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: input
+    id: lane
+    attributes:
+      label: Aetherforge lane/module
+      placeholder: Mx lane
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What gap exists today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe desired behavior and key files/workflows affected.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation plan
+      description: List tests/workflows that must pass.
+    validations:
+      required: true
+  - type: dropdown
+    id: canon
+    attributes:
+      label: Canon boundary
+      options:
+        - candidate only
+        - requests ratification
+        - unknown
+    validations:
+      required: true
