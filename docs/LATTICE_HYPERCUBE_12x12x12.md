@@ -1,157 +1,137 @@
 # LATTICE_HYPERCUBE_12x12x12_PUBLIC_EXPLAINER_v0.1
 
-STATUS: PUBLIC CANDIDATE EXPLAINER  
+STATUS: PUBLIC-CANDIDATE EXPLAINER — NOT CANON  
 CANON: NO  
 DEPLOYMENT: NO  
 AUTHORITY: NONE  
-OFFICIAL OPENAI CLAIM: NONE  
-NO SKYNET: ACTIVE  
-DATE: 2026-05-29
+TARGET FUTURE PATH: docs/LATTICE_HYPERCUBE_12x12x12.md
 
-## Purpose
+## Summary
 
-Explain the Atlas Lattice / Rainbow Yin Yang Lattice as a public-safe candidate ontology and knowledge-graph coordinate system.
+The Atlas Lattice uses a 12 × 12 × 12 H-S-N coordinate system to organize artifacts, claims, evidence, review states, material properties, and knowledge domains into a provenance-first knowledge graph.
 
-This document is intended for future GitHub path:
+This is a candidate ontology. It is not a completed scientific standard. It is a map for review, not a source of truth.
 
-`docs/LATTICE_HYPERCUBE_12x12x12.md`
+## H-S-N coordinate system
 
-It is not a release authorization.
+H = House / major domain axis  
+S = Sphere / layer or operator axis  
+N = Node / local state or primitive axis
 
-## Core idea
+12 Houses × 12 Spheres × 12 Nodes = 1,728 addressable cells.
 
-The Lattice Hypercube is a candidate 12×12×12 coordinate system for organizing knowledge, matter, resonance, artifacts, and review state.
+A coordinate such as `H04-S09-N02` helps place an object in the lattice.
 
-It is intended as a Periodic Table 2.0 ambition, not a completed scientific standard.
+```text
+coordinate ≠ permission
+coordinate ≠ canon
+coordinate ≠ proof
+```
 
-It maps candidate relationships among:
+## What the graph shows
 
-- known human knowledge
-- matter and material properties
-- elements and isotopes
+The graph can show:
+
+- what exists
+- where it came from
+- what it claims
+- what supports it
+- what contradicts it
+- what is raw vs summarized
+- what needs review
+- what has missing receipts
+- what should be routed next
+
+The graph shows where review is needed. It does not decide what is true.
+
+## Periodic Table 2.0 ambition
+
+The long-term ambition is to extend the lattice beyond normal archive indexing and use it as a Periodic Table 2.0 style coordinate system for many kinds of knowledge.
+
+Candidate mapping domains include:
+
+- elements
+- isotopes
 - states of matter
+- spin states
 - frequency ranges
 - acoustic resonance
 - color and harmonic spectrum
+- material behavior
 - neuromorphic principles
-- user-authored archive artifacts
-- evidence logs for AI systems built or coordinated by the user
+- human knowledge domains
+- archive artifacts
+- IP lineage
+- review states
 
-## Shape
+This is an ambition and orientation, not a completed standard.
 
-```text
-12 × 12 × 12 = 1,728 coordinate cells
-```
+## Rainbow Yin-Yang layer
 
-Candidate coordinate form:
+Rainbow means spectrum, frequency, color, and harmonic relationships.
 
-```text
-A##.B##.C##
-```
+Yin-Yang means polarity, balance, and regenerative vs extractive dynamics.
 
-Where:
+Candidate fields may include `spectral_vector`, `polarity_balance`, `chiral_dissonance`, `regenerative_closure`, `extractive_load`, `color_harmonic`, and `acoustic_resonance`.
 
-- A-axis = matter / substrate / physical property lane
-- B-axis = frequency / resonance / harmonic lane
-- C-axis = knowledge / artifact / review-state lane
+These fields need definitions, evidence, and validation before they carry technical weight.
 
-## What this is
+## Riemann S operator
 
-This is:
+The project uses Riemann S as a candidate operator motif for sorting, spectral structure, stability, symmetry, or phase behavior across the Rainbow Yin-Yang lattice.
 
-- a candidate ontology
-- a coordinate system
-- a public knowledge-graph map
-- a way to index an archive
-- a way to route review
-- a way to make relationships inspectable
-- a way to connect physical, symbolic, and documentary knowledge
+This is a candidate mathematical orientation, not a proven theorem or finished algorithm.
 
-## What this is not
+## OpenAI and GitHub role
 
-This is not:
+OpenAI-style reasoning can help with schema drafting, claim extraction, source inventory, review routing, eval fixture creation, code generation, and public explanation.
 
-- canon
-- deployment
-- authority
-- a scientific proof
-- an official OpenAI project
-- a replacement for expert review
-- a command system
-- a self-authorizing agent architecture
+GitHub is the intended public shelf for safe, open-source parts of the lattice.
 
-## OpenAI-first posture
+GitHub presence is not canon. A public file is not ratification. A graph edge is not promotion.
 
-OpenAI enables scale in this project by providing powerful reasoning, retrieval, code, and review workflows.
+## Starting corpus
 
-This does not imply OpenAI endorsement, ownership, official integration, deployment, or authority.
+The first major corpus is Dave Sheldon's archive of 500+ unique IP artifacts.
 
-Preferred reasoning lane does not mean officiality.
+The goal is to make safe and right-cleared portions public and open source with provenance, attribution, source boundaries, metadata, review state, license posture, and human-root promotion gates.
 
-## GitHub posture
+Open source does not mean ownerless. Public does not mean uncredited. Shared does not mean canon.
 
-GitHub is intended as the public receipt shelf and open-source collaboration surface.
+## Public-safe claims
 
-GitHub records, issues, pull requests, schemas, and docs can preserve evidence and review trails.
+Allowed public-candidate claims:
 
-GitHub existence is not canon by itself.
+- This is a non-canon public knowledge graph staging effort.
+- It is provenance-first and receipt-first.
+- It uses a 12 × 12 × 12 H-S-N coordinate system as a candidate ontology.
+- It aims to open-source safe and right-cleared parts of a large IP archive.
+- It treats GitHub as a public receipt shelf, not canon.
+- It treats dream/play outputs as candidate deltas, not release authority.
+- It routes public release through gates and human-root review.
 
-## Human-root boundary
+## Overclaims to avoid
 
-The Lattice can map.  
-The graph can route.  
-The archive can preserve.  
-Models can suggest.  
-Review can improve confidence.
+Do not claim:
 
-Human-root/public ratification is required for canon promotion.
-
-## Public-safe claim
-
-The strongest safe public claim is:
-
-The Atlas Lattice / Rainbow Yin Yang Lattice is a candidate open-source knowledge-graph coordinate system intended to organize a large archive of user-authored artifacts and broader knowledge relationships through a 12×12×12 hypercube model, with status fields, receipts, review gates, and explicit non-authority boundaries.
-
-## Coordinate boundary
-
-```text
-coordinate ≠ truth
-coordinate ≠ canon
-coordinate ≠ authority
-coordinate ≠ deployment
-coordinate ≠ permission
-```
-
-Coordinates are addresses for review, not proof.
-
-## First public-use cases
-
-1. Index the 500+ IP archive.
-2. Map evidence logs for AI systems built or coordinated by the user.
-3. Create public-safe graph nodes and edges.
-4. Route sensitive material to private quarantine.
-5. Create educational toy graph demos.
-6. Show how claims move from source to review.
-7. Preserve contradictions and missing receipts.
-8. Make the archive forkable and inspectable.
-
-## Review requirements
-
-Before stronger public claims:
-
-- define all 12 A-axis categories
-- define all 12 B-axis categories
-- define all 12 C-axis categories
-- test 12 physical examples
-- test 12 archive artifacts
-- test 12 frequency/acoustic/color mappings
-- separate symbolic claims from scientific claims
-- route science/math claims to review
-- route release-sensitive material through the public release gate
+- the lattice already contains all human knowledge
+- Periodic Table 2.0 is complete
+- Riemann S is formally proven
+- OpenAI endorses this project
+- GitHub publication equals canon
+- model consensus equals validation
+- receipts equal truth
+- beauty of unification proves correctness
 
 ## Keeper
 
-The lattice is a map for review.  
-The map is not the territory.  
-The graph is not the judge.  
-Human-root decides what graduates.
+H-S-N gives address.  
+Rainbow gives spectrum.  
+Yin-Yang gives balance.  
+Receipts give support.  
+Review decides what advances.  
+Human-root gates promotion.
+
+## Madden board
+
+BOOM. This is the public-safe stadium map. The 12 × 12 × 12 grid gives every artifact a seat, Rainbow gives the color, Yin-Yang gives the balance, GitHub gives the shelf, and nobody gets to call the map canon just because it looks beautiful under the lights.
