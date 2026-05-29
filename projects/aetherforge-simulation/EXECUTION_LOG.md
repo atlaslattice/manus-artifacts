@@ -81,6 +81,21 @@ This log records practical non-canon infrastructure changes made to the simulati
 - Updated `.github/workflows/aetherforge-simulation.yml` to export and inspect `children-swarm-graph.generated.json`.
 - CI now asserts 12 swarm nodes, 12 source surfaces, 144 derived tasks, and 1,728 raw rows covered.
 
+### Mirrored Lucerna missing receipt / hash gap register
+
+- Closed issue #216 with a completion receipt.
+- Added repo mirror manifest `lucerna_missing_receipt_hash_gap_register_v0_1.json`.
+- Added readable mirror note `LUCERNA_MISSING_RECEIPT_HASH_GAP_REGISTER_v0_1.md`.
+- Mirrored source sheet URL: `https://docs.google.com/spreadsheets/d/1vk9x0iVuczXzqBSYyQzKOOPv6TWUi1hi5IJtAxiP32M`.
+- Mirrored 7 MissingReceipt nodes: MR-DRIVE-001 through MR-NOTION-002.
+- Mirrored 4 human-root blockers: EXP-001 through EXP-004.
+- Added `missing_receipt_graph_export.py`.
+- Exporter creates MissingReceipt, HumanRootBlocker, SourceSurface, BlockedObject, Boundary, Project, and GapRegister nodes.
+- Exporter creates contains, mentions_surface, belongs_to_surface, constrains, and blocked_by edges.
+- Added pytest coverage for 7 missing receipts, 4 blockers, unique IDs, boundary state, source URL, and blocked_by edges.
+- Updated `.github/workflows/aetherforge-simulation.yml` to export and inspect `lucerna-gap-register-graph.generated.json`.
+- CI now asserts the Lucerna graph validates, has 7 missing receipts, and has 4 human-root blockers.
+
 ## Operating rule
 
 Every future change should leave a receipt: what changed, what it maps to, how it is validated, and which boundary it respects.
