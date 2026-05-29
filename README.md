@@ -71,6 +71,7 @@ graph TD
 - **[Start Here](./docs/START_HERE.md)** — First-stop orientation for contributors and public readers.
 - **[Archive Index](./docs/ARCHIVE_INDEX.md)** — Directory routing map across archive and adjacent lanes.
 - **[Glossary](./docs/GLOSSARY.md)** — Shared vocabulary for governance, Aetherforge, and GPTDream++ protocols.
+- **[Lattice Hypercube 12×12×12](./docs/LATTICE_HYPERCUBE_12x12x12.md)** — Public-safe candidate explainer for the Atlas Lattice / Rainbow Yin Yang Lattice.
 
 ### About
 - **[David Sheldon](./about/david-sheldon.md)** — Visionary and system architect.
