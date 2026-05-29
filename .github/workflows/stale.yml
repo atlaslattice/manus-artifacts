@@ -1,0 +1,50 @@
+name: Stale Issues and PRs
+
+on:
+  schedule:
+    # Run daily at 06:00 UTC
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    name: Mark and close stale items
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9
+        with:
+          # Issues: warn after 90 days, close after 30 more (archive cadence)
+          days-before-issue-stale: 90
+          days-before-issue-close: 30
+          stale-issue-label: "stale"
+          stale-issue-message: >
+            This issue has been open for 90 days without activity. It will be
+            closed in 30 days if there is no further update. If this is still
+            relevant, please leave a comment or remove the `stale` label.
+          close-issue-message: >
+            Closing due to inactivity. This issue may be re-opened if it
+            becomes relevant again. Ratified canon for this area should be
+            referenced in any re-open request.
+
+          # PRs: warn after 30 days, close after 14 more (tighter cadence)
+          days-before-pr-stale: 30
+          days-before-pr-close: 14
+          stale-pr-label: "stale"
+          stale-pr-message: >
+            This PR has been open for 30 days without activity. It will be
+            closed in 14 days if there is no further update. Please rebase,
+            update, or comment to keep it alive.
+          close-pr-message: >
+            Closing due to inactivity. This PR can be re-opened if work
+            resumes.
+
+          # Never mark items with these labels as stale
+          exempt-issue-labels: "pinned,council-review,security,canon-candidate"
+          exempt-pr-labels: "pinned,security,do-not-close"
+
+          # Limit actions per run to avoid rate limits
+          operations-per-run: 30

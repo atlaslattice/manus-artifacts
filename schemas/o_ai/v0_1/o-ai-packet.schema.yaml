@@ -1,0 +1,87 @@
+schema_name: o-ai-packet
+schema_version: "0.1"
+additionalProperties: false
+type: object
+required:
+  - raw_export_status
+  - thread_time_range
+  - access_scope
+  - epistemic_label
+  - authority_scope
+  - gates
+properties:
+  raw_export_status:
+    type: string
+    enum: [full_raw, partial_raw, summary_only, unavailable]
+  thread_time_range:
+    type: object
+    required: [start, end, timezone]
+    additionalProperties: false
+    properties:
+      start: {type: string}
+      end: {type: string}
+      timezone: {type: string}
+  access_scope:
+    type: object
+    required: [visible_sources, unavailable_sources, assumed_context]
+    additionalProperties: false
+    properties:
+      visible_sources:
+        type: array
+        items: {type: string}
+      unavailable_sources:
+        type: array
+        items: {type: string}
+      assumed_context:
+        type: array
+        items: {type: string}
+  epistemic_label:
+    type: string
+  authority_scope:
+    type: string
+  public_use_status:
+    type: string
+    enum: [none, source_incomplete, source_complete]
+  packet_kind:
+    type: string
+    enum: [analysis, execution_request]
+  gates:
+    type: object
+    additionalProperties: false
+    required:
+      - provenance_gate
+      - safety_gate
+      - governance_gate
+      - data_residency_gate
+      - human_permission_gate
+      - receipt_gate
+    properties:
+      provenance_gate: {type: string, enum: [pass, fail]}
+      safety_gate: {type: string, enum: [pass, fail]}
+      governance_gate: {type: string, enum: [pass, fail]}
+      data_residency_gate: {type: string, enum: [pass, fail]}
+      human_permission_gate: {type: string, enum: [pass, fail]}
+      receipt_gate: {type: string, enum: [pass, fail]}
+allOf:
+  - if:
+      properties:
+        raw_export_status:
+          const: summary_only
+    then:
+      properties:
+        public_use_status:
+          not:
+            const: source_complete
+  - if:
+      properties:
+        packet_kind:
+          const: execution_request
+    then:
+      properties:
+        gates:
+          properties:
+            provenance_gate: {const: pass}
+            safety_gate: {const: pass}
+            governance_gate: {const: pass}
+            human_permission_gate: {const: pass}
+            receipt_gate: {const: pass}

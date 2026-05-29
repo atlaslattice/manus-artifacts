@@ -1,0 +1,55 @@
+# Contributing to manus-artifacts
+
+## Canon Boundary Rules
+
+**GitHub is the durable canonical substrate.** Google Drive and Notion are
+relay/working-vault layers — not authority sources. Always commit to GitHub
+first; downstream sync to Drive/Notion follows.
+
+## Before You Change Anything
+
+1. Read the master brain map: [`archive/boot/COUNCIL_BRAIN_INDEX.md`](../archive/boot/COUNCIL_BRAIN_INDEX.md)
+2. Read the relevant seat spec in [`archive/boot/seats/`](../archive/boot/seats/)
+3. For swarm and seat assignments, review available specs in [`archive/boot/seats/`](../archive/boot/seats/)
+4. For canon context, cross-check the index at [`archive/boot/COUNCIL_BRAIN_INDEX.md`](../archive/boot/COUNCIL_BRAIN_INDEX.md)
+5. For REM-8 / dream-protocol changes read: [`archive/boot/gptbrain/REM8_DREAM_PROTOCOL.md`](../archive/boot/gptbrain/REM8_DREAM_PROTOCOL.md)
+
+## Local Validation
+
+Run these before pushing if you touched `archive/boot/gptbrain/**`:
+
+```bash
+cd archive/boot/gptbrain/reference_impl
+python -m pytest -q
+bash run_checks.sh
+```
+
+Validate workflow YAML locally:
+
+```bash
+python - <<'EOF'
+import yaml, pathlib, sys
+errors = []
+for f in pathlib.Path(".github/workflows").glob("*.yml"):
+    try:
+        yaml.safe_load(f.read_text())
+    except yaml.YAMLError as e:
+        errors.append(f"{f}: {e}")
+if errors:
+    [print(f"ERROR: {e}", file=sys.stderr) for e in errors]
+    sys.exit(1)
+print("All workflow files are valid YAML.")
+EOF
+```
+
+For a full onboarding path, see: [`docs/contributor-onboarding-journey.md`](../docs/contributor-onboarding-journey.md)
+
+## Pull Request Checklist
+
+- [ ] No merge-conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`) in committed files
+- [ ] No secrets, credentials, or API keys committed
+- [ ] 1000-year reader test: an uninitiated reader can find and understand the change path from repo docs in about one hour
+- [ ] Workflow YAML files pass the syntax check above
+- [ ] Changes to `archive/` are **additive only** — never delete canon documents
+- [ ] GPTBrain checks pass if `archive/boot/gptbrain/**` was modified
+- [ ] Tucker/Gemini adapter remains `REPO_TRACE_ONLY, DRY_RUN_ONLY` unless explicitly promoted

@@ -1,0 +1,40 @@
+name: Feature request
+description: Propose a new capability that improves quality, automation, or governance.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem statement
+      description: What pain point are we solving?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe outcomes and acceptance criteria.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: GitHub/Microsoft benefit
+      description: Explain expected leverage (security, velocity, compliance, automation).
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - CI/CD
+        - Security
+        - Governance
+        - Documentation
+        - Automation
+        - Data/Artifacts
+    validations:
+      required: true

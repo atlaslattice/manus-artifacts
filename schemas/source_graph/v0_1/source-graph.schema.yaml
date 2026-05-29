@@ -1,0 +1,38 @@
+schema_name: source-graph
+schema_version: "0.1"
+type: object
+required: [nodes, edges]
+node_types: [raw_source, parsed_fact, claim, evidence, review, action]
+edge_types: [derived_from, supports, contradicts, supersedes, quarantines]
+properties:
+  nodes:
+    type: array
+    items:
+      type: object
+      required: [id, type]
+      properties:
+        id: {type: string}
+        type:
+          type: string
+          enum: [raw_source, parsed_fact, claim, evidence, review, action]
+        label: {type: string}
+        raw_export_status:
+          type: string
+          enum: [full_raw, partial_raw, summary_only, unavailable]
+        public_use_status:
+          type: string
+          enum: [none, source_incomplete, source_complete, blocked]
+        blocked_reason: {type: string}
+  edges:
+    type: array
+    items:
+      type: object
+      required: [src, dst, type]
+      properties:
+        src: {type: string}
+        dst: {type: string}
+        type:
+          type: string
+          enum: [derived_from, supports, contradicts, supersedes, quarantines]
+x_constraints:
+  - no_claim_without_source_edge

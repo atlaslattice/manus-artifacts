@@ -1,0 +1,17 @@
+raw_export_status: summary_only
+thread_time_range: {start: "2026-05-20T00:00:00Z", end: "2026-05-20T01:00:00Z", timezone: "UTC"}
+access_scope:
+  visible_sources: ["thread-summary"]
+  unavailable_sources: ["raw-export"]
+  assumed_context: ["partial context"]
+epistemic_label: candidate
+authority_scope: bounded
+public_use_status: source_incomplete
+packet_kind: analysis
+gates:
+  provenance_gate: pass
+  safety_gate: pass
+  governance_gate: pass
+  data_residency_gate: pass
+  human_permission_gate: pass
+  receipt_gate: pass

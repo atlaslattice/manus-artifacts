@@ -1,0 +1,55 @@
+name: Repo hygiene checks
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  hygiene:
+    name: Conflict markers & workflow YAML syntax
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for merge-conflict markers
+        run: |
+          set +e
+          FOUND=$(grep -rn --include="*.md" --include="*.py" \
+                           --include="*.yml" --include="*.yaml" \
+                           --include="*.json" --include="*.ts" \
+                           -e "^<<<<<<<" -e "^=======$" -e "^>>>>>>>" .)
+          GREP_EXIT=$?
+          set -e
+          if [ "$GREP_EXIT" -gt 1 ]; then
+            echo "ERROR: grep failed while scanning for conflict markers." >&2
+            exit "$GREP_EXIT"
+          fi
+          if [ "$GREP_EXIT" -eq 0 ]; then
+            echo "ERROR: merge-conflict markers found:" >&2
+            echo "$FOUND" >&2
+            exit 1
+          fi
+          echo "No conflict markers found."
+
+      - name: Validate workflow YAML syntax
+        run: |
+          pip install pyyaml -q
+          python - <<'EOF'
+          import sys, yaml, pathlib
+          errors = []
+          wf_dir = pathlib.Path(".github/workflows")
+          files = list(wf_dir.glob("*.yml")) + list(wf_dir.glob("*.yaml"))
+          for f in files:
+              try:
+                  yaml.safe_load(f.read_text())
+              except yaml.YAMLError as e:
+                  errors.append(f"{f}: {e}")
+          if errors:
+              for e in errors:
+                  print(f"ERROR: {e}", file=sys.stderr)
+              sys.exit(1)
+          print(f"All {len(files)} workflow file(s) are valid YAML.")
+          EOF

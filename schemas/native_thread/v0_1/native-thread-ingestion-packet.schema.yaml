@@ -1,0 +1,28 @@
+schema_name: native-thread-ingestion-packet
+schema_version: "0.1"
+type: object
+required:
+  - seat_name
+  - model_surface
+  - source_thread_label
+  - thread_time_range
+  - raw_export_status
+  - access_scope
+  - strongest_safe_claim
+  - next_action
+properties:
+  thread_time_range:
+    type: object
+    required: [start, end, timezone]
+  raw_export_status:
+    type: string
+    enum: [full_raw, partial_raw, summary_only, unavailable]
+  access_scope:
+    type: object
+    required: [visible_sources, unavailable_sources, assumed_context]
+  canon_status:
+    type: string
+    default: not_canon
+  deployment_status:
+    type: string
+    default: not_deployable

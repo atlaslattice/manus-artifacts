@@ -1,0 +1,111 @@
+name: Aetherforge Mission Intake
+description: >
+  Propose a high-impact mission, initiative, or system-level change for
+  Aetherforge council consideration. This template is for proposals that
+  span multiple subsystems or require council ratification.
+title: "[MISSION] <short title>"
+labels:
+  - "mission-intake"
+  - "council-review"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Aetherforge Mission Intake
+
+        Use this template for proposals that are **strategic** in scope —
+        spanning multiple subsystems, requiring council ratification, or
+        proposing a new canon artifact. For bugs or feature requests in a
+        single component, use the appropriate template.
+
+  - type: input
+    id: mission-title
+    attributes:
+      label: Mission title
+      description: A short, memorable name for this mission.
+      placeholder: "e.g. Aluminum OS v5.0 Constitutional Reboot"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority tier
+      description: How urgent and impactful is this mission?
+      options:
+        - "P0 — Critical / blocking"
+        - "P1 — High impact, time-sensitive"
+        - "P2 — High impact, not urgent"
+        - "P3 — Exploratory / research"
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What outcome does this mission achieve? What is the world-state after success?
+      placeholder: "After this mission, ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and affected subsystems
+      description: Which parts of the archive or systems are affected?
+      placeholder: |
+        - archive/boot/gptbrain/
+        - aluminum-os/
+        - projects/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why now? What problem does this solve or opportunity does it seize?
+    validations:
+      required: true
+
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: Success criteria
+      description: How will we know this mission is complete?
+      placeholder: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and dependencies
+      description: What could go wrong? What must be true for this to succeed?
+
+  - type: dropdown
+    id: canon-change
+    attributes:
+      label: Does this require canon promotion?
+      description: Will any output require full council ratification?
+      options:
+        - "Yes — council ratification required"
+        - "No — candidate artifacts only"
+        - "Unsure"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: pre-flight
+    attributes:
+      label: Pre-flight checks
+      options:
+        - label: I have reviewed existing canon artifacts for conflicts.
+          required: true
+        - label: I have checked the open missions list for duplicates.
+          required: true
+        - label: I understand that no artifact is canon until adjudicated by @atlaslattice.
+          required: true

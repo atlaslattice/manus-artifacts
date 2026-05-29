@@ -1,0 +1,13 @@
+schema_version: "0.1"
+routes:
+  chatgpt_synthesis: [LucernaBrain, RootglassBrain]
+  codex_patch: [TIDELOCKBrain, HashlightBrain]
+  raw_export: [HashlightBrain, AtlasBrain]
+  benchmark_claim: [AtlasBrain, LucernaBrain]
+  public_statement: [LucernaBrain, governance_review]
+  execution_request:
+    - D-Φ-1
+    - CAS-001-A
+    - human_gate
+    - Atlas_ORCS_audit_state
+    - TIDELOCK_if_repo_related

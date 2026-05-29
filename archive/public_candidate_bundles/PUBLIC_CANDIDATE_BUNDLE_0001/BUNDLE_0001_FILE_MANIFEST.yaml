@@ -29,15 +29,15 @@ required_boundary:
 
 files_planned:
   - path: README.md
-    status: planned
+    status: delivered
     purpose: public-safe bundle landing page
-    blocker: content_review
+    blocker: none
   - path: LICENSE_STRATEGY_PENDING.md
-    status: planned
+    status: delivered
     purpose: mark licensing unresolved before public reuse claims
     blocker: license_review
   - path: schemas/PublicReleaseStatus.yaml
-    status: planned
+    status: delivered
     purpose: require public/private/sensitive/release status before mirroring
     blocker: schema_review
   - path: schemas/IPArtifact.yaml
@@ -49,27 +49,27 @@ files_planned:
     purpose: typed evidence packet for AI-built/workflow claims
     blocker: schema_review
   - path: docs/GRAPH_IS_NOT_CANON_FAQ.md
-    status: planned
+    status: delivered
     purpose: public explanation of review-pressure graph doctrine
     blocker: wording_review
   - path: docs/ARCHIVIST_TRUST_FAILURE_PROTOCOL.md
-    status: planned
+    status: delivered
     purpose: handle Claude/model contamination without deletion
     blocker: adversarial_review
   - path: docs/SENSITIVE_TERM_RELEASE_GATE.md
-    status: planned
+    status: delivered
     purpose: protect sensitive/private/high-risk terms before publication
     blocker: public_safety_review
   - path: examples/toy_graph_demo/README.md
-    status: planned
+    status: delivered
     purpose: tiny demonstrator graph with no private cargo
-    blocker: demo_design
+    blocker: none
   - path: issues/FIRST_12_PUBLIC_INSPECTION_ISSUES.md
-    status: planned
+    status: delivered
     purpose: seed first 12 issue templates for representative artifacts
     blocker: issue_review
   - path: PR_CHECKLIST.md
-    status: planned
+    status: delivered
     purpose: require receipts, status fields, and safety review before merge
     blocker: review
 
@@ -109,8 +109,17 @@ review_lanes:
   HumanRoot: final authority only
 
 next_play:
-  - create LICENSE_STRATEGY_PENDING.md
-  - create PublicReleaseStatus schema
-  - create Graph-is-not-canon FAQ
-  - create PR checklist
-  - open GitHub review issue for Bundle 0001
+  - "[done] create LICENSE_STRATEGY_PENDING.md"
+  - "[done] create PublicReleaseStatus schema"
+  - "[done] create Graph-is-not-canon FAQ"
+  - "[done] create PR checklist"
+  - "[done] add ARCHIVIST_TRUST_FAILURE_PROTOCOL.md"
+  - "[done] add SENSITIVE_TERM_RELEASE_GATE.md"
+  - "[done] add toy_graph_demo with sample data only"
+  - "[done] add FIRST_12_PUBLIC_INSPECTION_ISSUES.md"
+  - "[done] add README forkability landing page"
+  - "[blocked] open GitHub review issue for Bundle 0001 — awaiting human-root"
+  - "[blocked] IPArtifact.yaml schema — awaiting Module 07 IP registry"
+  - "[blocked] EvidenceLog.yaml schema — awaiting Module 05 verification arena"
+  - "[blocked] license review — awaiting HumanRoot decision"
+  - "[blocked] full raw exports — awaiting Drive export receipts"
