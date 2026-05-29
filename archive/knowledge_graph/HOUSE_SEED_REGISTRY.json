@@ -1,0 +1,20 @@
+{
+  "status": "candidate",
+  "canon": false,
+  "authority": "none",
+  "description": "Seed registry with one canonical starter concept per House.",
+  "houses": [
+    {"house_id": "H01", "name": "Elements", "seed_concept": "Periodic element identity", "seed_ref": "seed:element-hydrogen"},
+    {"house_id": "H02", "name": "Isotopes", "seed_concept": "Isotopic variation", "seed_ref": "seed:isotope-carbon-14"},
+    {"house_id": "H03", "name": "MatterStates", "seed_concept": "State transitions", "seed_ref": "seed:matter-plasma"},
+    {"house_id": "H04", "name": "SpinAndSymmetry", "seed_concept": "Spin and symmetry operators", "seed_ref": "seed:spin-half"},
+    {"house_id": "H05", "name": "FrequencyBands", "seed_concept": "Frequency taxonomy", "seed_ref": "seed:frequency-a440"},
+    {"house_id": "H06", "name": "AcousticResonance", "seed_concept": "Resonance behavior", "seed_ref": "seed:resonance-cavity"},
+    {"house_id": "H07", "name": "ColorHarmonics", "seed_concept": "Color harmonic spectrum", "seed_ref": "seed:color-cie-red"},
+    {"house_id": "H08", "name": "MaterialBehavior", "seed_concept": "Material response models", "seed_ref": "seed:material-graphene"},
+    {"house_id": "H09", "name": "NeuromorphicPrinciples", "seed_concept": "Neuromorphic architectures", "seed_ref": "seed:neuromorphic-spike"},
+    {"house_id": "H10", "name": "KnowledgeDomains", "seed_concept": "Knowledge domain indexing", "seed_ref": "seed:domain-physics"},
+    {"house_id": "H11", "name": "ArchiveArtifacts", "seed_concept": "Artifact provenance chain", "seed_ref": "seed:artifact-receipt"},
+    {"house_id": "H12", "name": "ReviewAndPromotion", "seed_concept": "Review state and promotion gates", "seed_ref": "seed:review-human-root"}
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "bands": [
+    {
+      "band": "infra",
+      "color_hex": "#6a0dad",
+      "hz_max": 20.0,
+      "hz_min": 0.1
+    },
+    {
+      "band": "bass",
+      "color_hex": "#4b0082",
+      "hz_max": 60.0,
+      "hz_min": 20.0
+    },
+    {
+      "band": "low_mid",
+      "color_hex": "#0000ff",
+      "hz_max": 250.0,
+      "hz_min": 60.0
+    },
+    {
+      "band": "mid",
+      "color_hex": "#00ff00",
+      "hz_max": 2000.0,
+      "hz_min": 250.0
+    },
+    {
+      "band": "upper_mid",
+      "color_hex": "#ffff00",
+      "hz_max": 4000.0,
+      "hz_min": 2000.0
+    },
+    {
+      "band": "presence",
+      "color_hex": "#ff7f00",
+      "hz_max": 6000.0,
+      "hz_min": 4000.0
+    },
+    {
+      "band": "brilliance",
+      "color_hex": "#ff0000",
+      "hz_max": 20000.0,
+      "hz_min": 6000.0
+    }
+  ],
+  "canon": false,
+  "mapping_model": "rainbow-yin-yang-v0.1",
+  "status": "candidate"
+}

@@ -1,0 +1,9 @@
+site_name: Atlas Lattice Public Shelf
+site_description: Public-candidate Atlas Lattice knowledge graph surface
+repo_url: https://github.com/atlaslattice/manus-artifacts
+docs_dir: docs_site
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Graph View: graph_view.md
