@@ -63,6 +63,21 @@ jobs:
           assert graph['summary']['human_root_blockers'] == 4
           print(graph['summary'])
           PY
+      - name: Run REM 100-year simulation
+        run: python rem_100_year_simulation.py --json --seed 144 > rem-100-year.generated.json
+      - name: Inspect REM 100-year simulation summary
+        run: python - <<'PY'
+          import json
+          from pathlib import Path
+          rem = json.loads(Path('rem-100-year.generated.json').read_text())
+          assert rem['duration_years'] == 100
+          assert len(rem['yearly_states']) == 100
+          assert rem['boundary']['canon'] is False
+          assert rem['boundary']['deployment'] is False
+          assert rem['boundary']['authority'] == 'none'
+          assert rem['boundary']['prediction'] is False
+          print({'years': rem['duration_years'], 'final_receipt_head': rem['final_receipt_head']})
+          PY
       - name: Install test tooling
         run: python -m pip install pytest
       - name: Run tests
