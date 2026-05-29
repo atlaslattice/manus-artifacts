@@ -24,7 +24,8 @@ The **Atlas Lattice Foundation** is an independent AI governance and knowledge a
 
 One unified mission across this repository:
 
-- 🕸️ **Functional Lattice Knowledge Graph** → [Lattice KG v0.5](./archive/knowledge_graph/lattice_kg/v0_5/README.md)
+- 🕸️ **Functional Lattice Knowledge Graph** → [Lattice KG v0.6 — Unified 12D Hypercube](./archive/knowledge_graph/lattice_kg/v0_6/README.md)
+  - [Unified Query Surface](./archive/knowledge_graph/lattice_kg/v0_6/UNIFIED_LATTICE_QUERY_SURFACE_v1.0.md) · [12D Topology](./archive/knowledge_graph/lattice_kg/v0_6/HYPERCUBE_12D_TOPOLOGY_v1.0.yaml) · [Cross-Link Contract](./archive/knowledge_graph/lattice_kg/v0_6/CROSSLINK_CONTRACT_v1.0.yaml)
 - 🎮 **Playable Archive Game (Aetherforge)** → [Archive Play Loop v0.1](./projects/AETHERFORGE_ARCHIVE_PLAY_LOOP_v0.1.md)
 - 🧠 **GPTDream++ Open Source Protocol Gift** → [GPTDream++ Public Package Guide](./archive/spec/gptdream/PUBLIC_PACKAGE_GUIDE_v0.1.md)
 
