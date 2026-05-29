@@ -1,0 +1,69 @@
+{
+  "demo_id": "TOY_GRAPH_DEMO_v0.1",
+  "status": "public_candidate_demo_not_canon",
+  "canon_status": "not_canon",
+  "deployment_status": "not_deployed",
+  "authority_scope": "none",
+  "purpose": "Minimal public-safe graph example showing source -> claim -> evidence -> review routing without canon promotion.",
+  "nodes": [
+    {
+      "id": "SRC-DEMO-README",
+      "type": "SourceArtifact",
+      "title": "Example README candidate",
+      "surface": "github",
+      "raw_export_status": "repo_file_visible",
+      "canon_status": "not_canon"
+    },
+    {
+      "id": "CLAIM-DEMO-001",
+      "type": "Claim",
+      "text": "This repository models artifacts, claims, receipts, and review routes.",
+      "claim_type": "scope_claim",
+      "status": "candidate"
+    },
+    {
+      "id": "EVIDENCE-DEMO-001",
+      "type": "EvidenceAnchor",
+      "anchor_type": "github_path",
+      "anchor_value": "archive/public_candidate_bundle/PUBLIC_CANDIDATE_BUNDLE_0001/README.md",
+      "verification_status": "visible"
+    },
+    {
+      "id": "REVIEW-DEMO-001",
+      "type": "ReviewFinding",
+      "review_lane": "Rootglass",
+      "finding_type": "boundary_check",
+      "status": "candidate_review"
+    }
+  ],
+  "edges": [
+    {
+      "id": "EDGE-DEMO-001",
+      "type": "contains_claim",
+      "from": "SRC-DEMO-README",
+      "to": "CLAIM-DEMO-001",
+      "review_required": true
+    },
+    {
+      "id": "EDGE-DEMO-002",
+      "type": "cites",
+      "from": "CLAIM-DEMO-001",
+      "to": "EVIDENCE-DEMO-001",
+      "review_required": true
+    },
+    {
+      "id": "EDGE-DEMO-003",
+      "type": "routes_to_review",
+      "from": "CLAIM-DEMO-001",
+      "to": "REVIEW-DEMO-001",
+      "review_required": true
+    }
+  ],
+  "must_not_infer": [
+    "edge_is_promotion",
+    "claim_is_fact",
+    "github_path_is_canon",
+    "review_route_is_ratification"
+  ],
+  "keeper": "The toy graph demonstrates reviewability, not truth."
+}
