@@ -1,5 +1,15 @@
 #!/usr/bin/env python3
-"""Build the repository-wide artifact registry, graph, and scorecard."""
+"""Build the repository-wide artifact registry, graph, and scorecard.
+
+The knowledge graph is structured as a 12×12×12 hypercube lattice:
+  D1 (axis 0-11)  — semantic domain, aligned with the 12-axis campaign
+  D2 (row  0-11)  — sub-domain within the axis (hash of 2nd path component)
+  D3 (slot 0-11)  — sequential slot within the (D1, D2) cell arm
+
+Each artifact receives a `hypercube_coord` {d1, d2, d3} triple.
+`lattice_arm` edges connect D3-adjacent artifacts in the same cell arm.
+`lattice_backbone` edges connect the D1-axis spine across rows.
+"""
 
 from __future__ import annotations
 
@@ -7,7 +17,7 @@ import hashlib
 import json
 import re
 import subprocess
-from collections import Counter
+from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -48,6 +58,152 @@ GENERATED_LINKS = {
         "RATIFICATION_LOG.md",
     ),
 }
+
+# ---------------------------------------------------------------------------
+# 12×12×12 Hypercube Lattice
+# ---------------------------------------------------------------------------
+# D1 — 12 semantic domain axes, aligned with the 12-axis Aetherforge campaign
+HYPERCUBE_AXES = [
+    "Governance Core",            # 0
+    "Canon & Adjudication",       # 1
+    "Provenance & Receipts",      # 2
+    "Information Architecture",   # 3
+    "Documentation Excellence",   # 4
+    "Security, Trust, Integrity", # 5
+    "Testing & Validation",       # 6
+    "CI/CD & Automation",         # 7
+    "Knowledge Graph",            # 8
+    "Public Packaging & Releases",# 9
+    "Community & Contributors",   # 10
+    "Ops & Living Archive",       # 11
+]
+HYPERCUBE_DIM = 12  # positions per dimension
+
+
+def hypercube_d1(rel_path: Path) -> int:
+    """Return D1 axis (0-11) based on semantic domain of the artifact."""
+    parts = rel_path.parts
+    top = parts[0] if parts else ""
+    fp = rel_path.as_posix().lower()
+    sub = parts[1].lower() if len(parts) > 1 else ""
+
+    # Axis 0 — Governance Core
+    if top == ".github" and sub != "workflows":
+        return 0
+    if top == "docs" and any(x in fp for x in ["governance", "ratif", "adjud", "glossary", "versioning", "start_here", "archive_index"]):
+        return 0
+
+    # Axis 1 — Canon & Adjudication
+    if rel_path.name.lower() == "ratification_log.md":
+        return 1
+    if top == "docs":
+        return 1
+
+    # Axis 2 — Provenance & Receipts
+    if top == "manus-vault":
+        return 2
+    if top == "archive" and any(x in fp for x in ["spec", "receipt", "manus-vault"]):
+        return 2
+
+    # Axis 3 — Information Architecture
+    if top == "archive" and any(x in fp for x in ["boot", "chatlog", "fork", "metaphor"]):
+        return 3
+    if top == "archives":
+        return 3
+
+    # Axis 4 — Documentation Excellence
+    if top in ("about", "research", "health"):
+        return 4
+
+    # Axis 5 — Security, Trust, Integrity
+    if top == "schemas":
+        return 5
+
+    # Axis 6 — Testing & Validation
+    if top in ("tests", "fixtures"):
+        return 6
+
+    # Axis 7 — CI/CD & Automation
+    if (top == ".github" and sub == "workflows") or top == "scripts":
+        return 7
+
+    # Axis 8 — Knowledge Graph
+    if rel_path.name == "graph.json" or (top == "docs" and "knowledge" in fp):
+        return 8
+
+    # Axis 9 — Public Packaging & Releases
+    if top == "projects" or (top == "archive" and "aetherforge" in fp):
+        return 9
+
+    # Axis 10 — Community & Contributors
+    if top in ("children-of-the-swarm", "council", "council-reviews"):
+        return 10
+
+    # Axis 11 — Ops & Living Archive (everything else)
+    return 11
+
+
+def hypercube_d2(rel_path: Path) -> int:
+    """Return D2 row (0-11) as a stable hash of the 2nd path component."""
+    key = rel_path.parts[1] if len(rel_path.parts) > 1 else rel_path.parts[0]
+    return int(hashlib.sha1(key.encode("utf-8")).hexdigest(), 16) % HYPERCUBE_DIM
+
+
+def assign_hypercube_coords(tracked_paths: list[Path]) -> dict[str, dict[str, int]]:
+    """Return {path_posix: {d1, d2, d3}} for every tracked path.
+
+    D3 is assigned sequentially within each (D1, D2) cell, wrapping mod 12
+    so that large cells occupy the same arm positions cyclically.
+    """
+    cell_seq: dict[tuple[int, int], int] = defaultdict(int)
+    coords: dict[str, dict[str, int]] = {}
+    for rel_path in tracked_paths:
+        d1 = hypercube_d1(rel_path)
+        d2 = hypercube_d2(rel_path)
+        d3 = cell_seq[(d1, d2)] % HYPERCUBE_DIM
+        cell_seq[(d1, d2)] += 1
+        coords[rel_path.as_posix()] = {"d1": d1, "d2": d2, "d3": d3}
+    return coords
+
+
+def build_lattice_edges(
+    artifact_id_by_path: dict[str, str],
+    coords: dict[str, dict[str, int]],
+) -> list[dict[str, str]]:
+    """Return lattice arm + backbone edges for the 12×12×12 hypercube.
+
+    lattice_arm      — D3-sequential neighbors within the same (D1, D2) cell.
+    lattice_backbone — D1-axis spine: for each (D2, D3) slice, connect the
+                       chain of artifacts ordered by their D1 axis value.
+    """
+    edges: list[dict[str, str]] = []
+
+    # Group by (d1, d2) cell → ordered list of (d3, path)
+    cell_members: dict[tuple[int, int], list[tuple[int, str]]] = defaultdict(list)
+    for path, c in coords.items():
+        cell_members[(c["d1"], c["d2"])].append((c["d3"], path))
+
+    # lattice_arm: chain within each cell, sorted by d3
+    for (_, _), members in cell_members.items():
+        members.sort(key=lambda x: x[0])
+        for i in range(len(members) - 1):
+            src = artifact_id_by_path[members[i][1]]
+            tgt = artifact_id_by_path[members[i + 1][1]]
+            edges.append({"from": src, "to": tgt, "relation": "lattice_arm"})
+
+    # lattice_backbone: for each (d2, d3) slice, chain artifacts sorted by d1
+    slice_members: dict[tuple[int, int], list[tuple[int, str]]] = defaultdict(list)
+    for path, c in coords.items():
+        slice_members[(c["d2"], c["d3"])].append((c["d1"], path))
+
+    for (_, _), members in slice_members.items():
+        members.sort(key=lambda x: x[0])
+        for i in range(len(members) - 1):
+            src = artifact_id_by_path[members[i][1]]
+            tgt = artifact_id_by_path[members[i + 1][1]]
+            edges.append({"from": src, "to": tgt, "relation": "lattice_backbone"})
+
+    return edges
 
 
 def now_utc() -> str:
@@ -260,6 +416,9 @@ def build_registry_bundle(root: Path, generated_utc: str | None = None) -> tuple
     artifact_id_by_path = {path.as_posix(): stable_artifact_id(path) for path in tracked_paths}
     ratification_entries = parse_ratification_log(RATIFICATION_LOG_PATH)
 
+    # Assign 12×12×12 hypercube coordinates to every artifact
+    coords = assign_hypercube_coords(tracked_paths)
+
     artifacts: list[dict] = []
     graph_edges: list[dict[str, str]] = []
     linked_count = 0
@@ -300,6 +459,7 @@ def build_registry_bundle(root: Path, generated_utc: str | None = None) -> tuple
                 "lifecycle_state": infer_lifecycle_state(canon_status),
                 "ratification_event_id": governance.get("ratification_event_id"),
                 "adjudicator": governance.get("adjudicator"),
+                "hypercube_coord": coords[rel_posix],
                 "provenance": {
                     "source": "github",
                     "tracked_by_git": True,
@@ -316,8 +476,11 @@ def build_registry_bundle(root: Path, generated_utc: str | None = None) -> tuple
             }
         )
 
-    graph_edges = sorted(
-        graph_edges,
+    # Merge lattice edges (arm + backbone) into the graph
+    lattice_edges = build_lattice_edges(artifact_id_by_path, coords)
+    all_edges = graph_edges + lattice_edges
+    all_edges = sorted(
+        all_edges,
         key=lambda edge: (edge["from"], edge["to"], edge["relation"]),
     )
 
@@ -334,34 +497,67 @@ def build_registry_bundle(root: Path, generated_utc: str | None = None) -> tuple
         (top_level_with_readmes / len(top_level_dirs) * 100.0), 2
     ) if top_level_dirs else 0.0
 
+    # Hypercube axis distribution for scorecard
+    axis_counts = dict(
+        sorted(Counter(artifact["hypercube_coord"]["d1"] for artifact in artifacts).items())
+    )
+    hypercube_cells_used = len(
+        {(c["d1"], c["d2"]) for c in coords.values()}
+    )
+
     registry = {
-        "schema_version": "0.1",
+        "schema_version": "0.2",
         "generated_utc": generated_utc,
         "status_authority": "docs/knowledge-graph/artifact_registry.v0_1.json",
         "ratification_event_log": "RATIFICATION_LOG.md",
         "description": "Repository-wide artifact registry for machine-checked governance, provenance, and graph coverage.",
+        "hypercube": {
+            "dimensions": HYPERCUBE_DIM,
+            "axes": HYPERCUBE_AXES,
+            "shape": [HYPERCUBE_DIM, HYPERCUBE_DIM, HYPERCUBE_DIM],
+            "total_slots": HYPERCUBE_DIM ** 3,
+        },
         "eligible_extensions": sorted(ELIGIBLE_SUFFIXES),
         "artifacts": artifacts,
     }
     graph = {
-        "version": "0.1",
+        "version": "0.2",
         "generated_utc": generated_utc,
-        "description": "Machine-readable adjacency map derived from docs/knowledge-graph/artifact_registry.v0_1.json",
+        "description": (
+            "12×12×12 hypercube lattice KG derived from "
+            "docs/knowledge-graph/artifact_registry.v0_1.json. "
+            "One connected octopus: contained_in + references + lattice_arm + lattice_backbone."
+        ),
+        "hypercube": {
+            "shape": [HYPERCUBE_DIM, HYPERCUBE_DIM, HYPERCUBE_DIM],
+            "axes": HYPERCUBE_AXES,
+        },
         "nodes": nodes,
-        "edges": graph_edges,
+        "edges": all_edges,
     }
     scorecard = {
-        "schema_version": "0.1",
+        "schema_version": "0.2",
         "generated_utc": generated_utc,
         "status_authority": "docs/knowledge-graph/artifact_registry.v0_1.json",
         "totals": {
             "tracked_artifact_files": len(tracked_paths),
             "registry_artifacts": len(artifacts),
             "graph_nodes": len(nodes),
-            "graph_edges": len(graph_edges),
+            "graph_edges": len(all_edges),
             "graph_coverage_pct": coverage_pct,
             "linked_artifacts_pct": linked_pct,
             "top_level_readme_coverage_pct": top_level_readme_pct,
+        },
+        "hypercube": {
+            "shape": [HYPERCUBE_DIM, HYPERCUBE_DIM, HYPERCUBE_DIM],
+            "total_slots": HYPERCUBE_DIM ** 3,
+            "cells_used": hypercube_cells_used,
+            "artifacts_placed": len(artifacts),
+            "axis_distribution": {
+                HYPERCUBE_AXES[k]: v for k, v in axis_counts.items()
+            },
+            "lattice_arm_edges": sum(1 for e in all_edges if e["relation"] == "lattice_arm"),
+            "lattice_backbone_edges": sum(1 for e in all_edges if e["relation"] == "lattice_backbone"),
         },
         "status_counts": dict(sorted(Counter(artifact["canon_status"] for artifact in artifacts).items())),
         "artifact_type_counts": dict(sorted(Counter(artifact["artifact_type"] for artifact in artifacts).items())),

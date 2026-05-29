@@ -1,15 +1,41 @@
 {
-  "schema_version": "0.1",
-  "generated_utc": "2026-05-29T16:07:23Z",
+  "schema_version": "0.2",
+  "generated_utc": "2026-05-29T16:16:27Z",
   "status_authority": "docs/knowledge-graph/artifact_registry.v0_1.json",
   "totals": {
     "tracked_artifact_files": 848,
     "registry_artifacts": 848,
     "graph_nodes": 848,
-    "graph_edges": 1231,
+    "graph_edges": 2718,
     "graph_coverage_pct": 100.0,
     "linked_artifacts_pct": 100.0,
     "top_level_readme_coverage_pct": 8.7
+  },
+  "hypercube": {
+    "shape": [
+      12,
+      12,
+      12
+    ],
+    "total_slots": 1728,
+    "cells_used": 78,
+    "artifacts_placed": 848,
+    "axis_distribution": {
+      "Governance Core": 14,
+      "Canon & Adjudication": 8,
+      "Provenance & Receipts": 66,
+      "Information Architecture": 284,
+      "Documentation Excellence": 12,
+      "Security, Trust, Integrity": 33,
+      "Testing & Validation": 16,
+      "CI/CD & Automation": 10,
+      "Knowledge Graph": 1,
+      "Public Packaging & Releases": 30,
+      "Community & Contributors": 7,
+      "Ops & Living Archive": 367
+    },
+    "lattice_arm_edges": 770,
+    "lattice_backbone_edges": 717
   },
   "status_counts": {
     "candidate": 848
