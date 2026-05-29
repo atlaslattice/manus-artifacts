@@ -8,11 +8,13 @@ from pathlib import Path
 import aetherforge_sim
 import children_swarm_graph_export
 import graph_export
+import missing_receipt_graph_export
 
 
 ROOT = Path(__file__).resolve().parents[1]
 MATRIX_PATH = ROOT / "task-matrix-12x12.json"
 CHILDREN_MANIFEST_PATH = ROOT / "children_swarm_original_deduped_lattice_v0_2.json"
+GAP_REGISTER_PATH = ROOT / "lucerna_missing_receipt_hash_gap_register_v0_1.json"
 
 
 def test_matrix_is_exactly_12_by_12() -> None:
@@ -105,6 +107,35 @@ def test_children_swarm_graph_export_maps_everything_to_everything() -> None:
     assert ("derived-task:ORIG-01-01", "compresses_raw_rows", "artifact:raw-workbook:cots-12x12-v0.1") in edges
 
 
+def test_missing_receipt_register_validates_gap_nodes_and_blockers() -> None:
+    register = missing_receipt_graph_export.load_register(GAP_REGISTER_PATH)
+    report = missing_receipt_graph_export.validate_register(register)
+    assert report["ok"] is True
+    assert report["missing_receipt_count"] == 7
+    assert report["human_root_blocker_count"] == 4
+    assert report["unique_missing_receipt_ids"] == 7
+    assert report["unique_blocker_ids"] == 4
+    assert report["canon_false"] is True
+    assert report["deployment_false"] is True
+    assert report["authority_none"] is True
+    assert report["has_source_url"] is True
+
+
+def test_missing_receipt_graph_export_builds_blocked_by_edges() -> None:
+    graph = missing_receipt_graph_export.build_graph(GAP_REGISTER_PATH)
+    assert graph["validation"]["ok"] is True
+    assert graph["summary"]["missing_receipts"] == 7
+    assert graph["summary"]["human_root_blockers"] == 4
+    node_ids = {node["id"] for node in graph["nodes"]}
+    edges = {(edge["source"], edge["relation"], edge["target"]) for edge in graph["edges"]}
+    assert "artifact:lucerna-missing-receipt-hash-gap-register-v0.1" in node_ids
+    assert "missing-receipt:MR-DRIVE-001" in node_ids
+    assert "missing-receipt:MR-GITHUB-001" in node_ids
+    assert "human-root-blocker:EXP-001" in node_ids
+    assert ("boundary:gap-register-non-canon", "constrains", "artifact:lucerna-missing-receipt-hash-gap-register-v0.1") in edges
+    assert ("blocked-object:kg-source-universe-index", "blocked_by", "missing-receipt:MR-DRIVE-001") in edges
+
+
 def test_cli_validate_json() -> None:
     completed = subprocess.run(
         [sys.executable, "aetherforge_sim.py", "--json", "--matrix-path", str(MATRIX_PATH), "validate"],
@@ -159,3 +190,18 @@ def test_cli_children_swarm_graph_export_json() -> None:
     assert payload["validation"]["ok"] is True
     assert payload["summary"]["derived_tasks"] == 144
     assert payload["summary"]["raw_rows_covered"] == 1728
+
+
+def test_cli_missing_receipt_graph_export_json() -> None:
+    completed = subprocess.run(
+        [sys.executable, "missing_receipt_graph_export.py", "--json", "--register-path", str(GAP_REGISTER_PATH)],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    payload = json.loads(completed.stdout)
+    assert payload["schema_version"] == "lucerna.gap_register_graph.v0_1"
+    assert payload["validation"]["ok"] is True
+    assert payload["summary"]["missing_receipts"] == 7
+    assert payload["summary"]["human_root_blockers"] == 4
