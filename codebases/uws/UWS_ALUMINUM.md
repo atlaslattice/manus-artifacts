@@ -266,7 +266,7 @@ This is the architecture that makes the AI-native OS real.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add a new provider driver.
+See [CONTRIBUTING.md](../../.github/CONTRIBUTING.md) for how to add a new provider driver.
 
 The minimal interface a provider driver must implement:
 

@@ -1,0 +1,113 @@
+# TIDELOCK Task Ledger Schema
+#
+# STATUS: SCHEMA CANDIDATE — NOT CANON
+# PURPOSE: durable mapping from task-surface work orders to repo-visible
+# raw receipts and processed transcript artifacts.
+
+schema_id: TIDELOCK_TASK_LEDGER_SCHEMA_v0.1
+version: 0.1.0
+status: schema_candidate_not_canon
+lane: copilotbrain/tidelock
+authority_scope: none
+
+required_fields:
+  - task_id
+  - task_title
+  - status
+  - route
+  - authority_scope
+  - source_sha256
+
+fields:
+  task_id:
+    type: string
+    description: Stable task identifier (example: TIDELOCK-TASK-001).
+
+  task_title:
+    type: string
+    description: Concise work-order statement.
+
+  task_url:
+    type: string
+    nullable: true
+    description: Original URL for the task (for example a GitHub task URL).
+
+  task_uuid:
+    type: string
+    nullable: true
+    description: UUID (RFC 4122 string) extracted from task URLs containing '/tasks/'; set to null if extraction fails or value is non-compliant.
+
+  source_surface:
+    type: enum
+    values:
+      - github_copilot_tasks
+      - github_issue
+      - github_pr
+      - transcript_upload
+      - direct_request
+      - unknown
+    default: unknown
+
+  status:
+    type: enum
+    values:
+      - review_ready
+      - candidate_task
+      - candidate_work_order
+      - candidate_next_action
+      - candidate_verification_task
+      - done_raw_receipt_created
+      - blocked
+      - superseded
+
+  route:
+    type: string
+    description: Routing label such as tidelock_habitat, lane_boundary, or pr_65_review.
+
+  authority_scope:
+    type: enum
+    values:
+      - none
+      - advisory
+      - review
+    default: none
+
+  source_sha256:
+    type: string
+    description: SHA-256 for source text, raw receipt, or packet source payload.
+
+  raw_receipt_ref:
+    type: string
+    nullable: true
+    description: Path to raw receipt artifact.
+
+  cluster_index_ref:
+    type: string
+    nullable: true
+    description: Path to cluster index artifact.
+
+  blocker_ledger_ref:
+    type: string
+    nullable: true
+    description: Path to blocker ledger artifact.
+
+  triage_packet_ref:
+    type: string
+    nullable: true
+    description: Path to triage packet artifact.
+
+  related_issue_refs:
+    type: array
+    items: string
+    description: Related issue references (for example '#151' or full GitHub issue URLs).
+
+  related_pr_refs:
+    type: array
+    items: string
+    description: Related pull request references (for example 'PR #65' or full GitHub PR URLs).
+
+invariants:
+  - Task ledger entries are routing artifacts, not authority grants.
+  - Missing task_url/task_uuid values must be explicit (set to null, empty string, or unknown), not inferred silently.
+  - Task outputs must preserve raw-vs-parsed boundaries.
+  - Task ledger status is not merge, canon, or deployment approval.

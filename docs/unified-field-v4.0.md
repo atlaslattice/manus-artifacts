@@ -12,6 +12,15 @@
 
 ---
 
+## Executive Summary
+
+Aluminum OS v4.0 unifies the project's constitutional kernel, multi-agent
+ governance, universal device substrate, and healthcare sovereignty layer into a
+ single operating model. This document is the concise public-facing map of the
+ four-ring architecture, invariant system, and major v4 integrations.
+
+---
+
 ## 1. What Changed in v4
 
 v4 is the first true unification. Prior versions synthesized technical gains. v4 absorbs the full stack:
@@ -56,7 +65,7 @@ v4 expands from six to **eight** non-negotiable principles:
 
 ## 3. Four-Ring Architecture
 
-```
+```text
 Ring 0 — FORGE CORE (Rust microkernel)
   └── Constitutional Engine (constitutional_engine.rs)
   └── Invariant Enforcement (invariants_registry.py — 39 invariants)

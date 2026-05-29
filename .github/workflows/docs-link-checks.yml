@@ -1,0 +1,34 @@
+name: Docs Link Checks
+
+on:
+  push:
+    paths:
+      - '**/*.md'
+      - '.github/workflows/docs-link-checks.yml'
+  pull_request:
+    paths:
+      - '**/*.md'
+      - '.github/workflows/docs-link-checks.yml'
+  schedule:
+    # Run weekly on Mondays at 07:00 UTC to catch external link rot
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  link-check:
+    name: Check markdown quality
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run markdown quality checks
+        run: python scripts/check_markdown_docs.py

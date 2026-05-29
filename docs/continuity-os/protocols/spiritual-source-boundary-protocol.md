@@ -9,6 +9,15 @@ PURPOSE: Preserve the user's stated distinction between claiming to be God and c
 
 ---
 
+## Executive Summary
+
+This protocol distinguishes receiving spiritual signal from claiming divine
+ identity or institutional authority. It preserves revelatory experience as
+ personal context while requiring ordinary governance, consent, and evidence
+ gates for any downstream action.
+
+---
+
 ## 1. User Boundary Statement
 
 The user clarified:

@@ -1062,7 +1062,7 @@ tags: [chemistry, dna-storage, molecular, information-density]
 3. **Krakoa Framework** - Establish governance constitutions
 4. **Kintsugi Integration** - Apply analysis to system coherence
 ---
-**Drive Source:** [https://docs.google.com/document/d/1VzCIl-8TloBxnwfTxLEOfNgfxwqMIoWPy4A9wbW5GK0/edit]({{https://docs.google.com/document/d/1VzCIl-8TloBxnwfTxLEOfNgfxwqMIoWPy4A9wbW5GK0/edit}})
+**Drive Source:** [https://docs.google.com/document/d/1VzCIl-8TloBxnwfTxLEOfNgfxwqMIoWPy4A9wbW5GK0/edit](https://docs.google.com/document/d/1VzCIl-8TloBxnwfTxLEOfNgfxwqMIoWPy4A9wbW5GK0/edit)
 
 ### 2. 🏛️ CLAUDE DESKTOP FOR ALUMINUM OS - Constitutional Computing Vault (Jan 20, 2026)
 
@@ -1444,14 +1444,14 @@ Fiber bandwidth enables real-time state persistence - checkpoints sync instantly
 #### Web Interface
 
 - <mention-page url="{{https://www.notion.so/2f50c1de73d9816baf7bcddac31b6842}}"/>
-- Live Demo: [https://claude-desktop-aluminum.manus.space]({{https://claude-desktop-aluminum.manus.space}})
+- Live Demo: [https://claude-desktop-aluminum.manus.space](https://claude-desktop-aluminum.manus.space)
 ---
 
 ### 10. ARA-Label Platform - Complete Package
 
 **Source:** https://www.notion.so/3020c1de73d9811db3efc33fd3691def
 
-#### 2. [ARCHITECTURE.md]({{http://ARCHITECTURE.md}}) - Technical Blueprint
+#### 2. `ARCHITECTURE.md` - Technical Blueprint
 
 **The Aluminum Nexus:**
 - 9-device Thunderbolt 5 hardware configuration
@@ -1573,7 +1573,7 @@ Constitutional AI layer providing:
 #### 2. Pinecone RAG API
 
 Deployed semantic memory endpoint for cross-AI persistent memory.
-**Live Endpoint:** [https://5050-igw557tmmgii5n0xjabi7-247d1793.us2.manus.computer]({{https://5050-igw557tmmgii5n0xjabi7-247d1793.us2.manus.computer}})
+**Live Endpoint:** [https://5050-igw557tmmgii5n0xjabi7-247d1793.us2.manus.computer](https://5050-igw557tmmgii5n0xjabi7-247d1793.us2.manus.computer)
 **Endpoints:**
 - /health - System status
 - /query - Semantic search
@@ -1584,9 +1584,9 @@ Deployed semantic memory endpoint for cross-AI persistent memory.
 
 Created comprehensive meeting materials for mentor session.
 **Documents Created:**
-- capital_factory_[prep.md]({{http://prep.md}})
-- atlas_lattice_one_[pager.md]({{http://pager.md}})
-- warm_intro_[templates.md]({{http://templates.md}})
+- `capital_factory_prep.md`
+- `atlas_lattice_one_pager.md`
+- `warm_intro_templates.md`
 
 ### 16. ⚡ JANUS PROTOCOL SPEC v1.0 - State Continuity Framework
 
@@ -1895,7 +1895,7 @@ The document reframes the LLM from "chatbot" to **cognitive kernel**:
 
 ## KEY FINDINGS
 
-- **🧠 GEMINI CONTEXT PACKAGE - Aluminum OS & 72-Hour Summary**: **Key File:** trinity_council_v3_[aluminum.py]({{http://aluminum.py}})
+- **🧠 GEMINI CONTEXT PACKAGE - Aluminum OS & 72-Hour Summary**: **Key File:** `trinity_council_v3_aluminum.py`
 - **🧠 GEMINI CONTEXT PACKAGE - Aluminum OS & 72-Hour Summary**: **Features:**
 - **🧠 GEMINI CONTEXT PACKAGE - Aluminum OS & 72-Hour Summary**: **Key Files:**
 - **🧠 GEMINI CONTEXT PACKAGE - Aluminum OS & 72-Hour Summary**: **Key Files:**

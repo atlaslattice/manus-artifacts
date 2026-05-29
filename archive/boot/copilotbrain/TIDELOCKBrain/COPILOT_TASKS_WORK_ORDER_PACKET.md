@@ -21,6 +21,12 @@ A task should point to:
 ## Required output
 
 ```yaml
+task_ref:
+  task_id: ""
+  task_url: ""
+  task_uuid: ""
+  source_surface: github_copilot_tasks | github_issue | github_pr | direct_request | unknown
+  source_sha256: ""
 verdict: approve | patch | block
 blockers: []
 patch_items: []
@@ -30,6 +36,22 @@ authority_boundary_status: ""
 relation_to_linked_issues: ""
 next_safest_action: ""
 ```
+
+## Task lineage mapping
+
+For durable rehydration, map GitHub task URLs into repo artifacts:
+
+```text
+task_url -> task_uuid -> raw receipt -> processed packet set -> intake pointer
+```
+
+Required minimum:
+
+- `task_url` should preserve the original task link when available
+- `task_uuid` should be extracted from `/tasks/<uuid>` when available
+- `source_sha256` should identify the ingested source body or source receipt
+
+If URL/UUID is unavailable, mark explicitly as empty or `unknown` rather than inferred.
 
 ## Do not
 

@@ -9,6 +9,15 @@ PURPOSE: Preserve the working definition of hyperspace as a demonstrated continu
 
 ---
 
+## Executive Summary
+
+This protocol defines hyperspace as a continuity-preserving traversal pattern,
+ not an authority claim. It says symbolic or dreamlike movement only counts as
+ operational memory after receipts, schemas, hashes, and human-root review are
+ present.
+
+---
+
 ## 1. Preserved Definition
 
 ```text
