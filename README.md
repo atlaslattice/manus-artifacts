@@ -53,6 +53,7 @@ by @atlaslattice. See [GOVERNANCE.md](./GOVERNANCE.md).
 |---|---|
 | Understand the vision | [PHILOSOPHY.md](./PHILOSOPHY.md) |
 | Read mission + vision | [docs/mission-vision.md](./docs/mission-vision.md) |
+| Read the 12×12×12 public explainer | [docs/LATTICE_HYPERCUBE_12x12x12.md](./docs/LATTICE_HYPERCUBE_12x12x12.md) |
 | Onboard as a contributor | [docs/contributor-onboarding-journey.md](./docs/contributor-onboarding-journey.md) |
 | See the active sprint | [Wave-3 Board](./projects/aetherforge-top10-taskboard-2026-05-28.md) |
 | Understand governance | [GOVERNANCE.md](./GOVERNANCE.md) |
