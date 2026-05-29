@@ -1,0 +1,47 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "receipt habitat claim"
+type: object
+additionalProperties: true
+properties:
+  schema_version:
+    type: string
+    const: "0.1"
+  claim_id: {type: string}
+  claim_state:
+    type: string
+    enum: [candidate, reviewed, ratified]
+  previous_claim_state:
+    type: string
+    enum: [candidate, reviewed, ratified]
+  evidence_refs:
+    type: array
+    minItems: 1
+    items:
+      type: string
+  receipt_metadata:
+    type: object
+    properties:
+      receipt_id: {type: string}
+      receipt_type: {type: string}
+      receipt_hash: {type: string}
+    required: [receipt_id, receipt_type, receipt_hash]
+  governance_event:
+    type: object
+    properties:
+      governance_event_id: {type: string}
+    required: [governance_event_id]
+  source_basis:
+    type: string
+    enum: [full_source, summary_only, mixed]
+  source_status:
+    type: string
+    enum: [candidate, source]
+  truth_status:
+    type: string
+    enum: [unverified, provisional, verified]
+  verification_event:
+    type: object
+    properties:
+      verification_event_id: {type: string}
+    required: [verification_event_id]
+required: [schema_version, claim_state, evidence_refs]

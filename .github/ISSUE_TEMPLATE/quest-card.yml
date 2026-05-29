@@ -1,0 +1,60 @@
+name: Quest card
+description: Propose or track an Aetherforge quest.
+title: "[Quest]: "
+labels:
+  - quest
+body:
+  - type: input
+    id: quest_id
+    attributes:
+      label: Quest ID
+      description: Use board ID format when available (example: W4-02, A03, E10).
+      placeholder: Wx-yy
+    validations:
+      required: true
+  - type: input
+    id: zone
+    attributes:
+      label: Zone / module
+      placeholder: M1-M10
+    validations:
+      required: true
+  - type: dropdown
+    id: tier
+    attributes:
+      label: Tier
+      options:
+        - T1 Patrol
+        - T2 Expedition
+        - T3 Raid
+        - T4 Mythic
+    validations:
+      required: true
+  - type: input
+    id: seat
+    attributes:
+      label: Seat owner
+      placeholder: S1-S7 or ALL
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: Define the outcome and affected files/surfaces.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance checks
+      description: List exact checks, tests, and workflow gates for completion.
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Board and routing references
+      description: Link to 144 board, top-100 ledger, top-10 board, and related docs.
+    validations:
+      required: true

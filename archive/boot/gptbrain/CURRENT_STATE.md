@@ -2,8 +2,11 @@
 
 ```text
 STATUS: CURRENT STATE SNAPSHOT — NOT CANON
-DATE: 2026-05-09
+DATE: 2026-05-11
 ISSUE: manus-artifacts#12
+CANON STATUS: not ratified
+AUTHORITY: snapshot/reporting only
+STALE AFTER: 2026-06-11
 ```
 
 ## Current operating status
@@ -29,6 +32,42 @@ archive/boot/gptbrain/schema/S1_AUDIT_EVENT_SCHEMA.yaml
 archive/boot/gptbrain/CLAIM_LEDGER.seed.jsonl
 archive/boot/gptbrain/ARTIFACT_REGISTRY.seed.jsonl
 archive/boot/gptbrain/BOOT_PACKET_TEMPLATE.md
+```
+
+## Reference implementation test suite
+
+```text
+archive/boot/gptbrain/reference_impl/
+  gptbrain_memory.py         — S1 CLI scaffold (claims, trace, challenge, diff, synthesize)
+  dream_memory_palace_reference_impl.py — Variant D palace scaffold
+  s6_memory_palace/          — S6 palace scaffold (rooms, canon gate, JSON round-trip)
+  atlasbrain_gate.py         — AtlasBrain evidence-chain gate validator
+
+  test_gptbrain_memory.py             (8 tests)
+  test_dream_memory_palace_reference_impl.py (10 tests)
+  test_schema_presence.py             (4 tests)
+  test_atlasbrain_gate.py             (27 tests)
+  test_s6_memory_palace.py            (30 tests)
+
+  run_checks.sh — full pytest suite + 3 CLI smoke tests
+```
+
+Total: 79 tests (74 pytest + 3 smoke checks via run_checks.sh)
+
+## AtlasBrain evidence lane
+
+```text
+archive/boot/atlasbrain/
+  raw_logs/     — transcripts and source captures
+  evidence_packets/ — structured evidence indexes
+  benchmarks/   — rubric-scored dossiers
+  evaluator_reactions/ — Claude/GPT/Gemini signals (not proof)
+  learning_claims/ — mechanism classification
+  public_claims/ — reviewed public claim candidates (requires human-root approval)
+  quarantine/   — disputed / overclaimed artifacts
+
+  Gate: atlasbrain_gate.py enforces evidence_packet links and authority gates
+  Status: evidence_only — not ratified, not canon, no public claim yet
 ```
 
 ## What this means

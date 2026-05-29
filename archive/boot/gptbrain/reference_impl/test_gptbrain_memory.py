@@ -8,6 +8,8 @@ ISSUE: manus-artifacts#12
 from __future__ import annotations
 
 import json
+import subprocess
+import sys
 from pathlib import Path
 
 import gptbrain_memory as gm
@@ -89,3 +91,51 @@ def test_c0_claim_is_challenged(tmp_path: Path, monkeypatch) -> None:
     assert report["status"] == "needs_review"
     assert any("C0" in finding for finding in report["findings"])
     assert report["required_next_steps"]
+
+
+def test_ratified_canon_drift_is_flagged(tmp_path: Path, monkeypatch) -> None:
+    ledger = tmp_path / "claims.jsonl"
+    row = {
+        "claim_id": "S1-CLAIM-DRIFT",
+        "claim_text": "Drift case.",
+        "confidence": "C2",
+        "claim_class": "ratified_canon",
+        "evidence_refs": ["archive/boot/atlasbrain/raw_logs/example.md"],
+        "missing_evidence": [],
+        "forbidden_wording": [],
+        "review_status": "unreviewed",
+        "human_root_required": True,
+    }
+    ledger.write_text(json.dumps(row) + "\n", encoding="utf-8")
+    monkeypatch.setattr(gm, "CLAIM_LEDGER", ledger)
+
+    report = gm.challenge_claim("S1-CLAIM-DRIFT").to_dict()
+    assert report["status"] == "needs_review"
+    assert any("ratified_canon" in finding for finding in report["findings"])
+
+
+def test_trace_memory_includes_contradiction_links(tmp_path: Path, monkeypatch) -> None:
+    memories = tmp_path / "memories.jsonl"
+    row = {
+        "memory_id": "S1-MEM-TEST-0001",
+        "title": "Contradiction memory",
+        "type": "claim_note",
+        "confidence": "C1",
+        "provenance": {"source_type": "manual_entry"},
+        "permissions": {"executable": False},
+        "review": {"canon_status": "raw"},
+        "links": {"contradicts": ["S1-CLAIM-2026-0509-0001"]},
+    }
+    memories.write_text(json.dumps(row) + "\n", encoding="utf-8")
+    monkeypatch.setattr(gm, "MEMORY_OBJECTS", memories)
+
+    trace = gm.trace_memory("S1-MEM-TEST-0001")
+    assert trace["found"] is True
+    assert trace["links"]["contradicts"] == ["S1-CLAIM-2026-0509-0001"]
+
+
+def test_cli_trace_requires_target_argument() -> None:
+    cmd = [sys.executable, str(Path(gm.__file__).resolve()), "trace"]
+    proc = subprocess.run(cmd, capture_output=True, text=True, check=False)
+    assert proc.returncode != 0
+    assert "trace requires --claim-id or --memory-id" in proc.stderr

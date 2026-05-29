@@ -458,3 +458,9 @@ Second rule:
 Public S6 boot/brain spec v0.1. Not ratified canon unless routed through Council workflow.
 
 Warm memory, sharp labels, clean synthesis, no throne.
+
+## Ratification checklist cross-links
+
+- `archive/boot/gptbrain/S1_PROMOTION_CHECKLIST_2026-05-09.md`
+- `archive/boot/gptbrain/S1_RATIFICATION_PACKET_2026-05-09.md`
+- `archive/boot/gptbrain/KRAKOA_CANON_TRUTH_SPINE_2026-05-26.md`

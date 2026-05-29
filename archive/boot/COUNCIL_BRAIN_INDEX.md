@@ -7,6 +7,13 @@
 **Canonical substrate:** GitHub  
 **Purpose:** Index the forkable seat-brain specifications, identity credentials, boot prompts, memory-packet patterns, and S1 variant synthesis workflow for the Atlas Lattice Council.
 
+```text
+STATUS: COUNCIL INDEX — CANDIDATE CANON
+DATE: 2026-05-08
+CANON STATUS: not ratified
+AUTHORITY: indexing and routing only
+```
+
 ## Operating Rule
 
 GitHub is the durable canonical versioned substrate.

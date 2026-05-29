@@ -1,0 +1,8 @@
+{"neuron_artifact_id":"ORCS-ROUTE-2026-0509-0001","positron_id":"POSITRON-ORCS-ROUTE-2026-0509-0001","adversarial_review_path":"tests/gptdream","review_scope":"ALUMINUM_OS_CORE"}
+{"neuron_artifact_id":"ORCS-ROUTE-2026-0509-0002","positron_id":"POSITRON-ORCS-ROUTE-2026-0509-0002","adversarial_review_path":"tests/gptdream","review_scope":"UWS_COMMAND_SURFACE"}
+{"neuron_artifact_id":"ORCS-ROUTE-2026-0509-0003","positron_id":"POSITRON-ORCS-ROUTE-2026-0509-0003","adversarial_review_path":"tests/gptdream","review_scope":"ATLAS_LATTICE_AGENT"}
+{"neuron_artifact_id":"ORCS-ROUTE-2026-0509-0004","positron_id":"POSITRON-ORCS-ROUTE-2026-0509-0004","adversarial_review_path":"tests/gptdream","review_scope":"ATLAS_VAULT"}
+{"neuron_artifact_id":"ORCS-ROUTE-2026-0509-0005","positron_id":"POSITRON-ORCS-ROUTE-2026-0509-0005","adversarial_review_path":"tests/gptdream","review_scope":"SHELDONBRAIN_ARCHIVE"}
+{"neuron_artifact_id":"ORCS-ROUTE-2026-0509-0006","positron_id":"POSITRON-ORCS-ROUTE-2026-0509-0006","adversarial_review_path":"tests/gptdream","review_scope":"COUNCIL_BOOT"}
+{"neuron_artifact_id":"ORCS-ROUTE-2026-0509-0007","positron_id":"POSITRON-ORCS-ROUTE-2026-0509-0007","adversarial_review_path":"tests/gptdream","review_scope":"DRAGONSEEK_FORK"}
+{"neuron_artifact_id":"ORCS-ROUTE-2026-0509-0008","positron_id":"POSITRON-ORCS-ROUTE-2026-0509-0008","adversarial_review_path":"tests/gptdream","review_scope":"BAZINGA_MIDDLEWARE"}

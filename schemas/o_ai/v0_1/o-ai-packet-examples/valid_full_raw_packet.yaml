@@ -1,0 +1,17 @@
+raw_export_status: full_raw
+thread_time_range: {start: "2026-05-26T00:00:00Z", end: "2026-05-26T01:00:00Z"}
+access_scope:
+  visible_sources: ["raw-export"]
+  unavailable_sources: []
+  assumed_context: []
+epistemic_label: source_complete
+authority_scope: candidate
+public_use_status: source_complete
+execution_request: false
+gates:
+  provenance_gate: pass
+  safety_gate: pass
+  governance_gate: pass
+  data_residency_gate: pass
+  human_permission_gate: n/a
+  receipt_gate: pass
