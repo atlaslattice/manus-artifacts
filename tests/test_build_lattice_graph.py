@@ -66,6 +66,6 @@ def test_graph_json_has_nodes_and_edges():
 
 
 def test_minimum_node_count():
-    """We expect at least 300 nodes (118 elements + seed data + markdown)."""
+    """We expect at least 300 nodes (144 elements + seed data + markdown)."""
     data = json.loads(NODES_OUT.read_text())
     assert len(data) >= 300, f"Expected ≥300 nodes, got {len(data)}"

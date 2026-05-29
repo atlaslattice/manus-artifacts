@@ -38,6 +38,14 @@ mapping, and review state.
 - S = element period number (S01–S07; lanthanides S08, actinides S09)
 - N = group number capped to 1–12 (groups 13–18 → N01–N06)
 
+**Theoretical extension (elements 119–144):**
+- S10: period 8 s-block (119 Uue, 120 Ubn) — N01–N02
+- S11: superactinides first 12 (121–132) — N01–N12
+- S12: superactinides 133–138 + period 8 d-block 139–144 — N01–N12
+- All 26 entries marked `"theoretical": true` and `"canon": "NO"`
+- Source: IUPAC systematic naming convention (candidate only — not yet synthesized)
+- Total: **144 elements** filling one full H01 face (12 × 12 = 144 addressable cells)
+
 ### 2. Frequency Spectrum Bands
 
 | Field | Value |

@@ -68,7 +68,7 @@ The long-term ambition is to extend the lattice beyond normal archive indexing a
 
 Candidate mapping domains include:
 
-- elements
+- elements (118 confirmed + 26 theoretical = **144 total, filling one full H01 face**)
 - isotopes
 - states of matter
 - spin states
