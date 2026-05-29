@@ -7,6 +7,7 @@ Machine-readable source of truth:
 - [Artifact Registry](./knowledge-graph/artifact_registry.v0_1.json)
 - [Ratification Log](../RATIFICATION_LOG.md)
 - [Repo Quality Scorecard](./knowledge-graph/repo_quality_scorecard.v0_1.json)
+- Registry path: `docs/knowledge-graph/artifact_registry.v0_1.json`
 
 ---
 
@@ -137,7 +138,7 @@ Individual brain folders for swarm agents.
 
 | Artifact | Status |
 |---|---|
-| [David Sheldon](../about/david-sheldon.md) | ✅ Canonical |
+| [David Sheldon](../about/david-sheldon.md) | 🔶 Candidate |
 
 ---
 

@@ -1,6 +1,6 @@
 {
   "version": "0.1",
-  "generated_utc": "2026-05-29T03:29:29Z",
+  "generated_utc": "2026-05-29T03:31:41Z",
   "description": "Machine-readable adjacency map derived from docs/knowledge-graph/artifact_registry.v0_1.json",
   "nodes": [
     "ART-29946BE0CE52",
@@ -727,6 +727,7 @@
     "ART-A86FB035E8BA",
     "ART-440CCEA29479",
     "ART-AEF0633DBE70",
+    "ART-4D5288EFBF92",
     "ART-114F0E4CE417",
     "ART-D9B21126E4AC",
     "ART-AA1043E1483A",
@@ -835,6 +836,7 @@
     "ART-D6485CC7675A",
     "ART-62F0427A0AAA",
     "ART-6CBC045334EE",
+    "ART-E00B674F5FF3",
     "ART-1D6071FD319A",
     "ART-4A6EFD359948",
     "ART-DA1BBCD341D1",
@@ -843,6 +845,7 @@
     "ART-485BB3C4FC64",
     "ART-A3D5B9FC820A",
     "ART-4FD694F105B5",
+    "ART-672667A06412",
     "ART-7FC11EB4F69F",
     "ART-FCAEB5CB8BD5",
     "ART-F13D51DB14E2",
@@ -888,6 +891,11 @@
     {
       "from": "ART-102B6F729BE8",
       "to": "ART-347C040E1955",
+      "relation": "references"
+    },
+    {
+      "from": "ART-102B6F729BE8",
+      "to": "ART-4D5288EFBF92",
       "relation": "references"
     },
     {
@@ -1147,6 +1155,11 @@
     },
     {
       "from": "ART-3472C2E1C3C7",
+      "to": "ART-4D5288EFBF92",
+      "relation": "references"
+    },
+    {
+      "from": "ART-3472C2E1C3C7",
       "to": "ART-AEF0633DBE70",
       "relation": "references"
     },
@@ -1269,6 +1282,21 @@
       "from": "ART-4C97156FA289",
       "to": "ART-7D4C6CB8EB51",
       "relation": "contained_in"
+    },
+    {
+      "from": "ART-4D5288EFBF92",
+      "to": "ART-3472C2E1C3C7",
+      "relation": "references"
+    },
+    {
+      "from": "ART-4D5288EFBF92",
+      "to": "ART-AEF0633DBE70",
+      "relation": "references"
+    },
+    {
+      "from": "ART-4D5288EFBF92",
+      "to": "ART-B898FC9343F6",
+      "relation": "references"
     },
     {
       "from": "ART-4ECDB1A246C5",
@@ -1667,6 +1695,11 @@
     },
     {
       "from": "ART-8EC9A00BFD09",
+      "to": "ART-4D5288EFBF92",
+      "relation": "references"
+    },
+    {
+      "from": "ART-8EC9A00BFD09",
       "to": "ART-6896687BAD64",
       "relation": "references"
     },
@@ -1843,6 +1876,11 @@
     {
       "from": "ART-96E0945FB0C8",
       "to": "ART-440CCEA29479",
+      "relation": "references"
+    },
+    {
+      "from": "ART-96E0945FB0C8",
+      "to": "ART-4D5288EFBF92",
       "relation": "references"
     },
     {
@@ -2048,6 +2086,11 @@
     {
       "from": "ART-AEF0633DBE70",
       "to": "ART-440CCEA29479",
+      "relation": "references"
+    },
+    {
+      "from": "ART-AEF0633DBE70",
+      "to": "ART-4D5288EFBF92",
       "relation": "references"
     },
     {

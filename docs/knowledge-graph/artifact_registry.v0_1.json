@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "generated_utc": "2026-05-29T03:29:29Z",
+  "generated_utc": "2026-05-29T03:31:41Z",
   "status_authority": "docs/knowledge-graph/artifact_registry.v0_1.json",
   "ratification_event_log": "RATIFICATION_LOG.md",
   "description": "Repository-wide artifact registry for machine-checked governance, provenance, and graph coverage.",
@@ -473,6 +473,7 @@
         "ART-E51596082A26",
         "ART-440CCEA29479",
         "ART-AEF0633DBE70",
+        "ART-4D5288EFBF92",
         "ART-AA1043E1483A",
         "ART-25DDA778BE65",
         "ART-33766EA5EC8A",
@@ -17588,6 +17589,7 @@
         "ART-A86FB035E8BA",
         "ART-440CCEA29479",
         "ART-AEF0633DBE70",
+        "ART-4D5288EFBF92",
         "ART-114F0E4CE417",
         "ART-D9B21126E4AC",
         "ART-AA1043E1483A",
@@ -17662,6 +17664,7 @@
         "ART-78A2E7795377",
         "ART-A86FB035E8BA",
         "ART-AEF0633DBE70",
+        "ART-4D5288EFBF92",
         "ART-AA1043E1483A",
         "ART-7CDBBE0DE4BC",
         "ART-E47A3842423E"
@@ -17788,6 +17791,35 @@
       "links_to": [
         "ART-B898FC9343F6",
         "ART-440CCEA29479",
+        "ART-4D5288EFBF92",
+        "ART-3472C2E1C3C7"
+      ]
+    },
+    {
+      "artifact_id": "ART-4D5288EFBF92",
+      "title": "repo quality scorecard.v0 1",
+      "path": "docs/knowledge-graph/repo_quality_scorecard.v0_1.json",
+      "artifact_type": "quality_scorecard",
+      "owner": "docs",
+      "canon_status": "candidate",
+      "lifecycle_state": "candidate",
+      "ratification_event_id": null,
+      "adjudicator": null,
+      "provenance": {
+        "source": "github",
+        "tracked_by_git": true,
+        "path": "docs/knowledge-graph/repo_quality_scorecard.v0_1.json"
+      },
+      "governance": {
+        "decision": null,
+        "decision_date_utc": null,
+        "notes": null,
+        "status_authority": "docs/knowledge-graph/artifact_registry.v0_1.json",
+        "event_log": "RATIFICATION_LOG.md"
+      },
+      "links_to": [
+        "ART-B898FC9343F6",
+        "ART-AEF0633DBE70",
         "ART-3472C2E1C3C7"
       ]
     },
@@ -18108,7 +18140,8 @@
         "event_log": "RATIFICATION_LOG.md"
       },
       "links_to": [
-        "ART-AEF0633DBE70"
+        "ART-AEF0633DBE70",
+        "ART-4D5288EFBF92"
       ]
     },
     {
@@ -20442,6 +20475,30 @@
       "links_to": []
     },
     {
+      "artifact_id": "ART-E00B674F5FF3",
+      "title": "build artifact registry",
+      "path": "scripts/build_artifact_registry.py",
+      "artifact_type": "script",
+      "owner": "scripts",
+      "canon_status": "candidate",
+      "lifecycle_state": "candidate",
+      "ratification_event_id": null,
+      "adjudicator": null,
+      "provenance": {
+        "source": "github",
+        "tracked_by_git": true,
+        "path": "scripts/build_artifact_registry.py"
+      },
+      "governance": {
+        "decision": null,
+        "decision_date_utc": null,
+        "notes": null,
+        "status_authority": "docs/knowledge-graph/artifact_registry.v0_1.json",
+        "event_log": "RATIFICATION_LOG.md"
+      },
+      "links_to": []
+    },
+    {
       "artifact_id": "ART-1D6071FD319A",
       "title": "test sundya runner",
       "path": "scripts/test_sundya_runner.py",
@@ -20625,6 +20682,30 @@
         "source": "github",
         "tracked_by_git": true,
         "path": "tests/pkt_sundya_0_fixtures.json"
+      },
+      "governance": {
+        "decision": null,
+        "decision_date_utc": null,
+        "notes": null,
+        "status_authority": "docs/knowledge-graph/artifact_registry.v0_1.json",
+        "event_log": "RATIFICATION_LOG.md"
+      },
+      "links_to": []
+    },
+    {
+      "artifact_id": "ART-672667A06412",
+      "title": "test artifact metadata",
+      "path": "tests/test_artifact_metadata.py",
+      "artifact_type": "test",
+      "owner": "tests",
+      "canon_status": "candidate",
+      "lifecycle_state": "candidate",
+      "ratification_event_id": null,
+      "adjudicator": null,
+      "provenance": {
+        "source": "github",
+        "tracked_by_git": true,
+        "path": "tests/test_artifact_metadata.py"
       },
       "governance": {
         "decision": null,

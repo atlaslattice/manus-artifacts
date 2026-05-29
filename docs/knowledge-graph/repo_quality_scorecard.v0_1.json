@@ -1,18 +1,18 @@
 {
   "schema_version": "0.1",
-  "generated_utc": "2026-05-29T03:29:29Z",
+  "generated_utc": "2026-05-29T03:31:41Z",
   "status_authority": "docs/knowledge-graph/artifact_registry.v0_1.json",
   "totals": {
-    "tracked_artifact_files": 845,
-    "registry_artifacts": 845,
-    "graph_nodes": 845,
-    "graph_edges": 318,
+    "tracked_artifact_files": 848,
+    "registry_artifacts": 848,
+    "graph_nodes": 848,
+    "graph_edges": 326,
     "graph_coverage_pct": 100.0,
-    "linked_artifacts_pct": 16.92,
+    "linked_artifacts_pct": 16.98,
     "top_level_readme_coverage_pct": 8.7
   },
   "status_counts": {
-    "candidate": 845
+    "candidate": 848
   },
   "artifact_type_counts": {
     "artifact_registry": 1,
@@ -22,11 +22,12 @@
     "index": 25,
     "knowledge_graph": 1,
     "packaging": 2,
+    "quality_scorecard": 1,
     "schema": 46,
-    "script": 3,
+    "script": 4,
     "shell_script": 2,
     "source_code": 136,
-    "test": 8,
+    "test": 9,
     "workflow": 6
   },
   "owner_counts": {
@@ -41,7 +42,7 @@
     "codebases": 171,
     "council": 1,
     "council-reviews": 2,
-    "docs": 11,
+    "docs": 12,
     "fixtures": 7,
     "gptbrain": 1,
     "health": 4,
@@ -51,9 +52,9 @@
     "research": 7,
     "root": 9,
     "schemas": 33,
-    "scripts": 3,
+    "scripts": 4,
     "sheldonbrain": 1,
-    "tests": 8
+    "tests": 9
   },
   "pending_ratification_events": 3
 }

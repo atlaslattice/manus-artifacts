@@ -310,7 +310,9 @@ def build_registry_bundle(root: Path, generated_utc: str | None = None) -> tuple
 
     nodes = [artifact["artifact_id"] for artifact in artifacts]
     top_level_dirs = sorted(
-        child.name for child in root.iterdir() if child.is_dir() and child.name != ".git"
+        child.name
+        for child in root.iterdir()
+        if child.is_dir() and (child.name == ".github" or not child.name.startswith("."))
     )
     top_level_with_readmes = sum((root / dirname / "README.md").exists() for dirname in top_level_dirs)
     coverage_pct = round((len(artifacts) / len(tracked_paths) * 100.0), 2) if tracked_paths else 0.0

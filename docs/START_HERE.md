@@ -76,6 +76,7 @@ Status authority:
 - [Artifact Registry](./knowledge-graph/artifact_registry.v0_1.json)
 - [Ratification Log](../RATIFICATION_LOG.md)
 - [Repo Quality Scorecard](./knowledge-graph/repo_quality_scorecard.v0_1.json)
+- Registry path: `docs/knowledge-graph/artifact_registry.v0_1.json`
 
 ---
 
