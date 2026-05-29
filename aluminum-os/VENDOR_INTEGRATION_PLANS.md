@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ALUMINUM-OS-VENDOR-INTEGRATION-PLANS-MD-2026-05-29
+title: ALUMINUM VENDOR INTEGRATION PLANS
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # ALUMINUM VENDOR INTEGRATION PLANS
 ## Strategic Integration Roadmaps for Apple, Google, Microsoft, OpenAI/Anthropic, and IBM
 

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ALUMINUM-OS-CLAUDE-OPUS-4-6-ALUMINUM-INTEGRATION-PLAN-MD-2026-05-29
+title: Claude Opus 4.6 Integration Plan for Aluminum v2.1
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Claude Opus 4.6 Integration Plan for Aluminum v2.1
 
 **Author:** Manus AI  

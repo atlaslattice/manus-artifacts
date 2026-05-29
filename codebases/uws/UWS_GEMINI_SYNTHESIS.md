@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-UWS-UWS-GEMINI-SYNTHESIS-MD-2026-05-29
+title: Gemini — Synthesis of Aluminum OS v1.0
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Gemini — Synthesis of Aluminum OS v1.0
 
 **Council Role:** Synthesizer

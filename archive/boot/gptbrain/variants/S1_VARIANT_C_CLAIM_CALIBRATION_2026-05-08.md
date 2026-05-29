@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-VARIANTS-S1-VARIANT-C-CLAIM-CALIBRATION-2026-05-08-MD-2026-05-29
+title: S1 Variant C — GPTBrain Claim Calibration Palace
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # S1 Variant C — GPTBrain Claim Calibration Palace
 
 **STATUS:** VARIANT — NOT CANON  

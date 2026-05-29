@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-FORKS-DRAGONSEEK-OS-REPO-SEED-DRAGONSEEK-OS-BOOT-SEQUENCE-MD-2026-05-29
+title: DragonSeekOS Boot Sequence
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # DragonSeekOS Boot Sequence
 
 **Status:** Public boot sequence / not canon  

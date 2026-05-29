@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-MANUS-VAULT-MVP-ARCHITECT-SESSION-REVIEW-MD-2026-05-29
+title: Review of Notion AI Kernel Integration Specification
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Review of Notion AI Kernel Integration Specification
 
 **To:** Project Lead

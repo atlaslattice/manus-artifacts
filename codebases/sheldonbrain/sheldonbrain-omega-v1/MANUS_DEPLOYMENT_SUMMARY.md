@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-SHELDONBRAIN-SHELDONBRAIN-OMEGA-V1-MANUS-DEPLOYMENT-SUMMARY-MD-2026-05-29
+title: MANUS DEPLOYMENT SUMMARY - Claude Chronos-Fold Artifacts
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # MANUS DEPLOYMENT SUMMARY - Claude Chronos-Fold Artifacts
 
 **Date:** January 4, 2026  

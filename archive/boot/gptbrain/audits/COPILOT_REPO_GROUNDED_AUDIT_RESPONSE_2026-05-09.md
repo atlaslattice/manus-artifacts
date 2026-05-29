@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-AUDITS-COPILOT-REPO-GROUNDED-AUDIT-RESPONSE-2026-05-09-MD-2026-05-29
+title: Copilot Repo-Grounded Audit Response
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Copilot Repo-Grounded Audit Response
 
 **Date:** 2026-05-09  

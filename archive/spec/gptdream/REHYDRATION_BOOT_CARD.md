@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-SPEC-GPTDREAM-REHYDRATION-BOOT-CARD-MD-2026-05-29
+title: REHYDRATION BOOT CARD
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # REHYDRATION BOOT CARD
 
 STATUS: CANDIDATE WORKING SPEC — NOT CANON

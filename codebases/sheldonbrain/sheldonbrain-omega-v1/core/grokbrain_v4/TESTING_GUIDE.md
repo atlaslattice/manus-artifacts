@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-SHELDONBRAIN-SHELDONBRAIN-OMEGA-V1-CORE-GROKBRAIN-V4-TESTING-GUIDE-MD-2026-05-29
+title: 🧪 Grokbrain v4.0 - Complete Testing Guide
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # 🧪 Grokbrain v4.0 - Complete Testing Guide
 
 ## For Dave: How to Test Everything Multiple Times

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-ALUMINUM-OS-ALUMINUM-OS-UNIFIED-FIELD-MD-2026-05-29
+title: Aluminum OS - The Unified Field
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Aluminum OS - The Unified Field
 
 **Version:** 3.0

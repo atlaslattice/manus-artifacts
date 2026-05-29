@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-COUNCIL-WIDE-BRAIN-SYNTHESIS-2026-05-09-MD-2026-05-29
+title: Council-Wide Brain Synthesis — GPTBrain as Calibration Layer
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Council-Wide Brain Synthesis — GPTBrain as Calibration Layer
 
 ```text

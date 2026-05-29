@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-STRESS-TESTS-COPILOT-GAUNTLET-META-INVARIANTS-GLOBAL-DISASTER-COVERAGE-HYPOTHESIS-2026-05-08-MD-2026-05-29
+title: Meta-Invariants / Global Disaster Coverage Hypothesis
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Meta-Invariants / Global Disaster Coverage Hypothesis
 
 **Date:** 2026-05-08  

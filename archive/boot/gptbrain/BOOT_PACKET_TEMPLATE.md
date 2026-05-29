@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-BOOT-PACKET-TEMPLATE-MD-2026-05-29
+title: S1 GPTBrain — Boot Packet Template
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # S1 GPTBrain — Boot Packet Template
 
 ```text

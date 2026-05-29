@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-SEATS-GPTBRAIN-S1-CANONICAL-CANDIDATE-SPEC-2026-05-09-MD-2026-05-29
+title: GPTBrain S1 — Canonical Candidate Spec
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # GPTBrain S1 — Canonical Candidate Spec
 
 ```text

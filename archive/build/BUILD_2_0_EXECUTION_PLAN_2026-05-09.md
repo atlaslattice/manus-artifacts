@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BUILD-BUILD-2-0-EXECUTION-PLAN-2026-05-09-MD-2026-05-29
+title: Build 2.0 Execution Plan — Governance-First Runtime Substrate
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Build 2.0 Execution Plan — Governance-First Runtime Substrate
 
 **Date:** 2026-05-09  

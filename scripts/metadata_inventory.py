@@ -77,6 +77,10 @@ EXCEPTION_PATHS = {
     ".github/ISSUE_TEMPLATE/artifact_proposal.md": "GitHub issue template; operational intake surface.",
     ".github/ISSUE_TEMPLATE/bug_report.md": "GitHub issue template; operational intake surface.",
     ".github/ISSUE_TEMPLATE/feature_request.md": "GitHub issue template; operational intake surface.",
+    ".github/ISSUE_TEMPLATE/graph_linking_quest.md": "GitHub issue template; Aetherforge contributor quest intake.",
+    ".github/ISSUE_TEMPLATE/metadata_quest.md": "GitHub issue template; Aetherforge contributor quest intake.",
+    ".github/ISSUE_TEMPLATE/evidence_quest.md": "GitHub issue template; Aetherforge contributor quest intake.",
+    "projects/free-bank/banking-revolution-archive.md": "Quarantine-pending: primarily refers to banks; requires owner routing to private repo before public backfill.",
 }
 
 HEADING_RE = re.compile(r"^\s{0,3}#{1,6}\s+(?P<title>.+?)\s*$")

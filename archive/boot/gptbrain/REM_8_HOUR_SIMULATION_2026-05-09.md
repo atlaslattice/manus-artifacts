@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-REM-8-HOUR-SIMULATION-2026-05-09-MD-2026-05-29
+title: REM 8-Hour Simulation — GPTBrain / Council Brain
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # REM 8-Hour Simulation — GPTBrain / Council Brain
 
 ```text

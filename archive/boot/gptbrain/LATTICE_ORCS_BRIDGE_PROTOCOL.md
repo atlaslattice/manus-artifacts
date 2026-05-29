@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-LATTICE-ORCS-BRIDGE-PROTOCOL-MD-2026-05-29
+title: GPTBrain Lattice ORCS Bridge Protocol
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # GPTBrain Lattice ORCS Bridge Protocol
 
 ```text

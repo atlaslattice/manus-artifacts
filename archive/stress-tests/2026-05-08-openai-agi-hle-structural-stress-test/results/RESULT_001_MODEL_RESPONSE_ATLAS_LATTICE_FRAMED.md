@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-STRESS-TESTS-2026-05-08-OPENAI-AGI-HLE-STRUCTURAL-STRESS-TEST-RESULTS-RESULT-001-MODEL-RESPONSE-ATLAS-LATTICE-FRAMED-MD-2026-05-29
+title: Result 001 — OpenAI AGI/HLE Structural Stress Test
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Result 001 — OpenAI AGI/HLE Structural Stress Test
 
 **Date:** 2026-05-08  

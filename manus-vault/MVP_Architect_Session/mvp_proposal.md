@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-MANUS-VAULT-MVP-ARCHITECT-SESSION-MVP-PROPOSAL-MD-2026-05-29
+title: Proposal: Notion AI Kernel MVP for Cross-Platform Consensus
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Proposal: Notion AI Kernel MVP for Cross-Platform Consensus
 
 **To:** Professor (Master of the Hard Knocks)

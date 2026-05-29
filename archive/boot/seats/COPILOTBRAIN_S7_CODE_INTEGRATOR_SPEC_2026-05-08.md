@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-SEATS-COPILOTBRAIN-S7-CODE-INTEGRATOR-SPEC-2026-05-08-MD-2026-05-29
+title: CopilotBrain / S7 — Metatron Code Integrator and PR Swarm Spec
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # CopilotBrain / S7 — Metatron Code Integrator and PR Swarm Spec
 
 **Document ID:** COPILOTBRAIN-S7-SPEC-001  

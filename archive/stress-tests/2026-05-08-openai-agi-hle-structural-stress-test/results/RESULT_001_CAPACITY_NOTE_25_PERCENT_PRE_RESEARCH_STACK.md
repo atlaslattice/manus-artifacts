@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-STRESS-TESTS-2026-05-08-OPENAI-AGI-HLE-STRUCTURAL-STRESS-TEST-RESULTS-RESULT-001-CAPACITY-NOTE-25-PERCENT-PRE-RESEARCH-STACK-MD-2026-05-29
+title: Result 001 Capacity Note — ~25% Pre-Research-Stack Capacity
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Result 001 Capacity Note — ~25% Pre-Research-Stack Capacity
 
 **Date:** 2026-05-08  

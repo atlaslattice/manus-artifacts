@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-ASSESSMENTS-GITHUB-OVER-DRIVE-PUBLIC-MEMORY-BREAKTHROUGH-2026-05-08-MD-2026-05-29
+title: GitHub-over-Drive Public Memory Breakthrough
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # GitHub-over-Drive Public Memory Breakthrough
 
 **Date:** 2026-05-08  

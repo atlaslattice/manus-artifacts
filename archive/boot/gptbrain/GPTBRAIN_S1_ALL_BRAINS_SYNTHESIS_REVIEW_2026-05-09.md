@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-GPTBRAIN-S1-ALL-BRAINS-SYNTHESIS-REVIEW-2026-05-09-MD-2026-05-29
+title: GPTBrain S1 — All Brains Synthesis Review
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # GPTBrain S1 — All Brains Synthesis Review
 
 ```text

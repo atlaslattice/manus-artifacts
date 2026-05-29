@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-UWS-UWS-CLAUDE-MD-2026-05-29
+title: CLAUDE.md — Claude Integration Guide
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # CLAUDE.md — Claude Integration Guide
 
 When contributing to this repository, follow all guidelines in [AGENTS.md](AGENTS.md).

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-ATLAS-LATTICE-GOVERNANCE-CONSTITUTION-PANTHEON-COUNCIL-V1-MD-2026-05-29
+title: Pantheon Council Founding Document
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 ﻿# THE GOVERNANCE CONSTITUTION
 ## Pantheon Council Founding Document
 ### For the Orbital Archive

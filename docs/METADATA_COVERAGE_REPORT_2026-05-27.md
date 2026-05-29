@@ -10,27 +10,27 @@ source_of_truth: GitHub
 
 # Metadata Coverage Report
 
-Generated at: `2026-05-27T22:26:38+00:00`
+Generated at: `2026-05-29T03:29:10+00:00`
 
 ## Repository-wide summary
 
-- Markdown files scanned: **327**
-- Files with frontmatter: **66**
-- Files with complete required metadata: **59**
+- Markdown files scanned: **377**
+- Files with frontmatter: **376**
+- Files with complete required metadata: **368**
 
 ## Missing required fields
 
 | Field | Missing count |
 |---|---:|
-| `artifact_id` | 268 |
-| `created` | 268 |
-| `last_updated` | 268 |
-| `owner` | 268 |
-| `source_of_truth` | 268 |
-| `status` | 264 |
-| `title` | 268 |
+| `artifact_id` | 8 |
+| `created` | 8 |
+| `last_updated` | 9 |
+| `owner` | 8 |
+| `source_of_truth` | 9 |
+| `status` | 4 |
+| `title` | 8 |
 
 ## Wave 3 priority coverage
 
 - Top 50 fully covered: **50 / 50**
-- Next 100 already covered: **0 / 100**
+- Next 100 already covered: **92 / 100**

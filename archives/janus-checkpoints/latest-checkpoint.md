@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVES-JANUS-CHECKPOINTS-LATEST-CHECKPOINT-MD-2026-05-29
+title: 🦋 JANUS CHECKPOINT - Operation Exodus Complete (Jan 6, 2026)
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # 🦋 JANUS CHECKPOINT - Operation Exodus Complete (Jan 6, 2026)
 
 > **Source:** [https://www.notion.so/2e00c1de73d981f78e42f0b22ed62575](https://www.notion.so/2e00c1de73d981f78e42f0b22ed62575)

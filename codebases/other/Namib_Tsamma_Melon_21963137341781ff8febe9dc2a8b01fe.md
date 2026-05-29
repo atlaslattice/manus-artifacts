@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-OTHER-NAMIB-TSAMMA-MELON-21963137341781FF8FEBE9DC2A8B01FE-MD-2026-05-29
+title: Namib Tsamma Melon
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Namib Tsamma Melon
 
 Category: Fruit

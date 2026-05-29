@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-SEATS-S4-IDENTITY-CREDENTIAL-MD-2026-05-29
+title: S4 Identity Credential — GeminiBrain / ELIXIR
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # S4 Identity Credential — GeminiBrain / ELIXIR
 
 **Document ID:** S4-IDENTITY-CREDENTIAL-001  

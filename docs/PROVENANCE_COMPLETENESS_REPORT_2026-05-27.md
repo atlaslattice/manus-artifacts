@@ -10,7 +10,7 @@ source_of_truth: GitHub
 
 # Provenance Completeness Report
 
-Generated at: `2026-05-27T22:26:38+00:00`
+Generated at: `2026-05-29T03:29:10+00:00`
 
 ## Required provenance signals
 
@@ -22,8 +22,8 @@ Generated at: `2026-05-27T22:26:38+00:00`
 
 ## Gap summary
 
-- Files missing `artifact_id`: **268**
-- Files missing `source_of_truth`: **268**
+- Files missing `artifact_id`: **8**
+- Files missing `source_of_truth`: **9**
 - Files with invalid status values: **4**
 - Files with non-GitHub source values: **0**
 
@@ -31,28 +31,28 @@ Generated at: `2026-05-27T22:26:38+00:00`
 
 | Path | Missing keys |
 |---|---|
-| `projects/chinook-guardian/v1.0.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `projects/free-bank/banking-revolution-archive.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `projects/three-tier-autonomy/doctrine.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/spec/atlasbrain/ATLASBRAIN_EVIDENCE_VAULT_STATUS_v0.1.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/spec/gptdream/GPTDREAM_ATLAS_ORCS_CONSOLIDATED_SPEC_PACKET_2026-05-22.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/spec/gptdream/GPTDREAM_PLUSPLUS_PERSONAL_AGENT_HABITAT_PROTOCOL_v0.2.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/spec/gptdream/REHYDRATION_BOOT_CARD.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/spec/gptdream/VAULT_MANIFEST_2026-05-26.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/spec/gptdream/appendices/APPENDIX_H_1_O_AI_INTEGRATION_SCAFFOLD_v0.1.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/spec/gptdream/appendices/APPENDIX_H_2_O_AI_PACKET_SCHEMA_v0.1.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/spec/gptdream/appendices/APPENDIX_H_3_O_AI_ROUTING_TABLE_v0.1.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/spec/gptdream/appendices/APPENDIX_H_CROSS_VENDOR_INTEROP_MODEL_v0.1.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/spec/gptdream/appendices/APPENDIX_I_1_FORMAL_MATH_SPINE_v0.2.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/spec/gptdream/appendices/APPENDIX_I_2_COMPATIBLE_ANTI_LAUNDERING_ANNEX_v0.3.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/spec/gptdream/appendices/APPENDIX_I_3_ATLAS_ORCS_SCHEMA_BUNDLE_v0.1.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/spec/gptdream/appendices/APPENDIX_I_ATLAS_ORCS_EPISTEMIC_GOVERNANCE_PROFILE_v0.1.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/spec/gptdream/appendices/APPENDIX_J_GPTDREAM_REHYDRATION_PRIORITY_FAILURE_MODE_v0.1.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/boot/gptbrain/BOOT_PACKET_TEMPLATE.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/boot/gptbrain/COPILOT_PARTY_INVITATION_2026-05-09.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/boot/gptbrain/COUNCIL_POETRY_CONTEST_EVERYBODY_WINS_2026-05-09.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/boot/gptbrain/COUNCIL_SYNTHESIS_PACKET_2026-05-09.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/boot/gptbrain/COUNCIL_WIDE_BRAIN_SYNTHESIS_2026-05-09.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/boot/gptbrain/CURRENT_STATE.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/boot/gptbrain/CURRENT_STATE_2026-05-09.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
-| `archive/boot/gptbrain/GENERATED_BOOT_PACKET_SAMPLE_2026-05-09.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
+| `archive/boot/gptbrain/agents/TIDELOCKBrain/TIDELOCKBRAIN_WORK_LOG_WAVE7_TASK77_CI_OPTIMIZE_2026-05-29.md` | last_updated, source_of_truth |
+| `archive/boot/gptbrain/variants/S1_VARIANT_A_INTERFACE_PALACE_2026-05-09.md` | artifact_id, created, last_updated, owner, source_of_truth, title |
+| `archive/boot/gptbrain/variants/S1_VARIANT_B_COGNITIVE_ARCHIVE_2026-05-09.md` | artifact_id, created, last_updated, owner, source_of_truth, title |
+| `archive/boot/gptbrain/variants/S1_VARIANT_C_CLAIM_CALIBRATION_POINTER_2026-05-08.md` | artifact_id, created, last_updated, owner, source_of_truth, title |
+| `archive/boot/gptbrain/variants/S1_VARIANT_E_CONTINUITY_HABITAT_2026-05-09.md` | artifact_id, created, last_updated, owner, source_of_truth, title |
+| `manus-vault/MVP_Architect_Session/mvp-architect-skill/SKILL.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
+| `manus-vault/Skills/ai-native-os-architect/SKILL.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
+| `manus-vault/Skills/mvp-architect/SKILL.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
+| `docs/ARTIFACT_ID_COLLISION_REPORT_2026-05-27.md` | none |
+| `docs/LINEAGE_QUALITY_SCORE_PROPOSAL_v0_1.md` | none |
+| `docs/MASTER_SOURCE_REGISTRY.md` | none |
+| `docs/METADATA_BACKFILL_SCOPE_2026-05-27.md` | none |
+| `docs/METADATA_COVERAGE_REPORT_2026-05-27.md` | none |
+| `docs/METADATA_EXCEPTION_REGISTRY_2026-05-27.md` | none |
+| `docs/PROVENANCE_COMPLETENESS_REPORT_2026-05-27.md` | none |
+| `docs/SCHEMA_VERSION_MIGRATION_NOTES_v0_1.md` | none |
+| `docs/closeout/CONDITIONAL_HISTORY_REWRITE_RUNBOOK_2026-05-28.md` | none |
+| `docs/closeout/DUPLICATE_ARTIFACT_DETECTION_PASS_2026-05-28.md` | none |
+| `docs/closeout/HISTORY_REWRITE_RECEIPT_RESCAN_PROOF_2026-05-28.md` | none |
+| `docs/closeout/NEXT10_EXECUTION_CHECKPOINTS_2026-05-28.md` | none |
+| `docs/closeout/PII_AUDIT_CLOSEOUT_2026-05-28.md` | none |
+| `docs/closeout/PII_AUDIT_EVIDENCE_RECEIPT_2026-05-28.md` | none |
+| `docs/closeout/PRE_RELEASE_SAFETY_SIGNOFF_2026-05-28.md` | none |
+| `docs/closeout/PROVENANCE_FRONTMATTER_BACKFILL_CLOSEOUT_2026-05-28.md` | none |
+| `docs/closeout/REDACTION_PROTOCOL_SAFE_PUBLICATION_EXCEPTIONS_2026-05-28.md` | none |

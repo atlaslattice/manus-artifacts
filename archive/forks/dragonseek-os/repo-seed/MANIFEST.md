@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-FORKS-DRAGONSEEK-OS-REPO-SEED-MANIFEST-MD-2026-05-29
+title: DragonSeekOS Manifest
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # DragonSeekOS Manifest
 
 **Status:** Public repo-seed manifest / not canon  

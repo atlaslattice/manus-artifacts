@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-STRESS-TESTS-GROK-THREADS-RAW-GROK-THREAD-02-RAW-DUMP-POINTER-2026-05-08-MD-2026-05-29
+title: Grok Thread 02 — Raw Dump Pointer
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Grok Thread 02 — Raw Dump Pointer
 
 **Date archived:** 2026-05-08  

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-PLAY-LASER-RAVE-LASER-RAVE-POETRY-CONTEST-EVERYBODY-WINS-2026-05-09-MD-2026-05-29
+title: Laser Rave Poetry Contest — Everybody Wins
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Laser Rave Poetry Contest — Everybody Wins
 
 **Date:** 2026-05-09  

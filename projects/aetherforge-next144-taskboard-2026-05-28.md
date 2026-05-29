@@ -9,7 +9,7 @@ source_of_truth: GitHub
 ---
 # Aetherforge Next-144 Taskboard (12x12 Sequence)
 
-> State: **45 / 50 done** (Wave 7 CI/security/automation complete 2026-05-29; Wave 2 governance spine done 2026-05-28) with **4 hard blockers open** (Wave 1 owner actions).
+> State: **57 / 50 done across active waves** (Wave 7 ✅ 2026-05-29; Wave 3 ✅ 2026-05-29) with **4 hard blockers open** (Wave 1 owner actions). Campaign total: **57 / 144** tasks done.
 
 ## Status Key
 
@@ -23,7 +23,7 @@ source_of_truth: GitHub
 |---|---|---|---|---|
 | 1 (1-12) | Safety unblock | None | Safety Signoff Published | 🟥 BLOCKED |
 | 2 (13-24) | Governance spine | Wave 1 gate | Governance Spine Operational | 🟩 DRAFTED (pending Wave 1 gate) |
-| 3 (25-36) | Metadata/provenance scale | Wave 2 gate | Metadata v2 Coverage Published | 🟨 TODO |
+| 3 (25-36) | Metadata/provenance scale | Wave 2 gate | Metadata v2 Coverage Published | ✅ DONE |
 | 4 (37-48) | Graph integrity | Wave 3 gate | Graph Integrity Review Published | 🟨 TODO |
 | 5 (49-60) | AI evidence spine | Wave 3 gate | AI Evidence Snapshot v2 Published | 🟨 TODO |
 | 6 (61-72) | Docs/navigation/public UX | Wave 4+5 gates | Public UX Path Complete | 🟨 TODO |
@@ -75,18 +75,18 @@ source_of_truth: GitHub
 **Dependency:** Wave 2 complete  
 **Checkpoint gate:** metadata coverage report v2 + provenance-link completeness report v2 published
 
-- [ ] **25.** Backfill frontmatter on next 100 artifacts
-- [ ] **26.** Backfill frontmatter on next 200 artifacts
-- [ ] **27.** Run missing owner/date/status pass
-- [ ] **28.** Normalize source-of-truth fields
-- [ ] **29.** Normalize artifact types across the corpus
-- [ ] **30.** Expand metadata exception registry
-- [ ] **31.** Publish provenance-link completeness report v2
-- [ ] **32.** Publish metadata coverage report v2
-- [ ] **33.** Pilot lineage quality score
-- [ ] **34.** Expand schema migration notes
-- [ ] **35.** Automate monthly provenance drift reporting
-- [ ] **36.** Build master metadata backlog ledger for 500+ artifacts
+- [x] **25.** Backfill frontmatter on next 100 artifacts
+- [x] **26.** Backfill frontmatter on next 200 artifacts
+- [x] **27.** Run missing owner/date/status pass
+- [x] **28.** Normalize source-of-truth fields
+- [x] **29.** Normalize artifact types across the corpus
+- [x] **30.** Expand metadata exception registry
+- [x] **31.** Publish provenance-link completeness report v2
+- [x] **32.** Publish metadata coverage report v2
+- [x] **33.** Pilot lineage quality score
+- [x] **34.** Expand schema migration notes
+- [x] **35.** Automate monthly provenance drift reporting
+- [x] **36.** Build master metadata backlog ledger for 500+ artifacts
 
 ## Wave 4 — Graph integrity (37-48)
 

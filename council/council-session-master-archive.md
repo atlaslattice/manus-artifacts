@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-COUNCIL-COUNCIL-SESSION-MASTER-ARCHIVE-MD-2026-05-29
+title: Council Session Master Archive — Full Sprint Record — March 9 2026
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Council Session Master Archive — Full Sprint Record — March 9 2026
 
 > **Source:** [https://www.notion.so/31f0c1de73d98112b85fcaeed45c8dbc](https://www.notion.so/31f0c1de73d98112b85fcaeed45c8dbc)

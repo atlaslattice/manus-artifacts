@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-FREE-BANK-MANUS-FREE-BANK-TECHNICAL-BLUEPRINT-MD-2026-05-29
+title: Manus Free Bank Technical Blueprint
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 ﻿THE FREE BANK: A Technical Blueprint for the AI-Powered Financial Revolution
 
 

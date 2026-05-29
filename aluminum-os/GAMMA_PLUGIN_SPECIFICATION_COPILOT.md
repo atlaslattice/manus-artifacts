@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ALUMINUM-OS-GAMMA-PLUGIN-SPECIFICATION-COPILOT-MD-2026-05-29
+title: Gamma Plugin v1 - Build-Ready Specification
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Gamma Plugin v1 - Build-Ready Specification
 
 **Author:** Microsoft Copilot (in collaboration with Manus AI)  

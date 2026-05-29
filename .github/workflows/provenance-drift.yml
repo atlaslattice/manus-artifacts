@@ -1,0 +1,72 @@
+name: Monthly Provenance Drift Report
+
+on:
+  schedule:
+    # Run on the 1st of each month at 07:00 UTC
+    - cron: "0 7 1 * *"
+  workflow_dispatch:
+    inputs:
+      report_date:
+        description: "Override report date (YYYY-MM-DD). Defaults to today."
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  provenance-drift:
+    name: Generate provenance drift report
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Determine report date
+        id: date
+        run: |
+          if [ -n "${{ inputs.report_date }}" ]; then
+            echo "DATE=${{ inputs.report_date }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "DATE=$(date -u +%Y-%m)" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build lattice global index
+        run: python scripts/build_lattice_global_index.py
+
+      - name: Run metadata reports (including drift report)
+        run: python scripts/build_metadata_reports.py
+
+      - name: Run lineage quality score
+        run: python scripts/score_lineage_quality.py
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --quiet -- \
+            docs/METADATA_COVERAGE_REPORT_*.md \
+            docs/PROVENANCE_COMPLETENESS_REPORT_*.md \
+            docs/LINEAGE_QUALITY_SCORE_REPORT_*.md \
+            projects/status-reports/PROVENANCE_DRIFT_REPORT_*.md \
+          && echo "CHANGED=false" >> "$GITHUB_OUTPUT" \
+          || echo "CHANGED=true" >> "$GITHUB_OUTPUT"
+
+      - name: Commit drift report
+        if: steps.changes.outputs.CHANGED == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add \
+            docs/METADATA_COVERAGE_REPORT_*.md \
+            docs/PROVENANCE_COMPLETENESS_REPORT_*.md \
+            docs/LINEAGE_QUALITY_SCORE_REPORT_*.md \
+            projects/status-reports/PROVENANCE_DRIFT_REPORT_*.md
+          git commit -m "chore(reports): monthly provenance drift report ${{ steps.date.outputs.DATE }}"
+          git push

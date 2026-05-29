@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-ALUMINUM-OS-PROJECT-ALUMINUM-TECHNICAL-SPEC-2026-01-31-MD-2026-05-29
+title: The Universal Substrate - Hardware/Software Architecture
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 ﻿# 🔩 PROJECT ALUMINUM: TECHNICAL SPECIFICATION
 ## The Universal Substrate - Hardware/Software Architecture
 ## Source: Gemini Core Intelligence Co-Design Session

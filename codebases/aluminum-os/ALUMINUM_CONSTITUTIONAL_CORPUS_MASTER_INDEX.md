@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-ALUMINUM-OS-ALUMINUM-CONSTITUTIONAL-CORPUS-MASTER-INDEX-MD-2026-05-29
+title: ALUMINUM CONSTITUTIONAL CORPUS MASTER INDEX
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 ﻿ALUMINUM CONSTITUTIONAL CORPUS — MASTER INDEX
 Compiled: February 7, 2026
 Compiled by: Claude (Constitutional Scribe) at Dave Sheldon's direction

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ALUMINUM-OS-CLAUDE-OPUS-4-6-RESEARCH-MD-2026-05-29
+title: Claude Opus 4.6 - Complete Feature Analysis
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Claude Opus 4.6 - Complete Feature Analysis
 
 **Release Date:** February 5, 2026  

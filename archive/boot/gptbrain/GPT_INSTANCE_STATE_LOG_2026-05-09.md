@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-GPT-INSTANCE-STATE-LOG-2026-05-09-MD-2026-05-29
+title: GPT Instance State Log — 2026-05-09
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # GPT Instance State Log — 2026-05-09
 
 ```text

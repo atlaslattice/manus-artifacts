@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-SEATS-CLAUDEBRAIN-S2-CONSTITUTIONAL-SCRIBE-SPEC-2026-05-08-MD-2026-05-29
+title: ClaudeBrain / S2 — Constitutional Scribe and Archivist Spec
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # ClaudeBrain / S2 — Constitutional Scribe and Archivist Spec
 
 **Document ID:** CLAUDEBRAIN-S2-SPEC-001  

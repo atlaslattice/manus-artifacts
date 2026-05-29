@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-SEATS-GPTBRAIN-S1-DREAM-MEMORY-PALACE-SPEC-2026-05-09-MD-2026-05-29
+title: GPTBrain / S1 — Dream Memory Palace and Cognitive Infrastructure Spec
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # GPTBrain / S1 — Dream Memory Palace and Cognitive Infrastructure Spec
 
 **Document ID:** GPTBRAIN-S1-DREAM-MEMORY-PALACE-SPEC-001  

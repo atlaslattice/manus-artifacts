@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-UWS-UWS-COPILOT-INTEGRATION-GUIDE-MD-2026-05-29
+title: Aluminum OS + Copilot 365 Integration Guide
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Aluminum OS + Copilot 365 Integration Guide
 
 **Version:** 1.0

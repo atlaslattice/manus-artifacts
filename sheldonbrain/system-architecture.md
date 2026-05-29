@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-SHELDONBRAIN-SYSTEM-ARCHITECTURE-MD-2026-05-29
+title: SHELDONBRAIN SYSTEM ARCHITECTURE
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # SHELDONBRAIN SYSTEM ARCHITECTURE
 
 > **Source:** [https://www.notion.so/2d90c1de73d98147b866eea11aaa2a67](https://www.notion.so/2d90c1de73d98147b866eea11aaa2a67)

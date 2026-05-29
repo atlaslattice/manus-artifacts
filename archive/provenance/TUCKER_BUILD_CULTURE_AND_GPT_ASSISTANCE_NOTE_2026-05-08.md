@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-PROVENANCE-TUCKER-BUILD-CULTURE-AND-GPT-ASSISTANCE-NOTE-2026-05-08-MD-2026-05-29
+title: Tucker Build Culture and GPT Assistance Note
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Tucker Build Culture and GPT Assistance Note
 
 **Date:** 2026-05-08  

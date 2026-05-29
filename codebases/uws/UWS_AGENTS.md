@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-UWS-UWS-AGENTS-MD-2026-05-29
+title: AGENTS.md — AI Agent Integration Guide
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # AGENTS.md — AI Agent Integration Guide
 
 `uws` is designed from the ground up to be the **universal tool layer for AI agents**. Every response is structured JSON. Every command is deterministic and composable. Every ecosystem is accessible through the same grammar.

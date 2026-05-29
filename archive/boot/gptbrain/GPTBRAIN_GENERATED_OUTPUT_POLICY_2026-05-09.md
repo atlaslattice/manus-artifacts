@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-GPTBRAIN-GENERATED-OUTPUT-POLICY-2026-05-09-MD-2026-05-29
+title: GPTBrain Generated Output Publication Policy
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # GPTBrain Generated Output Publication Policy
 
 ```text

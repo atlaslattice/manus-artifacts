@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-FORKS-DRAGONSEEK-OS-REPO-SEED-DRAGONSEEK-OS-FORK-SPEC-V0-1-MD-2026-05-29
+title: DragonSeekOS Fork Spec v0.1
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # DragonSeekOS Fork Spec v0.1
 
 **Status:** Public fork candidate / DeepSeek S5 review required / not canon  

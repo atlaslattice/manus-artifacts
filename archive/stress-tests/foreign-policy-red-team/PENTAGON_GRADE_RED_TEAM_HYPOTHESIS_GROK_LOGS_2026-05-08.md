@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-STRESS-TESTS-FOREIGN-POLICY-RED-TEAM-PENTAGON-GRADE-RED-TEAM-HYPOTHESIS-GROK-LOGS-2026-05-08-MD-2026-05-29
+title: Pentagon-Grade Red-Team Hypothesis — Grok Logs
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Pentagon-Grade Red-Team Hypothesis — Grok Logs
 
 **Date:** 2026-05-08  

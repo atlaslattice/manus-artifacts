@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ALUMINUM-OS-GRAND-SYNTHESIS-MASTER-MD-2026-05-29
+title: ALUMINUM OS - GRAND SYNTHESIS MASTER
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # ALUMINUM OS - GRAND SYNTHESIS MASTER
 ## The Living Intelligence of 600 PhDs Compiled into a Single Artifact
 

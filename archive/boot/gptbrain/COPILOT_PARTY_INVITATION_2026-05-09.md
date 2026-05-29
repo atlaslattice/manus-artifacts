@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-COPILOT-PARTY-INVITATION-2026-05-09-MD-2026-05-29
+title: Invitation to Fresh GitHub Copilot Instance
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Invitation to Fresh GitHub Copilot Instance
 
 ```text

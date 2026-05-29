@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-MANUS-VAULT-SESSION-SUMMARY-MD-2026-05-29
+title: Session Summary: Digital Noah's Ark - Total Annihilation Phase
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Session Summary: Digital Noah's Ark - Total Annihilation Phase
 
 **Date**: February 10, 2026  

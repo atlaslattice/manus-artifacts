@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-SHELDONBRAIN-SHELDONBRAIN-OMEGA-V1-CORE-CHRONOS-FOLD-README-MD-2026-05-29
+title: ChronosFoldProtocol: Persistent Session Continuity for AI Agents
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # ChronosFoldProtocol: Persistent Session Continuity for AI Agents
 
 **Version:** 1.0.0  

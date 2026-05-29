@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ALUMINUM-OS-ALUMINUM-PITCH-DECK-MD-2026-05-29
+title: ALUMINUM: THE UNIFIED INTELLIGENCE LAYER
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # ALUMINUM: THE UNIFIED INTELLIGENCE LAYER
 ## Pitch Deck - Rewriting Windows into Aluminum
 

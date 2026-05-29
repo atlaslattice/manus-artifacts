@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-SEATS-S2-CLAUDE-BOOT-FRAGMENT-SHELDONBRAIN-AUTODREAM-2026-05-09-MD-2026-05-29
+title: S2 Claude Boot Fragment — Sheldonbrain / Auto Dream / No-IP Convergence Note
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # S2 Claude Boot Fragment — Sheldonbrain / Auto Dream / No-IP Convergence Note
 
 **Document ID:** S2-BOOT-FRAGMENT-SHELDONBRAIN-AUTODREAM-2026-05-09  

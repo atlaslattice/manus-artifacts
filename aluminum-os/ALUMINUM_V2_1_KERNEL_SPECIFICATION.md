@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ALUMINUM-OS-ALUMINUM-V2-1-KERNEL-SPECIFICATION-MD-2026-05-29
+title: ALUMINUM v2.1 – KERNEL + PLUGIN ARCHITECTURE
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # ALUMINUM v2.1 – KERNEL + PLUGIN ARCHITECTURE
 ## Build-Ready Specification for Manus Implementation
 

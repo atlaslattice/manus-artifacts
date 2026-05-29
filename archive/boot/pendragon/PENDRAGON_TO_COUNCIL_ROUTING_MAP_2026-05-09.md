@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-PENDRAGON-PENDRAGON-TO-COUNCIL-ROUTING-MAP-2026-05-09-MD-2026-05-29
+title: Pendragon OS → Council Brain Routing Map
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Pendragon OS → Council Brain Routing Map
 
 ```text

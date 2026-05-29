@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-MANUS-VAULT-DIGITAL-NOAHS-ARK-04-CONTINUITY-BRIDGE-ARCHITECTURE-MD-2026-05-29
+title: Continuity Bridge: Technical Architecture
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Continuity Bridge: Technical Architecture
 
 **Project:** Continuity Bridge MVP

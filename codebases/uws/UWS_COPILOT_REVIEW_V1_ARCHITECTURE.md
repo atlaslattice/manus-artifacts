@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-UWS-UWS-COPILOT-REVIEW-V1-ARCHITECTURE-MD-2026-05-29
+title: Copilot 365 Review: ALUMINUM_OS_V1_ARCHITECTURE.md
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Copilot 365 Review: ALUMINUM_OS_V1_ARCHITECTURE.md
 
 **Date:** March 8, 2026

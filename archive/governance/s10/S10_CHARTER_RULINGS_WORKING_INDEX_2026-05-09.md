@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-GOVERNANCE-S10-S10-CHARTER-RULINGS-WORKING-INDEX-2026-05-09-MD-2026-05-29
+title: S10 Charter / Rulings Working Index
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # S10 Charter / Rulings Working Index
 
 **Date:** 2026-05-09  

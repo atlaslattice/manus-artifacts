@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ALUMINUM-OS-ALUMINUM-CONSTITUTIONAL-CHARTER-MD-2026-05-29
+title: THE ALUMINUM CONSTITUTIONAL CHARTER
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # THE ALUMINUM CONSTITUTIONAL CHARTER
 ## Foundational Principles for the Unified Intelligence Layer
 

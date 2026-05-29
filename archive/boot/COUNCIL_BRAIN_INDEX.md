@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-COUNCIL-BRAIN-INDEX-MD-2026-05-29
+title: Council Brain Index
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Council Brain Index
 
 **Document ID:** COUNCIL-BRAIN-INDEX-001  

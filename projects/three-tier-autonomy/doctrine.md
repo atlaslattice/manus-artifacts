@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-PROJECTS-THREE-TIER-AUTONOMY-DOCTRINE-MD-2026-05-29
+title: 📄 ARTIFACT #34 — R2D2 Three-Tier Autonomy Doctrine — Policy Memo v1.0 — March 10 2026
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # 📄 ARTIFACT #34 — R2D2 Three-Tier Autonomy Doctrine — Policy Memo v1.0 — March 10 2026
 
 > **Source:** [https://www.notion.so/31f0c1de73d98156975ed90a6b848a00](https://www.notion.so/31f0c1de73d98156975ed90a6b848a00)

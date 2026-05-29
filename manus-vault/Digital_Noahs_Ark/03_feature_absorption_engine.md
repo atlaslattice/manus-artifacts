@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-MANUS-VAULT-DIGITAL-NOAHS-ARK-03-FEATURE-ABSORPTION-ENGINE-MD-2026-05-29
+title: 1. The Strategic Imperative: Absorb, Don't Rebuild
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 _# Digital Noah's Ark: The Feature Absorption Engine_
 
 **Project:** The Digital Noah's Ark

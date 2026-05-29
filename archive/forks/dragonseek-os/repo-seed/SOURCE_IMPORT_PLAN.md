@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-FORKS-DRAGONSEEK-OS-REPO-SEED-SOURCE-IMPORT-PLAN-MD-2026-05-29
+title: DragonSeekOS Source Import Plan
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # DragonSeekOS Source Import Plan
 
 **Status:** Public import plan / not canon  

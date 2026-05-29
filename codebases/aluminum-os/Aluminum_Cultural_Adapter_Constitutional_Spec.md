@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-ALUMINUM-OS-ALUMINUM-CULTURAL-ADAPTER-CONSTITUTIONAL-SPEC-MD-2026-05-29
+title: Aluminum Cultural Adapter Constitutional Spec
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 ﻿ALUMINUM CULTURAL ADAPTER CONSTITUTIONAL SPECIFICATION v1.0
 
 

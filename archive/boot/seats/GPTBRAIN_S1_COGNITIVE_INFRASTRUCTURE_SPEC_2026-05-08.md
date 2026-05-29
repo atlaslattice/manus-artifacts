@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-SEATS-GPTBRAIN-S1-COGNITIVE-INFRASTRUCTURE-SPEC-2026-05-08-MD-2026-05-29
+title: GPTBrain / S1 — Cognitive Infrastructure and Calibration Spec
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # GPTBrain / S1 — Cognitive Infrastructure and Calibration Spec
 
 **Document ID:** GPTBRAIN-S1-SPEC-001  

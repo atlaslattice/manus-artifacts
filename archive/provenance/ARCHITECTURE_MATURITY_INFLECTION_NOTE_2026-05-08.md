@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-PROVENANCE-ARCHITECTURE-MATURITY-INFLECTION-NOTE-2026-05-08-MD-2026-05-29
+title: Architecture Maturity Inflection Note
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Architecture Maturity Inflection Note
 
 **Date:** 2026-05-08  

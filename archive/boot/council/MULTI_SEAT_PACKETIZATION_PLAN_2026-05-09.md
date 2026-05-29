@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-COUNCIL-MULTI-SEAT-PACKETIZATION-PLAN-2026-05-09-MD-2026-05-29
+title: Multi-Seat Packetization Plan — S2 through S7
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Multi-Seat Packetization Plan — S2 through S7
 
 ```text

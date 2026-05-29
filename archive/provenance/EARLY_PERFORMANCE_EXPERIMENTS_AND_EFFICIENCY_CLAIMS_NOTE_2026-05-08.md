@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-PROVENANCE-EARLY-PERFORMANCE-EXPERIMENTS-AND-EFFICIENCY-CLAIMS-NOTE-2026-05-08-MD-2026-05-29
+title: Early Performance Experiments and Efficiency Claims Note
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Early Performance Experiments and Efficiency Claims Note
 
 **Date:** 2026-05-08  

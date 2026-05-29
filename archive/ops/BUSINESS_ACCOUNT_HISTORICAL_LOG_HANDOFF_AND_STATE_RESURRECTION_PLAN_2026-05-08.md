@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-OPS-BUSINESS-ACCOUNT-HISTORICAL-LOG-HANDOFF-AND-STATE-RESURRECTION-PLAN-2026-05-08-MD-2026-05-29
+title: Business Account Historical Log Handoff and State Resurrection Plan
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Business Account Historical Log Handoff and State Resurrection Plan
 
 **Date:** 2026-05-08  

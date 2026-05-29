@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-SHELDONBRAIN-SHELDONBRAIN-OMEGA-V1-TEMPLATES-CLAUDE-INIT-TEMPLATE-MD-2026-05-29
+title: Claude Initialization Template
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Claude Initialization Template
 
 **Purpose:** This template should be used at the start of every Claude session to enable ChronosFoldProtocol and load persistent context.

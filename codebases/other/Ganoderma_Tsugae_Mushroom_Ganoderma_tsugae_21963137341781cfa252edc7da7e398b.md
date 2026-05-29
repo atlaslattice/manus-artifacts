@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-OTHER-GANODERMA-TSUGAE-MUSHROOM-GANODERMA-TSUGAE-21963137341781CFA252EDC7DA7E398B-MD-2026-05-29
+title: Ganoderma Tsugae Mushroom Ganoderma tsugae
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Ganoderma Tsugae Mushroom Ganoderma tsugae
 
 Category: Medicinal Mushroom

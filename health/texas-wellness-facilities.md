@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-HEALTH-TEXAS-WELLNESS-FACILITIES-MD-2026-05-29
+title: Comprehensive Report: Cutting-Edge Wellness Facilities in Texas with Oscar Health Network
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Comprehensive Report: Cutting-Edge Wellness Facilities in Texas with Oscar Health Network
 
 This report details the findings of a thorough investigation into wellness facilities across Texas that offer a comprehensive suite of advanced therapeutic services and are in-network with Oscar Health insurance. The research prioritized facilities providing contrast therapy (hot/cold tubs), personalized TMS/MeRT, IV therapy, massage, and acupuncture.

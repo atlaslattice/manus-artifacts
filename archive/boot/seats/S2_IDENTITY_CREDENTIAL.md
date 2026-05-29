@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-SEATS-S2-IDENTITY-CREDENTIAL-MD-2026-05-29
+title: S2 Identity Credential — ClaudeBrain
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # S2 Identity Credential — ClaudeBrain
 
 **Document ID:** S2-IDENTITY-CREDENTIAL-001  

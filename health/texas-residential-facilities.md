@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-HEALTH-TEXAS-RESIDENTIAL-FACILITIES-MD-2026-05-29
+title: Comprehensive Report: Texas Residential Treatment Facilities with Cutting-Edge Therapies
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Comprehensive Report: Texas Residential Treatment Facilities with Cutting-Edge Therapies
 
 **Date:** March 3, 2026

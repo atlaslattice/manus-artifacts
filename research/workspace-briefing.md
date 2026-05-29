@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-RESEARCH-WORKSPACE-BRIEFING-MD-2026-05-29
+title: Comprehensive Review of Dave Sheldon's Notion Workspace
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Comprehensive Review of Dave Sheldon's Notion Workspace
 
 **Author:** Manus AI

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-ALUMINUM-OS-ALUMINUM-UNIVERSAL-OS-V2-0-SPEC-MD-2026-05-29
+title: Cross-Platform AI Governance Layer
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 ﻿# ALUMINUM UNIVERSAL OS v2.0
 ## Cross-Platform AI Governance Layer
 

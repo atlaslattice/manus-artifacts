@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-STRESS-TESTS-COPILOT-GAUNTLET-RESULTS-RESULT-002-COPILOT-META-INVARIANT-ASSESSMENT-2026-05-08-MD-2026-05-29
+title: Result 002 — Copilot Meta-Invariant Assessment
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Result 002 — Copilot Meta-Invariant Assessment
 
 **Date:** 2026-05-08  

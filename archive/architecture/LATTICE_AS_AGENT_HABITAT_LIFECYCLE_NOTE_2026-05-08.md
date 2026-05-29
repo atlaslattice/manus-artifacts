@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-ARCHITECTURE-LATTICE-AS-AGENT-HABITAT-LIFECYCLE-NOTE-2026-05-08-MD-2026-05-29
+title: Lattice as Agent Habitat / Lifecycle Architecture Note
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Lattice as Agent Habitat / Lifecycle Architecture Note
 
 **Date:** 2026-05-08  

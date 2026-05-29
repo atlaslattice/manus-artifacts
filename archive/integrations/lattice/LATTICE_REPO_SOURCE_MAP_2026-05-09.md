@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-INTEGRATIONS-LATTICE-LATTICE-REPO-SOURCE-MAP-2026-05-09-MD-2026-05-29
+title: Lattice Repository Source Map — Aluminum OS / UWS / Council Brain
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Lattice Repository Source Map — Aluminum OS / UWS / Council Brain
 
 **Date:** 2026-05-09  

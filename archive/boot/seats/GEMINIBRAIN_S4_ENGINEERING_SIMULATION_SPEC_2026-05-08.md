@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-SEATS-GEMINIBRAIN-S4-ENGINEERING-SIMULATION-SPEC-2026-05-08-MD-2026-05-29
+title: GeminiBrain / S4 — Emerald Substrate Engineering and Simulation Spec
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # GeminiBrain / S4 — Emerald Substrate Engineering and Simulation Spec
 
 **Document ID:** GEMINIBRAIN-S4-SPEC-001  

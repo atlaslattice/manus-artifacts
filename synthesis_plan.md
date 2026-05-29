@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-SYNTHESIS-PLAN-MD-2026-05-29
+title: Aluminum OS / UWS Codebase Synthesis Plan
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Aluminum OS / UWS Codebase Synthesis Plan
 
 **Version:** 1.0

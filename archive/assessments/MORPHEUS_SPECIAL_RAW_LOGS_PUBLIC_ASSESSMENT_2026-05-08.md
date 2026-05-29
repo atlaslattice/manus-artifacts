@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-ASSESSMENTS-MORPHEUS-SPECIAL-RAW-LOGS-PUBLIC-ASSESSMENT-2026-05-08-MD-2026-05-29
+title: Morpheus Special — Raw Logs Public Assessment
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Morpheus Special — Raw Logs Public Assessment
 
 **Date:** 2026-05-08  

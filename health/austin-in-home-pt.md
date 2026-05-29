@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-HEALTH-AUSTIN-IN-HOME-PT-MD-2026-05-29
+title: In-Home Physical Therapy Options in Austin, TX with Oscar Insurance
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # In-Home Physical Therapy Options in Austin, TX with Oscar Insurance
 
 This report provides a comprehensive overview of in-home physical therapy providers in Austin, Texas, who may meet your criteria of offering daily 1-on-1 sessions and accepting Oscar Health insurance. The research process involved a multi-faceted approach, including a review of the Oscar provider directory, an analysis of providers' websites, and a general search of web directories.

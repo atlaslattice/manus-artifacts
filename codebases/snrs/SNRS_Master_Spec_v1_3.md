@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-SNRS-SNRS-MASTER-SPEC-V1-3-MD-2026-05-29
+title: Sovereign Node Radius Stack (SNRS) Master Spec v1.3
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Sovereign Node Radius Stack (SNRS) Master Spec v1.3
 
 ## Status

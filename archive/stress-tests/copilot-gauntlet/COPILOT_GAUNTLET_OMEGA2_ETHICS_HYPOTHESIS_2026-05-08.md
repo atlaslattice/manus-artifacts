@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-STRESS-TESTS-COPILOT-GAUNTLET-COPILOT-GAUNTLET-OMEGA2-ETHICS-HYPOTHESIS-2026-05-08-MD-2026-05-29
+title: Copilot Gauntlet / Omega-2 / Ethics Benchmark Hypothesis
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Copilot Gauntlet / Omega-2 / Ethics Benchmark Hypothesis
 
 **Date:** 2026-05-08  

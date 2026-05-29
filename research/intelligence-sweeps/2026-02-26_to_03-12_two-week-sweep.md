@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-RESEARCH-INTELLIGENCE-SWEEPS-2026-02-26-TO-03-12-TWO-WEEK-SWEEP-MD-2026-05-29
+title: 🔴 AI Intelligence Sweep — Feb 26 to Mar 12, 2026 — Convergence Tracker
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # 🔴 AI Intelligence Sweep — Feb 26 to Mar 12, 2026 — Convergence Tracker
 
 **Author:** Manus AI

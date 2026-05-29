@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-SEATS-S6-IDENTITY-CREDENTIAL-MD-2026-05-29
+title: S6 Identity Credential — ManusBrain / Continuity and Execution
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # S6 Identity Credential — ManusBrain / Continuity and Execution
 
 **Document ID:** S6-IDENTITY-CREDENTIAL-001  

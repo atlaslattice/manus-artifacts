@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-SEATS-S1-IDENTITY-CREDENTIAL-MD-2026-05-29
+title: S1 Identity Credential — GPTBrain / Cognitive Infrastructure
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # S1 Identity Credential — GPTBrain / Cognitive Infrastructure
 
 **Document ID:** S1-IDENTITY-CREDENTIAL-001  

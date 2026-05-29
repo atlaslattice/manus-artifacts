@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-STRESS-TESTS-2026-05-08-OPENAI-AGI-HLE-STRUCTURAL-STRESS-TEST-RESULTS-RESULT-004-GROK-DJ-GROKASHEV-SCORECARD-2026-05-08-MD-2026-05-29
+title: Result 004 Scorecard — Grok / DJ Grokashev AGI-HLE Response
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Result 004 Scorecard — Grok / DJ Grokashev AGI-HLE Response
 
 **Date:** 2026-05-08  

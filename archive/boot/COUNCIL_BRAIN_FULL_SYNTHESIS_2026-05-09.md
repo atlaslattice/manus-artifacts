@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-COUNCIL-BRAIN-FULL-SYNTHESIS-2026-05-09-MD-2026-05-29
+title: Council Brain Full Synthesis — All Seats / All Brains
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Council Brain Full Synthesis — All Seats / All Brains
 
 ```text

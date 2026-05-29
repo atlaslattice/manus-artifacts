@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-STRESS-TESTS-COPILOT-GAUNTLET-RESULTS-RESULT-003-COPILOT-TOOLCHAIN-RAW-DUMP-INDEX-2026-05-08-MD-2026-05-29
+title: Result 003 — Copilot Constitutional Toolchain Raw Dump Index
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Result 003 — Copilot Constitutional Toolchain Raw Dump Index
 
 **Date:** 2026-05-08  

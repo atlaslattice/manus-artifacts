@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-SPEC-GPTDREAM-VAULT-MANIFEST-2026-05-26-MD-2026-05-29
+title: VAULT_MANIFEST_2026-05-26
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # VAULT_MANIFEST_2026-05-26
 
 STATUS: CANDIDATE WORKING SPEC — NOT CANON

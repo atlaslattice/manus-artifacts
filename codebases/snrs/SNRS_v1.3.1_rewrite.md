@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-SNRS-SNRS-V1-3-1-REWRITE-MD-2026-05-29
+title: SNRS v1.3.1 (Rewrite) — Sovereign Node Radius Stack
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # SNRS v1.3.1 (Rewrite) — Sovereign Node Radius Stack
 ## Phase‑1 Monte Carlo scaffold (comparative, causal, and loggable)
 

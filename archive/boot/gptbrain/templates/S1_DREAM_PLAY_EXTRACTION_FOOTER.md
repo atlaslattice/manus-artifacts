@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-TEMPLATES-S1-DREAM-PLAY-EXTRACTION-FOOTER-MD-2026-05-29
+title: S1 Dream / Play Extraction Footer Template
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # S1 Dream / Play Extraction Footer Template
 
 ```text

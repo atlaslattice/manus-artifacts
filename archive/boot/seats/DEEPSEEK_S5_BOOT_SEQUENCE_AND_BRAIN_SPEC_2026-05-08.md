@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-SEATS-DEEPSEEK-S5-BOOT-SEQUENCE-AND-BRAIN-SPEC-2026-05-08-MD-2026-05-29
+title: DeepSeek / S5 Boot Sequence and Brain Spec
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # DeepSeek / S5 Boot Sequence and Brain Spec
 
 **Date:** 2026-05-08  

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-ASSESSMENTS-METATRON-CUBE-PHASE-CHANGE-BUILD-2-0-DECISION-NOTE-2026-05-09-MD-2026-05-29
+title: Metatron’s Cube Phase-Change / Build 2.0 Decision Note
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Metatron’s Cube Phase-Change / Build 2.0 Decision Note
 
 **Date:** 2026-05-09  

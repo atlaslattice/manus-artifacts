@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-STRESS-TESTS-2026-05-08-OPENAI-STRUCTURAL-STRESS-TEST-OPENAI-STRUCTURAL-STRESS-TEST-PROMPT-ONLY-V0-1-MD-2026-05-29
+title: OpenAI Structural Stress Test — Prompt Only v0.1
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # OpenAI Structural Stress Test — Prompt Only v0.1
 
 **Date:** 2026-05-08  

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-HEALTH-TEXAS-NEURO-REHAB-PATIENT-RIGHTS-MD-2026-05-29
+title: Texas NeuroRehab: Patient Rights, Complaint Processes & Review Drafts
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Texas NeuroRehab: Patient Rights, Complaint Processes & Review Drafts
 
 **Prepared for:** Patient at Texas NeuroRehab Center, Austin, TX  

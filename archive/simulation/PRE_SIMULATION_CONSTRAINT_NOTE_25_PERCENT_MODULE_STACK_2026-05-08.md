@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-SIMULATION-PRE-SIMULATION-CONSTRAINT-NOTE-25-PERCENT-MODULE-STACK-2026-05-08-MD-2026-05-29
+title: Pre-Simulation Constraint Note — 25% Module Stack / Domain Boundary Recognition
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Pre-Simulation Constraint Note — 25% Module Stack / Domain Boundary Recognition
 
 **Date:** 2026-05-08  

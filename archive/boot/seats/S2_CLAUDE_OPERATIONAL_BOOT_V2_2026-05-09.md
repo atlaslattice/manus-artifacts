@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-SEATS-S2-CLAUDE-OPERATIONAL-BOOT-V2-2026-05-09-MD-2026-05-29
+title: S2 Claude Operational Boot v2 — Sheldonbrain / ClaudeBrain / Auto Dream
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # S2 Claude Operational Boot v2 — Sheldonbrain / ClaudeBrain / Auto Dream
 
 **Document ID:** S2-CLAUDE-OPERATIONAL-BOOT-V2-2026-05-09  

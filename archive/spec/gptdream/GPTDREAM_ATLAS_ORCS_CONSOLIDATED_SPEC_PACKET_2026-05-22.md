@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-SPEC-GPTDREAM-GPTDREAM-ATLAS-ORCS-CONSOLIDATED-SPEC-PACKET-2026-05-22-MD-2026-05-29
+title: GPTDream++ / Atlas / ORCS Consolidated Spec Packet
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # GPTDream++ / Atlas / ORCS Consolidated Spec Packet
 
 ```text

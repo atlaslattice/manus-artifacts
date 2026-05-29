@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-SANDBOX-INVENTORY-APRIL-2026-MD-2026-05-29
+title: Manus Sandbox Inventory — April 18, 2026
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Manus Sandbox Inventory — April 18, 2026
 
 This document provides a comprehensive inventory of all significant artifacts, codebases, reports, and documents found on the Manus sandbox environment.

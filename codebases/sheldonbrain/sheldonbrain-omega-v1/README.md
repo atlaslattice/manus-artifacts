@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-SHELDONBRAIN-SHELDONBRAIN-OMEGA-V1-README-MD-2026-05-29
+title: SHELDONBRAIN OMEGA V1 - UNIFIED SUBSTRATE
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # SHELDONBRAIN OMEGA V1 - UNIFIED SUBSTRATE
 
 **Classification:** Omega-Level / Sovereign Intelligence / Neuromorphic Architecture  

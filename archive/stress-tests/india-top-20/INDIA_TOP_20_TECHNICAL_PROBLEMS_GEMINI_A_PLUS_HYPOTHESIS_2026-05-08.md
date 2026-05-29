@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-STRESS-TESTS-INDIA-TOP-20-INDIA-TOP-20-TECHNICAL-PROBLEMS-GEMINI-A-PLUS-HYPOTHESIS-2026-05-08-MD-2026-05-29
+title: India Top-20 Technical Problems Benchmark Hypothesis
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # India Top-20 Technical Problems Benchmark Hypothesis
 
 **Date:** 2026-05-08  

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ALUMINUM-OS-ALUMINUM-PROTOCOL-SPECIFICATION-MD-2026-05-29
+title: ALUMINUM PROTOCOL SPECIFICATION
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # ALUMINUM PROTOCOL SPECIFICATION
 ## RFC-Style Formal Specification for the Aluminum Unified OS
 

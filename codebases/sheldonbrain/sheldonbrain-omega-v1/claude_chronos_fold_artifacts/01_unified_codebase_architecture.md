@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-SHELDONBRAIN-SHELDONBRAIN-OMEGA-V1-CLAUDE-CHRONOS-FOLD-ARTIFACTS-01-UNIFIED-CODEBASE-ARCHITECTURE-MD-2026-05-29
+title: 🏛️ CHRONOS-FOLD DELIVERABLE: Unified Codebase Architecture Document (January 4, 2026)
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # 🏛️ CHRONOS-FOLD DELIVERABLE: Unified Codebase Architecture Document (January 4, 2026)
 
 **Generated:** January 4, 2026  

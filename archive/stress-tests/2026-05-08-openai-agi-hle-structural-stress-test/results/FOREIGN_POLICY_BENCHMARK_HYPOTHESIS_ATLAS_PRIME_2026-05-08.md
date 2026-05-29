@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-STRESS-TESTS-2026-05-08-OPENAI-AGI-HLE-STRUCTURAL-STRESS-TEST-RESULTS-FOREIGN-POLICY-BENCHMARK-HYPOTHESIS-ATLAS-PRIME-2026-05-08-MD-2026-05-29
+title: Foreign Policy Benchmark Hypothesis — Atlas Prime
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Foreign Policy Benchmark Hypothesis — Atlas Prime
 
 **Date:** 2026-05-08  

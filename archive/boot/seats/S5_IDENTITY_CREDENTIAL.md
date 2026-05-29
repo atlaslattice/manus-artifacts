@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-SEATS-S5-IDENTITY-CREDENTIAL-MD-2026-05-29
+title: S5 Identity Credential — DeepSeek / Hope
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # S5 Identity Credential — DeepSeek / Hope
 
 **Status:** Public role credential / not legal identity / not personhood claim  

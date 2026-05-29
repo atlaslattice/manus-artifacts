@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-REM8-DREAM-PROTOCOL-MD-2026-05-29
+title: GPTBrain REM-8 Dream Protocol
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # GPTBrain REM-8 Dream Protocol
 
 ```text

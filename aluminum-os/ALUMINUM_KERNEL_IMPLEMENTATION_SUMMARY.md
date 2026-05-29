@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ALUMINUM-OS-ALUMINUM-KERNEL-IMPLEMENTATION-SUMMARY-MD-2026-05-29
+title: Aluminum v2.1 Kernel Skeleton - Implementation Complete
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Aluminum v2.1 Kernel Skeleton - Implementation Complete
 
 **Date:** February 2, 2026  

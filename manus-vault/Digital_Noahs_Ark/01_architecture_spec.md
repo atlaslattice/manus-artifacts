@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-MANUS-VAULT-DIGITAL-NOAHS-ARK-01-ARCHITECTURE-SPEC-MD-2026-05-29
+title: Digital Noah's Ark: AI-Native OS Architecture
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Digital Noah's Ark: AI-Native OS Architecture
 
 **Project:** The Digital Noah's Ark

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-OPS-PUBLIC-BY-DEFAULT-OPERATING-DIRECTIVE-2026-05-08-MD-2026-05-29
+title: Public-By-Default Operating Directive
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Public-By-Default Operating Directive
 
 **Date:** 2026-05-08  

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-SHELDONBRAIN-SHELDONBRAIN-OMEGA-V1-CORE-GROKBRAIN-V4-GDRIVE-QUICKSTART-MD-2026-05-29
+title: Google Drive Integration - Quick Start
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Google Drive Integration - Quick Start
 
 ## Overview

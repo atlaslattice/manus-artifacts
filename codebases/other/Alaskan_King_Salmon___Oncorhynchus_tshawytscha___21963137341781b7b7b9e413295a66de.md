@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-OTHER-ALASKAN-KING-SALMON-ONCORHYNCHUS-TSHAWYTSCHA-21963137341781B7B7B9E413295A66DE-MD-2026-05-29
+title: Alaskan King Salmon (*Oncorhynchus tshawytscha*)
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Alaskan King Salmon (*Oncorhynchus tshawytscha*)
 
 Category: Fish

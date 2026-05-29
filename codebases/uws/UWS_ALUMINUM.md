@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-UWS-UWS-ALUMINUM-MD-2026-05-29
+title: Aluminum OS — Architecture Specification
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Aluminum OS — Architecture Specification
 
 > *"You're not building three CLIs. You're building one CLI with three backends."*

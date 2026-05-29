@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ALUMINUM-OS-ALUMINUM-ARCHITECTURE-DIAGRAM-MD-2026-05-29
+title: ALUMINUM UNIFIED OS - ARCHITECTURE DIAGRAM
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # ALUMINUM UNIFIED OS - ARCHITECTURE DIAGRAM
 ## Visual Representation of the Intelligence Layer
 

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-STRESS-TESTS-2026-05-08-OPENAI-AGI-HLE-STRUCTURAL-STRESS-TEST-RESULTS-RESULT-001-RESOURCE-CONSTRAINT-NOTE-PRE-SIMULATION-MD-2026-05-29
+title: Result 001 Resource Constraint Note — Pre-Simulation / Zero-Budget Edge Run
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Result 001 Resource Constraint Note — Pre-Simulation / Zero-Budget Edge Run
 
 **Date:** 2026-05-08  

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-COUNCIL-REVIEWS-COUNCIL-REVIEW-COPILOT-OUTPUT-MD-2026-05-29
+title: SHELDONBRAIN Council Review #2
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # SHELDONBRAIN Council Review #2
 ## Subject: GitHub Copilot "Fiduciary Duty Against Busywork" Output
 ### Date: March 20, 2026

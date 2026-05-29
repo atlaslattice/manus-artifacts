@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-OTHER-BOTSWANA-TSAMMA-MELONS-CITRULLUS-LANATUS-2196313734178154A117D0435C2DA44A-MD-2026-05-29
+title: Botswana Tsamma Melons (*Citrullus lanatus*)
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Botswana Tsamma Melons (*Citrullus lanatus*)
 
 Category: Fruit

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-ARCHITECTURE-DEEPSEEK-DRAGONSEEK-FORKABILITY-BREAKTHROUGH-2026-05-08-MD-2026-05-29
+title: DeepSeek / DragonSeek Forkability Breakthrough
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # DeepSeek / DragonSeek Forkability Breakthrough
 
 **Date:** 2026-05-08  

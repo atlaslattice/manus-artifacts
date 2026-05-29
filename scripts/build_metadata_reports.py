@@ -16,17 +16,18 @@ from metadata_inventory import (
 
 DOCS_DIR = ROOT / "docs"
 STATUS_DIR = ROOT / "projects" / "status-reports"
+REPORT_DATE = "2026-05-29"  # Wave 3 v2 report date
 
 
-def frontmatter(artifact_id: str, title: str) -> list[str]:
+def frontmatter(artifact_id: str, title: str, date: str = BACKFILL_DATE) -> list[str]:
     return [
         "---",
         f"artifact_id: {artifact_id}",
         f"title: {title}",
         "status: CANDIDATE",
         "owner: atlaslattice",
-        f"created: {BACKFILL_DATE}",
-        f"last_updated: {BACKFILL_DATE}",
+        f"created: {date}",
+        f"last_updated: {date}",
         "source_of_truth: GitHub",
         "---",
         "",
@@ -258,6 +259,103 @@ def main() -> int:
             "|---|---|",
         ]
         + [f"| `{path}` | {reason} |" for path, reason in sorted(EXCEPTION_PATHS.items())],
+    )
+
+    # --- Wave 3 v2 reports (Tasks 31 & 32) ---
+
+    write(
+        DOCS_DIR / f"METADATA_COVERAGE_REPORT_{REPORT_DATE}.md",
+        frontmatter(
+            f"DOC-METADATA-COVERAGE-REPORT-{REPORT_DATE}",
+            "Metadata Coverage Report v2",
+            date=REPORT_DATE,
+        )
+        + [
+            "# Metadata Coverage Report v2",
+            "",
+            f"Generated at: `{now}`",
+            "",
+            "> **Wave 3 post-backfill snapshot** — 259 files backfilled in this session.",
+            "",
+            "## Repository-wide summary",
+            "",
+            f"- Markdown files scanned: **{summary['total']}**",
+            f"- Files with frontmatter: **{summary['with_frontmatter']}**",
+            f"- Files with complete required metadata: **{summary['fully_valid']}**",
+            f"- Coverage rate: **{summary['fully_valid'] / summary['total'] * 100:.1f}%**",
+            "",
+            "## Missing required fields",
+            "",
+            "| Field | Missing count |",
+            "|---|---:|",
+        ]
+        + [f"| `{field}` | {count} |" for field, count in summary["missing_counter"].items()]
+        + [
+            "",
+            "## Wave 3 priority coverage",
+            "",
+            f"- Top 50 fully covered: **{sum(1 for path in TOP50_PATHS if not record_map[path]['missing_keys'])} / 50**",
+            f"- Next 100 covered: **{sum(1 for path in wave3_next100 if not record_map[path]['missing_keys'])} / 100**",
+            "",
+            "## Remaining gap",
+            "",
+            "| Path | Missing keys |",
+            "|---|---|",
+        ]
+        + [
+            f"| `{r['path']}` | {', '.join(r['missing_keys'])} |"
+            for r in records
+            if r["missing_keys"] and r["path"] not in EXCEPTION_PATHS
+        ][:30]
+        + ["", "> _Showing first 30 of remaining gap. Run `scripts/build_metadata_reports.py` to refresh._"],
+    )
+
+    write(
+        DOCS_DIR / f"PROVENANCE_COMPLETENESS_REPORT_{REPORT_DATE}.md",
+        frontmatter(
+            f"DOC-PROVENANCE-COMPLETENESS-REPORT-{REPORT_DATE}",
+            "Provenance Completeness Report v2",
+            date=REPORT_DATE,
+        )
+        + [
+            "# Provenance Completeness Report v2",
+            "",
+            f"Generated at: `{now}`",
+            "",
+            "> **Wave 3 post-backfill snapshot.**",
+            "",
+            "## Required provenance signals",
+            "",
+            "- `artifact_id`",
+            "- `owner`",
+            "- `created` / `last_updated`",
+            "- `status`",
+            "- `source_of_truth`",
+            "",
+            "## Gap summary",
+            "",
+            f"- Files missing `artifact_id`: **{len(missing_ids)}**",
+            f"- Files missing `source_of_truth`: **{len(missing_source)}**",
+            f"- Files with invalid status values: **{len(invalid_status)}**",
+            f"- Files with non-GitHub source values: **{len(non_github)}**",
+            "",
+            "## Highest-priority remaining gaps",
+            "",
+            "| Path | Missing keys |",
+            "|---|---|",
+        ]
+        + [
+            f"| `{path}` | {', '.join(record_map[path]['missing_keys']) or 'none'} |"
+            for path in wave3_next100[:25]
+        ]
+        + [
+            "",
+            "## Exception paths (excluded from gap count)",
+            "",
+            "| Path | Reason |",
+            "|---|---|",
+        ]
+        + [f"| `{p}` | {r} |" for p, r in sorted(EXCEPTION_PATHS.items())],
     )
 
     return 0

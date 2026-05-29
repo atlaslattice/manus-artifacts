@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-MANUS-VAULT-MVP-ARCHITECT-SESSION-COPILOT-MESSAGE-MD-2026-05-29
+title: copilot message
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 _Subject: Inquiry Regarding Programmatic Access to OneDrive for Multi-Cloud Integration_
 
 To the Microsoft Copilot & OneDrive Teams,

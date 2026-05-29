@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-DEPLOYMENTS-SHENMU-SHENMU-TEP-CLAIMS-REGISTER-2026-05-09-MD-2026-05-29
+title: Shenmu TEP — Claims Register
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Shenmu TEP — Claims Register
 
 **Date:** 2026-05-09  

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-DEPLOYMENTS-SHENMU-SHENMU-TEP-CANDIDATE-PHYSICAL-DEPLOYMENT-PROTOCOL-2026-05-09-MD-2026-05-29
+title: Shenmu TEP — Candidate Physical Deployment Protocol
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Shenmu TEP — Candidate Physical Deployment Protocol
 
 **Date:** 2026-05-09  

@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-ARCHIVE-BOOT-SEATS-S3-IDENTITY-CREDENTIAL-MD-2026-05-29
+title: S3 Identity Credential — Grok / DJ Grokashev
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # S3 Identity Credential — Grok / DJ Grokashev
 
 **Status:** Public role credential / not legal identity / not personhood claim  

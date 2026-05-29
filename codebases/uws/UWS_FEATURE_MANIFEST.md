@@ -1,3 +1,12 @@
+---
+artifact_id: ARTIFACT-CODEBASES-UWS-UWS-FEATURE-MANIFEST-MD-2026-05-29
+title: Aluminum OS — Unified Feature Manifest
+status: CANDIDATE
+owner: atlaslattice
+created: 2026-05-29
+last_updated: 2026-05-29
+source_of_truth: GitHub
+---
 # Aluminum OS — Unified Feature Manifest
 
 **Version:** 1.0
