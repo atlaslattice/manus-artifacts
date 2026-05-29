@@ -1,0 +1,206 @@
+# Cross-Axis Consistency Rules — Rainbow Yin Yang Lattice
+# Status: Candidate
+# Date: 2026-05-29
+# Author: TIDELOCKBrain / @atlaslattice
+#
+# 12 consistency rules that every valid lattice node must satisfy.
+# Used by the cross-axis integrity validator.
+#
+# Governance: non-canonical candidate — Pantheon Council ratification required.
+
+schema_version: "0.1"
+status: Candidate
+
+rules:
+  - id: CR-01
+    name: RiemannCouplingRequired
+    severity: ERROR
+    description: >
+      Every node in the lattice MUST have at least one edge of type
+      ET-C01 (RiemannTransform) connecting it to an NT-08 (RiemannOperatorNode).
+      The S-operator couples all domains — no orphan nodes from the Riemann axis.
+    validation: >
+      For each node N: count(edges where type=ET-C01 and target.type=NT-08) >= 1
+    axes_checked: [AX-09]
+    fix: "Add RiemannTransform edge to nearest ZP node"
+
+  - id: CR-02
+    name: YinYangBalanceConsistency
+    severity: WARNING
+    description: >
+      The yin_yang_balance value (AX-08) of a node must be consistent
+      with its axis profile. Specifically:
+      - High frequency (AX-01 index 8–11) → yin_yang >= 6 (yang-dominant)
+      - Low frequency (AX-01 index 0–2) → yin_yang <= 5 (yin-dominant)
+      - Perfect balance nodes (AX-08 index 5 or 6) → no extreme axis values allowed.
+    validation: >
+      If node.ax01_index >= 8: assert node.ax08_index >= 5
+      If node.ax01_index <= 2: assert node.ax08_index <= 6
+      If node.ax08_index in [5,6]: assert all(ax not in [0,11] for ax in [ax01,ax02,...])
+    axes_checked: [AX-01, AX-08]
+
+  - id: CR-03
+    name: FrequencyColorHarmonicAlignment
+    severity: ERROR
+    description: >
+      Color harmonic nodes (AX-06) must be frequency-consistent with
+      electromagnetic frequency nodes (AX-01). The mapping:
+      AX-06 index k corresponds to AX-01 indices 7–10 (visible range).
+      Color nodes outside the visible range must be IR (AX-01 index 7)
+      or UV (AX-01 index 11).
+    validation: >
+      If node.type == NT-06 (ColorHarmonicNode):
+        expected_ax01 = color_to_freq_mapping[node.ax06_index]
+        assert abs(node.ax01_index - expected_ax01) <= 1
+    axes_checked: [AX-01, AX-06]
+    mapping:
+      CH-00_IR:  AX01_index_7
+      CH-01_NIR: AX01_index_7
+      CH-02_Red: AX01_index_8
+      CH-06_Green: AX01_index_9
+      CH-10_Violet: AX01_index_10
+      CH-11_UV: AX01_index_11
+
+  - id: CR-04
+    name: AcousticFrequencyHarmonicRatio
+    severity: WARNING
+    description: >
+      Acoustic resonance nodes (AX-05) that are connected via ET-A01
+      (FrequencyHarmonic edge) must satisfy integer harmonic ratio:
+      f₂ / f₁ = n/m where n, m are small integers (n,m ≤ 8).
+      Enforces the harmonic series structure.
+    validation: >
+      For each ET-A01 edge (N1 → N2):
+        f1 = acoustic_freq(N1.ax05_index)
+        f2 = acoustic_freq(N2.ax05_index)
+        ratio = f2/f1
+        assert any(abs(ratio - n/m) < 0.01 for n in range(1,9) for m in range(1,9))
+    axes_checked: [AX-05]
+
+  - id: CR-05
+    name: SpinStatisticsConsistency
+    severity: ERROR
+    description: >
+      Spin nodes (AX-04) must be consistent with Pauli exclusion:
+      - Half-integer spin (indices 1, 3, 5, 7) → fermion statistics
+      - Integer spin (indices 0, 2, 4, 6, 8) → boson statistics
+      Fermion nodes cannot occupy the same address (i,j,k) with identical
+      spin projection. Boson nodes can.
+    validation: >
+      For fermion nodes at same address (i,j,k):
+        assert all spin_projection values distinct
+    axes_checked: [AX-04]
+
+  - id: CR-06
+    name: NeuromorphicInformationCoupling
+    severity: WARNING
+    description: >
+      Neuromorphic nodes (AX-07) must have corresponding information nodes
+      (AX-12) with information content ≥ neuromorphic coherence level / 2.
+      Higher consciousness states require higher information integration.
+    validation: >
+      For all nodes: node.ax12_index >= node.ax07_index / 2
+    axes_checked: [AX-07, AX-12]
+
+  - id: CR-07
+    name: MatterStateTemporalConsistency
+    severity: WARNING
+    description: >
+      Matter states (AX-02) must be temporally consistent with AX-10 (Temporal).
+      BEC and superfluid states (AX-02 indices 0–2) require very short timescales
+      (AX-10 index 0–2, nanosecond to microsecond). Macroscopic states (solid,
+      liquid, gas) span human-accessible timescales (AX-10 index 5–8).
+    validation: >
+      If node.ax02_index <= 2:  assert node.ax10_index <= 4
+      If node.ax02_index in [3,4,5,6]: assert 4 <= node.ax10_index <= 10
+    axes_checked: [AX-02, AX-10]
+
+  - id: CR-08
+    name: ElementFrequencySpectralLineMatch
+    severity: INFO
+    description: >
+      Element nodes (AX-03) should have at least one FrequencyNode
+      neighbor connected via ET-A05 (SpectralLineMatch) corresponding
+      to their primary emission/absorption spectral line.
+      Enforces the Periodic Table 2.0 spectral correspondence.
+    validation: >
+      For each NT-04 (ElementalNode):
+        assert count(edges where type=ET-A05) >= 1
+    axes_checked: [AX-03, AX-01]
+
+  - id: CR-09
+    name: RiemannZeroResonancePoleCheck
+    severity: INFO
+    description: >
+      Nodes mapped to Riemann zero positions (ZP-04 through ZP-11 on
+      the critical line) must have zero or near-zero Riemann transform
+      weight. These are resonance poles — points of maximum interference.
+      Implemented as a soft check since exact zeros require infinite precision.
+    validation: >
+      For ZP nodes where is_zero=true:
+        riemann_weight = abs(zeta(0.5 + 1j * node.t_value))
+        assert riemann_weight < 1e-6  # near-zero tolerance
+    axes_checked: [AX-09]
+
+  - id: CR-10
+    name: SchmannNeuromorphicLock
+    severity: INFO
+    description: >
+      The Schumann resonance acoustic node (AR-00, 7.83 Hz) must have
+      a SchmannNeuromorphicResonance edge (ET-B03) to theta brain-wave
+      nodes (NM-04, 4–8 Hz). This is the Earth-brain resonance coupling —
+      a fundamental cross-domain consistency requirement.
+    validation: >
+      Schumann_node = find_node(ax05_index=0)  # AR-00
+      Theta_node = find_node(ax07_index=4)      # NM-04
+      assert edge_exists(Schumann_node, Theta_node, type=ET-B03)
+    axes_checked: [AX-05, AX-07]
+
+  - id: CR-11
+    name: 432HzRootToneAnchor
+    severity: ERROR
+    description: >
+      The lattice MUST have exactly one node designated as the 432 Hz
+      root tone anchor (AR-04). This node is the acoustic-color-Riemann
+      triple anchor point: 432 Hz acoustic, blue A color harmonic,
+      and the first Riemann zero scaled anchor. Without this node,
+      the harmonic system has no ground reference.
+    validation: >
+      root_nodes = find_nodes(special="lattice_root_tone")
+      assert len(root_nodes) == 1
+      assert root_nodes[0].ax05_index == 4  # AR-04
+      assert root_nodes[0].ax06_index == 8  # CH-08 (blue)
+    axes_checked: [AX-05, AX-06, AX-09]
+
+  - id: CR-12
+    name: MetatronsCubeGeometricIntegrity
+    severity: WARNING
+    description: >
+      The 13 outer nodes + 1 apex node forming Metatron's Cube projection
+      must all be present and connected via ET-G03 (MetatronsCubeArc) edges.
+      Specifically: 12 outer nodes (one per axis principal value) + 1 apex
+      (NT-APEX) must form a complete Metatron's Cube graph.
+      This is the sacred geometric backbone of the Rainbow Yin Yang Lattice.
+    validation: >
+      outer_nodes = [find_node(primary_axis=f"AX-{i:02d}", index=6) for i in range(1,13)]
+      apex = find_node(type=NT-APEX)
+      for outer in outer_nodes:
+        assert edge_exists(outer, apex, type=ET-G03)
+      # Also check all 78 lines of Metatron's Cube pattern
+      assert count_edges(type=ET-G03) >= 78
+    axes_checked: [AX-11, AX-08]
+    note: >
+      Metatron's Cube: 13 circles (1 center + 12 around), 78 lines
+      connecting all circle centers. Contains all 5 Platonic solids.
+
+# --- Validation summary ---
+validation_profile:
+  error_rules: [CR-01, CR-03, CR-05, CR-11]
+  warning_rules: [CR-02, CR-04, CR-06, CR-07, CR-12]
+  info_rules: [CR-08, CR-09, CR-10]
+  total_rules: 12
+  execution_order: [CR-11, CR-01, CR-03, CR-05, CR-02, CR-04, CR-06, CR-07, CR-08, CR-09, CR-10, CR-12]
+
+implementation_note: >
+  These rules are enforced by tests/test_hypercube_ontology.py.
+  Full graph validation via scripts/validate_hypercube_integrity.py (planned update).

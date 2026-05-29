@@ -1,0 +1,216 @@
+# Isotope / Element Ontology — Periodic Table 2.0 (AX-03)
+# Status: Candidate
+# Date: 2026-05-29
+# Author: TIDELOCKBrain / @atlaslattice
+#
+# 12 harmonic groups derived from quantum shell structure, extending
+# the classical periodic table to exotic and hypothetical matter.
+# Each group maps to one lattice index (0–11) on AX-03.
+#
+# The Periodic Table 2.0 framing: not just chemical elements but
+# ALL stable configurations of nuclear and sub-nuclear matter, organized
+# by harmonic resonance rather than strictly by atomic number.
+#
+# Governance: non-canonical candidate — Pantheon Council ratification required.
+
+schema_version: "0.1"
+status: Candidate
+axis: AX-03
+axis_name: Element
+
+principle: >
+  Classical periodic table organized by atomic number Z.
+  Periodic Table 2.0 organizes by quantum harmonic group:
+  electron shell structure (n, l, m, s quantum numbers) maps
+  to a 12-fold harmonic grouping. Each group spans a range of
+  elements sharing similar resonance properties, plus exotic extensions.
+
+harmonic_groups:
+  - index: 0
+    id: HG-00
+    name: Hydrogen_Helium_Primordial
+    description: >
+      The primordial elements — hydrogen (Z=1) and helium (Z=2).
+      99% of all baryonic matter in the universe. H₁ is the reference
+      element: simplest spectrum, Rydberg series, cosmic abundance.
+      The Lyman series links to UV frequency axis.
+    elements: [H, He]
+    z_range: [1, 2]
+    principal_shell: 1
+    special_freq_hz: 2.47e15  # Lyman alpha: 121.6 nm
+    abundance_fraction: 0.99  # of all baryonic matter
+    yin_yang: primordial_balanced
+
+  - index: 1
+    id: HG-01
+    name: Alkali_Alkaline
+    description: >
+      Groups 1 and 2: alkali metals (Li, Na, K, Rb, Cs, Fr) and
+      alkaline earth metals (Be, Mg, Ca, Sr, Ba, Ra). Single and
+      double valence electrons. Strong electrochemical reactivity.
+      Sodium 589nm D-line is the lattice yellow anchor.
+    elements: [Li, Be, Na, Mg, K, Ca, Rb, Sr, Cs, Ba, Fr, Ra]
+    z_range: [3, 88]
+    principal_shells: [2, 3, 4, 5, 6, 7]
+    special_freq_nm: 589  # Na D-line (yellow)
+    yin_yang: yang_reactive
+
+  - index: 2
+    id: HG-02
+    name: Transition_Metals_3d
+    description: >
+      First row transition metals (3d block): Sc through Zn (Z=21–30).
+      Partially filled d-orbitals. Magnetic properties, catalytic activity,
+      responsible for most structural metals. Iron (Z=26) is the
+      stellar nucleosynthesis endpoint — peak binding energy per nucleon.
+    elements: [Sc, Ti, V, Cr, Mn, Fe, Co, Ni, Cu, Zn]
+    z_range: [21, 30]
+    orbital_type: "3d"
+    special: "Fe_binding_energy_maximum"  # end of stellar fusion chain
+    yin_yang: balanced_magnetic
+
+  - index: 3
+    id: HG-03
+    name: Transition_Metals_4d_5d
+    description: >
+      Second and third row transition metals (4d and 5d blocks): Y–Cd and
+      Hf–Hg (Z=39–48, 72–80). Heavier transition metals. Includes precious
+      metals: Ru, Rh, Pd, Ag (4d) and Os, Ir, Pt, Au (5d).
+      Gold (Z=79) has relativistic electron effects creating its yellow color.
+    elements: [Y, Zr, Nb, Mo, Tc, Ru, Rh, Pd, Ag, Cd, Hf, Ta, W, Re, Os, Ir, Pt, Au, Hg]
+    z_range: [39, 80]
+    orbital_type: ["4d", "5d"]
+    special: "Au_relativistic_color"
+    yin_yang: yang_dense
+
+  - index: 4
+    id: HG-04
+    name: Pnictogens_Chalcogens_Halogens
+    description: >
+      Groups 15–17: nitrogen group (N, P, As, Sb, Bi), oxygen group
+      (O, S, Se, Te, Po), and halogens (F, Cl, Br, I, At).
+      High electronegativity. Critical for organic chemistry, biology,
+      and atmospheric chemistry. Oxygen is the breath of life.
+    elements: [N, P, As, Sb, Bi, O, S, Se, Te, Po, F, Cl, Br, I, At]
+    z_range: [7, 85]
+    yin_yang: yin_reactive
+    biological_critical: [C, N, O, P, S]  # CHNOPS life elements
+
+  - index: 5
+    id: HG-05
+    name: Carbon_Silicon_Life
+    description: >
+      The life-enabling elements: carbon (Z=6), silicon (Z=14), and
+      their group 14 congeners (Ge, Sn, Pb). Carbon is the basis of
+      all organic chemistry. Silicon is the basis of computing.
+      Together they define the information-matter bridge.
+    elements: [C, Si, Ge, Sn, Pb]
+    z_range: [6, 82]
+    special: "carbon_sp3_sp2_sp_hybridization"
+    biological_critical: true
+    computing_critical: true
+    yin_yang: balanced_information
+    notes: >
+      This group uniquely bridges the organic/biological realm (C-based life)
+      and the computational/silicon realm (Si-based intelligence).
+
+  - index: 6
+    id: HG-06
+    name: Noble_Gases
+    description: >
+      Group 18: He, Ne, Ar, Kr, Xe, Rn, Og (Z=2,10,18,36,54,86,118).
+      Full electron shells. High stability, low reactivity. Spectral
+      emission lines used for frequency calibration. Neon gives
+      the iconic reddish-orange plasma glow.
+    elements: [He, Ne, Ar, Kr, Xe, Rn, Og]
+    z_range: [2, 118]
+    yin_yang: neutral_stable
+    spectral_reference: "Ne_emission_lines"
+    notes: "Closed-shell — the most 'balanced' chemical configurations"
+
+  - index: 7
+    id: HG-07
+    name: Lanthanides_Actinides
+    description: >
+      f-block elements: lanthanides (Z=57–71) and actinides (Z=89–103).
+      4f and 5f orbital filling. Rare earth elements for magnets and
+      display phosphors (La, Ce, Nd, Eu, Tb). Radioactive actinides
+      (U, Th, Pu) for nuclear energy and weaponry.
+    elements: [La, Ce, Pr, Nd, Pm, Sm, Eu, Gd, Tb, Dy, Ho, Er, Tm, Yb, Lu,
+               Ac, Th, Pa, U, Np, Pu, Am, Cm, Bk, Cf, Es, Fm, Md, No, Lr]
+    z_range: [57, 103]
+    orbital_type: ["4f", "5f"]
+    yin_yang: deep_yang_radioactive
+    magnet_relevance: [Nd, Sm, Gd]  # rare earth magnets
+    nuclear_relevance: [U, Th, Pu]
+
+  - index: 8
+    id: HG-08
+    name: Superheavy_Elements
+    description: >
+      Transactinide elements Z=104–118 (Rf through Og). All synthetic,
+      extremely short half-lives. Named after scientists and places.
+      Includes flerovium (Z=114) and oganesson (Z=118, heaviest confirmed).
+      Island of stability hypothesized near Z=126.
+    elements: [Rf, Db, Sg, Bh, Hs, Mt, Ds, Rg, Cn, Nh, Fl, Mc, Lv, Ts, Og]
+    z_range: [104, 118]
+    yin_yang: yang_transient
+    half_life_range_s: [1e-4, 30]  # very short
+    island_of_stability_hint: Z_126
+
+  - index: 9
+    id: HG-09
+    name: Hypothetical_Predicted_Z119plus
+    description: >
+      Hypothetical elements Z=119+ (ununennium and beyond). Not yet
+      synthesized. Period 8 of the extended periodic table. May include
+      island of stability near Z=126, Z=164. Quantum electrodynamic
+      corrections dominate electron structure.
+    z_range: [119, 172]
+    yin_yang: yang_speculative
+    theoretical_model: "extended_periodic_table_Pyykkö"
+    status: theoretical
+
+  - index: 10
+    id: HG-10
+    name: Exotic_Hadronic_Matter
+    description: >
+      Matter composed of quarks in exotic configurations beyond the
+      standard proton/neutron: strange hadrons (hyperons), dibaryon
+      states, pentaquarks, tetraquarks, glueballs, hybrid mesons.
+      Observed in particle accelerators and neutron star cores.
+    examples: [hyperon, H_dibaryon, pentaquark, tetraquark, glueball]
+    yin_yang: yang_exotic
+    status: partially_confirmed
+    notes: "The boundary between nuclear physics and QCD"
+
+  - index: 11
+    id: HG-11
+    name: Antimatter_DarkMatter_Exotic
+    description: >
+      Antimatter counterparts (antihydrogen, positronium, etc.) and
+      hypothetical exotic matter (negative mass, dark matter candidates,
+      strangelets, mirror matter). Closes the Periodic Table 2.0 cycle
+      by encompassing all possible matter configurations, known and unknown.
+    examples: [antihydrogen, positronium, dark_matter_WIMP, axion, strangelets]
+    yin_yang: anti_yin  # antimatter is the mirror of matter
+    status: [confirmed_partial, hypothetical]
+    notes: >
+      Dark matter comprises ~27% of the universe but has no confirmed
+      particle identity. This slot holds space for the unknown.
+
+# --- Periodic Table 2.0 summary ---
+extension_beyond_classical:
+  description: >
+    Classical periodic table: elements 1–118 organized by atomic number.
+    Periodic Table 2.0: extends to include exotic hadrons, antimatter,
+    dark matter candidates, and information-matter configurations.
+    Organized by harmonic resonance group rather than strict Z sequence.
+  total_harmonic_groups: 12
+  covers: >
+    all known elements + superheavy + hypothetical + exotic hadronic +
+    antimatter + dark matter candidates
+  organizing_principle: "quantum harmonic resonance group"
+  riemann_connection: >
+    Atomic spectral lines of each group map to specific zeros of ζ(s)
+    via the spectral-zeta correspondence (Berry-Keating conjecture).

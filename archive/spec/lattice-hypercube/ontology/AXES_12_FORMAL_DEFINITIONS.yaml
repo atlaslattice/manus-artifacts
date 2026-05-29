@@ -1,0 +1,199 @@
+# 12-Axis Formal Definitions — Rainbow Yin Yang Lattice
+# Status: Candidate
+# Date: 2026-05-29
+# Author: TIDELOCKBrain / @atlaslattice
+#
+# The 12×12×12 Lattice Hypercube maps 1728 nodes across 12 orthogonal axes.
+# Each axis carries 12 discrete index values (0–11).
+# The Riemann S-operator (see RIEMANN_S_OPERATOR.yaml) acts as the
+# cross-domain transform coupling all axes.
+#
+# Governance: non-canonical candidate — Pantheon Council ratification required.
+
+schema_version: "0.1"
+status: Candidate
+lattice_dimensions: 12
+total_nodes: 1728  # 12^3
+
+axes:
+  - id: AX-01
+    name: Frequency
+    symbol: "ν"
+    description: >
+      Electromagnetic and quantum frequency spectrum from sub-Hz to beyond gamma.
+      Maps energy quanta via E = hν. 12 octave bands spanning
+      ELF (< 3 Hz) through gamma (> 10^20 Hz).
+    unit: Hz
+    range_type: logarithmic_octave
+    values: 12
+    ontology_ref: FREQUENCY_BAND_ONTOLOGY.yaml
+    yin_yang_polarity: yang  # radiative / expansive
+    riemann_coupling: direct  # ζ(s) poles map spectral resonances
+
+  - id: AX-02
+    name: MatterState
+    symbol: "Φ"
+    description: >
+      Phase states of matter from pure information/vacuum to ultra-dense
+      degenerate states. Includes classical and quantum phases.
+    unit: phase_index
+    range_type: discrete
+    values: 12
+    ontology_ref: MATTER_STATE_ONTOLOGY.yaml
+    yin_yang_polarity: yin   # receptive / structural
+    riemann_coupling: indirect  # density of states
+
+  - id: AX-03
+    name: Element
+    symbol: "Ε"
+    description: >
+      Periodic Table 2.0 axis. 12 harmonic groups derived from quantum number
+      shell structure, extended beyond element 118 to hypothetical superheavy
+      and exotic matter configurations. Each index maps a harmonic group.
+    unit: harmonic_group
+    range_type: discrete
+    values: 12
+    ontology_ref: ISOTOPE_ELEMENT_ONTOLOGY.yaml
+    yin_yang_polarity: neutral  # balanced structure
+    riemann_coupling: spectral  # atomic line spectrum ↔ zeta zeros
+
+  - id: AX-04
+    name: Spin
+    symbol: "σ"
+    description: >
+      Quantum and classical angular momentum / spin axis.
+      From spin-0 (scalar) through integer and half-integer spins to
+      high-J nuclear rotational states and macroscopic angular momentum.
+    unit: ℏ_units
+    range_type: half_integer_ladder
+    values: 12
+    ontology_ref: SPIN_RATE_ONTOLOGY.yaml
+    yin_yang_polarity: yang   # rotational / dynamic
+    riemann_coupling: spectral_weight
+
+  - id: AX-05
+    name: AcousticResonance
+    symbol: "Ω"
+    description: >
+      Acoustic and phononic resonance spectrum. 12 harmonic nodes spanning
+      infrasound through ultrasound (< 20 Hz to > 20 kHz), Schumann resonances,
+      Solfeggio frequencies, and cymatics nodal patterns.
+    unit: Hz
+    range_type: harmonic_series
+    values: 12
+    ontology_ref: ACOUSTIC_RESONANCE_ONTOLOGY.yaml
+    yin_yang_polarity: yin   # receptive / resonant
+    riemann_coupling: nodal  # standing wave zeros ↔ zeta zeros
+
+  - id: AX-06
+    name: ColorHarmonic
+    symbol: "λ"
+    description: >
+      Visible and extended color harmonic spectrum. 12 chromatic nodes mapping
+      the full visible spectrum (380–780 nm) plus IR and UV extensions.
+      Includes the color-frequency-note correspondence (chromesthetic lattice).
+    unit: nm
+    range_type: chromatic_scale
+    values: 12
+    ontology_ref: COLOR_HARMONIC_ONTOLOGY.yaml
+    yin_yang_polarity: yang   # radiant / visible
+    riemann_coupling: spectral_phase
+
+  - id: AX-07
+    name: Neuromorphic
+    symbol: "Ψ"
+    description: >
+      Neuromorphic / information-processing principle axis. Maps from
+      single-neuron spike patterns through neural circuit motifs, brain-wave
+      states (delta → gamma), neuroplasticity modes, and collective
+      consciousness coherence levels.
+    unit: coherence_index
+    range_type: discrete
+    values: 12
+    ontology_ref: NEUROMORPHIC_ONTOLOGY.yaml
+    yin_yang_polarity: yin   # integrative / aware
+    riemann_coupling: topological
+
+  - id: AX-08
+    name: YinYangBalance
+    symbol: "☯"
+    description: >
+      Dynamic balance axis encoding the yin/yang polarity ratio of any node.
+      Index 0 = maximum yin (receptive, dark, cool, contractive).
+      Index 11 = maximum yang (projective, bright, hot, expansive).
+      Index 5–6 = balance/equilibrium zone.
+    unit: polarity_ratio
+    range_type: linear
+    values: 12
+    yin_yang_polarity: meta   # encodes polarity itself
+    riemann_coupling: symmetry_axis  # ζ(1-s) reflection symmetry
+
+  - id: AX-09
+    name: RiemannOperator
+    symbol: "ζ"
+    description: >
+      The S-operator axis. Encodes the Riemann zeta function parameter s = σ + it
+      as 12 discrete sample points along the critical strip (0 < σ < 1).
+      Acts as the universal cross-domain transform coupling all other axes.
+      See RIEMANN_S_OPERATOR.yaml for full model.
+    unit: complex_s
+    range_type: critical_strip_samples
+    values: 12
+    yin_yang_polarity: meta   # operator / transform
+    riemann_coupling: self   # this IS the S-operator
+
+  - id: AX-10
+    name: Temporal
+    symbol: "τ"
+    description: >
+      Temporal / chronological axis. 12 timescale octaves from Planck time
+      (~5.4×10⁻⁴⁴ s) through femtosecond, nanosecond, microsecond, millisecond,
+      second, hour, year, millennium, cosmic time. Maps change rates.
+    unit: seconds_log
+    range_type: logarithmic_octave
+    values: 12
+    yin_yang_polarity: yang   # flow / change
+    riemann_coupling: prime_gaps  # prime gaps ↔ temporal spacing
+
+  - id: AX-11
+    name: SpatialTopology
+    symbol: "Τ"
+    description: >
+      Spatial structure and topological dimension axis. From 0-D point through
+      1-D string, 2-D surface, 3-D volume, 4-D spacetime, and higher-dimensional
+      manifolds up to 12-D lattice space itself. Includes fractal dimensions.
+    unit: dimension_index
+    range_type: topological_ladder
+    values: 12
+    yin_yang_polarity: neutral
+    riemann_coupling: manifold_zeta
+
+  - id: AX-12
+    name: Information
+    symbol: "ℐ"
+    description: >
+      Information / entropy / complexity axis. From maximal entropy (thermal noise)
+      through structured data, semantic information, knowledge, wisdom, and
+      integrated information (Φ). Maps Shannon entropy, Kolmogorov complexity,
+      and integrated information theory states.
+    unit: bits_or_phi
+    range_type: logarithmic
+    values: 12
+    yin_yang_polarity: yin   # structuring / ordering
+    riemann_coupling: spectral_entropy
+
+# --- Cross-axis coupling summary ---
+coupling_matrix:
+  description: >
+    The Riemann S-operator (AX-09) couples all 12 axes. Primary
+    couplings also exist between frequency (AX-01) ↔ color (AX-06),
+    acoustic (AX-05) ↔ spin (AX-04), matter_state (AX-02) ↔ temperature
+    (embedded in AX-01/AX-10), and neuromorphic (AX-07) ↔ information (AX-12).
+  primary_couplings:
+    - [AX-01, AX-06]   # frequency ↔ color
+    - [AX-04, AX-05]   # spin ↔ acoustic
+    - [AX-07, AX-12]   # neuromorphic ↔ information
+    - [AX-02, AX-10]   # matter state ↔ temporal
+    - [AX-03, AX-01]   # element ↔ frequency (spectral lines)
+    - [AX-08, AX-09]   # yin-yang balance ↔ Riemann operator
+  universal_operator: AX-09  # ζ(s) couples ALL axes

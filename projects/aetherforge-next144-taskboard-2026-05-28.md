@@ -10,7 +10,8 @@ Campaign board for the Next-144 sequence.
 - Wave 2 (tasks 13-24): implemented
 - Wave 3 (tasks 25-36): implemented
 - Wave 4 (tasks 37-48): implemented
-- Wave 5-12 (tasks 49-144): queued
+- Wave 5 (tasks 49-60): implemented — Hypercube Ontology Core (12 YAML ontology files + test suite)
+- Wave 6-12 (tasks 61-144): queued
 
 ## Tasks 1-24 execution receipts
 

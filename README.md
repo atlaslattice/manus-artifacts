@@ -70,6 +70,8 @@ Governance status: nothing is canon until ratified by the full council and adjud
 ### Projects
 - **[Aetherforge Metatron Top 50 Taskboard](./projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)** — Candidate 5-ring execution board for a public, world-class archive.
 - **[Aetherforge Taskboard](./projects/aetherforge-top10-taskboard-2026-05-26.md)** — Council execution board for top-priority tasks.
+- **[Aetherforge Next-144 Taskboard](./projects/aetherforge-next144-taskboard-2026-05-28.md)** — 144-task campaign board tracking all 12 waves.
+- **[Wave 5 — Hypercube Ontology Core](./projects/aetherforge-wave5-hypercube-ontology-2026-05-29.md)** — 12 YAML ontology files defining all axes of the 12×12×12 Rainbow Yin Yang Lattice.
 - **[Aetherforge Public Questboard](./projects/AETHERFORGE_PUBLIC_QUESTBOARD_v0.1.md)** — Playable contribution quests with receipt-driven completion.
 - **[Free Bank](./projects/free-bank/)** — Banking revolution and financial sovereignty.
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.

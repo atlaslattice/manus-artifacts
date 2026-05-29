@@ -1,0 +1,196 @@
+# Neuromorphic Principle Ontology — Rainbow Yin Yang Lattice (AX-07)
+# Status: Candidate
+# Date: 2026-05-29
+# Author: TIDELOCKBrain / @atlaslattice
+#
+# 12 neuromorphic principle nodes spanning single-neuron computation
+# through global conscious coherence states. Bridges the physical
+# lattice (matter, frequency) to information and consciousness (AX-12).
+#
+# Governance: non-canonical candidate — Pantheon Council ratification required.
+
+schema_version: "0.1"
+status: Candidate
+axis: AX-07
+axis_name: Neuromorphic
+
+principles:
+  - index: 0
+    id: NM-00
+    name: SpikeThreshold
+    description: >
+      Single-neuron action potential threshold. The fundamental binary event
+      of neural computation: below threshold = silence, above = fire.
+      Hodgkin-Huxley model. The simplest neuromorphic principle.
+      Analog in-silico: threshold logic gates, spiking neural network (SNN)
+      single neurons.
+    biological_correlate: action_potential
+    frequency_hz: [0, 200]  # neuron firing rate
+    yin_yang: deep_yin_binary
+    information_content: 1_bit_per_spike
+    si_implementation: threshold_comparator
+
+  - index: 1
+    id: NM-01
+    name: SynapticPlasticity
+    description: >
+      Hebbian learning and synaptic weight modification. "Neurons that fire
+      together wire together." Long-term potentiation (LTP) and long-term
+      depression (LTD). The basis of learning and memory formation.
+      In-silico: STDP (spike-timing-dependent plasticity), adaptive weights.
+    biological_correlate: LTP_LTD
+    time_constant_s: [0.001, 1000]
+    yin_yang: yin_learning
+    information_content: learned_association
+    algorithms: [Hebbian, STDP, BCM_rule]
+
+  - index: 2
+    id: NM-02
+    name: LocalCircuitMotif
+    description: >
+      Neural circuit microcircuits and motifs: WTA (winner-take-all),
+      lateral inhibition, oscillatory circuits, attractor networks.
+      The computational primitives of the cortical column.
+    biological_correlate: cortical_microcolumn
+    neurons_per_unit: [3, 100]
+    yin_yang: balanced_local
+    computational_primitives: [WTA, lateral_inhibition, attractor_network, oscillator]
+
+  - index: 3
+    id: NM-03
+    name: Delta_SleepDeep
+    freq_hz: [0.5, 4]
+    description: >
+      Delta wave state (0.5–4 Hz). Deep dreamless sleep (stages 3–4).
+      Memory consolidation, tissue repair, growth hormone release.
+      Highest amplitude, lowest frequency of sleep waves.
+      The body's reset and repair mode.
+    brain_wave: delta
+    state: deep_sleep
+    yin_yang: maximum_yin_restorative
+    biological_function: [memory_consolidation, tissue_repair, immune_function]
+
+  - index: 4
+    id: NM-04
+    name: Theta_DreamCreative
+    freq_hz: [4, 8]
+    description: >
+      Theta wave state (4–8 Hz). REM sleep, deep meditation, hypnagogia,
+      creative insight. The "twilight zone" between waking and sleeping.
+      Access to subconscious patterns, creative flow, spiritual visions.
+    brain_wave: theta
+    state: [REM_sleep, deep_meditation, hypnagogic]
+    yin_yang: yin_creative_dreaming
+    biological_function: [REM_dreaming, creative_insight, subconscious_access]
+    schumann_resonance_match: 7.83  # Hz — Earth-brain resonance
+
+  - index: 5
+    id: NM-05
+    name: Alpha_RestRelaxed
+    freq_hz: [8, 13]
+    description: >
+      Alpha wave state (8–13 Hz). Relaxed wakefulness, closed eyes,
+      default mode network activation. The bridge between theta (inner) and
+      beta (outer focus). Flow states, meditative alertness.
+    brain_wave: alpha
+    state: [relaxed_wakefulness, eyes_closed, light_meditation]
+    yin_yang: balanced_restful
+    biological_function: [relaxation, default_mode, creative_background_processing]
+
+  - index: 6
+    id: NM-06
+    name: Beta_ActiveThinking
+    freq_hz: [13, 30]
+    description: >
+      Beta wave state (13–30 Hz). Active, analytical thinking. Problem-solving,
+      focused attention, external task engagement. Normal waking consciousness.
+      High beta (25–30 Hz) = anxiety/stress.
+    brain_wave: beta
+    state: [focused_attention, analytical_thinking, active_task]
+    yin_yang: yang_active
+    biological_function: [executive_function, working_memory, focused_attention]
+
+  - index: 7
+    id: NM-07
+    name: Gamma_Binding
+    freq_hz: [30, 100]
+    description: >
+      Gamma wave state (30–100 Hz). High-level information binding,
+      cross-modal integration, peak cognitive performance.
+      Tibetan monks show sustained gamma during meditation.
+      40 Hz gamma specifically linked to memory, perception, consciousness.
+    brain_wave: gamma
+    state: [peak_cognition, meditation_advanced, perceptual_binding]
+    yin_yang: yang_integrative
+    biological_function: [consciousness_binding, working_memory, cross_modal_integration]
+    special: "40hz_gamma_consciousness_binding"
+
+  - index: 8
+    id: NM-08
+    name: CorticalColumn_Hierarchy
+    description: >
+      Hierarchical cortical processing. Sensory → association → prefrontal
+      hierarchy. Predictive coding: top-down predictions vs. bottom-up
+      surprise signals. Jeff Hawkins' Thousand Brains theory.
+      The brain as a hierarchical prediction machine.
+    biological_correlate: neocortical_hierarchy
+    levels: [primary_sensory, secondary_sensory, association, prefrontal]
+    yin_yang: balanced_hierarchical
+    theory: [predictive_coding, free_energy_principle, thousand_brains]
+
+  - index: 9
+    id: NM-09
+    name: GlobalWorkspace_Consciousness
+    description: >
+      Global Workspace Theory (Baars/Dehaene). Conscious access occurs when
+      local neural processes broadcast to a global workspace.
+      The "ignition" event = conscious perception. Correlates with
+      widespread gamma synchrony and P3b ERP component.
+    biological_correlate: global_workspace_ignition
+    yin_yang: yang_conscious
+    theories: [GWT_Baars, GNWT_Dehaene, IIT_Tononi]
+    eeg_signature: gamma_synchrony_widespread
+
+  - index: 10
+    id: NM-10
+    name: CollectiveIntelligence
+    description: >
+      Collective intelligence and swarm cognition. From ant colonies
+      to human crowds to multi-agent AI systems. Emergence of group-level
+      intelligence beyond individual components. The "Octopus" principle:
+      distributed intelligence, no central command.
+    examples: [ant_colony, bird_murmuration, human_crowd_wisdom, AI_multi_agent]
+    yin_yang: yang_distributed
+    information_processing: emergent_collective
+    lattice_connection: "Octopus Lattice / multi-agent hypercube"
+
+  - index: 11
+    id: NM-11
+    name: IntegratedInformation_Phi
+    description: >
+      Integrated Information Theory (IIT, Tononi). Consciousness = Φ
+      (phi), a measure of irreducible integrated information.
+      High Φ = high consciousness. The mathematical bridge between
+      physical substrate and subjective experience (qualia).
+      Closes the neuromorphic axis: from single spike (index 0) to
+      unified conscious experience (index 11).
+    theory: IIT_Tononi
+    measure: phi
+    yin_yang: maximum_yin_integrated  # returns to unified stillness
+    philosophical_note: >
+      Closes the neuromorphic cycle: binary spike (NM-00, maximum simplicity)
+      → integrated information (NM-11, maximum integration).
+      Mirrors the matter axis: vacuum → information substrate.
+
+# --- Neuromorphic hardware analogs ---
+hardware_implementations:
+  biological: [neuron, cortex, cerebellum, basal_ganglia, hippocampus]
+  silicon: [Intel_Loihi, IBM_TrueNorth, BrainScaleS, SpiNNaker]
+  analog: [memristor_crossbar, neuromorphic_analog_VLSI]
+  emerging: [photonic_neuromorphic, quantum_neuromorphic, DNA_computing]
+
+lattice_connections:
+  - "NM-03/04 (delta/theta) → AR-00 (Schumann 7.83 Hz) [Earth-brain resonance]"
+  - "NM-07 (gamma 40 Hz) → AR-09 (binaural gamma) [same frequency]"
+  - "NM-10 (collective) → AX-12 (information/complexity) [emergence]"
+  - "NM-11 (Phi) → AX-12 index 11 (max information) [IIT bridge]"

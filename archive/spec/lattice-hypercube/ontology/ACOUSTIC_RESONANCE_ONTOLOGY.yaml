@@ -1,0 +1,232 @@
+# Acoustic Resonance Ontology — Rainbow Yin Yang Lattice (AX-05)
+# Status: Candidate
+# Date: 2026-05-29
+# Author: TIDELOCKBrain / @atlaslattice
+#
+# 12 harmonic nodes spanning infrasound through ultrasound, with Schumann
+# resonances, Solfeggio frequencies, Pythagorean intervals, cymatics
+# patterns, and binaural beat ranges.
+#
+# Lattice root tone: 432 Hz (natural A4 tuning)
+# All harmonic intervals derived from this root.
+#
+# Governance: non-canonical candidate — Pantheon Council ratification required.
+
+schema_version: "0.1"
+status: Candidate
+axis: AX-05
+axis_name: AcousticResonance
+root_tone_hz: 432.0
+tuning_system: "just_intonation_with_432_anchor"
+
+nodes:
+  - index: 0
+    id: AR-00
+    name: Infrasound_Schumann
+    freq_hz: 7.83
+    freq_label: "7.83 Hz (Schumann Fundamental)"
+    description: >
+      Schumann resonance fundamental: the resonant frequency of the
+      Earth-ionosphere cavity. Associated with theta brain waves and
+      deep meditation. "The heartbeat of the Earth."
+      Also includes infrasound range (< 20 Hz) used by elephants,
+      whales, and geological events.
+    schumann_harmonics_hz: [7.83, 14.3, 20.8, 27.3, 33.8]
+    brain_wave_match: theta
+    yin_yang: earth_yin
+    color_harmonic: null  # below visible frequency correspondence
+    biological_effect: "deep relaxation, meditative state, Earth attunement"
+
+  - index: 1
+    id: AR-01
+    name: Solfeggio_UT_Liberation
+    freq_hz: 396.0
+    freq_label: "396 Hz — UT (Liberating guilt and fear)"
+    description: >
+      First Solfeggio frequency. UT = Ut queant laxis.
+      Associated with grounding, releasing guilt, overcoming fear.
+      Tuned to the root chakra (muladhara).
+    solfeggio_name: "UT"
+    solfeggio_meaning: "liberation from fear and guilt"
+    chakra: root
+    yin_yang: deep_yin_grounding
+    color_harmonic: "#CC0000"  # red
+
+  - index: 2
+    id: AR-02
+    name: Solfeggio_RE_Change
+    freq_hz: 417.0
+    freq_label: "417 Hz — RE (Facilitating change)"
+    description: >
+      Second Solfeggio. RE = Resonare fibris.
+      Facilitating change, breaking negative patterns, clearing
+      energetic field, sacral chakra activation.
+    solfeggio_name: "RE"
+    solfeggio_meaning: "facilitating change, clearing"
+    chakra: sacral
+    yin_yang: yin_transitional
+    color_harmonic: "#FF6600"  # orange
+
+  - index: 3
+    id: AR-03
+    name: Solfeggio_MI_DNA
+    freq_hz: 528.0
+    freq_label: "528 Hz — MI (DNA repair / Love frequency)"
+    description: >
+      Third Solfeggio and the most celebrated. MI = Mira gestorum.
+      The "Love Frequency" or "DNA Repair" frequency.
+      John Lennon reportedly tuned to 528 Hz. Research suggests
+      effects on DNA repair, stress reduction, and enhanced creativity.
+    solfeggio_name: "MI"
+    solfeggio_meaning: "transformation and miracles, DNA repair"
+    chakra: solar_plexus
+    special: "love_frequency"
+    yin_yang: balanced_love
+    color_harmonic: "#FFFF00"  # yellow
+
+  - index: 4
+    id: AR-04
+    name: Natural_A4_432hz
+    freq_hz: 432.0
+    freq_label: "432 Hz — Natural A4 (lattice root tone)"
+    description: >
+      The lattice root tone. Natural A4 = 432 Hz (vs. concert pitch 440 Hz).
+      Mathematically aligns with the Pythagorean scale, Fibonacci numbers,
+      and the natural world. A = 432 resonates with the Earth's frequency
+      and is considered more harmonically coherent than 440 Hz.
+      Ancient Greek and Vedic instruments were tuned to 432 Hz.
+    special: "lattice_root_tone"
+    yin_yang: perfect_balance
+    color_harmonic: "#FFAA00"  # amber/gold
+    pythagorean_note: A4
+    natural_world_alignment: true
+    frequency_offset_vs_440hz: -8.0  # Hz
+
+  - index: 5
+    id: AR-05
+    name: Solfeggio_FA_Connection
+    freq_hz: 639.0
+    freq_label: "639 Hz — FA (Connecting relationships)"
+    description: >
+      Fourth Solfeggio. FA = Famuli tuorum.
+      Enhancing communication, understanding, tolerance, and love
+      in relationships. Heart chakra. Reconnecting with others.
+    solfeggio_name: "FA"
+    solfeggio_meaning: "connecting and relationships"
+    chakra: heart
+    yin_yang: balanced_yang_connection
+    color_harmonic: "#00CC00"  # green
+
+  - index: 6
+    id: AR-06
+    name: Solfeggio_SOL_Expression
+    freq_hz: 741.0
+    freq_label: "741 Hz — SOL (Awakening intuition)"
+    description: >
+      Fifth Solfeggio. SOL = Solve polluti.
+      Awakening intuition, solving problems, expressing creativity.
+      Throat chakra. Purification and detoxification.
+    solfeggio_name: "SOL"
+    solfeggio_meaning: "awakening intuition and expression"
+    chakra: throat
+    yin_yang: yang_expression
+    color_harmonic: "#0088FF"  # blue
+
+  - index: 7
+    id: AR-07
+    name: Solfeggio_LA_Spiritual
+    freq_hz: 852.0
+    freq_label: "852 Hz — LA (Returning to spiritual order)"
+    description: >
+      Sixth Solfeggio. LA = Labii reatum.
+      Returning to spiritual order, awakening intuition, amplifying
+      inner strength. Third eye chakra. Direct connection to light.
+    solfeggio_name: "LA"
+    solfeggio_meaning: "returning to spiritual order"
+    chakra: third_eye
+    yin_yang: yang_spiritual
+    color_harmonic: "#4400CC"  # indigo
+
+  - index: 8
+    id: AR-08
+    name: Solfeggio_SI_Divine
+    freq_hz: 963.0
+    freq_label: "963 Hz — SI (Divine consciousness)"
+    description: >
+      Seventh Solfeggio. SI = Sancte Iohannes.
+      Crown chakra activation. Direct connection to higher consciousness.
+      Pineal gland activation. The highest of the classical Solfeggio tones.
+    solfeggio_name: "SI"
+    solfeggio_meaning: "divine consciousness, unity"
+    chakra: crown
+    yin_yang: yang_divine
+    color_harmonic: "#9900FF"  # violet
+
+  - index: 9
+    id: AR-09
+    name: Binaural_Gamma_40hz
+    freq_hz: 40.0
+    freq_label: "40 Hz — Gamma binaural beat"
+    description: >
+      40 Hz gamma oscillation. Associated with binding of consciousness,
+      memory formation, and integrated information processing.
+      Binaural beat at 40 Hz (e.g., 440 Hz left ear, 480 Hz right ear).
+      Research on Alzheimer's, attention, and working memory.
+    binaural_beat_hz: 40.0
+    brain_wave_match: gamma
+    special: "gamma_40hz_consciousness_binding"
+    yin_yang: yang_cognitive
+
+  - index: 10
+    id: AR-10
+    name: Ultrasound_Cymatics
+    freq_hz: 20000
+    freq_label: "20 kHz — Ultrasound / Cymatics threshold"
+    description: >
+      Ultrasound onset (20 kHz) and cymatics pattern formation.
+      Ernst Chladni's figures and Hans Jenny's cymatics research
+      show geometric patterns formed by acoustic standing waves
+      in sand/powder on vibrating plates. Sacred geometric patterns
+      emerge at specific frequencies.
+    cymatics_patterns: ["Chladni_figures", "Faraday_waves", "platonic_solid_frequency_matches"]
+    yin_yang: yang_geometric
+    color_harmonic: null
+
+  - index: 11
+    id: AR-11
+    name: Cosmic_Background_Acoustic
+    freq_hz: 3.3e-18
+    freq_label: "~10⁻¹⁸ Hz — Cosmic acoustic oscillations"
+    description: >
+      Baryon acoustic oscillations (BAO) — the largest acoustic resonances
+      in the universe, imprinted at recombination (z~1100) and visible in
+      the CMB power spectrum and galaxy distribution. The "sound" of
+      the Big Bang. Scale: ~150 Mpc (490 million light years).
+      Closes the acoustic axis cycle with the ultimate cosmic resonance.
+    scale: cosmic
+    bao_scale_mpc: 150
+    yin_yang: cosmic_yin  # primordial, foundational
+    cmb_peak_scale: "first_acoustic_peak_l~200"
+
+# --- Scale relationships ---
+harmonic_ratios:
+  description: >
+    Key harmonic ratios in the Solfeggio/lattice system:
+    528/432 = 1.2222... ≈ 11:9 ratio
+    963/432 ≈ 2.229 (close to 9:4 ratio)
+    The full solfeggio set (396, 417, 528, 639, 741, 852, 963)
+    sums to digits 3, 6, or 9 (Tesla's 3-6-9 principle).
+  tesla_369: >
+    Each Solfeggio frequency's digit sum = 3, 6, or 9:
+    396: 3+9+6=18, 1+8=9 ✓
+    417: 4+1+7=12, 1+2=3 ✓
+    528: 5+2+8=15, 1+5=6 ✓
+    639: 6+3+9=18, 1+8=9 ✓
+    741: 7+4+1=12, 1+2=3 ✓
+    852: 8+5+2=15, 1+5=6 ✓
+    963: 9+6+3=18, 1+8=9 ✓
+  432hz_properties:
+    - "432 = 16 × 27 = 2⁴ × 3³"
+    - "432 = 1728^(2/3) — the lattice cube root squared"
+    - "1728 = 432 × 4 = 12³ — the total lattice node count"
+    - "432 × 4 = 1728 nodes (the full hypercube)"

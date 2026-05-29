@@ -1,0 +1,291 @@
+# Edge Relation Taxonomy — Rainbow Yin Yang Lattice
+# Status: Candidate
+# Date: 2026-05-29
+# Author: TIDELOCKBrain / @atlaslattice
+#
+# Defines all valid relation types between lattice nodes.
+# Edges carry directional, bidirectional, or operator-mediated semantics.
+#
+# Governance: non-canonical candidate — Pantheon Council ratification required.
+
+schema_version: "0.1"
+status: Candidate
+
+edge_types:
+  # --- Class A: Physical / Direct couplings ---
+  - id: ET-A01
+    name: FrequencyHarmonic
+    class: physical
+    description: >
+      Connects nodes whose frequency values stand in integer harmonic ratio
+      (f₂ = n·f₁). The acoustic-electromagnetic harmonic bridge.
+    direction: bidirectional
+    axes_involved: [AX-01, AX-05, AX-06]
+    weight_formula: "1 / harmonic_number"
+    symbol: "≈ₙ"
+
+  - id: ET-A02
+    name: MatterPhaseTransition
+    class: physical
+    description: >
+      Connects adjacent matter-state nodes across a phase boundary.
+      Weight encodes the energy/entropy cost of the transition.
+    direction: bidirectional
+    axes_involved: [AX-02, AX-10]
+    weight_formula: "ΔG / kT"
+    symbol: "⇌"
+
+  - id: ET-A03
+    name: SpinCoupling
+    class: physical
+    description: >
+      Connects nodes via angular momentum coupling rules (Clebsch-Gordan).
+      Used for spin network topology within the lattice.
+    direction: bidirectional
+    axes_involved: [AX-04]
+    weight_formula: "Clebsch-Gordan coefficient"
+    symbol: "⊗"
+
+  - id: ET-A04
+    name: IsotopicChain
+    class: physical
+    description: >
+      Links isotopes of the same element or elements within a harmonic
+      group. Encodes nuclear binding energy gradients and decay chains.
+    direction: directional  # decay direction
+    axes_involved: [AX-03, AX-04]
+    weight_formula: "binding_energy_delta"
+    symbol: "→ᵢₛₒ"
+
+  - id: ET-A05
+    name: SpectralLineMatch
+    class: physical
+    description: >
+      Connects an element node (AX-03) to its corresponding frequency node
+      (AX-01) via emission/absorption spectral lines.
+    direction: bidirectional
+    axes_involved: [AX-03, AX-01]
+    weight_formula: "oscillator_strength"
+    symbol: "↔ₛₚₑ"
+
+  # --- Class B: Resonance / Wave couplings ---
+  - id: ET-B01
+    name: AcousticColorCorrespondence
+    class: resonance
+    description: >
+      Encodes the synesthetic correspondence between a musical note/frequency
+      and its color harmonic counterpart. The core of the chromesthetic lattice.
+      Based on 432Hz → A4 → visible-light octave equivalence mapping.
+    direction: bidirectional
+    axes_involved: [AX-05, AX-06]
+    weight_formula: "correspondence_strength"
+    symbol: "🌈↔♫"
+
+  - id: ET-B02
+    name: CymaticsPattern
+    class: resonance
+    description: >
+      Connects acoustic resonance nodes to spatial topology nodes via
+      cymatics — the geometry produced by sound at specific frequencies.
+      Chladni figures, Faraday waves, and biomorphic patterns.
+    direction: acoustic_to_spatial
+    axes_involved: [AX-05, AX-11]
+    weight_formula: "nodal_pattern_complexity"
+    symbol: "♫→Τ"
+
+  - id: ET-B03
+    name: SchmannNeuromorphicResonance
+    class: resonance
+    description: >
+      Connects Schumann resonance frequencies (~7.83 Hz, ~14.3 Hz, ...)
+      to brain-wave frequency bands (theta, alpha, beta, gamma).
+      The Earth-brain resonance coupling.
+    direction: bidirectional
+    axes_involved: [AX-05, AX-07]
+    weight_formula: "frequency_coherence_overlap"
+    symbol: "🌍↔🧠"
+
+  # --- Class C: Riemann / Operator couplings ---
+  - id: ET-C01
+    name: RiemannTransform
+    class: operator
+    description: >
+      The S-operator edge. Connects any node to the Riemann operator
+      axis (AX-09) via ζ(s) evaluation at the node's frequency/energy
+      signature. Universal coupling — every node has at least one
+      RiemannTransform edge to an NT-08 node.
+    direction: bidirectional
+    axes_involved: [AX-09, "ALL"]
+    weight_formula: "|ζ(σ + it)|"
+    symbol: "ζ"
+    is_universal: true
+
+  - id: ET-C02
+    name: CriticalLineReflection
+    class: operator
+    description: >
+      Encodes the ζ(s) ↔ ζ(1-s) functional equation symmetry.
+      Connects pairs of nodes that are mirror images across the
+      critical line σ = 1/2. Fundamental to the yin-yang balance
+      structure of the lattice.
+    direction: bidirectional
+    axes_involved: [AX-09, AX-08]
+    weight_formula: "ζ(s)/ζ(1-s) ratio"
+    symbol: "☯ζ"
+
+  - id: ET-C03
+    name: ZeroPointMapping
+    class: operator
+    description: >
+      Connects nodes at lattice positions corresponding to known
+      non-trivial zeros of ζ(s) on the critical line (ℑ(s) = γₙ).
+      These are the "resonance poles" of the lattice.
+    direction: convergent  # all point toward critical line
+    axes_involved: [AX-09, AX-01, AX-05]
+    weight_formula: "zero_proximity_weight"
+    symbol: "⊙ζ"
+
+  # --- Class D: Information / Neuromorphic couplings ---
+  - id: ET-D01
+    name: InformationFlow
+    class: information
+    description: >
+      Directional edge encoding causal information transfer between nodes.
+      Weight = mutual information I(X;Y). Used for KG traversal and
+      retrieval paths.
+    direction: directional
+    axes_involved: [AX-12, AX-07]
+    weight_formula: "mutual_information"
+    symbol: "→ᵢ"
+
+  - id: ET-D02
+    name: NeuroplasticRewriting
+    class: information
+    description: >
+      Connects neuromorphic nodes undergoing Hebbian-style association
+      strengthening. The "learning edge" — grows stronger with repeated
+      activation.
+    direction: bidirectional
+    axes_involved: [AX-07, AX-12]
+    weight_formula: "hebbian_weight_delta"
+    symbol: "⟳"
+
+  - id: ET-D03
+    name: IntegratedInformation
+    class: information
+    description: >
+      Connects nodes whose integrated information (Φ) profiles overlap.
+      Based on IIT (Tononi). Used to identify conscious subsystems
+      within the lattice.
+    direction: bidirectional
+    axes_involved: [AX-07, AX-12, AX-11]
+    weight_formula: "phi_overlap"
+    symbol: "Φ↔"
+
+  # --- Class E: Temporal / Causal ---
+  - id: ET-E01
+    name: TemporalEvolution
+    class: temporal
+    description: >
+      Connects nodes at consecutive temporal scales. Encodes how
+      a physical state at one timescale gives rise to emergent
+      phenomena at the next.
+    direction: directional  # past → future
+    axes_involved: [AX-10]
+    weight_formula: "evolution_rate"
+    symbol: "→τ"
+
+  - id: ET-E02
+    name: CausalAncestry
+    class: temporal
+    description: >
+      Encodes provenance and causal ancestry between KG artifacts.
+      Links a derived node to its source nodes. Critical for
+      lineage tracking and ratification chains.
+    direction: directional  # ancestor → descendant
+    axes_involved: [AX-10, AX-12]
+    weight_formula: "derivation_confidence"
+    symbol: "←ᶜᵃᵘˢ"
+
+  # --- Class F: Governance / Ratification ---
+  - id: ET-F01
+    name: CanonPromotion
+    class: governance
+    description: >
+      Edge created when a candidate node is ratified by the
+      Pantheon Council. Changes node canon_status from
+      candidate → ratified.
+    direction: directional
+    axes_involved: [AX-12]
+    weight_formula: "council_vote_weight"
+    symbol: "✦→"
+    requires_ratification: true
+
+  - id: ET-F02
+    name: ContradictionFlag
+    class: governance
+    description: >
+      Marks two nodes whose claims or values are mutually contradictory.
+      Used by the contradiction detector script.
+    direction: bidirectional
+    axes_involved: [AX-12]
+    weight_formula: "contradiction_severity"
+    symbol: "⚡"
+
+  - id: ET-F03
+    name: SupersessionLink
+    class: governance
+    description: >
+      Connects a deprecated/superseded node to its successor.
+      Part of the canon retention and lifecycle system.
+    direction: directional  # old → new
+    axes_involved: [AX-10, AX-12]
+    weight_formula: "1.0"  # binary
+    symbol: "→ˢᵘᵖ"
+
+  # --- Class G: Structural / Geometric ---
+  - id: ET-G01
+    name: LatticeAdjacency
+    class: structural
+    description: >
+      Default edge between geometrically adjacent nodes in the
+      12×12×12 lattice (Manhattan distance = 1 in primary coordinate space).
+    direction: bidirectional
+    axes_involved: [AX-01, AX-02, AX-03]
+    weight_formula: "1.0"
+    symbol: "—"
+
+  - id: ET-G02
+    name: DiagonalResonance
+    class: structural
+    description: >
+      Connects nodes diagonally adjacent in the 3D lattice grid.
+      Encodes cross-dimensional resonance patterns (Metatron's Cube geometry).
+    direction: bidirectional
+    axes_involved: [AX-01, AX-02, AX-03]
+    weight_formula: "1 / sqrt(3)"
+    symbol: "╲"
+
+  - id: ET-G03
+    name: MetatronsCubeArc
+    class: structural
+    description: >
+      The 13 circles / 78 lines of Metatron's Cube projected onto
+      the lattice. Defines the sacred-geometry backbone structure
+      connecting the 12 outer nodes to the central apex.
+    direction: bidirectional
+    axes_involved: [AX-11, AX-08]
+    weight_formula: "metatron_weight"
+    symbol: "✦—"
+
+# --- Edge statistics ---
+total_edge_types: 24
+classes:
+  physical: 5
+  resonance: 3
+  operator: 3
+  information: 3
+  temporal: 2
+  governance: 3
+  structural: 3
+universal_edge: ET-C01  # RiemannTransform applies to ALL nodes

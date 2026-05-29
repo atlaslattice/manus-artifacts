@@ -1,0 +1,210 @@
+# Node Type Taxonomy — Rainbow Yin Yang Lattice
+# Status: Candidate
+# Date: 2026-05-29
+# Author: TIDELOCKBrain / @atlaslattice
+#
+# Every node in the 1728-node hypercube belongs to one of these types.
+# Node address format: (AX-01_idx, AX-02_idx, ..., AX-12_idx)
+# However the 12×12×12 structure uses 3 primary axes as coordinates
+# with all 12 axes encoded as node properties.
+#
+# Governance: non-canonical candidate — Pantheon Council ratification required.
+
+schema_version: "0.1"
+status: Candidate
+
+node_types:
+  # --- Tier 1: Foundation nodes ---
+  - id: NT-01
+    name: QuantumGround
+    tier: 1
+    description: >
+      Base-state nodes at minimum entropy and energy. These are the "seed"
+      nodes of the lattice — vacuum states, zero-point configurations,
+      the unmanifest potential.
+    axis_signature:
+      frequency: low         # AX-01: index 0-1
+      matter_state: vacuum   # AX-02: index 0
+      information: minimal   # AX-12: index 0-2
+    yin_yang: maximum_yin
+    color: "#1a0033"  # deep violet-black
+    symbol: "⊡"
+    count_in_lattice: 12  # first shell
+
+  - id: NT-02
+    name: FrequencyNode
+    tier: 1
+    description: >
+      Nodes whose primary identity is a specific frequency or
+      frequency band. Anchor points for the electromagnetic
+      and acoustic spectrum mapping.
+    axis_signature:
+      frequency: primary     # AX-01: varies 0-11
+      acoustic: correlated   # AX-05: harmonic match
+    yin_yang: yang_dominant
+    color: dynamic  # mapped to AX-06 color harmonic
+    symbol: "◈"
+    count_in_lattice: 144  # 12 × 12 frequency × acoustic combos
+
+  - id: NT-03
+    name: MatterPhaseNode
+    tier: 1
+    description: >
+      Nodes representing a specific state of matter. Each of the
+      12 matter phases (solid → degenerate) has a lattice plane.
+    axis_signature:
+      matter_state: primary  # AX-02: varies 0-11
+    yin_yang: balanced
+    symbol: "◉"
+    count_in_lattice: 12
+
+  - id: NT-04
+    name: ElementalNode
+    tier: 1
+    description: >
+      Nodes representing elemental harmonic groups from the Periodic Table 2.0.
+      12 groups cover all known elements plus exotic/hypothetical matter.
+    axis_signature:
+      element: primary  # AX-03: varies 0-11
+    yin_yang: neutral
+    symbol: "⬡"
+    count_in_lattice: 12
+
+  # --- Tier 2: Resonance nodes ---
+  - id: NT-05
+    name: AcousticResonanceNode
+    tier: 2
+    description: >
+      Nodes at acoustic standing-wave resonance points. Includes Solfeggio
+      tones, Schumann resonances, cymatics nodal patterns, and binaural
+      beat frequencies. Key for the Rainbow lattice's sound dimension.
+    axis_signature:
+      acoustic: primary    # AX-05: varies 0-11
+      frequency: coupled   # AX-01: electromagnetic counterpart
+    yin_yang: yin_dominant  # receptive / resonant
+    symbol: "♫"
+    count_in_lattice: 144
+
+  - id: NT-06
+    name: ColorHarmonicNode
+    tier: 2
+    description: >
+      Nodes at specific chromatic positions in the visible + extended spectrum.
+      Encodes the color-frequency-note correspondence. 12 chromatic nodes
+      form the "rainbow" arc of the Rainbow Yin Yang lattice.
+    axis_signature:
+      color_harmonic: primary  # AX-06: varies 0-11
+    yin_yang: yang_dominant
+    symbol: "🌈"
+    count_in_lattice: 12
+
+  - id: NT-07
+    name: SpinStateNode
+    tier: 2
+    description: >
+      Nodes representing specific spin quantum numbers or angular momentum
+      states. From spin-0 bosons through spin-2 gravitons to high-J nuclei.
+    axis_signature:
+      spin: primary  # AX-04: varies 0-11
+    yin_yang: yang
+    symbol: "↻"
+    count_in_lattice: 12
+
+  # --- Tier 3: Operator / Meta nodes ---
+  - id: NT-08
+    name: RiemannOperatorNode
+    tier: 3
+    description: >
+      Special meta-nodes positioned along the Riemann critical strip.
+      These are the S-operator anchor points — each corresponds to a
+      sampled value of ζ(s) and acts as a transform hub connecting
+      multiple domain nodes. The "spine" of the Rainbow Yin Yang lattice.
+    axis_signature:
+      riemann_operator: primary  # AX-09: varies 0-11
+    yin_yang: meta
+    symbol: "ζ"
+    count_in_lattice: 12
+
+  - id: NT-09
+    name: NeuromorphicNode
+    tier: 3
+    description: >
+      Nodes representing neuromorphic processing states, brain-wave
+      coherence levels, and collective intelligence configurations.
+      Bridge between physical lattice and information/consciousness layer.
+    axis_signature:
+      neuromorphic: primary    # AX-07: varies 0-11
+      information: correlated  # AX-12: high information states
+    yin_yang: yin_dominant
+    symbol: "🧠"
+    count_in_lattice: 144
+
+  - id: NT-10
+    name: YinYangBalanceNode
+    tier: 3
+    description: >
+      Balance-axis nodes encoding dynamic equilibrium states.
+      Index 5–6 nodes are the "eye of the storm" — maximum
+      integration of yin and yang polarities. Used as
+      organizational pivots for cross-domain mapping.
+    axis_signature:
+      yin_yang_balance: primary  # AX-08: 0-11
+    yin_yang: dynamic
+    symbol: "☯"
+    count_in_lattice: 12
+
+  # --- Tier 4: Structural / Topological nodes ---
+  - id: NT-11
+    name: TopologicalNode
+    tier: 4
+    description: >
+      Nodes representing spatial/dimensional topological structures.
+      From point-like (0-D) through manifolds, branes, and higher-
+      dimensional lattice geometries. The geometric skeleton of the
+      hypercube itself is encoded here.
+    axis_signature:
+      spatial_topology: primary  # AX-11: varies 0-11
+    yin_yang: neutral
+    symbol: "Τ"
+    count_in_lattice: 12
+
+  - id: NT-12
+    name: InformationNode
+    tier: 4
+    description: >
+      Nodes representing information/entropy/complexity states.
+      From thermal noise through structured data, knowledge, and
+      integrated information. These nodes represent the "memory"
+      and "meaning" layer of the lattice.
+    axis_signature:
+      information: primary     # AX-12: varies 0-11
+      neuromorphic: coupled    # AX-07: processing correlated
+    yin_yang: yin_dominant
+    symbol: "ℐ"
+    count_in_lattice: 12
+
+  # --- Special: Convergence nodes ---
+  - id: NT-APEX
+    name: UnifiedFieldApex
+    tier: 5
+    description: >
+      The single apex node of the lattice where all 12 axes converge
+      at their maximum integration/coherence values. This is the
+      "centre of Metatron's Cube" — the point of unified field
+      expression. Requires Pantheon Council activation.
+    axis_signature:
+      all_axes: maximum_coherence
+    yin_yang: perfect_balance
+    symbol: "✦"
+    count_in_lattice: 1
+    requires_ratification: true
+
+# --- Node addressing scheme ---
+addressing:
+  format: "[AX01_i].[AX02_j].[AX03_k]"
+  description: >
+    Primary address uses 3 coordinates (i, j, k) from 0–11 each.
+    Additional axis values encoded as node properties, not coordinates.
+  total_addressable: 1728
+  coordinate_axes: [AX-01, AX-02, AX-03]
+  property_axes: [AX-04, AX-05, AX-06, AX-07, AX-08, AX-09, AX-10, AX-11, AX-12]

@@ -1,0 +1,216 @@
+# Frequency Band Ontology — Rainbow Yin Yang Lattice (AX-01)
+# Status: Candidate
+# Date: 2026-05-29
+# Author: TIDELOCKBrain / @atlaslattice
+#
+# 12 logarithmic octave bands spanning the full known frequency spectrum.
+# Each band maps to a lattice index (0–11) along AX-01.
+#
+# Governance: non-canonical candidate — Pantheon Council ratification required.
+
+schema_version: "0.1"
+status: Candidate
+axis: AX-01
+axis_name: Frequency
+
+bands:
+  - index: 0
+    id: FB-00
+    name: SubELF
+    range_hz: [0.001, 3]
+    range_label: "0.001 Hz – 3 Hz"
+    description: >
+      Sub-ELF and infrasound boundary. Includes Earth's core oscillations,
+      tidal forcing frequencies, and sub-hertz geophysical signals.
+      Below human hearing threshold.
+    associated_phenomena:
+      - Earth core resonance (~0.001–0.01 Hz)
+      - Micropulsation Pc1-Pc5 (0.1–5 Hz)
+    yin_yang: maximum_yin
+    color_harmonic: null  # below visible spectrum correspondence
+    notes_correspondence: null
+
+  - index: 1
+    id: FB-01
+    name: ELF_Schumann
+    range_hz: [3, 30]
+    range_label: "3 Hz – 30 Hz"
+    description: >
+      ELF — Extremely Low Frequency. Contains the Schumann resonances:
+      7.83 Hz (fundamental), 14.3 Hz, 20.8 Hz, 27.3 Hz, 33.8 Hz.
+      The Earth-ionosphere cavity resonances. Brain-wave overlap zone.
+    associated_phenomena:
+      - Schumann resonance 1: 7.83 Hz
+      - Schumann resonance 2: 14.3 Hz
+      - Schumann resonance 3: 20.8 Hz
+      - Delta brain waves: 0.5–4 Hz
+      - Theta brain waves: 4–8 Hz
+    yin_yang: deep_yin
+    solfeggio_match: null
+    acoustic_note_hz: 8.0  # near theta/Schumann overlap
+
+  - index: 2
+    id: FB-02
+    name: SLF_VLF
+    range_hz: [30, 3000]
+    range_label: "30 Hz – 3 kHz"
+    description: >
+      SLF/VLF — covers bass acoustic range, alpha/beta brain waves,
+      military submarine communications, and the low audio spectrum.
+      Human voice fundamental frequencies live here.
+    associated_phenomena:
+      - Alpha brain waves: 8–13 Hz
+      - Beta brain waves: 13–30 Hz
+      - Bass audio: 30–300 Hz
+      - Human voice: 85–255 Hz
+      - Solfeggio 174 Hz (pain reduction)
+      - Solfeggio 285 Hz (tissue healing)
+    yin_yang: yin
+    solfeggio_tones: [174, 285]
+
+  - index: 3
+    id: FB-03
+    name: Audio_Solfeggio
+    range_hz: [300, 4000]
+    range_label: "300 Hz – 4 kHz"
+    description: >
+      Core audio speech range and Solfeggio healing frequencies.
+      432 Hz (natural A4 tuning), 528 Hz (DNA repair/love frequency),
+      396 Hz (liberation), 417 Hz (change), 639 Hz (connection).
+    associated_phenomena:
+      - 396 Hz — UT — liberation from fear
+      - 417 Hz — RE — facilitating change
+      - 432 Hz — natural tuning A4 (vs 440 Hz standard)
+      - 528 Hz — MI — DNA repair / transformation / love
+      - 639 Hz — FA — connecting relationships
+      - 741 Hz — SOL — expression / solutions
+      - 852 Hz — LA — returning to spiritual order
+      - 963 Hz — SI — divine consciousness / pineal activation
+    yin_yang: balanced
+    solfeggio_tones: [396, 417, 432, 528, 639, 741, 852, 963]
+    special: "432hz_anchor"  # the lattice 432Hz reference tone
+
+  - index: 4
+    id: FB-04
+    name: HighAudio_Gamma
+    range_hz: [4000, 40000]
+    range_label: "4 kHz – 40 kHz"
+    description: >
+      Upper audio and gamma brain wave territory. Gamma waves (30–100 Hz)
+      associated with higher consciousness. Ultrasound imaging begins here.
+      Bat echolocation, dog hearing, high-fidelity audio.
+    associated_phenomena:
+      - Gamma brain waves: 30–100 Hz
+      - Hyper-gamma: 100–200 Hz
+      - Ultrasound onset: 20 kHz
+      - Bat sonar: 20–100 kHz
+    yin_yang: yang
+
+  - index: 5
+    id: FB-05
+    name: UltrasonicRF_Low
+    range_hz: [40000, 3e6]
+    range_label: "40 kHz – 3 MHz"
+    description: >
+      Ultrasound and low RF. Medical ultrasound imaging (1–15 MHz),
+      industrial sonar, RFID, AM radio band.
+    associated_phenomena:
+      - Medical ultrasound: 1–15 MHz
+      - AM radio: 535–1605 kHz
+      - RFID: 125 kHz, 13.56 MHz
+    yin_yang: balanced_yang
+
+  - index: 6
+    id: FB-06
+    name: RF_Microwave
+    range_hz: [3e6, 3e11]
+    range_label: "3 MHz – 300 GHz"
+    description: >
+      Full RF through microwave. FM radio, cellular, WiFi, satellite,
+      radar, cosmic microwave background (CMB) peak at 160 GHz.
+    associated_phenomena:
+      - FM radio: 87.5–108 MHz
+      - WiFi 2.4/5 GHz
+      - 5G: 600 MHz – 86 GHz
+      - CMB peak: ~160 GHz
+    yin_yang: yang
+
+  - index: 7
+    id: FB-07
+    name: Infrared
+    range_hz: [3e11, 4.3e14]
+    range_label: "300 GHz – 430 THz"
+    description: >
+      Infrared spectrum. Near-IR (NIR), mid-IR, far-IR / terahertz.
+      Thermal imaging, molecular bond vibrations, fiber optics (1550 nm).
+      Bridges microwave and visible light.
+    associated_phenomena:
+      - Thermal imaging: 3–14 μm
+      - Fiber optic comms: 1310–1550 nm
+      - CO₂ laser: 10.6 μm
+    yin_yang: balanced
+    color_harmonic_start: "#FF0000"  # approach to red
+
+  - index: 8
+    id: FB-08
+    name: VisibleRed_Orange
+    range_hz: [4.3e14, 5.1e14]
+    range_label: "430–510 THz (700–590 nm)"
+    description: >
+      Red and orange visible light. The warm/yang end of the Rainbow
+      Yin Yang spectrum. Strong biological effects (photobiomodulation).
+    yin_yang: yang_warm
+    color_harmonic: "#FF4400"
+    notes_correspondence: "C – D"
+
+  - index: 9
+    id: FB-09
+    name: VisibleYellow_Green
+    range_hz: [5.1e14, 6.1e14]
+    range_label: "510–610 THz (590–490 nm)"
+    description: >
+      Yellow and green visible light. The balance zone of the Rainbow.
+      Peak human eye sensitivity at ~555 nm. Heart chakra green.
+    yin_yang: balanced
+    color_harmonic: "#88CC00"
+    notes_correspondence: "E – F#"
+
+  - index: 10
+    id: FB-10
+    name: VisibleBlue_Violet
+    range_hz: [6.1e14, 7.5e14]
+    range_label: "610–750 THz (490–400 nm)"
+    description: >
+      Blue, indigo, and violet visible light. The cool/yin end of the
+      visible Rainbow. Circadian rhythm regulation, melatonin suppression.
+      Approaching UV.
+    yin_yang: yin_cool
+    color_harmonic: "#4400FF"
+    notes_correspondence: "G# – B"
+
+  - index: 11
+    id: FB-11
+    name: UVGammaHighEnergy
+    range_hz: [7.5e14, 1e25]
+    range_label: "750 THz – 10 YHz (UV through γ)"
+    description: >
+      Ultraviolet through X-ray through gamma ray. Ionizing radiation.
+      Nuclear transitions, pair production, cosmic ray energies.
+      The maximum-yang extreme of the frequency axis.
+    associated_phenomena:
+      - UV-A/B/C: 315–100 nm
+      - X-ray: 10 nm – 100 pm
+      - Gamma ray: < 100 pm
+      - Cosmic ray: up to 3×10²⁰ eV
+    yin_yang: maximum_yang
+    color_harmonic: null  # beyond visible
+
+# --- Reference tones ---
+reference_tones:
+  lattice_root_hz: 432.0  # A4 natural tuning (vs 440 Hz standard)
+  schumann_hz: 7.83
+  solfeggio_528_hz: 528.0
+  color_middle_nm: 555.0  # peak human eye sensitivity
+  notes: >
+    432 Hz is the lattice root tone. All harmonic relationships in
+    the acoustic and color axes are computed relative to 432 Hz.

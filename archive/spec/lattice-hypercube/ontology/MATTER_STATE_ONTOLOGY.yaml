@@ -1,0 +1,168 @@
+# Matter-State Ontology — Rainbow Yin Yang Lattice (AX-02)
+# Status: Candidate
+# Date: 2026-05-29
+# Author: TIDELOCKBrain / @atlaslattice
+#
+# 12 phase states of matter from vacuum/information to ultra-dense degenerate.
+# Extends classical 4 states through all known quantum and exotic phases.
+#
+# Governance: non-canonical candidate — Pantheon Council ratification required.
+
+schema_version: "0.1"
+status: Candidate
+axis: AX-02
+axis_name: MatterState
+
+states:
+  - index: 0
+    id: MS-00
+    name: Vacuum
+    description: >
+      The quantum vacuum — not empty, but filled with zero-point energy,
+      virtual particle pairs, and quantum fluctuations. The substrate of
+      all manifest matter. Maximum entropy state of pure potential.
+    temperature_range_K: [0, 0.001]
+    density_kg_m3: [0, 1e-30]
+    yin_yang: maximum_yin
+    information_content: minimal_potential
+    examples: [quantum_vacuum, false_vacuum, de_Sitter_space]
+
+  - index: 1
+    id: MS-01
+    name: BoseEinsteinCondensate
+    description: >
+      Ultra-cold bosonic matter cooled below the BEC critical temperature.
+      Macroscopic quantum coherence — many atoms occupying the same
+      ground state. Superfluidity, quantum vortices.
+    temperature_range_K: [1e-9, 1e-6]
+    yin_yang: deep_yin
+    examples: [Rb-87_BEC, Na-23_BEC, photon_BEC]
+    special_property: macroscopic_quantum_coherence
+
+  - index: 2
+    id: MS-02
+    name: Superfluid
+    description: >
+      Quantum fluid with zero viscosity, quantized vortices, and
+      perfect heat conductivity. He-4 superfluid below 2.17 K.
+      Quantum coherence at macroscopic scale.
+    temperature_range_K: [1e-6, 2.17]
+    yin_yang: yin
+    examples: [helium-4_superfluid, neutron_star_interior_superfluid]
+
+  - index: 3
+    id: MS-03
+    name: Solid
+    description: >
+      Classical solid state — ordered crystalline or amorphous structure.
+      Includes all known crystal systems (cubic, hexagonal, etc.),
+      quasicrystals, glasses, and amorphous solids.
+    temperature_range_K: [0, 3700]  # up to tungsten melting point
+    yin_yang: yin_structural
+    examples: [crystal, quasicrystal, glass, ceramic, metal]
+    sublattice: crystal_systems  # 7 crystal systems, 14 Bravais lattices
+
+  - index: 4
+    id: MS-04
+    name: Liquid
+    description: >
+      Classical liquid — no long-range structural order, fluid flow.
+      Includes liquid metals, water, ionic liquids, liquid crystals.
+    temperature_range_K: [90, 5000]
+    yin_yang: balanced_yin
+    examples: [water, mercury, molten_iron, liquid_helium]
+
+  - index: 5
+    id: MS-05
+    name: LiquidCrystal
+    description: >
+      Mesophase between solid and liquid. Long-range orientational
+      order without positional order. Fundamental to display technology
+      and biological membranes (lipid bilayers).
+    temperature_range_K: [200, 500]
+    yin_yang: balanced
+    examples: [nematic, smectic, cholesteric, lyotropic]
+    biological_relevance: lipid_bilayer_cell_membrane
+
+  - index: 6
+    id: MS-06
+    name: Gas
+    description: >
+      Classical gas state — no long-range order, random thermal motion.
+      Includes ideal gas, real gas, and atmospheric compositions.
+    temperature_range_K: [0, 10000]
+    yin_yang: balanced_yang
+    examples: [air, steam, noble_gases, molecular_hydrogen]
+
+  - index: 7
+    id: MS-07
+    name: Plasma
+    description: >
+      Ionized gas — electrons unbound from nuclei. The most abundant
+      form of visible matter in the universe (stars, nebulae, lightning).
+      Electromagnetic confinement, MHD dynamics.
+    temperature_range_K: [10000, 1e8]
+    yin_yang: yang
+    examples: [solar_wind, lightning, fusion_plasma, neon_sign]
+    contains_most_visible_matter: true
+
+  - index: 8
+    id: MS-08
+    name: HighEnergyPlasma
+    description: >
+      Relativistic / high-energy plasma. Quark-gluon plasma at extreme
+      temperatures. Early universe matter, heavy-ion collision products.
+    temperature_range_K: [1e8, 1e13]
+    yin_yang: yang_high
+    examples: [quark_gluon_plasma, relativistic_jet_plasma]
+
+  - index: 9
+    id: MS-09
+    name: NeutronDegenerate
+    description: >
+      Neutron-degenerate matter — Pauli exclusion pressure supports
+      structure at nuclear densities. Neutron stars. One teaspoon ~1 billion tons.
+    density_kg_m3: [1e17, 1e18]
+    yin_yang: maximum_yang_compressed
+    examples: [neutron_star, pulsar_core]
+    note: "The densest stable matter known"
+
+  - index: 10
+    id: MS-10
+    name: QuarkMatter
+    description: >
+      Hypothetical quark matter — quarks as a free Fermi gas rather than
+      bound in hadrons. Possible in neutron star cores. Color superconductivity.
+    density_kg_m3: [1e18, 1e20]
+    yin_yang: ultra_yang
+    examples: [strange_quark_matter, color_superconductor, quark_star]
+    status: hypothetical  # not definitively confirmed
+
+  - index: 11
+    id: MS-11
+    name: InformationSubstrate
+    description: >
+      The most fundamental substrate — pure information / quantum bits.
+      The "it from bit" phase. Wheeler's participatory universe.
+      Black hole information, holographic principle. The bridge
+      from matter back to quantum vacuum (index 0).
+    yin_yang: meta_yin  # returns to yin at the quantum information level
+    examples: [black_hole_entropy, holographic_bound, quantum_information]
+    philosophical_note: >
+      This closes the yin-yang cycle: maximum-yin vacuum (0) →
+      yang dense matter (9-10) → information substrate (11) → back to vacuum.
+
+# --- Phase diagram notes ---
+phase_transitions:
+  classical: [solid, liquid, gas, plasma]
+  quantum: [BEC, superfluid, superconductor]
+  exotic: [neutron_degenerate, quark_matter]
+  information: [holographic, black_hole_evaporation]
+
+yin_yang_cycle:
+  description: >
+    The matter axis follows a yin-yang oscillation:
+    max_yin (vacuum) → structural_yin (solid/liquid) →
+    balanced (liquid crystal) → yang (gas/plasma) →
+    max_yang (degenerate) → meta_yin (information).
+    A full cycle through the 12 states.
