@@ -38,6 +38,9 @@ jobs:
       - name: Validate metadata
         run: python scripts/validate_artifact_metadata.py
 
+      - name: Validate tracked world-class metadata coverage
+        run: python scripts/validate_worldclass_tracked_artifacts.py
+
       - name: Validate quality gates
         run: python scripts/validate_lattice_quality_gates.py
 

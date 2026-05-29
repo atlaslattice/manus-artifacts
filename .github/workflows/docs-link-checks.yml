@@ -19,32 +19,10 @@ permissions:
 
 jobs:
   links:
-    name: Relative Link Validation
+    name: Markdown link integrity
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Check relative markdown links
-        run: |
-          set -euo pipefail
-          FAIL=0
-          while IFS= read -r -d '' file; do
-            # Extract relative links (not http/https/mailto/#)
-            grep -oP '\[.*?\]\(\K[^)]+' "$file" | \
-            grep -v '^https\?://' | \
-            grep -v '^mailto:' | \
-            grep -v '^#' | \
-            while IFS= read -r link; do
-              # Strip anchors
-              target="${link%%#*}"
-              [ -z "$target" ] && continue
-              dir="$(dirname "$file")"
-              resolved="$dir/$target"
-              if [ ! -e "$resolved" ]; then
-                echo "::warning file=$file::Broken relative link: $link"
-                FAIL=1
-              fi
-            done
-          done < <(find . -name "*.md" -not -path "./.git/*" -print0)
-          exit $FAIL
-        continue-on-error: true
+      - name: Check markdown links and anchors
+        run: python3 scripts/check_markdown_links.py

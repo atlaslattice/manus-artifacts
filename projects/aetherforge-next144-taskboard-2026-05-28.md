@@ -17,6 +17,31 @@ source_of_truth: GitHub
 - `🟨 TODO` — ready when dependencies are met
 - `✅ DONE` — completed and evidenced
 
+## Next-12 World-Class Operational Lanes (2026-05-29)
+
+### Ready
+
+- [ ] Finalize strict Ready/In-Progress/Done operating model across active campaign boards.
+- [ ] Seed and open Wave-1 world-class issues with labels, owners, and wave tags.
+- [ ] Publish source-of-truth artifact index with canon and ratification-state fields.
+- [ ] Raise metadata/provenance completeness expectation from 98% to 100% on tracked scope.
+- [ ] Add automated broken-link + anchor/cross-reference checks in CI.
+- [ ] Publish unified contributor playbook (governance + canon + workflows + quality gates).
+- [ ] Publish architecture crosswalk (specs ↔ schemas ↔ reference impl ↔ tests).
+- [ ] Publish quality-gate dashboard with pass/fail surfaces.
+- [ ] Expand protocol adversarial/regression tests for GPTDream++ / Atlas-ORCS.
+- [ ] Publish Evidence & Demonstrations public lane with traceable lineage structure.
+- [ ] Publish Aetherforge playable onboarding and progression path.
+- [ ] Publish recurring release rhythm standard and templates.
+
+### In Progress
+
+- [ ] None
+
+### Done
+
+- [ ] None
+
 ## Wave-level Dependencies and Checkpoint Gates
 
 | Wave | Scope | Dependency | Gate to close wave | Status |

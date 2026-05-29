@@ -95,6 +95,13 @@ This expectation is enforced through our [Code of Conduct](./CODE_OF_CONDUCT.md)
 | [Metadata Backfill Scope](./docs/METADATA_BACKFILL_SCOPE_2026-05-27.md) | Wave 3 top-50 and next-100 metadata queue |
 | [Metadata Coverage Report](./docs/METADATA_COVERAGE_REPORT_2026-05-27.md) | Current frontmatter and provenance coverage |
 | [Master Source Registry](./docs/MASTER_SOURCE_REGISTRY.md) | Multi-source KG synthesis intake ledger (this repo + gits + Notion + Drive) |
+| [Artifact Source-of-Truth Index](./docs/ARTIFACT_SOURCE_OF_TRUTH_INDEX.md) | Canon-state tracking index with ratification fields |
+| [Contributor Playbook](./docs/CONTRIBUTOR_PLAYBOOK.md) | Unified governance, workflow, and quality-gate operator guide |
+| [Architecture Crosswalk](./docs/ARCHITECTURE_CROSSWALK.md) | Specs ↔ schemas ↔ implementation ↔ tests trace map |
+| [Quality Gates Dashboard](./docs/QUALITY_GATES_DASHBOARD.md) | CI and local pass/fail validation command surface |
+| [Evidence & Demonstrations Lane](./docs/EVIDENCE_AND_DEMONSTRATIONS.md) | Public AI evidence lane and lineage requirements |
+| [Aetherforge Playable Onboarding](./docs/AETHERFORGE_PLAYABLE_ONBOARDING.md) | Playable contributor onboarding and progression loop |
+| [Release Rhythm](./docs/RELEASE_RHYTHM.md) | Recurring changelog/release/closeout/kickoff standard |
 
 ---
 
@@ -121,7 +128,7 @@ Wave 3 metadata/provenance outputs are now published: [backfill scope](./docs/ME
 3. Scope decision on public content
 4. History rewrite if issues found
 
-Execution queue: [Aetherforge Next-10](./projects/aetherforge-next10-execution-queue-2026-05-27.md) · Next 144 taskboard: [Aetherforge Next-144](./projects/aetherforge-next144-taskboard-2026-05-28.md) · Checkpoint closure index: [Next-10 Execution Checkpoints](./docs/closeout/NEXT10_EXECUTION_CHECKPOINTS_2026-05-28.md) · Hypercube campaign: [Aetherforge 144 Tasks](./projects/aetherforge-144-task-campaign-2026-05-27.md) · Monthly evidence snapshots: [projects/status-reports/](./projects/status-reports/)
+Execution queue: [Aetherforge Next-10](./projects/aetherforge-next10-execution-queue-2026-05-27.md) · Next 144 taskboard: [Aetherforge Next-144](./projects/aetherforge-next144-taskboard-2026-05-28.md) · Next-12 issue seeding pack: [Aetherforge Next-12 World-Class Issue Seeds](./projects/aetherforge-next12-worldclass-github-issue-seeding-pack-2026-05-29.md) · Checkpoint closure index: [Next-10 Execution Checkpoints](./docs/closeout/NEXT10_EXECUTION_CHECKPOINTS_2026-05-28.md) · Hypercube campaign: [Aetherforge 144 Tasks](./projects/aetherforge-144-task-campaign-2026-05-27.md) · Monthly evidence snapshots: [projects/status-reports/](./projects/status-reports/)
 
 ---
 

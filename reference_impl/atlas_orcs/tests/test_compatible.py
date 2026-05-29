@@ -130,3 +130,31 @@ def test_launder_true_on_authority_increase():
 def test_launder_false_on_authority_decrease():
     edges = [{"before": {"authority": "official"}, "after": {"authority": "none"}, "governance_delta_permitted": False}]
     assert launder(edges) is False
+
+
+def test_launder_true_when_any_dimension_increases():
+    edges = [{
+        "before": {"canon": "candidate", "proof": "receipt"},
+        "after": {"canon": "candidate", "proof": "proof"},
+        "governance_delta_permitted": False,
+    }]
+    assert launder(edges) is True
+
+
+def test_launder_true_with_unknown_to_known_status_upgrade():
+    edges = [{
+        "before": {"authority": "unknown"},
+        "after": {"authority": "official"},
+        "governance_delta_permitted": False,
+    }]
+    assert launder(edges) is True
+
+
+def test_compatible_path_true_for_status_downgrade_with_unknown_target():
+    path = [{
+        "local_valid": True,
+        "before": {"proof": "proof"},
+        "after": {"proof": "unknown"},
+        "governance_delta_permitted": False,
+    }]
+    assert compatible_path(path) == Decision.TRUE
