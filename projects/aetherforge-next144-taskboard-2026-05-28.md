@@ -12,7 +12,8 @@ Campaign board for the Next-144 sequence.
 - Wave 4 (tasks 37-48): implemented
 - Wave 5 (tasks 49-60): implemented — Hypercube Ontology Core (12 YAML ontology files + test suite)
 - Wave 6 (tasks 61-72): implemented — Hypercube Data Fabric (5 scripts + 4 data files + 1 guide + 78 tests)
-- Wave 7-12 (tasks 73-144): queued
+- Wave 7-9 (tasks 73-108): execution checklist published at `../projects/aetherforge-wave7-9-execution-checklist-2026-05-29.md`
+- Wave 10-12 (tasks 109-144): queued
 
 ## Tasks 1-24 execution receipts
 
