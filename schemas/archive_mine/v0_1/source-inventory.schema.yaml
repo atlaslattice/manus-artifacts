@@ -1,0 +1,87 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Archive Mine Source Inventory v0.1"
+description: "CANDIDATE ONLY — NOT CANON — NOT DEPLOYABLE. Multi-surface source inventory with contamination guardrails."
+type: object
+required:
+  - schema_version
+  - inventory_id
+  - generated_at
+  - sources
+  - default_trust_status
+properties:
+  schema_version:
+    const: "0.1"
+  inventory_id:
+    type: string
+    minLength: 1
+  generated_at:
+    type: string
+  default_trust_status:
+    const: candidate
+  sources:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      required:
+        - source_id
+        - surface
+        - artifact_path
+        - ingest_status
+        - trust_status
+        - contamination_flags
+        - authority_blocked
+        - searchable
+      properties:
+        source_id:
+          type: string
+        surface:
+          enum: [notion, drive, github, website]
+        artifact_path:
+          type: string
+        ingest_status:
+          enum: [raw, parsed]
+        trust_status:
+          enum: [raw, parsed, candidate, quarantined, superseded, ratified]
+        contamination_flags:
+          type: array
+          items:
+            enum:
+              - stale_source
+              - contradictory_lineage
+              - unresolved_authorship
+              - claude_touched
+              - bullshit_olympics_fossil
+        authority_blocked:
+          type: boolean
+        searchable:
+          type: boolean
+        canon_receipt_id:
+          type: ["string", "null"]
+allOf:
+  - if:
+      properties:
+        sources:
+          contains:
+            type: object
+            properties:
+              contamination_flags:
+                type: array
+                minItems: 1
+    then:
+      properties:
+        sources:
+          items:
+            allOf:
+              - if:
+                  properties:
+                    contamination_flags:
+                      type: array
+                      minItems: 1
+                then:
+                  properties:
+                    authority_blocked:
+                      const: true
+                    trust_status:
+                      not:
+                        const: ratified

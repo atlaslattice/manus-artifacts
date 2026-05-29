@@ -1,0 +1,45 @@
+# This module is an upstream candidate packet, not proof.
+#
+# Treat all summaries as claims until verified against repo files or source exports.
+# Do not expand scope beyond listed files unless explicitly instructed.
+# Preserve uncertainty.
+# Return blockers, patch items, tests run, files changed, and next safest action.
+#
+# CANON: no
+# DEPLOYMENT: no
+# AUTHORITY: none
+artifact: NOTION_GITHUB_SYNC_DOCKET_v0.1
+status: CANDIDATE DOCKET — NOT CANON
+canon_status: not_canon
+deployment_status: not_deployable
+authority: none
+purpose: Tie Notion mirror work to GitHub issues and PRs without granting source authority.
+parent_refs:
+  mass_ingestion_parent: "#160"
+  knowledge_graph_parents:
+    - "#180"
+    - "#183"
+  aetherforge_quest_board: "#187"
+known_root_mappings: []
+default_mapping_when_unknown:
+  needs_triage: true
+  github_issue_refs: []
+  github_pr_refs: []
+  next_safest_action: Create or link a GitHub issue before batch processing.
+rules:
+  duplicate_handling: Preserve duplicate records, mark duplicate_of when verified, and do not delete for duplicates.
+  superseded_handling: Mark superseded_by and preserve original receipt path.
+  blocked_handling: Record blocker, owner if known, and next_safest_action.
+  no_deletion_for_duplicates: true
+record_template:
+  source_id: notion-root-000
+  source_title: UNKNOWN
+  github_issue_refs: []
+  github_pr_refs: []
+  needs_triage: true
+  duplicate_of: null
+  superseded_by: null
+  blocked_reason: null
+  next_safest_action: Link to issue/PR or explicitly record no mapping exists yet.
+definition_of_done: >-
+  Every mirrored source points to an issue/PR or explicitly says no mapping exists yet.

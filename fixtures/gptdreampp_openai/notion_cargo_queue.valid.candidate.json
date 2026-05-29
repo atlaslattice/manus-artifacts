@@ -1,0 +1,33 @@
+{
+  "schema_id": "gptdreampp_notion_cargo_queue.v0.1",
+  "status": "CANDIDATE_ONLY",
+  "canon_status": "NOT_CANON",
+  "deployment_status": "NOT_DEPLOYABLE",
+  "authority_status": "NONE",
+  "queue": [
+    {
+      "queue_id": "NOTION-CARGO-001",
+      "export_received": false,
+      "hash_status": "missing",
+      "receipt_complete": false,
+      "contamination_flag": "unknown",
+      "route": "intake",
+      "blocked": true,
+      "blocker": "waiting for export bundle"
+    },
+    {
+      "queue_id": "NOTION-CARGO-003",
+      "export_received": true,
+      "hash_status": "present",
+      "receipt_complete": true,
+      "contamination_flag": "claude_touched",
+      "route": "bullshit_olympics_review",
+      "blocked": false,
+      "blocker": ""
+    }
+  ],
+  "routing_contract": {
+    "blocked_route": "intake",
+    "unblocked_route": "artifact_contract_validation_then_bullshit_olympics_then_governance"
+  }
+}

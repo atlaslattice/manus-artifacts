@@ -1,0 +1,26 @@
+# This module is an upstream candidate packet, not proof.
+#
+# Treat all summaries as claims until verified against repo files or source exports.
+# Do not expand scope beyond listed files unless explicitly instructed.
+# Preserve uncertainty.
+# Return blockers, patch items, tests run, files changed, and next safest action.
+#
+# CANON: no
+# DEPLOYMENT: no
+# AUTHORITY: none
+artifact: REVIEW_PACKET_TEMPLATE_v0.1
+review_packet_id: REQUIRED
+source_id: REQUIRED
+reviewed_packet_path: REQUIRED
+review_state: under_review # under_review | blocked | accepted_candidate | quarantined | superseded
+reviewed_at_utc: REQUIRED
+reviewed_by: REQUIRED
+raw_export_status: REQUIRED
+sha256_if_available: null
+canon_status: not_canon
+deployment_status: not_deployable
+authority: none
+findings: []
+blockers: []
+next_safest_action: REQUIRED
+ratification_event_id: null

@@ -1,0 +1,65 @@
+name: Lattice KG quality gates
+
+on:
+  push:
+    paths:
+      - 'archive/knowledge_graph/lattice_kg/v0_5/**'
+      - 'schemas/lattice_global_index.schema.json'
+      - 'scripts/build_lattice_global_index.py'
+      - 'scripts/validate_lattice_quality_gates.py'
+      - 'tests/test_lattice_kg_hypercube_program.py'
+      - 'tests/test_world_class_execution_surfaces.py'
+      - 'tests/test_unified_mission_frame.py'
+      - 'tests/test_lattice_quality_gate_adversarial.py'
+      - 'fixtures/gptdreampp_openai/**'
+      - 'archive/spec/gptdream/**'
+      - 'projects/aetherforge-world-class-authoritative-roadmap-v0.1.md'
+      - 'projects/aetherforge-144-task-campaign-2026-05-27.md'
+      - 'projects/aetherforge-top10-taskboard-2026-05-28.md'
+      - 'projects/README.md'
+      - 'README.md'
+      - '.github/workflows/lattice-kg-quality-gates.yml'
+  pull_request:
+    paths:
+      - 'archive/knowledge_graph/lattice_kg/v0_5/**'
+      - 'schemas/lattice_global_index.schema.json'
+      - 'scripts/build_lattice_global_index.py'
+      - 'scripts/validate_lattice_quality_gates.py'
+      - 'tests/test_lattice_kg_hypercube_program.py'
+      - 'tests/test_world_class_execution_surfaces.py'
+      - 'tests/test_unified_mission_frame.py'
+      - 'tests/test_lattice_quality_gate_adversarial.py'
+      - 'fixtures/gptdreampp_openai/**'
+      - 'archive/spec/gptdream/**'
+      - 'projects/aetherforge-world-class-authoritative-roadmap-v0.1.md'
+      - 'projects/aetherforge-144-task-campaign-2026-05-27.md'
+      - 'projects/aetherforge-top10-taskboard-2026-05-28.md'
+      - 'projects/README.md'
+      - 'README.md'
+      - '.github/workflows/lattice-kg-quality-gates.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lattice-kg-quality-gates:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build deterministic global index snapshot
+        run: python scripts/build_lattice_global_index.py --repo-root .
+
+      - name: Validate completeness, link integrity, stale-index, and retrieval gates
+        run: python scripts/validate_lattice_quality_gates.py --repo-root . --index archive/knowledge_graph/lattice_kg/v0_5/lattice_global_index.v0.1.json --max-age-days 7
+
+      - name: Run focused lattice execution tests
+        run: python -m pytest -q tests/test_lattice_kg_hypercube_program.py tests/test_world_class_execution_surfaces.py tests/test_unified_mission_frame.py tests/test_lattice_quality_gate_adversarial.py

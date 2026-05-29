@@ -1,0 +1,55 @@
+# This module is an upstream candidate packet, not proof.
+#
+# Treat all summaries as claims until verified against repo files or source exports.
+# Do not expand scope beyond listed files unless explicitly instructed.
+# Preserve uncertainty.
+# Return blockers, patch items, tests run, files changed, and next safest action.
+#
+# CANON: no
+# DEPLOYMENT: no
+# AUTHORITY: none
+artifact: lattice_ontology_v0.5
+status: CANDIDATE ONTOLOGY — NOT CANON
+canon_status: not_canon
+deployment_status: not_deployable
+authority: none
+classes:
+  LatticeObject:
+    description: Any candidate source, fact, claim, review, risk, action, artifact, or receipt node.
+    required: [id, object_family, canon_status, deployment_status, authority]
+  LatticeEdge:
+    description: Any candidate relationship between LatticeObjects.
+    required: [id, edge_family, source_id, target_id, evidence_ref]
+node_families:
+  - source
+  - fact
+  - claim
+  - evidence
+  - review_lane
+  - risk_node
+  - action_candidate
+  - quest
+edge_families:
+  - derived_from
+  - supports
+  - contradicts
+  - supersedes
+  - routes_to
+  - reviews
+  - blocks
+canon_state_machine:
+  states: [not_canon, candidate, under_review, quarantined, superseded, ratified]
+  rule: nothing_can_promote_itself
+  ratified_requires: ratification_event_id
+review_lane_family:
+  states: [raw, parsed, candidate, under_review, quarantined, superseded, ratified]
+risk_node_family:
+  flags: [privacy_review_required, missing_raw, summary_only, unsupported_authority, conflicting_version]
+rules:
+  everything_can_connect_to_everything: true
+  nothing_can_promote_itself: true
+aetherforge_rendering_hook:
+  enabled: true
+  rule: Playful names are presentation only and do not change authority.
+definition_of_done: >-
+  The graph is not a map of the Lattice. The graph is the Lattice learning how to remember itself.

@@ -1,0 +1,73 @@
+name: "📢 Public Statement"
+description: "Statement intended for public release — routes to LucernaBrain / governance review"
+title: "[PUBLIC-STMT] "
+labels:
+  - lucerna
+  - not-canon
+  - not-deployable
+  - needs-review
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Lane:** Public Statement → **LucernaBrain** → governance review → @atlaslattice
+        
+        **No public statement may be published until `not-deployable` is explicitly removed by @atlaslattice.**
+        
+        This includes: blog posts, social posts, README public sections, spec publication, press releases, community announcements.
+
+  - type: input
+    id: statement_title
+    attributes:
+      label: Statement title / topic
+    validations:
+      required: true
+
+  - type: textarea
+    id: statement_draft
+    attributes:
+      label: Draft content
+      description: Paste the draft statement. Mark clearly any sections still under review.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: statement_channel
+    attributes:
+      label: Intended channel
+      options:
+        - README / repository
+        - GitHub Discussions
+        - External blog
+        - Social media
+        - Spec / documentation publication
+        - Press / media
+        - other
+    validations:
+      required: true
+
+  - type: textarea
+    id: governance_notes
+    attributes:
+      label: Governance / ratification notes
+      description: List any council members who have reviewed this, or open governance questions.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance checklist
+      options:
+        - label: Issue has lane label (`lucerna`)
+          required: true
+        - label: "`not-canon` label applied"
+          required: true
+        - label: "`not-deployable` label applied"
+          required: true
+        - label: "`needs-review` label applied"
+          required: true
+        - label: Intended channel specified
+          required: true
+        - label: Draft content provided
+          required: true

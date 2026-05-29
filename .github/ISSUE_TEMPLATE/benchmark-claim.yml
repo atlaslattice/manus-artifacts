@@ -1,0 +1,78 @@
+name: "📊 Benchmark Claim"
+description: "Performance or quality benchmark — routes to AtlasBrain / LucernaBrain"
+title: "[BENCHMARK] "
+labels:
+  - atlasbrain
+  - lucerna
+  - not-canon
+  - needs-review
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Lane:** Benchmark Claim → **AtlasBrain** / **LucernaBrain**
+        
+        All benchmark claims are `not-canon` and `needs-review` until ratified. Unverified claims must not be cited as authority.
+
+  - type: input
+    id: claim_subject
+    attributes:
+      label: Claim subject
+      placeholder: "e.g. GPTDream++ rehydration fidelity, Atlas/ORCS audit throughput"
+    validations:
+      required: true
+
+  - type: textarea
+    id: claim_statement
+    attributes:
+      label: Claim statement
+      description: State the benchmark claim precisely.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence / methodology
+      description: How was this measured? Paste test output, methodology, or links.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: claim_type
+    attributes:
+      label: Claim type
+      options:
+        - performance-latency
+        - performance-throughput
+        - quality-fidelity
+        - quality-correctness
+        - security-adversarial
+        - other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: routing_brain
+    attributes:
+      label: Primary routing brain
+      options:
+        - AtlasBrain
+        - LucernaBrain
+        - AtlasBrain + LucernaBrain
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance checklist
+      options:
+        - label: Issue has a lane label (`atlasbrain` or `lucerna`)
+          required: true
+        - label: "`not-canon` label applied"
+          required: true
+        - label: "`needs-review` label applied"
+          required: true
+        - label: Evidence / methodology provided
+          required: true

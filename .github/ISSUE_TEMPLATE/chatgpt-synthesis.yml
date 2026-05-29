@@ -1,0 +1,71 @@
+name: "💡 ChatGPT Synthesis"
+description: "New artifact synthesized by ChatGPT — routes to LucernaBrain / RootglassBrain"
+title: "[SYNTHESIS] "
+labels:
+  - gptdream
+  - lucerna
+  - rootglass
+  - not-canon
+  - needs-review
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Lane:** ChatGPT Synthesis → **LucernaBrain** / **RootglassBrain**
+        
+        All synthesis artifacts are `not-canon` and `needs-review` until explicitly promoted by @atlaslattice.
+
+  - type: input
+    id: source_thread
+    attributes:
+      label: Source thread / conversation ID
+      placeholder: "e.g. ChatGPT thread URL or ID"
+    validations:
+      required: true
+
+  - type: textarea
+    id: artifact_summary
+    attributes:
+      label: Artifact summary
+      description: What was synthesized? Paste a brief description or excerpt.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: synthesis_type
+    attributes:
+      label: Synthesis type
+      options:
+        - spec-fragment
+        - protocol-draft
+        - narrative-world-building
+        - governance-proposal
+        - schema-candidate
+        - other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: routing_brain
+    attributes:
+      label: Primary routing brain
+      options:
+        - LucernaBrain
+        - RootglassBrain
+        - LucernaBrain + RootglassBrain
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance checklist
+      options:
+        - label: Issue has a lane label (`lucerna` or `rootglass`)
+          required: true
+        - label: "`not-canon` label applied"
+          required: true
+        - label: "`needs-review` label applied"
+          required: true
+        - label: Source thread ID provided
+          required: true

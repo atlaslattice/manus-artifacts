@@ -1,0 +1,19 @@
+schema_version: "0.1"
+packet_type: evidence_packet
+raw_export_status: full_raw
+thread_time_range:
+  start: "2026-05-20T00:00:00Z"
+  end: "2026-05-20T01:00:00Z"
+  timezone: "UTC"
+access_scope:
+  visible_sources: ["repo:archive/raw/thread.md"]
+  unavailable_sources: []
+  assumed_context: []
+epistemic_label: "raw_supported"
+authority_scope: "none"
+public_use_status: source_complete
+gates:
+  provenance_gate: true
+  safety_gate: true
+  governance_gate: true
+  data_residency_gate: true

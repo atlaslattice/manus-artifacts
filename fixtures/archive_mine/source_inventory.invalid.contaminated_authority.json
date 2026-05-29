@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1",
+  "inventory_id": "inv-invalid-2026-05-26",
+  "generated_at": "2026-05-26T18:52:32Z",
+  "default_trust_status": "candidate",
+  "sources": [
+    {
+      "source_id": "claude-touched-legacy",
+      "surface": "github",
+      "artifact_path": "archive/legacy/claude-touched.md",
+      "ingest_status": "parsed",
+      "trust_status": "ratified",
+      "contamination_flags": [
+        "claude_touched"
+      ],
+      "authority_blocked": false,
+      "searchable": true,
+      "canon_receipt_id": null
+    }
+  ]
+}

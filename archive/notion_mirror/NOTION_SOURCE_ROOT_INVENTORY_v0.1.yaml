@@ -1,0 +1,55 @@
+# This module is an upstream candidate packet, not proof.
+#
+# Treat all summaries as claims until verified against repo files or source exports.
+# Do not expand scope beyond listed files unless explicitly instructed.
+# Preserve uncertainty.
+# Return blockers, patch items, tests run, files changed, and next safest action.
+#
+# CANON: no
+# DEPLOYMENT: no
+# AUTHORITY: none
+artifact: NOTION_SOURCE_ROOT_INVENTORY_v0.1
+status: CANDIDATE INVENTORY — NOT CANON
+canon_status: not_canon
+deployment_status: not_deployable
+authority: none
+purpose: Identify the Notion source universe before graphing or claiming completeness.
+source_completeness_claim: false
+defaults:
+  source_status: discovered_not_fetched
+  canon_status: not_canon
+  deployment_status: not_deployable
+  needs_fetch: true
+  privacy_review_required: true
+  raw_export_status: not_exported
+  access_scope: unknown
+allowed_root_classes:
+  - master_index
+  - system_hub
+  - research_report
+  - migration_queue
+  - historical_compilation
+  - unknown
+known_notion_roots: []
+blockers:
+  - No raw Notion export or verified URL inventory was provided with this packet.
+  - Future agents must add one stable record per discovered root before graph conversion.
+record_template:
+  source_id: notion-root-000
+  title: UNKNOWN
+  url: UNKNOWN
+  discovered_at_utc: UNKNOWN
+  search_query_used: UNKNOWN
+  source_status: discovered_not_fetched
+  canon_status: not_canon
+  deployment_status: not_deployable
+  needs_fetch: true
+  root_class: unknown
+  related_github_issue_refs: []
+  privacy_review_required: true
+  raw_export_status: not_exported
+  access_scope: unknown
+  notes: Candidate only; location or title does not grant authority.
+definition_of_done: >-
+  Every known Notion root has a stable inventory record. No Notion page is treated as canon by location or title.
+next_safest_action: Add verified root records only from source exports or explicit source URLs.

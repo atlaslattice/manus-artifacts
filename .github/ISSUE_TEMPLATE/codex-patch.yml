@@ -1,0 +1,82 @@
+name: "🔧 Codex Patch"
+description: "Code or schema patch — routes to TIDELOCKBrain / HashlightBrain"
+title: "[CODEX-PATCH] "
+labels:
+  - tidelock
+  - hashlight
+  - not-canon
+  - not-deployable
+  - needs-review
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Lane:** Codex Patch → **TIDELOCKBrain** / **HashlightBrain**
+        
+        All execution patches are `not-canon`, `not-deployable`, and `needs-review` until @atlaslattice promotes them through the CAS-001-A audit gate.
+
+  - type: input
+    id: patch_target
+    attributes:
+      label: Target file(s) / module(s)
+      placeholder: "e.g. reference_impl/atlas_orcs/state.py"
+    validations:
+      required: true
+
+  - type: textarea
+    id: patch_description
+    attributes:
+      label: Patch description
+      description: What does this patch do? Why is it needed?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: patch_type
+    attributes:
+      label: Patch type
+      options:
+        - bug-fix
+        - new-feature
+        - schema-update
+        - test-addition
+        - refactor
+        - security-fix
+        - other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: routing_brain
+    attributes:
+      label: Primary routing brain
+      options:
+        - TIDELOCKBrain
+        - HashlightBrain
+        - TIDELOCKBrain + HashlightBrain
+    validations:
+      required: true
+
+  - type: textarea
+    id: cas_001_a_gate
+    attributes:
+      label: CAS-001-A audit note
+      description: Describe how this patch interacts with the Atlas/ORCS audit state. Leave blank if pre-audit.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance checklist
+      options:
+        - label: Issue has a lane label (`tidelock` or `hashlight`)
+          required: true
+        - label: "`not-canon` label applied"
+          required: true
+        - label: "`not-deployable` label applied"
+          required: true
+        - label: "`needs-review` label applied"
+          required: true
+        - label: Target file(s) specified
+          required: true

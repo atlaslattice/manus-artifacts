@@ -1,0 +1,95 @@
+name: "⚡ Execution Request"
+description: "Request to execute code, deploy, or trigger an action — routes D-Φ-1 → CAS-001-A → human gate → Atlas/ORCS audit → TIDELOCK"
+title: "[EXEC-REQ] "
+labels:
+  - dphi
+  - cas-001-a
+  - tidelock
+  - not-canon
+  - not-deployable
+  - needs-review
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Lane:** Execution Request → **D-Φ-1** → **CAS-001-A** → human gate → Atlas/ORCS audit → **TIDELOCKBrain** (if repo-related)
+        
+        > ⚠️ **HARD RULE:** All execution requests carry `not-deployable` until @atlaslattice explicitly removes it after the full audit chain completes.
+        
+        The full gate sequence must be documented in this issue before any action is taken.
+
+  - type: input
+    id: exec_target
+    attributes:
+      label: Execution target
+      placeholder: "e.g. reference_impl/execution_gate, CI workflow, deployment pipeline"
+    validations:
+      required: true
+
+  - type: textarea
+    id: exec_description
+    attributes:
+      label: What should be executed?
+      description: Describe the action in precise, unambiguous terms.
+    validations:
+      required: true
+
+  - type: textarea
+    id: dphi_gate
+    attributes:
+      label: D-Φ-1 gate check
+      description: |
+        Has the execution passed D-Φ-1 differential-phi screening?
+        State: PASSED / FAILED / PENDING and reasoning.
+    validations:
+      required: true
+
+  - type: textarea
+    id: cas_001_a_gate
+    attributes:
+      label: CAS-001-A Atlas/ORCS audit state
+      description: |
+        Atlas/ORCS audit state for this execution.
+        Required fields: ratification_event_id, canon_status, trust_state.
+        State PENDING if not yet audited.
+    validations:
+      required: true
+
+  - type: textarea
+    id: human_gate_approval
+    attributes:
+      label: Human gate approval
+      description: "@mention of the human approver and explicit approval statement. Leave 'PENDING' until signed off."
+      placeholder: "PENDING — awaiting @atlaslattice sign-off"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: repo_related
+    attributes:
+      label: Is this repo-related (routes to TIDELOCKBrain)?
+      options:
+        - "yes"
+        - "no"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance checklist
+      options:
+        - label: Issue has lane labels (`dphi`, `cas-001-a`, `tidelock`)
+          required: true
+        - label: "`not-canon` label applied"
+          required: true
+        - label: "`not-deployable` label applied"
+          required: true
+        - label: "`needs-review` label applied"
+          required: true
+        - label: D-Φ-1 gate check documented
+          required: true
+        - label: CAS-001-A audit state documented
+          required: true
+        - label: Human gate approval field populated (even if PENDING)
+          required: true

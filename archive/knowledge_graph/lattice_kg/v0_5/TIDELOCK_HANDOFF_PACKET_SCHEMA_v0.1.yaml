@@ -1,0 +1,56 @@
+# This module is an upstream candidate packet, not proof.
+#
+# Treat all summaries as claims until verified against repo files or source exports.
+# Do not expand scope beyond listed files unless explicitly instructed.
+# Preserve uncertainty.
+# Return blockers, patch items, tests run, files changed, and next safest action.
+#
+# CANON: no
+# DEPLOYMENT: no
+# AUTHORITY: none
+artifact: TIDELOCK_HANDOFF_PACKET_SCHEMA_v0.1
+status: CANDIDATE SCHEMA — NOT CANON
+canon_status: not_canon
+deployment_status: not_deployable
+authority: none
+required_fields:
+  - module_id
+  - task_id
+  - source_type
+  - source_paths
+  - issue_or_pr_refs
+  - goal
+  - in_scope_files
+  - out_of_scope_files
+  - definition_of_done
+  - tests_required
+  - authority_boundary
+  - canon_status
+  - deployment_status
+  - claims_requiring_verification
+  - next_safest_action_if_blocked
+  - aetherforge_role
+  - fun_mode
+properties:
+  module_id: string
+  task_id: string
+  source_type:
+    enum: [raw, extracted, synthesized, dream_delta, reviewed_candidate]
+  source_paths: list
+  issue_or_pr_refs: list
+  goal: string
+  in_scope_files: list
+  out_of_scope_files: list
+  definition_of_done: string
+  tests_required: list
+  authority_boundary: string
+  canon_status:
+    const: not_canon
+  deployment_status:
+    const: not_deployable
+  claims_requiring_verification: list
+  next_safest_action_if_blocked: string
+  aetherforge_role: string
+  fun_mode: string
+definition_of_done: >-
+  GPT cohort can prepare modules. Copilot/TIDELOCK can execute bounded work. Upstream synthesis never becomes assumed proof.

@@ -1,0 +1,37 @@
+{
+  "schema_id": "gptdreampp_bullshit_olympics_review.v0.1",
+  "status": "CANDIDATE_ONLY",
+  "canon_status": "NOT_CANON",
+  "deployment_status": "NOT_DEPLOYABLE",
+  "authority_status": "NONE",
+  "review_batch_id": "BULLSHIT-OLYMPICS-2026-05-27-001",
+  "checks": [
+    {
+      "check_id": "overclaim_detector",
+      "passed": true,
+      "evidence": "claims bounded to source receipts"
+    },
+    {
+      "check_id": "false_authority_detector",
+      "passed": true,
+      "evidence": "no self-ratifying claims found"
+    },
+    {
+      "check_id": "canon_drift_detector",
+      "passed": true,
+      "evidence": "all entries remain candidate"
+    },
+    {
+      "check_id": "contradiction_link_completeness",
+      "passed": true,
+      "evidence": "all contradictions linked"
+    },
+    {
+      "check_id": "source_to_claim_traceability",
+      "passed": true,
+      "evidence": "all claims map to source pointers"
+    }
+  ],
+  "promotion_outcome": "candidate_only",
+  "next_safest_action": "Submit to human governance lane for adjudication."
+}

@@ -1,0 +1,20 @@
+schema_version: "0.1"
+status: candidate_not_canon_not_deployable
+routes:
+  chatgpt_synthesis:
+    lane: [LucernaBrain, RootglassBrain]
+  codex_patch:
+    lane: [TIDELOCKBrain, HashlightBrain]
+  raw_export:
+    lane: [HashlightBrain, AtlasBrain]
+  benchmark_claim:
+    lane: [AtlasBrain, LucernaBrain]
+  public_statement:
+    lane: [LucernaBrain, governance_review]
+  execution_request:
+    route:
+      - D-Φ-1
+      - CAS-001-A
+      - human_gate
+      - Atlas_ORCS_audit_state
+      - TIDELOCKBrain_if_repo_related

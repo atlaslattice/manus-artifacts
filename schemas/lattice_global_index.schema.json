@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atlaslattice.local/schemas/lattice_global_index.schema.json",
+  "title": "Lattice Global Artifact and Log Index",
+  "description": "CANDIDATE ONLY — NOT CANON — NON-DEPLOYABLE global machine-readable index for artifact and log retrieval.",
+  "type": "object",
+  "required": [
+    "schema_id",
+    "generated_at_utc",
+    "repository_root",
+    "snapshot_fingerprint",
+    "routes",
+    "link_health",
+    "artifacts"
+  ],
+  "properties": {
+    "schema_id": {"type": "string", "const": "lattice_global_index.v0.1"},
+    "generated_at_utc": {"type": "string", "format": "date-time"},
+    "repository_root": {"type": "string"},
+    "snapshot_fingerprint": {"type": "string"},
+    "routes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["route_id", "domain", "lane", "artifact_count", "log_count"],
+        "properties": {
+          "route_id": {"type": "string"},
+          "domain": {"type": "string"},
+          "lane": {"type": "string"},
+          "artifact_count": {"type": "integer", "minimum": 0},
+          "log_count": {"type": "integer", "minimum": 0}
+        },
+        "additionalProperties": false
+      }
+    },
+    "link_health": {
+      "type": "object",
+      "required": [
+        "markdown_artifacts_total",
+        "underlinked_markdown_artifacts",
+        "unresolved_repo_links",
+        "isolated_markdown_artifacts",
+        "connected_markdown_components",
+        "root_reachable_markdown_artifacts"
+      ],
+      "properties": {
+        "markdown_artifacts_total": {"type": "integer", "minimum": 0},
+        "underlinked_markdown_artifacts": {"type": "integer", "minimum": 0},
+        "unresolved_repo_links": {"type": "integer", "minimum": 0},
+        "isolated_markdown_artifacts": {"type": "integer", "minimum": 0},
+        "connected_markdown_components": {"type": "integer", "minimum": 0},
+        "root_reachable_markdown_artifacts": {"type": "integer", "minimum": 0}
+      },
+      "additionalProperties": false
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "artifact_id",
+          "path",
+          "domain",
+          "lane",
+          "is_log",
+          "size_bytes",
+          "sha256",
+          "last_modified_utc",
+          "canon_status",
+          "deployment_status",
+          "trust_state",
+          "outbound_repo_links",
+          "unresolved_repo_links",
+          "inbound_repo_links",
+          "source_receipt"
+        ],
+        "properties": {
+          "artifact_id": {"type": "string"},
+          "path": {"type": "string"},
+          "domain": {"type": "string"},
+          "lane": {"type": "string"},
+          "is_log": {"type": "boolean"},
+          "size_bytes": {"type": "integer", "minimum": 0},
+          "sha256": {"type": "string"},
+          "last_modified_utc": {"type": "string", "format": "date-time"},
+          "canon_status": {"type": "string", "const": "not_canon"},
+          "deployment_status": {"type": "string", "const": "not_deployable"},
+          "trust_state": {"type": "string", "const": "candidate_unverified"},
+          "outbound_repo_links": {"type": "array", "items": {"type": "string"}},
+          "unresolved_repo_links": {"type": "array", "items": {"type": "string"}},
+          "inbound_repo_links": {"type": "array", "items": {"type": "string"}},
+          "source_receipt": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

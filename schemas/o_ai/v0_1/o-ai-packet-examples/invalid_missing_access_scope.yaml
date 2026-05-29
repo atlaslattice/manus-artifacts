@@ -1,0 +1,14 @@
+schema_version: "0.1"
+packet_type: summary_packet
+raw_export_status: summary_only
+thread_time_range:
+  start: "2026-05-20T00:00:00Z"
+  end: "2026-05-20T01:00:00Z"
+  timezone: "UTC"
+epistemic_label: "candidate_summary"
+authority_scope: "none"
+gates:
+  provenance_gate: true
+  safety_gate: true
+  governance_gate: true
+  data_residency_gate: true
