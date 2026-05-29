@@ -28,7 +28,7 @@ source_of_truth: GitHub
 
 ## Checklist
 
-- [ ] I have read [CONTRIBUTING.md](.github/CONTRIBUTING.md)
+- [ ] I have read [CONTRIBUTING.md](CONTRIBUTING.md)
 - [ ] Local validation passes (`ruff`, `pytest`, `run_checks.sh` where applicable)
 - [ ] No merge-conflict markers remain in any file
 - [ ] No secrets or credentials are included

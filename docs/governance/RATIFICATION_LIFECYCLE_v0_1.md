@@ -51,4 +51,4 @@ Every stage transition must produce a dated entry in the [Unresolved Decision Re
 - [Canon Promotion Checklist](./CANON_PROMOTION_CHECKLIST_v0_1.md)
 - [Canon Demotion / Rollback Policy](./CANON_DEMOTION_ROLLBACK_POLICY_v0_1.md)
 - [Adjudication Evidence Template](./ADJUDICATION_EVIDENCE_TEMPLATE_v0_1.md)
-- [Canon-Candidate Register](../canon-candidate-register.md)
+- [Governance Spine Index](./README.md)

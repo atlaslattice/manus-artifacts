@@ -10,8 +10,8 @@ source_of_truth: GitHub
 
 # Lattice Global Index
 
-Generated at: `2026-05-29T04:45:11+00:00`  
-Total artifacts indexed: **383**
+Generated at: `2026-05-29T04:48:57+00:00`  
+Total artifacts indexed: **393**
 
 > Full deep index of every markdown artifact in this repository.
 > Status legend: 🟢 CANONICAL · 🟡 CANDIDATE · 🔵 DRAFT · ⬛ ARCHIVED · — unset
@@ -22,6 +22,7 @@ Total artifacts indexed: **383**
 |---|---:|---:|
 | `(root)` | 8 | 8 |
 | `.github` | 8 | 8 |
+| `.pytest_cache` | 1 | 0 |
 | `about` | 1 | 1 |
 | `aluminum-os` | 22 | 22 |
 | `aluminum-os-core` | 1 | 1 |
@@ -31,10 +32,10 @@ Total artifacts indexed: **383**
 | `codebases` | 57 | 57 |
 | `council` | 1 | 1 |
 | `council-reviews` | 2 | 2 |
-| `docs` | 75 | 75 |
+| `docs` | 82 | 82 |
 | `health` | 4 | 4 |
 | `manus-vault` | 12 | 9 |
-| `projects` | 9 | 8 |
+| `projects` | 11 | 10 |
 | `research` | 7 | 7 |
 | `sheldonbrain` | 1 | 1 |
 
@@ -69,6 +70,12 @@ Total artifacts indexed: **383**
 | `.github/ISSUE_TEMPLATE/graph_linking_quest.md` | "[GRAPH QUEST] " | 🟡 CANDIDATE | `ARTIFACT-GITHUB-ISSUE-TEMPLATE-GRAPH-LINKING-QUEST-MD-2026-05-28` |
 | `.github/ISSUE_TEMPLATE/metadata_quest.md` | "[METADATA QUEST] " | 🟡 CANDIDATE | `ARTIFACT-GITHUB-ISSUE-TEMPLATE-METADATA-QUEST-MD-2026-05-28` |
 | `.github/PULL_REQUEST_TEMPLATE.md` | Summary | 🟡 CANDIDATE | `ARTIFACT-GITHUB-PULL-REQUEST-TEMPLATE-MD-2026-05-27` |
+
+### .pytest_cache
+
+| Path | Title | Status | Artifact ID |
+|---|---|---|---|
+| `.pytest_cache/README.md` | pytest cache directory # | — | `—` |
 
 ### about
 
@@ -378,14 +385,19 @@ Total artifacts indexed: **383**
 
 | Path | Title | Status | Artifact ID |
 |---|---|---|---|
+| `docs/AETHERFORGE_PLAYABLE_ONBOARDING.md` | Aetherforge Playable Onboarding | 🟡 CANDIDATE | `DOC-AETHERFORGE-PLAYABLE-ONBOARDING-2026-05-29` |
 | `docs/AI_SYSTEMS_EVIDENCE_INDEX.md` | AI Systems Evidence Index | 🟡 CANDIDATE | `DOC-AI-SYSTEMS-EVIDENCE-INDEX-2026-05-27` |
+| `docs/ARCHITECTURE_CROSSWALK.md` | Repository Architecture Crosswalk | 🟡 CANDIDATE | `DOC-ARCHITECTURE-CROSSWALK-2026-05-29` |
 | `docs/ARCHITECTURE_MAP.md` | Atlas Lattice Architecture Map | 🟡 CANDIDATE | `DOC-ARCH-MAP-2026-05-27` |
 | `docs/ARCHIVE_INDEX.md` | 🗂️ Archive Index — Atlas Lattice Foundation | 🟡 CANDIDATE | `ARTIFACT-DOCS-ARCHIVE-INDEX-MD-2026-05-27` |
 | `docs/ARTIFACT_ID_COLLISION_REPORT_2026-05-27.md` | Artifact ID Collision Report | 🟡 CANDIDATE | `DOC-ARTIFACT-ID-COLLISION-REPORT-2026-05-27` |
 | `docs/ARTIFACT_RELATIONSHIP_TYPES.md` | Artifact Relationship Types | 🟡 CANDIDATE | `DOC-REL-TYPES-2026-05-27` |
+| `docs/ARTIFACT_SOURCE_OF_TRUTH_INDEX.md` | Artifact Source-of-Truth Index | 🟡 CANDIDATE | `DOC-ARTIFACT-SOURCE-OF-TRUTH-INDEX-2026-05-29` |
 | `docs/ARTIFACT_TYPE_NORMALIZATION_GUIDE_2026-05-29.md` | Artifact Type Normalization Guide | 🟡 CANDIDATE | `DOC-ARTIFACT-TYPE-NORMALIZATION-GUIDE-2026-05-29` |
 | `docs/ATLAS_LATTICE_PUBLIC_CHARTER_500IP.md` | Atlas Lattice Public Charter (500+ IP Launch Scope) | 🟡 CANDIDATE | `DOC-ATLAS-PUBLIC-CHARTER-500IP-2026-05-27` |
+| `docs/CONTRIBUTOR_PLAYBOOK.md` | Atlas Lattice Contributor Playbook | 🟡 CANDIDATE | `DOC-CONTRIBUTOR-PLAYBOOK-2026-05-29` |
 | `docs/CONTRIBUTOR_QUICKSTART.md` | Contributor Quickstart | 🟡 CANDIDATE | `DOC-CONTRIB-QUICKSTART-2026-05-27` |
+| `docs/EVIDENCE_AND_DEMONSTRATIONS.md` | Evidence and Demonstrations Lane | 🟡 CANDIDATE | `DOC-EVIDENCE-AND-DEMONSTRATIONS-2026-05-29` |
 | `docs/FAQ.md` | Atlas Lattice Contributor FAQ | 🟡 CANDIDATE | `DOC-FAQ-2026-05-27` |
 | `docs/FOLDER_TAXONOMY_AUDIT_2026-05-27.md` | Folder Taxonomy Audit (Wave 1) | 🟡 CANDIDATE | `DOC-TAXONOMY-AUDIT-2026-05-27` |
 | `docs/GLOSSARY.md` | 📖 Glossary — Atlas Lattice Foundation | 🟡 CANDIDATE | `ARTIFACT-DOCS-GLOSSARY-MD-2026-05-27` |
@@ -403,6 +415,8 @@ Total artifacts indexed: **383**
 | `docs/NORTH_STAR_MISSION.md` | 🌐 North Star Mission — One Frame for All Work | 🟡 CANDIDATE | `ARTIFACT-DOCS-NORTH-STAR-MISSION-MD-2026-05-27` |
 | `docs/PROVENANCE_COMPLETENESS_REPORT_2026-05-27.md` | Provenance Completeness Report | 🟡 CANDIDATE | `DOC-PROVENANCE-COMPLETENESS-REPORT-2026-05-27` |
 | `docs/PROVENANCE_COMPLETENESS_REPORT_2026-05-29.md` | Provenance Completeness Report v2 | 🟡 CANDIDATE | `DOC-PROVENANCE-COMPLETENESS-REPORT-2026-05-29` |
+| `docs/QUALITY_GATES_DASHBOARD.md` | Quality Gates Dashboard | 🟡 CANDIDATE | `DOC-QUALITY-GATES-DASHBOARD-2026-05-29` |
+| `docs/RELEASE_RHYTHM.md` | Recurring Release Rhythm | 🟡 CANDIDATE | `DOC-RELEASE-RHYTHM-2026-05-29` |
 | `docs/ROADMAP.md` | Public Roadmap (Now / Next / Later) | 🟡 CANDIDATE | `DOC-ROADMAP-2026-05-27` |
 | `docs/SCHEMA_VERSION_MIGRATION_NOTES_v0_1.md` | Schema Version Migration Notes v0.1 | 🟡 CANDIDATE | `DOC-SCHEMA-VERSION-MIGRATION-NOTES-V0-1-2026-05-27` |
 | `docs/START_HERE.md` | 🚀 Start Here — Atlas Lattice Foundation Archive | 🟡 CANDIDATE | `ARTIFACT-DOCS-START-HERE-MD-2026-05-27` |
@@ -484,8 +498,10 @@ Total artifacts indexed: **383**
 
 | Path | Title | Status | Artifact ID |
 |---|---|---|---|
+| `projects/README.md` | Projects Index | 🟡 CANDIDATE | `PROJECTS-INDEX-README-2026-05-29` |
 | `projects/aetherforge-144-task-campaign-2026-05-27.md` | Aetherforge 12x12 Hypercube Campaign (144 Tasks) | 🟡 CANDIDATE | `PROJECT-AETHERFORGE-144-TASK-CAMPAIGN-2026-05-27` |
 | `projects/aetherforge-next10-execution-queue-2026-05-27.md` | Aetherforge Next-10 Execution Queue (Mapped to Top-50) | 🟡 CANDIDATE | `PROJECT-AETHERFORGE-NEXT10-QUEUE-2026-05-27` |
+| `projects/aetherforge-next12-worldclass-github-issue-seeding-pack-2026-05-29.md` | Aetherforge Next-12 World-Class GitHub Issue Seeding Pack | 🟡 CANDIDATE | `PROJECT-AETHERFORGE-NEXT12-ISSUE-SEEDING-PACK-2026-05-29` |
 | `projects/aetherforge-next144-taskboard-2026-05-28.md` | Aetherforge Next-144 Taskboard (12x12 Sequence) | 🟡 CANDIDATE | `PROJECT-AETHERFORGE-NEXT144-TASKBOARD-2026-05-28` |
 | `projects/aetherforge-top50-taskboard-2026-05-26.md` | ⚡ Aetherforge Top-50 Public Launch Taskboard | 🟡 CANDIDATE | `ARTIFACT-PROJECTS-AETHERFORGE-TOP50-TASKBOARD-2026-05-26-MD-2026-05-27` |
 | `projects/chinook-guardian/v1.0.md` | v1.0 | 🟡 CANDIDATE | `ARTIFACT-PROJECTS-CHINOOK-GUARDIAN-V1-0-MD-2026-05-29` |

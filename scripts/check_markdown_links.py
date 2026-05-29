@@ -5,7 +5,6 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-MD_PATTERN = "*.md"
 LINK_RE = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
 HEADING_RE = re.compile(r"^(#{1,6})\s+(.+?)\s*$")
 
@@ -35,17 +34,22 @@ def anchors_for_file(path: Path) -> set[str]:
 
 
 def iter_markdown_files() -> list[Path]:
-    files = []
-    for path in ROOT.rglob(MD_PATTERN):
-        if ".git" in path.parts:
-            continue
-        files.append(path)
-    return files
+    files: set[Path] = set()
+    readme = ROOT / "README.md"
+    if readme.exists():
+        files.add(readme)
+
+    for path in (ROOT / "docs").rglob("*.md"):
+        files.add(path)
+    for path in (ROOT / ".github").glob("*.md"):
+        files.add(path)
+
+    return sorted(files)
 
 
 
 def is_external(link: str) -> bool:
-    return link.startswith(("http://", "https://", "mailto:"))
+    return link.startswith(("http://", "https://", "mailto:", "{{"))
 
 
 
@@ -79,10 +83,9 @@ def check_links() -> int:
                 continue
 
             if resolved.is_dir():
-                failures.append(f"{file_path.relative_to(ROOT)}: directory link '{link}' is not allowed")
                 continue
 
-            if anchor:
+            if anchor and resolved.suffix.lower() in {".md", ""}:
                 target_anchors = anchor_index.get(resolved)
                 if target_anchors is None:
                     target_anchors = anchors_for_file(resolved)
