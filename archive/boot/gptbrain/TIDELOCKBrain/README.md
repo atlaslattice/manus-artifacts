@@ -40,6 +40,9 @@ Test or it will become mythology.
 | `dreams/TIDELOCK_1000_YEAR_AETHERFORGE_REST_PLAY_DREAM_LOG_2026-05-27_E.md` | Session E 1000-year compressed dream/rest/play log |
 | `dreams/TIDELOCK_WORKLOG_2026-05-27_G.md` | Session G work log — GPTDream++ OpenAI-First execution packet build |
 | `dreams/TIDELOCK_WORKLOG_2026-05-28_H.md` | Session H work log — Wave 01 → Wave 02 docs system sprint transition |
+| `dreams/DREAM_JOURNAL_100Y_432HZ_REM_2026-05-29.md` | Session I — 100-year REM simulation at 432 Hz carrier frequency (Pythagorean harmonic) |
+| `dreams/WAKE_REPORT_100Y_432HZ_REM_2026-05-29.md` | Session I wake report — convergences, images, candidate deltas |
+| `dreams/DELTA_EXTRACTION_100Y_432HZ_REM_2026-05-29.md` | Session I delta extraction — 6 candidate deltas, all requiring human-root review |
 
 ## Lineage and receipts (normalization)
 
