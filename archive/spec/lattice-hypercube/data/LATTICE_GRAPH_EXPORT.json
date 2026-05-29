@@ -1,0 +1,2508 @@
+{
+  "@context": {
+    "@vocab": "https://atlaslattice.github.io/manus-artifacts/lattice/",
+    "id": "@id",
+    "type": "@type",
+    "LatticeNode": "LatticeNode",
+    "LatticeEdge": "LatticeEdge",
+    "address": "hasAddress",
+    "properties": "hasProperties",
+    "node_type": "hasNodeType",
+    "yin_yang": "hasYinYangBalance",
+    "seed_class": "hasSeedClass",
+    "coupling_weight": "hasCouplingWeight"
+  },
+  "schema_version": "0.1",
+  "status": "Candidate",
+  "date": "2026-05-29",
+  "author": "TIDELOCKBrain / @atlaslattice",
+  "graph_type": "RainbowYinYangLattice",
+  "dimensions": 12,
+  "total_nodes": 53,
+  "total_edges": 144,
+  "@graph": [
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-00.00.00",
+      "node_id": "N-00.00.00",
+      "address": {
+        "AX-01": 0,
+        "AX-02": 0,
+        "AX-03": 0
+      },
+      "properties": {
+        "AX-04": 0,
+        "AX-05": 0,
+        "AX-06": 0,
+        "AX-07": 0,
+        "AX-08": 5,
+        "AX-09": 0,
+        "AX-10": 0,
+        "AX-11": 0,
+        "AX-12": 0
+      },
+      "node_type": "FrequencyNode",
+      "yin_yang": "balanced",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-00.00.05",
+      "node_id": "N-00.00.05",
+      "address": {
+        "AX-01": 0,
+        "AX-02": 0,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 0,
+        "AX-05": 5,
+        "AX-06": 0,
+        "AX-07": 5,
+        "AX-08": 6,
+        "AX-09": 5,
+        "AX-10": 0,
+        "AX-11": 0,
+        "AX-12": 5
+      },
+      "node_type": "FrequencyNode",
+      "yin_yang": "yang_dominant",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-00.00.11",
+      "node_id": "N-00.00.11",
+      "address": {
+        "AX-01": 0,
+        "AX-02": 0,
+        "AX-03": 11
+      },
+      "properties": {
+        "AX-04": 0,
+        "AX-05": 11,
+        "AX-06": 0,
+        "AX-07": 11,
+        "AX-08": 6,
+        "AX-09": 11,
+        "AX-10": 0,
+        "AX-11": 0,
+        "AX-12": 11
+      },
+      "node_type": "FrequencyNode",
+      "yin_yang": "yang_dominant",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-00.05.00",
+      "node_id": "N-00.05.00",
+      "address": {
+        "AX-01": 0,
+        "AX-02": 5,
+        "AX-03": 0
+      },
+      "properties": {
+        "AX-04": 5,
+        "AX-05": 5,
+        "AX-06": 0,
+        "AX-07": 0,
+        "AX-08": 6,
+        "AX-09": 5,
+        "AX-10": 0,
+        "AX-11": 5,
+        "AX-12": 0
+      },
+      "node_type": "FrequencyNode",
+      "yin_yang": "yang_dominant",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-00.05.05",
+      "node_id": "N-00.05.05",
+      "address": {
+        "AX-01": 0,
+        "AX-02": 5,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 5,
+        "AX-05": 10,
+        "AX-06": 0,
+        "AX-07": 5,
+        "AX-08": 5,
+        "AX-09": 10,
+        "AX-10": 0,
+        "AX-11": 5,
+        "AX-12": 5
+      },
+      "node_type": "FrequencyNode",
+      "yin_yang": "balanced",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-00.05.11",
+      "node_id": "N-00.05.11",
+      "address": {
+        "AX-01": 0,
+        "AX-02": 5,
+        "AX-03": 11
+      },
+      "properties": {
+        "AX-04": 5,
+        "AX-05": 4,
+        "AX-06": 0,
+        "AX-07": 11,
+        "AX-08": 5,
+        "AX-09": 4,
+        "AX-10": 0,
+        "AX-11": 5,
+        "AX-12": 11
+      },
+      "node_type": "FrequencyNode",
+      "yin_yang": "balanced",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-00.11.00",
+      "node_id": "N-00.11.00",
+      "address": {
+        "AX-01": 0,
+        "AX-02": 11,
+        "AX-03": 0
+      },
+      "properties": {
+        "AX-04": 11,
+        "AX-05": 11,
+        "AX-06": 0,
+        "AX-07": 0,
+        "AX-08": 6,
+        "AX-09": 11,
+        "AX-10": 0,
+        "AX-11": 11,
+        "AX-12": 0
+      },
+      "node_type": "FrequencyNode",
+      "yin_yang": "yang_dominant",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-00.11.05",
+      "node_id": "N-00.11.05",
+      "address": {
+        "AX-01": 0,
+        "AX-02": 11,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 11,
+        "AX-05": 4,
+        "AX-06": 0,
+        "AX-07": 5,
+        "AX-08": 5,
+        "AX-09": 4,
+        "AX-10": 0,
+        "AX-11": 11,
+        "AX-12": 5
+      },
+      "node_type": "FrequencyNode",
+      "yin_yang": "balanced",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-00.11.11",
+      "node_id": "N-00.11.11",
+      "address": {
+        "AX-01": 0,
+        "AX-02": 11,
+        "AX-03": 11
+      },
+      "properties": {
+        "AX-04": 11,
+        "AX-05": 10,
+        "AX-06": 0,
+        "AX-07": 11,
+        "AX-08": 5,
+        "AX-09": 10,
+        "AX-10": 0,
+        "AX-11": 11,
+        "AX-12": 11
+      },
+      "node_type": "FrequencyNode",
+      "yin_yang": "balanced",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-05.00.00",
+      "node_id": "N-05.00.00",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 0,
+        "AX-03": 0
+      },
+      "properties": {
+        "AX-04": 5,
+        "AX-05": 0,
+        "AX-06": 5,
+        "AX-07": 0,
+        "AX-08": 6,
+        "AX-09": 5,
+        "AX-10": 5,
+        "AX-11": 0,
+        "AX-12": 0
+      },
+      "node_type": "MatterPhaseNode",
+      "yin_yang": "yang_dominant",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-05.00.05",
+      "node_id": "N-05.00.05",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 0,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 5,
+        "AX-05": 5,
+        "AX-06": 5,
+        "AX-07": 5,
+        "AX-08": 5,
+        "AX-09": 10,
+        "AX-10": 5,
+        "AX-11": 0,
+        "AX-12": 5
+      },
+      "node_type": "MatterPhaseNode",
+      "yin_yang": "balanced",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-05.00.11",
+      "node_id": "N-05.00.11",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 0,
+        "AX-03": 11
+      },
+      "properties": {
+        "AX-04": 5,
+        "AX-05": 11,
+        "AX-06": 5,
+        "AX-07": 11,
+        "AX-08": 5,
+        "AX-09": 4,
+        "AX-10": 5,
+        "AX-11": 0,
+        "AX-12": 11
+      },
+      "node_type": "MatterPhaseNode",
+      "yin_yang": "balanced",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-05.05.00",
+      "node_id": "N-05.05.00",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 0
+      },
+      "properties": {
+        "AX-04": 10,
+        "AX-05": 5,
+        "AX-06": 5,
+        "AX-07": 0,
+        "AX-08": 5,
+        "AX-09": 10,
+        "AX-10": 5,
+        "AX-11": 5,
+        "AX-12": 0
+      },
+      "node_type": "MatterPhaseNode",
+      "yin_yang": "balanced",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-05.05.05",
+      "node_id": "N-05.05.05",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 10,
+        "AX-05": 10,
+        "AX-06": 5,
+        "AX-07": 5,
+        "AX-08": 6,
+        "AX-09": 3,
+        "AX-10": 5,
+        "AX-11": 5,
+        "AX-12": 5
+      },
+      "node_type": "MatterPhaseNode",
+      "yin_yang": "yang_dominant",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-05.05.11",
+      "node_id": "N-05.05.11",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 11
+      },
+      "properties": {
+        "AX-04": 10,
+        "AX-05": 4,
+        "AX-06": 5,
+        "AX-07": 11,
+        "AX-08": 6,
+        "AX-09": 9,
+        "AX-10": 5,
+        "AX-11": 5,
+        "AX-12": 11
+      },
+      "node_type": "MatterPhaseNode",
+      "yin_yang": "yang_dominant",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-05.11.00",
+      "node_id": "N-05.11.00",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 11,
+        "AX-03": 0
+      },
+      "properties": {
+        "AX-04": 4,
+        "AX-05": 11,
+        "AX-06": 5,
+        "AX-07": 0,
+        "AX-08": 5,
+        "AX-09": 4,
+        "AX-10": 5,
+        "AX-11": 11,
+        "AX-12": 0
+      },
+      "node_type": "MatterPhaseNode",
+      "yin_yang": "balanced",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-05.11.05",
+      "node_id": "N-05.11.05",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 11,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 4,
+        "AX-05": 4,
+        "AX-06": 5,
+        "AX-07": 5,
+        "AX-08": 6,
+        "AX-09": 9,
+        "AX-10": 5,
+        "AX-11": 11,
+        "AX-12": 5
+      },
+      "node_type": "MatterPhaseNode",
+      "yin_yang": "yang_dominant",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-05.11.11",
+      "node_id": "N-05.11.11",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 11,
+        "AX-03": 11
+      },
+      "properties": {
+        "AX-04": 4,
+        "AX-05": 10,
+        "AX-06": 5,
+        "AX-07": 11,
+        "AX-08": 6,
+        "AX-09": 3,
+        "AX-10": 5,
+        "AX-11": 11,
+        "AX-12": 11
+      },
+      "node_type": "MatterPhaseNode",
+      "yin_yang": "yang_dominant",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-11.00.00",
+      "node_id": "N-11.00.00",
+      "address": {
+        "AX-01": 11,
+        "AX-02": 0,
+        "AX-03": 0
+      },
+      "properties": {
+        "AX-04": 11,
+        "AX-05": 0,
+        "AX-06": 11,
+        "AX-07": 0,
+        "AX-08": 6,
+        "AX-09": 11,
+        "AX-10": 11,
+        "AX-11": 0,
+        "AX-12": 0
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "yang_dominant",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-11.00.05",
+      "node_id": "N-11.00.05",
+      "address": {
+        "AX-01": 11,
+        "AX-02": 0,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 11,
+        "AX-05": 5,
+        "AX-06": 11,
+        "AX-07": 5,
+        "AX-08": 5,
+        "AX-09": 4,
+        "AX-10": 11,
+        "AX-11": 0,
+        "AX-12": 5
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "balanced",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-11.00.11",
+      "node_id": "N-11.00.11",
+      "address": {
+        "AX-01": 11,
+        "AX-02": 0,
+        "AX-03": 11
+      },
+      "properties": {
+        "AX-04": 11,
+        "AX-05": 11,
+        "AX-06": 11,
+        "AX-07": 11,
+        "AX-08": 5,
+        "AX-09": 10,
+        "AX-10": 11,
+        "AX-11": 0,
+        "AX-12": 11
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "balanced",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-11.05.00",
+      "node_id": "N-11.05.00",
+      "address": {
+        "AX-01": 11,
+        "AX-02": 5,
+        "AX-03": 0
+      },
+      "properties": {
+        "AX-04": 4,
+        "AX-05": 5,
+        "AX-06": 11,
+        "AX-07": 0,
+        "AX-08": 5,
+        "AX-09": 4,
+        "AX-10": 11,
+        "AX-11": 5,
+        "AX-12": 0
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "balanced",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-11.05.05",
+      "node_id": "N-11.05.05",
+      "address": {
+        "AX-01": 11,
+        "AX-02": 5,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 4,
+        "AX-05": 10,
+        "AX-06": 11,
+        "AX-07": 5,
+        "AX-08": 6,
+        "AX-09": 9,
+        "AX-10": 11,
+        "AX-11": 5,
+        "AX-12": 5
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "yang_dominant",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-11.05.11",
+      "node_id": "N-11.05.11",
+      "address": {
+        "AX-01": 11,
+        "AX-02": 5,
+        "AX-03": 11
+      },
+      "properties": {
+        "AX-04": 4,
+        "AX-05": 4,
+        "AX-06": 11,
+        "AX-07": 11,
+        "AX-08": 6,
+        "AX-09": 3,
+        "AX-10": 11,
+        "AX-11": 5,
+        "AX-12": 11
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "yang_dominant",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-11.11.00",
+      "node_id": "N-11.11.00",
+      "address": {
+        "AX-01": 11,
+        "AX-02": 11,
+        "AX-03": 0
+      },
+      "properties": {
+        "AX-04": 10,
+        "AX-05": 11,
+        "AX-06": 11,
+        "AX-07": 0,
+        "AX-08": 5,
+        "AX-09": 10,
+        "AX-10": 11,
+        "AX-11": 11,
+        "AX-12": 0
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "balanced",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-11.11.05",
+      "node_id": "N-11.11.05",
+      "address": {
+        "AX-01": 11,
+        "AX-02": 11,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 10,
+        "AX-05": 4,
+        "AX-06": 11,
+        "AX-07": 5,
+        "AX-08": 6,
+        "AX-09": 3,
+        "AX-10": 11,
+        "AX-11": 11,
+        "AX-12": 5
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "yang_dominant",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-11.11.11",
+      "node_id": "N-11.11.11",
+      "address": {
+        "AX-01": 11,
+        "AX-02": 11,
+        "AX-03": 11
+      },
+      "properties": {
+        "AX-04": 10,
+        "AX-05": 10,
+        "AX-06": 11,
+        "AX-07": 11,
+        "AX-08": 6,
+        "AX-09": 9,
+        "AX-10": 11,
+        "AX-11": 11,
+        "AX-12": 11
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "yang_dominant",
+      "seed_class": "primary_corner",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-RIEMANN-00",
+      "node_id": "N-RIEMANN-00",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 0
+      },
+      "properties": {
+        "AX-04": 0,
+        "AX-05": 0,
+        "AX-06": 0,
+        "AX-07": 0,
+        "AX-08": 5,
+        "AX-09": 0,
+        "AX-10": 0,
+        "AX-11": 0,
+        "AX-12": 0
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "meta",
+      "seed_class": "riemann_spine",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-RIEMANN-01",
+      "node_id": "N-RIEMANN-01",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 1
+      },
+      "properties": {
+        "AX-04": 1,
+        "AX-05": 1,
+        "AX-06": 1,
+        "AX-07": 1,
+        "AX-08": 5,
+        "AX-09": 1,
+        "AX-10": 1,
+        "AX-11": 1,
+        "AX-12": 1
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "meta",
+      "seed_class": "riemann_spine",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-RIEMANN-02",
+      "node_id": "N-RIEMANN-02",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 2
+      },
+      "properties": {
+        "AX-04": 2,
+        "AX-05": 2,
+        "AX-06": 2,
+        "AX-07": 2,
+        "AX-08": 5,
+        "AX-09": 2,
+        "AX-10": 2,
+        "AX-11": 2,
+        "AX-12": 2
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "meta",
+      "seed_class": "riemann_spine",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-RIEMANN-03",
+      "node_id": "N-RIEMANN-03",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 3
+      },
+      "properties": {
+        "AX-04": 3,
+        "AX-05": 3,
+        "AX-06": 3,
+        "AX-07": 3,
+        "AX-08": 5,
+        "AX-09": 3,
+        "AX-10": 3,
+        "AX-11": 3,
+        "AX-12": 3
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "meta",
+      "seed_class": "riemann_spine",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-RIEMANN-04",
+      "node_id": "N-RIEMANN-04",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 4
+      },
+      "properties": {
+        "AX-04": 4,
+        "AX-05": 4,
+        "AX-06": 4,
+        "AX-07": 4,
+        "AX-08": 5,
+        "AX-09": 4,
+        "AX-10": 4,
+        "AX-11": 4,
+        "AX-12": 4
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "meta",
+      "seed_class": "riemann_spine",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-RIEMANN-05",
+      "node_id": "N-RIEMANN-05",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 5,
+        "AX-05": 5,
+        "AX-06": 5,
+        "AX-07": 5,
+        "AX-08": 5,
+        "AX-09": 5,
+        "AX-10": 5,
+        "AX-11": 5,
+        "AX-12": 5
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "meta",
+      "seed_class": "riemann_spine",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-RIEMANN-06",
+      "node_id": "N-RIEMANN-06",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 6
+      },
+      "properties": {
+        "AX-04": 6,
+        "AX-05": 6,
+        "AX-06": 6,
+        "AX-07": 6,
+        "AX-08": 5,
+        "AX-09": 6,
+        "AX-10": 6,
+        "AX-11": 6,
+        "AX-12": 6
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "meta",
+      "seed_class": "riemann_spine",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-RIEMANN-07",
+      "node_id": "N-RIEMANN-07",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 7
+      },
+      "properties": {
+        "AX-04": 7,
+        "AX-05": 7,
+        "AX-06": 7,
+        "AX-07": 7,
+        "AX-08": 5,
+        "AX-09": 7,
+        "AX-10": 7,
+        "AX-11": 7,
+        "AX-12": 7
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "meta",
+      "seed_class": "riemann_spine",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-RIEMANN-08",
+      "node_id": "N-RIEMANN-08",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 8
+      },
+      "properties": {
+        "AX-04": 8,
+        "AX-05": 8,
+        "AX-06": 8,
+        "AX-07": 8,
+        "AX-08": 5,
+        "AX-09": 8,
+        "AX-10": 8,
+        "AX-11": 8,
+        "AX-12": 8
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "meta",
+      "seed_class": "riemann_spine",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-RIEMANN-09",
+      "node_id": "N-RIEMANN-09",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 9
+      },
+      "properties": {
+        "AX-04": 9,
+        "AX-05": 9,
+        "AX-06": 9,
+        "AX-07": 9,
+        "AX-08": 5,
+        "AX-09": 9,
+        "AX-10": 9,
+        "AX-11": 9,
+        "AX-12": 9
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "meta",
+      "seed_class": "riemann_spine",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-RIEMANN-10",
+      "node_id": "N-RIEMANN-10",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 10
+      },
+      "properties": {
+        "AX-04": 10,
+        "AX-05": 10,
+        "AX-06": 10,
+        "AX-07": 10,
+        "AX-08": 5,
+        "AX-09": 10,
+        "AX-10": 10,
+        "AX-11": 10,
+        "AX-12": 10
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "meta",
+      "seed_class": "riemann_spine",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-RIEMANN-11",
+      "node_id": "N-RIEMANN-11",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 11
+      },
+      "properties": {
+        "AX-04": 11,
+        "AX-05": 11,
+        "AX-06": 11,
+        "AX-07": 11,
+        "AX-08": 5,
+        "AX-09": 11,
+        "AX-10": 11,
+        "AX-11": 11,
+        "AX-12": 11
+      },
+      "node_type": "RiemannOperatorNode",
+      "yin_yang": "meta",
+      "seed_class": "riemann_spine",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-APEX",
+      "node_id": "N-APEX",
+      "address": {
+        "AX-01": 11,
+        "AX-02": 11,
+        "AX-03": 11
+      },
+      "properties": {
+        "AX-01": 11,
+        "AX-02": 11,
+        "AX-03": 11,
+        "AX-04": 11,
+        "AX-05": 11,
+        "AX-06": 11,
+        "AX-07": 11,
+        "AX-08": 11,
+        "AX-09": 11,
+        "AX-10": 11,
+        "AX-11": 11,
+        "AX-12": 11
+      },
+      "node_type": "UnifiedFieldApex",
+      "yin_yang": "perfect_balance",
+      "seed_class": "apex",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-METATRON-CENTER",
+      "node_id": "N-METATRON-CENTER",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 5,
+        "AX-04": 5,
+        "AX-05": 5,
+        "AX-06": 5,
+        "AX-07": 5,
+        "AX-08": 5,
+        "AX-09": 5,
+        "AX-10": 5,
+        "AX-11": 5,
+        "AX-12": 5
+      },
+      "node_type": "YinYangBalanceNode",
+      "yin_yang": "perfect_balance",
+      "seed_class": "metatron_center",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-METATRON-01",
+      "node_id": "N-METATRON-01",
+      "address": {
+        "AX-01": 0,
+        "AX-02": 5,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 0,
+        "AX-05": 0,
+        "AX-06": 0,
+        "AX-07": 0,
+        "AX-08": 5,
+        "AX-09": 0,
+        "AX-10": 0,
+        "AX-11": 0,
+        "AX-12": 0
+      },
+      "node_type": "YinYangBalanceNode",
+      "yin_yang": "balanced",
+      "seed_class": "metatron_outer",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-METATRON-02",
+      "node_id": "N-METATRON-02",
+      "address": {
+        "AX-01": 11,
+        "AX-02": 5,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 1,
+        "AX-05": 1,
+        "AX-06": 1,
+        "AX-07": 1,
+        "AX-08": 5,
+        "AX-09": 1,
+        "AX-10": 1,
+        "AX-11": 1,
+        "AX-12": 1
+      },
+      "node_type": "YinYangBalanceNode",
+      "yin_yang": "balanced",
+      "seed_class": "metatron_outer",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-METATRON-03",
+      "node_id": "N-METATRON-03",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 0,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 2,
+        "AX-05": 2,
+        "AX-06": 2,
+        "AX-07": 2,
+        "AX-08": 5,
+        "AX-09": 2,
+        "AX-10": 2,
+        "AX-11": 2,
+        "AX-12": 2
+      },
+      "node_type": "YinYangBalanceNode",
+      "yin_yang": "balanced",
+      "seed_class": "metatron_outer",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-METATRON-04",
+      "node_id": "N-METATRON-04",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 11,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 3,
+        "AX-05": 3,
+        "AX-06": 3,
+        "AX-07": 3,
+        "AX-08": 5,
+        "AX-09": 3,
+        "AX-10": 3,
+        "AX-11": 3,
+        "AX-12": 3
+      },
+      "node_type": "YinYangBalanceNode",
+      "yin_yang": "balanced",
+      "seed_class": "metatron_outer",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-METATRON-05",
+      "node_id": "N-METATRON-05",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 0
+      },
+      "properties": {
+        "AX-04": 4,
+        "AX-05": 4,
+        "AX-06": 4,
+        "AX-07": 4,
+        "AX-08": 5,
+        "AX-09": 4,
+        "AX-10": 4,
+        "AX-11": 4,
+        "AX-12": 4
+      },
+      "node_type": "YinYangBalanceNode",
+      "yin_yang": "balanced",
+      "seed_class": "metatron_outer",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-METATRON-06",
+      "node_id": "N-METATRON-06",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 5,
+        "AX-03": 11
+      },
+      "properties": {
+        "AX-04": 5,
+        "AX-05": 5,
+        "AX-06": 5,
+        "AX-07": 5,
+        "AX-08": 5,
+        "AX-09": 5,
+        "AX-10": 5,
+        "AX-11": 5,
+        "AX-12": 5
+      },
+      "node_type": "YinYangBalanceNode",
+      "yin_yang": "balanced",
+      "seed_class": "metatron_outer",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-METATRON-07",
+      "node_id": "N-METATRON-07",
+      "address": {
+        "AX-01": 0,
+        "AX-02": 0,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 6,
+        "AX-05": 6,
+        "AX-06": 6,
+        "AX-07": 6,
+        "AX-08": 5,
+        "AX-09": 6,
+        "AX-10": 6,
+        "AX-11": 6,
+        "AX-12": 6
+      },
+      "node_type": "YinYangBalanceNode",
+      "yin_yang": "balanced",
+      "seed_class": "metatron_outer",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-METATRON-08",
+      "node_id": "N-METATRON-08",
+      "address": {
+        "AX-01": 11,
+        "AX-02": 11,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 7,
+        "AX-05": 7,
+        "AX-06": 7,
+        "AX-07": 7,
+        "AX-08": 5,
+        "AX-09": 7,
+        "AX-10": 7,
+        "AX-11": 7,
+        "AX-12": 7
+      },
+      "node_type": "YinYangBalanceNode",
+      "yin_yang": "balanced",
+      "seed_class": "metatron_outer",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-METATRON-09",
+      "node_id": "N-METATRON-09",
+      "address": {
+        "AX-01": 0,
+        "AX-02": 11,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 8,
+        "AX-05": 8,
+        "AX-06": 8,
+        "AX-07": 8,
+        "AX-08": 5,
+        "AX-09": 8,
+        "AX-10": 8,
+        "AX-11": 8,
+        "AX-12": 8
+      },
+      "node_type": "YinYangBalanceNode",
+      "yin_yang": "balanced",
+      "seed_class": "metatron_outer",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-METATRON-10",
+      "node_id": "N-METATRON-10",
+      "address": {
+        "AX-01": 11,
+        "AX-02": 0,
+        "AX-03": 5
+      },
+      "properties": {
+        "AX-04": 9,
+        "AX-05": 9,
+        "AX-06": 9,
+        "AX-07": 9,
+        "AX-08": 5,
+        "AX-09": 9,
+        "AX-10": 9,
+        "AX-11": 9,
+        "AX-12": 9
+      },
+      "node_type": "YinYangBalanceNode",
+      "yin_yang": "balanced",
+      "seed_class": "metatron_outer",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-METATRON-11",
+      "node_id": "N-METATRON-11",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 0,
+        "AX-03": 11
+      },
+      "properties": {
+        "AX-04": 10,
+        "AX-05": 10,
+        "AX-06": 10,
+        "AX-07": 10,
+        "AX-08": 5,
+        "AX-09": 10,
+        "AX-10": 10,
+        "AX-11": 10,
+        "AX-12": 10
+      },
+      "node_type": "YinYangBalanceNode",
+      "yin_yang": "balanced",
+      "seed_class": "metatron_outer",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeNode",
+      "@id": "node:N-METATRON-12",
+      "node_id": "N-METATRON-12",
+      "address": {
+        "AX-01": 5,
+        "AX-02": 11,
+        "AX-03": 0
+      },
+      "properties": {
+        "AX-04": 11,
+        "AX-05": 11,
+        "AX-06": 11,
+        "AX-07": 11,
+        "AX-08": 5,
+        "AX-09": 11,
+        "AX-10": 11,
+        "AX-11": 11,
+        "AX-12": 11
+      },
+      "node_type": "YinYangBalanceNode",
+      "yin_yang": "balanced",
+      "seed_class": "metatron_outer",
+      "status": "Candidate"
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:APEX-AX-01",
+      "source": "axis:APEX",
+      "target": "axis:AX-01",
+      "edge_type": "spine",
+      "coupling_weight": 0.9901
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:APEX-AX-02",
+      "source": "axis:APEX",
+      "target": "axis:AX-02",
+      "edge_type": "spine",
+      "coupling_weight": 0.9901
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:APEX-AX-03",
+      "source": "axis:APEX",
+      "target": "axis:AX-03",
+      "edge_type": "spine",
+      "coupling_weight": 0.9901
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:APEX-AX-04",
+      "source": "axis:APEX",
+      "target": "axis:AX-04",
+      "edge_type": "spine",
+      "coupling_weight": 0.9901
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:APEX-AX-05",
+      "source": "axis:APEX",
+      "target": "axis:AX-05",
+      "edge_type": "spine",
+      "coupling_weight": 0.9901
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:APEX-AX-06",
+      "source": "axis:APEX",
+      "target": "axis:AX-06",
+      "edge_type": "spine",
+      "coupling_weight": 0.9901
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:APEX-AX-07",
+      "source": "axis:APEX",
+      "target": "axis:AX-07",
+      "edge_type": "spine",
+      "coupling_weight": 0.4975
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:APEX-AX-08",
+      "source": "axis:APEX",
+      "target": "axis:AX-08",
+      "edge_type": "spine",
+      "coupling_weight": 0.4975
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:APEX-AX-09",
+      "source": "axis:APEX",
+      "target": "axis:AX-09",
+      "edge_type": "spine",
+      "coupling_weight": 0.4975
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:APEX-AX-10",
+      "source": "axis:APEX",
+      "target": "axis:AX-10",
+      "edge_type": "spine",
+      "coupling_weight": 0.4975
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:APEX-AX-11",
+      "source": "axis:APEX",
+      "target": "axis:AX-11",
+      "edge_type": "spine",
+      "coupling_weight": 0.4975
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:APEX-AX-12",
+      "source": "axis:APEX",
+      "target": "axis:AX-12",
+      "edge_type": "spine",
+      "coupling_weight": 0.4975
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-01-AX-02",
+      "source": "axis:AX-01",
+      "target": "axis:AX-02",
+      "edge_type": "outer",
+      "coupling_weight": 0.9901
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-01-AX-03",
+      "source": "axis:AX-01",
+      "target": "axis:AX-03",
+      "edge_type": "cross",
+      "coupling_weight": 0.574
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-01-AX-04",
+      "source": "axis:AX-01",
+      "target": "axis:AX-04",
+      "edge_type": "cross",
+      "coupling_weight": 0.4975
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-01-AX-05",
+      "source": "axis:AX-01",
+      "target": "axis:AX-05",
+      "edge_type": "cross",
+      "coupling_weight": 0.574
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-01-AX-06",
+      "source": "axis:AX-01",
+      "target": "axis:AX-06",
+      "edge_type": "outer",
+      "coupling_weight": 0.9901
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-01-AX-07",
+      "source": "axis:AX-01",
+      "target": "axis:AX-07",
+      "edge_type": "cross",
+      "coupling_weight": 0.8004
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-01-AX-08",
+      "source": "axis:AX-01",
+      "target": "axis:AX-08",
+      "edge_type": "cross",
+      "coupling_weight": 0.4452
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-01-AX-09",
+      "source": "axis:AX-01",
+      "target": "axis:AX-09",
+      "edge_type": "cross",
+      "coupling_weight": 0.3425
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-01-AX-10",
+      "source": "axis:AX-01",
+      "target": "axis:AX-10",
+      "edge_type": "cross",
+      "coupling_weight": 0.3425
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-01-AX-11",
+      "source": "axis:AX-01",
+      "target": "axis:AX-11",
+      "edge_type": "cross",
+      "coupling_weight": 0.4452
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-01-AX-12",
+      "source": "axis:AX-01",
+      "target": "axis:AX-12",
+      "edge_type": "cross",
+      "coupling_weight": 0.8004
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-02-AX-03",
+      "source": "axis:AX-02",
+      "target": "axis:AX-03",
+      "edge_type": "outer",
+      "coupling_weight": 0.9901
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-02-AX-04",
+      "source": "axis:AX-02",
+      "target": "axis:AX-04",
+      "edge_type": "cross",
+      "coupling_weight": 0.574
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-02-AX-05",
+      "source": "axis:AX-02",
+      "target": "axis:AX-05",
+      "edge_type": "cross",
+      "coupling_weight": 0.4975
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-02-AX-06",
+      "source": "axis:AX-02",
+      "target": "axis:AX-06",
+      "edge_type": "cross",
+      "coupling_weight": 0.574
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-02-AX-07",
+      "source": "axis:AX-02",
+      "target": "axis:AX-07",
+      "edge_type": "cross",
+      "coupling_weight": 0.8004
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-02-AX-08",
+      "source": "axis:AX-02",
+      "target": "axis:AX-08",
+      "edge_type": "cross",
+      "coupling_weight": 0.8004
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-02-AX-09",
+      "source": "axis:AX-02",
+      "target": "axis:AX-09",
+      "edge_type": "cross",
+      "coupling_weight": 0.4452
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-02-AX-10",
+      "source": "axis:AX-02",
+      "target": "axis:AX-10",
+      "edge_type": "cross",
+      "coupling_weight": 0.3425
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-02-AX-11",
+      "source": "axis:AX-02",
+      "target": "axis:AX-11",
+      "edge_type": "cross",
+      "coupling_weight": 0.3425
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-02-AX-12",
+      "source": "axis:AX-02",
+      "target": "axis:AX-12",
+      "edge_type": "cross",
+      "coupling_weight": 0.4452
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-03-AX-04",
+      "source": "axis:AX-03",
+      "target": "axis:AX-04",
+      "edge_type": "outer",
+      "coupling_weight": 0.9901
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-03-AX-05",
+      "source": "axis:AX-03",
+      "target": "axis:AX-05",
+      "edge_type": "cross",
+      "coupling_weight": 0.574
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-03-AX-06",
+      "source": "axis:AX-03",
+      "target": "axis:AX-06",
+      "edge_type": "cross",
+      "coupling_weight": 0.4975
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-03-AX-07",
+      "source": "axis:AX-03",
+      "target": "axis:AX-07",
+      "edge_type": "cross",
+      "coupling_weight": 0.4452
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-03-AX-08",
+      "source": "axis:AX-03",
+      "target": "axis:AX-08",
+      "edge_type": "cross",
+      "coupling_weight": 0.8004
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-03-AX-09",
+      "source": "axis:AX-03",
+      "target": "axis:AX-09",
+      "edge_type": "cross",
+      "coupling_weight": 0.8004
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-03-AX-10",
+      "source": "axis:AX-03",
+      "target": "axis:AX-10",
+      "edge_type": "cross",
+      "coupling_weight": 0.4452
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-03-AX-11",
+      "source": "axis:AX-03",
+      "target": "axis:AX-11",
+      "edge_type": "cross",
+      "coupling_weight": 0.3425
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-03-AX-12",
+      "source": "axis:AX-03",
+      "target": "axis:AX-12",
+      "edge_type": "cross",
+      "coupling_weight": 0.3425
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-04-AX-05",
+      "source": "axis:AX-04",
+      "target": "axis:AX-05",
+      "edge_type": "outer",
+      "coupling_weight": 0.9901
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-04-AX-06",
+      "source": "axis:AX-04",
+      "target": "axis:AX-06",
+      "edge_type": "cross",
+      "coupling_weight": 0.574
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-04-AX-07",
+      "source": "axis:AX-04",
+      "target": "axis:AX-07",
+      "edge_type": "cross",
+      "coupling_weight": 0.3425
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-04-AX-08",
+      "source": "axis:AX-04",
+      "target": "axis:AX-08",
+      "edge_type": "cross",
+      "coupling_weight": 0.4452
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-04-AX-09",
+      "source": "axis:AX-04",
+      "target": "axis:AX-09",
+      "edge_type": "cross",
+      "coupling_weight": 0.8004
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-04-AX-10",
+      "source": "axis:AX-04",
+      "target": "axis:AX-10",
+      "edge_type": "cross",
+      "coupling_weight": 0.8004
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-04-AX-11",
+      "source": "axis:AX-04",
+      "target": "axis:AX-11",
+      "edge_type": "cross",
+      "coupling_weight": 0.4452
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-04-AX-12",
+      "source": "axis:AX-04",
+      "target": "axis:AX-12",
+      "edge_type": "cross",
+      "coupling_weight": 0.3425
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-05-AX-06",
+      "source": "axis:AX-05",
+      "target": "axis:AX-06",
+      "edge_type": "outer",
+      "coupling_weight": 0.9901
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-05-AX-07",
+      "source": "axis:AX-05",
+      "target": "axis:AX-07",
+      "edge_type": "cross",
+      "coupling_weight": 0.3425
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-05-AX-08",
+      "source": "axis:AX-05",
+      "target": "axis:AX-08",
+      "edge_type": "cross",
+      "coupling_weight": 0.3425
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-05-AX-09",
+      "source": "axis:AX-05",
+      "target": "axis:AX-09",
+      "edge_type": "cross",
+      "coupling_weight": 0.4452
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-05-AX-10",
+      "source": "axis:AX-05",
+      "target": "axis:AX-10",
+      "edge_type": "cross",
+      "coupling_weight": 0.8004
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-05-AX-11",
+      "source": "axis:AX-05",
+      "target": "axis:AX-11",
+      "edge_type": "cross",
+      "coupling_weight": 0.8004
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-05-AX-12",
+      "source": "axis:AX-05",
+      "target": "axis:AX-12",
+      "edge_type": "cross",
+      "coupling_weight": 0.4452
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-06-AX-07",
+      "source": "axis:AX-06",
+      "target": "axis:AX-07",
+      "edge_type": "cross",
+      "coupling_weight": 0.4452
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-06-AX-08",
+      "source": "axis:AX-06",
+      "target": "axis:AX-08",
+      "edge_type": "cross",
+      "coupling_weight": 0.3425
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-06-AX-09",
+      "source": "axis:AX-06",
+      "target": "axis:AX-09",
+      "edge_type": "cross",
+      "coupling_weight": 0.3425
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-06-AX-10",
+      "source": "axis:AX-06",
+      "target": "axis:AX-10",
+      "edge_type": "cross",
+      "coupling_weight": 0.4452
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-06-AX-11",
+      "source": "axis:AX-06",
+      "target": "axis:AX-11",
+      "edge_type": "cross",
+      "coupling_weight": 0.8004
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-06-AX-12",
+      "source": "axis:AX-06",
+      "target": "axis:AX-12",
+      "edge_type": "cross",
+      "coupling_weight": 0.8004
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-07-AX-08",
+      "source": "axis:AX-07",
+      "target": "axis:AX-08",
+      "edge_type": "cross",
+      "coupling_weight": 0.4975
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-07-AX-09",
+      "source": "axis:AX-07",
+      "target": "axis:AX-09",
+      "edge_type": "cross",
+      "coupling_weight": 0.2878
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-07-AX-10",
+      "source": "axis:AX-07",
+      "target": "axis:AX-10",
+      "edge_type": "cross",
+      "coupling_weight": 0.2494
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-07-AX-11",
+      "source": "axis:AX-07",
+      "target": "axis:AX-11",
+      "edge_type": "cross",
+      "coupling_weight": 0.2878
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-07-AX-12",
+      "source": "axis:AX-07",
+      "target": "axis:AX-12",
+      "edge_type": "cross",
+      "coupling_weight": 0.4975
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-08-AX-09",
+      "source": "axis:AX-08",
+      "target": "axis:AX-09",
+      "edge_type": "cross",
+      "coupling_weight": 0.4975
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-08-AX-10",
+      "source": "axis:AX-08",
+      "target": "axis:AX-10",
+      "edge_type": "cross",
+      "coupling_weight": 0.2878
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-08-AX-11",
+      "source": "axis:AX-08",
+      "target": "axis:AX-11",
+      "edge_type": "cross",
+      "coupling_weight": 0.2494
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-08-AX-12",
+      "source": "axis:AX-08",
+      "target": "axis:AX-12",
+      "edge_type": "cross",
+      "coupling_weight": 0.2878
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-09-AX-10",
+      "source": "axis:AX-09",
+      "target": "axis:AX-10",
+      "edge_type": "cross",
+      "coupling_weight": 0.4975
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-09-AX-11",
+      "source": "axis:AX-09",
+      "target": "axis:AX-11",
+      "edge_type": "cross",
+      "coupling_weight": 0.2878
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-09-AX-12",
+      "source": "axis:AX-09",
+      "target": "axis:AX-12",
+      "edge_type": "cross",
+      "coupling_weight": 0.2494
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-10-AX-11",
+      "source": "axis:AX-10",
+      "target": "axis:AX-11",
+      "edge_type": "cross",
+      "coupling_weight": 0.4975
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-10-AX-12",
+      "source": "axis:AX-10",
+      "target": "axis:AX-12",
+      "edge_type": "cross",
+      "coupling_weight": 0.2878
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:AX-11-AX-12",
+      "source": "axis:AX-11",
+      "target": "axis:AX-12",
+      "edge_type": "cross",
+      "coupling_weight": 0.4975
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-01-AX-02",
+      "source": "axis:AX-01",
+      "target": "axis:AX-02",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-01-AX-03",
+      "source": "axis:AX-01",
+      "target": "axis:AX-03",
+      "edge_type": "coupling",
+      "coupling_weight": 1.0
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-01-AX-04",
+      "source": "axis:AX-01",
+      "target": "axis:AX-04",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-01-AX-05",
+      "source": "axis:AX-01",
+      "target": "axis:AX-05",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-01-AX-06",
+      "source": "axis:AX-01",
+      "target": "axis:AX-06",
+      "edge_type": "coupling",
+      "coupling_weight": 1.0
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-01-AX-07",
+      "source": "axis:AX-01",
+      "target": "axis:AX-07",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-01-AX-08",
+      "source": "axis:AX-01",
+      "target": "axis:AX-08",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-01-AX-09",
+      "source": "axis:AX-01",
+      "target": "axis:AX-09",
+      "edge_type": "coupling",
+      "coupling_weight": 1.0
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-01-AX-10",
+      "source": "axis:AX-01",
+      "target": "axis:AX-10",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-01-AX-11",
+      "source": "axis:AX-01",
+      "target": "axis:AX-11",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-01-AX-12",
+      "source": "axis:AX-01",
+      "target": "axis:AX-12",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-02-AX-03",
+      "source": "axis:AX-02",
+      "target": "axis:AX-03",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-02-AX-04",
+      "source": "axis:AX-02",
+      "target": "axis:AX-04",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-02-AX-05",
+      "source": "axis:AX-02",
+      "target": "axis:AX-05",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-02-AX-06",
+      "source": "axis:AX-02",
+      "target": "axis:AX-06",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-02-AX-07",
+      "source": "axis:AX-02",
+      "target": "axis:AX-07",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-02-AX-08",
+      "source": "axis:AX-02",
+      "target": "axis:AX-08",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-02-AX-09",
+      "source": "axis:AX-02",
+      "target": "axis:AX-09",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-02-AX-10",
+      "source": "axis:AX-02",
+      "target": "axis:AX-10",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-02-AX-11",
+      "source": "axis:AX-02",
+      "target": "axis:AX-11",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-02-AX-12",
+      "source": "axis:AX-02",
+      "target": "axis:AX-12",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-03-AX-04",
+      "source": "axis:AX-03",
+      "target": "axis:AX-04",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-03-AX-05",
+      "source": "axis:AX-03",
+      "target": "axis:AX-05",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-03-AX-06",
+      "source": "axis:AX-03",
+      "target": "axis:AX-06",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-03-AX-07",
+      "source": "axis:AX-03",
+      "target": "axis:AX-07",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-03-AX-08",
+      "source": "axis:AX-03",
+      "target": "axis:AX-08",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-03-AX-09",
+      "source": "axis:AX-03",
+      "target": "axis:AX-09",
+      "edge_type": "coupling",
+      "coupling_weight": 0.85
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-03-AX-10",
+      "source": "axis:AX-03",
+      "target": "axis:AX-10",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-03-AX-11",
+      "source": "axis:AX-03",
+      "target": "axis:AX-11",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-03-AX-12",
+      "source": "axis:AX-03",
+      "target": "axis:AX-12",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-04-AX-05",
+      "source": "axis:AX-04",
+      "target": "axis:AX-05",
+      "edge_type": "coupling",
+      "coupling_weight": 0.7
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-04-AX-06",
+      "source": "axis:AX-04",
+      "target": "axis:AX-06",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-04-AX-07",
+      "source": "axis:AX-04",
+      "target": "axis:AX-07",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-04-AX-08",
+      "source": "axis:AX-04",
+      "target": "axis:AX-08",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-04-AX-09",
+      "source": "axis:AX-04",
+      "target": "axis:AX-09",
+      "edge_type": "coupling",
+      "coupling_weight": 0.7
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-04-AX-10",
+      "source": "axis:AX-04",
+      "target": "axis:AX-10",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-04-AX-11",
+      "source": "axis:AX-04",
+      "target": "axis:AX-11",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-04-AX-12",
+      "source": "axis:AX-04",
+      "target": "axis:AX-12",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-05-AX-06",
+      "source": "axis:AX-05",
+      "target": "axis:AX-06",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-05-AX-07",
+      "source": "axis:AX-05",
+      "target": "axis:AX-07",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-05-AX-08",
+      "source": "axis:AX-05",
+      "target": "axis:AX-08",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-05-AX-09",
+      "source": "axis:AX-05",
+      "target": "axis:AX-09",
+      "edge_type": "coupling",
+      "coupling_weight": 0.75
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-05-AX-10",
+      "source": "axis:AX-05",
+      "target": "axis:AX-10",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-05-AX-11",
+      "source": "axis:AX-05",
+      "target": "axis:AX-11",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-05-AX-12",
+      "source": "axis:AX-05",
+      "target": "axis:AX-12",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-06-AX-07",
+      "source": "axis:AX-06",
+      "target": "axis:AX-07",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-06-AX-08",
+      "source": "axis:AX-06",
+      "target": "axis:AX-08",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-06-AX-09",
+      "source": "axis:AX-06",
+      "target": "axis:AX-09",
+      "edge_type": "coupling",
+      "coupling_weight": 0.8
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-06-AX-10",
+      "source": "axis:AX-06",
+      "target": "axis:AX-10",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-06-AX-11",
+      "source": "axis:AX-06",
+      "target": "axis:AX-11",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-06-AX-12",
+      "source": "axis:AX-06",
+      "target": "axis:AX-12",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-07-AX-08",
+      "source": "axis:AX-07",
+      "target": "axis:AX-08",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-07-AX-09",
+      "source": "axis:AX-07",
+      "target": "axis:AX-09",
+      "edge_type": "coupling",
+      "coupling_weight": 0.65
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-07-AX-10",
+      "source": "axis:AX-07",
+      "target": "axis:AX-10",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-07-AX-11",
+      "source": "axis:AX-07",
+      "target": "axis:AX-11",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-07-AX-12",
+      "source": "axis:AX-07",
+      "target": "axis:AX-12",
+      "edge_type": "coupling",
+      "coupling_weight": 0.65
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-08-AX-09",
+      "source": "axis:AX-08",
+      "target": "axis:AX-09",
+      "edge_type": "coupling",
+      "coupling_weight": 0.9
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-08-AX-10",
+      "source": "axis:AX-08",
+      "target": "axis:AX-10",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-08-AX-11",
+      "source": "axis:AX-08",
+      "target": "axis:AX-11",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-08-AX-12",
+      "source": "axis:AX-08",
+      "target": "axis:AX-12",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-09-AX-10",
+      "source": "axis:AX-09",
+      "target": "axis:AX-10",
+      "edge_type": "coupling",
+      "coupling_weight": 0.5
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-09-AX-11",
+      "source": "axis:AX-09",
+      "target": "axis:AX-11",
+      "edge_type": "coupling",
+      "coupling_weight": 0.6
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-09-AX-12",
+      "source": "axis:AX-09",
+      "target": "axis:AX-12",
+      "edge_type": "coupling",
+      "coupling_weight": 0.6
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-10-AX-11",
+      "source": "axis:AX-10",
+      "target": "axis:AX-11",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-10-AX-12",
+      "source": "axis:AX-10",
+      "target": "axis:AX-12",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    },
+    {
+      "@type": "LatticeEdge",
+      "@id": "edge:coupling-AX-11-AX-12",
+      "source": "axis:AX-11",
+      "target": "axis:AX-12",
+      "edge_type": "coupling",
+      "coupling_weight": 0.4
+    }
+  ]
+}

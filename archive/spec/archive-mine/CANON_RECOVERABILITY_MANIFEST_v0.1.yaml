@@ -1,0 +1,33 @@
+manifest_id: CANON_RECOVERABILITY_MANIFEST_v0.1
+status: NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+authority_scope: none
+date: 2026-05-26
+source_issue: 171
+required_package:
+  - canon.json
+  - invariants.yaml
+  - doctrines.yaml
+  - llms.txt
+  - content_hash_manifest.json
+  - source_to_website_mapping.yaml
+  - ratification_ledger.yaml
+recoverability_checks:
+  - check_id: REC-001
+    name: website_surface_registered
+    status: pending
+  - check_id: REC-002
+    name: canon_hashes_computed
+    status: pending
+  - check_id: REC-003
+    name: source_to_website_mappings_complete
+    status: pending
+  - check_id: REC-004
+    name: ratification_receipts_present
+    status: pending
+  - check_id: REC-005
+    name: council_ratified_vs_candidate_labels_separated
+    status: pending
+required_boundary:
+  - "Website canon requires recoverability and ratification."
+  - "GitHub mirrors and reports are not canon by default."

@@ -1,0 +1,185 @@
+# Spin-Rate Ontology — Rainbow Yin Yang Lattice (AX-04)
+# Status: Candidate
+# Date: 2026-05-29
+# Author: TIDELOCKBrain / @atlaslattice
+#
+# 12 discrete spin / angular momentum states spanning quantum spin-0
+# through macroscopic angular momentum. Organized by ℏ ladder.
+#
+# Governance: non-canonical candidate — Pantheon Council ratification required.
+
+schema_version: "0.1"
+status: Candidate
+axis: AX-04
+axis_name: Spin
+
+principle: >
+  Quantum mechanics restricts intrinsic spin to integer and half-integer
+  multiples of ℏ. This axis maps 12 representative spin states from
+  spin-0 (Higgs boson) through spin-2 (graviton) and beyond to high-J
+  nuclear rotational states and macroscopic angular momentum.
+
+spin_states:
+  - index: 0
+    id: SP-00
+    name: Scalar_Spin0
+    spin_value: 0
+    statistics: boson
+    description: >
+      Spin-0 scalar particles. No preferred direction. Higgs boson (H⁰).
+      Pions (π⁰). Represents perfect rotational symmetry — no angular
+      momentum. The "still point" of the spinning world.
+    examples: [Higgs_boson, pi0_pion, sigma_meson, eta_meson]
+    yin_yang: neutral_still
+    symmetry: SO(3)_singlet
+
+  - index: 1
+    id: SP-01
+    name: Spinor_Spin_Half
+    spin_value: 0.5
+    statistics: fermion
+    description: >
+      Spin-½ fermions. The most common spin in matter particles: electrons,
+      protons, neutrons, quarks, neutrinos. Pauli exclusion principle.
+      Require 720° rotation to return to original state (spinor geometry).
+    examples: [electron, proton, neutron, quark, neutrino, muon]
+    yin_yang: yin_fundamental
+    pauli_exclusion: true
+    rotation_symmetry: "SU(2) double cover of SO(3)"
+    note: "All matter we are made of is spin-½"
+
+  - index: 2
+    id: SP-02
+    name: Vector_Spin1
+    spin_value: 1
+    statistics: boson
+    description: >
+      Spin-1 vector bosons. The force carriers of electromagnetism (photon),
+      weak force (W±, Z⁰), strong force (gluons). Three magnetic substates
+      (mₛ = -1, 0, +1). The "communication" spin.
+    examples: [photon, W_boson, Z_boson, gluon, rho_meson]
+    yin_yang: yang_communicating
+    force_carriers: true
+
+  - index: 3
+    id: SP-03
+    name: ThreeHalves_Spin3_2
+    spin_value: 1.5
+    statistics: fermion
+    description: >
+      Spin-3/2 fermions. Delta baryons (Δ++, Δ+, Δ⁰, Δ−) — first excited
+      states of nucleons. Gravitino (supersymmetric partner of graviton).
+      Four magnetic substates.
+    examples: [Delta_baryon, Omega_baryon, gravitino]
+    yin_yang: yin_excited
+
+  - index: 4
+    id: SP-04
+    name: Tensor_Spin2
+    spin_value: 2
+    statistics: boson
+    description: >
+      Spin-2 tensor particles. The graviton (hypothetical carrier of gravity).
+      f₂ mesons. Five magnetic substates. The geometry-shaping spin —
+      relates to spacetime curvature in GR.
+    examples: [graviton_hypothetical, f2_meson]
+    yin_yang: yang_geometric
+    gravity_connection: true
+
+  - index: 5
+    id: SP-05
+    name: HighSpin_J5_2_to_J4
+    spin_value: [2.5, 3.0, 3.5, 4.0]
+    statistics: mixed
+    description: >
+      High-spin exotic particles and nuclear states. J=5/2 through J=4.
+      Omega baryons, excited resonances, high-spin nuclear isomers.
+    examples: [Omega_baryon_J5_2, nuclear_isomers_J3, K_star_J4]
+    yin_yang: yang_high
+
+  - index: 6
+    id: SP-06
+    name: Nuclear_J_Low_6_to_12
+    spin_value: [6, 8, 10, 12]
+    unit: ℏ
+    description: >
+      Low nuclear high-spin states. Collective rotation of atomic nuclei.
+      Rotational bands in deformed nuclei (rare earths, actinides).
+      J=6–12 is accessible in standard nuclear reaction spectroscopy.
+    examples: [deformed_nucleus_rotational_band, superdeformed_nucleus]
+    yin_yang: balanced_rotation
+
+  - index: 7
+    id: SP-07
+    name: Nuclear_J_High_12_to_30
+    spin_value: [12, 20, 30]
+    unit: ℏ
+    description: >
+      High nuclear spin. Yrast states, superdeformed rotational bands.
+      J~20–40ℏ observed in heavy-ion fusion-evaporation reactions.
+      Backbending phenomenon (rotational alignment).
+    examples: [superdeformed_band_Hg, backbending_Dy, yrast_trap]
+    yin_yang: yang_nuclear
+
+  - index: 8
+    id: SP-08
+    name: Atomic_Electronic_J
+    spin_value: [0.5, 1.5, 4.5, 8.0]  # representative atomic J values
+    unit: ℏ
+    description: >
+      Atomic electronic total angular momentum J = L + S.
+      Covers the range of J values found in atomic ground and excited states
+      from hydrogen (J=1/2) through rare earth atoms (J up to ~8).
+      Governs atomic spectral fine structure.
+    examples: [H_J_half, Fe_J_4, Eu_J_7_half, Ho_J_8]
+    yin_yang: balanced_atomic
+
+  - index: 9
+    id: SP-09
+    name: Molecular_Rotational_J
+    spin_value: [1, 5, 10, 20]  # representative J values
+    unit: ℏ
+    description: >
+      Molecular rotational quantum number J. Microwave spectroscopy.
+      Rotational energy = B·J(J+1) where B is rotational constant.
+      Used in radio astronomy to identify molecules (CO, H₂O, etc.)
+    examples: [CO_rotational_J1_to_J10, H2O_asymmetric_rotor]
+    yin_yang: yin_molecular
+    radio_astronomy: true
+
+  - index: 10
+    id: SP-10
+    name: Macroscopic_Angular_Momentum
+    description: >
+      Classical macroscopic angular momentum L = Iω. Spinning tops,
+      gyroscopes, planets, stars, black holes (Kerr parameter a).
+      The Earth's angular momentum: L ≈ 7.1×10³³ kg·m²/s.
+    examples: [spinning_top, Earth_rotation, neutron_star_pulsar, Kerr_BH]
+    yin_yang: yang_macro
+    unit: kg·m²/s
+    scale: macroscopic
+
+  - index: 11
+    id: SP-11
+    name: Cosmic_Angular_Momentum
+    description: >
+      Galaxy and cosmic-scale angular momentum. Galaxy rotation curves,
+      galactic spin, large-scale structure rotation claims.
+      The largest angular momentum scales in the observable universe.
+      Connects to dark matter distribution and cosmic topology.
+    examples: [Milky_Way_rotation, galaxy_cluster_angular_momentum]
+    yin_yang: maximum_yang_rotation
+    unit: kg·m²/s
+    scale: cosmic
+    notes: >
+      Closes the spin axis cycle: quantum still (spin-0) → macroscopic
+      → cosmic rotation. Full range of angular momentum in creation.
+
+# --- Spin-statistics connection ---
+spin_statistics:
+  fermions: "half-integer spin → Pauli exclusion → matter structure"
+  bosons: "integer spin → no exclusion → force carriers and condensates"
+  lattice_note: >
+    Even-indexed spin states (0, 2, 4, 6, 8, 10) map to yang (bosonic/projective).
+    Odd-indexed (1, 3, 5, 7, 9, 11) map to yin (fermionic/receptive).
+    This mirrors the yin-yang axis (AX-08) at the spin level.

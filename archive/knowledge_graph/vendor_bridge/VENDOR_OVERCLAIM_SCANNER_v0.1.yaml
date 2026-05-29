@@ -1,0 +1,29 @@
+scanner_id: VENDOR_OVERCLAIM_SCANNER_v0.1
+status: NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+authority_scope: none
+source_date: 2026-05-26
+retrieval_date: 2026-05-26
+scan_targets:
+  - /tmp/workspace/atlaslattice/manus-artifacts/archive/knowledge_graph/vendor_bridge
+  - /tmp/workspace/atlaslattice/manus-artifacts/archive/spec/gptdream/appendices/APPENDIX_H_CROSS_VENDOR_INTEROP_MODEL_v0.1.md
+rules:
+  - rule_id: VO-001
+    severity: high
+    pattern: "(?i)official partner|official partnership|approved integration"
+    reason: partnership_overclaim
+  - rule_id: VO-002
+    severity: high
+    pattern: "(?i)deployed in production|live deployment|production approved"
+    reason: deployment_overclaim
+  - rule_id: VO-003
+    severity: high
+    pattern: "(?i)canon authority|vendor authority|grants authority"
+    reason: authority_overclaim
+  - rule_id: VO-004
+    severity: medium
+    pattern: "(?i)proven compliance|certified by vendor"
+    reason: unsupported_certification_language
+required_pass_condition:
+  - "All vendor map files include not_official_vendor_statement."
+  - "No high severity pattern matches remain unresolved."

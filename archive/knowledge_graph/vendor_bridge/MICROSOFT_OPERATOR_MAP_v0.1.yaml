@@ -1,0 +1,20 @@
+map_id: MICROSOFT_OPERATOR_MAP_v0.1
+vendor: Microsoft
+status: NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+authority_scope: none
+source_date: 2026-05-25
+retrieval_date: 2026-05-26
+source_refs:
+  - issue_157
+operator_manifold:
+  candidate_role: enterprise_surface_crosswalk_boundary_verification
+  allowed_behaviors:
+    - candidate_crosswalk_mapping
+    - boundary_language_audit
+    - receipt_routing_for_review
+  prohibited_inference:
+    - approved_integration_claim
+    - production_runtime_claim
+    - authority_delegation_claim
+not_official_vendor_statement: "NOT OFFICIAL VENDOR STATEMENT: This map does not imply partnership, adoption, deployment, canon, or authority."

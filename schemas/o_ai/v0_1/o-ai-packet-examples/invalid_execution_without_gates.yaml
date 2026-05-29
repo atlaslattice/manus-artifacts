@@ -1,0 +1,17 @@
+schema_version: "0.1"
+packet_type: execution_request
+raw_export_status: full_raw
+thread_time_range: {start: "2026-05-25T00:00:00Z", end: "2026-05-25T01:00:00Z", timezone: "UTC"}
+access_scope:
+  visible_sources: ["thread://a"]
+  unavailable_sources: []
+  assumed_context: []
+epistemic_label: candidate
+authority_scope: none
+gates:
+  provenance_gate: pass
+  safety_gate: fail
+  governance_gate: pass
+  data_residency_gate: pass
+  human_permission_gate: fail
+  receipt_gate: fail

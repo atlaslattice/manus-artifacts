@@ -1,0 +1,11 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-governance-profile
+schema_version: "0.1"
+type: object
+required: [schema_version, profile_id, canon_status, deployment_status]
+properties:
+  schema_version: { const: "0.1" }
+  profile_id: { type: string }
+  canon_status: { type: string, enum: [not_canon, candidate, ratified], default: not_canon }
+  deployment_status: { type: string, enum: [not_deployable, candidate, deployable], default: not_deployable }
+additionalProperties: true

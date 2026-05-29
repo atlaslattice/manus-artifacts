@@ -1,0 +1,33 @@
+inventory_id: GITHUB_ARCHIVE_LANES_INVENTORY_v0.1
+status: NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+authority_scope: none
+date: 2026-05-26
+archive_lanes:
+  - lane_id: archive_spec_gptdream
+    path: /tmp/workspace/atlaslattice/manus-artifacts/archive/spec/gptdream
+    lane_role: split_spec_packet_and_governance_appendices
+  - lane_id: archive_spec_archive_mine
+    path: /tmp/workspace/atlaslattice/manus-artifacts/archive/spec/archive-mine
+    lane_role: source_surface_registry_and_reconciliation_packets
+  - lane_id: archive_knowledge_graph
+    path: /tmp/workspace/atlaslattice/manus-artifacts/archive/knowledge_graph
+    lane_role: source_graph_and_interop_packet_controls
+  - lane_id: governance_controls
+    path: /tmp/workspace/atlaslattice/manus-artifacts/governance
+    lane_role: ratification_publication_and_risk_controls
+  - lane_id: deep_research_inputs
+    path: /tmp/workspace/atlaslattice/manus-artifacts/research
+    lane_role: ingestion_backlog_and_candidate_delta_inputs
+source_gravity_links:
+  parent_issue: 160
+  linked_lanes:
+    - 158
+    - 159
+    - 163
+    - 165
+    - 168
+    - 169
+    - 171
+    - 173
+    - 175

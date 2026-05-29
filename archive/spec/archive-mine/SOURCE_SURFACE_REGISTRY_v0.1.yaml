@@ -1,0 +1,44 @@
+registry_id: SOURCE_SURFACE_REGISTRY_v0.1
+status: NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+authority_scope: none
+date: 2026-05-26
+module: "Module 4 — Archive Mine"
+source_gravity:
+  parent_issue: 160
+  lanes:
+    - 158
+    - 159
+    - 163
+    - 165
+    - 168
+    - 169
+    - 171
+    - 173
+    - 175
+surfaces:
+  - surface_id: notion_historical_substrate
+    surface_type: notion
+    authority_posture: non_canon_source_pile
+    extraction_mode: inventory_then_delta
+    quarantine_required: true
+  - surface_id: drive_historical_substrate
+    surface_type: drive
+    authority_posture: non_canon_source_pile
+    extraction_mode: inventory_then_delta
+    quarantine_required: true
+  - surface_id: github_receipt_substrate
+    surface_type: github
+    authority_posture: durable_receipt_workspace
+    extraction_mode: inventory_overlay_crosswalk
+    quarantine_required: false
+  - surface_id: website_canon_surface
+    surface_type: website
+    authority_posture: canon_surface_only_when_explicitly_ratified_and_published
+    extraction_mode: recoverability_manifest
+    quarantine_required: false
+hard_boundaries:
+  - "No surface self-ratifies."
+  - "Notion and Drive are discovery and fossil surfaces, not canon."
+  - "GitHub receipts are workspace evidence, not automatic canon."
+  - "Website is canon surface only when explicitly ratified/published there."

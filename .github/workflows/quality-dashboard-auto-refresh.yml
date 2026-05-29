@@ -1,0 +1,42 @@
+name: Quality dashboard auto-refresh
+
+on:
+  push:
+    paths:
+      - "scripts/build_quality_dashboard_data.py"
+      - "docs/QUALITY_DASHBOARD.md"
+      - "docs/ROADMAP.md"
+      - "projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md"
+      - "projects/AETHERFORGE_PUBLIC_QUESTBOARD_v0.1.md"
+      - "docs/generated/QUALITY_DASHBOARD_DATA.json"
+      - ".github/workflows/quality-dashboard-auto-refresh.yml"
+  pull_request:
+    paths:
+      - "scripts/build_quality_dashboard_data.py"
+      - "docs/QUALITY_DASHBOARD.md"
+      - "docs/ROADMAP.md"
+      - "projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md"
+      - "projects/AETHERFORGE_PUBLIC_QUESTBOARD_v0.1.md"
+      - "docs/generated/QUALITY_DASHBOARD_DATA.json"
+      - ".github/workflows/quality-dashboard-auto-refresh.yml"
+  schedule:
+    - cron: "0 12 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  refresh-quality-dashboard-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Upgrade pip
+        run: python -m pip install --upgrade pip
+      - name: Build data snapshot
+        run: python scripts/build_quality_dashboard_data.py
+      - name: Verify committed snapshot
+        run: git diff --exit-code docs/generated/QUALITY_DASHBOARD_DATA.json

@@ -1,0 +1,11 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-uncertainty-ledger
+schema_version: "0.1"
+type: object
+required: [schema_version, uncertainty_id, artifact_id, uncertainty_note]
+properties:
+  schema_version: { const: "0.1" }
+  uncertainty_id: { type: string }
+  artifact_id: { type: string }
+  uncertainty_note: { type: string }
+additionalProperties: true

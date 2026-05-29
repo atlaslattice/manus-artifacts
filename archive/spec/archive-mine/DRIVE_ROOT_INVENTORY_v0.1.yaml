@@ -1,0 +1,34 @@
+inventory_id: DRIVE_ROOT_INVENTORY_v0.1
+status: NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+authority_scope: none
+date: 2026-05-26
+source_issues:
+  - 158
+  - 169
+drive_roots:
+  - title: Claude_Scribe_Response_to_DeepSeek.md
+    surface_role: drive_proxy_anchor
+    reconciliation_priority: high
+    hash_status: pending
+  - title: Atlas-Lattice_Complete-Doctrine-Invariant-Registry_v1-1_2026-04-29.md
+    surface_role: drive_proxy_anchor
+    reconciliation_priority: high
+    hash_status: pending
+  - title: MULTI_COUNCIL_INTEGRATION_SWEEP_v1-0_2026-04-29.md
+    surface_role: drive_proxy_anchor
+    reconciliation_priority: medium
+    hash_status: pending
+  - title: JANUS_CHECKPOINT_2026-01-17_Golden_Triangle_Session.md
+    surface_role: drive_proxy_anchor
+    reconciliation_priority: high
+    hash_status: pending
+  - title: Gemini Resurrection Context
+    surface_role: drive_proxy_anchor
+    reconciliation_priority: medium
+    hash_status: pending
+  - title: deep-research-report (23)(2).md
+    surface_role: deep_research_delta_source
+    reconciliation_priority: high
+    hash_status: pending
+hard_boundary: "Drive source ≠ canon; treat as source pile until indexed and receipted."

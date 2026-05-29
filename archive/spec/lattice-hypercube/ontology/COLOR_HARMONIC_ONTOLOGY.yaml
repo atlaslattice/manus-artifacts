@@ -1,0 +1,236 @@
+# Color Harmonic Spectrum Ontology — Rainbow Yin Yang Lattice (AX-06)
+# Status: Candidate
+# Date: 2026-05-29
+# Author: TIDELOCKBrain / @atlaslattice
+#
+# 12 chromatic nodes of the Rainbow Yin Yang lattice.
+# Encodes the full visible spectrum plus IR and UV extensions.
+# Includes color-frequency-note correspondence (chromesthetic lattice).
+# The "rainbow" in Rainbow Yin Yang.
+#
+# Governance: non-canonical candidate — Pantheon Council ratification required.
+
+schema_version: "0.1"
+status: Candidate
+axis: AX-06
+axis_name: ColorHarmonic
+root_wavelength_nm: 555.0  # peak human photopic sensitivity
+
+nodes:
+  - index: 0
+    id: CH-00
+    name: DeepInfrared
+    wavelength_nm: [2500, 1400]
+    freq_thz: [0.12, 0.21]
+    hex_color: "#1a0000"  # notional dark red-black
+    description: >
+      Deep infrared — thermal radiation, molecular vibrational modes.
+      The "dark" yin end of the color axis. Heat without visible light.
+      Night vision technology, molecular spectroscopy, thermal imaging.
+    musical_note: null
+    chakra_correspondence: null
+    yin_yang: maximum_yin_thermal
+
+  - index: 1
+    id: CH-01
+    name: NearInfrared
+    wavelength_nm: [1400, 780]
+    freq_thz: [0.21, 0.38]
+    hex_color: "#3d0000"  # dark invisible red
+    description: >
+      Near-infrared. Fiber optic communication (1310–1550 nm),
+      NIR spectroscopy, photobiomodulation (PBM) therapy.
+      Chlorophyll absorption peak. The invisible precursor to red.
+    musical_note: "B (below audible octave)"
+    yin_yang: deep_yin
+
+  - index: 2
+    id: CH-02
+    name: Red
+    wavelength_nm: [780, 625]
+    freq_thz: [0.38, 0.48]
+    hex_color: "#FF0000"
+    description: >
+      Red — the lowest visible frequency. Stimulates, energizes.
+      Associated with root chakra (muladhara), grounding, vitality.
+      In Chinese tradition, luck and prosperity. Maximum yang of the
+      warm colors. Corresponds to musical note C.
+    musical_note: "C"
+    chakra: root
+    yin_yang: yang_warm
+    solfeggio_match_hz: 396  # UT frequency
+    psychological: "stimulating, energizing, passionate"
+
+  - index: 3
+    id: CH-03
+    name: Orange
+    wavelength_nm: [625, 590]
+    freq_thz: [0.48, 0.51]
+    hex_color: "#FF7700"
+    description: >
+      Orange — creativity, joy, warmth. Sacral chakra (svadhisthana).
+      Between the physical vitality of red and the intellectual yellow.
+      Autumn leaves, sunsets, fire. Corresponds to D.
+    musical_note: "D"
+    chakra: sacral
+    yin_yang: yang_creative
+    solfeggio_match_hz: 417
+    psychological: "creative, joyful, social"
+
+  - index: 4
+    id: CH-04
+    name: Yellow
+    wavelength_nm: [590, 565]
+    freq_thz: [0.51, 0.53]
+    hex_color: "#FFFF00"
+    description: >
+      Yellow — the color of sunlight, intellect, joy. Solar plexus chakra
+      (manipura). The most luminous color to human perception.
+      The color of gold, the Sun, enlightenment. Corresponds to E.
+    musical_note: "E"
+    chakra: solar_plexus
+    yin_yang: balanced_yang
+    solfeggio_match_hz: 528  # MI — the love/DNA frequency
+    psychological: "optimistic, clear, intellectual"
+    lattice_significance: "solar/gold axis — peak luminance"
+
+  - index: 5
+    id: CH-05
+    name: YellowGreen
+    wavelength_nm: [565, 540]
+    freq_thz: [0.53, 0.555]
+    hex_color: "#AAFF00"
+    description: >
+      Yellow-green — the exact peak of human photopic sensitivity (555 nm).
+      The color the human eye is most sensitive to. Nature's dominant hue.
+      Transition between the warm and cool spectrum. Note F.
+    musical_note: "F"
+    chakra: heart_lower
+    yin_yang: perfect_balance_approach
+    special: "peak_human_eye_sensitivity_555nm"
+    psychological: "natural, vital, alive"
+
+  - index: 6
+    id: CH-06
+    name: Green
+    wavelength_nm: [540, 500]
+    freq_thz: [0.555, 0.60]
+    hex_color: "#00CC00"
+    description: >
+      Green — heart chakra (anahata), balance, healing, nature, growth.
+      The center of the visible spectrum — the balance point of the rainbow.
+      Chlorophyll green = photosynthesis = life energy conversion.
+      Corresponds to F# / G♭.
+    musical_note: "F#/G♭"
+    chakra: heart
+    yin_yang: perfect_balance
+    solfeggio_match_hz: 639  # FA — connection
+    psychological: "healing, balanced, natural, heart-centered"
+    lattice_significance: "yin-yang balance center of the rainbow"
+
+  - index: 7
+    id: CH-07
+    name: Cyan_Teal
+    wavelength_nm: [500, 480]
+    freq_thz: [0.60, 0.625]
+    hex_color: "#00BBCC"
+    description: >
+      Cyan and teal — the transition from green to blue. Clarity,
+      communication, emotional balance. The color of clear tropical water.
+      Corresponds to G.
+    musical_note: "G"
+    chakra: throat_lower
+    yin_yang: balanced_yin
+    solfeggio_match_hz: 741  # SOL — expression
+    psychological: "clear, communicative, refreshing"
+
+  - index: 8
+    id: CH-08
+    name: Blue
+    wavelength_nm: [480, 450]
+    freq_thz: [0.625, 0.668]
+    hex_color: "#0055FF"
+    description: >
+      Blue — throat chakra (vishuddha), truth, communication, peace.
+      Sky and ocean blue. Lowers blood pressure, calming.
+      Classical sky color from Rayleigh scattering. Corresponds to A.
+    musical_note: "A (432 Hz)"
+    chakra: throat
+    yin_yang: yin_cool
+    solfeggio_match_hz: 852  # LA — spiritual order
+    psychological: "calming, truthful, peaceful"
+    lattice_significance: "432 Hz color counterpart — blue A"
+
+  - index: 9
+    id: CH-09
+    name: Indigo
+    wavelength_nm: [450, 425]
+    freq_thz: [0.668, 0.706]
+    hex_color: "#440099"
+    description: >
+      Indigo — third eye chakra (ajna), intuition, perception.
+      Deep royal blue-purple. Psychic awareness, deep thought.
+      Corresponds to A# / B♭.
+    musical_note: "A#/B♭"
+    chakra: third_eye
+    yin_yang: deep_yin_perceptive
+    solfeggio_match_hz: 852  # LA
+    psychological: "intuitive, perceptive, deep"
+
+  - index: 10
+    id: CH-10
+    name: Violet
+    wavelength_nm: [425, 380]
+    freq_thz: [0.706, 0.789]
+    hex_color: "#8800FF"
+    description: >
+      Violet — crown chakra (sahasrara), spiritual connection,
+      highest visible frequency. The color that closes the visible rainbow.
+      Corresponds to B.
+    musical_note: "B"
+    chakra: crown
+    yin_yang: maximum_yin_spiritual
+    solfeggio_match_hz: 963  # SI — divine consciousness
+    psychological: "spiritual, transcendent, transformative"
+
+  - index: 11
+    id: CH-11
+    name: Ultraviolet_Beyond
+    wavelength_nm: [380, 10]
+    freq_thz: [0.789, 30000]
+    hex_color: "#FF00FF"  # notional UV representation
+    description: >
+      Ultraviolet and beyond — the invisible yang extreme of the color axis.
+      UV-A/B/C, X-ray, gamma. Ionizing radiation. Photochemistry, DNA
+      damage/repair, fluorescence. The "dark light" that makes things glow.
+      Closes the rainbow arc: visible light (R→V) → invisible UV.
+    musical_note: "C (upper octave)"
+    chakra: above_crown
+    yin_yang: maximum_yang_radiant
+    special: "closes_rainbow_cycle_to_UV"
+    psychological: "transcendent, purifying, transformative"
+
+# --- Chromesthetic (color-note) correspondence table ---
+chromesthetic_scale:
+  description: >
+    The color-frequency-note correspondence of the Rainbow Yin Yang lattice.
+    Based on 432 Hz root and the octave equivalence between visible light
+    (~430–770 THz) and audio (432 Hz ± octaves).
+    Method: light frequency / 2^n where n brings it into audible range.
+  root_correspondence: "A4 = 432 Hz = deep blue (≈ 450 nm)"
+  table:
+    C:  {approx_nm: 700, color: Red,       solfeggio_hz: 396}
+    D:  {approx_nm: 640, color: Orange,    solfeggio_hz: 417}
+    E:  {approx_nm: 580, color: Yellow,    solfeggio_hz: 528}
+    F:  {approx_nm: 560, color: YellowGreen}
+    Fs: {approx_nm: 530, color: Green,     solfeggio_hz: 639}
+    G:  {approx_nm: 510, color: Cyan}
+    Gs: {approx_nm: 490, color: Blue-Green}
+    A:  {approx_nm: 450, color: Blue,      freq_hz: 432}
+    As: {approx_nm: 440, color: Indigo}
+    B:  {approx_nm: 420, color: Violet,    solfeggio_hz: 963}
+
+yin_yang_spectrum:
+  yang_end: Red  # warm, active, projective
+  yin_end: Violet  # cool, receptive, spiritual
+  balance_point: Green  # heart chakra, center of spectrum

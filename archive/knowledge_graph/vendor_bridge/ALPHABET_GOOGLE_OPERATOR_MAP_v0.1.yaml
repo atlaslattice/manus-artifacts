@@ -1,0 +1,21 @@
+map_id: ALPHABET_GOOGLE_OPERATOR_MAP_v0.1
+vendor: Alphabet/Google
+status: NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+authority_scope: none
+source_date: 2026-05-26
+retrieval_date: 2026-05-26
+source_refs:
+  - issue_183
+  - issue_180
+operator_manifold:
+  candidate_role: relay_surface_normalization_and_comparative_interop_mapping
+  allowed_behaviors:
+    - source_surface_mapping
+    - comparative_packet_compatibility_notes
+    - review_lane_preparation
+  prohibited_inference:
+    - endorsed_vendor_relationship_claim
+    - canon_authority_claim
+    - deployment_authority_claim
+not_official_vendor_statement: "NOT OFFICIAL VENDOR STATEMENT: This map does not imply partnership, adoption, deployment, canon, or authority."

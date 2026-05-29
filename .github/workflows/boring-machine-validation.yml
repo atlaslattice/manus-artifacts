@@ -1,0 +1,82 @@
+name: Boring Machine validation
+
+on:
+  push:
+    paths:
+      - "reference_impl/**"
+      - "schemas/**"
+      - "tests/**"
+      - "archive/product/receipt_habitat_v0_1/**"
+      - ".github/workflows/boring-machine-validation.yml"
+  pull_request:
+    paths:
+      - "reference_impl/**"
+      - "schemas/**"
+      - "tests/**"
+      - "archive/product/receipt_habitat_v0_1/**"
+      - ".github/workflows/boring-machine-validation.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  schema-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pytest pyyaml
+      - name: Parse all schema files
+        run: python -m pytest -q tests/test_schema_parsing.py
+
+  adversarial-harness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pytest
+      - name: Run adversarial harness tests
+        run: python -m pytest -q tests/adversarial
+
+  o-ai-packet-examples:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pytest pyyaml jsonschema
+      - name: Validate O_AI packet examples
+        run: python -m pytest -q tests/test_oai_packet_examples.py
+
+  native-thread-packet-examples:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pytest pyyaml jsonschema
+      - name: Validate native-thread packet examples
+        run: python -m pytest -q tests/test_native_thread_packet_examples.py
+
+  compatible-laundering-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pytest
+      - name: Run compatible laundering tests
+        run: python -m pytest -q reference_impl/atlas_orcs/tests/test_compatible.py

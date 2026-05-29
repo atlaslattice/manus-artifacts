@@ -1,0 +1,22 @@
+map_id: OPENAI_OPERATOR_MAP_v0.1
+vendor: OpenAI
+status: NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+authority_scope: none
+source_date: 2026-05-26
+retrieval_date: 2026-05-26
+source_refs:
+  - issue_183
+  - issue_180
+  - pr_182
+operator_manifold:
+  candidate_role: extraction_classification_review_orchestration
+  allowed_behaviors:
+    - propose_structured_packets
+    - route_for_human_review
+    - produce_candidate_eval_outputs
+  prohibited_inference:
+    - partnership_claim
+    - deployment_claim
+    - authority_claim
+not_official_vendor_statement: "NOT OFFICIAL VENDOR STATEMENT: This map does not imply partnership, adoption, deployment, canon, or authority."

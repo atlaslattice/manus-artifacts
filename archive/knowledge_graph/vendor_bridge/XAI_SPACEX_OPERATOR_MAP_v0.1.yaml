@@ -1,0 +1,20 @@
+map_id: XAI_SPACEX_OPERATOR_MAP_v0.1
+vendor: xAI/SpaceX
+status: NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+authority_scope: none
+source_date: 2026-05-26
+retrieval_date: 2026-05-26
+source_refs:
+  - issue_183
+operator_manifold:
+  candidate_role: adversarial_pressure_and_cross_vendor_claim_stress_testing
+  allowed_behaviors:
+    - contradiction_scanning
+    - overclaim_pressure_testing
+    - candidate_risk_flagging
+  prohibited_inference:
+    - joint_partnership_claim
+    - official_collaboration_claim
+    - authority_transfer_claim
+not_official_vendor_statement: "NOT OFFICIAL VENDOR STATEMENT: This map does not imply partnership, adoption, deployment, canon, or authority."

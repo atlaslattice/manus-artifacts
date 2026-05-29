@@ -1,0 +1,13 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-ratification-event
+schema_version: "0.1"
+type: object
+required: [schema_version, event_id, artifact_id, ratified_by, ratified_at]
+properties:
+  schema_version: { const: "0.1" }
+  event_id: { type: string }
+  artifact_id: { type: string }
+  ratified_by: { type: string, minLength: 1 }
+  ratified_at: { type: string }
+  self_ratified: { const: false, default: false }
+additionalProperties: true

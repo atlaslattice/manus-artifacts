@@ -1,0 +1,36 @@
+schema_id: FOUR_PILLAR_INTEROP_PACKET_SCHEMA_v0.1
+status: NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+authority_scope: none
+required_fields:
+  - packet_id
+  - created_at_utc
+  - source_date
+  - retrieval_date
+  - vendor_surface
+  - operator_manifold
+  - officiality_status
+  - deployment_status
+  - canon_status
+  - authority_scope
+  - evidence_receipts
+  - atlas_orcs_audit_state
+  - human_gate_status
+  - not_official_vendor_statement
+vendor_surface_enum:
+  - OpenAI
+  - Microsoft
+  - Alphabet/Google
+  - xAI/SpaceX
+  - MultiVendor
+operator_manifold_enum:
+  - extraction_classification_review_orchestration
+  - enterprise_surface_crosswalk_boundary_verification
+  - relay_surface_normalization_and_comparative_interop_mapping
+  - adversarial_pressure_and_cross_vendor_claim_stress_testing
+officiality_status_enum:
+  - not_official
+hard_rules:
+  - "All packets must include source_date and retrieval_date."
+  - "All packets must contain a not_official_vendor_statement."
+  - "No packet may imply partnership, adoption, deployment, canon, or authority."

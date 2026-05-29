@@ -1,0 +1,12 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: atlas-parsed-packet
+schema_version: "0.1"
+type: object
+required: [schema_version, parsed_packet_id, storage_lane, derived_from_raw, raw_export_id]
+properties:
+  schema_version: { const: "0.1" }
+  parsed_packet_id: { type: string }
+  storage_lane: { const: parsed_packets }
+  derived_from_raw: { const: true }
+  raw_export_id: { type: string }
+additionalProperties: true

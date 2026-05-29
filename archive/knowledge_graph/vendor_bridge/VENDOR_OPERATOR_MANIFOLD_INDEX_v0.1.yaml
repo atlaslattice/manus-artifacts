@@ -1,0 +1,25 @@
+index_id: VENDOR_OPERATOR_MANIFOLD_INDEX_v0.1
+status: NOT_CANON
+deployment_status: NOT_DEPLOYABLE
+authority_scope: none
+source_date: 2026-05-26
+retrieval_date: 2026-05-26
+source_gravity:
+  openai_lanes:
+    - issue_183
+    - issue_180
+    - pr_182
+  microsoft_lane:
+    - issue_157
+four_pillar_manifolds:
+  - vendor: OpenAI
+    map_path: /tmp/workspace/atlaslattice/manus-artifacts/archive/knowledge_graph/vendor_bridge/OPENAI_OPERATOR_MAP_v0.1.yaml
+  - vendor: Microsoft
+    map_path: /tmp/workspace/atlaslattice/manus-artifacts/archive/knowledge_graph/vendor_bridge/MICROSOFT_OPERATOR_MAP_v0.1.yaml
+  - vendor: Alphabet/Google
+    map_path: /tmp/workspace/atlaslattice/manus-artifacts/archive/knowledge_graph/vendor_bridge/ALPHABET_GOOGLE_OPERATOR_MAP_v0.1.yaml
+  - vendor: xAI/SpaceX
+    map_path: /tmp/workspace/atlaslattice/manus-artifacts/archive/knowledge_graph/vendor_bridge/XAI_SPACEX_OPERATOR_MAP_v0.1.yaml
+interop_schema_path: /tmp/workspace/atlaslattice/manus-artifacts/archive/knowledge_graph/vendor_bridge/FOUR_PILLAR_INTEROP_PACKET_SCHEMA_v0.1.yaml
+overclaim_scanner_path: /tmp/workspace/atlaslattice/manus-artifacts/archive/knowledge_graph/vendor_bridge/VENDOR_OVERCLAIM_SCANNER_v0.1.yaml
+not_official_vendor_statement: "These vendor mappings are candidate interpretive models only. They are not official, not deployed, and not canon."

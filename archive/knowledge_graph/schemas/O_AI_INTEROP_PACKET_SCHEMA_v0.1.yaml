@@ -1,0 +1,70 @@
+schema_version: "0.1"
+status: candidate_schema_not_canon
+purpose: "Schema for bounded OpenAI/Microsoft/Google/xAI interop packets."
+
+required_fields:
+  packet_id: string
+  created_at_utc: string
+  source_title: string
+  source_date: string
+  source_ref: string
+  vendor_surface: enum
+  operator_manifold: enum
+  mapping_scope: enum
+  officiality_status: enum
+  deployment_status: enum
+  canon_status: enum
+  authority_scope: enum
+  evidence_receipts: list
+  compatibility_gate_results: list
+  human_gate_status: enum
+  next_action: string
+
+vendor_surface_values:
+  - OpenAI
+  - Microsoft
+  - Google
+  - xAI
+  - MultiVendor
+
+operator_manifold_values:
+  - extraction_review_orchestration
+  - enterprise_surface_crosswalk
+  - relay_surface_normalization
+  - adversarial_contradiction_pressure
+
+mapping_scope_values:
+  - candidate_interpretive_model
+
+officiality_status_values:
+  - not_official
+
+deployment_status_values:
+  - not_deployed
+
+canon_status_values:
+  - not_canon
+
+authority_scope_values:
+  - none
+
+compatibility_gate_result_record:
+  gate_id: string
+  passed: boolean
+  evidence_ref: string
+  note: string
+
+human_gate_status_values:
+  - required
+  - approved
+  - rejected
+  - deferred
+
+hard_rules:
+  - "Vendor surface mention does not imply partnership."
+  - "Interop mapping does not imply adoption."
+  - "No packet may claim canon status."
+  - "No packet may claim deployment status."
+  - "No packet may grant authority to any vendor surface."
+  - "At least one evidence receipt is required."
+  - "Human gate is required before operational use."

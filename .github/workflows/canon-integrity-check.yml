@@ -1,0 +1,95 @@
+name: Canon integrity check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**/*.md'
+      - 'governance/**/*.md'
+      - 'CHANGELOG.md'
+      - '.github/workflows/canon-integrity-check.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/**/*.md'
+      - 'governance/**/*.md'
+      - 'CHANGELOG.md'
+      - '.github/workflows/canon-integrity-check.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  canon-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate changed markdown artifacts
+        shell: bash
+        run: |
+          python - <<'PY'
+          import os
+          import re
+          import subprocess
+          import sys
+          from pathlib import Path
+
+          event = os.environ.get('GITHUB_EVENT_NAME', '')
+          if event == 'pull_request':
+              base = os.environ.get('GITHUB_BASE_REF', 'main')
+              subprocess.run(['git', 'fetch', '--no-tags', '--depth=1', 'origin', base], check=True)
+              diff_cmd = ['git', 'diff', '--name-only', f'origin/{base}...HEAD']
+          else:
+              try:
+                  subprocess.run(['git', 'rev-parse', 'HEAD^'], check=True, capture_output=True)
+                  diff_cmd = ['git', 'diff', '--name-only', 'HEAD^', 'HEAD']
+              except subprocess.CalledProcessError:
+                  diff_cmd = ['git', 'ls-files', 'docs', 'governance', 'CHANGELOG.md']
+
+          changed = subprocess.check_output(diff_cmd, text=True).splitlines()
+          markdown_files = [Path(p) for p in changed if p.endswith('.md')]
+          required_meta = [
+              'title:', 'status:', 'domain:', 'steward:', 'created:',
+              'updated:', 'version:', 'supersedes:', 'superseded_by:'
+          ]
+          link_pattern = re.compile(r'\[[^\]]+\]\(([^)]+\.md(?:#[^)]+)?)\)')
+          errors = []
+
+          for path in markdown_files:
+              if not path.exists():
+                  continue
+              text = path.read_text(encoding='utf-8')
+              if 'Status:' not in text:
+                  errors.append(f'{path}: missing visible Status header')
+              if text.startswith('---'):
+                  parts = text.split('---', 2)
+                  if len(parts) < 3:
+                      errors.append(f'{path}: malformed frontmatter block')
+                  else:
+                      frontmatter = parts[1]
+                      for field in required_meta:
+                          if field not in frontmatter:
+                              errors.append(f'{path}: missing metadata field {field}')
+              for target in link_pattern.findall(text):
+                  clean = target.split('#', 1)[0]
+                  if clean.startswith(('http://', 'https://', 'mailto:')):
+                      continue
+                  resolved = (path.parent / clean).resolve()
+                  if not resolved.exists():
+                      errors.append(f'{path}: missing linked markdown target {clean}')
+
+          if errors:
+              print('\n'.join(errors))
+              sys.exit(1)
+          print(f'Validated {len(markdown_files)} changed markdown files.')
+          PY

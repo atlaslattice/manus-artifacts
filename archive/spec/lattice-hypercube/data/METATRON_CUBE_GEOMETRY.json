@@ -1,0 +1,625 @@
+{
+  "schema_version": "0.1",
+  "status": "Candidate",
+  "date": "2026-05-29",
+  "geometry": "Metatron's Cube — 12-Axis Lattice",
+  "total_nodes": 13,
+  "total_edges": 78,
+  "inner_ring_radius": 1.0,
+  "outer_ring_radius": 2.0,
+  "nodes": [
+    {
+      "id": "APEX",
+      "label": "Unified Field Apex",
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "radius": 0.6000000000000001,
+      "axis_id": "APEX",
+      "color": "#FFFFFF",
+      "symbol": "✦"
+    },
+    {
+      "id": "AX-01",
+      "label": "Frequency",
+      "x": 1.0,
+      "y": 0.0,
+      "z": 0.5,
+      "radius": 0.4,
+      "axis_id": "AX-01",
+      "color": "#FF3333",
+      "symbol": "ν"
+    },
+    {
+      "id": "AX-02",
+      "label": "MatterState",
+      "x": 0.5,
+      "y": 0.866025,
+      "z": 0.5,
+      "radius": 0.4,
+      "axis_id": "AX-02",
+      "color": "#FF8C00",
+      "symbol": "Φ"
+    },
+    {
+      "id": "AX-03",
+      "label": "Element",
+      "x": -0.5,
+      "y": 0.866025,
+      "z": 0.5,
+      "radius": 0.4,
+      "axis_id": "AX-03",
+      "color": "#FFD700",
+      "symbol": "Ε"
+    },
+    {
+      "id": "AX-04",
+      "label": "Spin",
+      "x": -1.0,
+      "y": 0.0,
+      "z": 0.5,
+      "radius": 0.4,
+      "axis_id": "AX-04",
+      "color": "#7FFF00",
+      "symbol": "σ"
+    },
+    {
+      "id": "AX-05",
+      "label": "Acoustic",
+      "x": -0.5,
+      "y": -0.866025,
+      "z": 0.5,
+      "radius": 0.4,
+      "axis_id": "AX-05",
+      "color": "#00CED1",
+      "symbol": "Ω"
+    },
+    {
+      "id": "AX-06",
+      "label": "ColorHarmonic",
+      "x": 0.5,
+      "y": -0.866025,
+      "z": 0.5,
+      "radius": 0.4,
+      "axis_id": "AX-06",
+      "color": "#1E90FF",
+      "symbol": "λ"
+    },
+    {
+      "id": "AX-07",
+      "label": "Neuromorphic",
+      "x": 1.732051,
+      "y": 1.0,
+      "z": 1.0,
+      "radius": 0.4,
+      "axis_id": "AX-07",
+      "color": "#9400D3",
+      "symbol": "Ψ"
+    },
+    {
+      "id": "AX-08",
+      "label": "YinYangBalance",
+      "x": 0.0,
+      "y": 2.0,
+      "z": 1.0,
+      "radius": 0.4,
+      "axis_id": "AX-08",
+      "color": "#FF69B4",
+      "symbol": "☯"
+    },
+    {
+      "id": "AX-09",
+      "label": "RiemannOperator",
+      "x": -1.732051,
+      "y": 1.0,
+      "z": 1.0,
+      "radius": 0.4,
+      "axis_id": "AX-09",
+      "color": "#C0C0C0",
+      "symbol": "ζ"
+    },
+    {
+      "id": "AX-10",
+      "label": "Temporal",
+      "x": -1.732051,
+      "y": -1.0,
+      "z": 1.0,
+      "radius": 0.4,
+      "axis_id": "AX-10",
+      "color": "#8B4513",
+      "symbol": "τ"
+    },
+    {
+      "id": "AX-11",
+      "label": "SpatialTopology",
+      "x": -0.0,
+      "y": -2.0,
+      "z": 1.0,
+      "radius": 0.4,
+      "axis_id": "AX-11",
+      "color": "#2E8B57",
+      "symbol": "Τ"
+    },
+    {
+      "id": "AX-12",
+      "label": "Information",
+      "x": 1.732051,
+      "y": -1.0,
+      "z": 1.0,
+      "radius": 0.4,
+      "axis_id": "AX-12",
+      "color": "#191970",
+      "symbol": "ℐ"
+    }
+  ],
+  "edges": [
+    {
+      "source": "APEX",
+      "target": "AX-01",
+      "type": "spine",
+      "weight": 0.9901
+    },
+    {
+      "source": "APEX",
+      "target": "AX-02",
+      "type": "spine",
+      "weight": 0.9901
+    },
+    {
+      "source": "APEX",
+      "target": "AX-03",
+      "type": "spine",
+      "weight": 0.9901
+    },
+    {
+      "source": "APEX",
+      "target": "AX-04",
+      "type": "spine",
+      "weight": 0.9901
+    },
+    {
+      "source": "APEX",
+      "target": "AX-05",
+      "type": "spine",
+      "weight": 0.9901
+    },
+    {
+      "source": "APEX",
+      "target": "AX-06",
+      "type": "spine",
+      "weight": 0.9901
+    },
+    {
+      "source": "APEX",
+      "target": "AX-07",
+      "type": "spine",
+      "weight": 0.4975
+    },
+    {
+      "source": "APEX",
+      "target": "AX-08",
+      "type": "spine",
+      "weight": 0.4975
+    },
+    {
+      "source": "APEX",
+      "target": "AX-09",
+      "type": "spine",
+      "weight": 0.4975
+    },
+    {
+      "source": "APEX",
+      "target": "AX-10",
+      "type": "spine",
+      "weight": 0.4975
+    },
+    {
+      "source": "APEX",
+      "target": "AX-11",
+      "type": "spine",
+      "weight": 0.4975
+    },
+    {
+      "source": "APEX",
+      "target": "AX-12",
+      "type": "spine",
+      "weight": 0.4975
+    },
+    {
+      "source": "AX-01",
+      "target": "AX-02",
+      "type": "outer",
+      "weight": 0.9901
+    },
+    {
+      "source": "AX-01",
+      "target": "AX-03",
+      "type": "cross",
+      "weight": 0.574
+    },
+    {
+      "source": "AX-01",
+      "target": "AX-04",
+      "type": "cross",
+      "weight": 0.4975
+    },
+    {
+      "source": "AX-01",
+      "target": "AX-05",
+      "type": "cross",
+      "weight": 0.574
+    },
+    {
+      "source": "AX-01",
+      "target": "AX-06",
+      "type": "outer",
+      "weight": 0.9901
+    },
+    {
+      "source": "AX-01",
+      "target": "AX-07",
+      "type": "cross",
+      "weight": 0.8004
+    },
+    {
+      "source": "AX-01",
+      "target": "AX-08",
+      "type": "cross",
+      "weight": 0.4452
+    },
+    {
+      "source": "AX-01",
+      "target": "AX-09",
+      "type": "cross",
+      "weight": 0.3425
+    },
+    {
+      "source": "AX-01",
+      "target": "AX-10",
+      "type": "cross",
+      "weight": 0.3425
+    },
+    {
+      "source": "AX-01",
+      "target": "AX-11",
+      "type": "cross",
+      "weight": 0.4452
+    },
+    {
+      "source": "AX-01",
+      "target": "AX-12",
+      "type": "cross",
+      "weight": 0.8004
+    },
+    {
+      "source": "AX-02",
+      "target": "AX-03",
+      "type": "outer",
+      "weight": 0.9901
+    },
+    {
+      "source": "AX-02",
+      "target": "AX-04",
+      "type": "cross",
+      "weight": 0.574
+    },
+    {
+      "source": "AX-02",
+      "target": "AX-05",
+      "type": "cross",
+      "weight": 0.4975
+    },
+    {
+      "source": "AX-02",
+      "target": "AX-06",
+      "type": "cross",
+      "weight": 0.574
+    },
+    {
+      "source": "AX-02",
+      "target": "AX-07",
+      "type": "cross",
+      "weight": 0.8004
+    },
+    {
+      "source": "AX-02",
+      "target": "AX-08",
+      "type": "cross",
+      "weight": 0.8004
+    },
+    {
+      "source": "AX-02",
+      "target": "AX-09",
+      "type": "cross",
+      "weight": 0.4452
+    },
+    {
+      "source": "AX-02",
+      "target": "AX-10",
+      "type": "cross",
+      "weight": 0.3425
+    },
+    {
+      "source": "AX-02",
+      "target": "AX-11",
+      "type": "cross",
+      "weight": 0.3425
+    },
+    {
+      "source": "AX-02",
+      "target": "AX-12",
+      "type": "cross",
+      "weight": 0.4452
+    },
+    {
+      "source": "AX-03",
+      "target": "AX-04",
+      "type": "outer",
+      "weight": 0.9901
+    },
+    {
+      "source": "AX-03",
+      "target": "AX-05",
+      "type": "cross",
+      "weight": 0.574
+    },
+    {
+      "source": "AX-03",
+      "target": "AX-06",
+      "type": "cross",
+      "weight": 0.4975
+    },
+    {
+      "source": "AX-03",
+      "target": "AX-07",
+      "type": "cross",
+      "weight": 0.4452
+    },
+    {
+      "source": "AX-03",
+      "target": "AX-08",
+      "type": "cross",
+      "weight": 0.8004
+    },
+    {
+      "source": "AX-03",
+      "target": "AX-09",
+      "type": "cross",
+      "weight": 0.8004
+    },
+    {
+      "source": "AX-03",
+      "target": "AX-10",
+      "type": "cross",
+      "weight": 0.4452
+    },
+    {
+      "source": "AX-03",
+      "target": "AX-11",
+      "type": "cross",
+      "weight": 0.3425
+    },
+    {
+      "source": "AX-03",
+      "target": "AX-12",
+      "type": "cross",
+      "weight": 0.3425
+    },
+    {
+      "source": "AX-04",
+      "target": "AX-05",
+      "type": "outer",
+      "weight": 0.9901
+    },
+    {
+      "source": "AX-04",
+      "target": "AX-06",
+      "type": "cross",
+      "weight": 0.574
+    },
+    {
+      "source": "AX-04",
+      "target": "AX-07",
+      "type": "cross",
+      "weight": 0.3425
+    },
+    {
+      "source": "AX-04",
+      "target": "AX-08",
+      "type": "cross",
+      "weight": 0.4452
+    },
+    {
+      "source": "AX-04",
+      "target": "AX-09",
+      "type": "cross",
+      "weight": 0.8004
+    },
+    {
+      "source": "AX-04",
+      "target": "AX-10",
+      "type": "cross",
+      "weight": 0.8004
+    },
+    {
+      "source": "AX-04",
+      "target": "AX-11",
+      "type": "cross",
+      "weight": 0.4452
+    },
+    {
+      "source": "AX-04",
+      "target": "AX-12",
+      "type": "cross",
+      "weight": 0.3425
+    },
+    {
+      "source": "AX-05",
+      "target": "AX-06",
+      "type": "outer",
+      "weight": 0.9901
+    },
+    {
+      "source": "AX-05",
+      "target": "AX-07",
+      "type": "cross",
+      "weight": 0.3425
+    },
+    {
+      "source": "AX-05",
+      "target": "AX-08",
+      "type": "cross",
+      "weight": 0.3425
+    },
+    {
+      "source": "AX-05",
+      "target": "AX-09",
+      "type": "cross",
+      "weight": 0.4452
+    },
+    {
+      "source": "AX-05",
+      "target": "AX-10",
+      "type": "cross",
+      "weight": 0.8004
+    },
+    {
+      "source": "AX-05",
+      "target": "AX-11",
+      "type": "cross",
+      "weight": 0.8004
+    },
+    {
+      "source": "AX-05",
+      "target": "AX-12",
+      "type": "cross",
+      "weight": 0.4452
+    },
+    {
+      "source": "AX-06",
+      "target": "AX-07",
+      "type": "cross",
+      "weight": 0.4452
+    },
+    {
+      "source": "AX-06",
+      "target": "AX-08",
+      "type": "cross",
+      "weight": 0.3425
+    },
+    {
+      "source": "AX-06",
+      "target": "AX-09",
+      "type": "cross",
+      "weight": 0.3425
+    },
+    {
+      "source": "AX-06",
+      "target": "AX-10",
+      "type": "cross",
+      "weight": 0.4452
+    },
+    {
+      "source": "AX-06",
+      "target": "AX-11",
+      "type": "cross",
+      "weight": 0.8004
+    },
+    {
+      "source": "AX-06",
+      "target": "AX-12",
+      "type": "cross",
+      "weight": 0.8004
+    },
+    {
+      "source": "AX-07",
+      "target": "AX-08",
+      "type": "cross",
+      "weight": 0.4975
+    },
+    {
+      "source": "AX-07",
+      "target": "AX-09",
+      "type": "cross",
+      "weight": 0.2878
+    },
+    {
+      "source": "AX-07",
+      "target": "AX-10",
+      "type": "cross",
+      "weight": 0.2494
+    },
+    {
+      "source": "AX-07",
+      "target": "AX-11",
+      "type": "cross",
+      "weight": 0.2878
+    },
+    {
+      "source": "AX-07",
+      "target": "AX-12",
+      "type": "cross",
+      "weight": 0.4975
+    },
+    {
+      "source": "AX-08",
+      "target": "AX-09",
+      "type": "cross",
+      "weight": 0.4975
+    },
+    {
+      "source": "AX-08",
+      "target": "AX-10",
+      "type": "cross",
+      "weight": 0.2878
+    },
+    {
+      "source": "AX-08",
+      "target": "AX-11",
+      "type": "cross",
+      "weight": 0.2494
+    },
+    {
+      "source": "AX-08",
+      "target": "AX-12",
+      "type": "cross",
+      "weight": 0.2878
+    },
+    {
+      "source": "AX-09",
+      "target": "AX-10",
+      "type": "cross",
+      "weight": 0.4975
+    },
+    {
+      "source": "AX-09",
+      "target": "AX-11",
+      "type": "cross",
+      "weight": 0.2878
+    },
+    {
+      "source": "AX-09",
+      "target": "AX-12",
+      "type": "cross",
+      "weight": 0.2494
+    },
+    {
+      "source": "AX-10",
+      "target": "AX-11",
+      "type": "cross",
+      "weight": 0.4975
+    },
+    {
+      "source": "AX-10",
+      "target": "AX-12",
+      "type": "cross",
+      "weight": 0.2878
+    },
+    {
+      "source": "AX-11",
+      "target": "AX-12",
+      "type": "cross",
+      "weight": 0.4975
+    }
+  ]
+}

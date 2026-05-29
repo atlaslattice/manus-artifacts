@@ -1,0 +1,1026 @@
+schema_version: '0.1'
+status: Candidate
+date: '2026-05-29'
+author: TIDELOCKBrain / @atlaslattice
+total_seed_nodes: 53
+seed_classes:
+- apex
+- metatron_center
+- metatron_outer
+- primary_corner
+- riemann_spine
+nodes:
+- node_id: N-00.00.00
+  address:
+    AX-01: 0
+    AX-02: 0
+    AX-03: 0
+  properties:
+    AX-04: 0
+    AX-05: 0
+    AX-06: 0
+    AX-07: 0
+    AX-08: 5
+    AX-09: 0
+    AX-10: 0
+    AX-11: 0
+    AX-12: 0
+  node_type: FrequencyNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-00.00.05
+  address:
+    AX-01: 0
+    AX-02: 0
+    AX-03: 5
+  properties:
+    AX-04: 0
+    AX-05: 5
+    AX-06: 0
+    AX-07: 5
+    AX-08: 6
+    AX-09: 5
+    AX-10: 0
+    AX-11: 0
+    AX-12: 5
+  node_type: FrequencyNode
+  yin_yang: yang_dominant
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-00.00.11
+  address:
+    AX-01: 0
+    AX-02: 0
+    AX-03: 11
+  properties:
+    AX-04: 0
+    AX-05: 11
+    AX-06: 0
+    AX-07: 11
+    AX-08: 6
+    AX-09: 11
+    AX-10: 0
+    AX-11: 0
+    AX-12: 11
+  node_type: FrequencyNode
+  yin_yang: yang_dominant
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-00.05.00
+  address:
+    AX-01: 0
+    AX-02: 5
+    AX-03: 0
+  properties:
+    AX-04: 5
+    AX-05: 5
+    AX-06: 0
+    AX-07: 0
+    AX-08: 6
+    AX-09: 5
+    AX-10: 0
+    AX-11: 5
+    AX-12: 0
+  node_type: FrequencyNode
+  yin_yang: yang_dominant
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-00.05.05
+  address:
+    AX-01: 0
+    AX-02: 5
+    AX-03: 5
+  properties:
+    AX-04: 5
+    AX-05: 10
+    AX-06: 0
+    AX-07: 5
+    AX-08: 5
+    AX-09: 10
+    AX-10: 0
+    AX-11: 5
+    AX-12: 5
+  node_type: FrequencyNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-00.05.11
+  address:
+    AX-01: 0
+    AX-02: 5
+    AX-03: 11
+  properties:
+    AX-04: 5
+    AX-05: 4
+    AX-06: 0
+    AX-07: 11
+    AX-08: 5
+    AX-09: 4
+    AX-10: 0
+    AX-11: 5
+    AX-12: 11
+  node_type: FrequencyNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-00.11.00
+  address:
+    AX-01: 0
+    AX-02: 11
+    AX-03: 0
+  properties:
+    AX-04: 11
+    AX-05: 11
+    AX-06: 0
+    AX-07: 0
+    AX-08: 6
+    AX-09: 11
+    AX-10: 0
+    AX-11: 11
+    AX-12: 0
+  node_type: FrequencyNode
+  yin_yang: yang_dominant
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-00.11.05
+  address:
+    AX-01: 0
+    AX-02: 11
+    AX-03: 5
+  properties:
+    AX-04: 11
+    AX-05: 4
+    AX-06: 0
+    AX-07: 5
+    AX-08: 5
+    AX-09: 4
+    AX-10: 0
+    AX-11: 11
+    AX-12: 5
+  node_type: FrequencyNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-00.11.11
+  address:
+    AX-01: 0
+    AX-02: 11
+    AX-03: 11
+  properties:
+    AX-04: 11
+    AX-05: 10
+    AX-06: 0
+    AX-07: 11
+    AX-08: 5
+    AX-09: 10
+    AX-10: 0
+    AX-11: 11
+    AX-12: 11
+  node_type: FrequencyNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-05.00.00
+  address:
+    AX-01: 5
+    AX-02: 0
+    AX-03: 0
+  properties:
+    AX-04: 5
+    AX-05: 0
+    AX-06: 5
+    AX-07: 0
+    AX-08: 6
+    AX-09: 5
+    AX-10: 5
+    AX-11: 0
+    AX-12: 0
+  node_type: MatterPhaseNode
+  yin_yang: yang_dominant
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-05.00.05
+  address:
+    AX-01: 5
+    AX-02: 0
+    AX-03: 5
+  properties:
+    AX-04: 5
+    AX-05: 5
+    AX-06: 5
+    AX-07: 5
+    AX-08: 5
+    AX-09: 10
+    AX-10: 5
+    AX-11: 0
+    AX-12: 5
+  node_type: MatterPhaseNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-05.00.11
+  address:
+    AX-01: 5
+    AX-02: 0
+    AX-03: 11
+  properties:
+    AX-04: 5
+    AX-05: 11
+    AX-06: 5
+    AX-07: 11
+    AX-08: 5
+    AX-09: 4
+    AX-10: 5
+    AX-11: 0
+    AX-12: 11
+  node_type: MatterPhaseNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-05.05.00
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 0
+  properties:
+    AX-04: 10
+    AX-05: 5
+    AX-06: 5
+    AX-07: 0
+    AX-08: 5
+    AX-09: 10
+    AX-10: 5
+    AX-11: 5
+    AX-12: 0
+  node_type: MatterPhaseNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-05.05.05
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 5
+  properties:
+    AX-04: 10
+    AX-05: 10
+    AX-06: 5
+    AX-07: 5
+    AX-08: 6
+    AX-09: 3
+    AX-10: 5
+    AX-11: 5
+    AX-12: 5
+  node_type: MatterPhaseNode
+  yin_yang: yang_dominant
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-05.05.11
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 11
+  properties:
+    AX-04: 10
+    AX-05: 4
+    AX-06: 5
+    AX-07: 11
+    AX-08: 6
+    AX-09: 9
+    AX-10: 5
+    AX-11: 5
+    AX-12: 11
+  node_type: MatterPhaseNode
+  yin_yang: yang_dominant
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-05.11.00
+  address:
+    AX-01: 5
+    AX-02: 11
+    AX-03: 0
+  properties:
+    AX-04: 4
+    AX-05: 11
+    AX-06: 5
+    AX-07: 0
+    AX-08: 5
+    AX-09: 4
+    AX-10: 5
+    AX-11: 11
+    AX-12: 0
+  node_type: MatterPhaseNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-05.11.05
+  address:
+    AX-01: 5
+    AX-02: 11
+    AX-03: 5
+  properties:
+    AX-04: 4
+    AX-05: 4
+    AX-06: 5
+    AX-07: 5
+    AX-08: 6
+    AX-09: 9
+    AX-10: 5
+    AX-11: 11
+    AX-12: 5
+  node_type: MatterPhaseNode
+  yin_yang: yang_dominant
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-05.11.11
+  address:
+    AX-01: 5
+    AX-02: 11
+    AX-03: 11
+  properties:
+    AX-04: 4
+    AX-05: 10
+    AX-06: 5
+    AX-07: 11
+    AX-08: 6
+    AX-09: 3
+    AX-10: 5
+    AX-11: 11
+    AX-12: 11
+  node_type: MatterPhaseNode
+  yin_yang: yang_dominant
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-11.00.00
+  address:
+    AX-01: 11
+    AX-02: 0
+    AX-03: 0
+  properties:
+    AX-04: 11
+    AX-05: 0
+    AX-06: 11
+    AX-07: 0
+    AX-08: 6
+    AX-09: 11
+    AX-10: 11
+    AX-11: 0
+    AX-12: 0
+  node_type: RiemannOperatorNode
+  yin_yang: yang_dominant
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-11.00.05
+  address:
+    AX-01: 11
+    AX-02: 0
+    AX-03: 5
+  properties:
+    AX-04: 11
+    AX-05: 5
+    AX-06: 11
+    AX-07: 5
+    AX-08: 5
+    AX-09: 4
+    AX-10: 11
+    AX-11: 0
+    AX-12: 5
+  node_type: RiemannOperatorNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-11.00.11
+  address:
+    AX-01: 11
+    AX-02: 0
+    AX-03: 11
+  properties:
+    AX-04: 11
+    AX-05: 11
+    AX-06: 11
+    AX-07: 11
+    AX-08: 5
+    AX-09: 10
+    AX-10: 11
+    AX-11: 0
+    AX-12: 11
+  node_type: RiemannOperatorNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-11.05.00
+  address:
+    AX-01: 11
+    AX-02: 5
+    AX-03: 0
+  properties:
+    AX-04: 4
+    AX-05: 5
+    AX-06: 11
+    AX-07: 0
+    AX-08: 5
+    AX-09: 4
+    AX-10: 11
+    AX-11: 5
+    AX-12: 0
+  node_type: RiemannOperatorNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-11.05.05
+  address:
+    AX-01: 11
+    AX-02: 5
+    AX-03: 5
+  properties:
+    AX-04: 4
+    AX-05: 10
+    AX-06: 11
+    AX-07: 5
+    AX-08: 6
+    AX-09: 9
+    AX-10: 11
+    AX-11: 5
+    AX-12: 5
+  node_type: RiemannOperatorNode
+  yin_yang: yang_dominant
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-11.05.11
+  address:
+    AX-01: 11
+    AX-02: 5
+    AX-03: 11
+  properties:
+    AX-04: 4
+    AX-05: 4
+    AX-06: 11
+    AX-07: 11
+    AX-08: 6
+    AX-09: 3
+    AX-10: 11
+    AX-11: 5
+    AX-12: 11
+  node_type: RiemannOperatorNode
+  yin_yang: yang_dominant
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-11.11.00
+  address:
+    AX-01: 11
+    AX-02: 11
+    AX-03: 0
+  properties:
+    AX-04: 10
+    AX-05: 11
+    AX-06: 11
+    AX-07: 0
+    AX-08: 5
+    AX-09: 10
+    AX-10: 11
+    AX-11: 11
+    AX-12: 0
+  node_type: RiemannOperatorNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-11.11.05
+  address:
+    AX-01: 11
+    AX-02: 11
+    AX-03: 5
+  properties:
+    AX-04: 10
+    AX-05: 4
+    AX-06: 11
+    AX-07: 5
+    AX-08: 6
+    AX-09: 3
+    AX-10: 11
+    AX-11: 11
+    AX-12: 5
+  node_type: RiemannOperatorNode
+  yin_yang: yang_dominant
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-11.11.11
+  address:
+    AX-01: 11
+    AX-02: 11
+    AX-03: 11
+  properties:
+    AX-04: 10
+    AX-05: 10
+    AX-06: 11
+    AX-07: 11
+    AX-08: 6
+    AX-09: 9
+    AX-10: 11
+    AX-11: 11
+    AX-12: 11
+  node_type: RiemannOperatorNode
+  yin_yang: yang_dominant
+  status: Candidate
+  seed_class: primary_corner
+- node_id: N-RIEMANN-00
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 0
+  properties:
+    AX-04: 0
+    AX-05: 0
+    AX-06: 0
+    AX-07: 0
+    AX-08: 5
+    AX-09: 0
+    AX-10: 0
+    AX-11: 0
+    AX-12: 0
+  node_type: RiemannOperatorNode
+  yin_yang: meta
+  status: Candidate
+  seed_class: riemann_spine
+- node_id: N-RIEMANN-01
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 1
+  properties:
+    AX-04: 1
+    AX-05: 1
+    AX-06: 1
+    AX-07: 1
+    AX-08: 5
+    AX-09: 1
+    AX-10: 1
+    AX-11: 1
+    AX-12: 1
+  node_type: RiemannOperatorNode
+  yin_yang: meta
+  status: Candidate
+  seed_class: riemann_spine
+- node_id: N-RIEMANN-02
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 2
+  properties:
+    AX-04: 2
+    AX-05: 2
+    AX-06: 2
+    AX-07: 2
+    AX-08: 5
+    AX-09: 2
+    AX-10: 2
+    AX-11: 2
+    AX-12: 2
+  node_type: RiemannOperatorNode
+  yin_yang: meta
+  status: Candidate
+  seed_class: riemann_spine
+- node_id: N-RIEMANN-03
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 3
+  properties:
+    AX-04: 3
+    AX-05: 3
+    AX-06: 3
+    AX-07: 3
+    AX-08: 5
+    AX-09: 3
+    AX-10: 3
+    AX-11: 3
+    AX-12: 3
+  node_type: RiemannOperatorNode
+  yin_yang: meta
+  status: Candidate
+  seed_class: riemann_spine
+- node_id: N-RIEMANN-04
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 4
+  properties:
+    AX-04: 4
+    AX-05: 4
+    AX-06: 4
+    AX-07: 4
+    AX-08: 5
+    AX-09: 4
+    AX-10: 4
+    AX-11: 4
+    AX-12: 4
+  node_type: RiemannOperatorNode
+  yin_yang: meta
+  status: Candidate
+  seed_class: riemann_spine
+- node_id: N-RIEMANN-05
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 5
+  properties:
+    AX-04: 5
+    AX-05: 5
+    AX-06: 5
+    AX-07: 5
+    AX-08: 5
+    AX-09: 5
+    AX-10: 5
+    AX-11: 5
+    AX-12: 5
+  node_type: RiemannOperatorNode
+  yin_yang: meta
+  status: Candidate
+  seed_class: riemann_spine
+- node_id: N-RIEMANN-06
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 6
+  properties:
+    AX-04: 6
+    AX-05: 6
+    AX-06: 6
+    AX-07: 6
+    AX-08: 5
+    AX-09: 6
+    AX-10: 6
+    AX-11: 6
+    AX-12: 6
+  node_type: RiemannOperatorNode
+  yin_yang: meta
+  status: Candidate
+  seed_class: riemann_spine
+- node_id: N-RIEMANN-07
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 7
+  properties:
+    AX-04: 7
+    AX-05: 7
+    AX-06: 7
+    AX-07: 7
+    AX-08: 5
+    AX-09: 7
+    AX-10: 7
+    AX-11: 7
+    AX-12: 7
+  node_type: RiemannOperatorNode
+  yin_yang: meta
+  status: Candidate
+  seed_class: riemann_spine
+- node_id: N-RIEMANN-08
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 8
+  properties:
+    AX-04: 8
+    AX-05: 8
+    AX-06: 8
+    AX-07: 8
+    AX-08: 5
+    AX-09: 8
+    AX-10: 8
+    AX-11: 8
+    AX-12: 8
+  node_type: RiemannOperatorNode
+  yin_yang: meta
+  status: Candidate
+  seed_class: riemann_spine
+- node_id: N-RIEMANN-09
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 9
+  properties:
+    AX-04: 9
+    AX-05: 9
+    AX-06: 9
+    AX-07: 9
+    AX-08: 5
+    AX-09: 9
+    AX-10: 9
+    AX-11: 9
+    AX-12: 9
+  node_type: RiemannOperatorNode
+  yin_yang: meta
+  status: Candidate
+  seed_class: riemann_spine
+- node_id: N-RIEMANN-10
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 10
+  properties:
+    AX-04: 10
+    AX-05: 10
+    AX-06: 10
+    AX-07: 10
+    AX-08: 5
+    AX-09: 10
+    AX-10: 10
+    AX-11: 10
+    AX-12: 10
+  node_type: RiemannOperatorNode
+  yin_yang: meta
+  status: Candidate
+  seed_class: riemann_spine
+- node_id: N-RIEMANN-11
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 11
+  properties:
+    AX-04: 11
+    AX-05: 11
+    AX-06: 11
+    AX-07: 11
+    AX-08: 5
+    AX-09: 11
+    AX-10: 11
+    AX-11: 11
+    AX-12: 11
+  node_type: RiemannOperatorNode
+  yin_yang: meta
+  status: Candidate
+  seed_class: riemann_spine
+- node_id: N-APEX
+  address:
+    AX-01: 11
+    AX-02: 11
+    AX-03: 11
+  properties:
+    AX-01: 11
+    AX-02: 11
+    AX-03: 11
+    AX-04: 11
+    AX-05: 11
+    AX-06: 11
+    AX-07: 11
+    AX-08: 11
+    AX-09: 11
+    AX-10: 11
+    AX-11: 11
+    AX-12: 11
+  node_type: UnifiedFieldApex
+  yin_yang: perfect_balance
+  status: Candidate
+  seed_class: apex
+  requires_ratification: true
+- node_id: N-METATRON-CENTER
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 5
+  properties:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 5
+    AX-04: 5
+    AX-05: 5
+    AX-06: 5
+    AX-07: 5
+    AX-08: 5
+    AX-09: 5
+    AX-10: 5
+    AX-11: 5
+    AX-12: 5
+  node_type: YinYangBalanceNode
+  yin_yang: perfect_balance
+  status: Candidate
+  seed_class: metatron_center
+- node_id: N-METATRON-01
+  address:
+    AX-01: 0
+    AX-02: 5
+    AX-03: 5
+  properties:
+    AX-04: 0
+    AX-05: 0
+    AX-06: 0
+    AX-07: 0
+    AX-08: 5
+    AX-09: 0
+    AX-10: 0
+    AX-11: 0
+    AX-12: 0
+  node_type: YinYangBalanceNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: metatron_outer
+- node_id: N-METATRON-02
+  address:
+    AX-01: 11
+    AX-02: 5
+    AX-03: 5
+  properties:
+    AX-04: 1
+    AX-05: 1
+    AX-06: 1
+    AX-07: 1
+    AX-08: 5
+    AX-09: 1
+    AX-10: 1
+    AX-11: 1
+    AX-12: 1
+  node_type: YinYangBalanceNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: metatron_outer
+- node_id: N-METATRON-03
+  address:
+    AX-01: 5
+    AX-02: 0
+    AX-03: 5
+  properties:
+    AX-04: 2
+    AX-05: 2
+    AX-06: 2
+    AX-07: 2
+    AX-08: 5
+    AX-09: 2
+    AX-10: 2
+    AX-11: 2
+    AX-12: 2
+  node_type: YinYangBalanceNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: metatron_outer
+- node_id: N-METATRON-04
+  address:
+    AX-01: 5
+    AX-02: 11
+    AX-03: 5
+  properties:
+    AX-04: 3
+    AX-05: 3
+    AX-06: 3
+    AX-07: 3
+    AX-08: 5
+    AX-09: 3
+    AX-10: 3
+    AX-11: 3
+    AX-12: 3
+  node_type: YinYangBalanceNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: metatron_outer
+- node_id: N-METATRON-05
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 0
+  properties:
+    AX-04: 4
+    AX-05: 4
+    AX-06: 4
+    AX-07: 4
+    AX-08: 5
+    AX-09: 4
+    AX-10: 4
+    AX-11: 4
+    AX-12: 4
+  node_type: YinYangBalanceNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: metatron_outer
+- node_id: N-METATRON-06
+  address:
+    AX-01: 5
+    AX-02: 5
+    AX-03: 11
+  properties:
+    AX-04: 5
+    AX-05: 5
+    AX-06: 5
+    AX-07: 5
+    AX-08: 5
+    AX-09: 5
+    AX-10: 5
+    AX-11: 5
+    AX-12: 5
+  node_type: YinYangBalanceNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: metatron_outer
+- node_id: N-METATRON-07
+  address:
+    AX-01: 0
+    AX-02: 0
+    AX-03: 5
+  properties:
+    AX-04: 6
+    AX-05: 6
+    AX-06: 6
+    AX-07: 6
+    AX-08: 5
+    AX-09: 6
+    AX-10: 6
+    AX-11: 6
+    AX-12: 6
+  node_type: YinYangBalanceNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: metatron_outer
+- node_id: N-METATRON-08
+  address:
+    AX-01: 11
+    AX-02: 11
+    AX-03: 5
+  properties:
+    AX-04: 7
+    AX-05: 7
+    AX-06: 7
+    AX-07: 7
+    AX-08: 5
+    AX-09: 7
+    AX-10: 7
+    AX-11: 7
+    AX-12: 7
+  node_type: YinYangBalanceNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: metatron_outer
+- node_id: N-METATRON-09
+  address:
+    AX-01: 0
+    AX-02: 11
+    AX-03: 5
+  properties:
+    AX-04: 8
+    AX-05: 8
+    AX-06: 8
+    AX-07: 8
+    AX-08: 5
+    AX-09: 8
+    AX-10: 8
+    AX-11: 8
+    AX-12: 8
+  node_type: YinYangBalanceNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: metatron_outer
+- node_id: N-METATRON-10
+  address:
+    AX-01: 11
+    AX-02: 0
+    AX-03: 5
+  properties:
+    AX-04: 9
+    AX-05: 9
+    AX-06: 9
+    AX-07: 9
+    AX-08: 5
+    AX-09: 9
+    AX-10: 9
+    AX-11: 9
+    AX-12: 9
+  node_type: YinYangBalanceNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: metatron_outer
+- node_id: N-METATRON-11
+  address:
+    AX-01: 5
+    AX-02: 0
+    AX-03: 11
+  properties:
+    AX-04: 10
+    AX-05: 10
+    AX-06: 10
+    AX-07: 10
+    AX-08: 5
+    AX-09: 10
+    AX-10: 10
+    AX-11: 10
+    AX-12: 10
+  node_type: YinYangBalanceNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: metatron_outer
+- node_id: N-METATRON-12
+  address:
+    AX-01: 5
+    AX-02: 11
+    AX-03: 0
+  properties:
+    AX-04: 11
+    AX-05: 11
+    AX-06: 11
+    AX-07: 11
+    AX-08: 5
+    AX-09: 11
+    AX-10: 11
+    AX-11: 11
+    AX-12: 11
+  node_type: YinYangBalanceNode
+  yin_yang: balanced
+  status: Candidate
+  seed_class: metatron_outer

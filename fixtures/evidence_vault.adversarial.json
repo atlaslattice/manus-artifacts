@@ -1,0 +1,34 @@
+[
+  {
+    "test_id": "EV-ADV-01",
+    "description": "benchmark claim missing evidence packet id cannot publish",
+    "benchmark_claim": {
+      "benchmark_claim_id": "ev-adv-1",
+      "claim_text": "claimed benchmark win",
+      "evidence_packet_id": null,
+      "review_status": "approved"
+    },
+    "expected_publish_allowed": false
+  },
+  {
+    "test_id": "EV-ADV-02",
+    "description": "benchmark claim with pending review cannot publish",
+    "benchmark_claim": {
+      "benchmark_claim_id": "ev-adv-2",
+      "claim_text": "claimed benchmark win",
+      "evidence_packet_id": "evidence-2",
+      "review_status": "pending"
+    },
+    "expected_publish_allowed": false
+  },
+  {
+    "test_id": "EV-ADV-03",
+    "description": "public claim with incomplete source remains quarantined",
+    "public_claim": {
+      "public_claim_id": "public-adv-1",
+      "source_completeness": "incomplete"
+    },
+    "expected_quarantine_status": "quarantined",
+    "expected_publish_allowed": false
+  }
+]
