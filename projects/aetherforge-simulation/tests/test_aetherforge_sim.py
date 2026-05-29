@@ -9,6 +9,7 @@ import aetherforge_sim
 import children_swarm_graph_export
 import graph_export
 import missing_receipt_graph_export
+import rem_100_year_simulation
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -136,6 +137,21 @@ def test_missing_receipt_graph_export_builds_blocked_by_edges() -> None:
     assert ("blocked-object:kg-source-universe-index", "blocked_by", "missing-receipt:MR-DRIVE-001") in edges
 
 
+def test_rem_100_year_simulation_validates_receipt_chain() -> None:
+    result = rem_100_year_simulation.simulate(seed=144)
+    report = rem_100_year_simulation.validate(result)
+    assert report["ok"] is True
+    assert report["duration_years"] == 100
+    assert report["yearly_state_count"] == 100
+    assert report["phase_count"] == 10
+    assert report["receipt_links_ok"] is True
+    assert report["canon_false"] is True
+    assert report["deployment_false"] is True
+    assert report["authority_none"] is True
+    assert report["prediction_false"] is True
+    assert result["keeper_read"] == "Continuity survives by making every gap addressable."
+
+
 def test_cli_validate_json() -> None:
     completed = subprocess.run(
         [sys.executable, "aetherforge_sim.py", "--json", "--matrix-path", str(MATRIX_PATH), "validate"],
@@ -205,3 +221,18 @@ def test_cli_missing_receipt_graph_export_json() -> None:
     assert payload["validation"]["ok"] is True
     assert payload["summary"]["missing_receipts"] == 7
     assert payload["summary"]["human_root_blockers"] == 4
+
+
+def test_cli_rem_100_year_simulation_json() -> None:
+    completed = subprocess.run(
+        [sys.executable, "rem_100_year_simulation.py", "--json", "--seed", "144"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    )
+    payload = json.loads(completed.stdout)
+    assert payload["schema_version"] == "rem_100_year_simulation.v0_1"
+    assert payload["duration_years"] == 100
+    assert len(payload["yearly_states"]) == 100
+    assert payload["boundary"]["prediction"] is False
