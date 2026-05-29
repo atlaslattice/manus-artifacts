@@ -11,7 +11,8 @@ Campaign board for the Next-144 sequence.
 - Wave 3 (tasks 25-36): implemented
 - Wave 4 (tasks 37-48): implemented
 - Wave 5 (tasks 49-60): implemented — Hypercube Ontology Core (12 YAML ontology files + test suite)
-- Wave 6-12 (tasks 61-144): queued
+- Wave 6 (tasks 61-72): implemented — Hypercube Data Fabric (5 scripts + 4 data files + 1 guide + 78 tests)
+- Wave 7-12 (tasks 73-144): queued
 
 ## Tasks 1-24 execution receipts
 
@@ -83,3 +84,31 @@ Campaign board for the Next-144 sequence.
 - orphan_ratio: 0.000
 - new tests: 14 (Children Swarm suite)
 - XP earned: 1,400
+
+## Tasks 61-72 execution receipts (Wave 6 — Hypercube Data Fabric)
+
+| Task | Artifact |
+| --- | --- |
+| 61 | ../scripts/lattice_node_seeder.py |
+| 62 | ../scripts/lattice_coordinate_mapper.py |
+| 63 | ../scripts/lattice_cross_axis_bridge.py |
+| 64 | ../archive/spec/lattice-hypercube/data/LATTICE_NODE_SEED_REGISTRY.yaml |
+| 65 | ../scripts/lattice_riemann_s_calculator.py |
+| 66 | ../scripts/lattice_metatron_geometry.py |
+| 67 | ../docs/HYPERCUBE_DATA_FABRIC_GUIDE.md |
+| 68 | ../scripts/lattice_graph_export.py |
+| 69 | ../scripts/lattice_query_engine.py |
+| 70 | ../tests/test_hypercube_data_fabric.py (78 tests) |
+| 71 | ../projects/aetherforge-wave6-data-fabric-2026-05-29.md |
+| 72 | ../archive/boot/gptbrain/agents/TIDELOCKBrain/WAKE_REPORT_WAVE6_2026-05-29.md |
+
+### Wave 6 lattice health
+
+- seed_nodes: 53
+- metatron_nodes: 13
+- metatron_edges: 78
+- graph_export_nodes: 53
+- graph_export_edges: 144
+- new_tests: 78 (Data Fabric suite)
+- cumulative_tests: 272
+- XP earned: 1,200
