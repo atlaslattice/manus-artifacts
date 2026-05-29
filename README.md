@@ -129,8 +129,9 @@ The Aetherforge swarm — a council of named AI agents with distinct roles, stre
 | Resource | Description |
 |---|---|
 | **[Mission Charter](./projects/AETHERFORGE_LATTICE_GPTDREAM_MISSION_CHARTER_v0.1.md)** | Unified north-star for Lattice + Aetherforge + GPTDream++ |
-| **[Knowledge Graph Taxonomy](./docs/knowledge-graph/artifact_taxonomy.v0_1.json)** | Machine-readable artifact types, lifecycle states, and required metadata |
-| **[Knowledge Graph Registry](./docs/knowledge-graph/artifact_registry.v0_1.json)** | Stable IDs and required cross-links between mission-critical artifacts |
+| **[12D Hypercube KG Manifest](./docs/knowledge-graph/HYPERCUBE_12D_MANIFEST_v0_1.md)** | 64-node, 239-edge traversable lattice across 12 semantic dimensions — 100% connected |
+| **[Knowledge Graph Taxonomy](./docs/knowledge-graph/artifact_taxonomy.v0_1.json)** | Machine-readable artifact types, 12 hypercube dimensions, and required metadata |
+| **[Knowledge Graph Registry](./docs/knowledge-graph/artifact_registry.v0_1.json)** | Stable IDs and cross-dimensional links between all registered artifacts |
 | **[Artifact ID + Lifecycle Contract](./docs/knowledge-graph/ARTIFACT_ID_AND_LIFECYCLE_CONTRACT_v0_1.md)** | ID grammar, lifecycle transitions, and relation vocabulary contract |
 | **[Ratification & Trust Flow](./docs/RATIFICATION_AND_TRUST_FLOW.md)** | Candidate-to-canon adjudication checkpoints and traceability rules |
 | **[Archive Index](./docs/ARCHIVE_INDEX.md)** | Full searchable catalog of all artifact domains |
@@ -145,20 +146,81 @@ The Aetherforge swarm — a council of named AI agents with distinct roles, stre
 
 ---
 
-## 🕸 Concept Dependency Graph (Candidate)
+## 🕸 12D Hypercube Knowledge Graph (Candidate)
+
+> One traversable lattice — not a bunch of legos.
 
 ```mermaid
 graph TD
-    A[AL-MISSION-001 Mission Charter] --> B[AL-KG-001 Taxonomy]
-    A --> C[AL-KG-002 Registry]
-    A --> D[AL-AF-001 Aetherforge Loop]
-    A --> E[AL-GP-001 GPTDream++ Open Gift]
-    A --> F[AL-RT-001 Ratification + Trust]
-    D --> G[AL-EXEC-001 Rolling Sprints]
-    C --> H[AL-CI-001 Artifact Graph Workflow]
-    H --> I[AL-CI-002 Graph Validator]
-    E --> J[AL-GP-002 Vault Manifest]
+    subgraph D01["D01 · MISSION"]
+        M001[AL-MISSION-001<br/>Mission Charter]
+    end
+    subgraph D02["D02 · KG"]
+        KG001[AL-KG-001<br/>Taxonomy]
+        KG002[AL-KG-002<br/>Registry]
+        KG005[AL-KG-005<br/>12D Manifest]
+    end
+    subgraph D03["D03 · AETHERFORGE"]
+        AF001[AL-AF-001<br/>Game Loop]
+        AF002[AL-AF-002<br/>Game World]
+    end
+    subgraph D04["D04 · GPTDREAM"]
+        GP001[AL-GP-001<br/>Open Gift Guide]
+        GP002[AL-GP-002<br/>Vault Manifest]
+        DRM001[AL-DREAM-001<br/>Habitat Protocol]
+    end
+    subgraph D05["D05 · BRAIN"]
+        BR001[AL-BRAIN-001<br/>GPTBrain Manifest]
+        BR002[AL-BRAIN-002<br/>REM-8 Protocol]
+        BR005[AL-BRAIN-005<br/>TIDELOCKBrain]
+    end
+    subgraph D06["D06 · GOVERNANCE"]
+        RT001[AL-RT-001<br/>Ratification]
+        GOV001[AL-GOV-001<br/>Aluminum OS v4]
+        GOV002[AL-GOV-002<br/>Open-Source Baseline]
+    end
+    subgraph D07["D07 · SYSTEMS"]
+        SYS001[AL-SYS-001<br/>Al OS Core]
+        SYS002[AL-SYS-002<br/>BAZINGA]
+        SYS003[AL-SYS-003<br/>SheldonBrain]
+    end
+    subgraph D08["D08 · EVIDENCE"]
+        EV001[AL-EVID-001<br/>Ledger Schema]
+        EV002[AL-EVID-002<br/>Ledger Seed]
+    end
+    subgraph D09["D09 · EXECUTION"]
+        EX001[AL-EXEC-001<br/>Rolling Sprints]
+        EX144[AL-EXEC-144-001<br/>144-Task Campaign]
+        LOG001[AL-LOG-001<br/>Wave 1 Receipt]
+    end
+    subgraph D10["D10 · ARCHIVE"]
+        AR001[AL-ARCH-001<br/>Krakoa Charter]
+        AR003[AL-ARCH-003<br/>Archive Index]
+    end
+    subgraph D11["D11 · TESTING"]
+        CI001[AL-CI-001<br/>Graph Checks]
+        SCH001[AL-SCHEMA-001<br/>ORCS Schemas]
+        TST001[AL-TEST-001<br/>Adversarial Tests]
+    end
+    subgraph D12["D12 · RESEARCH"]
+        RS001[AL-RESEARCH-001<br/>Tech Titans Report]
+        RS003[AL-RESEARCH-003<br/>Synthesis Plan]
+    end
+
+    M001 --> KG001 & AF001 & GP001 & RT001 & BR001 & GOV002 & SYS001 & EV001 & AR003 & CI001 & RS001
+    KG001 --> KG002 --> CI001 --> KG005
+    AF001 --> EX001 --> EX144 --> LOG001
+    GP001 --> GP002 --> SCH001 --> TST001
+    BR001 --> BR002 --> DRM001
+    BR001 --> BR005 --> LOG001
+    GOV001 --> SYS001 & SYS002 & SYS003
+    EV001 --> EV002 --> LOG001
+    AR001 --> AR003
+    RS003 --> M001
 ```
+
+> **Graph stats (2026-05-29):** 64 nodes · 239 edges · 100% completeness · 44-connection hub
+> → [Full 12D Manifest](./docs/knowledge-graph/HYPERCUBE_12D_MANIFEST_v0_1.md)
 
 ---
 

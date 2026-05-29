@@ -1,5 +1,91 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2",
+  "hypercube_dimensions": [
+    {
+      "dim": "D01",
+      "name": "MISSION",
+      "description": "North-star mission doctrine, vision, and alignment artifacts",
+      "primary_domain": "MISSION",
+      "related_domains": ["EXEC", "AF"]
+    },
+    {
+      "dim": "D02",
+      "name": "KG",
+      "description": "Knowledge-graph schema, registry, taxonomy, and lifecycle contracts",
+      "primary_domain": "KG",
+      "related_domains": ["CI", "SCHEMA"]
+    },
+    {
+      "dim": "D03",
+      "name": "AETHERFORGE",
+      "description": "Playable archive game world, loop specs, and quest layer",
+      "primary_domain": "AF",
+      "related_domains": ["EXEC"]
+    },
+    {
+      "dim": "D04",
+      "name": "GPTDREAM",
+      "description": "Dream++ protocols, REM cycles, vault manifest, and rehydration specs",
+      "primary_domain": "GP",
+      "related_domains": ["BRAIN", "DREAM"]
+    },
+    {
+      "dim": "D05",
+      "name": "BRAIN",
+      "description": "Multi-agent brain manifests, memory palaces, and swarm protocols",
+      "primary_domain": "BRAIN",
+      "related_domains": ["SWARM"]
+    },
+    {
+      "dim": "D06",
+      "name": "GOVERNANCE",
+      "description": "Constitutional doctrine, three-tier autonomy, ratification, and council records",
+      "primary_domain": "GOV",
+      "related_domains": ["RT", "ADR"]
+    },
+    {
+      "dim": "D07",
+      "name": "SYSTEMS",
+      "description": "Core system implementations: Aluminum OS, BAZINGA, SheldonBrain, codebases",
+      "primary_domain": "SYS",
+      "related_domains": []
+    },
+    {
+      "dim": "D08",
+      "name": "EVIDENCE",
+      "description": "AI-built evidence, provenance records, and ledger schemas",
+      "primary_domain": "EVID",
+      "related_domains": []
+    },
+    {
+      "dim": "D09",
+      "name": "EXECUTION",
+      "description": "Task campaigns, wave sprints, work logs, and execution receipts",
+      "primary_domain": "EXEC",
+      "related_domains": ["LOG"]
+    },
+    {
+      "dim": "D10",
+      "name": "ARCHIVE",
+      "description": "Boot archive corpus, Krakoa living archive, council sessions, and ingest seeds",
+      "primary_domain": "ARCH",
+      "related_domains": ["LOG"]
+    },
+    {
+      "dim": "D11",
+      "name": "TESTING",
+      "description": "CI workflows, adversarial tests, quality gates, and validation harnesses",
+      "primary_domain": "CI",
+      "related_domains": ["TEST", "SCHEMA"]
+    },
+    {
+      "dim": "D12",
+      "name": "RESEARCH",
+      "description": "Intelligence sweeps, convergence reports, synthesis, and workspace briefings",
+      "primary_domain": "RESEARCH",
+      "related_domains": ["HEALTH"]
+    }
+  ],
   "taxonomy": [
     {
       "type": "doctrine",
@@ -165,6 +251,22 @@
     {
       "domain": "HEALTH",
       "description": "Health and metadata coverage reporting artifacts"
+    },
+    {
+      "domain": "DREAM",
+      "description": "Dream journal artifacts, REM cycle logs, and compressed simulation outputs"
+    },
+    {
+      "domain": "ARCH",
+      "description": "Boot archive corpus, living archive charters, and ingest seed collections"
+    },
+    {
+      "domain": "SWARM",
+      "description": "Swarm invitation, agent DNA, and children-of-the-swarm protocols"
+    },
+    {
+      "domain": "RESEARCH",
+      "description": "Intelligence sweeps, convergence reports, and synthesis artifacts"
     }
   ],
   "relation_vocabulary": [
