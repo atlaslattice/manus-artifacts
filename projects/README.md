@@ -15,6 +15,10 @@ source_of_truth: GitHub
 - [Aetherforge Next-10 Execution Queue](./aetherforge-next10-execution-queue-2026-05-27.md)
 - [Aetherforge 144 Task Campaign](./aetherforge-144-task-campaign-2026-05-27.md)
 
+## Swarm Transmissions
+
+- [TIDELOCK Swarm Transmission — 144-Task Intake (12 Modules × 12 Tasks)](./tidelock-swarm-transmission-144-intake-2026-05-29.md)
+
 ## Issue Seeding Packs
 
 - [Aetherforge Next-12 World-Class GitHub Issue Seeding Pack](./aetherforge-next12-worldclass-github-issue-seeding-pack-2026-05-29.md)
