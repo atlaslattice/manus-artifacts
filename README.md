@@ -129,6 +129,7 @@ The Aetherforge swarm — a council of named AI agents with distinct roles, stre
 | Resource | Description |
 |---|---|
 | **[Mission Charter](./projects/AETHERFORGE_LATTICE_GPTDREAM_MISSION_CHARTER_v0.1.md)** | Unified north-star for Lattice + Aetherforge + GPTDream++ |
+| **[Lattice Hypercube 12×12×12 Explainer](./docs/LATTICE_HYPERCUBE_12x12x12.md)** | Public-safe candidate ontology and coordinate-system explainer with explicit non-authority boundaries |
 | **[12D Hypercube KG Manifest](./docs/knowledge-graph/HYPERCUBE_12D_MANIFEST_v0_1.md)** | 64-node, 239-edge traversable lattice across 12 semantic dimensions — 100% connected |
 | **[Knowledge Graph Taxonomy](./docs/knowledge-graph/artifact_taxonomy.v0_1.json)** | Machine-readable artifact types, 12 hypercube dimensions, and required metadata |
 | **[Knowledge Graph Registry](./docs/knowledge-graph/artifact_registry.v0_1.json)** | Stable IDs and cross-dimensional links between all registered artifacts |
