@@ -1,0 +1,41 @@
+schema_name: CLAIM_PACKET_SCHEMA_v0.1
+status: staging_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: >
+  Define a public-safe claim packet for shredding archive prose into reviewable graph units.
+  Claim packets are candidates. They are not facts, canon, or proof.
+
+claim_packet:
+  claim_id: null
+  source_passport_id: null
+  source_ref: null
+  exact_text: null
+  normalized_claim: null
+  claim_type: scope | canon_like | deployment | runtime | vendor | legal_policy | security | financial | provenance | raw_export | math | implementation | identity_memory | dream_play | other
+  confidence: null
+  evidence_anchors: []
+  contradicts: []
+  supports: []
+  missing_receipts: []
+  review_lanes: []
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  public_release_status: public_candidate
+  risk_flags: []
+  safe_rewrite: null
+  next_action: review | hold | quarantine | extract_delta | cite | reject | unknown
+
+claim_rules:
+  - exact_text_required_when_available
+  - normalized_claim_must_not_add_new_claims
+  - extracted_claim_is_not_fact
+  - evidence_anchor_required_before_public_strengthening
+  - canon_like_claims_require_human_root
+  - deployment_claims_require_runtime_receipts
+  - openai_officiality_claims_default_to_high_risk
+  - claude_governance_claims_route_to_adversarial_review
+
+keeper: Turn claims into packets before turning packets into belief.
