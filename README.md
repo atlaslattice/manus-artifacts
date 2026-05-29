@@ -45,6 +45,7 @@ Governance status: nothing is canon until ratified by the full council and adjud
 - [Glossary](./docs/GLOSSARY.md) — single authoritative term reference for the archive.
 - [Doctrine Map Index](./docs/DOCTRINE_MAP_INDEX.md) — auto-generated index of doctrine surfaces.
 - [Roadmap](./docs/ROADMAP.md) — measurable public outcomes and future direction.
+- [Lattice Hypercube 12×12×12 Public Explainer](./docs/LATTICE_HYPERCUBE_12x12x12.md) — public-candidate explainer for the H-S-N coordinate system, Rainbow Yin-Yang layer, and Periodic Table 2.0 ambition.
 - [Lattice Knowledge Graph Node Index](./docs/LATTICE_KNOWLEDGE_GRAPH_NODE_INDEX.md) — seed nodes and navigation topology (v0.2: 40 nodes, 100 edges).
 - [KG Search Query Spec](./docs/KG_SEARCH_QUERY_SPEC.md) — hypercube traversal and retrieval query language.
 - [Public Archive Map](./docs/PUBLIC_ARCHIVE_MAP.md) — visual graph map of domain relationships.
