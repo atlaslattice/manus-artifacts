@@ -1,7 +1,12 @@
 # Archive Index — Manus Artifacts
 
 Complete domain-by-domain index of all artifacts in this repository.
-Status legend: ✅ Canonical · 🔶 Candidate · 📁 Collection
+Status legend: 🟣 Ratified · 🔵 Reviewed · 🔶 Candidate · 📁 Collection
+
+Machine-readable source of truth:
+- [Artifact Registry](./knowledge-graph/artifact_registry.v0_1.json)
+- [Ratification Log](../RATIFICATION_LOG.md)
+- [Repo Quality Scorecard](./knowledge-graph/repo_quality_scorecard.v0_1.json)
 
 ---
 
@@ -12,11 +17,11 @@ Constitutional substrate for regenerative computing.
 
 | Artifact | Status |
 |---|---|
-| [v4.0 Unified Field](../aluminum-os/v4.0-unified-field.md) | ✅ Canonical |
+| [v4.0 Unified Field](../aluminum-os/v4.0-unified-field.md) | 🔶 Candidate |
 | [v4.0 Socratic OS Integration](../aluminum-os/v4.0-socratic-os-integration-report.md) | 🔶 Candidate |
-| [v3.0 Unified Field](../aluminum-os/v3.0-unified-field.md) | ✅ Canonical |
+| [v3.0 Unified Field](../aluminum-os/v3.0-unified-field.md) | 🔶 Candidate |
 | [v2.1 Kernel Specification](../aluminum-os/ALUMINUM_V2_1_KERNEL_SPECIFICATION.md) | 🔶 Candidate |
-| [v2.0 Constitutional Substrate](../aluminum-os/v2.0-integrated-constitutional-substrate.md) | ✅ Canonical |
+| [v2.0 Constitutional Substrate](../aluminum-os/v2.0-integrated-constitutional-substrate.md) | 🔶 Candidate |
 | [Unified OS White Paper](../aluminum-os/ALUMINUM_UNIFIED_OS_WHITE_PAPER.md) | 🔶 Candidate |
 | [Protocol Specification](../aluminum-os/ALUMINUM_PROTOCOL_SPECIFICATION.md) | 🔶 Candidate |
 | [Constitutional Charter](../aluminum-os/ALUMINUM_CONSTITUTIONAL_CHARTER.md) | 🔶 Candidate |

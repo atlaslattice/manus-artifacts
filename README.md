@@ -3,7 +3,7 @@
 > *"The intent is to make all of my work public and open source and world class."*
 > — David Sheldon (@atlaslattice)
 
-**manus-artifacts** is the canonical public archive of David Sheldon's research,
+**manus-artifacts** is the durable public archive of David Sheldon's research,
 AI operating systems, governance frameworks, and Aetherforge council work.
 Everything is open-source under the [MIT License](./LICENSE).
 
@@ -26,10 +26,10 @@ Need vocabulary? → **[docs/GLOSSARY.md](./docs/GLOSSARY.md)**
 
 ### Core Systems
 - **[Aluminum OS](./aluminum-os/)** — Constitutional substrate for regenerative computing.
-  - [v4.0 Unified Field](./aluminum-os/v4.0-unified-field.md) ✅ Canonical
+  - [v4.0 Unified Field](./aluminum-os/v4.0-unified-field.md) — candidate
   - [v4.0 Socratic OS Integration](./aluminum-os/v4.0-socratic-os-integration-report.md)
-  - [v3.0 Unified Field](./aluminum-os/v3.0-unified-field.md) ✅ Canonical
-  - [v2.0 Constitutional Substrate](./aluminum-os/v2.0-integrated-constitutional-substrate.md) ✅ Canonical
+  - [v3.0 Unified Field](./aluminum-os/v3.0-unified-field.md) — candidate
+  - [v2.0 Constitutional Substrate](./aluminum-os/v2.0-integrated-constitutional-substrate.md) — candidate
 - **[SheldonBrain](./sheldonbrain/)** — System architecture and knowledge substrate.
   - [System Architecture](./sheldonbrain/system-architecture.md)
 - **[BAZINGA](./bazinga/)** — Constitutional middleware and launch protocols.
@@ -91,6 +91,11 @@ See [CONTRIBUTING](./.github/CONTRIBUTING.md) · [Code of Conduct](./.github/COD
 
 Nothing is canon until ratified by full council and adjudicated by @atlaslattice.
 All current artifacts are **candidates**. GitHub is the durable canonical substrate.
+
+Source of truth for artifact status:
+- [Artifact Registry](./docs/knowledge-graph/artifact_registry.v0_1.json)
+- [Ratification Log](./RATIFICATION_LOG.md)
+- [Repo Quality Scorecard](./docs/knowledge-graph/repo_quality_scorecard.v0_1.json)
 
 ---
 

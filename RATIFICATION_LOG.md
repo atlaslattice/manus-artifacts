@@ -5,6 +5,8 @@ STATUS: CANDIDATE GOVERNANCE LOG — NOT CANON
 ```
 
 This log tracks ratification events and adjudication outcomes.
+The authoritative artifact status source is
+`docs/knowledge-graph/artifact_registry.v0_1.json`; this file is the event ledger.
 
 ## Entries
 

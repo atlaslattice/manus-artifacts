@@ -3,17 +3,23 @@ name: Metadata Provenance Checks
 on:
   push:
     paths:
-      - "docs/knowledge-graph/**"
-      - "graph.json"
-      - "scripts/validate_artifact_metadata.py"
-      - "projects/aetherforge-wave*.md"
+      - "**/*.md"
+      - "**/*.json"
+      - "**/*.py"
+      - "**/*.sh"
+      - "**/*.toml"
+      - "**/*.yaml"
+      - "**/*.yml"
       - ".github/workflows/metadata-provenance-checks.yml"
   pull_request:
     paths:
-      - "docs/knowledge-graph/**"
-      - "graph.json"
-      - "scripts/validate_artifact_metadata.py"
-      - "projects/aetherforge-wave*.md"
+      - "**/*.md"
+      - "**/*.json"
+      - "**/*.py"
+      - "**/*.sh"
+      - "**/*.toml"
+      - "**/*.yaml"
+      - "**/*.yml"
       - ".github/workflows/metadata-provenance-checks.yml"
   workflow_dispatch:
 
@@ -28,5 +34,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Build artifact registry bundle
+        run: python scripts/build_artifact_registry.py
       - name: Validate artifact metadata and graph consistency
         run: python scripts/validate_artifact_metadata.py
+      - name: Run artifact metadata tests
+        run: python -m pytest -q tests/test_artifact_metadata.py

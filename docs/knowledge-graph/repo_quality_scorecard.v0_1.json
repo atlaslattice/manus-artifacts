@@ -1,0 +1,59 @@
+{
+  "schema_version": "0.1",
+  "generated_utc": "2026-05-29T03:29:29Z",
+  "status_authority": "docs/knowledge-graph/artifact_registry.v0_1.json",
+  "totals": {
+    "tracked_artifact_files": 845,
+    "registry_artifacts": 845,
+    "graph_nodes": 845,
+    "graph_edges": 318,
+    "graph_coverage_pct": 100.0,
+    "linked_artifacts_pct": 16.92,
+    "top_level_readme_coverage_pct": 8.7
+  },
+  "status_counts": {
+    "candidate": 845
+  },
+  "artifact_type_counts": {
+    "artifact_registry": 1,
+    "configuration": 34,
+    "data": 16,
+    "document": 565,
+    "index": 25,
+    "knowledge_graph": 1,
+    "packaging": 2,
+    "schema": 46,
+    "script": 3,
+    "shell_script": 2,
+    "source_code": 136,
+    "test": 8,
+    "workflow": 6
+  },
+  "owner_counts": {
+    ".github": 15,
+    "about": 1,
+    "aluminum-os": 22,
+    "aluminum-os-core": 2,
+    "archive": 491,
+    "archives": 1,
+    "bazinga": 1,
+    "children-of-the-swarm": 4,
+    "codebases": 171,
+    "council": 1,
+    "council-reviews": 2,
+    "docs": 11,
+    "fixtures": 7,
+    "gptbrain": 1,
+    "health": 4,
+    "manus-vault": 12,
+    "projects": 19,
+    "reference_impl": 19,
+    "research": 7,
+    "root": 9,
+    "schemas": 33,
+    "scripts": 3,
+    "sheldonbrain": 1,
+    "tests": 8
+  },
+  "pending_ratification_events": 3
+}

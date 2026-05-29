@@ -3,7 +3,7 @@
 > *"The intent is to make all of my work public and open source and world class."*
 > — David Sheldon (@atlaslattice)
 
-Welcome to **manus-artifacts**, the canonical public archive of David Sheldon's
+Welcome to **manus-artifacts**, the durable public archive of David Sheldon's
 research, system design, governance frameworks, and AI-era operating systems.
 Everything here is open-source under the [MIT License](../LICENSE).
 
@@ -71,6 +71,11 @@ It is organized around several major domains:
 > All current artifacts are **candidates**.
 
 GitHub is the durable canonical substrate. Drive and Notion are relay layers.
+
+Status authority:
+- [Artifact Registry](./knowledge-graph/artifact_registry.v0_1.json)
+- [Ratification Log](../RATIFICATION_LOG.md)
+- [Repo Quality Scorecard](./knowledge-graph/repo_quality_scorecard.v0_1.json)
 
 ---
 
