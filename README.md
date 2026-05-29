@@ -62,6 +62,31 @@ Guardrails:
 - **[Lattice State of the Graph — Weekly Report (2026-05-27)](./archive/knowledge_graph/lattice_kg/v0_5/LATTICE_STATE_OF_GRAPH_WEEKLY_REPORT_2026-05-27.md)** — Public weekly progress, risk, and next-wave report.
 - **[TIDELOCK Rehydration Receipt (2026-05-26)](./archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_REHYDRATION_RECEIPT_2026-05-26.md)** — Rehydrated operating context, boundaries, and graph substrate receipts.
 
+### H-S-N Graph Tooling (New)
+- **[H-S-N Axis Definitions v1.0](./archive/knowledge_graph/lattice_kg/v0_5/HSN_AXIS_DEFINITIONS_v1.0.yaml)** — Frozen 36-term ontology (12 Houses × 12 Spheres × 12 Nodes) — the foundation everything indexes into.
+- **[Lattice Graph Manifest v1.0](./archive/knowledge_graph/lattice_kg/v0_5/lattice_graph_manifest.v1.0.json)** — Machine-readable graph: 1,268 nodes + 316 edges across artifact, element, and spectral domains.
+- **[Interactive Graph Viewer](./docs/graph/index.html)** — Canvas-based H-S-N browser for GitHub Pages (`docs/graph/`).
+- **[State of the Lattice — Weekly Report](./docs/STATE_OF_LATTICE_WEEKLY.md)** — Auto-generated Monday CI report: coverage stats, edge counts, open review items.
+
+#### CLI Query Tool
+```bash
+# Address-first lookup
+python scripts/query_lattice.py H01-S06-N01
+
+# Coverage stats across all 1728 cells
+python scripts/query_lattice.py --stats
+
+# List all populated H-S-N cells
+python scripts/query_lattice.py --list-all-coords
+
+# Filter by house or sphere
+python scripts/query_lattice.py --house H04
+```
+
+#### Fork Bridges (External Data → H-S-N)
+- **[Periodic Table fork bridge](./forks/periodic-table-json/)** — 118 elements mapped to H01-S06-N## (Periodic Table 2.0 seed).
+- **[Color/Spectrum fork bridge](./forks/color-spectrum/)** — 25 spectral bands + chromatic notes mapped to H04-S06-N## (Rainbow Yin-Yang seed).
+
 ### Governance & Council
 - **[Council](./council/)** — Trinity and Pantheon Council session archives.
 - **[Council Reviews](./council-reviews/)** — External reviews and validation.

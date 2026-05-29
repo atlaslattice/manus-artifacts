@@ -1,0 +1,165 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/atlaslattice/manus-artifacts/schemas/lattice_graph_manifest.schema.json",
+  "title": "Lattice Graph Manifest",
+  "description": "Machine-readable graph manifest for the Atlas Lattice H-S-N knowledge graph. CANDIDATE ONLY — NOT CANON. No artifact in this manifest is canon until ratified by full council and adjudicated by @atlaslattice.",
+  "type": "object",
+  "required": [
+    "schema_id",
+    "schema_version",
+    "generated_at_utc",
+    "stats",
+    "nodes",
+    "edges"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_id": {
+      "type": "string",
+      "description": "Unique schema identifier"
+    },
+    "schema_version": {
+      "type": "string",
+      "description": "Semantic version of this schema"
+    },
+    "generated_at_utc": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 UTC timestamp of when the manifest was generated"
+    },
+    "stats": {
+      "type": "object",
+      "required": [
+        "total_nodes",
+        "total_edges",
+        "distinct_hsn_coordinates",
+        "hsn_coverage_pct",
+        "node_types",
+        "edge_types"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "total_nodes": { "type": "integer", "minimum": 0 },
+        "total_edges": { "type": "integer", "minimum": 0 },
+        "distinct_hsn_coordinates": { "type": "integer", "minimum": 0 },
+        "hsn_coverage_pct": { "type": "number", "minimum": 0, "maximum": 100 },
+        "node_types": {
+          "type": "object",
+          "additionalProperties": { "type": "integer" }
+        },
+        "edge_types": {
+          "type": "object",
+          "additionalProperties": { "type": "integer" }
+        }
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "description": "All nodes in the lattice graph",
+      "items": {
+        "type": "object",
+        "required": [
+          "node_id",
+          "node_type",
+          "label",
+          "hsn_coordinate",
+          "canon_status",
+          "trust_state"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "node_id": {
+            "type": "string",
+            "description": "Unique node identifier"
+          },
+          "node_type": {
+            "type": "string",
+            "enum": ["artifact", "element", "spectral_band", "chromatic_note", "house"],
+            "description": "Type of lattice node"
+          },
+          "label": {
+            "type": "string",
+            "description": "Human-readable label for this node"
+          },
+          "hsn_coordinate": {
+            "type": "string",
+            "pattern": "^H[0-9]{2}-S[0-9]{2}-N[0-9]{2}$",
+            "description": "H-S-N coordinate in format H##-S##-N##"
+          },
+          "canon_status": {
+            "type": "string",
+            "description": "Canonization status — must be not_canon for candidates"
+          },
+          "trust_state": {
+            "type": "string",
+            "description": "Trust/review state of this node"
+          },
+          "path": {
+            "type": "string",
+            "description": "Repository-relative path (artifact nodes)"
+          },
+          "atomic_number": {
+            "type": "integer",
+            "description": "Atomic number (element nodes)"
+          },
+          "symbol": {
+            "type": "string",
+            "description": "Element symbol (element nodes)"
+          },
+          "category": {
+            "type": "string",
+            "description": "Element category (element nodes)"
+          },
+          "frequency_thz": {
+            "type": "number",
+            "description": "Frequency in THz (spectral nodes)"
+          },
+          "wavelength_nm": {
+            "type": "number",
+            "description": "Wavelength in nm (spectral nodes)"
+          },
+          "riemann_s_weight": {
+            "type": "number",
+            "description": "Riemann S-operator weight (spectrum nodes)"
+          }
+        }
+      }
+    },
+    "edges": {
+      "type": "array",
+      "description": "All edges in the lattice graph",
+      "items": {
+        "type": "object",
+        "required": [
+          "edge_id",
+          "from_node_id",
+          "to_node_id",
+          "edge_type"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "edge_id": {
+            "type": "string",
+            "description": "Unique edge identifier"
+          },
+          "from_node_id": {
+            "type": "string",
+            "description": "Source node ID"
+          },
+          "to_node_id": {
+            "type": "string",
+            "description": "Target node ID"
+          },
+          "edge_type": {
+            "type": "string",
+            "description": "Semantic type of this edge relationship"
+          },
+          "weight": {
+            "type": "number",
+            "description": "Edge weight or strength"
+          }
+        }
+      }
+    }
+  }
+}

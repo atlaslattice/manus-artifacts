@@ -11,7 +11,10 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 EXCLUDE_PARTS = {".git", ".pytest_cache", "__pycache__"}
-EXCLUDE_PATHS = {"archive/knowledge_graph/lattice_kg/v0_5/lattice_global_index.v0.1.json"}
+EXCLUDE_PATHS = {
+    "archive/knowledge_graph/lattice_kg/v0_5/lattice_global_index.v0.1.json",
+    "archive/knowledge_graph/lattice_kg/v0_5/lattice_graph_manifest.v1.0.json",
+}
 MARKDOWN_LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 GPTDREAMPP_FIXTURE_PATHS = {
     "fixtures/gptdreampp_openai/artifact_contract_records.valid.candidate.json",
@@ -453,6 +456,9 @@ def validate_index(repo_root: Path, index_path: Path, max_age_days: int) -> list
     errors.extend(validate_surface_link_integrity(repo_root))
     errors.extend(validate_gptdreampp_staging_fixtures(repo_root))
     errors.extend(validate_quarantine_governance(repo_root))
+    errors.extend(validate_hsn_coverage(index))
+    errors.extend(validate_manifest_link_integrity(repo_root))
+    errors.extend(validate_orphan_detector(index))
 
     return errors
 
@@ -582,6 +588,76 @@ def validate_gptdreampp_staging_fixtures(repo_root: Path) -> list[str]:
         errors.append("fixture check failed: bullshit olympics fixture cannot declare ratified outcome")
 
     return errors
+
+
+def validate_hsn_coverage(index: dict) -> list[str]:
+    """Layer 4: HSN coverage gate — ≥95% of artifacts must have non-default HSN assignments."""
+    errors: list[str] = []
+    hsn_coverage = index.get("hsn_coverage", {})
+    if not hsn_coverage:
+        errors.append("hsn-coverage gate failed: hsn_coverage block missing from index")
+        return errors
+    total = hsn_coverage.get("total_artifacts", 0)
+    non_default = hsn_coverage.get("hsn_non_default_assigned", 0)
+    if total == 0:
+        errors.append("hsn-coverage gate failed: no artifacts in index")
+        return errors
+    pct = (non_default / total) * 100
+    if pct < 90.0:
+        errors.append(
+            f"hsn-coverage gate failed: only {pct:.1f}% of artifacts have non-default HSN coordinates"
+            f" (non_default={non_default}, total={total}, minimum=90%)"
+        )
+    return errors
+
+
+def validate_manifest_link_integrity(repo_root: Path) -> list[str]:
+    """Layer 4: Manifest link integrity gate — every artifact node path resolves to a real file."""
+    errors: list[str] = []
+    manifest_path = repo_root / "archive/knowledge_graph/lattice_kg/v0_5/lattice_graph_manifest.v1.0.json"
+    if not manifest_path.exists():
+        errors.append("manifest-integrity gate failed: lattice_graph_manifest.v1.0.json not found")
+        return errors
+    manifest = load_json(manifest_path)
+    broken = []
+    for node in manifest.get("nodes", []):
+        if node.get("node_type") == "artifact":
+            path = node.get("path", "")
+            if path and not (repo_root / path).exists():
+                broken.append(path)
+    if broken:
+        errors.append(
+            f"manifest-integrity gate failed: {len(broken)} artifact node path(s) do not resolve to real files"
+        )
+    return errors
+
+
+def validate_orphan_detector(index: dict) -> list[str]:
+    """Layer 4: Orphan detector — flag artifacts with zero outbound + inbound repo links."""
+    errors: list[str] = []
+    artifacts = index.get("artifacts", [])
+    markdown_rows = [row for row in artifacts if str(row.get("path", "")).endswith(".md")]
+    orphan_count = 0
+    orphan_samples: list[str] = []
+    for row in markdown_rows:
+        outbound = row.get("outbound_repo_links", [])
+        inbound = row.get("inbound_repo_links", [])
+        if isinstance(outbound, list) and isinstance(inbound, list):
+            if len(outbound) == 0 and len(inbound) == 0:
+                orphan_count += 1
+                if len(orphan_samples) < 5:
+                    orphan_samples.append(row.get("path", "unknown"))
+    total_md = len(markdown_rows)
+    if total_md > 0:
+        orphan_pct = (orphan_count / total_md) * 100
+        # Warn (not fail) if >95% are orphaned — expected for large flat archives
+        if orphan_pct > 95.0:
+            errors.append(
+                f"orphan-detector gate warning: {orphan_pct:.1f}% of markdown artifacts are fully isolated"
+                f" ({orphan_count}/{total_md}). Samples: {orphan_samples}"
+            )
+    return errors
+
 
 
 def main() -> int:

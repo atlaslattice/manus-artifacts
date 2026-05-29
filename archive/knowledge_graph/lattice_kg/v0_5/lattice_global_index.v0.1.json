@@ -1,14 +1,14 @@
 {
   "schema_id": "lattice_global_index.v0.1",
-  "generated_at_utc": "2026-05-29T21:56:31.779073Z",
+  "generated_at_utc": "2026-05-29T22:10:21.818966Z",
   "repository_root": "/tmp/workspace/atlaslattice/manus-artifacts",
-  "snapshot_fingerprint": "af4843c6cb25fd958559bd6870f5888195fadd0abb8403eb2c0617717b5343ef",
+  "snapshot_fingerprint": "80e0811adcbbe82ff3286cf4122c1122d95fb0fd84a547b69f7bace1b56aa843",
   "routes": [
     {
       "route_id": "ROUTE-.GITHUB-CI_GOVERNANCE",
       "domain": ".github",
       "lane": "ci_governance",
-      "artifact_count": 10,
+      "artifact_count": 11,
       "log_count": 0
     },
     {
@@ -43,8 +43,8 @@
       "route_id": "ROUTE-ARCHIVE-ARCHIVE_OPS",
       "domain": "archive",
       "lane": "archive_ops",
-      "artifact_count": 704,
-      "log_count": 80
+      "artifact_count": 705,
+      "log_count": 81
     },
     {
       "route_id": "ROUTE-ARCHIVES-ARCHIVE_OPS",
@@ -106,7 +106,7 @@
       "route_id": "ROUTE-DOCS-PUBLIC_NAVIGATION",
       "domain": "docs",
       "lane": "public_navigation",
-      "artifact_count": 11,
+      "artifact_count": 13,
       "log_count": 1
     },
     {
@@ -114,6 +114,13 @@
       "domain": "fixtures",
       "lane": "general",
       "artifact_count": 13,
+      "log_count": 0
+    },
+    {
+      "route_id": "ROUTE-FORKS-GENERAL",
+      "domain": "forks",
+      "lane": "general",
+      "artifact_count": 6,
       "log_count": 0
     },
     {
@@ -176,14 +183,14 @@
       "route_id": "ROUTE-SCHEMAS-SCHEMA_VALIDATION",
       "domain": "schemas",
       "lane": "schema_validation",
-      "artifact_count": 35,
+      "artifact_count": 36,
       "log_count": 1
     },
     {
       "route_id": "ROUTE-SCRIPTS-TOOLING",
       "domain": "scripts",
       "lane": "tooling",
-      "artifact_count": 4,
+      "artifact_count": 6,
       "log_count": 0
     },
     {
@@ -209,17 +216,17 @@
     }
   ],
   "link_health": {
-    "markdown_artifacts_total": 788,
-    "underlinked_markdown_artifacts": 757,
-    "unresolved_repo_links": 15,
-    "isolated_markdown_artifacts": 708,
-    "connected_markdown_components": 716,
-    "root_reachable_markdown_artifacts": 52
+    "markdown_artifacts_total": 792,
+    "underlinked_markdown_artifacts": 761,
+    "unresolved_repo_links": 16,
+    "isolated_markdown_artifacts": 711,
+    "connected_markdown_components": 719,
+    "root_reachable_markdown_artifacts": 53
   },
   "hsn_coverage": {
-    "total_artifacts": 1125,
-    "hsn_assigned_total": 1125,
-    "hsn_non_default_assigned": 1052,
+    "total_artifacts": 1138,
+    "hsn_assigned_total": 1138,
+    "hsn_non_default_assigned": 1065,
     "coverage_pct": 100.0
   },
   "artifacts": [
@@ -373,9 +380,9 @@
       "domain": ".github",
       "lane": "ci_governance",
       "is_log": false,
-      "size_bytes": 2620,
-      "sha256": "970cf5b5167c9579ae56fe6aa75885f9b601d2f1979f52029cb7470b63b97b79",
-      "last_modified_utc": "2026-05-29T21:50:22.039469Z",
+      "size_bytes": 2942,
+      "sha256": "c5ad83857f2216625eed0f17b72a55409c74d43f5575a26eb8875f0fc9727a5c",
+      "last_modified_utc": "2026-05-29T22:07:20.216332Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
@@ -384,6 +391,24 @@
       "inbound_repo_links": [],
       "hsn_coordinate": "H08-S11-N02",
       "source_receipt": ".github/workflows/lattice-kg-quality-gates.yml"
+    },
+    {
+      "artifact_id": "ATLAS-KG-1e642430d9931c50",
+      "path": ".github/workflows/state-of-lattice-weekly.yml",
+      "domain": ".github",
+      "lane": "ci_governance",
+      "is_log": false,
+      "size_bytes": 1237,
+      "sha256": "11bd3654f80db476abe910b7352ecc70d3ae342b123839dfff82cf9e473c2ec2",
+      "last_modified_utc": "2026-05-29T22:05:54.161105Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "outbound_repo_links": [],
+      "unresolved_repo_links": [],
+      "inbound_repo_links": [],
+      "hsn_coordinate": "H08-S11-N02",
+      "source_receipt": ".github/workflows/state-of-lattice-weekly.yml"
     },
     {
       "artifact_id": "ATLAS-KG-41aaf6e6ec71ec31",
@@ -445,9 +470,9 @@
       "domain": "_root",
       "lane": "general",
       "is_log": false,
-      "size_bytes": 6355,
-      "sha256": "03bdfb8910357fdb9fae2a92a036a1dd86d9760f6702c933726a64e5083ae106",
-      "last_modified_utc": "2026-05-29T21:50:22.039469Z",
+      "size_bytes": 7768,
+      "sha256": "c80844f308aeaee3cb8e8597902c4eaa0aff8f8ad83be9f0b067009005a0846d",
+      "last_modified_utc": "2026-05-29T22:06:59.103027Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
@@ -461,6 +486,7 @@
         "archive/README.md",
         "archive/aetherforge/gptdreampp-openai/README.md",
         "archive/boot/copilotbrain/TIDELOCKBrain/TIDELOCK_REHYDRATION_RECEIPT_2026-05-26.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/HSN_AXIS_DEFINITIONS_v1.0.yaml",
         "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_AETHERFORGE_GPTDREAM_UNIFIED_MISSION_CHARTER_v0.1.md",
         "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_HYPERCUBE_144_SCOREBOARD_v0.1.md",
         "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_KG_GLOSSARY_v0.1.md",
@@ -470,6 +496,7 @@
         "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_UNIFIED_MISSION_DASHBOARD_v0.1.md",
         "archive/knowledge_graph/lattice_kg/v0_5/LATTICE_WORLD_CLASS_CONTRIBUTOR_START_HERE_v0.1.md",
         "archive/knowledge_graph/lattice_kg/v0_5/README.md",
+        "archive/knowledge_graph/lattice_kg/v0_5/lattice_graph_manifest.v1.0.json",
         "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md",
         "archives/janus-checkpoints",
         "bazinga",
@@ -478,6 +505,10 @@
         "council-reviews",
         "docs",
         "docs/README.md",
+        "docs/STATE_OF_LATTICE_WEEKLY.md",
+        "docs/graph/index.html",
+        "forks/color-spectrum",
+        "forks/periodic-table-json",
         "health",
         "manus-vault",
         "projects/README.md",
@@ -2893,6 +2924,24 @@
       "inbound_repo_links": [],
       "hsn_coordinate": "H09-S03-N07",
       "source_receipt": "archive/boot/copilotbrain/TIDELOCKBrain/SELF_CHECKLIST.md"
+    },
+    {
+      "artifact_id": "ATLAS-KG-058cece5178fb26b",
+      "path": "archive/boot/copilotbrain/TIDELOCKBrain/SESSION_LOG_WORLD_CLASS_KG_SPRINT_2026-05-29.md",
+      "domain": "archive",
+      "lane": "archive_ops",
+      "is_log": true,
+      "size_bytes": 5534,
+      "sha256": "44e26187681b10dc3c408e5e90ce8ddea207be417b805ce9b4e8dba89a34ea33",
+      "last_modified_utc": "2026-05-29T22:08:07.125993Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "outbound_repo_links": [],
+      "unresolved_repo_links": [],
+      "inbound_repo_links": [],
+      "hsn_coordinate": "H09-S03-N07",
+      "source_receipt": "archive/boot/copilotbrain/TIDELOCKBrain/SESSION_LOG_WORLD_CLASS_KG_SPRINT_2026-05-29.md"
     },
     {
       "artifact_id": "ATLAS-KG-74a8d8996697547b",
@@ -10285,7 +10334,9 @@
       "trust_state": "candidate_unverified",
       "outbound_repo_links": [],
       "unresolved_repo_links": [],
-      "inbound_repo_links": [],
+      "inbound_repo_links": [
+        "README.md"
+      ],
       "hsn_coordinate": "H09-S03-N05",
       "source_receipt": "archive/knowledge_graph/lattice_kg/v0_5/HSN_AXIS_DEFINITIONS_v1.0.yaml"
     },
@@ -18280,6 +18331,28 @@
       "source_receipt": "docs/README.md"
     },
     {
+      "artifact_id": "ATLAS-KG-70ea3aae02c10e74",
+      "path": "docs/STATE_OF_LATTICE_WEEKLY.md",
+      "domain": "docs",
+      "lane": "public_navigation",
+      "is_log": false,
+      "size_bytes": 2865,
+      "sha256": "a6ed0cdf8b314807e370b37c954202fff5c2d061a31754e431532be15f141c2b",
+      "last_modified_utc": "2026-05-29T22:08:25.188122Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "outbound_repo_links": [],
+      "unresolved_repo_links": [
+        "docs/docs/graph/index.html"
+      ],
+      "inbound_repo_links": [
+        "README.md"
+      ],
+      "hsn_coordinate": "H09-S10-N05",
+      "source_receipt": "docs/STATE_OF_LATTICE_WEEKLY.md"
+    },
+    {
       "artifact_id": "ATLAS-KG-5f11c1447dc44779",
       "path": "docs/asset-catalogue-march-2026.md",
       "domain": "docs",
@@ -18408,6 +18481,26 @@
       "inbound_repo_links": [],
       "hsn_coordinate": "H09-S10-N05",
       "source_receipt": "docs/continuity-os/protocols/spiritual-source-boundary-protocol.md"
+    },
+    {
+      "artifact_id": "ATLAS-KG-b2c61b40bcc55a07",
+      "path": "docs/graph/index.html",
+      "domain": "docs",
+      "lane": "public_navigation",
+      "is_log": false,
+      "size_bytes": 20191,
+      "sha256": "a9393516f44238240736df9fe5b061d2e89f85497f1541b0a12ad2de55d51561",
+      "last_modified_utc": "2026-05-29T22:04:07.038578Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "outbound_repo_links": [],
+      "unresolved_repo_links": [],
+      "inbound_repo_links": [
+        "README.md"
+      ],
+      "hsn_coordinate": "H09-S10-N05",
+      "source_receipt": "docs/graph/index.html"
     },
     {
       "artifact_id": "ATLAS-KG-114f0e4ce417e6f8",
@@ -18706,6 +18799,114 @@
       ],
       "hsn_coordinate": "H06-S03-N07",
       "source_receipt": "fixtures/gptdreampp_openai/notion_cargo_queue.valid.candidate.json"
+    },
+    {
+      "artifact_id": "ATLAS-KG-3ebdbd442945b737",
+      "path": "forks/color-spectrum/README.md",
+      "domain": "forks",
+      "lane": "general",
+      "is_log": false,
+      "size_bytes": 2483,
+      "sha256": "8ec8fc14b66c2a945db0b1587cfaef5dd543444d01741842903d5d7e2578957f",
+      "last_modified_utc": "2026-05-29T22:00:46.898652Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "outbound_repo_links": [],
+      "unresolved_repo_links": [],
+      "inbound_repo_links": [],
+      "hsn_coordinate": "H08-S08-N05",
+      "source_receipt": "forks/color-spectrum/README.md"
+    },
+    {
+      "artifact_id": "ATLAS-KG-f43a4f9289c7d619",
+      "path": "forks/color-spectrum/bridge/ingest_spectrum.py",
+      "domain": "forks",
+      "lane": "general",
+      "is_log": false,
+      "size_bytes": 4201,
+      "sha256": "b2db766435116d01d71daa34e88b27d783e981147f842b8c62b5db4516159544",
+      "last_modified_utc": "2026-05-29T22:01:44.947496Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "outbound_repo_links": [],
+      "unresolved_repo_links": [],
+      "inbound_repo_links": [],
+      "hsn_coordinate": "H08-S08-N05",
+      "source_receipt": "forks/color-spectrum/bridge/ingest_spectrum.py"
+    },
+    {
+      "artifact_id": "ATLAS-KG-773a460255d5cfeb",
+      "path": "forks/color-spectrum/data/spectrum_hsn_seed.json",
+      "domain": "forks",
+      "lane": "general",
+      "is_log": false,
+      "size_bytes": 19597,
+      "sha256": "67f77436492f4021d3e1c35036cb5584287ad2c547e2b14524b855b099de347e",
+      "last_modified_utc": "2026-05-29T22:01:24.807204Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "outbound_repo_links": [],
+      "unresolved_repo_links": [],
+      "inbound_repo_links": [],
+      "hsn_coordinate": "H08-S08-N03",
+      "source_receipt": "forks/color-spectrum/data/spectrum_hsn_seed.json"
+    },
+    {
+      "artifact_id": "ATLAS-KG-083f5b35ccd3911d",
+      "path": "forks/periodic-table-json/README.md",
+      "domain": "forks",
+      "lane": "general",
+      "is_log": false,
+      "size_bytes": 1853,
+      "sha256": "87ee480c8012376a449fba36eae9b5fdcdb2d500bb8a48e8a0af012f6d8525c5",
+      "last_modified_utc": "2026-05-29T21:59:08.206214Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "outbound_repo_links": [],
+      "unresolved_repo_links": [],
+      "inbound_repo_links": [],
+      "hsn_coordinate": "H08-S08-N05",
+      "source_receipt": "forks/periodic-table-json/README.md"
+    },
+    {
+      "artifact_id": "ATLAS-KG-3b36b004db55ad28",
+      "path": "forks/periodic-table-json/bridge/ingest_elements.py",
+      "domain": "forks",
+      "lane": "general",
+      "is_log": false,
+      "size_bytes": 5875,
+      "sha256": "ad87fcee82f4a11b7c9679db63539e2e67caec7750202fce48bf4709487b031f",
+      "last_modified_utc": "2026-05-29T22:00:18.740250Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "outbound_repo_links": [],
+      "unresolved_repo_links": [],
+      "inbound_repo_links": [],
+      "hsn_coordinate": "H08-S08-N05",
+      "source_receipt": "forks/periodic-table-json/bridge/ingest_elements.py"
+    },
+    {
+      "artifact_id": "ATLAS-KG-fa2bffe336386e54",
+      "path": "forks/periodic-table-json/data/elements_hsn_seed.json",
+      "domain": "forks",
+      "lane": "general",
+      "is_log": false,
+      "size_bytes": 84861,
+      "sha256": "1eaad79661d060f219d3417e26474ced1e99cad45fe13cc11a063d497b55bff6",
+      "last_modified_utc": "2026-05-29T21:59:54.892897Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "outbound_repo_links": [],
+      "unresolved_repo_links": [],
+      "inbound_repo_links": [],
+      "hsn_coordinate": "H08-S08-N03",
+      "source_receipt": "forks/periodic-table-json/data/elements_hsn_seed.json"
     },
     {
       "artifact_id": "ATLAS-KG-65a910448aadf3f5",
@@ -20246,6 +20447,24 @@
       "source_receipt": "schemas/lattice_global_index.schema.json"
     },
     {
+      "artifact_id": "ATLAS-KG-f33f2e1f51c44723",
+      "path": "schemas/lattice_graph_manifest.schema.json",
+      "domain": "schemas",
+      "lane": "schema_validation",
+      "is_log": false,
+      "size_bytes": 5028,
+      "sha256": "1475de829eeb7a82d42957787f5aa29eff73965aef5ec5baf52489758ea7c471",
+      "last_modified_utc": "2026-05-29T22:05:23.728669Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "outbound_repo_links": [],
+      "unresolved_repo_links": [],
+      "inbound_repo_links": [],
+      "hsn_coordinate": "H07-S09-N05",
+      "source_receipt": "schemas/lattice_graph_manifest.schema.json"
+    },
+    {
       "artifact_id": "ATLAS-KG-f3972b11df23b72d",
       "path": "schemas/native_thread/v0_1/native-thread-ingestion-packet.schema.yaml",
       "domain": "schemas",
@@ -20377,9 +20596,9 @@
       "domain": "scripts",
       "lane": "tooling",
       "is_log": false,
-      "size_bytes": 16182,
-      "sha256": "80903bc635ca602e3dee8973d7c80c40137a78c164a237cded9ddb0c294f25c6",
-      "last_modified_utc": "2026-05-29T21:56:14.561607Z",
+      "size_bytes": 16269,
+      "sha256": "de6de2ee49320707fb8bc6acf046a0b054354c237109e2ae1a706257156c95f1",
+      "last_modified_utc": "2026-05-29T22:05:05.757416Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",
@@ -20410,6 +20629,42 @@
       "source_receipt": "scripts/detect_underlinked_artifacts.py"
     },
     {
+      "artifact_id": "ATLAS-KG-ed38b8d405ecae93",
+      "path": "scripts/generate_state_of_lattice_report.py",
+      "domain": "scripts",
+      "lane": "tooling",
+      "is_log": false,
+      "size_bytes": 7580,
+      "sha256": "11fd56fcb128408e4a128fc1d3d69a593cdfa04a20b0c172bda485b847256aae",
+      "last_modified_utc": "2026-05-29T22:06:29.137596Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "outbound_repo_links": [],
+      "unresolved_repo_links": [],
+      "inbound_repo_links": [],
+      "hsn_coordinate": "H09-S09-N05",
+      "source_receipt": "scripts/generate_state_of_lattice_report.py"
+    },
+    {
+      "artifact_id": "ATLAS-KG-b4932358002724ff",
+      "path": "scripts/query_lattice.py",
+      "domain": "scripts",
+      "lane": "tooling",
+      "is_log": false,
+      "size_bytes": 13092,
+      "sha256": "b49396c548f607b00ecc7268f27a0ff9e1972f30f80bf52e9ffe7e5b7f2ba393",
+      "last_modified_utc": "2026-05-29T21:58:42.039823Z",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployable",
+      "trust_state": "candidate_unverified",
+      "outbound_repo_links": [],
+      "unresolved_repo_links": [],
+      "inbound_repo_links": [],
+      "hsn_coordinate": "H09-S09-N05",
+      "source_receipt": "scripts/query_lattice.py"
+    },
+    {
       "artifact_id": "ATLAS-KG-1d6071fd319aa3bf",
       "path": "scripts/test_sundya_runner.py",
       "domain": "scripts",
@@ -20433,9 +20688,9 @@
       "domain": "scripts",
       "lane": "tooling",
       "is_log": false,
-      "size_bytes": 27373,
-      "sha256": "1cc0b9bf72c5832737d3e6cbabed205704bb3f053afbe9cb42dd7a5b232e38a0",
-      "last_modified_utc": "2026-05-29T21:50:22.184742Z",
+      "size_bytes": 30669,
+      "sha256": "fb7dfc6475e948636cf06386c11a460036e8b7306ce0218eaaca19f3329472ac",
+      "last_modified_utc": "2026-05-29T22:10:13.735777Z",
       "canon_status": "not_canon",
       "deployment_status": "not_deployable",
       "trust_state": "candidate_unverified",

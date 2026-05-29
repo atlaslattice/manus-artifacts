@@ -5,8 +5,11 @@ on:
     paths:
       - 'archive/knowledge_graph/lattice_kg/v0_5/**'
       - 'schemas/lattice_global_index.schema.json'
+      - 'schemas/lattice_graph_manifest.schema.json'
       - 'scripts/build_lattice_global_index.py'
       - 'scripts/validate_lattice_quality_gates.py'
+      - 'scripts/generate_state_of_lattice_report.py'
+      - 'scripts/query_lattice.py'
       - 'tests/test_lattice_kg_hypercube_program.py'
       - 'tests/test_world_class_execution_surfaces.py'
       - 'tests/test_unified_mission_frame.py'
@@ -17,14 +20,18 @@ on:
       - 'projects/aetherforge-144-task-campaign-2026-05-27.md'
       - 'projects/aetherforge-top10-taskboard-2026-05-28.md'
       - 'projects/README.md'
+      - 'forks/**'
       - 'README.md'
       - '.github/workflows/lattice-kg-quality-gates.yml'
   pull_request:
     paths:
       - 'archive/knowledge_graph/lattice_kg/v0_5/**'
       - 'schemas/lattice_global_index.schema.json'
+      - 'schemas/lattice_graph_manifest.schema.json'
       - 'scripts/build_lattice_global_index.py'
       - 'scripts/validate_lattice_quality_gates.py'
+      - 'scripts/generate_state_of_lattice_report.py'
+      - 'scripts/query_lattice.py'
       - 'tests/test_lattice_kg_hypercube_program.py'
       - 'tests/test_world_class_execution_surfaces.py'
       - 'tests/test_unified_mission_frame.py'
@@ -35,6 +42,7 @@ on:
       - 'projects/aetherforge-144-task-campaign-2026-05-27.md'
       - 'projects/aetherforge-top10-taskboard-2026-05-28.md'
       - 'projects/README.md'
+      - 'forks/**'
       - 'README.md'
       - '.github/workflows/lattice-kg-quality-gates.yml'
   workflow_dispatch:

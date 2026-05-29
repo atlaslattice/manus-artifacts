@@ -13,7 +13,10 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 EXCLUDE_PARTS = {".git", ".pytest_cache", "__pycache__"}
-EXCLUDE_PATHS = {"archive/knowledge_graph/lattice_kg/v0_5/lattice_global_index.v0.1.json"}
+EXCLUDE_PATHS = {
+    "archive/knowledge_graph/lattice_kg/v0_5/lattice_global_index.v0.1.json",
+    "archive/knowledge_graph/lattice_kg/v0_5/lattice_graph_manifest.v1.0.json",
+}
 LOG_MARKERS = ("log", "journal", "wake_report", "delta_extraction", "receipt")
 LANE_MAP = {
     "archive": "archive_ops",
