@@ -42,6 +42,8 @@ Guardrails:
 - **[Free Bank](./quarantine/projects/free-bank/)** ⚠️ _quarantined — pending private repo migration_ — Banking revolution and financial sovereignty.
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
 - **[Three-Tier Autonomy](./projects/three-tier-autonomy/)** — Policy framework for agentic autonomy.
+- **[TIDELOCK Swarm Intake Freeze Comment Template](./projects/tidelock-swarm-intake-freeze-comment-template-2026-05-29.md)** — Ready-to-paste freeze announcement for intake issue #232.
+- **[TIDELOCK Swarm Batch-Label Taxonomy](./projects/tidelock-swarm-batch-label-taxonomy-2026-05-29.md)** — Label definitions, batch boundaries, and divvy routing rules for execution issues.
 - **[Aetherforge World-Class Authoritative Roadmap v0.1](./projects/aetherforge-world-class-authoritative-roadmap-v0.1.md)** — Single authoritative execution roadmap for world-class sequencing.
 - **[Aetherforge 144-Task Campaign Board](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — Program-level 12-wave campaign board (144 total tasks).
 - **[Aetherforge Next-144 Taskboard](./projects/aetherforge-next144-taskboard-2026-05-28.md)** — Full sequenced execution queue for the next 144 tasks.

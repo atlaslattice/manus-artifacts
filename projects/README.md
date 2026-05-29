@@ -4,6 +4,8 @@ Execution surfaces for project-specific strategy and delivery artifacts.
 
 ## Current entries
 
+- [TIDELOCK Swarm Intake — Freeze Comment Template](./tidelock-swarm-intake-freeze-comment-template-2026-05-29.md)
+- [TIDELOCK Swarm — Batch-Label Taxonomy](./tidelock-swarm-batch-label-taxonomy-2026-05-29.md)
 - [Aetherforge World-Class Authoritative Roadmap v0.1](./aetherforge-world-class-authoritative-roadmap-v0.1.md)
 - [Aetherforge 144-Task Campaign Board](./aetherforge-144-task-campaign-2026-05-27.md)
 - [Aetherforge Next-144 Taskboard](./aetherforge-next144-taskboard-2026-05-28.md)
