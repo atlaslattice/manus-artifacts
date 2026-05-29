@@ -10,8 +10,8 @@ source_of_truth: GitHub
 
 # Lattice Global Index
 
-Generated at: `2026-05-29T03:31:58+00:00`  
-Total artifacts indexed: **382**
+Generated at: `2026-05-29T04:45:11+00:00`  
+Total artifacts indexed: **383**
 
 > Full deep index of every markdown artifact in this repository.
 > Status legend: 🟢 CANONICAL · 🟡 CANDIDATE · 🔵 DRAFT · ⬛ ARCHIVED · — unset
@@ -25,7 +25,7 @@ Total artifacts indexed: **382**
 | `about` | 1 | 1 |
 | `aluminum-os` | 22 | 22 |
 | `aluminum-os-core` | 1 | 1 |
-| `archive` | 172 | 168 |
+| `archive` | 173 | 169 |
 | `archives` | 1 | 1 |
 | `bazinga` | 1 | 1 |
 | `codebases` | 57 | 57 |
@@ -174,6 +174,7 @@ Total artifacts indexed: **382**
 | `archive/boot/gptbrain/agents/TIDELOCKBrain/TIDELOCKBRAIN_WORK_LOG_MODULE2_SOURCE_GRAPH_2026-05-26.md` | TIDELOCKBrain Work Log — Module 2 Source Graph Engine | 🟡 CANDIDATE | `ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-AGENTS-TIDELOCKBRAIN-TIDELOCKBRAIN-WORK-LOG-MODULE2-SOURCE-GRAPH-2026-05-26-MD-2026-05-27` |
 | `archive/boot/gptbrain/agents/TIDELOCKBrain/TIDELOCKBRAIN_WORK_LOG_MODULE6_EVIDENCE_VAULT_2026-05-26.md` | TIDELOCKBrain Work Log — Module 6 Evidence Vault | 🟡 CANDIDATE | `ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-AGENTS-TIDELOCKBRAIN-TIDELOCKBRAIN-WORK-LOG-MODULE6-EVIDENCE-VAULT-2026-05-26-MD-2026-05-27` |
 | `archive/boot/gptbrain/agents/TIDELOCKBrain/TIDELOCKBRAIN_WORK_LOG_WAVE2_GOVERNANCE_SPINE_2026-05-28.md` | TIDELOCKBrain Work Log — Wave 2 Governance Spine | 🟡 CANDIDATE | `TIDELOCKBRAIN-WORK-LOG-WAVE2-GOVERNANCE-SPINE-2026-05-28` |
+| `archive/boot/gptbrain/agents/TIDELOCKBrain/TIDELOCKBRAIN_WORK_LOG_WAVE3_METADATA_SCALE_2026-05-29.md` | TIDELOCKBrain Work Log — Wave 3 Metadata & Provenance Scale | 🟡 CANDIDATE | `TIDELOCKBRAIN-WORK-LOG-WAVE3-METADATA-SCALE-2026-05-29` |
 | `archive/boot/gptbrain/agents/TIDELOCKBrain/TIDELOCKBRAIN_WORK_LOG_WAVE7_SECURITY_PACK_2026-05-28.md` | TIDELOCKBrain Work Log — Wave 7 Security Posture Pack | 🟡 CANDIDATE | `TIDELOCKBRAIN-WORK-LOG-WAVE7-SECURITY-PACK-2026-05-28` |
 | `archive/boot/gptbrain/agents/TIDELOCKBrain/TIDELOCKBRAIN_WORK_LOG_WAVE7_TASK77_CI_OPTIMIZE_2026-05-29.md` | TIDELOCKBrain Work Log — Wave 7 Task 77 CI Runtime Optimization | 🟡 CANDIDATE | `TIDELOCKBRAIN-WORK-LOG-WAVE7-TASK77-2026-05-29` |
 | `archive/boot/gptbrain/audits/COPILOT_REPO_GROUNDED_AUDIT_RESPONSE_2026-05-09.md` | Copilot Repo-Grounded Audit Response | 🟡 CANDIDATE | `ARTIFACT-ARCHIVE-BOOT-GPTBRAIN-AUDITS-COPILOT-REPO-GROUNDED-AUDIT-RESPONSE-2026-05-09-MD-2026-05-29` |
