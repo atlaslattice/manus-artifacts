@@ -1,0 +1,68 @@
+schema_name: SENSITIVE_RELEASE_GATE_v0.1
+status: staging_gate
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: >
+  Machine-readable gate for routing sensitive artifacts before public GitHub release.
+  Quarantine is review hygiene, not condemnation.
+
+release_gate:
+  gate_id: sensitive_release_gate_v0_1
+  default_action: public_candidate_if_no_flags
+  sensitive_flags:
+    - flag_id: security_intrusion_language
+      examples: [exploit, credential theft, intrusion, bypass, exfiltration]
+      default_action: private_quarantine
+      public_summary_allowed: maybe_after_review
+    - flag_id: financial_institution_language
+      examples: [bank attack, payment rails exploit, account takeover]
+      default_action: private_quarantine
+      public_summary_allowed: maybe_after_review
+    - flag_id: credential_like_content
+      examples: [api_key, private_key, token, password, secret]
+      default_action: block_public_release
+      public_summary_allowed: yes_without_secret
+    - flag_id: private_personal_data
+      examples: [address, phone, email, medical detail, family private data]
+      default_action: private_quarantine
+      public_summary_allowed: redacted_summary_only
+    - flag_id: unreviewed_claude_governance
+      examples: [constitution, canon, official, source of truth, ratified]
+      default_action: adversarial_review
+      public_summary_allowed: yes_with_boundary
+    - flag_id: openai_officiality_risk
+      examples: [OpenAI official, endorsed by OpenAI, OpenAI owns]
+      default_action: rewrite_or_hold
+      public_summary_allowed: yes_with_disclaimer
+
+release_actions:
+  public_candidate:
+    meaning: low-risk candidate may be mirrored publicly with non-canon boundary
+  public_summary_candidate:
+    meaning: raw remains private; public-safe summary can exist
+  private_quarantine:
+    meaning: preserve privately pending review
+  adversarial_review:
+    meaning: route to review lanes before release
+  rewrite_or_hold:
+    meaning: remove overclaim or hold
+  block_public_release:
+    meaning: do not publish raw content publicly
+
+review_lanes:
+  security_intrusion_language: [Lucerna, Hashlight, HumanRoot]
+  financial_institution_language: [Lucerna, Rootglass, HumanRoot]
+  credential_like_content: [TIDELOCK, Hashlight]
+  private_personal_data: [Lucerna, HumanRoot]
+  unreviewed_claude_governance: [Grok, Rootglass, Lucerna, Sable]
+  openai_officiality_risk: [Rootglass, Lucerna]
+
+clarifications:
+  critique_is_allowed: true
+  defensive_red_team_analysis_may_be_legitimate: true
+  quarantine_is_not_condemnation: true
+  public_safe_summaries_may_exist: true
+  raw_public_release_requires_review: true
+
+keeper: Public by default where safe. Quarantine where necessary. Canon only by explicit gate.
