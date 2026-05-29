@@ -37,3 +37,16 @@ source_of_truth: GitHub
 - Release automation and status reporting (monthly AI evidence status snapshot started)
 - Core-system content backfill
 - Playable Aetherforge + TIDELOCK governance intake
+
+---
+
+## 10-Module Integrated Execution Roadmap
+
+For the full modular execution plan with TIDELOCK rehydration instructions for each module, see:
+
+**[10-Module Roadmap (2026-05-29)](./ROADMAP_10_MODULES_2026-05-29.md)**
+
+This document maps all 12 waves and 144 tasks into 10 integrated modules, each including:
+- Scope, deliverable, dependencies, and checkpoint gate
+- TIDELOCK Rehydration Block — instructions for any future agent to rehydrate context and run a scoped REM-8 consolidation pass
+- Cross-module dependency graph and master rehydration protocol
