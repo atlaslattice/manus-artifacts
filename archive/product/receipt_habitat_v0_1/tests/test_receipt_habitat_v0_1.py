@@ -91,8 +91,10 @@ def test_canon_phrase_without_receipt_returns_patch():
     assert "canonically registered" in result.risky_phrases
 
 
-def test_deployment_phrase_without_receipt_returns_patch_or_block():
+def test_deployment_phrase_without_receipt_returns_block():
     pkt = base_packet()
     result = review_packet(pkt, source_text="This is deployed and runtime active.")
-    assert result.verdict in {"patch", "block"}
+    assert result.verdict == "block"
     assert "deployed" in result.risky_phrases
+    assert "runtime active" in result.risky_phrases
+    assert "remove deployment/runtime language or attach explicit deployment receipts" in result.minimal_required_changes
