@@ -19,7 +19,7 @@ status: candidate
 
 Atlas Lattice uses **calendar versioning** (CalVer):
 
-```
+```text
 v[YEAR].[QUARTER].[PATCH]
 v2026.Q3.0  — first release of Q3 2026
 v2026.Q3.1  — patch release within Q3 2026

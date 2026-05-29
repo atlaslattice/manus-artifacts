@@ -34,7 +34,7 @@ Atlas Lattice is built as a gift to the open-source community: fully public, fre
 
 | Fact | Value |
 |------|-------|
-| Repository | https://github.com/atlaslattice/manus-artifacts |
+| Repository | [github.com/atlaslattice/manus-artifacts](https://github.com/atlaslattice/manus-artifacts) |
 | Founded | 2026 |
 | Maintainer | @atlaslattice |
 | License | (see LICENSE file in repository) |

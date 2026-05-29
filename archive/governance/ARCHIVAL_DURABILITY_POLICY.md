@@ -58,8 +58,8 @@ Each year, verify that:
 ### 3. External Archive Candidates (Phase 2)
 
 For long-term durability beyond GitHub:
-- **Software Heritage** (https://www.softwareheritage.org) — academic archive of public repositories
-- **Zenodo** (https://zenodo.org) — CERN's open research archive; accepts GitHub releases
+- **[Software Heritage](https://www.softwareheritage.org)** — academic archive of public repositories
+- **[Zenodo](https://zenodo.org)** — CERN's open research archive; accepts GitHub releases
 - **IPFS/Filecoin** — decentralized storage for critical artifacts
 
 These will be evaluated as Atlas Lattice approaches v1.0.

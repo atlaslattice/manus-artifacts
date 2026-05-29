@@ -10,7 +10,7 @@ status: candidate
 
 ## [Unreleased]
 
-### Added
+### Added in Waves 1-3
 
 - Wave 12 Launch & World-Class Operations Pack (tasks #133–#144): 12 new launch/operations governance artifacts
   - `archive/governance/WORLDCLASS_SCORECARD_FRAMEWORK.md` — 144-mission scoring rubric and world-class threshold (#133)
@@ -95,7 +95,7 @@ status: candidate
 
 ## [2026-05-28] — Waves 1-3 Foundation Sprint
 
-### Added
+### Added in Vault Build
 
 - Aetherforge Next-144 Execution Taskboard (`projects/aetherforge-next144-taskboard-2026-05-28.md`)
 - Next-144 GitHub Issue Seeding Pack (`projects/aetherforge-next144-github-issue-seeding-pack-2026-05-28.md`)
@@ -123,7 +123,7 @@ status: candidate
 
 ## [2026-05-26] — GPTDream++ Vault Build
 
-### Added
+### Added in Foundation Archive
 
 - GPTDream++ full spec vault: 10 appendix documents in `archive/spec/gptdream/`
 - 15 Atlas/ORCS YAML schemas in `schemas/atlas_orcs/v0_1/`
