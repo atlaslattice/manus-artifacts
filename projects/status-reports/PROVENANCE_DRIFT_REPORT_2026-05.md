@@ -10,13 +10,13 @@ source_of_truth: GitHub
 
 # Provenance Drift Report (2026-05)
 
-Generated at: `2026-05-29T03:29:10+00:00`
+Generated at: `2026-05-29T22:06:33+00:00`
 
 ## Snapshot
 
-- Total markdown artifacts: **377**
-- Coverage baseline with complete metadata: **368**
-- Remaining next-100 queue items without full metadata: **8**
+- Total markdown artifacts: **404**
+- Coverage baseline with complete metadata: **393**
+- Remaining next-100 queue items without full metadata: **9**
 
 ## Drift watchlist
 

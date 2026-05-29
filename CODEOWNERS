@@ -1,0 +1,46 @@
+# CODEOWNERS — Atlas Lattice / manus-artifacts
+# Each path maps to a responsible maintainer or domain owner.
+# Coordinate = address, not permission. Ownership = review responsibility.
+# All canon decisions route through @atlaslattice.
+
+# Global fallback — @atlaslattice reviews everything not matched below
+*                                   @atlaslattice
+
+# ── Core governance & schemas ─────────────────────────────────────────────────
+/.github/                           @atlaslattice
+/schemas/                           @atlaslattice
+/docs/LATTICE_HYPERCUBE_12x12x12.md @atlaslattice
+
+# ── H01 Elements & Isotopes ───────────────────────────────────────────────────
+/archive/synthesis/data/elements*   @atlaslattice
+
+# ── H02 Frequency & Resonance ─────────────────────────────────────────────────
+/archive/synthesis/data/frequency*  @atlaslattice
+
+# ── H03 Color & Harmonic Spectrum ─────────────────────────────────────────────
+/archive/synthesis/data/color*      @atlaslattice
+
+# ── H04 Acoustic Resonance ────────────────────────────────────────────────────
+/archive/synthesis/data/acoustic*   @atlaslattice
+
+# ── H09 Archive Artifacts ─────────────────────────────────────────────────────
+/archive/                           @atlaslattice
+
+# ── H11 Review & Governance ───────────────────────────────────────────────────
+/archive/provenance/                @atlaslattice
+/archive/synthesis/receipts/        @atlaslattice
+
+# ── H12 Synthesis & Meta ──────────────────────────────────────────────────────
+/scripts/                           @atlaslattice
+/projects/                          @atlaslattice
+
+# ── GPTBrain / Boot ───────────────────────────────────────────────────────────
+/archive/boot/                      @atlaslattice
+/reference_impl/                    @atlaslattice
+
+# ── Tests ─────────────────────────────────────────────────────────────────────
+/tests/                             @atlaslattice
+
+# ── Docs & visualizer ─────────────────────────────────────────────────────────
+/docs/                              @atlaslattice
+/aetherforge.py                     @atlaslattice

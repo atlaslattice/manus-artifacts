@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://atlaslattice.org/schemas/ratification_event/v0_1/ratification-event.schema.json",
+  "title": "RatificationEvent",
+  "description": "Permanent, signed receipt recording that an artifact has been promoted to canon status by @atlaslattice adjudication and council ratification.",
+  "type": "object",
+  "required": [
+    "ratification_event_id",
+    "schema_version",
+    "artifact_id",
+    "file_path",
+    "hsn_coordinate",
+    "canon_status",
+    "trust_state",
+    "canon_request_issue",
+    "ratified_by",
+    "adjudicated_by",
+    "timestamp",
+    "signature_hash"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "ratification_event_id": {
+      "type": "string",
+      "description": "Unique ID for this ratification event.",
+      "pattern": "^RATIFY-[A-Z0-9]+-\\d{4}-\\d{2}-\\d{2}(-\\d+)?$",
+      "examples": ["RATIFY-LATTICE-HYPERCUBE-2026-05-29"]
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "ratification_event/v0_1",
+      "description": "Schema version identifier."
+    },
+    "artifact_id": {
+      "type": "string",
+      "description": "The artifact_id from the ratified artifact's frontmatter.",
+      "minLength": 1
+    },
+    "file_path": {
+      "type": "string",
+      "description": "Repo-relative path to the ratified artifact.",
+      "minLength": 1,
+      "examples": ["docs/LATTICE_HYPERCUBE_12x12x12.md"]
+    },
+    "hsn_coordinate": {
+      "type": "string",
+      "description": "H-S-N coordinate of the artifact at time of ratification.",
+      "pattern": "^H\\d{2}-S\\d{2}-N\\d{2}$",
+      "examples": ["H09-S08-N03"]
+    },
+    "canon_status": {
+      "type": "string",
+      "description": "Canon status after this event.",
+      "enum": ["CANONICAL"],
+      "const": "CANONICAL"
+    },
+    "trust_state": {
+      "type": "string",
+      "description": "Trust state recorded at time of ratification.",
+      "enum": ["RATIFIED", "CANON"],
+      "default": "RATIFIED"
+    },
+    "canon_request_issue": {
+      "type": "string",
+      "description": "GitHub issue URL or number for the canon request that triggered this ratification.",
+      "examples": ["https://github.com/atlaslattice/manus-artifacts/issues/42"]
+    },
+    "ratified_by": {
+      "type": "array",
+      "description": "Council members who signed off on the canon request.",
+      "items": {
+        "type": "object",
+        "required": ["github_username", "signed_at"],
+        "properties": {
+          "github_username": { "type": "string", "pattern": "^@?[a-zA-Z0-9-]+$" },
+          "signed_at": { "type": "string", "format": "date-time" },
+          "comment_url": { "type": "string" }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "adjudicated_by": {
+      "type": "object",
+      "description": "@atlaslattice adjudication record.",
+      "required": ["github_username", "adjudicated_at"],
+      "additionalProperties": false,
+      "properties": {
+        "github_username": { "type": "string", "const": "atlaslattice" },
+        "adjudicated_at": { "type": "string", "format": "date-time" },
+        "comment_url": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when this ratification event was recorded."
+    },
+    "signature_hash": {
+      "type": "string",
+      "description": "SHA-256 hash of the canonical artifact content at time of ratification (hex, 64 chars).",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "previous_ratification_event_id": {
+      "type": ["string", "null"],
+      "description": "ID of a prior ratification event if this is a re-ratification, or null.",
+      "default": null
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional free-text notes about this ratification event."
+    }
+  }
+}

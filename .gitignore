@@ -1,2 +1,5 @@
 *.pyc
 __pycache__/
+
+# Aetherforge player state (personal, not committed)
+.aetherforge_player.json

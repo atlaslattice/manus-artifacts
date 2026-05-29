@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://atlaslattice.org/schemas/hsn_coordinate/v0_1/hsn-coordinate.schema.json",
+  "title": "HSNCoordinate",
+  "description": "A valid Atlas Lattice H-S-N coordinate. Format: H##-S##-N## where each component is 01-12.",
+  "type": "string",
+  "pattern": "^H(0[1-9]|1[0-2])-S(0[1-9]|1[0-2])-N(0[1-9]|1[0-2])$",
+  "examples": [
+    "H01-S01-N01",
+    "H04-S09-N02",
+    "H12-S12-N12"
+  ]
+}

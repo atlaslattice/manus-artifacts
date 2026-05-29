@@ -11,7 +11,7 @@ source_of_truth: GitHub
 # TIDELOCKBrain Wave 3 Metadata + Provenance Receipt
 
 - Wave: **3 / Metadata & Provenance**
-- Generated at: `2026-05-29T03:29:10+00:00`
+- Generated at: `2026-05-29T22:06:33+00:00`
 - Outcome: metadata scope, coverage reports, collision report, provenance completeness report, and drift report published.
 
 ## Linked outputs

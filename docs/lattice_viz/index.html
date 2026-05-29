@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Lattice — 12×12×12 H-S-N Visualizer</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0a0a0f;
+      color: #e0e0f0;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+    header {
+      padding: 10px 20px;
+      background: rgba(20,20,40,0.9);
+      border-bottom: 1px solid #2a2a5a;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+    header h1 { font-size: 1rem; color: #a0a8ff; letter-spacing: 0.1em; }
+    header .badge {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      background: #1a1a3a;
+      border: 1px solid #3a3a7a;
+      border-radius: 4px;
+      color: #808098;
+    }
+    .controls {
+      padding: 8px 20px;
+      background: rgba(15,15,30,0.8);
+      border-bottom: 1px solid #1a1a3a;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+    .controls label { font-size: 0.75rem; color: #a0a0c0; }
+    .controls select, .controls input {
+      background: #1a1a3a;
+      border: 1px solid #3a3a6a;
+      color: #e0e0f0;
+      padding: 4px 8px;
+      font-size: 0.75rem;
+      border-radius: 4px;
+    }
+    .controls button {
+      background: #2a2a5a;
+      border: 1px solid #4a4a8a;
+      color: #c0c8ff;
+      padding: 4px 12px;
+      font-size: 0.75rem;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .controls button:hover { background: #3a3a7a; }
+    #stats {
+      font-size: 0.7rem;
+      color: #606080;
+      margin-left: auto;
+    }
+    .main {
+      display: flex;
+      flex: 1;
+      overflow: hidden;
+    }
+    #canvas-wrapper {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    #panel {
+      width: 260px;
+      background: rgba(12,12,24,0.95);
+      border-left: 1px solid #1a1a3a;
+      padding: 16px;
+      overflow-y: auto;
+      flex-shrink: 0;
+      font-size: 0.78rem;
+    }
+    #panel h2 { font-size: 0.85rem; color: #a0a8ff; margin-bottom: 12px; }
+    #panel .field { margin-bottom: 8px; }
+    #panel .field .key { color: #606080; font-size: 0.7rem; }
+    #panel .field .val { color: #c0d0ff; word-break: break-all; }
+    #panel .empty { color: #404060; font-style: italic; }
+    .legend {
+      padding: 8px 20px;
+      background: rgba(12,12,24,0.8);
+      border-top: 1px solid #1a1a3a;
+      display: flex;
+      gap: 16px;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+    .legend .item { display: flex; align-items: center; gap: 6px; font-size: 0.68rem; color: #808098; }
+    .legend .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    #tooltip {
+      position: fixed;
+      background: rgba(10,10,30,0.95);
+      border: 1px solid #3a3a7a;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      pointer-events: none;
+      z-index: 100;
+      max-width: 260px;
+      display: none;
+      line-height: 1.5;
+    }
+    #tooltip .hsn { color: #6080ff; font-weight: bold; }
+    #tooltip .title { color: #e0e0f0; }
+    #tooltip .meta { color: #808098; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>⬡ Atlas Lattice — 12×12×12 H-S-N Visualizer</h1>
+  <span class="badge">CANDIDATE</span>
+  <span class="badge">NOT CANON</span>
+  <span class="badge">v0.1</span>
+</header>
+
+<div class="controls">
+  <label>House (H):
+    <select id="filterHouse">
+      <option value="0">All Houses</option>
+    </select>
+  </label>
+  <label>Color by:
+    <select id="colorBy">
+      <option value="status">Status</option>
+      <option value="review_state">Review State</option>
+      <option value="type">Type</option>
+      <option value="house">House</option>
+    </select>
+  </label>
+  <label>View:
+    <select id="viewMode">
+      <option value="grid">Grid (S×N)</option>
+      <option value="scatter">Scatter 3D projection</option>
+    </select>
+  </label>
+  <label>Search: <input id="searchInput" type="text" placeholder="id or label…" /></label>
+  <button id="resetBtn">Reset</button>
+  <div id="stats">—</div>
+</div>
+
+<div class="main">
+  <div id="canvas-wrapper">
+    <canvas id="canvas"></canvas>
+  </div>
+  <div id="panel">
+    <h2>Selected Node</h2>
+    <div id="panel-content" class="empty">Click a node to inspect it.</div>
+  </div>
+</div>
+
+<div class="legend" id="legend"></div>
+
+<div id="tooltip"></div>
+
+<script>
+// ─── Data ──────────────────────────────────────────────────────────────────────
+const HOUSE_LABELS = {
+  1:"Elements & Isotopes", 2:"Frequency & Resonance",
+  3:"Color & Harmonic Spectrum", 4:"Acoustic Resonance",
+  5:"States of Matter", 6:"Spin & Quantum States",
+  7:"Neuromorphic Principles", 8:"Human Knowledge Domains",
+  9:"Archive Artifacts", 10:"IP Lineage",
+  11:"Review & Governance", 12:"Synthesis & Meta"
+};
+
+const STATUS_COLORS = {
+  CANONICAL:"#22c55e", CANDIDATE:"#f59e0b", DRAFT:"#3b82f6",
+  ARCHIVED:"#6b7280", "PUBLIC-CANDIDATE":"#8b5cf6"
+};
+const REVIEW_COLORS = {
+  "raw":"#ef4444","candidate":"#f59e0b","reviewed":"#06b6d4",
+  "canon-gate":"#a855f7","canon":"#22c55e","archived":"#6b7280"
+};
+const TYPE_COLORS = {
+  element:"#60a5fa", frequency_band:"#34d399", color_harmonic:"#f472b6",
+  acoustic_note:"#fb923c", artifact:"#a78bfa", seed:"#94a3b8"
+};
+const HOUSE_COLORS = {};
+const hue_step = 360/12;
+for(let i=1;i<=12;i++){
+  const h=(i-1)*hue_step;
+  HOUSE_COLORS[i] = `hsl(${h},70%,55%)`;
+}
+
+let allNodes = [];
+let filteredNodes = [];
+let selectedNode = null;
+let searchTerm = "";
+
+// ─── Canvas state ──────────────────────────────────────────────────────────────
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let W=0, H_px=0;
+let transform = {tx:0, ty:0, scale:1};
+let isDragging=false, dragStart={x:0,y:0}, dragOrigin={x:0,y:0};
+let houseFilter=0;
+let colorBy="status";
+let viewMode="grid";
+
+// ─── Load data ──────────────────────────────────────────────────────────────────
+async function loadData() {
+  try {
+    const resp = await fetch("../lattice_graph_nodes.json");
+    if(!resp.ok) throw new Error("not found");
+    allNodes = await resp.json();
+  } catch(e) {
+    // fallback: try same dir
+    try {
+      const resp2 = await fetch("lattice_graph_nodes.json");
+      allNodes = await resp2.json();
+    } catch(e2) {
+      // generate demo nodes
+      allNodes = generateDemoNodes();
+    }
+  }
+  init();
+}
+
+function generateDemoNodes() {
+  const nodes=[];
+  // Just show the House structure as demo
+  for(let h=1;h<=12;h++)
+    for(let s=1;s<=12;s+=2)
+      for(let n=1;n<=12;n+=2)
+        nodes.push({id:`DEMO-H${h}-S${s}-N${n}`,label:`H${h} demo`,
+          type:"artifact",hsn:`H${String(h).padStart(2,"0")}-S${String(s).padStart(2,"0")}-N${String(n).padStart(2,"0")}`,
+          h,s,n,status:"CANDIDATE",review_state:"candidate",domain:"",color:"#f59e0b"});
+  return nodes;
+}
+
+function init() {
+  buildHouseSelect();
+  applyFilters();
+  buildLegend();
+  resize();
+  render();
+}
+
+// ─── Filters ───────────────────────────────────────────────────────────────────
+function applyFilters() {
+  filteredNodes = allNodes.filter(nd=>{
+    if(houseFilter && nd.h !== houseFilter) return false;
+    if(searchTerm){
+      const q=searchTerm.toLowerCase();
+      if(!nd.id.toLowerCase().includes(q) && !nd.label.toLowerCase().includes(q)) return false;
+    }
+    return true;
+  });
+  document.getElementById("stats").textContent =
+    `${filteredNodes.length} / ${allNodes.length} nodes | ${
+    new Set(filteredNodes.map(n=>n.hsn)).size} cells`;
+}
+
+function getColor(nd) {
+  if(colorBy==="status") return STATUS_COLORS[nd.status] || "#6b7280";
+  if(colorBy==="review_state") return REVIEW_COLORS[nd.review_state] || "#6b7280";
+  if(colorBy==="type") return TYPE_COLORS[nd.type] || "#6b7280";
+  if(colorBy==="house") return HOUSE_COLORS[nd.h] || "#6b7280";
+  return "#6b7280";
+}
+
+// ─── Layout ────────────────────────────────────────────────────────────────────
+const CELL=28, PAD=6, BLOCK_W=14*CELL, BLOCK_H=14*CELL;
+
+function nodeXY(nd) {
+  if(viewMode==="grid") {
+    // Arrange houses in 4×3 grid; within each house, S×N grid
+    const hIdx=nd.h-1;
+    const hCol=hIdx%4, hRow=Math.floor(hIdx/4);
+    const bx=hCol*(BLOCK_W+PAD*8)+PAD*4;
+    const by=hRow*(BLOCK_H+PAD*8)+PAD*4;
+    const cx=bx+(nd.n-1)*CELL+CELL/2+CELL;
+    const cy=by+(nd.s-1)*CELL+CELL/2+CELL;
+    return {x:cx,y:cy};
+  } else {
+    // Simple 3-axis projection (isometric-style)
+    const iso_x = nd.n*20 - nd.s*10;
+    const iso_y = nd.s*10 + nd.h*30;
+    return {x:iso_x+40, y:iso_y+20};
+  }
+}
+
+function worldToScreen(wx,wy){
+  return {x:wx*transform.scale+transform.tx, y:wy*transform.scale+transform.ty};
+}
+function screenToWorld(sx,sy){
+  return {x:(sx-transform.tx)/transform.scale, y:(sy-transform.ty)/transform.scale};
+}
+
+// ─── Render ────────────────────────────────────────────────────────────────────
+function render() {
+  ctx.clearRect(0,0,W,H_px);
+  ctx.fillStyle="#0a0a0f";
+  ctx.fillRect(0,0,W,H_px);
+
+  ctx.save();
+  ctx.translate(transform.tx, transform.ty);
+  ctx.scale(transform.scale, transform.scale);
+
+  // Draw house grid lines
+  if(viewMode==="grid") {
+    for(let h=1;h<=12;h++) {
+      const hIdx=h-1;
+      const hCol=hIdx%4, hRow=Math.floor(hIdx/4);
+      const bx=hCol*(BLOCK_W+PAD*8)+PAD*4;
+      const by=hRow*(BLOCK_H+PAD*8)+PAD*4;
+      ctx.strokeStyle="#1a1a3a";
+      ctx.lineWidth=0.5;
+      ctx.strokeRect(bx, by, BLOCK_W+CELL*2, BLOCK_H+CELL*2);
+      ctx.fillStyle="#2a2a5a";
+      ctx.font=`${10/transform.scale}px Courier New`;
+      ctx.fillText(`H${String(h).padStart(2,"0")} ${(HOUSE_LABELS[h]||"").slice(0,18)}`, bx+4, by+12);
+    }
+  }
+
+  // Draw nodes — group by cell, show as stacked
+  const cellMap={};
+  for(const nd of filteredNodes) {
+    const key=nd.hsn;
+    if(!cellMap[key]) cellMap[key]=[];
+    cellMap[key].push(nd);
+  }
+
+  const r=5;
+  for(const [hsn,nodes] of Object.entries(cellMap)) {
+    const first=nodes[0];
+    const {x,y}=nodeXY(first);
+    const isSelected = nodes.includes(selectedNode);
+
+    // Stack indicator
+    if(nodes.length>1) {
+      for(let i=Math.min(nodes.length-1,3);i>=1;i--) {
+        ctx.beginPath();
+        ctx.arc(x+i*1.5, y-i*1.5, r, 0, Math.PI*2);
+        ctx.fillStyle=getColor(nodes[i]||first)+"80";
+        ctx.fill();
+      }
+    }
+
+    // Main node
+    const color=getColor(first);
+    ctx.beginPath();
+    ctx.arc(x, y, r+(isSelected?3:0), 0, Math.PI*2);
+    ctx.fillStyle=isSelected?"#ffffff":color;
+    ctx.fill();
+    if(isSelected){
+      ctx.strokeStyle="#ffffff";
+      ctx.lineWidth=1.5;
+      ctx.stroke();
+    }
+
+    // Label at zoom ≥ 2
+    if(transform.scale>=2) {
+      ctx.fillStyle="#a0a8ff";
+      ctx.font=`${8/transform.scale}px Courier New`;
+      const label=(first.label||first.id).slice(0,12);
+      ctx.fillText(label, x+r+2, y+3);
+    }
+  }
+
+  ctx.restore();
+  requestAnimationFrame(()=>{});
+}
+
+// ─── Interaction ───────────────────────────────────────────────────────────────
+function hitTest(sx,sy) {
+  const {x:wx,y:wy}=screenToWorld(sx,sy);
+  const threshold=8/transform.scale;
+  let best=null, bestDist=Infinity;
+  for(const nd of filteredNodes) {
+    const {x,y}=nodeXY(nd);
+    const d=Math.hypot(x-wx,y-wy);
+    if(d<threshold && d<bestDist){best=nd;bestDist=d;}
+  }
+  return best;
+}
+
+canvas.addEventListener("mousemove",e=>{
+  if(isDragging){
+    transform.tx=dragOrigin.tx+(e.clientX-dragStart.x);
+    transform.ty=dragOrigin.ty+(e.clientY-dragStart.y);
+    render();
+    return;
+  }
+  const nd=hitTest(e.clientX,e.clientY);
+  const tip=document.getElementById("tooltip");
+  if(nd){
+    tip.style.display="block";
+    tip.style.left=(e.clientX+12)+"px";
+    tip.style.top=(e.clientY-8)+"px";
+    tip.innerHTML=`<div class="hsn">${nd.hsn}</div>
+      <div class="title">${nd.label||nd.id}</div>
+      <div class="meta">type: ${nd.type} | ${nd.review_state}</div>`;
+    canvas.style.cursor="pointer";
+  } else {
+    tip.style.display="none";
+    canvas.style.cursor="grab";
+  }
+});
+
+canvas.addEventListener("mousedown",e=>{
+  isDragging=true;
+  dragStart={x:e.clientX,y:e.clientY};
+  dragOrigin={tx:transform.tx,ty:transform.ty};
+  canvas.style.cursor="grabbing";
+});
+
+canvas.addEventListener("mouseup",e=>{
+  if(!isDragging) return;
+  const moved=Math.hypot(e.clientX-dragStart.x,e.clientY-dragStart.y);
+  isDragging=false;
+  canvas.style.cursor="grab";
+  if(moved<4){
+    const nd=hitTest(e.clientX,e.clientY);
+    if(nd) selectNode(nd);
+    else { selectedNode=null; updatePanel(null); render(); }
+  }
+  render();
+});
+
+canvas.addEventListener("wheel",e=>{
+  e.preventDefault();
+  const factor=e.deltaY<0?1.1:0.9;
+  const cx=e.clientX,cy=e.clientY;
+  transform.tx=(transform.tx-cx)*factor+cx;
+  transform.ty=(transform.ty-cy)*factor+cy;
+  transform.scale*=factor;
+  transform.scale=Math.max(0.15,Math.min(20,transform.scale));
+  render();
+},{passive:false});
+
+function selectNode(nd) {
+  selectedNode=nd;
+  updatePanel(nd);
+  render();
+}
+
+function updatePanel(nd) {
+  const el=document.getElementById("panel-content");
+  if(!nd){el.innerHTML='<span class="empty">Click a node to inspect it.</span>';return;}
+  el.innerHTML=`
+    <div class="field"><div class="key">H-S-N coordinate</div><div class="val">${nd.hsn||"—"}</div></div>
+    <div class="field"><div class="key">artifact_id</div><div class="val">${nd.id}</div></div>
+    <div class="field"><div class="key">title</div><div class="val">${nd.label||"—"}</div></div>
+    <div class="field"><div class="key">type</div><div class="val">${nd.type||"—"}</div></div>
+    <div class="field"><div class="key">status</div><div class="val">${nd.status||"—"}</div></div>
+    <div class="field"><div class="key">review_state</div><div class="val">${nd.review_state||"—"}</div></div>
+    <div class="field"><div class="key">domain</div><div class="val">${nd.domain||"—"}</div></div>
+    <div class="field"><div class="key">house</div><div class="val">H${String(nd.h||0).padStart(2,"0")} — ${HOUSE_LABELS[nd.h]||"?"}</div></div>
+    <hr style="border-color:#1a1a3a;margin:10px 0"/>
+    <div style="color:#404060;font-size:0.68rem">coordinate ≠ canon | coordinate ≠ proof</div>
+  `;
+}
+
+// ─── Controls ──────────────────────────────────────────────────────────────────
+function buildHouseSelect() {
+  const sel=document.getElementById("filterHouse");
+  for(let h=1;h<=12;h++){
+    const opt=document.createElement("option");
+    opt.value=h;opt.textContent=`H${String(h).padStart(2,"0")} — ${HOUSE_LABELS[h]}`;
+    sel.appendChild(opt);
+  }
+}
+
+function buildLegend() {
+  const leg=document.getElementById("legend");
+  leg.innerHTML="";
+  const map=colorBy==="status"?STATUS_COLORS:
+    colorBy==="review_state"?REVIEW_COLORS:
+    colorBy==="type"?TYPE_COLORS:HOUSE_COLORS;
+  for(const [k,c] of Object.entries(map)){
+    const item=document.createElement("div");item.className="item";
+    item.innerHTML=`<div class="dot" style="background:${c}"></div>${k}`;
+    leg.appendChild(item);
+  }
+}
+
+document.getElementById("filterHouse").addEventListener("change",e=>{
+  houseFilter=parseInt(e.target.value)||0;
+  applyFilters();render();
+});
+document.getElementById("colorBy").addEventListener("change",e=>{
+  colorBy=e.target.value;buildLegend();render();
+});
+document.getElementById("viewMode").addEventListener("change",e=>{
+  viewMode=e.target.value;render();
+});
+document.getElementById("searchInput").addEventListener("input",e=>{
+  searchTerm=e.target.value.trim();applyFilters();render();
+});
+document.getElementById("resetBtn").addEventListener("click",()=>{
+  transform={tx:0,ty:0,scale:0.5};render();
+});
+
+// ─── Resize ────────────────────────────────────────────────────────────────────
+function resize(){
+  const wrapper=document.getElementById("canvas-wrapper");
+  W=wrapper.clientWidth;H_px=wrapper.clientHeight;
+  canvas.width=W;canvas.height=H_px;
+  render();
+}
+window.addEventListener("resize",resize);
+
+// ─── Boot ──────────────────────────────────────────────────────────────────────
+transform={tx:20,ty:20,scale:0.35};
+loadData();
+</script>
+</body>
+</html>

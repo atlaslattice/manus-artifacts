@@ -15,6 +15,10 @@ source_of_truth: GitHub
 [![Repo Hygiene](https://github.com/atlaslattice/manus-artifacts/actions/workflows/repo-hygiene-checks.yml/badge.svg)](https://github.com/atlaslattice/manus-artifacts/actions/workflows/repo-hygiene-checks.yml)
 [![Docs Links](https://github.com/atlaslattice/manus-artifacts/actions/workflows/docs-link-checks.yml/badge.svg)](https://github.com/atlaslattice/manus-artifacts/actions/workflows/docs-link-checks.yml)
 [![Secret Scan](https://github.com/atlaslattice/manus-artifacts/actions/workflows/secret-scan.yml/badge.svg)](https://github.com/atlaslattice/manus-artifacts/actions/workflows/secret-scan.yml)
+[![Lattice Graph Integrity](https://github.com/atlaslattice/manus-artifacts/actions/workflows/lattice-graph-integrity.yml/badge.svg)](https://github.com/atlaslattice/manus-artifacts/actions/workflows/lattice-graph-integrity.yml)
+[![Lattice Nodes](https://img.shields.io/badge/lattice%20nodes-696-blueviolet)](#-lattice-knowledge-graph)
+[![Occupied Cells](https://img.shields.io/badge/occupied%20cells-270%20%2F%201728-blue)](#-lattice-knowledge-graph)
+[![Seed Artifacts](https://img.shields.io/badge/seed%20artifacts-4%20domains-green)](#-lattice-knowledge-graph)
 
 The **Atlas Lattice Foundation** is building the governance layer missing from current AI stacks — a constitutional substrate for coordinating intelligence across models, sessions, and civilizational scale. This repository is the public, open-source archive of all research, architecture, protocols, and governance artifacts produced under that mission.
 
@@ -97,12 +101,33 @@ This expectation is enforced through our [Code of Conduct](./CODE_OF_CONDUCT.md)
 | [Metadata Coverage Report](./docs/METADATA_COVERAGE_REPORT_2026-05-27.md) | Current frontmatter and provenance coverage |
 | [Master Source Registry](./docs/MASTER_SOURCE_REGISTRY.md) | Multi-source KG synthesis intake ledger (this repo + gits + Notion + Drive) |
 | [Artifact Source-of-Truth Index](./docs/ARTIFACT_SOURCE_OF_TRUTH_INDEX.md) | Canon-state tracking index with ratification fields |
+| [Lattice Hypercube 12×12×12](./docs/LATTICE_HYPERCUBE_12x12x12.md) | H-S-N coordinate system explainer — Rainbow Yin-Yang lattice |
 | [Contributor Playbook](./docs/CONTRIBUTOR_PLAYBOOK.md) | Unified governance, workflow, and quality-gate operator guide |
 | [Architecture Crosswalk](./docs/ARCHITECTURE_CROSSWALK.md) | Specs ↔ schemas ↔ implementation ↔ tests trace map |
 | [Quality Gates Dashboard](./docs/QUALITY_GATES_DASHBOARD.md) | CI and local pass/fail validation command surface |
 | [Evidence & Demonstrations Lane](./docs/EVIDENCE_AND_DEMONSTRATIONS.md) | Public AI evidence lane and lineage requirements |
 | [Aetherforge Playable Onboarding](./docs/AETHERFORGE_PLAYABLE_ONBOARDING.md) | Playable contributor onboarding and progression loop |
 | [Release Rhythm](./docs/RELEASE_RHYTHM.md) | Recurring changelog/release/closeout/kickoff standard |
+
+---
+
+## 🧠 Lattice Knowledge Graph
+
+The Atlas Lattice is a machine-traversable 12×12×12 H-S-N knowledge graph. Every artifact gets a coordinate address.
+
+| Tool | Command | Description |
+|------|---------|-------------|
+| **Build graph** | `python scripts/build_lattice_graph.py` | Scan all YAML frontmatter + seed data → JSON-LD graph |
+| **Query lattice** | `python scripts/query_lattice.py --house 4 --sphere 9` | Filter nodes by H/S/N/status/type |
+| **Play Aetherforge** | `python aetherforge.py` | Interactive CLI game — navigate, claim cells, earn quests |
+| **Validate integrity** | `python scripts/validate_graph_integrity.py` | Check H-S-N syntax + cross-references |
+| **Ingest artifact** | `python scripts/ingest_artifact.py --dry-run path/to/file.md` | Assign H-S-N + write frontmatter |
+| **Review state FSM** | `python scripts/review_state_fsm.py --advance --file path.md` | Advance artifact through review pipeline |
+| **IP boundary check** | `python scripts/ip_boundary_check.py --path archive/` | Scan for PII, secrets, and copyright markers |
+
+**Seed registries** (House-domain data): [H01 Elements](./archive/synthesis/data/elements_hsn_seed.json) · [H02 Frequency](./archive/synthesis/data/frequency_hsn_seed.json) · [H03 Color](./archive/synthesis/data/color_hsn_seed.json) · [H04 Acoustic](./archive/synthesis/data/acoustic_hsn_seed.json)
+
+**Visualizer**: [`docs/lattice_viz/index.html`](./docs/lattice_viz/index.html) — D3 canvas visualizer (deployed to GitHub Pages on push to main)
 
 ---
 

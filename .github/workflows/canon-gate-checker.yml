@@ -1,0 +1,95 @@
+name: Canon Gate Checker
+
+on:
+  issues:
+    types: [opened, edited, labeled]
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  validate-canon-request:
+    name: Validate Canon Request Fields
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.labels.*.name, 'canon-request')
+    steps:
+      - name: Check required fields
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const body = issue.body || "";
+
+            const errors = [];
+
+            // Check each required field is filled (not empty after its label)
+            const requiredPatterns = [
+              { field: "Artifact ID", pattern: /### Artifact ID\s*\n+(.+)/ },
+              { field: "File Path", pattern: /### File Path\s*\n+(.+)/ },
+              { field: "H-S-N Coordinate", pattern: /### H-S-N Coordinate\s*\n+(.+)/ },
+              { field: "Summary", pattern: /### Summary\s*\n+([\s\S]+?)(?=###|$)/ },
+              { field: "Supporting Evidence", pattern: /### Supporting Evidence\s*\n+([\s\S]+?)(?=###|$)/ },
+            ];
+
+            for (const { field, pattern } of requiredPatterns) {
+              const match = body.match(pattern);
+              const val = match ? match[1].trim() : "";
+              if (!val || val === "_No response_" || val.length < 3) {
+                errors.push(`- ❌ **${field}** is missing or empty`);
+              }
+            }
+
+            // Validate H-S-N coordinate format
+            const hsnMatch = body.match(/### H-S-N Coordinate\s*\n+([^\n]+)/);
+            if (hsnMatch) {
+              const hsn = hsnMatch[1].trim();
+              if (!/^H\d{2}-S\d{2}-N\d{2}$/.test(hsn)) {
+                errors.push(`- ❌ **H-S-N Coordinate** must be in format H##-S##-N## (got: \`${hsn}\`)`);
+              }
+            }
+
+            // Check review_state dropdown
+            if (!body.includes("reviewed") && !body.includes("canon-gate")) {
+              errors.push("- ❌ **Current review_state** must be `reviewed` or `canon-gate`");
+            }
+
+            // Count checked boxes
+            const checkedBoxes = (body.match(/- \[x\]/gi) || []).length;
+            const totalRequired = 12; // from pre_gate_checklist + authority_boundary
+            if (checkedBoxes < totalRequired) {
+              errors.push(`- ❌ **Pre-gate checklist**: ${checkedBoxes}/${totalRequired} required boxes checked`);
+            }
+
+            const label = errors.length === 0 ? "canon-ready" : "canon-needs-work";
+            const otherLabel = errors.length === 0 ? "canon-needs-work" : "canon-ready";
+
+            // Post validation comment
+            const header = errors.length === 0
+              ? "## ✅ Canon Gate Check — All fields valid\n\nThis request is ready for @atlaslattice adjudication."
+              : `## ❌ Canon Gate Check — ${errors.length} issue(s) found\n\nPlease fix the following before this can be labeled \`canon-ready\`:\n\n${errors.join("\n")}`;
+
+            const footer = "\n\n---\n*Canon gate bot — coordinate ≠ canon | receipt ≠ truth | review decides*";
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              body: header + footer
+            });
+
+            // Apply/remove labels
+            const existingLabels = issue.labels.map(l => l.name);
+            if (!existingLabels.includes(label)) {
+              try {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issue.number,
+                  labels: [label]
+                });
+              } catch(e) {
+                // label may not exist yet — that's OK
+                console.log(`Could not add label '${label}': ${e.message}`);
+              }
+            }

@@ -1,0 +1,65 @@
+name: Lattice Graph Integrity
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "archive/**"
+      - "docs/**"
+      - "schemas/**"
+      - "projects/**"
+      - "scripts/validate_graph_integrity.py"
+      - "scripts/validate_provenance_completeness.py"
+      - "scripts/build_lattice_graph.py"
+  pull_request:
+    paths:
+      - "archive/**"
+      - "docs/**"
+      - "schemas/**"
+      - "projects/**"
+      - "scripts/validate_graph_integrity.py"
+      - "scripts/validate_provenance_completeness.py"
+      - "scripts/build_lattice_graph.py"
+
+jobs:
+  graph-integrity:
+    name: H-S-N Coordinate Integrity
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build lattice graph
+        run: python scripts/build_lattice_graph.py
+
+      - name: Validate H-S-N coordinate integrity
+        run: python scripts/validate_graph_integrity.py
+
+      - name: Upload graph artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lattice-graph
+          path: |
+            docs/lattice_graph.json
+            docs/lattice_graph_nodes.json
+          retention-days: 14
+
+  provenance-completeness:
+    name: Provenance Completeness Gate
+    runs-on: ubuntu-latest
+    # Warning-only for now (many older artifacts are being backfilled)
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Check provenance completeness
+        run: python scripts/validate_provenance_completeness.py

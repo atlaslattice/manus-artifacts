@@ -10,7 +10,7 @@ source_of_truth: GitHub
 
 # Provenance Completeness Report v2
 
-Generated at: `2026-05-29T03:29:10+00:00`
+Generated at: `2026-05-29T22:06:33+00:00`
 
 > **Wave 3 post-backfill snapshot.**
 
@@ -24,9 +24,9 @@ Generated at: `2026-05-29T03:29:10+00:00`
 
 ## Gap summary
 
-- Files missing `artifact_id`: **8**
-- Files missing `source_of_truth`: **9**
-- Files with invalid status values: **4**
+- Files missing `artifact_id`: **9**
+- Files missing `source_of_truth`: **10**
+- Files with invalid status values: **5**
 - Files with non-GitHub source values: **0**
 
 ## Highest-priority remaining gaps
@@ -41,23 +41,23 @@ Generated at: `2026-05-29T03:29:10+00:00`
 | `manus-vault/MVP_Architect_Session/mvp-architect-skill/SKILL.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
 | `manus-vault/Skills/ai-native-os-architect/SKILL.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
 | `manus-vault/Skills/mvp-architect/SKILL.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
+| `.pytest_cache/README.md` | artifact_id, created, last_updated, owner, source_of_truth, status, title |
+| `docs/AETHERFORGE_PLAYABLE_ONBOARDING.md` | none |
+| `docs/ARCHITECTURE_CROSSWALK.md` | none |
 | `docs/ARTIFACT_ID_COLLISION_REPORT_2026-05-27.md` | none |
+| `docs/ARTIFACT_SOURCE_OF_TRUTH_INDEX.md` | none |
+| `docs/ARTIFACT_TYPE_NORMALIZATION_GUIDE_2026-05-29.md` | none |
+| `docs/CONTRIBUTOR_PLAYBOOK.md` | none |
+| `docs/EVIDENCE_AND_DEMONSTRATIONS.md` | none |
+| `docs/LATTICE_HYPERCUBE_12x12x12.md` | none |
 | `docs/LINEAGE_QUALITY_SCORE_PROPOSAL_v0_1.md` | none |
+| `docs/LINEAGE_QUALITY_SCORE_REPORT_2026-05-29.md` | none |
+| `docs/MASTER_METADATA_BACKLOG_LEDGER_2026-05-29.md` | none |
 | `docs/MASTER_SOURCE_REGISTRY.md` | none |
 | `docs/METADATA_BACKFILL_SCOPE_2026-05-27.md` | none |
 | `docs/METADATA_COVERAGE_REPORT_2026-05-27.md` | none |
+| `docs/METADATA_COVERAGE_REPORT_2026-05-29.md` | none |
 | `docs/METADATA_EXCEPTION_REGISTRY_2026-05-27.md` | none |
-| `docs/PROVENANCE_COMPLETENESS_REPORT_2026-05-27.md` | none |
-| `docs/SCHEMA_VERSION_MIGRATION_NOTES_v0_1.md` | none |
-| `docs/closeout/CONDITIONAL_HISTORY_REWRITE_RUNBOOK_2026-05-28.md` | none |
-| `docs/closeout/DUPLICATE_ARTIFACT_DETECTION_PASS_2026-05-28.md` | none |
-| `docs/closeout/HISTORY_REWRITE_RECEIPT_RESCAN_PROOF_2026-05-28.md` | none |
-| `docs/closeout/NEXT10_EXECUTION_CHECKPOINTS_2026-05-28.md` | none |
-| `docs/closeout/PII_AUDIT_CLOSEOUT_2026-05-28.md` | none |
-| `docs/closeout/PII_AUDIT_EVIDENCE_RECEIPT_2026-05-28.md` | none |
-| `docs/closeout/PRE_RELEASE_SAFETY_SIGNOFF_2026-05-28.md` | none |
-| `docs/closeout/PROVENANCE_FRONTMATTER_BACKFILL_CLOSEOUT_2026-05-28.md` | none |
-| `docs/closeout/REDACTION_PROTOCOL_SAFE_PUBLICATION_EXCEPTIONS_2026-05-28.md` | none |
 
 ## Exception paths (excluded from gap count)
 

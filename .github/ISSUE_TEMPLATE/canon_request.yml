@@ -1,0 +1,127 @@
+name: Canon Request
+description: Request that an artifact be promoted to canon status. Requires @atlaslattice adjudication.
+title: "[CANON REQUEST] "
+labels: ["canon-request", "needs-review"]
+assignees: atlaslattice
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚖️ Atlas Lattice Canon Request
+
+        Canon promotion requires:
+        1. All pre-gate fields completed below
+        2. Council review (at least one council member sign-off)
+        3. @atlaslattice adjudication
+        4. Ratification event recorded in `schemas/ratification_event/`
+
+        **Coordinate ≠ canon. Filing this request ≠ canon. Review decides.**
+
+  - type: input
+    id: artifact_id
+    attributes:
+      label: Artifact ID
+      description: The exact `artifact_id` from the artifact's YAML frontmatter
+      placeholder: "e.g. DOC-LATTICE-HYPERCUBE-12X12X12-2026-05-29"
+    validations:
+      required: true
+
+  - type: input
+    id: file_path
+    attributes:
+      label: File Path
+      description: Repo-relative path to the artifact file
+      placeholder: "e.g. docs/LATTICE_HYPERCUBE_12x12x12.md"
+    validations:
+      required: true
+
+  - type: input
+    id: hsn_coordinate
+    attributes:
+      label: H-S-N Coordinate
+      description: The artifact's current H-S-N coordinate (format H##-S##-N##)
+      placeholder: "e.g. H09-S08-N03"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: current_review_state
+    attributes:
+      label: Current review_state
+      description: The artifact must be at `reviewed` or `canon-gate` before filing
+      options:
+        - reviewed
+        - canon-gate
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What does this artifact contain and why does it merit canon status?
+      placeholder: "Describe the artifact's content, significance, and why it should be canon."
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting Evidence
+      description: Links to receipts, reviews, council discussions, or PR numbers that support this request
+      placeholder: |
+        - PR: #42
+        - Council review: council-reviews/FOO.md
+        - Receipt: archive/provenance/BAR.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: council_signoffs
+    attributes:
+      label: Council Sign-offs
+      description: GitHub usernames of council members who have reviewed and approved
+      placeholder: "@username1 — approved 2026-05-29"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: pre_gate_checklist
+    attributes:
+      label: Pre-gate Checklist
+      description: All boxes must be checked before @atlaslattice will adjudicate
+      options:
+        - label: "artifact_id is present and unique"
+          required: true
+        - label: "title is present"
+          required: true
+        - label: "status is CANDIDATE or CANONICAL"
+          required: true
+        - label: "owner is set"
+          required: true
+        - label: "created and last_updated are set"
+          required: true
+        - label: "source_of_truth is set"
+          required: true
+        - label: "canon: NO is set (will be updated to YES upon ratification)"
+          required: true
+        - label: "hsn_coordinate is valid H##-S##-N## format"
+          required: true
+        - label: "review_state is reviewed or canon-gate"
+          required: true
+        - label: "Supporting evidence is linked above"
+          required: true
+        - label: "IP boundary check has been run and no HIGH severity findings"
+          required: true
+        - label: "No PII in the artifact"
+          required: true
+
+  - type: checkboxes
+    id: authority_boundary
+    attributes:
+      label: Authority Boundary Acknowledgement
+      options:
+        - label: "I understand that filing this request does NOT make the artifact canon. Only @atlaslattice adjudication creates canon status."
+          required: true
+        - label: "I understand that coordinate ≠ canon, receipt ≠ truth, model consensus ≠ validation."
+          required: true

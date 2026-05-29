@@ -1,0 +1,62 @@
+name: Build & Publish Lattice Visualizer
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "archive/synthesis/data/**"
+      - "docs/lattice_viz/**"
+      - "scripts/build_lattice_graph.py"
+      - ".github/workflows/pages-lattice-viz.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    name: Build Lattice Graph + Deploy Visualizer
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python deps
+        run: pip install networkx rdflib pyyaml
+
+      - name: Build lattice graph
+        run: python scripts/build_lattice_graph.py
+
+      - name: Prepare Pages site
+        run: |
+          mkdir -p _site
+          cp docs/lattice_viz/index.html _site/index.html
+          cp docs/lattice_graph_nodes.json _site/lattice_graph_nodes.json
+          cp docs/lattice_graph.json _site/lattice_graph.json
+          # also serve the explainer doc
+          cp docs/LATTICE_HYPERCUBE_12x12x12.md _site/ 2>/dev/null || true
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "_site"
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
