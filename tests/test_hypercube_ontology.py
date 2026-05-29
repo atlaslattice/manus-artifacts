@@ -95,7 +95,7 @@ class TestNodeTypeTaxonomy:
         self.data = load("NODE_TYPE_TAXONOMY.yaml")
 
     def test_at_least_12_node_types(self):
-        assert len(self.data["node_types"]) >= 12
+        assert len(self.data["node_types"]) == 13  # NT-01 through NT-12 + NT-APEX
 
     def test_all_types_have_id_and_name(self):
         for nt in self.data["node_types"]:
@@ -128,7 +128,7 @@ class TestEdgeRelationTaxonomy:
     def setup_method(self):
         self.data = load("EDGE_RELATION_TAXONOMY.yaml")
 
-    def test_at_least_24_edge_types(self):
+    def test_at_least_20_edge_types(self):
         assert len(self.data["edge_types"]) >= 20
 
     def test_all_edges_have_required_fields(self):
