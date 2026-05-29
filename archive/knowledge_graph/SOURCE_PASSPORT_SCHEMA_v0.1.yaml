@@ -1,0 +1,49 @@
+schema_name: SOURCE_PASSPORT_SCHEMA_v0.1
+status: staging_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: >
+  Define a compact passport for any archive root or artifact entering the public knowledge graph staging lane.
+  A source passport makes cargo inspectable before claims are extracted.
+
+source_passport:
+  passport_id: null
+  source_id: null
+  title: null
+  surface: github | drive | notion | gamma | chat | external | uploaded_file | website | unknown
+  url_or_path: null
+  source_type: repository | file | document | spreadsheet | page | database | issue | pull_request | chat_export | pdf | unknown
+  created_or_modified: null
+  owner_or_origin: null
+  raw_export_status: available | partial_export | not_exported | receipt_shell_not_full_fidelity | unknown
+  raw_export_ref: null
+  content_hash: null
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  public_release_status: private_raw | private_quarantine | public_summary_candidate | public_candidate | public_reviewed_candidate | website_canon_candidate | canon | unknown
+  source_class: SourceRoot | SourceArtifact | RawExport | ParsedPacket | TaskLattice | Runbook | SchemaArtifact | ReviewQueue | unknown
+  contamination_flags:
+    claude_origin_or_touched: false
+    sensitive_security_language: false
+    financial_institution_language: false
+    credential_like_content: false
+    private_personal_data: false
+    openai_officiality_risk: false
+  review_lanes: []
+  missing_receipts: []
+  suggested_nodes: []
+  suggested_edges: []
+  next_action: null
+
+admission_rules:
+  - source_id_required
+  - source_surface_required
+  - url_or_path_required_or_marked_missing
+  - raw_export_status_required
+  - canon_status_defaults_not_canon
+  - authority_scope_defaults_none
+  - missing_receipts_are_nodes
+
+keeper: Passport the source before shredding the claims.
