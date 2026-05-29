@@ -2,7 +2,22 @@ name: Repo Hygiene Checks
 
 on:
   push:
+    paths:
+      - "**/*.md"
+      - "**/*.yml"
+      - "**/*.yaml"
+      - "**/*.py"
+      - "**/*.json"
+      - ".github/workflows/repo-hygiene-checks.yml"
   pull_request:
+    paths:
+      - "**/*.md"
+      - "**/*.yml"
+      - "**/*.yaml"
+      - "**/*.py"
+      - "**/*.json"
+      - ".github/workflows/repo-hygiene-checks.yml"
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -27,6 +42,12 @@ jobs:
             exit 1
           fi
           echo "No merge-conflict markers found."
+
+      - name: Set up Python for yamllint
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
 
       - name: Install yamllint
         run: pip install yamllint --quiet

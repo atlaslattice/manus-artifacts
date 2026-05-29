@@ -4,12 +4,12 @@ title: Aetherforge Next-144 Taskboard (12x12 Sequence)
 status: CANDIDATE
 owner: atlaslattice
 created: 2026-05-28
-last_updated: 2026-05-28
+last_updated: 2026-05-29
 source_of_truth: GitHub
 ---
 # Aetherforge Next-144 Taskboard (12x12 Sequence)
 
-> Baseline state: **44 / 50 done** (Wave 2 governance spine drafted 2026-05-28) with **4 hard blockers open**.
+> State: **45 / 50 done** (Wave 7 CI/security/automation complete 2026-05-29; Wave 2 governance spine done 2026-05-28) with **4 hard blockers open** (Wave 1 owner actions).
 
 ## Status Key
 
@@ -27,7 +27,7 @@ source_of_truth: GitHub
 | 4 (37-48) | Graph integrity | Wave 3 gate | Graph Integrity Review Published | 🟨 TODO |
 | 5 (49-60) | AI evidence spine | Wave 3 gate | AI Evidence Snapshot v2 Published | 🟨 TODO |
 | 6 (61-72) | Docs/navigation/public UX | Wave 4+5 gates | Public UX Path Complete | 🟨 TODO |
-| 7 (73-84) | CI/security/automation | Wave 1+6 gates | Security Posture Pack Published | 🟨 IN PROGRESS (11/12 drafted) |
+| 7 (73-84) | CI/security/automation | Wave 1+6 gates | Security Posture Pack Published | ✅ DONE |
 | 8 (85-96) | Tests/quality gates | Wave 4+7 gates | Quality Gate Calibration Complete | 🟨 TODO |
 | 9 (97-108) | Search/discovery/retrieval | Wave 3+4+6 gates | Discoverability Scorecard Published | 🟨 TODO |
 | 10 (109-120) | Contributor system/playability | Wave 6+8+9 gates | Quest System v2 Live | 🟨 TODO |
@@ -151,7 +151,7 @@ source_of_truth: GitHub
 - [x] **74.** Add secret-scan false-positive triage doc
 - [x] **75.** Define dependency-alert response SLA
 - [x] **76.** Audit GitHub Actions pinning
-- [ ] **77.** Optimize CI runtimes
+- [x] **77.** Optimize CI runtimes
 - [x] **78.** Publish CI failure triage playbook
 - [x] **79.** Map workflow ownership
 - [x] **80.** Add required-check policy proposal

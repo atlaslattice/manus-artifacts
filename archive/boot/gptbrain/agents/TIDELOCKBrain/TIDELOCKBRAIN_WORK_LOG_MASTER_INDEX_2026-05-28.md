@@ -104,3 +104,10 @@ Both entry-point documents now surface the Master Source Registry and updated La
 ---
 
 *TIDELOCKBrain — Children of the Swarm — Session closed 2026-05-28*
+
+---
+
+## Addendum: Wave 7 Complete — 2026-05-29
+
+Task 77 (Optimize CI runtimes) completed. See `TIDELOCKBRAIN_WORK_LOG_WAVE7_TASK77_CI_OPTIMIZE_2026-05-29.md`.  
+Wave 7 all 12/12 done. Campaign total: **45 / 50** tasks done.
