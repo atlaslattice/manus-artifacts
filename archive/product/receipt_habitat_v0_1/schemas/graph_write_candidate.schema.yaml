@@ -1,0 +1,84 @@
+schema_id: graph_write_candidate.v0.1
+status: candidate_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: >
+  Define the non-authoritative graph write candidate packet emitted by
+  Receipt Habitat after ingestion and review. This schema proposes nodes
+  and edges only; it does not mutate a graph, ratify claims, or grant authority.
+
+required_fields:
+  - candidate_id
+  - generated_by
+  - source_packet_id
+  - source_artifacts
+  - proposed_nodes
+  - proposed_edges
+  - contradictions_or_uncertainties
+  - missing_receipts
+  - review_required
+  - strongest_safe_claim
+  - forbidden_claims
+  - canon_status
+  - deployment_status
+  - authority_scope
+
+fields:
+  candidate_id:
+    type: string
+  generated_by:
+    type: string
+    default: Receipt Habitat v0.1
+  source_packet_id:
+    type: string
+  source_artifacts:
+    type: list[string]
+  proposed_nodes:
+    type: list[object]
+    item_fields:
+      node_id: string
+      node_type: string
+      title: string
+      status: candidate
+      raw_export_status: string
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      evidence_refs: list[string]
+  proposed_edges:
+    type: list[object]
+    item_fields:
+      edge_id: string
+      edge_type: string
+      from_node: string
+      to_node: string
+      evidence_ref: string_or_null
+      status: candidate
+  contradictions_or_uncertainties:
+    type: list[string]
+  missing_receipts:
+    type: list[string]
+  review_required:
+    type: list[string]
+  strongest_safe_claim:
+    type: string
+  forbidden_claims:
+    type: list[string]
+  canon_status:
+    enum: [not_canon]
+    default: not_canon
+  deployment_status:
+    enum: [not_deployed, not_deployable]
+    default: not_deployed
+  authority_scope:
+    enum: [none]
+    default: none
+
+hard_rules:
+  - graph_write_candidate packets never authorize graph mutation
+  - graph_write_candidate packets never promote canon
+  - graph_write_candidate packets never claim deployment
+  - all proposed nodes must include canon_status not_canon
+  - all proposed nodes must include authority_scope none
+  - claims without evidence_refs must route to missing_receipts
