@@ -110,18 +110,18 @@ X-axis houses should represent stable functional domains.
 Candidate examples:
 
 ```text
-H1  — identity / lineage
-H2  — provenance / registry
-H3  — ingestion / parsing
-H4  — planning / candidate synthesis
-H5  — execution / sandbox mutation
-H6  — verification / audit
-H7  — contradiction / quarantine
-H8  — implementation / repo work
-H9  — external science / evidence signals
-H10 — economic / resource / regenerative systems
-H11 — interface / culture / metaphor
-H12 — governance / canon / authority constraints
+H1  — identity / lineage (periodic analogue: element identity class + isotope family anchors)
+H2  — provenance / registry (periodic analogue: discovery chain + measurement provenance)
+H3  — ingestion / parsing (periodic analogue: observation ingest from lab/field/acoustic sensors)
+H4  — planning / candidate synthesis (periodic analogue: model hypothesis + candidate property synthesis)
+H5  — execution / sandbox mutation (periodic analogue: simulation and controlled-state perturbation)
+H6  — verification / audit (periodic analogue: reproducibility, calibration, confidence bounds)
+H7  — contradiction / quarantine (periodic analogue: anomaly containment and false-signal isolation)
+H8  — implementation / repo work (periodic analogue: operationalized mappings and tooling)
+H9  — external science / evidence signals (periodic analogue bundle: acoustic, electromagnetic, gravitational, quantum, neuromorphic evidence)
+H10 — economic / resource / regenerative systems (periodic analogue: extraction-regeneration lifecycle of matter systems)
+H11 — interface / culture / metaphor (periodic analogue: color-harmonic and legibility surfaces)
+H12 — governance / canon / authority constraints (periodic analogue: ratification gates and allowed-use boundaries)
 ```
 
 X-axis rule:
@@ -290,6 +290,12 @@ Yin-Yang polarity = regenerative/extractive balance signal
 Periodic boundary = toroidal/cyclical modeling of long-run state loops
 ```
 
+Reference vision companion:
+
+```text
+archive/spec/PERIODIC_TABLE_2_VISION_SPEC.md
+```
+
 Allowed use now:
 
 ```text
@@ -309,7 +315,70 @@ deployment proof
 governance override
 ```
 
-## 13. Recommended priority order
+## 13. Toroidal wrap rules (candidate)
+
+Toroidal behavior keeps the 12×12×12 grid periodic rather than terminal at edges.
+
+```text
+X-axis wrap:
+  (x=12, y, z) -> (x=1, y, z)
+  (x=1,  y, z) <- (x=12, y, z)
+
+Y-axis wrap:
+  (x, y=12, z) -> (x, y=1, z)
+  (x, y=1,  z) <- (x, y=12, z)
+
+Z-axis wrap:
+  (x, y, z=12) -> (x, y, z=1)
+  (x, y, z=1)  <- (x, y, z=12)
+```
+
+Boundary rule:
+
+```text
+Wrap behavior preserves neighbor connectivity and periodic recurrence.
+Wrap behavior does not grant authority or canon status.
+```
+
+## 14. Neuromorphic edge model (candidate)
+
+Edge dynamics are modeled as weighted synaptic links between coordinate cells.
+
+```text
+edge_weight(i,j) range: [0.0, 1.0]
+default_weight: 0.10
+reinforcement event: co-access/co-citation/co-transition of i and j
+decay event: prolonged non-use of edge(i,j)
+```
+
+Candidate update dynamics:
+
+```text
+Hebbian reinforcement:
+  if nodes i and j are co-accessed:
+    w(i,j) <- min(1.0, w(i,j) + alpha * co_access_signal)
+
+Temporal decay:
+  if edge(i,j) unused over interval dt:
+    w(i,j) <- max(w_min, w(i,j) * exp(-lambda * dt))
+```
+
+Candidate parameters:
+
+```text
+alpha  = learning rate (e.g., 0.02)
+lambda = decay constant (e.g., 0.005 per time-step)
+w_min  = floor weight to avoid total erase (e.g., 0.01)
+```
+
+Conservation boundary:
+
+```text
+Edge strength indicates retrieval/synthesis affinity only.
+Edge strength cannot be used as governance authority.
+```
+
+## 15. Recommended priority order
 
 ```text
 1. Finalize X/Y/Z typing.
@@ -318,13 +387,22 @@ governance override
 4. Expand Rainbow Yin-Yang Periodic Hypercube 2.0 after validation.
 ```
 
-## 14. Machine-readable coordinate sketch
+## 16. Machine-readable coordinate sketch
 
 ```yaml
 coordinate:
   x_house: H1-H12
   y_container: Y1-Y12
   z_state: Z1-Z12
+  resonance_hz: null
+  periodicity_mode: toroidal | bounded | custom
+  edge_weights:
+    enabled: true
+    default_weight: 0.10
+    update_rule: hebbian_with_decay
+    learning_rate_alpha: 0.02
+    decay_lambda: 0.005
+    floor_weight: 0.01
   artifact_id: null
   artifact_status_ref: null
   source_refs: []
@@ -336,7 +414,7 @@ coordinate:
   deployment_status: inert | simulated | staged | live | retired
 ```
 
-## 15. Keeper lines
+## 17. Keeper lines
 
 ```text
 Coordinate is not authority.
