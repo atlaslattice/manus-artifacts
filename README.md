@@ -84,6 +84,11 @@ by @atlaslattice. See [GOVERNANCE.md](./GOVERNANCE.md).
 - **[BAZINGA](./bazinga/)** — Constitutional middleware and launch protocols.
   - [v0.1 Launch Decree](./bazinga/v0.1-launch-decree.md)
 
+### Lattice Hypercube — Periodic Table 2.0
+- **[12×12×12 Unified Field Spec](./archive/spec/lattice-hypercube/LATTICE_HYPERCUBE_12x12x12_SPEC_v0.1.md)** — 1,728-node knowledge structure, acoustic resonance + neuromorphic principles.
+- **[Python Implementation](./codebases/lattice-hypercube/lattice_hypercube.py)** — Reference impl: 432 Hz base, STDP weights, Φ-centre, unified-field vectors.
+- **[Test Suite](./tests/test_lattice_hypercube_periodic_table.py)** — 48 tests, all passing.
+
 ### GPTDream++ System
 - **[Spec Vault Manifest](./archive/spec/gptdream/VAULT_MANIFEST_2026-05-26.md)** — Full spec inventory.
 - **[Cross-Link Map](./docs/gptdream-cross-links.md)** — Spec ↔ schema ↔ implementation index.
