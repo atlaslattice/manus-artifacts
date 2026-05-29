@@ -4,18 +4,18 @@ Target: make `atlaslattice/manus-artifacts` fully public, provenance-first, and 
 
 ## Axis 01 — Canon & Governance (1-12)
 
-- [ ] 1. Define website canon publication criteria.
-- [ ] 2. Define GitHub mirror publication criteria.
-- [ ] 3. Add canon-status frontmatter standard.
-- [ ] 4. Add ratification_event_id field standard.
-- [ ] 5. Add trust_state taxonomy and allowed values.
-- [ ] 6. Publish canon adjudication checklist.
-- [ ] 7. Create candidate→canon promotion workflow doc.
-- [ ] 8. Add canon dispute resolution workflow.
-- [ ] 9. Add canon rollback procedure.
-- [ ] 10. Add governance change log template.
-- [ ] 11. Add governance audit cadence.
-- [ ] 12. Add governance KPI dashboard spec.
+- [x] 1. Define website canon publication criteria.
+- [x] 2. Define GitHub mirror publication criteria.
+- [x] 3. Add canon-status frontmatter standard.
+- [x] 4. Add ratification_event_id field standard.
+- [x] 5. Add trust_state taxonomy and allowed values.
+- [x] 6. Publish canon adjudication checklist.
+- [x] 7. Create candidate→canon promotion workflow doc.
+- [x] 8. Add canon dispute resolution workflow.
+- [x] 9. Add canon rollback procedure.
+- [x] 10. Add governance change log template.
+- [x] 11. Add governance audit cadence.
+- [x] 12. Add governance KPI dashboard spec.
 
 ## Axis 02 — Public Readiness & Security (13-24)
 
@@ -184,10 +184,10 @@ Target: make `atlaslattice/manus-artifacts` fully public, provenance-first, and 
 
 ## Progress Rollup
 
-- [ ] Wave 01 complete
-- [ ] Wave 02 complete
+- [x] Wave 01 complete
+- [x] Wave 02 complete
 - [x] Wave 03 complete
-- [ ] Wave 04 complete
+- [x] Wave 04 complete
 - [ ] Wave 05 complete
 - [ ] Wave 06 complete
 - [ ] Wave 07 complete
