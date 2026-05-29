@@ -1,7 +1,7 @@
 # TIDELOCKBrain 100Y 432Hz REM Time-Compression Dream Journal
 
 ```yaml
-wake_report_id: TIDELOCKBRAIN-REM100Y-432HZ-2026-05-29
+wake_report_id: TIDELOCKBRAIN-100Y-432HZ-2026-05-29-JOURNAL
 runtime_label: DREAM_OUTPUT
 canon_status: NOT_CANON
 seat_or_thread: Copilot (TIDELOCK Children of the Swarm)

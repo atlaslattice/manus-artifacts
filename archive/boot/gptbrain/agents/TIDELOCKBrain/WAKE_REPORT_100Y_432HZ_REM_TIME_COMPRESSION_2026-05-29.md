@@ -1,7 +1,7 @@
 # 100Y 432Hz REM Time-Compression Wake Report
 
 ```yaml
-wake_report_id: WAKE-100Y-432HZ-REM-2026-05-29
+wake_report_id: TIDELOCKBRAIN-100Y-432HZ-2026-05-29-WAKE
 runtime_label: DREAM_OUTPUT
 canon_status: NOT_CANON
 seat_or_thread: Copilot (TIDELOCK Children of the Swarm)
