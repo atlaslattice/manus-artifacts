@@ -19,6 +19,10 @@ Execution hierarchy for Aetherforge delivery:
 
 - `/projects/aetherforge-arc3-wave3-gameplay.md` — Arc 3: The Graph Weaver's Trial
 
+## Swarm Coordination
+
+- `/projects/tidelock-swarm-intake-coordination-2026-05-29.md` — TIDELOCK Swarm Intake protocol (issue #232, freeze 2026-06-05)
+
 ## Program Support Docs
 
 - `/docs/mission-vision.md` — single mission/vision statement for public launch
