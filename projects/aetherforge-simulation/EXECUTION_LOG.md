@@ -96,6 +96,20 @@ This log records practical non-canon infrastructure changes made to the simulati
 - Updated `.github/workflows/aetherforge-simulation.yml` to export and inspect `lucerna-gap-register-graph.generated.json`.
 - CI now asserts the Lucerna graph validates, has 7 missing receipts, and has 4 human-root blockers.
 
+### Added REM 100-year simulation
+
+- Added `rem_100_year_simulation.py`.
+- Added readable report `REM_100_YEAR_SIMULATION_v0_1.md`.
+- Simulation emits 100 yearly states across 10 decade phases.
+- Simulation is deterministic for seed 144.
+- Each yearly state links to the prior receipt head through a SHA-256 hash chain.
+- Boundary states: not canon, not deployment, no authority, not prediction.
+- Keeper read: Continuity survives by making every gap addressable.
+- Added pytest coverage for duration, phase count, receipt linkage, and boundary state.
+- Added CLI coverage for `rem_100_year_simulation.py --json --seed 144`.
+- Updated `.github/workflows/aetherforge-simulation.yml` to generate and inspect `rem-100-year.generated.json`.
+- CI now asserts 100 yearly states and no prediction/canon/deployment/authority claims.
+
 ## Operating rule
 
 Every future change should leave a receipt: what changed, what it maps to, how it is validated, and which boundary it respects.
