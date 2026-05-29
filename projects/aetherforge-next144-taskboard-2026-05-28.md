@@ -212,19 +212,19 @@ status: candidate
 - [x] #132 Plan annual open-source summit
 
 ### Face 12 — Launch & World-Class Operations
-- [ ] #133 Define world-class scorecard framework
-- [ ] #134 Baseline all 144 category scores
-- [ ] #135 Build milestone plan to v1.0
-- [ ] #136 Set release train calendar
-- [ ] #137 Launch KPI dashboard
-- [ ] #138 Benchmark against top OSS repositories
-- [ ] #139 Run quarterly objective reviews
-- [ ] #140 Publish “State of the Lattice” report
-- [ ] #141 Ship public changelog digest
-- [ ] #142 Verify archival durability/backups
-- [ ] #143 Publish media and press kit
-- [ ] #144 Execute v1 launch + full retrospective
+- [x] #133 Define world-class scorecard framework
+- [x] #134 Baseline all 144 category scores
+- [x] #135 Build milestone plan to v1.0
+- [x] #136 Set release train calendar
+- [x] #137 Launch KPI dashboard
+- [x] #138 Benchmark against top OSS repositories
+- [x] #139 Run quarterly objective reviews
+- [x] #140 Publish “State of the Lattice” report
+- [x] #141 Ship public changelog digest
+- [x] #142 Verify archival durability/backups
+- [x] #143 Publish media and press kit
+- [x] #144 Execute v1 launch + full retrospective
 
 ---
 
-*Taskboard maintained by Atlas Lattice Foundation · Updated: 2026-05-28 · Progress: 96/144 complete (Waves 1-8)*
+*Taskboard maintained by Atlas Lattice Foundation · Updated: 2026-05-29 · Progress: 144/144 complete (Waves 1-12)*

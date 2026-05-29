@@ -12,6 +12,19 @@ status: candidate
 
 ### Added
 
+- Wave 12 Launch & World-Class Operations Pack (tasks #133–#144): 12 new launch/operations governance artifacts
+  - `archive/governance/WORLDCLASS_SCORECARD_FRAMEWORK.md` — 144-mission scoring rubric and world-class threshold (#133)
+  - `archive/governance/WORLDCLASS_SCORECARD_BASELINE.md` — initial 144-category baseline and gap-to-target summary (#134)
+  - `archive/governance/V1_MILESTONE_PLAN.md` — milestone path and acceptance criteria for v1.0 (#135)
+  - `archive/governance/RELEASE_TRAIN_CALENDAR.md` — CalVer release rhythm and launch timetable (#136)
+  - `archive/governance/KPI_DASHBOARD_DESIGN.md` — KPI board layout and operating metrics (#137)
+  - `archive/governance/TOP_OSS_BENCHMARK_REPORT.md` — comparator benchmark against exemplar OSS repositories (#138)
+  - `archive/governance/QUARTERLY_OBJECTIVE_REVIEW.md` — quarterly review loop for objectives and launch readiness (#139)
+  - `archive/governance/STATE_OF_LATTICE_REPORT_TEMPLATE.md` — recurring state-of-project report template (#140)
+  - `archive/governance/PUBLIC_CHANGELOG_DIGEST_TEMPLATE.md` — public digest format derived from the root changelog (#141)
+  - `archive/governance/ARCHIVAL_DURABILITY_POLICY.md` — durability, backup drill, and archive strategy (#142)
+  - `archive/governance/PRESS_MEDIA_KIT.md` — public-facing media summary and key facts (#143)
+  - `archive/governance/V1_LAUNCH_RETROSPECTIVE_PLAYBOOK.md` — launch-day sequence and retrospective template (#144)
 - Wave 8 Testing & Reliability Pack (tasks #85–#96): 12 new testing governance artifacts
   - `archive/governance/TEST_STRATEGY_BY_DOMAIN.md` — 5-domain test strategy map (#85)
   - `archive/governance/COVERAGE_BASELINES.md` — minimum coverage thresholds by module (#86)
