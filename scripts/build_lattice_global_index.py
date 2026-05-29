@@ -27,6 +27,141 @@ LANE_MAP = {
 }
 MARKDOWN_LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 
+# ──────────────────────────────────────────────────────────────────────
+# H-S-N coordinate assignment
+# Heuristic pass: path + name keywords → H##-S##-N##
+# H = House (domain), S = Sphere (lifecycle state), N = Node (phase)
+# ──────────────────────────────────────────────────────────────────────
+
+_H_KEYWORD_MAP: list[tuple[list[str], str]] = [
+    (["element", "periodic", "isotope", "atomic", "matter", "mineral", "crystal_chem"], "H01"),
+    (["frequency", "energy", "radiation", "photon", "electromagnetic", "wave_energy"], "H02"),
+    (["acoustic", "resonance", "sound", "vibration", "harmonic", "standing_wave"], "H03"),
+    (["color", "spectrum", "rainbow", "hue", "chromatic", "colour", "spectral"], "H04"),
+    (["biology", "neural", "neuromorphic", "organism", "cell", "genetic", "life_"], "H05"),
+    (["mind", "conscious", "cognitive", "awareness", "intelligence", "gptbrain", "dream"], "H06"),
+    (["language", "symbol", "schema", "data_format", "semantic", "code", "protocol"], "H07"),
+    (["architecture", "system", "design", "governance", "framework", "aluminum_os", "bazinga", "council"], "H08"),
+    (["knowledge", "evidence", "receipt", "proof", "provenance", "claim", "review"], "H09"),
+    (["time", "process", "history", "cycle", "phase", "session", "campaign", "wave"], "H10"),
+    (["space", "geometry", "topology", "coordinate", "hypercube", "lattice", "spatial", "metatron"], "H11"),
+    (["play", "game", "aetherforge", "creative", "myth", "culture", "spirit", "quest", "dream_proto"], "H12"),
+]
+
+_DOMAIN_H_MAP: dict[str, str] = {
+    ".github": "H08",
+    "schemas": "H07",
+    "scripts": "H09",
+    "tests": "H09",
+    "docs": "H09",
+    "archive": "H09",
+    "archives": "H10",
+    "projects": "H10",
+    "health": "H05",
+    "research": "H09",
+    "council": "H08",
+    "council-reviews": "H08",
+    "forks": "H08",
+    "sandbox_inventory_april_2026.md": "H10",
+    "about": "H06",
+    "space": "H11",
+    "bazinga": "H08",
+    "aluminum-os": "H08",
+    "aluminum-os-core": "H08",
+    "sheldonbrain": "H06",
+    "deepseekbrain": "H06",
+    "gptbrain": "H06",
+    "gangaseek": "H12",
+    "children-of-the-swarm": "H12",
+    "codebases": "H07",
+    "atlas-prime": "H08",
+    "manus-vault": "H10",
+    "integrations": "H08",
+    "synthesis_plan.md": "H09",
+    "quarantine": "H09",
+}
+
+_SPHERE_KEYWORD_MAP: list[tuple[list[str], str]] = [
+    (["raw", "intake", "ingest", "source"], "S01"),
+    (["parsed", "extracted", "decomposed"], "S02"),
+    (["candidate", "proposal", "draft"], "S03"),
+    (["review", "under_review", "evaluation"], "S04"),
+    (["quarantine", "quarantined", "isolated"], "S05"),
+    (["validated", "verified", "passed", "confirmed"], "S06"),
+    (["receipt", "evidence", "provenance", "proof"], "S07"),
+    (["synthesis", "integration", "bridge", "fork", "merge"], "S08"),
+    (["index", "query", "manifest", "search", "global_index"], "S09"),
+    (["visual", "render", "graph_viewer", "display", "dashboard"], "S10"),
+    (["governance", "policy", "ci_", ".github", "workflow", "rule"], "S11"),
+    (["canon", "published", "ratified", "deploy"], "S12"),
+]
+
+_DOMAIN_S_MAP: dict[str, str] = {
+    ".github": "S11",
+    "schemas": "S09",
+    "scripts": "S09",
+    "tests": "S06",
+    "docs": "S10",
+    "projects": "S03",
+    "forks": "S08",
+    "quarantine": "S05",
+    "council": "S11",
+    "council-reviews": "S07",
+    "research": "S02",
+    "health": "S03",
+    "archives": "S01",
+}
+
+_NODE_KEYWORD_MAP: list[tuple[list[str], str]] = [
+    (["foundation", "axiom", "constant", "ground", "base", "root"], "N01"),
+    (["flow", "active", "in_progress", "current", "wip"], "N02"),
+    (["proposal", "seed", "idea", "brainstorm", "exploration"], "N03"),
+    (["critical", "priority", "hotfix", "urgent", "blocker"], "N04"),
+    (["schema", "ontology", "lattice", "ordered", "coordinate", "crystal"], "N05"),
+    (["milestone", "completed", "done", "yang", "ascending"], "N06"),
+    (["archive", "intake", "queue", "yin", "deprecat"], "N07"),
+    (["ambiguous", "contested", "multi_state", "conflict"], "N08"),
+    (["entangled", "mirror", "paired", "linked_pair", "fork_bridge"], "N09"),
+    (["resonant", "reinforc", "harmonic", "amplif"], "N10"),
+    (["dissonant", "contradict", "adversarial", "conflict_test"], "N11"),
+    (["unified", "omega", "transcendent", "synthesis_all", "meta"], "N12"),
+]
+
+
+def _assign_hsn(relative_path: str) -> str:
+    """Return a candidate H-S-N coordinate for an artifact path."""
+    lower = relative_path.lower().replace("/", "_").replace("-", "_").replace(".", "_")
+    domain = relative_path.split("/", 1)[0] if "/" in relative_path else "_root"
+
+    # House
+    house = _DOMAIN_H_MAP.get(domain, None)
+    if house is None:
+        for keywords, h_code in _H_KEYWORD_MAP:
+            if any(kw in lower for kw in keywords):
+                house = h_code
+                break
+    if house is None:
+        house = "H09"  # default: Knowledge & Evidence
+
+    # Sphere
+    sphere = _DOMAIN_S_MAP.get(domain, None)
+    if sphere is None:
+        for keywords, s_code in _SPHERE_KEYWORD_MAP:
+            if any(kw in lower for kw in keywords):
+                sphere = s_code
+                break
+    if sphere is None:
+        sphere = "S03"  # default: Candidate
+
+    # Node
+    node = "N05"  # default: Crystal/Lattice-Ordered
+    for keywords, n_code in _NODE_KEYWORD_MAP:
+        if any(kw in lower for kw in keywords):
+            node = n_code
+            break
+
+    return f"{house}-{sphere}-{node}"
+
 
 @dataclass(frozen=True)
 class ArtifactRecord:
@@ -44,6 +179,7 @@ class ArtifactRecord:
     outbound_repo_links: list[str] | None = None
     unresolved_repo_links: list[str] | None = None
     inbound_repo_links: list[str] | None = None
+    hsn_coordinate: str = "H09-S03-N05"
 
     def as_dict(self) -> dict[str, object]:
         payload = self.__dict__.copy()
@@ -160,6 +296,7 @@ def build_index(repo_root: Path) -> dict[str, object]:
             last_modified_utc=modified,
             outbound_repo_links=outbound_links,
             unresolved_repo_links=unresolved_links,
+            hsn_coordinate=_assign_hsn(rel),
         )
         records.append(record)
 
@@ -230,6 +367,12 @@ def build_index(repo_root: Path) -> dict[str, object]:
             root_reachable.add(node)
             stack.extend(sorted(directed_graph[node] - root_reachable))
 
+    # HSN coverage stats
+    total_artifacts = len(artifact_payload)
+    hsn_assigned = sum(1 for p in artifact_payload if p.get("hsn_coordinate") and p["hsn_coordinate"] != "H09-S03-N05")
+    hsn_all = sum(1 for p in artifact_payload if p.get("hsn_coordinate"))
+    hsn_coverage_pct = round(100.0 * hsn_all / total_artifacts, 2) if total_artifacts else 0.0
+
     return {
         "schema_id": "lattice_global_index.v0.1",
         "generated_at_utc": generated_at,
@@ -243,6 +386,12 @@ def build_index(repo_root: Path) -> dict[str, object]:
             "isolated_markdown_artifacts": isolated_markdown,
             "connected_markdown_components": connected_components,
             "root_reachable_markdown_artifacts": len(root_reachable),
+        },
+        "hsn_coverage": {
+            "total_artifacts": total_artifacts,
+            "hsn_assigned_total": hsn_all,
+            "hsn_non_default_assigned": hsn_assigned,
+            "coverage_pct": hsn_coverage_pct,
         },
         "artifacts": artifact_payload,
     }

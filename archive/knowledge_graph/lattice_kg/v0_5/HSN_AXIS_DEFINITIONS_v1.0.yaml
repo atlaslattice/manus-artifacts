@@ -1,0 +1,455 @@
+# HSN_AXIS_DEFINITIONS_v1.0.yaml
+#
+# STATUS: PUBLIC-CANDIDATE — NOT CANON
+# CANON: no
+# DEPLOYMENT: no
+# AUTHORITY: none
+# VERSION: 1.0
+# COORDINATE_FORMAT: H##-S##-N## (e.g. H04-S09-N02)
+#
+# The Atlas Lattice uses a 12×12×12 H-S-N coordinate system.
+# This file is the frozen v1.0 ontology for all 36 axis categories.
+# Every artifact in the lattice is addressable by one H-S-N cell.
+# 12 Houses × 12 Spheres × 12 Nodes = 1,728 addressable cells.
+#
+# Nothing here is a completed scientific standard.
+# Coordinate ≠ permission. Coordinate ≠ canon. Coordinate ≠ proof.
+
+schema_id: hsn_axis_definitions.v1.0
+status: CANDIDATE — NOT CANON
+canon_status: not_canon
+deployment_status: not_deployable
+authority: none
+generated_at_utc: "2026-05-29T00:00:00Z"
+axis_count: 36
+cell_count: 1728
+
+# ──────────────────────────────────────────────────────────────────────
+# HOUSES  (H01–H12)  Major Knowledge Domains
+# The House axis defines *what* a node is about — the domain of reality
+# or knowledge it belongs to.  Think of it as the row in the Periodic
+# Table 2.0.
+# ──────────────────────────────────────────────────────────────────────
+houses:
+  H01:
+    label: "Matter & Elements"
+    short: matter
+    definition: >-
+      Physical substance, chemical elements, isotopes, atomic structure, and all
+      classical states of matter (solid, liquid, gas, plasma, BEC, etc.).  This
+      is the ground layer of the Periodic Table 2.0 vision, seeding real atomic
+      data from open-source sources such as Periodic-Table-JSON.
+    seeds:
+      - elements
+      - isotopes
+      - atomic_structure
+      - states_of_matter
+      - periodic_table
+
+  H02:
+    label: "Energy & Frequency"
+    short: energy
+    definition: >-
+      Electromagnetic spectrum, photon behavior, radiation, energy quanta, and
+      wave-particle duality.  Maps all frequency ranges from radio to gamma, and
+      connects to acoustic and color domains via shared spectral operators.
+    seeds:
+      - electromagnetic_spectrum
+      - photons
+      - radiation
+      - energy_quanta
+      - wave_particle_duality
+
+  H03:
+    label: "Acoustics & Resonance"
+    short: acoustics
+    definition: >-
+      Sound waves, vibration, harmonic series, standing waves, and acoustic
+      interference patterns.  The B-axis of the Periodic Table 2.0 for
+      resonant phenomena; Riemann S serves as the candidate operator for
+      spectral structure over this domain.
+    seeds:
+      - sound_waves
+      - vibration
+      - harmonic_series
+      - standing_waves
+      - resonance
+
+  H04:
+    label: "Color & Spectrum"
+    short: color
+    definition: >-
+      Visible light, chromatic harmony, color theory, spectral decomposition,
+      and the Rainbow layer.  Maps hue to frequency coordinates for the Rainbow
+      Yin-Yang lattice; color-harmonic relationships are candidate edges
+      connecting H04 to H02 and H03.
+    seeds:
+      - visible_light
+      - chromatic_harmony
+      - color_theory
+      - spectral_decomposition
+      - rainbow_layer
+
+  H05:
+    label: "Life & Biology"
+    short: biology
+    definition: >-
+      Living organisms, cellular biology, neuromorphic structures, genetics,
+      and biophysical systems.  Seeds the N-axis of neuromorphic principles
+      and bridges chemistry (H01) to mind (H06) via embodied biological
+      architecture.
+    seeds:
+      - organisms
+      - cellular_biology
+      - neuromorphic_structures
+      - genetics
+      - biophysics
+
+  H06:
+    label: "Mind & Consciousness"
+    short: mind
+    definition: >-
+      Cognition, awareness, intelligence, memory, and the architecture of
+      thought.  Bridges neuromorphic biology (H05) to symbolic knowledge
+      systems (H07); GPTBrain and GPTDream++ protocols live at the
+      H06-H07 boundary.
+    seeds:
+      - cognition
+      - awareness
+      - intelligence
+      - memory
+      - thought_architecture
+
+  H07:
+    label: "Language & Information"
+    short: language
+    definition: >-
+      Symbols, code, data formats, communication protocols, and semantic
+      systems.  The substrate for all textual and computational artifacts in
+      the archive; schemas and scripts are H07 nodes.
+    seeds:
+      - symbols
+      - code
+      - data_formats
+      - communication_protocols
+      - semantics
+
+  H08:
+    label: "Systems & Architecture"
+    short: systems
+    definition: >-
+      Design patterns, structural engineering, governance frameworks, and
+      operational protocols.  The meta-layer for how complex systems are
+      organized; Aluminum OS, BAZINGA, and council governance documents
+      are H08 nodes.
+    seeds:
+      - design_patterns
+      - structural_engineering
+      - governance_frameworks
+      - operational_protocols
+      - system_architecture
+
+  H09:
+    label: "Knowledge & Evidence"
+    short: knowledge
+    definition: >-
+      Provenance chains, receipt trails, claims, review states, and epistemic
+      status tracking.  The integrity layer for the entire lattice; every
+      receipt artifact and quality-gate result is an H09 node.
+    seeds:
+      - provenance
+      - receipt_trails
+      - claims
+      - review_states
+      - epistemic_status
+
+  H10:
+    label: "Time & Process"
+    short: time
+    definition: >-
+      Sequences, cycles, phases, transformation events, and temporal ordering.
+      Governs how artifacts and states evolve through the lattice; session
+      logs, dream cycles, and wave-campaign records are H10 nodes.
+    seeds:
+      - sequences
+      - cycles
+      - phases
+      - transformation_events
+      - temporal_ordering
+
+  H11:
+    label: "Space & Geometry"
+    short: space
+    definition: >-
+      Topology, coordinate systems, spatial relationships, and the geometry of
+      the hypercube itself.  Metatron's Cube is the candidate spatial substrate;
+      the H-S-N grid is itself an H11 artifact.
+    seeds:
+      - topology
+      - coordinate_systems
+      - spatial_relationships
+      - hypercube_geometry
+      - metatrons_cube
+
+  H12:
+    label: "Spirit & Play"
+    short: spirit
+    definition: >-
+      Creativity, games, mythology, culture, and the Aetherforge game layer.
+      The expressive and generative surface of the lattice; dream artifacts,
+      quest loops, and cultural synthesis live here.  Playful framing does not
+      grant canon status.
+    seeds:
+      - creativity
+      - games
+      - mythology
+      - culture
+      - aetherforge
+
+# ──────────────────────────────────────────────────────────────────────
+# SPHERES  (S01–S12)  Processing & Review States
+# The Sphere axis defines *how processed* a node is — its lifecycle
+# state on the journey from raw input to ratified canon.  Think of it
+# as the column in the Periodic Table 2.0.
+# ──────────────────────────────────────────────────────────────────────
+spheres:
+  S01:
+    label: "Raw / Source"
+    short: raw
+    definition: >-
+      Unprocessed, original input in its most primitive form.  No extraction
+      or transformation has occurred; the artifact is exactly as received
+      from its origin.  Every intake starts here.
+    trust_floor: candidate_unverified
+
+  S02:
+    label: "Parsed / Extracted"
+    short: parsed
+    definition: >-
+      Structure has been extracted from raw input; fields are identifiable.
+      The artifact has been decomposed but not yet validated or cross-referenced
+      against external evidence.
+    trust_floor: candidate_unverified
+
+  S03:
+    label: "Candidate"
+    short: candidate
+    definition: >-
+      A proposed artifact, claim, or edge that has been submitted for review.
+      It is in the graph but not yet verified against external evidence; all
+      current lattice artifacts default here unless promoted.
+    trust_floor: candidate_unverified
+
+  S04:
+    label: "Under Review"
+    short: under_review
+    definition: >-
+      Actively being evaluated against evidence, tests, or council review.
+      Open review items exist and resolution is pending; the artifact may
+      not be cited as settled fact.
+    trust_floor: candidate_unverified
+
+  S05:
+    label: "Quarantine"
+    short: quarantine
+    definition: >-
+      Isolated due to privacy concerns, licensing ambiguity, or conflicting
+      claims.  Requires explicit clearance before re-entry into the active
+      graph; quarantined artifacts must not be publicly surfaced.
+    trust_floor: quarantined
+
+  S06:
+    label: "Validated"
+    short: validated
+    definition: >-
+      Has passed applicable quality gates, link-integrity checks, and schema
+      conformance.  Evidence receipts are present and linked; the artifact is
+      reliable for downstream use but not yet canon.
+    trust_floor: validated_candidate
+
+  S07:
+    label: "Evidence / Receipt"
+    short: receipt
+    definition: >-
+      A receipt artifact that supports or provenes another node.  Provides the
+      trail connecting a claim to its source; every High-trust claim requires
+      at least one S07 node pointing to it.
+    trust_floor: candidate_unverified
+
+  S08:
+    label: "Synthesis / Integration"
+    short: synthesis
+    definition: >-
+      A merged, bridged, or composed layer that combines multiple source nodes.
+      Fork bridge adapters and data integrations live here; the octopus arm
+      that connects external open-source data into H-S-N coordinates.
+    trust_floor: candidate_unverified
+
+  S09:
+    label: "Query / Index"
+    short: index
+    definition: >-
+      Machine-readable index and retrieval surface.  Scripts, manifests,
+      and graph databases that make the lattice navigable; the moment the
+      repo becomes actually queryable.
+    trust_floor: candidate_unverified
+
+  S10:
+    label: "Visualization / Render"
+    short: render
+    definition: >-
+      Display, graph rendering, and UI artifacts.  The layer that makes the
+      lattice visible and interactive to humans; GitHub Pages 3D viewer and
+      weekly state reports live here.
+    trust_floor: candidate_unverified
+
+  S11:
+    label: "Governance / Policy"
+    short: governance
+    definition: >-
+      Rules, ratification events, council decisions, and policy documents.
+      The institutional memory of the lattice; CI workflows, contribution
+      guidelines, and council session logs are S11 nodes.
+    trust_floor: candidate_unverified
+
+  S12:
+    label: "Canon / Published"
+    short: canon
+    definition: >-
+      Ratified artifacts that have passed full Pantheon Council adjudication
+      and human-root review by @atlaslattice.  Only explicit ratification
+      events can promote an artifact to S12; nothing self-promotes.
+    trust_floor: ratified
+
+# ──────────────────────────────────────────────────────────────────────
+# NODES  (N01–N12)  Local States / Primitives
+# The Node axis defines *what phase or polarity* a node is in — its
+# local physical-metaphorical state.  Think of it as a quantum number
+# or spin state in the Periodic Table 2.0.
+# ──────────────────────────────────────────────────────────────────────
+nodes:
+  N01:
+    label: "Solid / Ground"
+    short: solid
+    definition: >-
+      Stable, fixed, and dense.  Artifacts in this state have maximal
+      certainty and minimal change velocity; the bedrock of any domain.
+      Foundations, constants, and axioms are N01 nodes.
+
+  N02:
+    label: "Liquid / Flow"
+    short: liquid
+    definition: >-
+      Dynamic and adaptive.  Artifacts in flux, undergoing active revision
+      or being transported between review states.  Active sprint items and
+      in-progress documents are N02 nodes.
+
+  N03:
+    label: "Gas / Diffuse"
+    short: gas
+    definition: >-
+      Expansive and ambient.  Ideas, proposals, and early-stage explorations
+      with low density but broad reach.  Brainstorm artifacts, dream outputs,
+      and seedling proposals are N03 nodes.
+
+  N04:
+    label: "Plasma / High-Energy"
+    short: plasma
+    definition: >-
+      Excited, ionized, and peak-state.  High-priority active development
+      items or artifacts under intense scrutiny and rapid change.  Hotfix
+      tracks and critical blockers are N04 nodes.
+
+  N05:
+    label: "Crystal / Lattice-Ordered"
+    short: crystal
+    definition: >-
+      Geometrically structured and periodic.  Artifacts that exhibit strong
+      internal organization, such as schemas, ontologies, and coordinate
+      systems.  The H-S-N grid itself is an N05 artifact.
+
+  N06:
+    label: "Spin-Up / Yang"
+    short: yang
+    definition: >-
+      Ascending, positive polarity, generative.  Artifacts with forward
+      momentum, increasing maturity, and outgoing edges dominating.
+      Milestones, completed waves, and promoted nodes are N06.
+
+  N07:
+    label: "Spin-Down / Yin"
+    short: yin
+    definition: >-
+      Descending, negative polarity, receptive.  Artifacts that absorb
+      input, are being deprecated, or represent the receptive pole of a
+      Yin-Yang pair.  Archive intake queues and deprecation candidates
+      are N07 nodes.
+
+  N08:
+    label: "Superposition"
+    short: superposition
+    definition: >-
+      Multi-state and unresolved.  Artifacts that simultaneously hold
+      competing claims or exist in ambiguous review states.  Contested
+      claims and split-review items are N08 nodes.
+
+  N09:
+    label: "Entangled"
+    short: entangled
+    definition: >-
+      Correlated with a non-local peer node.  Two artifacts share a deep
+      dependency such that changing one requires reviewing the other; fork
+      bridge pairs and mirror artifacts are N09 nodes.
+
+  N10:
+    label: "Resonant"
+    short: resonant
+    definition: >-
+      In-phase and harmonically amplified.  Artifacts that reinforce each
+      other across the lattice, creating standing-wave knowledge patterns.
+      Mutually-supporting evidence pairs are N10 nodes.
+
+  N11:
+    label: "Dissonant"
+    short: dissonant
+    definition: >-
+      Out-of-phase and conflicting.  Artifacts that contradict, oppose, or
+      create tension requiring review and resolution.  Flagged inconsistencies
+      and adversarial test cases are N11 nodes.
+
+  N12:
+    label: "Transcendent / Omega"
+    short: omega
+    definition: >-
+      Boundary-crossing and unified.  Artifacts that successfully bridge
+      multiple Houses, representing a unified-field synthesis point.  The
+      Unified Mission Charter and Rainbow Yin-Yang operator are N12 nodes.
+
+# ──────────────────────────────────────────────────────────────────────
+# OPERATOR NOTES
+# ──────────────────────────────────────────────────────────────────────
+operators:
+  riemann_s:
+    description: >-
+      Candidate Riemann S operator motif: sorts, structures, and phases
+      artifacts along the spectral axis spanning H02 (Energy), H03
+      (Acoustics), and H04 (Color).  Not a proven theorem — a candidate
+      mathematical orientation for unified-field navigation.
+    candidate_domains: [H02, H03, H04]
+    candidate_spheres: [S08, S09]
+
+  yin_yang:
+    description: >-
+      Polarity operator pairing N06 (Yang/Spin-Up) against N07
+      (Yin/Spin-Down).  Every Yang node has a candidate Yin counterpart;
+      balance detection is a planned quality gate.
+    yang_node: N06
+    yin_node: N07
+
+# ──────────────────────────────────────────────────────────────────────
+# KEEPER
+# ──────────────────────────────────────────────────────────────────────
+keeper: >-
+  H gives domain. S gives lifecycle. N gives phase.
+  Receipts give support. Review decides what advances.
+  Human-root gates promotion. Nothing self-promotes.

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Lattice — H-S-N Knowledge Graph Viewer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0a0a14;
+      color: #e0e0ff;
+      font-family: 'Courier New', monospace;
+      overflow: hidden;
+    }
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(10,10,20,0.92);
+      border-bottom: 1px solid #333;
+      padding: 8px 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    #header h1 {
+      font-size: 14px;
+      color: #aaf;
+      white-space: nowrap;
+    }
+    #header .badge {
+      font-size: 10px;
+      background: #222;
+      border: 1px solid #555;
+      color: #fa0;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+    #controls {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-left: auto;
+    }
+    #controls select, #controls input {
+      background: #1a1a2e;
+      color: #e0e0ff;
+      border: 1px solid #444;
+      padding: 4px 8px;
+      font-size: 12px;
+      border-radius: 3px;
+    }
+    #controls button {
+      background: #1a2a4a;
+      color: #aaf;
+      border: 1px solid #446;
+      padding: 4px 12px;
+      font-size: 12px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    #controls button:hover { background: #2a3a6a; }
+
+    #graph-container {
+      position: fixed;
+      top: 42px; left: 0; right: 320px; bottom: 0;
+    }
+    #sidebar {
+      position: fixed;
+      top: 42px; right: 0;
+      width: 320px; bottom: 0;
+      background: rgba(10,10,20,0.95);
+      border-left: 1px solid #333;
+      overflow-y: auto;
+      padding: 12px;
+      font-size: 12px;
+    }
+    #sidebar h2 { color: #aaf; margin-bottom: 8px; font-size: 13px; }
+    #sidebar .section { margin-bottom: 16px; }
+    #sidebar .section h3 { color: #8af; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; border-bottom: 1px solid #333; padding-bottom: 3px; }
+    #node-detail { background: #111; border: 1px solid #444; border-radius: 4px; padding: 8px; min-height: 80px; }
+    #node-detail .coord { color: #4ff; font-size: 14px; font-weight: bold; margin-bottom: 4px; }
+    #node-detail .label { color: #ff8; margin-bottom: 4px; }
+    #node-detail .meta { color: #888; font-size: 11px; }
+    #stats-table { width: 100%; border-collapse: collapse; }
+    #stats-table td { padding: 2px 4px; }
+    #stats-table td:first-child { color: #888; }
+    #stats-table td:last-child { color: #aff; text-align: right; }
+    .house-pill {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 10px;
+      font-size: 10px;
+      margin: 1px;
+      cursor: pointer;
+    }
+    #loading {
+      position: fixed;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #aaf;
+      z-index: 200;
+    }
+    #loading .spinner {
+      width: 40px; height: 40px;
+      border: 3px solid #333;
+      border-top-color: #aaf;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 12px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    #status-bar {
+      position: fixed;
+      bottom: 0; left: 0; right: 320px;
+      background: rgba(10,10,20,0.9);
+      border-top: 1px solid #333;
+      padding: 3px 12px;
+      font-size: 11px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<div id="header">
+  <h1>⬡ ATLAS LATTICE — H-S-N Knowledge Graph</h1>
+  <span class="badge">CANDIDATE · NOT CANON</span>
+  <div id="controls">
+    <select id="house-filter">
+      <option value="">All Houses</option>
+      <option value="H01">H01 · Matter</option>
+      <option value="H02">H02 · Energy</option>
+      <option value="H03">H03 · Acoustics</option>
+      <option value="H04">H04 · Color</option>
+      <option value="H05">H05 · Biology</option>
+      <option value="H06">H06 · Mind</option>
+      <option value="H07">H07 · Language</option>
+      <option value="H08">H08 · Systems</option>
+      <option value="H09">H09 · Knowledge</option>
+      <option value="H10">H10 · Time</option>
+      <option value="H11">H11 · Space</option>
+      <option value="H12">H12 · Spirit</option>
+    </select>
+    <select id="type-filter">
+      <option value="">All Types</option>
+      <option value="artifact">Artifact</option>
+      <option value="element">Element</option>
+      <option value="spectral_band">Spectral Band</option>
+      <option value="chromatic_note">Chromatic Note</option>
+    </select>
+    <input type="number" id="max-nodes" value="300" min="10" max="2000" style="width:70px" title="Max nodes to display" />
+    <button id="btn-refresh">↺ Refresh</button>
+    <button id="btn-stats">📊 Stats</button>
+  </div>
+</div>
+
+<div id="graph-container">
+  <canvas id="graph-canvas"></canvas>
+</div>
+
+<div id="sidebar">
+  <div class="section">
+    <h3>Selected Node</h3>
+    <div id="node-detail">
+      <div style="color:#555">Click a node to inspect it.</div>
+    </div>
+  </div>
+  <div class="section">
+    <h3>Graph Stats</h3>
+    <table id="stats-table">
+      <tr><td>Total nodes</td><td id="stat-nodes">—</td></tr>
+      <tr><td>Total edges</td><td id="stat-edges">—</td></tr>
+      <tr><td>Displayed</td><td id="stat-displayed">—</td></tr>
+      <tr><td>HSN cells</td><td id="stat-cells">—</td></tr>
+      <tr><td>Coverage</td><td id="stat-coverage">—</td></tr>
+    </table>
+  </div>
+  <div class="section">
+    <h3>Houses (click to filter)</h3>
+    <div id="house-legend"></div>
+  </div>
+  <div class="section">
+    <h3>Query</h3>
+    <div style="font-size:11px;color:#888;margin-bottom:6px">
+      Use the CLI for full queries:<br>
+      <code style="color:#4f4">python scripts/query_lattice.py --stats</code>
+    </div>
+    <div style="font-size:11px;color:#888">
+      <code style="color:#4f4">python scripts/query_lattice.py H04-S06-N06</code>
+    </div>
+  </div>
+  <div class="section" id="stats-panel" style="display:none">
+    <h3>Coverage by House</h3>
+    <div id="house-coverage"></div>
+  </div>
+</div>
+
+<div id="loading">
+  <div class="spinner"></div>
+  <div>Loading lattice graph…</div>
+</div>
+
+<div id="status-bar">Loading manifest…</div>
+
+<script>
+// ──────────────────────────────────────────────────────────────────────
+// Atlas Lattice Graph Viewer — Lightweight canvas-based implementation
+// No external dependencies required (works from file:// or GitHub Pages)
+// ──────────────────────────────────────────────────────────────────────
+
+const HOUSE_COLORS = {
+  H01: '#e74c3c', H02: '#e67e22', H03: '#f1c40f', H04: '#2ecc71',
+  H05: '#1abc9c', H06: '#3498db', H07: '#9b59b6', H08: '#34495e',
+  H09: '#95a5a6', H10: '#d35400', H11: '#16a085', H12: '#8e44ad',
+};
+const HOUSE_LABELS = {
+  H01:'Matter', H02:'Energy', H03:'Acoustics', H04:'Color',
+  H05:'Biology', H06:'Mind', H07:'Language', H08:'Systems',
+  H09:'Knowledge', H10:'Time', H11:'Space', H12:'Spirit',
+};
+const TYPE_SHAPE = {
+  artifact: 'circle', element: 'diamond', spectral_band: 'rect', chromatic_note: 'star',
+};
+
+let allNodes = [], allEdges = [], filteredNodes = [], filteredEdges = [];
+let displayNodes = [], displayEdges = [];
+let selectedNode = null;
+let transform = { x: 0, y: 0, scale: 1 };
+let dragging = false, lastMouse = null, animFrame = null;
+let velocities = {};
+let positions = {};
+
+const canvas = document.getElementById('graph-canvas');
+const ctx = canvas.getContext('2d');
+
+// ── Layout ──
+function resizeCanvas() {
+  const container = document.getElementById('graph-container');
+  canvas.width = container.clientWidth;
+  canvas.height = container.clientHeight;
+}
+window.addEventListener('resize', () => { resizeCanvas(); draw(); });
+resizeCanvas();
+
+// ── Data loading ──
+async function loadManifest() {
+  // Try to load relative to the viewer location
+  const paths = [
+    '../knowledge_graph/lattice_kg/v0_5/lattice_graph_manifest.v1.0.json',
+    '../../archive/knowledge_graph/lattice_kg/v0_5/lattice_graph_manifest.v1.0.json',
+    '/archive/knowledge_graph/lattice_kg/v0_5/lattice_graph_manifest.v1.0.json',
+  ];
+  for (const p of paths) {
+    try {
+      const r = await fetch(p);
+      if (r.ok) return await r.json();
+    } catch(e) {}
+  }
+  // Fallback: synthetic demo data
+  return buildDemoData();
+}
+
+function buildDemoData() {
+  const nodes = [];
+  const edges = [];
+  // 12 house nodes + 12 sphere nodes + sample artifacts
+  for (let h = 1; h <= 12; h++) {
+    const hc = `H${String(h).padStart(2,'0')}`;
+    nodes.push({ node_id: `HOUSE-${hc}`, node_type: 'house', label: HOUSE_LABELS[hc] || hc, hsn_coordinate: `${hc}-S09-N05`, canon_status: 'not_canon', trust_state: 'candidate_unverified' });
+  }
+  for (let h = 1; h <= 12; h++) {
+    const hc = `H${String(h).padStart(2,'0')}`;
+    for (let i = 0; i < 5; i++) {
+      const id = `DEMO-${hc}-${i}`;
+      const s = `S${String(Math.ceil(Math.random()*12)).padStart(2,'0')}`;
+      const n = `N${String(Math.ceil(Math.random()*12)).padStart(2,'0')}`;
+      nodes.push({ node_id: id, node_type: 'artifact', label: `${hc} artifact ${i}`, hsn_coordinate: `${hc}-${s}-${n}`, canon_status: 'not_canon', trust_state: 'candidate_unverified' });
+      edges.push({ edge_id: `E-${id}`, from_node_id: `HOUSE-${hc}`, to_node_id: id, edge_type: 'contains' });
+    }
+  }
+  return { schema_id: 'demo', stats: { total_nodes: nodes.length, total_edges: edges.length, distinct_hsn_coordinates: 60, hsn_coverage_pct: 3.5 }, nodes, edges };
+}
+
+// ── Force-directed layout (simple spring) ──
+function initPositions(nodes) {
+  const cx = canvas.width / 2;
+  const cy = canvas.height / 2;
+  positions = {};
+  velocities = {};
+  nodes.forEach((n, i) => {
+    const angle = (2 * Math.PI * i) / nodes.length;
+    const r = Math.min(cx, cy) * 0.6;
+    positions[n.node_id] = {
+      x: cx + r * Math.cos(angle) + (Math.random()-0.5)*50,
+      y: cy + r * Math.sin(angle) + (Math.random()-0.5)*50,
+    };
+    velocities[n.node_id] = { x: 0, y: 0 };
+  });
+}
+
+let tickCount = 0;
+function tick() {
+  if (tickCount++ > 300) return; // cool down after 300 ticks
+  const repulsion = 800;
+  const spring = 0.01;
+  const restLen = 80;
+  const damping = 0.85;
+  const edgeSet = new Set(displayEdges.map(e => `${e.from_node_id}||${e.to_node_id}`));
+  const nodeIds = displayNodes.map(n => n.node_id);
+
+  // Repulsion
+  for (let i = 0; i < nodeIds.length; i++) {
+    for (let j = i+1; j < nodeIds.length; j++) {
+      const a = positions[nodeIds[i]];
+      const b = positions[nodeIds[j]];
+      if (!a || !b) continue;
+      const dx = b.x - a.x, dy = b.y - a.y;
+      const d = Math.sqrt(dx*dx + dy*dy) || 1;
+      const f = repulsion / (d*d);
+      velocities[nodeIds[i]].x -= f * dx/d;
+      velocities[nodeIds[i]].y -= f * dy/d;
+      velocities[nodeIds[j]].x += f * dx/d;
+      velocities[nodeIds[j]].y += f * dy/d;
+    }
+  }
+  // Spring attraction (edges)
+  displayEdges.forEach(e => {
+    const a = positions[e.from_node_id];
+    const b = positions[e.to_node_id];
+    if (!a || !b) return;
+    const dx = b.x - a.x, dy = b.y - a.y;
+    const d = Math.sqrt(dx*dx + dy*dy) || 1;
+    const f = spring * (d - restLen);
+    velocities[e.from_node_id].x += f * dx/d;
+    velocities[e.from_node_id].y += f * dy/d;
+    velocities[e.to_node_id].x -= f * dx/d;
+    velocities[e.to_node_id].y -= f * dy/d;
+  });
+  // Integrate
+  nodeIds.forEach(id => {
+    const pos = positions[id];
+    const vel = velocities[id];
+    if (!pos || !vel) return;
+    vel.x *= damping;
+    vel.y *= damping;
+    pos.x += vel.x;
+    pos.y += vel.y;
+  });
+}
+
+// ── Drawing ──
+function hsnColor(coord) {
+  if (!coord) return '#666';
+  const h = coord.split('-')[0];
+  return HOUSE_COLORS[h] || '#666';
+}
+
+function drawNode(node) {
+  const pos = positions[node.node_id];
+  if (!pos) return;
+  const { x, y } = worldToScreen(pos.x, pos.y);
+  const r = node === selectedNode ? 10 : 6;
+  const color = hsnColor(node.hsn_coordinate);
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(x, y, r, 0, Math.PI*2);
+  ctx.fillStyle = color + (node === selectedNode ? 'ff' : 'bb');
+  ctx.fill();
+  if (node === selectedNode) {
+    ctx.strokeStyle = '#fff';
+    ctx.lineWidth = 2;
+    ctx.stroke();
+  }
+  // Label for selected or large nodes
+  if (node === selectedNode || transform.scale > 2) {
+    ctx.fillStyle = '#fff';
+    ctx.font = '10px monospace';
+    ctx.fillText(node.label?.substring(0,24) || node.node_id, x+r+2, y+4);
+  }
+  ctx.restore();
+}
+
+function drawEdge(edge) {
+  const a = positions[edge.from_node_id];
+  const b = positions[edge.to_node_id];
+  if (!a || !b) return;
+  const pa = worldToScreen(a.x, a.y);
+  const pb = worldToScreen(b.x, b.y);
+  ctx.save();
+  ctx.beginPath();
+  ctx.moveTo(pa.x, pa.y);
+  ctx.lineTo(pb.x, pb.y);
+  ctx.strokeStyle = 'rgba(100,120,180,0.3)';
+  ctx.lineWidth = 1;
+  ctx.stroke();
+  ctx.restore();
+}
+
+function worldToScreen(wx, wy) {
+  return {
+    x: wx * transform.scale + transform.x,
+    y: wy * transform.scale + transform.y,
+  };
+}
+function screenToWorld(sx, sy) {
+  return {
+    x: (sx - transform.x) / transform.scale,
+    y: (sy - transform.y) / transform.scale,
+  };
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Background grid hint
+  ctx.save();
+  ctx.strokeStyle = 'rgba(50,50,80,0.3)';
+  ctx.lineWidth = 0.5;
+  for (let x = (transform.x % 60); x < canvas.width; x += 60) {
+    ctx.beginPath(); ctx.moveTo(x,0); ctx.lineTo(x,canvas.height); ctx.stroke();
+  }
+  for (let y = (transform.y % 60); y < canvas.height; y += 60) {
+    ctx.beginPath(); ctx.moveTo(0,y); ctx.lineTo(canvas.width,y); ctx.stroke();
+  }
+  ctx.restore();
+  displayEdges.forEach(drawEdge);
+  displayNodes.forEach(drawNode);
+}
+
+function animate() {
+  tick();
+  draw();
+  if (tickCount <= 300) {
+    animFrame = requestAnimationFrame(animate);
+  }
+}
+
+// ── Filtering ──
+function applyFilters() {
+  const houseFilter = document.getElementById('house-filter').value;
+  const typeFilter = document.getElementById('type-filter').value;
+  const maxNodes = parseInt(document.getElementById('max-nodes').value) || 300;
+
+  filteredNodes = allNodes.filter(n => {
+    if (houseFilter && !n.hsn_coordinate?.startsWith(houseFilter)) return false;
+    if (typeFilter && n.node_type !== typeFilter) return false;
+    return true;
+  });
+
+  // Limit nodes
+  displayNodes = filteredNodes.slice(0, maxNodes);
+  const displayNodeIds = new Set(displayNodes.map(n => n.node_id));
+  displayEdges = allEdges.filter(e => displayNodeIds.has(e.from_node_id) && displayNodeIds.has(e.to_node_id));
+
+  document.getElementById('stat-displayed').textContent = displayNodes.length + ' / ' + allNodes.length;
+
+  tickCount = 0;
+  initPositions(displayNodes);
+  if (animFrame) cancelAnimationFrame(animFrame);
+  animate();
+}
+
+// ── Interaction ──
+function findNodeAt(sx, sy) {
+  const world = screenToWorld(sx, sy);
+  let best = null, bestD = 12;
+  displayNodes.forEach(n => {
+    const pos = positions[n.node_id];
+    if (!pos) return;
+    const dx = pos.x - world.x, dy = pos.y - world.y;
+    const d = Math.sqrt(dx*dx + dy*dy) / transform.scale;
+    if (d < bestD) { best = n; bestD = d; }
+  });
+  return best;
+}
+
+canvas.addEventListener('mousedown', e => {
+  const node = findNodeAt(e.offsetX, e.offsetY);
+  if (node) {
+    selectedNode = node;
+    showNodeDetail(node);
+    draw();
+  } else {
+    dragging = true;
+    lastMouse = { x: e.offsetX, y: e.offsetY };
+  }
+});
+canvas.addEventListener('mousemove', e => {
+  if (!dragging) return;
+  const dx = e.offsetX - lastMouse.x;
+  const dy = e.offsetY - lastMouse.y;
+  transform.x += dx; transform.y += dy;
+  lastMouse = { x: e.offsetX, y: e.offsetY };
+  if (tickCount > 300) draw();
+});
+canvas.addEventListener('mouseup', () => { dragging = false; });
+canvas.addEventListener('wheel', e => {
+  e.preventDefault();
+  const factor = e.deltaY < 0 ? 1.1 : 0.9;
+  const mx = e.offsetX, my = e.offsetY;
+  transform.x = mx - (mx - transform.x) * factor;
+  transform.y = my - (my - transform.y) * factor;
+  transform.scale *= factor;
+  if (tickCount > 300) draw();
+}, { passive: false });
+
+// ── Node detail sidebar ──
+function showNodeDetail(node) {
+  const coord = node.hsn_coordinate || 'unknown';
+  const [h, s, n] = coord.split('-');
+  const color = hsnColor(coord);
+  document.getElementById('node-detail').innerHTML = `
+    <div class="coord" style="color:${color}">${coord}</div>
+    <div class="label">${node.label || node.node_id}</div>
+    <div class="meta">type: ${node.node_type}</div>
+    <div class="meta">house: ${h} · sphere: ${s} · node: ${n}</div>
+    <div class="meta">trust: ${node.trust_state || '?'}</div>
+    <div class="meta">canon: ${node.canon_status || '?'}</div>
+    ${node.atomic_number ? `<div class="meta">Z=${node.atomic_number} · ${node.symbol} · ${node.category}</div>` : ''}
+    ${node.path ? `<div class="meta" style="word-break:break-all">${node.path}</div>` : ''}
+  `;
+}
+
+// ── Stats panel ──
+function showStats() {
+  const panel = document.getElementById('stats-panel');
+  panel.style.display = 'block';
+  const houseCovDiv = document.getElementById('house-coverage');
+  const counts = {};
+  displayNodes.forEach(n => {
+    const h = n.hsn_coordinate?.split('-')[0];
+    if (h) counts[h] = (counts[h]||0) + 1;
+  });
+  houseCovDiv.innerHTML = Object.entries(counts).sort((a,b)=>b[1]-a[1])
+    .map(([h,c]) => `<div style="display:flex;gap:4px;margin:2px 0;align-items:center">
+      <span style="width:30px;color:${HOUSE_COLORS[h]||'#888'}">${h}</span>
+      <span style="width:60px;font-size:10px;color:#888">${HOUSE_LABELS[h]||''}</span>
+      <div style="background:${HOUSE_COLORS[h]||'#888'};width:${Math.min(c,100)}px;height:8px;border-radius:2px"></div>
+      <span style="color:#aff">${c}</span>
+    </div>`).join('');
+}
+
+// ── House legend ──
+function buildLegend() {
+  const div = document.getElementById('house-legend');
+  div.innerHTML = Object.entries(HOUSE_COLORS).map(([h, color]) =>
+    `<span class="house-pill" style="background:${color}22;border:1px solid ${color};color:${color}" onclick="filterHouse('${h}')">${h} ${HOUSE_LABELS[h]||''}</span>`
+  ).join('');
+}
+function filterHouse(h) {
+  document.getElementById('house-filter').value = h;
+  applyFilters();
+}
+
+// ── Bootstrap ──
+async function init() {
+  buildLegend();
+  const data = await loadManifest();
+  allNodes = data.nodes || [];
+  allEdges = data.edges || [];
+  const stats = data.stats || {};
+  document.getElementById('stat-nodes').textContent = stats.total_nodes || allNodes.length;
+  document.getElementById('stat-edges').textContent = stats.total_edges || allEdges.length;
+  document.getElementById('stat-cells').textContent = (stats.distinct_hsn_coordinates || '?') + ' / 1728';
+  document.getElementById('stat-coverage').textContent = (stats.hsn_coverage_pct || '?') + '%';
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('status-bar').textContent =
+    `Loaded: ${allNodes.length} nodes · ${allEdges.length} edges · ${stats.distinct_hsn_coordinates||'?'} HSN cells · ${stats.hsn_coverage_pct||'?'}% coverage · CANDIDATE NOT CANON`;
+
+  document.getElementById('btn-refresh').addEventListener('click', applyFilters);
+  document.getElementById('btn-stats').addEventListener('click', showStats);
+  document.getElementById('house-filter').addEventListener('change', applyFilters);
+  document.getElementById('type-filter').addEventListener('change', applyFilters);
+
+  applyFilters();
+}
+
+init().catch(err => {
+  document.getElementById('loading').innerHTML = `<div style="color:#f88">Error loading graph: ${err.message}</div><br><small style="color:#888">Run: python scripts/build_lattice_global_index.py --repo-root .</small>`;
+});
+</script>
+</body>
+</html>

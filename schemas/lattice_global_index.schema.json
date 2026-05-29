@@ -11,6 +11,7 @@
     "snapshot_fingerprint",
     "routes",
     "link_health",
+    "hsn_coverage",
     "artifacts"
   ],
   "properties": {
@@ -53,6 +54,17 @@
       },
       "additionalProperties": false
     },
+    "hsn_coverage": {
+      "type": "object",
+      "required": ["total_artifacts", "hsn_assigned_total", "hsn_non_default_assigned", "coverage_pct"],
+      "properties": {
+        "total_artifacts": {"type": "integer", "minimum": 0},
+        "hsn_assigned_total": {"type": "integer", "minimum": 0},
+        "hsn_non_default_assigned": {"type": "integer", "minimum": 0},
+        "coverage_pct": {"type": "number", "minimum": 0, "maximum": 100}
+      },
+      "additionalProperties": false
+    },
     "artifacts": {
       "type": "array",
       "items": {
@@ -72,7 +84,8 @@
           "outbound_repo_links",
           "unresolved_repo_links",
           "inbound_repo_links",
-          "source_receipt"
+          "source_receipt",
+          "hsn_coordinate"
         ],
         "properties": {
           "artifact_id": {"type": "string"},
@@ -89,7 +102,12 @@
           "outbound_repo_links": {"type": "array", "items": {"type": "string"}},
           "unresolved_repo_links": {"type": "array", "items": {"type": "string"}},
           "inbound_repo_links": {"type": "array", "items": {"type": "string"}},
-          "source_receipt": {"type": "string"}
+          "source_receipt": {"type": "string"},
+          "hsn_coordinate": {
+            "type": "string",
+            "description": "H-S-N lattice coordinate in format H##-S##-N## (e.g. H04-S09-N02). Candidate assignment — not canon.",
+            "pattern": "^H(0[1-9]|1[0-2])-S(0[1-9]|1[0-2])-N(0[1-9]|1[0-2])$"
+          }
         },
         "additionalProperties": false
       }
