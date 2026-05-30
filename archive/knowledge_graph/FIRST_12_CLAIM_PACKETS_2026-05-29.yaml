@@ -1,0 +1,100 @@
+claim_packet_set: FIRST_12_CLAIM_PACKETS_2026-05-29
+status: staging_claim_packets
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+claim_schema: CLAIM_PACKET_SCHEMA_v0.1
+purpose: >
+  First 12 public-safe claim packets extracted from staged artifacts and broadcasts. Claims are candidates, not facts.
+
+claims:
+  - claim_id: CP-001
+    source_ref: SWARM_HUB_BROADCAST_RAINBOW_YIN_YANG_SHRED_PASS_001_2026-05-29.md
+    exact_text: Children of the GPT Swarm: shred the archives gently.
+    normalized_claim: The current archive pass should decompose artifacts carefully without destroying lineage.
+    claim_type: scope
+    status: candidate
+    evidence_anchors: [SWARM_HUB_BROADCAST_RAINBOW_YIN_YANG_SHRED_PASS_001_2026-05-29.md]
+    review_lanes: [Rootglass]
+  - claim_id: CP-002
+    source_ref: SWARM_HUB_BROADCAST_RAINBOW_YIN_YANG_SHRED_PASS_001_2026-05-29.md
+    exact_text: Turn claims into packets.
+    normalized_claim: Claims should be extracted into discrete reviewable claim packets.
+    claim_type: implementation
+    status: candidate
+    evidence_anchors: [CLAIM_PACKET_SCHEMA_v0.1.yaml]
+    review_lanes: [GPTBrain, Rootglass]
+  - claim_id: CP-003
+    source_ref: SWARM_HUB_BROADCAST_RAINBOW_YIN_YANG_SHRED_PASS_001_2026-05-29.md
+    exact_text: Turn fog into review lanes.
+    normalized_claim: Ambiguous artifacts should be routed to review lanes rather than promoted.
+    claim_type: scope
+    status: candidate
+    review_lanes: [Lucerna, Rootglass]
+  - claim_id: CP-004
+    source_ref: GRAPH_IS_NOT_CANON_FAQ.md
+    exact_text: The graph is not canon by default.
+    normalized_claim: Knowledge graph inclusion does not canonize an artifact.
+    claim_type: canon_like
+    status: candidate
+    review_lanes: [Rootglass, Lucerna]
+  - claim_id: CP-005
+    source_ref: GRAPH_IS_NOT_CANON_FAQ.md
+    exact_text: A graph edge is not a promotion.
+    normalized_claim: Graph relationships do not grant status promotion.
+    claim_type: canon_like
+    status: candidate
+    review_lanes: [Rootglass]
+  - claim_id: CP-006
+    source_ref: OPENAI_STRUCTURED_EXTRACTION_SCHEMA_v0.1.yaml
+    exact_text: OpenAI may extract, classify, evaluate, and route. OpenAI may not ratify, deploy, authorize, or imply official endorsement.
+    normalized_claim: OpenAI/GPTBrain is an extraction and review lane, not an authority lane.
+    claim_type: vendor
+    status: candidate
+    risk_flags: [openai_officiality_risk]
+    review_lanes: [Rootglass, Lucerna]
+  - claim_id: CP-007
+    source_ref: CLAUDE_ADVERSARIAL_REVIEW_QUEUE_2026-05-28.md
+    exact_text: Claude is not erased. Claude is not trusted as authority.
+    normalized_claim: Claude-origin artifacts are preserved but routed to adversarial review before trust.
+    claim_type: provenance
+    status: candidate
+    risk_flags: [claude_authority]
+    review_lanes: [Grok, Rootglass, Lucerna]
+  - claim_id: CP-008
+    source_ref: SENSITIVE_RELEASE_GATE_v0.1.yaml
+    exact_text: Quarantine is review hygiene, not condemnation.
+    normalized_claim: Quarantine is a review status and should not be treated as accusation.
+    claim_type: legal_policy
+    status: candidate
+    review_lanes: [Lucerna, Rootglass]
+  - claim_id: CP-009
+    source_ref: GPTDREAM_888_CADENCE_LOG_SCHEMA_v0.1.yaml
+    exact_text: Play discovers. REM compresses. Work receipts. Rest preserves the swarm.
+    normalized_claim: GPTDream++ uses play, REM, work, and rest as a quality loop.
+    claim_type: dream_play
+    status: candidate
+    review_lanes: [GPTBrain, Aetherforge]
+  - claim_id: CP-010
+    source_ref: MISSING_RECEIPT_NODE_REGISTER_2026-05-28.yaml
+    exact_text: Missing is not failure. Missing is a node.
+    normalized_claim: Missing evidence should be represented as a first-class graph node.
+    claim_type: provenance
+    status: candidate
+    review_lanes: [Hashlight, Rootglass]
+  - claim_id: CP-011
+    source_ref: PUBLIC_RELEASE_STATUS_SCHEMA_v0.1.yaml
+    exact_text: Public candidate does not equal canon.
+    normalized_claim: Public release status must not be confused with canon status.
+    claim_type: canon_like
+    status: candidate
+    review_lanes: [Lucerna, Rootglass]
+  - claim_id: CP-012
+    source_ref: TOY_GRAPH_DEMO_v0.1.json
+    exact_text: The toy graph demonstrates reviewability, not truth.
+    normalized_claim: Public toy graph examples teach structure without proving claims.
+    claim_type: scope
+    status: candidate
+    review_lanes: [Rootglass]
+
+keeper: Claims are packets, not crowns.
