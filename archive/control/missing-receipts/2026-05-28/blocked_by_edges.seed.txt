@@ -1,0 +1,26 @@
+STATUS: CANDIDATE NON-CANON
+CANON: no
+DEPLOYMENT: no
+AUTHORITY: none
+
+Purpose: seed BLOCKED_BY edge creation from candidate artifacts to missing receipt, hash, and export gaps.
+
+Candidate BLOCKED_BY edge families:
+- DRIVE-KG-SOURCE-INVENTORY-2026-05-27 -> MR-DRIVE-001
+- DRIVE-AETHERFORGE-CONTROL-BOARD -> MR-DRIVE-002
+- DRIVE-KG-V0-4-MACHINE-INDEX -> MR-DRIVE-003
+- DRIVE-KG-ONTOLOGY-V0-5 -> MR-DRIVE-004
+- PR-190 -> MR-GITHUB-001
+- NOTION-MASTER-INDEX -> MR-NOTION-001
+- NOTION-SHELDONBRAIN-12X12 -> MR-NOTION-002
+
+Hash blocker family:
+- source_complete claims -> HASH-001 through HASH-004
+
+Export blocker family:
+- Notion ingestion -> EXP-001
+- Drive ingestion -> EXP-002
+- repo ingestion routing -> EXP-003
+- Task 38 metadata backfill -> EXP-004
+
+Rule: no downstream packet claims source completeness without export/hash evidence.
