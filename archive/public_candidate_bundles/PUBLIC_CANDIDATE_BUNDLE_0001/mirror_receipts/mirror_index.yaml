@@ -1,0 +1,193 @@
+# Mirror Index — PUBLIC_CANDIDATE_BUNDLE_0001
+# status: candidate_mirror_index
+# canon_status: not_canon
+# deployment_status: not_deployed
+# authority_scope: none
+# goal: best_git_on_earth
+
+mirror_index:
+  bundle_id: PUBLIC_CANDIDATE_BUNDLE_0001
+  generated_utc: "2026-05-30"
+  status: candidate_mirror_index
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  doctrine:
+    - public_repo_is_not_proof
+    - graph_edge_is_not_promotion
+    - issue_opened_is_not_reviewed
+    - bundle_exists_is_not_release_ready
+    - open_source_is_not_rights_cleared
+    - human_root_has_final_authority
+
+  entries:
+    - id: GH-ISSUE-233
+      type: GitHubIssue
+      title: "TIDELOCK Swarm Intake: 12 Modules x 12 Tasks"
+      surface: GitHub
+      repository: atlaslattice/manus-artifacts
+      path_or_url: https://github.com/atlaslattice/manus-artifacts/issues/233
+      verification_status: verified_live
+      state: open
+      role: swarm_hub_module_intake
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      next_action: keep comments bounded; route module returns as packet files plus compact issue comments
+
+    - id: GH-M11-EXEMPLAR
+      type: GitHubFile
+      title: MODULE_11_PUBLIC_GITHUB_FORKABILITY_EXCELLENCE.md
+      surface: GitHub
+      repository: atlaslattice/manus-artifacts
+      branch: master
+      path_or_url: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/module_packets/MODULE_11_PUBLIC_GITHUB_FORKABILITY_EXCELLENCE.md
+      verification_status: blob_verified
+      blob_sha: f052d858843e94d965b6e418a6f64ea1363bb88d
+      role: module_11_exemplar_packet
+      canon_status: not_canon
+      deployment_status: inert
+      authority_scope: advisory_only
+      next_action: score against Module 11 forkability scorecard
+
+    - id: GH-MIRROR-AUDIT-2026-05-30
+      type: GitHubFile
+      title: MIRROR_AUDIT_SHELDONBRAIN_RAG_GPTBRAIN_RAINBOW_YIN_YANG_GITHUB_DRIVE_NOTION_2026-05-30.md
+      surface: GitHub
+      repository: atlaslattice/manus-artifacts
+      branch: master
+      path_or_url: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/mirror_receipts/MIRROR_AUDIT_SHELDONBRAIN_RAG_GPTBRAIN_RAINBOW_YIN_YANG_GITHUB_DRIVE_NOTION_2026-05-30.md
+      verification_status: commit_and_blob_verified
+      commit_sha: 2880a8d4e5b61315b018b012aaf4064ac6663c34
+      blob_sha: 996138243fe520920a2cd3be5054d5689543bf2f
+      role: cross_surface_mirror_audit
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      next_action: extend with Notion export hashes when available
+
+    - id: GH-VARIX-OPEN-TASK-SWARM-2026-05-30
+      type: GitHubFile
+      title: VARIX_OPEN_TASK_SWARM_PACKET_12x12__BEST_GIT_ON_EARTH__2026-05-30.md
+      surface: GitHub
+      repository: atlaslattice/manus-artifacts
+      branch: master
+      path_or_url: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/module_packets/VARIX_OPEN_TASK_SWARM_PACKET_12x12__BEST_GIT_ON_EARTH__2026-05-30.md
+      verification_status: commit_verified
+      commit_sha: 16f418826280f4c7ea93efa579ef7a130209b5b0
+      role: focused_open_task_swarm_packet
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      next_action: swarm Modules 02, 03, 07, and 04 first
+
+    - id: GH-BUNDLE-MANIFEST
+      type: GitHubFile
+      title: BUNDLE_0001_FILE_MANIFEST.yaml
+      surface: GitHub
+      repository: atlaslattice/manus-artifacts
+      branch: master
+      path_or_url: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/BUNDLE_0001_FILE_MANIFEST.yaml
+      verification_status: blob_verified
+      blob_sha: 335942bcedcfee43781ecfee424ca651dfa2eda6
+      role: bundle_manifest
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      note: manifest still marks several files planned; reconcile planned-vs-present state
+      next_action: run bundle surface reconciliation and update manifest only after review
+
+    - id: GH-START-HERE
+      type: GitHubFile
+      title: START_HERE.md
+      surface: GitHub
+      repository: atlaslattice/manus-artifacts
+      branch: master
+      path_or_url: public_candidate_bundle_0001/START_HERE.md
+      verification_status: blob_verified
+      blob_sha: 6c86d0d8da5c37ebbe8591d3c861bceb1fa2c867
+      role: public_front_door
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      next_action: reconcile duplicate bundle surfaces with archive/public_candidate_bundles path
+
+    - id: GH-FORKABILITY-POLISH
+      type: GitHubFile
+      title: FORKABILITY_README_POLISH_PASS.md
+      surface: GitHub
+      repository: atlaslattice/manus-artifacts
+      branch: master
+      path_or_url: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/docs/FORKABILITY_README_POLISH_PASS.md
+      verification_status: blob_verified
+      blob_sha: 82a803f5ccd44c14a8e3709a9dbcfe2ff3a11ac2
+      role: forkability_guidance
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      next_action: apply scorecard and decide README patch proposal
+
+    - id: GH-RYY-V2-1-MANIFEST
+      type: GitHubFile
+      title: RAINBOW_YIN_YANG_HYPERCUBE_V2_1_MANIFEST_2026-05-21.md
+      surface: GitHub
+      repository: atlaslattice/manus-artifacts
+      branch_or_ref: 7ede7a121fc5dfbb1a6d3d530ac998c3fa6873f1
+      path_or_url: archive/architecture/RAINBOW_YIN_YANG_HYPERCUBE_V2_1_MANIFEST_2026-05-21.md
+      verification_status: blob_verified_at_ref
+      blob_sha: 4de5b73439df5b929594d4c56bbf0cbce6a5cd6c
+      role: rainbow_yin_yang_architecture_manifest
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      next_action: preserve wire-vs-overlay separation in public docs
+
+    - id: GH-RYY-V2-2-MATH
+      type: GitHubFile
+      title: RAINBOW_YINYANG_LATTICE_MATH_REFINEMENT_v2.2_CANDIDATE_2026-05-20.md
+      surface: GitHub
+      repository: atlaslattice/manus-artifacts
+      branch_or_ref: 7ede7a121fc5dfbb1a6d3d530ac998c3fa6873f1
+      path_or_url: archive/math/RAINBOW_YINYANG_LATTICE_MATH_REFINEMENT_v2.2_CANDIDATE_2026-05-20.md
+      verification_status: blob_verified_at_ref
+      blob_sha: b2d8897ea84c8d6b21c706d3859d61402d594e7c
+      role: finite_wire_vs_spectral_overlay_math_boundary
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      next_action: extract public-safe Riemann/S boundary note
+
+    - id: DRIVE-VARIX-SPINE
+      type: DriveDoc
+      title: VARIX_LUMENFOSS_SPINE_PACKET__MATH_BOUNDARY_M11_FORKABILITY_GRAPH_SCHEMA__NON_CANON__2026-05-29
+      surface: GoogleDrive
+      path_or_url: https://docs.google.com/document/d/1xav1Bg4xKd-g1AsEAB9eOeu-NR2I4vqqvVi96_AB3Mo
+      verification_status: created_and_registered_in_control_surface
+      role: math_boundary_forkability_graph_schema_spine
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      next_action: export/hash if promoted into GitHub candidate docs
+
+    - id: DRIVE-KG-CONTROL-SURFACE
+      type: DriveSheet
+      title: Lattice Knowledge Graph Control Surface 2026-05-27
+      surface: GoogleDrive
+      path_or_url: https://docs.google.com/spreadsheets/d/1jkdvv-z27lmxzkVcnvlSFavZaWJb8eAsJ9e3FQAeRC0
+      verification_status: live_control_surface
+      role: nodes_edges_tasks_review_queue
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      next_action: mirror high-priority rows into GitHub after review
+
+    - id: NOTION-SHELDONBRAIN-RAG-SEARCH
+      type: NotionSearchResultSet
+      title: Sheldonbrain RAG API / Gemini Embeddings / GCP Deployment / Aluminum OS Hardwire Integration
+      surface: Notion
+      verification_status: search_confirmed_fetch_blocked
+      role: rag_substrate_legacy_context
+      canon_status: not_canon
+      deployment_status: unknown_pending_receipts
+      authority_scope: none
+      next_action: manually export or paste content; hash export; then create public-safe summary
