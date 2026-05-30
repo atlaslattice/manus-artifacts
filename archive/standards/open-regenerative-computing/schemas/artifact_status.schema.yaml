@@ -1,0 +1,159 @@
+schema_id: artifact_status.schema.yaml
+schema_version: v0.1
+status: candidate
+canon_status: not_canon
+deployment_status: not_deployable
+authority: none
+purpose: >
+  Define interpretive, authority, provenance, review, and deployment status
+  for artifacts before compatibility predicates, invariant checks, promotion,
+  or execution gates are evaluated.
+
+artifact_status:
+  artifact_id:
+    type: string
+    required: true
+
+  canon_status:
+    type: enum
+    required: true
+    allowed:
+      - raw
+      - candidate
+      - provisional
+      - canonical
+      - deprecated
+      - rejected
+      - quarantined
+
+  deployment_status:
+    type: enum
+    required: true
+    allowed:
+      - inert
+      - simulated
+      - staged
+      - live
+      - retired
+
+  review_state:
+    type: enum
+    required: true
+    allowed:
+      - unreviewed
+      - triaged
+      - reviewed
+      - challenged
+      - approved_for_ratification
+
+  lineage_condition:
+    type: enum
+    required: true
+    allowed:
+      - intact
+      - partial
+      - degraded
+      - unknown
+      - broken
+
+  authority_scope:
+    type: enum
+    required: true
+    allowed:
+      - none
+      - advisory
+      - review
+      - ratification
+      - execution
+
+  provenance_type:
+    type: enum
+    required: true
+    allowed:
+      - generated
+      - imported
+      - retrieved
+      - derived
+      - user_provided
+      - external_source
+      - model_output
+
+  corpus_or_control:
+    type: enum
+    required: true
+    allowed:
+      - corpus
+      - control
+      - mixed
+      - unknown
+
+  visibility:
+    type: enum
+    required: true
+    allowed:
+      - private
+      - internal
+      - restricted
+      - public
+
+  risk_class:
+    type: enum
+    required: true
+    allowed:
+      - green
+      - amber
+      - red
+      - black
+
+  raw_export_status:
+    type: enum
+    required: false
+    allowed:
+      - RAW_EXPORTED
+      - RAW_NOT_EXPORTED
+      - RAW_PARTIAL
+      - RAW_UNAVAILABLE
+      - UNKNOWN
+
+  ratification_event_ref:
+    type: string
+    required: false
+    nullable: true
+
+  quarantine_reason:
+    type: list
+    required: false
+    items: string
+
+  allowed_uses:
+    type: list
+    required: true
+    items: string
+
+  forbidden_uses:
+    type: list
+    required: true
+    items: string
+
+enforcement_rules:
+  - id: ARTIFACT_STATUS_RULE_001
+    rule: If authority_scope is none, artifact cannot trigger transformations.
+  - id: ARTIFACT_STATUS_RULE_002
+    rule: If corpus_or_control is corpus, artifact cannot issue execution instructions.
+  - id: ARTIFACT_STATUS_RULE_003
+    rule: If canon_status is not canonical, artifact cannot be treated as canonical.
+  - id: ARTIFACT_STATUS_RULE_004
+    rule: If deployment_status is not live, artifact cannot be cited as deployed infrastructure.
+  - id: ARTIFACT_STATUS_RULE_005
+    rule: If lineage_condition is degraded, unknown, or broken, artifact cannot increase authority_scope.
+  - id: ARTIFACT_STATUS_RULE_006
+    rule: If risk_class is red or black, artifact requires human-root or designated review before routing.
+  - id: ARTIFACT_STATUS_RULE_007
+    rule: >
+      No artifact may increase authority_scope without explicit transformation event,
+      valid provenance chain, compatibility approval, and ratification event if required.
+
+keeper_lines:
+  - Metadata determines what something is allowed to mean.
+  - Predicates determine what it is allowed to become.
+  - Interpretation before transformation.
