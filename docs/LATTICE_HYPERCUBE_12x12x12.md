@@ -45,17 +45,19 @@ It maps candidate relationships among:
 12 × 12 × 12 = 1,728 coordinate cells
 ```
 
-Candidate coordinate form:
+Canonical candidate coordinate form:
 
 ```text
-A##.B##.C##
+H##.S##.N##
 ```
 
 Where:
 
-- A-axis = matter / substrate / physical property lane
-- B-axis = frequency / resonance / harmonic lane
-- C-axis = knowledge / artifact / review-state lane
+- H-axis = House
+- S-axis = Sphere
+- N-axis = Node
+
+H-S-N is the coordinate grammar. Any A/B/C or X/Y/Z notation is only a temporary drafting aid and should not be treated as the public coordinate standard.
 
 ## What this is
 
@@ -112,7 +114,7 @@ Human-root/public ratification is required for canon promotion.
 
 The strongest safe public claim is:
 
-> The Atlas Lattice / Rainbow Yin Yang Lattice is a candidate open-source knowledge-graph coordinate system intended to organize a large archive of user-authored artifacts and broader knowledge relationships through a 12×12×12 hypercube model, with status fields, receipts, review gates, and explicit non-authority boundaries.
+> The Atlas Lattice / Rainbow Yin Yang Lattice is a candidate open-source knowledge-graph coordinate system intended to organize a large archive of user-authored artifacts and broader knowledge relationships through a 12×12×12 House-Sphere-Node hypercube model, with status fields, receipts, review gates, and explicit non-authority boundaries.
 
 ## Coordinate boundary
 
@@ -141,9 +143,9 @@ Coordinates are addresses for review, not proof.
 
 Before stronger public claims:
 
-- define all 12 A-axis categories
-- define all 12 B-axis categories
-- define all 12 C-axis categories
+- define all 12 Houses
+- define all 12 Spheres within each House or across the lattice, as applicable
+- define all 12 Nodes within each Sphere or coordinate lane, as applicable
 - test 12 physical examples
 - test 12 archive artifacts
 - test 12 frequency/acoustic/color mappings
