@@ -1,0 +1,281 @@
+status: control_artifact_not_canon
+date: '2026-05-30'
+purpose: verify mirrored artifacts across Notion, GitHub, Drive, Sheldonbrain RAG API, and GPTBrain
+canon: false
+deployment: false
+authority: none
+
+governing_doctrine:
+  single_source_of_truth: false
+  principles:
+    - many_versions_before_synthesis
+    - fossils_preserved
+    - no_hierarchy
+    - no_silent_overwrite
+    - no_premature_canon
+  canon_requires:
+    - pantheon_council_adversarial_review
+    - human_root_adjudication_by_dave_s10
+    - website_publication_as_canonical
+  default_status_until_then: not_canon
+
+geometry_rule:
+  allowed_navigation_geometries:
+    - metatrons_cube
+    - 12x12x12_hypercube_lattice
+    - rainbow_yin_yang_with_riemann_s_curve
+  public_safe_framing:
+    sacred_geometry: visual_information_architecture
+    riemann_s_curve: mathematical_symbolic_navigation_layer
+    rainbow_yin_yang: balance_complementarity_visualization
+    hypercube_12x12x12: high_dimensional_ontology_lattice
+  guardrail: geometry_is_not_proof_authority_or_canon
+
+mirror_principle:
+  notion: guides
+  drive: stages
+  github: fossils
+  sheldonbrain: ingests
+  gptbrain: calibrates
+  receipts: decide_what_can_move
+  human_root: decides_what_can_stand
+
+mirror_confidence_legend:
+  mirror_status:
+    verified: directly_inspected_in_this_substrate
+    referenced: pointer_or_id_exists_but_target_not_directly_inspected
+    pending: expected_but_not_yet_verified
+    missing: searched_and_not_found
+    not_applicable: substrate_does_not_apply
+  canon_status:
+    - not_canon
+    - variant
+    - candidate
+    - canonical_candidate
+    - ratified_canon
+    - superseded
+    - disputed
+
+substrates:
+  notion:
+    status: verified
+    role: librarian_dashboard_historical_vault_control_pages
+    evidence:
+      - SHELDONBRAIN_OS_12x12_Master_Index
+      - Sheldonbrain_Epistemic_Labeling_Standard
+      - SHUGS_Rainbow_Yin_Yang_Riemann_pages
+      - Notion_to_GitHub_Complete_Artifact_Map
+      - Sheldonbrain_Graph_Ingestion_Sprint_001_control_page
+  github:
+    status: verified
+    role: fossil_record_versioned_execution_receipts_candidate_artifacts
+    evidence:
+      - atlaslattice/manus-artifacts
+      - atlaslattice/sheldonbrain-rag-api
+      - atlaslattice/element-145
+      - GPTBrain_canonical_candidate_and_support_files
+      - Receipt_Habitat_Continuity_OS_Sprint_0_issues
+      - Rainbow_Yin_Yang_Hypercube_specs
+  drive:
+    status: pending
+    role: staging_working_docs_collaborative_drafts
+    evidence:
+      - Drive_IDs_appear_in_transcripts_and_prior_vault_logs
+      - direct_Drive_verification_not_available_in_current_tool_context
+    next_action: verify_target_Drive_folders_and_document_contents_when_Drive_connector_is_available
+  sheldonbrain_rag_api:
+    status: partially_verified
+    role: parser_RAG_service_ontology_classifier_substrate
+    evidence:
+      - atlaslattice/sheldonbrain-rag-api_exists
+      - rag_api_gemini_py_found
+    gaps:
+      - exact_GPTBrain_Rainbow_mirror_inside_sheldonbrain_rag_api_not_confirmed_by_search
+      - ingestion_status_for_anchor_artifacts_pending
+  gptbrain:
+    status: verified_in_github
+    role: calibration_layer_claim_ledger_artifact_registry_dream_memory_palace_candidate
+    evidence:
+      - GPTBrain_S1_canonical_candidate
+      - GPTBrain_manifest
+      - CURRENT_STATE
+      - NEXT_ACTIONS
+      - ARTIFACT_REGISTRY_seed_jsonl
+      - CLAIM_LEDGER_seed_jsonl
+      - reference_impl_README
+
+anchors:
+  - artifact_id: MIRROR-ANCHOR-001
+    title: SHELDONBRAIN OS 12x12 Master Index — 144 Spheres
+    artifact_type: ontology_index
+    canon_status: not_canon_or_living_index_until_website_publication
+    notion:
+      status: verified
+    github:
+      status: pending_crosslink
+    drive:
+      status: pending
+    sheldonbrain:
+      ingested: pending
+    gptbrain:
+      registry_ref: pending
+    geometry:
+      - 12x12
+      - Sphere144
+    overclaim_risks:
+      - treating_living_index_as_ratified_canon
+    next_action: create_or_locate_GitHub_fossil_pointer_and_add_registry_row
+
+  - artifact_id: MIRROR-ANCHOR-002
+    title: GPTBrain S1 Canonical Candidate Spec
+    artifact_type: canonical_candidate
+    canon_status: canonical_candidate_not_ratified
+    github:
+      status: verified
+      repo: atlaslattice/manus-artifacts
+      path: archive/boot/seats/GPTBRAIN_S1_CANONICAL_CANDIDATE_SPEC_2026-05-09.md
+    notion:
+      status: pending_crosslink
+    drive:
+      status: not_applicable_or_pending
+    sheldonbrain:
+      ingested: pending
+    gptbrain:
+      registry_ref: expected
+    geometry:
+      - Metatron_Cube
+      - observer_pattern
+      - work_dream_play
+    next_action: add_Notion_control_pointer_and_verify_registry_claim_ledger_rows
+
+  - artifact_id: MIRROR-ANCHOR-003
+    title: Rainbow Yin-Yang Hypercube / Riemann S-Curve Package
+    artifact_type: math_visualization_and_candidate_research_package
+    canon_status: not_canon_candidate_research_creative_overlay_guarded
+    notion:
+      status: verified
+    github:
+      status: verified
+      known_paths:
+        - atlaslattice/element-145:shugs/WP-004_Riemann_Rainbow_YinYang_Nutshell.md
+        - atlaslattice/manus-artifacts:archive/architecture/RAINBOW_YIN_YANG_HYPERCUBE_V2_1_SUNDYA_RECTIFICATION_2026-05-20.md
+        - atlaslattice/manus-artifacts:archive/architecture/RAINBOW_YIN_YANG_HYPERCUBE_LATTICE_SPEC_V2_1_CONSOLIDATED_2026-05-20.md
+    drive:
+      status: pending
+    sheldonbrain:
+      ingested: pending
+    gptbrain:
+      registry_ref: pending
+    geometry:
+      - rainbow_yin_yang
+      - Riemann_S_curve
+      - 12x12
+      - 12x12x12_hypercube
+      - Element_145
+    strongest_safe_claim: visual_symbolic_and_exploratory_mathematical_artifact_not_proof_of_Riemann_Hypothesis
+    overclaim_risks:
+      - beautiful_analogy_treated_as_proof
+      - simulation_treated_as_physical_law
+    next_action: add_explicit_mirror_row_in_GPTBrain_registry_and_Sheldonbrain_ingestion_queue
+
+  - artifact_id: MIRROR-ANCHOR-004
+    title: Sheldonbrain RAG API
+    artifact_type: parser_rag_service
+    canon_status: implementation_substrate_not_canon
+    github:
+      status: verified
+      repo: atlaslattice/sheldonbrain-rag-api
+      known_path: rag_api_gemini.py
+    notion:
+      status: verified_for_related_specs
+    drive:
+      status: not_applicable_or_pending
+    sheldonbrain:
+      ingested: self_substrate
+    gptbrain:
+      registry_ref: pending
+    strongest_safe_claim: service_substrate_exists_exact_artifact_ingestion_coverage_requires_audit
+    next_action: create_ingestion_coverage_report_for_anchors_001_003_005
+
+  - artifact_id: MIRROR-ANCHOR-005
+    title: Receipt Habitat / Continuity OS Sprint 0
+    artifact_type: implementation_tracker_and_product_loop
+    canon_status: not_canon_local_dry_run_only
+    github:
+      status: verified
+      issue_refs:
+        - 128
+        - 129
+        - 130
+    notion:
+      status: pending_crosslink
+    drive:
+      status: not_applicable_or_pending
+    sheldonbrain:
+      ingested: pending
+    gptbrain:
+      registry_ref: pending
+    strongest_safe_claim: local_receipt_first_workbench_and_dry_run_execution_loop_tracked_as_implementation_candidates_not_deployment
+    next_action: link_issues_128_129_130_into_GPTBrain_registry
+
+required_mirror_row_schema:
+  artifact_id: null
+  title: null
+  artifact_type: null
+  status: raw_or_parsed_or_variant_or_candidate_or_canonical_candidate_or_ratified_or_superseded_or_disputed
+  canon_status: not_canon_or_candidate_or_canonical_candidate_or_ratified_canon
+  website_canon_status: not_published_or_published_canonical_or_superseded_on_site
+  notion:
+    status: verified_or_referenced_or_pending_or_missing_or_not_applicable
+    url: null
+    page_id: null
+  github:
+    status: verified_or_referenced_or_pending_or_missing_or_not_applicable
+    repo: null
+    path: null
+    commit: null
+  drive:
+    status: verified_or_referenced_or_pending_or_missing_or_not_applicable
+    url: null
+    drive_id: null
+  sheldonbrain:
+    ingested: true_false_or_pending
+    index_ref: null
+    sphere_tags: []
+  gptbrain:
+    registry_ref: null
+    claim_refs: []
+    confidence: C0_C1_C2_C3_C4_or_C5
+  geometry:
+    metatron_node: null
+    hypercube_coordinate: null
+    yin_yang_position: null
+    riemann_s_curve_relation: null
+  lineage:
+    raw_refs: []
+    derived_from: []
+    supersedes: []
+    superseded_by: []
+  review:
+    pantheon_review_status: not_started_or_in_progress_or_complete
+    dissent: []
+    unresolved_questions: []
+    human_root_decision: null
+  strongest_safe_claim: null
+  overclaims_to_avoid: []
+  next_action: null
+
+mirror_gap_list:
+  - Direct_Drive_verification_is_pending
+  - Exact_Sheldonbrain_ingestion_status_for_anchors_is_pending
+  - GPTBrain_registry_rows_for_all_anchors_need_verification
+  - Notion_control_page_should_link_this_GitHub_mirror_artifact
+  - Website_canonical_status_field_needs_source_from_actual_site_publication
+  - 12x12x12_Metatron_Yin_Yang_coordinates_need_machine_readable_node_map
+
+keeper_lines:
+  - Many_versions_before_synthesis
+  - Fossils_before_fusion
+  - Review_before_canon
+  - Website_before_canonical_public_claim
+  - Best_Git_on_Earth_means_future_intelligence_can_inspect_lineage_and_know_exactly_what_not_to_overclaim
