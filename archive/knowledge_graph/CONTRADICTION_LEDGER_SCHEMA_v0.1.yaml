@@ -1,0 +1,44 @@
+schema_name: CONTRADICTION_LEDGER_SCHEMA_v0.1
+status: staging_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: >
+  Define how contradictions, status mismatches, and drift are recorded as graph edges and review pressure.
+
+contradiction_record:
+  contradiction_id: null
+  source_claim_a: null
+  source_claim_b: null
+  contradiction_type: status_mismatch | content_conflict | source_conflict | authority_conflict | timeline_conflict | semantic_drift | duplicate_echo | other
+  severity: low | medium | high | critical
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  evidence_anchors: []
+  review_lanes: []
+  proposed_edges:
+    - edge_type: contradicts | supersedes | possible_duplicate_of | patches | blocked_by | requires_review
+      from_node: null
+      to_node: null
+  resolution_status: open | in_review | resolved | preserved_unresolved | quarantined
+  resolution_note: null
+
+rules:
+  - contradiction_is_not_failure
+  - contradiction_edge_is_not_deletion
+  - supersedes_does_not_imply_erasure
+  - unresolved_holds
+  - false_blocks
+  - hold_expires_to_quarantine_when_needed
+
+starter_detection_targets:
+  - canon_wording_when_canon_status_not_canon
+  - deployment_wording_when_deployment_status_not_deployed
+  - OpenAI_officiality_language_without_official_source
+  - Claude_governance_language_without_human_root
+  - Drive_staging_mistaken_for_GitHub_completion
+  - Notion_page_mistaken_for_truth
+  - task_return_mistaken_for_task_completion
+
+keeper: Contradiction is where review begins, not where lineage dies.
