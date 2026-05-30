@@ -22,7 +22,9 @@ It is not a release authorization.
 
 ## Core idea
 
-The Lattice Hypercube is a candidate 12×12×12 coordinate system for organizing knowledge, matter, resonance, artifacts, and review state.
+The Lattice Hypercube is a candidate 12×12×12 coordinate projection for organizing knowledge, matter, resonance, artifacts, and review state inside a broader 12D full-flywheel ontology.
+
+The 12×12×12 House-Sphere-Node grid is an addressable public coordinate surface. It should not be mistaken for the whole 12D system.
 
 It is intended as a Periodic Table 2.0 ambition, not a completed scientific standard.
 
@@ -42,7 +44,7 @@ It maps candidate relationships among:
 ## Shape
 
 ```text
-12 × 12 × 12 = 1,728 coordinate cells
+12 × 12 × 12 = 1,728 addressable House-Sphere-Node cells
 ```
 
 Canonical candidate coordinate form:
@@ -57,7 +59,28 @@ Where:
 - S-axis = Sphere
 - N-axis = Node
 
-H-S-N is the coordinate grammar. Any A/B/C or X/Y/Z notation is only a temporary drafting aid and should not be treated as the public coordinate standard.
+H-S-N is the public coordinate grammar. Any A/B/C or X/Y/Z notation is only a temporary drafting aid and should not be treated as the public coordinate standard.
+
+## 12D flywheel posture
+
+The intended ontology is a 12D full flywheel, not a flat three-axis taxonomy.
+
+H-S-N provides the addressable lattice cell. Additional dimensions should be modeled as required metadata, projections, routing layers, conservation classes, temporal states, review states, resonance states, or other declared flywheel dimensions.
+
+Safe public wording:
+
+```text
+H-S-N is the coordinate surface.
+The 12D flywheel is the fuller operating model.
+A coordinate is an address, not the entire ontology.
+```
+
+Implementation note:
+
+```text
+Do not collapse the 12D flywheel into only House, Sphere, and Node.
+Do not let extra dimensions imply authority unless status, receipt, review, and human-root gates explicitly permit it.
+```
 
 ## What this is
 
@@ -114,7 +137,7 @@ Human-root/public ratification is required for canon promotion.
 
 The strongest safe public claim is:
 
-> The Atlas Lattice / Rainbow Yin Yang Lattice is a candidate open-source knowledge-graph coordinate system intended to organize a large archive of user-authored artifacts and broader knowledge relationships through a 12×12×12 House-Sphere-Node hypercube model, with status fields, receipts, review gates, and explicit non-authority boundaries.
+> The Atlas Lattice / Rainbow Yin Yang Lattice is a candidate open-source knowledge-graph coordinate system intended to organize a large archive of user-authored artifacts and broader knowledge relationships through an addressable 12×12×12 House-Sphere-Node coordinate surface inside a broader 12D full-flywheel ontology, with status fields, receipts, review gates, and explicit non-authority boundaries.
 
 ## Coordinate boundary
 
@@ -146,6 +169,7 @@ Before stronger public claims:
 - define all 12 Houses
 - define all 12 Spheres within each House or across the lattice, as applicable
 - define all 12 Nodes within each Sphere or coordinate lane, as applicable
+- define all 12 flywheel dimensions and their allowed metadata fields or projection roles
 - test 12 physical examples
 - test 12 archive artifacts
 - test 12 frequency/acoustic/color mappings
