@@ -1,0 +1,57 @@
+artifact: lattice_ontology_v0.5
+status: candidate_ontology
+canon_status: not_canon
+deployment_status: not_deployable
+authority: none
+principle: The graph is the Lattice learning how to remember itself.
+LatticeObject:
+  required_fields:
+    - object_id
+    - object_type
+    - title
+    - canon_status
+    - deployment_status
+    - trust_state
+    - created_at_utc
+    - source_refs
+  optional_fields:
+    - ratification_event_id
+    - uncertainty
+    - contamination_flags
+    - aetherforge_rendering_hook
+LatticeEdge:
+  required_fields:
+    - edge_id
+    - edge_type
+    - from_object_id
+    - to_object_id
+    - evidence_ref
+    - created_at_utc
+node_families:
+  source_family: [raw_source, source_receipt, source_root]
+  extraction_family: [parsed_fact, summary, claim]
+  governance_family: [review, ratification_event, contradiction_record]
+  action_family: [action_candidate, issue_ref, pr_ref]
+  risk_node_family: [risk, contamination_flag, blocker, privacy_review]
+edge_families:
+  provenance: [derived_from, cites, mirrors]
+  evidentiary: [supports, contradicts, qualifies]
+  lifecycle: [supersedes, blocks, routes_to]
+  play: [quest_for, reward_for, boss_of]
+canon_state_machine:
+  states: [not_canon, candidate, under_review, ratified_canon, superseded, rejected]
+  rules:
+    - nothing_can_promote_itself
+    - ratified_canon_requires_ratification_event_id
+    - github_receipt_does_not_equal_canon
+review_lane_family:
+  states: [raw, parsed, candidate, quarantined, under_review, ratified, superseded, blocked]
+risk_node_family:
+  flags: [privacy_review_required, missing_raw, summary_only, unsupported_authority, conflicting_version]
+rules:
+  everything_can_connect_to_everything: true
+  nothing_can_promote_itself: true
+  fun_framing_does_not_grant_canon: true
+aetherforge_rendering_hook:
+  enabled: true
+  fields: [quest_class, difficulty, reward_type, boss_task, side_quest]

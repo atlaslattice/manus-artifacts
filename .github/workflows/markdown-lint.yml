@@ -1,0 +1,40 @@
+name: Markdown Lint
+
+on:
+  push:
+    paths:
+      - '**/*.md'
+      - '.markdownlint.yml'
+      - '.github/workflows/markdown-lint.yml'
+  pull_request:
+    paths:
+      - '**/*.md'
+      - '.markdownlint.yml'
+      - '.github/workflows/markdown-lint.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  markdown-lint:
+    name: Lint Markdown surfaces
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run markdownlint-cli2
+        uses: DavidAnson/markdownlint-cli2-action@v18
+        with:
+          globs: |
+            README.md
+            .github/**/*.md
+            docs/CANON_*.md
+            docs/RATIFICATION_WORKFLOW.md
+            docs/CANON_DECISION_LEDGER.md
+            docs/PROVENANCE_REQUIREMENTS.md
+            docs/ARTIFACT_LIFECYCLE_STATES.md
+            docs/UNIVERSAL_FRONTMATTER_SCHEMA.md
+            projects/aetherforge-144-task-campaign-2026-05-27.md

@@ -10,6 +10,7 @@ required schemas, seed ledgers, boot packet, and dated state handoff files.
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 
@@ -28,6 +29,8 @@ REQUIRED_GPTBRAIN_FILES = [
     "CURRENT_STATE_2026-05-09.md",
     "NEXT_ACTIONS_2026-05-09.md",
     "GPT_INSTANCE_STATE_LOG_2026-05-09.md",
+    "LATTICE_ORCS_ROUTE_INDEX.seed.jsonl",
+    "LATTICE_POSITRON_REVIEW_INDEX.seed.jsonl",
 ]
 
 
@@ -60,3 +63,20 @@ def test_canonical_candidate_integrates_variant_e() -> None:
     assert "Layer 7 — Continuity / Human-Intent Dashboard" in candidate
     assert "Continuity is visibility, not authority." in candidate
     assert "Variant E remains pending or missing" not in candidate
+
+
+def test_lattice_routes_have_positron_counterparts() -> None:
+    route_rows = [
+        json.loads(line)
+        for line in (GPTBRAIN_ROOT / "LATTICE_ORCS_ROUTE_INDEX.seed.jsonl").read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+    positron_rows = [
+        json.loads(line)
+        for line in (GPTBRAIN_ROOT / "LATTICE_POSITRON_REVIEW_INDEX.seed.jsonl").read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+    positron_route_ids = {row["route_artifact_id"] for row in positron_rows}
+
+    missing = [row["artifact_id"] for row in route_rows if row["artifact_id"] not in positron_route_ids]
+    assert not missing, f"Missing positron review entries for routes: {missing}"

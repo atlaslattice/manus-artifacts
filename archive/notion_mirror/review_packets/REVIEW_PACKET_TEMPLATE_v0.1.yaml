@@ -1,0 +1,16 @@
+review_packet_id: review-packet-template-v0-1
+status: candidate_template
+canon_status: not_canon
+deployment_status: not_deployable
+reviewer: null
+reviewed_at_utc: null
+review_scope: []
+source_refs: []
+sha256_if_available: null
+retrieved_at_utc: null
+retrieved_by: null
+raw_export_status: missing_raw
+review_outcome: under_review
+ratification_event_id: null
+claims_requiring_verification: []
+next_safest_action_if_blocked: preserve packet and request missing evidence

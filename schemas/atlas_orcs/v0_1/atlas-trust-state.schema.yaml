@@ -1,0 +1,76 @@
+# Atlas/ORCS Schema: Trust State
+# NOT CANON — NOT DEPLOYABLE
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-trust-state
+canon_status: not_canon
+deployment_status: not_deployable
+
+description: >
+  A point-in-time snapshot of an artifact's trust state.
+  Used to record the state at a specific moment, enabling historical
+  reconstruction of how an artifact's trust evolved.
+
+fields:
+  snapshot_id:
+    type: string
+    required: true
+
+  artifact_id:
+    type: string
+    required: true
+
+  trust_state:
+    type: string
+    required: true
+    enum: [raw, parsed, candidate, reviewed, ratified, active, under_review, superseded, revoked, quarantined, rejected]
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, review_pending, approved, deployed]
+    default: not_deployable
+
+  authority_scope:
+    type: string
+    required: true
+    enum: [none, local, council, ratified_canon]
+    default: none
+
+  recorded_at:
+    type: string
+    format: iso8601
+    required: true
+
+  triggering_event_id:
+    type: string
+    required: false
+    description: ORCS event that caused this state snapshot
+
+  prior_snapshot_id:
+    type: string
+    required: false
+    description: Previous trust state snapshot for lineage
+
+  ratification_expiry:
+    type: string
+    format: iso8601
+    required: false
+    description: When current ratification expires (null if not ratified)
+
+  notes:
+    type: string
+    required: false
+
+constraints:
+  - trust_state == ratified REQUIRES canon_status != not_canon (must have been through ORCS-RATIFY)
+  - Snapshots are IMMUTABLE once created (no edits; new snapshots for new states)
+  - ratification_expiry IS NOT NULL only when trust_state IN [ratified, active]
+  - Expired ratification_expiry MUST trigger ORCS-EXPIRE → trust_state == under_review

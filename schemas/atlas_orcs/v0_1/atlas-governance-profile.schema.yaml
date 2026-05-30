@@ -1,0 +1,101 @@
+# Atlas/ORCS Schema: Governance Profile
+# NOT CANON — NOT DEPLOYABLE
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-governance-profile
+canon_status: not_canon
+deployment_status: not_deployable
+
+description: >
+  A governance profile defines the rules and thresholds for a specific
+  governance context (e.g., a project, domain, or deployment scope).
+  Profiles can be specialized for different artifact types or organizational units.
+
+fields:
+  profile_id:
+    type: string
+    required: true
+
+  profile_name:
+    type: string
+    required: true
+
+  profile_version:
+    type: string
+    required: true
+    default: "0.1"
+
+  domain:
+    type: string
+    required: true
+    description: The domain or project this profile governs
+
+  ratification_policy:
+    type: object
+    required: true
+    fields:
+      minimum_council_quorum:
+        type: integer
+        minimum: 1
+        default: 1
+      requires_adjudication:
+        type: boolean
+        default: true
+        description: Whether @atlaslattice adjudication is required for canon
+      ratification_expiry_days:
+        type: integer
+        minimum: 1
+        description: How many days before ratification expires
+      self_ratification_permitted:
+        type: boolean
+        const: false
+        description: Self-ratification is NEVER permitted
+
+  promotion_policy:
+    type: object
+    required: true
+    fields:
+      requires_ratification_before_active:
+        type: boolean
+        const: true
+      requires_governance_event_for_deployment:
+        type: boolean
+        const: true
+
+  contradiction_policy:
+    type: object
+    required: true
+    fields:
+      auto_quarantine_on_contradiction:
+        type: boolean
+        default: false
+      require_resolution_before_promotion:
+        type: boolean
+        default: true
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, review_pending, approved, deployed]
+    default: not_deployable
+
+  created_at:
+    type: string
+    format: iso8601
+    required: true
+
+  notes:
+    type: string
+    required: false
+
+constraints:
+  - self_ratification_permitted IS ALWAYS false (hardcoded)
+  - requires_ratification_before_active IS ALWAYS true (hardcoded)
+  - requires_governance_event_for_deployment IS ALWAYS true (hardcoded)

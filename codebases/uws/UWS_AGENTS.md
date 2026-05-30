@@ -274,5 +274,5 @@ let url = format!(
 
 ---
 
-*See [README.md](README.md) for installation and full command reference.*
-*See [ALUMINUM.md](ALUMINUM.md) for the full Aluminum OS architecture specification.*
+*See [UWS_FEATURE_MANIFEST.md](./UWS_FEATURE_MANIFEST.md) for command coverage and capability reference.*
+*See [UWS_ALUMINUM.md](./UWS_ALUMINUM.md) for the full Aluminum OS architecture specification.*

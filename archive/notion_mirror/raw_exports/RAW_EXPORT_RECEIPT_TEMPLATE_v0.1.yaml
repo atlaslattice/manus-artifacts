@@ -1,0 +1,17 @@
+receipt_id: raw-export-template-v0-1
+status: candidate_template
+canon_status: not_canon
+deployment_status: not_deployable
+source_title: null
+source_url: null
+raw_export_path: null
+sha256_if_available: null
+retrieved_at_utc: null
+retrieved_by: null
+raw_export_status: missing_raw
+privacy_review_required: true
+access_scope:
+  visible_sources: []
+  unavailable_sources: []
+  assumed_context: []
+notes: Raw receipt only; not approval, canon, deployment, or source completeness.

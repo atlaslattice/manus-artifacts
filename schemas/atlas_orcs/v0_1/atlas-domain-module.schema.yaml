@@ -1,0 +1,98 @@
+# Atlas/ORCS Schema: Domain Module
+# NOT CANON — NOT DEPLOYABLE
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-domain-module
+canon_status: not_canon
+deployment_status: not_deployable
+
+description: >
+  A domain module extends the core Atlas/ORCS governance for a specific domain
+  (e.g., code, benchmarks, cross-vendor interop, public claims).
+  Domain modules add domain-specific validation rules and routing logic.
+
+fields:
+  module_id:
+    type: string
+    required: true
+
+  module_name:
+    type: string
+    required: true
+
+  domain_type:
+    type: string
+    required: true
+    enum:
+      - code_execution    # Code and repository operations
+      - benchmark_claim   # Performance or benchmark assertions
+      - public_statement  # Statements intended for public audience
+      - cross_vendor      # Cross-vendor interop artifacts
+      - governance        # Governance documents and policies
+      - ingestion         # Raw data/thread ingestion
+      - synthesis         # AI synthesis outputs
+
+  governance_profile_id:
+    type: string
+    required: true
+    description: The governance profile this module applies to
+
+  validation_rules:
+    type: array
+    items:
+      type: object
+      fields:
+        rule_id: string
+        rule_description: string
+        severity:
+          type: string
+          enum: [info, warning, error, blocking]
+    required: true
+
+  routing_overrides:
+    type: object
+    required: false
+    description: Domain-specific routing overrides
+    fields:
+      primary_lane: string
+      tidelock_required: boolean
+      atlas_orcs_audit_required: boolean
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, review_pending, approved, deployed]
+    default: not_deployable
+
+  created_at:
+    type: string
+    format: iso8601
+    required: true
+
+examples:
+  code_execution_module:
+    module_id: "mod-code-001"
+    module_name: "Code Execution Module"
+    domain_type: code_execution
+    governance_profile_id: "prof-default-001"
+    validation_rules:
+      - rule_id: "CE-001"
+        rule_description: "All code execution requires human_permission_gate == pass"
+        severity: blocking
+      - rule_id: "CE-002"
+        rule_description: "All code execution routes through TIDELOCKBrain"
+        severity: blocking
+    routing_overrides:
+      primary_lane: tidelock
+      tidelock_required: true
+      atlas_orcs_audit_required: true
+    canon_status: not_canon
+    deployment_status: not_deployable
+    created_at: "2026-05-26T18:39:00Z"

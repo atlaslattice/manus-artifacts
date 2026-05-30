@@ -1,0 +1,42 @@
+# INVALID O_AI Packet Example: Missing access_scope
+# NOT CANON — NOT DEPLOYABLE
+# This packet FAILS validation (VAL-007: access_scope is required)
+
+packet_id: "example-invalid-missing-scope-001"
+packet_version: "0.1"
+source_surface: "O_AI"
+timestamp: "2026-05-26T18:39:00Z"
+
+raw_export_status: summary_only
+epistemic_label: working
+authority_scope: none
+canon_status: not_canon
+deployment_status: not_deployable
+
+thread_time_range:
+  start: "2026-05-26T10:00:00Z"
+  end: "2026-05-26T12:00:00Z"
+  timezone: UTC
+
+# access_scope IS MISSING — THIS CAUSES VALIDATION FAILURE
+# VAL-007: access_scope is required
+# VAL-008: unavailable_sources must be explicit
+# VAL-009: assumed_context must be explicit
+
+content_type: synthesis
+content:
+  summary: "Some synthesis without declaring what sources were available."
+
+gates:
+  provenance_gate: pending
+  safety_gate: pass
+  governance_gate: pending
+  data_residency_gate: pending
+
+validation_failures:
+  - rule: VAL-007
+    message: "access_scope is required"
+  - rule: VAL-008
+    message: "unavailable_sources must be explicit (can be empty list [])"
+  - rule: VAL-009
+    message: "assumed_context must be explicit (can be empty list [])"

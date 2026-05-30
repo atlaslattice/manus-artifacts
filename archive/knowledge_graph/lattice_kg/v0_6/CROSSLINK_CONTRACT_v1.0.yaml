@@ -1,0 +1,131 @@
+artifact: CROSSLINK_CONTRACT_v1.0
+version: "1.0"
+status: candidate
+canon_status: not_canon
+deployment_status: not_deployable
+authority: none
+principle: >
+  Every node in the 12D hypercube lattice is mutually addressable and traversable.
+  A cross-link is a directed, typed edge from one artifact node to another.
+  Cross-links are the tendons of the octopus — they make the whole body move as one.
+
+# ──────────────────────────────────────────────────────────────────────────────
+# CROSS-LINK REQUIREMENTS
+# ──────────────────────────────────────────────────────────────────────────────
+requirements:
+  minimum_cross_links_per_node: 1
+  cross_link_targets_must_exist_in_index: true
+  self_links_forbidden: true
+  cross_dimension_links_encouraged: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# VALID EDGE TYPES  (from lattice_ontology_v0.5 + hypercube extensions)
+# ──────────────────────────────────────────────────────────────────────────────
+valid_edge_types:
+  # Provenance family
+  derived_from:
+    description: Child artifact derives from a parent artifact.
+    can_cross_dimensions: true
+  cites:
+    description: Artifact cites another as evidence or reference.
+    can_cross_dimensions: true
+  mirrors:
+    description: Artifact mirrors the state of another (e.g. Notion ↔ GitHub).
+    can_cross_dimensions: false
+
+  # Evidentiary family
+  supports:
+    description: Artifact provides evidence supporting a claim.
+    can_cross_dimensions: true
+  contradicts:
+    description: Artifact contradicts another without deleting either.
+    can_cross_dimensions: true
+  qualifies:
+    description: Artifact qualifies or contextualises another.
+    can_cross_dimensions: true
+
+  # Lifecycle family
+  supersedes:
+    description: Newer artifact supersedes an older one; both preserved.
+    can_cross_dimensions: false
+  blocks:
+    description: Artifact blocks progression of another until resolved.
+    can_cross_dimensions: true
+  routes_to:
+    description: Artifact routes execution or review to another artifact.
+    can_cross_dimensions: true
+
+  # Play family (Aetherforge)
+  quest_for:
+    description: This artifact is a quest associated with a target artifact.
+    can_cross_dimensions: true
+  reward_for:
+    description: This artifact is a reward unlocked by completing another.
+    can_cross_dimensions: true
+
+  # Hypercube-specific
+  traverses_dimension:
+    description: Explicit cross-dimension traversal edge.
+    can_cross_dimensions: true
+    required_fields: [from_dimension, to_dimension]
+  links_to:
+    description: Generic markdown link used by the indexer for discovered links.
+    can_cross_dimensions: true
+  indexes:
+    description: Global index node indexes an artifact node.
+    can_cross_dimensions: true
+
+# ──────────────────────────────────────────────────────────────────────────────
+# EDGE RECORD SCHEMA
+# Every edge emitted by build_lattice_global_index.py must include these fields.
+# ──────────────────────────────────────────────────────────────────────────────
+edge_record_schema:
+  required_fields:
+    - edge_id              # globally unique: "<edge_type>.<from_id>.<to_id>"
+    - edge_type            # one of valid_edge_types keys above
+    - from_artifact_id     # source node artifact_id
+    - to_artifact_id       # target node artifact_id
+    - from_dimension       # D01–D12
+    - source_file          # repo-relative path where link was found
+  optional_fields:
+    - to_dimension         # populated when target node dimension is known
+    - evidence_ref         # for evidentiary edges
+    - created_at_utc
+
+# ──────────────────────────────────────────────────────────────────────────────
+# ADDRESSING SCHEME
+# artifact_id is the stable address for any node.  Always use artifact_id in
+# cross-links, never a raw file path (paths can change; artifact_ids are immutable).
+# ──────────────────────────────────────────────────────────────────────────────
+addressing:
+  primary_key: artifact_id
+  format: "<dimension_short>.<domain_slug>.<version>"
+  fallback_key: path    # used by the indexer only; not a stable address
+
+# ──────────────────────────────────────────────────────────────────────────────
+# QUERYABILITY CONTRACT
+# The unified index supports these query patterns:
+# ──────────────────────────────────────────────────────────────────────────────
+query_patterns:
+  by_artifact_id: "exact match on artifact_id field"
+  by_dimension: "filter nodes where dimension_id == D0N"
+  by_status: "filter nodes where canon_status == <value>"
+  fulltext: "substring match across all string fields"
+  edge_traverse: "follow from_artifact_id / to_artifact_id edges in cross_links index"
+
+# ──────────────────────────────────────────────────────────────────────────────
+# INTEGRITY GATE REFERENCES
+# These gates are enforced by scripts/validate_hypercube_integrity.py
+# ──────────────────────────────────────────────────────────────────────────────
+integrity_gates:
+  G01_no_orphan_nodes: "every node has >= 1 outbound or inbound edge"
+  G02_no_duplicate_artifact_ids: "artifact_id uniqueness across all 12 dimensions"
+  G03_graph_connectivity: "no isolated subgraph — every node reachable from any other"
+  G04_schema_drift: "every node record contains all required edge_record_schema fields"
+  G05_all_dimensions_represented: "at least one node per D01–D12"
+  G06_cross_link_targets_exist: "every to_artifact_id in cross_links resolves to a node"
+
+canon_boundary: >
+  This contract is candidate state.  No edge type or addressing rule becomes
+  authoritative until ratified by @atlaslattice with an explicit
+  ratification_event_id.

@@ -1,2 +1,33 @@
 *.pyc
 __pycache__/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.*
+*.env
+
+# Dependencies
+node_modules/
+venv/
+.venv/
+
+# Build artifacts
+dist/
+build/
+*.egg-info/
+
+# Secrets (never commit)
+*.pem
+*.key
+*_secret*
+*_private*

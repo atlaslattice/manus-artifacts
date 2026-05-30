@@ -1,0 +1,151 @@
+# O_AI Routing Table v0.1
+# NOT CANON — NOT DEPLOYABLE
+# See: archive/spec/gptdream/appendices/APPENDIX_H_3_O_AI_ROUTING_TABLE_v0.1.md
+
+schema_version: "0.1"
+schema_id: o-ai-routing-table
+canon_status: not_canon
+deployment_status: not_deployable
+
+description: >
+  Routing table for O_AI packets. Determines which lane handles each packet type,
+  whether TIDELOCKBrain oversight is required, and whether execution is permitted.
+
+routes:
+  - id: ROUTE-001
+    content_type: synthesis
+    epistemic_label: summary_only
+    primary_lane: lucerna
+    secondary_lane: rootglass
+    tidelock_required: false
+    atlas_orcs_audit: recommended
+    execution_permitted: false
+    notes: "ChatGPT synthesis defaults to LucernaBrain"
+
+  - id: ROUTE-002
+    content_type: synthesis
+    epistemic_label: partial_raw
+    primary_lane: lucerna
+    secondary_lane: rootglass
+    tidelock_required: false
+    atlas_orcs_audit: true
+    execution_permitted: false
+
+  - id: ROUTE-003
+    content_type: synthesis
+    epistemic_label: full_raw
+    primary_lane: lucerna
+    secondary_lane: rootglass
+    tidelock_required: false
+    atlas_orcs_audit: true
+    execution_permitted: false
+
+  - id: ROUTE-004
+    content_type: task_plan
+    epistemic_label: any
+    primary_lane: lucerna
+    secondary_lane: hashlight
+    tidelock_required: conditional
+    tidelock_condition: "task_plan contains repo/code references"
+    atlas_orcs_audit: true
+    execution_permitted: false
+    notes: "Task plans are plans only; execution requires separate execution_request"
+
+  - id: ROUTE-005
+    content_type: code
+    epistemic_label: any
+    primary_lane: tidelock
+    secondary_lane: null
+    tidelock_required: true
+    atlas_orcs_audit: true
+    execution_permitted: conditional
+    execution_condition: "all gates must pass including human_permission_gate and receipt_gate"
+
+  - id: ROUTE-006
+    content_type: data
+    epistemic_label: full_raw
+    primary_lane: hashlight
+    secondary_lane: atlasbrain
+    tidelock_required: false
+    atlas_orcs_audit: true
+    execution_permitted: false
+
+  - id: ROUTE-007
+    content_type: data
+    epistemic_label: summary_only
+    primary_lane: hashlight
+    secondary_lane: null
+    tidelock_required: false
+    atlas_orcs_audit: true
+    execution_permitted: false
+
+  - id: ROUTE-008
+    content_type: execution_request
+    epistemic_label: any
+    primary_lane: dphi_gate
+    gate_chain:
+      - step: 1
+        gate: D-Phi-1
+        description: "D-Φ-1 initial gate check"
+        fail_action: reject
+      - step: 2
+        gate: CAS-001-A
+        description: "CAS-001-A anchor check"
+        fail_action: reject
+      - step: 3
+        gate: human_permission
+        description: "Human permission gate"
+        fail_action: reject
+      - step: 4
+        gate: atlas_orcs_audit
+        description: "Atlas/ORCS audit state — MANDATORY, cannot be bypassed"
+        fail_action: hold
+      - step: 5
+        gate: tidelock
+        description: "TIDELOCKBrain if repo/merge-order/code execution"
+        condition: "involves repo/code/merge"
+        fail_action: hold
+    tidelock_required: true
+    atlas_orcs_audit: true
+    execution_permitted: conditional
+    execution_condition: "ALL gates must be pass"
+    notes: >
+      Execution requests MUST route through the full gate chain.
+      No bypass of Atlas/ORCS audit state is permitted.
+      This is the patched routing (Appendix J.2).
+
+lane_definitions:
+  lucerna:
+    brain: LucernaBrain
+    handles: [ChatGPT synthesis, public statements, benchmark claims]
+
+  rootglass:
+    brain: RootglassBrain
+    handles: [secondary synthesis review, canon candidate prep]
+
+  tidelock:
+    brain: TIDELOCKBrain
+    handles: [repo operations, merge order, code execution, audit trail]
+
+  hashlight:
+    brain: HashlightBrain
+    handles: [raw export ingestion, provenance verification, data]
+
+  atlasbrain:
+    brain: AtlasBrain
+    handles: [benchmark claims, governance state, ratification events]
+
+tidelock_triggers:
+  - content_type == code
+  - content_type == execution_request
+  - packet references a git repository, branch, merge, or commit
+  - packet requests file creation, modification, or deletion
+  - packet requests CI/CD operations
+  - packet involves dependency updates or version changes
+
+atlas_orcs_audit_triggers:
+  - any authority_scope promotion requested
+  - canon_status change requested
+  - deployment_status change requested
+  - cross-vendor packet involves meaning promotion
+  - ratification event being logged

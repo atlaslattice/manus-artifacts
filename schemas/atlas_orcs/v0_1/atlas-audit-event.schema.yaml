@@ -1,0 +1,97 @@
+# Atlas/ORCS Schema: Audit Event
+# NOT CANON — NOT DEPLOYABLE
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-audit-event
+canon_status: not_canon
+deployment_status: not_deployable
+
+description: >
+  An audit event logs a significant action in the Atlas/ORCS system.
+  Audit events are created for ALL significant state transitions, execution requests,
+  gate evaluations, and governance decisions. They are the system's memory.
+  Audit events are IMMUTABLE once created.
+
+fields:
+  event_id:
+    type: string
+    required: true
+
+  event_type:
+    type: string
+    required: true
+    enum:
+      - state_transition         # Artifact trust state changed
+      - ratification             # Ratification event occurred
+      - execution_request        # Execution was requested
+      - execution_approved       # Execution was approved
+      - execution_rejected       # Execution was rejected
+      - gate_evaluation          # A gate was evaluated
+      - quarantine_applied       # Artifact quarantined
+      - contradiction_detected   # Contradiction logged
+      - rehydration              # Agent rehydrated from habitat
+      - laundering_detected      # Anti-laundering predicate triggered
+      - council_review           # Council review performed
+      - adjudication             # @atlaslattice adjudication performed
+      - compatible_check         # compatible_Γ predicate evaluated
+
+  artifact_id:
+    type: string
+    required: false
+    description: Affected artifact (if applicable)
+
+  actor_id:
+    type: string
+    required: true
+    description: Who or what triggered this event
+
+  occurred_at:
+    type: string
+    format: iso8601
+    required: true
+
+  from_state:
+    type: string
+    required: false
+    description: State before event (for state_transition events)
+
+  to_state:
+    type: string
+    required: false
+    description: State after event (for state_transition events)
+
+  compatible_result:
+    type: string
+    required: false
+    enum: [TRUE, FALSE, HOLD]
+    description: Result of compatible_Γ check (if applicable)
+
+  gate_states:
+    type: object
+    required: false
+    description: Snapshot of gate states at time of event
+
+  details:
+    type: string
+    required: false
+    description: Human-readable details
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, review_pending, approved, deployed]
+    default: not_deployable
+
+constraints:
+  - Audit events are IMMUTABLE once created (no edits, no deletes)
+  - Every execution_request MUST generate an audit event
+  - Every state_transition MUST generate an audit event
+  - Every laundering_detected MUST generate an audit event
+  - Audit events form the permanent system log

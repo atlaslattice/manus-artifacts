@@ -1,0 +1,60 @@
+name: Docs Link Checks
+
+on:
+  push:
+    paths:
+      - 'docs/**'
+      - 'README.md'
+      - '.github/workflows/docs-link-checks.yml'
+  pull_request:
+    paths:
+      - 'docs/**'
+      - 'README.md'
+      - '.github/workflows/docs-link-checks.yml'
+  schedule:
+    - cron: '0 6 * * 1'  # Weekly on Monday at 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  link-check:
+    name: Validate relative links in docs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Check relative links in Markdown files
+        run: |
+          set -e
+          BROKEN=0
+
+          find docs README.md -name "*.md" -o -name "README.md" 2>/dev/null | \
+          while read -r file; do
+            # Extract relative links (not http/https/mailto/anchors-only)
+            grep -oP '\[([^\]]*)\]\(\K[^)]+' "$file" | \
+            grep -v '^https\?://' | \
+            grep -v '^mailto:' | \
+            grep -v '^#' | \
+            while read -r link; do
+              # Strip anchor fragment
+              path="${link%%#*}"
+              [ -z "$path" ] && continue
+              # Resolve relative to file's directory
+              dir=$(dirname "$file")
+              target="$dir/$path"
+              if [ ! -e "$target" ]; then
+                echo "BROKEN: $file -> $link (resolved: $target)"
+                BROKEN=1
+              fi
+            done
+          done
+
+          if [ "$BROKEN" -eq 1 ]; then
+            echo "Broken relative links found."
+            exit 1
+          fi
+          echo "All relative links OK."
