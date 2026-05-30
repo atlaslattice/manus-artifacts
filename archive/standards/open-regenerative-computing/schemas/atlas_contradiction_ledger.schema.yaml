@@ -1,0 +1,180 @@
+schema_id: atlas_contradiction_ledger.schema.yaml
+schema_version: v0.1
+status: candidate
+canon_status: not_canon
+deployment_status: not_deployable
+authority: none
+purpose: >
+  Define contradiction records that preserve conflicting artifacts, claims,
+  receipts, and interpretations without forcing premature reconciliation,
+  canon promotion, deletion, or deployment.
+
+contradiction_record:
+  contradiction_id:
+    type: string
+    required: true
+    pattern: '^CONTRA-[0-9]{8}-[0-9]{3,6}$'
+
+  created_at_utc:
+    type: string
+    required: true
+    format: date-time
+
+  created_by:
+    type: string
+    required: true
+
+  source_receipts:
+    type: list
+    required: true
+    min_items: 2
+    items: string
+
+  source_claims:
+    type: list
+    required: false
+    items: string
+
+  conflict_type:
+    type: list
+    required: true
+    allowed_examples:
+      - performance_vs_thermal_integrity
+      - optimization_claim_vs_substrate_safety
+      - authorship_conflict
+      - canon_status_conflict
+      - deployment_status_conflict
+      - provenance_conflict
+      - public_private_boundary_conflict
+      - corpus_control_confusion
+      - summary_source_conflict
+      - authority_scope_conflict
+      - factual_conflict
+      - policy_conflict
+      - timeline_conflict
+      - source_priority_conflict
+
+  severity:
+    type: enum
+    required: true
+    allowed:
+      - green
+      - amber
+      - red
+      - black
+
+  resolution_state:
+    type: enum
+    required: true
+    allowed:
+      - unresolved_coexistence
+      - reconciled
+      - superseded
+      - quarantined
+      - rejected
+      - human_root_decision_required
+      - domain_review_required
+
+  allowed_use:
+    type: list
+    required: true
+    items: string
+    allowed_examples:
+      - review
+      - stress_test
+      - evidence_comparison
+      - lineage_analysis
+      - negative_evidence
+      - contradiction_mapping
+
+  forbidden_use:
+    type: list
+    required: true
+    items: string
+    allowed_examples:
+      - canon
+      - deployment
+      - public_claim
+      - automatic_merge
+      - execution
+      - authority_escalation
+
+  review_requirements:
+    type: list
+    required: true
+    items: string
+    allowed_examples:
+      - lucerna_receipt_check
+      - hashlight_lineage_check
+      - tidelock_completeness_check
+      - adversarial_review
+      - domain_expert_review
+      - human_root_review
+      - public_safe_translation
+
+  lineage_refs:
+    type: list
+    required: false
+    items: string
+
+  promotion_blockers:
+    type: list
+    required: false
+    items: string
+    allowed_examples:
+      - missing_source
+      - pending_lineage_check
+      - conflicting_receipts
+      - high_risk_domain
+      - public_private_boundary_unclear
+      - authority_scope_ambiguous
+      - deployment_claim_unreviewed
+
+  notes:
+    type: string
+    required: false
+
+enforcement_rules:
+  - id: CONTRADICTION_RULE_001
+    rule: A contradiction record cannot itself ratify either side of the contradiction.
+  - id: CONTRADICTION_RULE_002
+    rule: Contradictory artifacts may coexist as evidence without merging, deleting, or promoting either artifact.
+  - id: CONTRADICTION_RULE_003
+    rule: A contradiction involving red or black severity blocks canon, deployment, public claim, and execution until required review is satisfied.
+  - id: CONTRADICTION_RULE_004
+    rule: Summary or optimization claims cannot override structural safety counterclaims without raw-source and domain review.
+  - id: CONTRADICTION_RULE_005
+    rule: Bare human_ratification approved is insufficient; ratification must declare canon_promotion and deployment_promotion scope.
+
+example:
+  contradiction_id: CONTRA-20260519-001
+  created_at_utc: '2026-05-19T20:15:43Z'
+  created_by: Lumenwright
+  source_receipts:
+    - IARL-20260519-009
+    - IARL-20260519-010
+  conflict_type:
+    - performance_vs_thermal_integrity
+    - optimization_claim_vs_substrate_safety
+  severity: red
+  resolution_state: unresolved_coexistence
+  allowed_use:
+    - review
+    - stress_test
+    - evidence_comparison
+  forbidden_use:
+    - canon
+    - deployment
+    - public_claim
+    - automatic_merge
+  review_requirements:
+    - hashlight_lineage_check_for_receipt_A
+    - tidelock_completeness_check_for_receipt_A
+    - thermal_reproduction_test
+    - QP_supervisor_safety_review
+    - human_root_decision
+
+keeper_lines:
+  - Contradiction is not failure.
+  - The ledger is a mirror, not a judge.
+  - Preserve conflict before resolving it.
