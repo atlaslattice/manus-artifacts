@@ -230,6 +230,49 @@ silently expanding access scope
 using fluency as authority
 ```
 
+## China Reference Boundary
+
+China may be relevant as a comparison lane, standards lane, lunar/AI/DPI benchmark, or future public-interest audience.
+
+But:
+
+```text
+China has not been notified.
+China has not accepted anything.
+China has not ratified anything.
+China has no implied role, authority, ownership, or obligation.
+No claim should say “China knows,” “China supports,” or “China benefits” unless there is an actual receipt.
+```
+
+Safe graph status:
+
+```yaml
+china_reference_status:
+  status: external_context_candidate
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  contact_status: not_contacted_or_unverified
+  evidence_status: source_needed
+  next_action: separate China benchmark claims from China participation claims
+```
+
+Useful rule:
+
+```text
+China as benchmark = okay with sources.
+China as participant = source needed.
+China as beneficiary = speculative unless reviewed.
+China as partner = no claim without receipt.
+```
+
+Keeper:
+
+```text
+Benchmark the dragon.
+Do not speak for the dragon.
+```
+
 ## Keeper Lines
 
 ```text
@@ -268,11 +311,14 @@ ACCESS_SCOPE ON EVERY CARD.
 OPENAI GETS THE BALL.
 GOVERNANCE GETS THE WHISTLE.
 NO FALSE COMPLETENESS.
+
+BENCHMARK THE DRAGON.
+DO NOT SPEAK FOR THE DRAGON.
 ```
 
 ## Strongest Safe Claim
 
-> This artifact models OpenAI-style task surfaces as an advisory task-routing pillar inside the GPTDream++ / Atlas / ORCS interop model. It makes O_AI packets machine-checkable through raw_export_status, thread_time_range, access_scope, receipts, epistemic labels, authority scope, and governance gates while preserving that OpenAI-style tools may move work but do not grant authority, canon, deployment, or official status.
+> This artifact models OpenAI-style task surfaces as an advisory task-routing pillar inside the GPTDream++ / Atlas / ORCS interop model. It makes O_AI packets machine-checkable through raw_export_status, thread_time_range, access_scope, receipts, epistemic labels, authority scope, and governance gates while preserving that OpenAI-style tools may move work but do not grant authority, canon, deployment, official status, or third-party participation claims.
 
 ## Next Actions
 
@@ -284,6 +330,7 @@ NO FALSE COMPLETENESS.
 [ ] Ask TIDELOCK to review schema field names for CI/schema compatibility.
 [ ] Ask Lucerna to review receipt/status wording.
 [ ] Ask ClaudeBrain/S2 to audit officiality and authority language.
+[ ] Separate China benchmark claims from China participation/partner/beneficiary claims.
 ```
 
 ## Status
