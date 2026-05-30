@@ -22,9 +22,9 @@ It is not a release authorization.
 
 ## Core idea
 
-The Lattice Hypercube is a candidate 12×12×12 coordinate projection for organizing knowledge, matter, resonance, artifacts, and review state inside a broader 12D full-flywheel ontology.
+The Lattice Hypercube is a candidate 12×12×12 entry-coordinate projection for organizing knowledge, matter, resonance, artifacts, and review state inside a broader 12D full-flywheel ontology.
 
-The 12×12×12 House-Sphere-Node grid is an addressable public coordinate surface. It should not be mistaken for the whole 12D system.
+The 12×12×12 House-Sphere-Node grid is the entry-level addressable public coordinate surface. It should not be mistaken for the whole 12D system.
 
 It is intended as a Periodic Table 2.0 ambition, not a completed scientific standard.
 
@@ -47,7 +47,7 @@ It maps candidate relationships among:
 12 × 12 × 12 = 1,728 addressable House-Sphere-Node cells
 ```
 
-Canonical candidate coordinate form:
+Entry-level coordinate form:
 
 ```text
 H##.S##.N##
@@ -59,18 +59,18 @@ Where:
 - S-axis = Sphere
 - N-axis = Node
 
-H-S-N is the public coordinate grammar. Any A/B/C or X/Y/Z notation is only a temporary drafting aid and should not be treated as the public coordinate standard.
+H-S-N is the public entry coordinate grammar. Any A/B/C or X/Y/Z notation is only a temporary drafting aid and should not be treated as the public coordinate standard.
 
 ## 12D flywheel posture
 
 The intended ontology is a 12D full flywheel, not a flat three-axis taxonomy.
 
-H-S-N provides the addressable lattice cell. Additional dimensions should be modeled as required metadata, projections, routing layers, conservation classes, temporal states, review states, resonance states, or other declared flywheel dimensions.
+H-S-N provides the entry coordinate for an addressable lattice cell. Additional dimensions should be modeled as required metadata, projections, routing layers, conservation classes, temporal states, review states, resonance states, or other declared flywheel dimensions.
 
 Safe public wording:
 
 ```text
-H-S-N is the coordinate surface.
+H-S-N is the entry coordinate surface.
 The 12D flywheel is the fuller operating model.
 A coordinate is an address, not the entire ontology.
 ```
@@ -137,7 +137,7 @@ Human-root/public ratification is required for canon promotion.
 
 The strongest safe public claim is:
 
-> The Atlas Lattice / Rainbow Yin Yang Lattice is a candidate open-source knowledge-graph coordinate system intended to organize a large archive of user-authored artifacts and broader knowledge relationships through an addressable 12×12×12 House-Sphere-Node coordinate surface inside a broader 12D full-flywheel ontology, with status fields, receipts, review gates, and explicit non-authority boundaries.
+> The Atlas Lattice / Rainbow Yin Yang Lattice is a candidate open-source knowledge-graph coordinate system intended to organize a large archive of user-authored artifacts and broader knowledge relationships through an entry-level 12×12×12 House-Sphere-Node coordinate surface inside a broader 12D full-flywheel ontology, with status fields, receipts, review gates, and explicit non-authority boundaries.
 
 ## Coordinate boundary
 
