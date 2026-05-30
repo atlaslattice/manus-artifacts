@@ -1,0 +1,95 @@
+plan_name: BATCH_A_EXPORT_HASH_ACTION_PLAN_2026-05-29
+status: staging_action_plan
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+source_register: archive/knowledge_graph/BATCH_A_SOURCE_PASSPORT_REGISTER_2026-05-29.md
+purpose: >
+  Convert Batch A from connector-captured / passported status into durable export + SHA-256 + GitHub mirror readiness.
+
+batch_a_targets:
+  - source_id: IC-002
+    title: KG GitHub Scaffold Bundle
+    source_url: https://docs.google.com/document/d/1CROrlUoD1OGFbrYtZZSNaDkj2M-XdLxV66WNOpGwr-8
+    required_export: markdown
+    durable_target_path: archive/knowledge_graph/batches/batch_a/IC-002_KG_GitHub_Scaffold_Bundle.md
+    hash_target_path: archive/knowledge_graph/batches/batch_a/sha256_manifest.yaml
+    current_status: connector_captured_markdown_only
+    next_actions:
+      - save_durable_markdown_export
+      - compute_sha256
+      - update_sha256_manifest
+      - mark_git_stage_ready_if_public_safe
+  - source_id: IC-003
+    title: Batch 001 KG Artifact Bundle 2026-05-29
+    source_url: https://docs.google.com/document/d/1A1yU9Kwmts3pF26TfDqq7tC6yhazymBOW-LBEVN8Yuw
+    required_export: markdown
+    durable_target_path: archive/knowledge_graph/batches/batch_a/IC-003_Batch_001_KG_Artifact_Bundle.md
+    hash_target_path: archive/knowledge_graph/batches/batch_a/sha256_manifest.yaml
+    current_status: connector_captured_markdown_only
+    next_actions:
+      - save_durable_markdown_export
+      - compute_sha256
+      - update_sha256_manifest
+      - mark_git_stage_ready_if_public_safe
+  - source_id: IC-004
+    title: LanternBridge Mass Ingestion Readiness Check
+    source_url: https://docs.google.com/document/d/1Y8YTeLnCkhJKpW2FayhzLjW4NxhIGnMtVyddwR7JrPY
+    required_export: markdown
+    durable_target_path: archive/knowledge_graph/batches/batch_a/IC-004_LanternBridge_Mass_Ingestion_Readiness_Check.md
+    hash_target_path: archive/knowledge_graph/batches/batch_a/sha256_manifest.yaml
+    current_status: connector_captured_markdown_only
+    next_actions:
+      - save_durable_markdown_export
+      - compute_sha256
+      - update_sha256_manifest
+      - mark_git_stage_ready_if_public_safe
+  - source_id: IC-005
+    title: Notion Drive Export Intake Register v0.1
+    source_url: https://docs.google.com/spreadsheets/d/18cYcsiM7mK2mcLI2i2Ny9tv771BccfOyuizL1q5xWBc
+    required_export: csv_or_xlsx
+    durable_target_path: archive/knowledge_graph/intake/IC-005_Notion_Drive_Export_Intake_Register.csv
+    hash_target_path: archive/knowledge_graph/batches/batch_a/sha256_manifest.yaml
+    current_status: blocked_by_sheets_api_rate_limit_429
+    next_actions:
+      - retry_after_quota_window
+      - or_manual_export_from_google_sheets_ui
+      - compute_sha256
+      - update_sha256_manifest
+  - source_id: IC-006
+    title: Lattice Knowledge Graph Control Surface 2026-05-27
+    source_url: https://docs.google.com/spreadsheets/d/1jkdvv-z27lmxzkVcnvlSFavZaWJb8eAsJ9e3FQAeRC0
+    required_export: csv_or_xlsx
+    durable_target_path: archive/knowledge_graph/control_surface/IC-006_Lattice_KG_Control_Surface.csv
+    hash_target_path: archive/knowledge_graph/batches/batch_a/sha256_manifest.yaml
+    current_status: blocked_by_prior_sheets_api_rate_limit_429
+    next_actions:
+      - retry_after_quota_window
+      - or_manual_export_from_google_sheets_ui
+      - compute_sha256
+      - update_sha256_manifest
+
+gates:
+  - gate_id: BA-G01
+    name: durable_export_exists
+    required_for: git_stage_ready
+  - gate_id: BA-G02
+    name: sha256_recorded
+    required_for: frozen_raw_export
+  - gate_id: BA-G03
+    name: public_safety_checked
+    required_for: public_candidate_release
+  - gate_id: BA-G04
+    name: sheet_tabs_inspected
+    required_for: sheet_export_completeness
+  - gate_id: BA-G05
+    name: source_passport_updated
+    required_for: synthesis_allowed
+
+blocked_states:
+  connector_captured_markdown_only: useful_for_review_not_frozen
+  sheets_api_rate_limit_429: retry_or_manual_export_required
+  sha256_missing: cannot_call_frozen_export
+  durable_export_missing: cannot_call_git_stage_ready
+
+keeper: Export, hash, then mirror. Connector capture is a scout, not the fossil.
