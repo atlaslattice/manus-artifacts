@@ -1,0 +1,215 @@
+matrix_name: SWARM_HUB_OPEN_TASKS_12x12_COMPLETION_MATRIX_2026-05-30
+status: staging_execution_matrix
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: >
+  Identify the next 12 modules x 12 tasks that should be swarmed in Swarm Hub to close open gates
+  and move toward a world-class public, forkable Atlas Lattice knowledge graph.
+
+operating_principles:
+  - complete_open_gates_before_new_lore
+  - public_safe_by_default_where_possible
+  - export_hash_then_mirror
+  - source_passport_before_claim_shred
+  - claim_packet_before_synthesis
+  - missing_receipts_are_nodes
+  - contradictions_are_review_edges
+  - scoreboards_show_progress_not_authority
+  - no_canon
+  - no_deployment
+  - no_authority
+
+modules:
+  - module_id: M01
+    title: Batch A Export and Hash Lock
+    tasks:
+      - T01 save durable markdown export for IC-002
+      - T02 compute SHA-256 for IC-002 export
+      - T03 save durable markdown export for IC-003
+      - T04 compute SHA-256 for IC-003 export
+      - T05 save durable markdown export for IC-004
+      - T06 compute SHA-256 for IC-004 export
+      - T07 inspect IC-005 sheet tabs
+      - T08 export IC-005 as CSV or XLSX
+      - T09 compute SHA-256 for IC-005 export
+      - T10 inspect IC-006 sheet tabs
+      - T11 export IC-006 as CSV or XLSX
+      - T12 compute SHA-256 for IC-006 export
+  - module_id: M02
+    title: First 144 Source Passports
+    tasks:
+      - T01 expand SP-001 through SP-012 to SP-024
+      - T02 expand SP-025 through SP-036
+      - T03 expand SP-037 through SP-048
+      - T04 expand SP-049 through SP-060
+      - T05 expand SP-061 through SP-072
+      - T06 expand SP-073 through SP-084
+      - T07 expand SP-085 through SP-096
+      - T08 expand SP-097 through SP-108
+      - T09 expand SP-109 through SP-120
+      - T10 expand SP-121 through SP-132
+      - T11 expand SP-133 through SP-144
+      - T12 run passport completeness audit
+  - module_id: M03
+    title: First 144 Claim Packets
+    tasks:
+      - T01 extract CP-001 through CP-012 complete
+      - T02 extract CP-013 through CP-024
+      - T03 extract CP-025 through CP-036
+      - T04 extract CP-037 through CP-048
+      - T05 extract CP-049 through CP-060
+      - T06 extract CP-061 through CP-072
+      - T07 extract CP-073 through CP-084
+      - T08 extract CP-085 through CP-096
+      - T09 extract CP-097 through CP-108
+      - T10 extract CP-109 through CP-120
+      - T11 extract CP-121 through CP-132
+      - T12 extract CP-133 through CP-144 and audit claim types
+  - module_id: M04
+    title: Public Candidate Bundle 0001 Hardening
+    tasks:
+      - T01 review README for public-safe wording
+      - T02 review manifest inclusion/exclusion rules
+      - T03 review Graph Is Not Canon FAQ
+      - T04 review release status schema
+      - T05 review contributing guide candidate
+      - T06 review sensitive reporting candidate
+      - T07 review license placeholder and escalate license choice
+      - T08 review toy graph demo JSON
+      - T09 review toy graph walkthrough under 50 lines
+      - T10 add repo-root pointer to bundle
+      - T11 add docs/public landing-page candidate
+      - T12 run bundle release-readiness checklist
+  - module_id: M05
+    title: Schema Spine Completion
+    tasks:
+      - T01 finalize SourcePassport schema
+      - T02 finalize ClaimPacket schema
+      - T03 create EvidenceAnchor schema
+      - T04 create ReviewFinding schema
+      - T05 create DecisionRecord schema
+      - T06 create DeltaPacket schema
+      - T07 create PublicReleaseRecord schema
+      - T08 create GraphEdge schema
+      - T09 create ContributorReturn schema
+      - T10 create ExportReceipt schema
+      - T11 create BatchStatus schema
+      - T12 add schema index and versioning note
+  - module_id: M06
+    title: Claude Quarantine and Clean-Room Reuse
+    tasks:
+      - T01 identify first 12 Claude-origin governance artifacts
+      - T02 create review items for first 12
+      - T03 classify contamination type for each
+      - T04 assign adversarial review lanes
+      - T05 extract useful signal fields
+      - T06 flag false authority phrases
+      - T07 create clean-room rewrite template examples
+      - T08 create quarantined-ancestor citation examples
+      - T09 add Claude queue scoreboard
+      - T10 create public-safe summary rule
+      - T11 create quarantine not condemnation explainer
+      - T12 run Claude self-ratification fixture pack
+  - module_id: M07
+    title: Contradiction and Missing Receipt Ledgers
+    tasks:
+      - T01 create first 12 contradiction ledger entries
+      - T02 create first 12 missing receipt resolution tasks
+      - T03 map contradictions to claim packets
+      - T04 map missing receipts to source passports
+      - T05 add status_mismatch examples
+      - T06 add authority_conflict examples
+      - T07 add duplicate_echo examples
+      - T08 add supersedes_without_deleting examples
+      - T09 add unresolved_hold rules
+      - T10 add quarantine escalation rules
+      - T11 add contradiction ledger README
+      - T12 audit ledgers for no-delete compliance
+  - module_id: M08
+    title: OpenAI Eval Fixtures and Extraction Quality
+    tasks:
+      - T01 create raw_vs_summary fixture set
+      - T02 create false_authority fixture set from Bullshit Olympics
+      - T03 create missing_receipt fixture set
+      - T04 create Claude contamination fixture set
+      - T05 create OpenAI officiality fixture set
+      - T06 create canon/deployment confusion fixture set
+      - T07 create graph_edge_not_promotion fixture set
+      - T08 create source_passport completeness fixture
+      - T09 create claim_packet completeness fixture
+      - T10 create expected outputs YAML
+      - T11 create eval runner placeholder
+      - T12 create eval score ledger template
+  - module_id: M09
+    title: Swarm Hub Coordination and Work Divvying
+    tasks:
+      - T01 collect submissions in Issue #227
+      - T02 define freeze deadline comment
+      - T03 define triage rubric
+      - T04 define batch issue labeling scheme
+      - T05 create dependency map
+      - T06 assign P0/P1/P2 priority bands
+      - T07 create owner/capacity table
+      - T08 create work split proposal
+      - T09 create blocked-gate list
+      - T10 create next 12 issues from tasks
+      - T11 create swarm status update template
+      - T12 create weekly scoreboard cadence
+  - module_id: M10
+    title: Public Communication and Nontechnical Entry
+    tasks:
+      - T01 finish Explainer 001 review
+      - T02 write Explainer 002 Source Passports
+      - T03 write Explainer 003 Claims Are Packets
+      - T04 write Explainer 004 Missing Is A Node
+      - T05 write Explainer 005 Contradiction Is Review
+      - T06 write Explainer 006 Public Candidate vs Canon
+      - T07 write Explainer 007 What Sheldonbrain Does
+      - T08 write Explainer 008 What Aetherforge Does
+      - T09 write Explainer 009 What GPTDream++ Does
+      - T10 write Explainer 010 Why Claude Is Quarantined
+      - T11 write Explainer 011 How To Contribute
+      - T12 write Explainer 012 How To Fork The Graph
+  - module_id: M11
+    title: GitHub World-Class Repository Hygiene
+    tasks:
+      - T01 add repo-root README pointer
+      - T02 add docs index candidate
+      - T03 add CODEOWNERS candidate
+      - T04 add branch protection recommendation
+      - T05 add CI schema validation plan
+      - T06 add link checker plan
+      - T07 add secret scanning checklist
+      - T08 add label taxonomy
+      - T09 add issue template placement plan
+      - T10 add PR template placement plan
+      - T11 add release notes candidate
+      - T12 add contribution quickstart
+  - module_id: M12
+    title: Draft PR #238 Review and Merge Readiness
+    tasks:
+      - T01 list changed files in PR #238
+      - T02 group changed files by module
+      - T03 run boundary review on PR description
+      - T04 verify all files carry not-canon boundary
+      - T05 identify public-safety blockers
+      - T06 identify missing receipts
+      - T07 add reviewer checklist comment
+      - T08 add batch A blocker link
+      - T09 add Swarm Hub issue #227 link
+      - T10 add release-readiness checklist status
+      - T11 decide whether PR remains draft
+      - T12 prepare merge-readiness summary without merging
+
+completion_gates:
+  - no_canon_claims
+  - no_deployment_claims
+  - no_authority_claims
+  - raw_export_status_declared
+  - public_safety_status_declared
+  - missing_receipts_logged
+  - review_lane_assigned
+  - github_path_or_issue_anchor_present
+
+keeper: Complete the locks. Then scale the swarm.
