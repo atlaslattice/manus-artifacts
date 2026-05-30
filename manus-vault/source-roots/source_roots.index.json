@@ -1,0 +1,69 @@
+{
+  "status": "candidate_source_root_index",
+  "canon_status": "not_canon",
+  "deployment_status": "not_deployed",
+  "authority_scope": "none",
+  "generated_for": "Swarm Hub first execution slice",
+  "generated_date": "2026-05-30",
+  "boundary": "source root index is routing metadata, not canon or proof of export",
+  "roots": [
+    {
+      "source_id": "NOTION-MASTER-INDEX-GITHUB-MAP",
+      "title": "MASTER INDEX — Notion → GitHub Complete Artifact Map — Atlas Lattice Foundation",
+      "surface": "notion",
+      "url": "https://www.notion.so/3290c1de73d981ac8ebfd4c8e86da6b8?pvs=1",
+      "export_priority": "P0",
+      "target_drive_path": "manus-vault/notion-exports/master-index-github-map/",
+      "target_github_path": "manus-vault/notion-exports/master-index-github-map/",
+      "raw_export_status": "pending",
+      "rights_status": "needs_review",
+      "review_lane": "Ledgerwake / NotionMoth / Rootglass"
+    },
+    {
+      "source_id": "NOTION-SHELDONBRAIN-12X12-MASTER",
+      "title": "SHELDONBRAIN OS — 12x12 Master Index — 144 Spheres — Atlas Lattice Foundation",
+      "surface": "notion",
+      "url": "https://www.notion.so/3210c1de73d981a7b04cdced2cc61515?pvs=1",
+      "export_priority": "P0",
+      "target_drive_path": "manus-vault/notion-exports/sheldonbrain-12x12-master/",
+      "target_github_path": "manus-vault/notion-exports/sheldonbrain-12x12-master/",
+      "raw_export_status": "pending",
+      "rights_status": "needs_review",
+      "review_lane": "Ledgerwake / NotionMoth / Sheldonbrain / Rootglass"
+    },
+    {
+      "source_id": "NOTION-MASTER-COMPILATION-ATLAS",
+      "title": "MASTER COMPILATION: The Complete Atlas Lattice System",
+      "surface": "notion",
+      "url": "https://www.notion.so/bc6ad193963d46e1bbefac1265bb238c?pvs=1",
+      "export_priority": "P0",
+      "target_drive_path": "manus-vault/notion-exports/master-compilation-atlas-system/",
+      "target_github_path": "manus-vault/notion-exports/master-compilation-atlas-system/",
+      "raw_export_status": "pending",
+      "rights_status": "needs_review",
+      "review_lane": "Ledgerwake / NotionMoth / ClaudeCatcher / Rootglass"
+    },
+    {
+      "source_id": "NOTION-NORTH-STAR-PKG",
+      "title": "Atlas Lattice Public Knowledge Graph North Star — Candidate — 2026-05-27",
+      "surface": "notion",
+      "url": "https://www.notion.so/36e0c1de73d9819ca7a1d44cf8ebb8ec?pvs=1",
+      "export_priority": "P0",
+      "target_drive_path": "manus-vault/notion-exports/public-knowledge-graph-north-star/",
+      "target_github_path": "manus-vault/notion-exports/public-knowledge-graph-north-star/",
+      "raw_export_status": "pending",
+      "rights_status": "needs_review",
+      "review_lane": "Ledgerwake / GitShelf / Rootglass"
+    }
+  ],
+  "completion_gate": [
+    "source URL preserved",
+    "export manifest created",
+    "raw export status updated",
+    "Drive location or blocker logged",
+    "GitHub location or blocker logged",
+    "checksum or checksum blocker logged",
+    "rights status logged",
+    "review status logged"
+  ]
+}
