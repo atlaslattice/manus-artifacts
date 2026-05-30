@@ -1,0 +1,51 @@
+status: candidate_non_canon
+canon: no
+deployment: no
+authority: none
+purpose: OpenAI-facing evidence and claim interface templates
+source_passport_template:
+  source_id: REQUIRED
+  source_title: REQUIRED
+  source_surface: notion | drive | github | website | local | external | unknown
+  source_url: OPTIONAL
+  source_owner: OPTIONAL
+  created_at: OPTIONAL
+  modified_at: OPTIONAL
+  retrieved_at: REQUIRED
+  raw_export_status: not_exported | partial_export | full_export | unavailable | unknown
+  raw_export_path: OPTIONAL
+  hash_status: sha256_missing | sha256_present | hash_not_applicable | unknown
+  sha256: OPTIONAL
+  citation_status: cited | uncited | partial | not_applicable
+  privacy_status: public | private | internal | redacted | unknown
+  license_status: known | unknown | restricted | public_domain | custom
+  fossil_status: live_candidate | fossil | superseded | quarantined | promoted
+  review_lanes: []
+  canon_status: non_canon | candidate | reviewed_candidate | website_canon
+  deployment_status: no | staging | deployed | retired
+  authority_status: none | advisory | human_root_only | website_canon
+claim_packet_template:
+  claim_id: REQUIRED
+  claim_text: REQUIRED
+  claim_type: factual | interpretive | metaphorical | technical | governance | speculative
+  source_support:
+    - source_id: REQUIRED
+      quote_or_summary: REQUIRED
+      citation: OPTIONAL
+      support_strength: weak | medium | strong
+  counter_evidence: []
+  assumptions: []
+  uncertainty: low | medium | high
+  review_lanes: []
+  dissent:
+    status: none | present | unresolved | resolved
+    notes: OPTIONAL
+  overclaim_risk: none | low | medium | high
+  public_safety_status: public_safe | needs_redaction | private | unknown
+  promotion_status: raw_claim | candidate | reviewed_candidate | council_supported | human_adjudicated | website_canon
+  canon_boundary: REQUIRED
+rules:
+  - evidence before claims
+  - source passport before source-complete claim
+  - claim packet before synthesis
+  - no model output self-ratifies
