@@ -1,0 +1,74 @@
+status: candidate_non_canon
+authority: none
+deployment: no
+canon: no
+purpose: strict seed objects for MissingReceipt graph nodes
+nodes:
+  - node_id: MR-DRIVE-001
+    node_type: MissingReceipt
+    source_id: DRIVE-KG-SOURCE-INVENTORY-2026-05-27
+    source_surface: drive
+    gap_type: full_export_hash_missing
+    severity: high
+    review_lanes: [Hashlight, TIDELOCK]
+    safe_status: partial_export_not_canon
+    next_action: Export sheet as stable file and compute hash before source-complete claim.
+  - node_id: MR-DRIVE-002
+    node_type: MissingReceipt
+    source_id: DRIVE-AETHERFORGE-CONTROL-BOARD
+    source_surface: drive
+    gap_type: export_hash_missing
+    severity: high
+    review_lanes: [Hashlight, Rootglass]
+    safe_status: partial_export_not_canon
+    next_action: Export complete workbook or mirror specific tabs with explicit raw_export_status.
+  - node_id: MR-DRIVE-003
+    node_type: MissingReceipt
+    source_id: DRIVE-KG-V0-4-MACHINE-INDEX
+    source_surface: drive
+    gap_type: jsonl_export_missing
+    severity: high
+    review_lanes: [GPTBrain, Hashlight]
+    safe_status: candidate_machine_index
+    next_action: Export nodes, edges, risks, and tasks to candidate files while preserving no-authority flags.
+  - node_id: MR-DRIVE-004
+    node_type: MissingReceipt
+    source_id: DRIVE-KG-ONTOLOGY-V0-5
+    source_surface: drive
+    gap_type: git_mirror_missing
+    severity: medium
+    review_lanes: [Lucerna, SableVesper]
+    safe_status: candidate_ontology
+    next_action: Mirror as candidate ontology document or YAML with non-canon boundary.
+  - node_id: MR-GITHUB-001
+    node_type: MissingReceipt
+    source_id: PR-190
+    source_surface: github
+    gap_type: mergeability_review_needed
+    severity: medium
+    review_lanes: [TIDELOCK]
+    safe_status: draft_pr_not_canon
+    next_action: Check mergeability and CI before merge consideration; no automatic promotion.
+  - node_id: MR-NOTION-001
+    node_type: MissingReceipt
+    source_id: NOTION-MASTER-INDEX
+    source_surface: notion
+    gap_type: child_pages_not_fetched
+    severity: high
+    review_lanes: [Lucerna, TIDELOCK]
+    safe_status: partial_raw_not_canon
+    next_action: Export or fetch child pages before using Notion status marks as current path truth.
+  - node_id: MR-NOTION-002
+    node_type: MissingReceipt
+    source_id: NOTION-SHELDONBRAIN-12X12
+    source_surface: notion
+    gap_type: artifact_rows_unverified
+    severity: high
+    review_lanes: [Hashlight, Lucerna]
+    safe_status: partial_raw_not_canon
+    next_action: Verify artifact rows against GitHub and Drive receipts before status promotion.
+rules:
+  - Missing receipt equals graph node.
+  - Partial visibility equals status.
+  - Not found equals result.
+  - No downstream source-complete claim without export and hash evidence.
