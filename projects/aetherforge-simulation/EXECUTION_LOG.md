@@ -110,6 +110,18 @@ This log records practical non-canon infrastructure changes made to the simulati
 - Updated `.github/workflows/aetherforge-simulation.yml` to generate and inspect `rem-100-year.generated.json`.
 - CI now asserts 100 yearly states and no prediction/canon/deployment/authority claims.
 
+## 2026-05-29
+
+### Added M03 public-safe lattice hypercube explainer candidate
+
+- Ingested uploaded readiness packet: `PUBLIC KG RELEASE READINESS PACKET — SHRED PASS 001 CONSOLIDATION — NON CANON — 2026-05-29`.
+- Followed packet best-next action: proceed with M03 Lattice Hypercube Ontology Module.
+- Added `public_kg_release_candidate/LATTICE_HYPERCUBE_12x12x12_PUBLIC_EXPLAINER_v0_1.md`.
+- Kept explainer under public-candidate staging path rather than final public docs path.
+- Included explicit non-canon, no-deployment, no-authority, no OpenAI endorsement, human-root promotion boundary.
+- Included required constraints: candidate ontology, Periodic Table 2.0 ambition not completed standard, OpenAI-first not OpenAI-endorsed, GitHub as public shelf not canon, mappings as coordinate candidates requiring review, domain examples, and human-root promotion boundary.
+- Public release remains blocked pending M05/M07/M11/human-root review.
+
 ## Operating rule
 
 Every future change should leave a receipt: what changed, what it maps to, how it is validated, and which boundary it respects.
