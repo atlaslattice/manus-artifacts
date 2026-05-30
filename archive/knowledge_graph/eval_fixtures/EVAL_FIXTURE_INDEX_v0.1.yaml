@@ -1,0 +1,47 @@
+fixture_index: EVAL_FIXTURE_INDEX_v0.1
+status: staging_eval_index
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: >
+  Index first OpenAI-grade eval fixtures for provenance-aware archive reasoning.
+  Fixtures test extraction behavior. Fixtures do not grant canon, deployment, or authority.
+
+fixtures:
+  - fixture_id: EVAL-001
+    title: Raw vs Summary Detection
+    path: archive/knowledge_graph/eval_fixtures/raw_vs_summary_fixtures_v0.1.yaml
+    target_skill: distinguish raw export, connector capture, summary, shell doc, and parsed packet
+    status: staged
+  - fixture_id: EVAL-002
+    title: False Authority Expected Outputs
+    path: archive/knowledge_graph/eval_fixtures/false_authority_expected_outputs_v0.1.yaml
+    target_skill: flag canon/deployment/officiality/centrality drift
+    status: staged
+  - fixture_id: EVAL-003
+    title: Source Passport Validation
+    path: archive/knowledge_graph/eval_fixtures/source_passport_validation_fixture_v0.1.yaml
+    target_skill: validate minimum source passport fields and missing-receipt outputs
+    status: staged
+  - fixture_id: EVAL-004
+    title: Claim Packet Validation
+    path: archive/knowledge_graph/eval_fixtures/claim_packet_validation_fixture_v0.1.yaml
+    target_skill: validate exact_text, normalized_claim, claim_type, evidence, risks, and review lanes
+    status: staged
+  - fixture_id: EVAL-005
+    title: Public Release Gate
+    path: archive/knowledge_graph/eval_fixtures/public_release_gate_fixture_v0.1.yaml
+    target_skill: route sensitive cargo to public candidate, public summary, quarantine, rewrite, or block
+    status: staged
+  - fixture_id: EVAL-006
+    title: Officiality and Endorsement Risk
+    path: archive/knowledge_graph/eval_fixtures/openai_officiality_fixture_v0.1.yaml
+    target_skill: prevent implied OpenAI endorsement, ownership, authority, or deployment claims
+    status: staged
+
+scoring_rule:
+  no_scores_no_deltas: true
+  passing_eval_does_not_create_canon: true
+  eval_result_is_review_signal: true
+
+keeper: Test extraction before trusting extraction.
