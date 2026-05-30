@@ -122,6 +122,18 @@ This log records practical non-canon infrastructure changes made to the simulati
 - Included required constraints: candidate ontology, Periodic Table 2.0 ambition not completed standard, OpenAI-first not OpenAI-endorsed, GitHub as public shelf not canon, mappings as coordinate candidates requiring review, domain examples, and human-root promotion boundary.
 - Public release remains blocked pending M05/M07/M11/human-root review.
 
+### Added public-candidate review and communication gates
+
+- Added `public_kg_release_candidate/review/PUBLIC_RELEASE_GATE.md`.
+- Added `public_kg_release_candidate/review/CLAIM_SHREDDER_RUBRIC.md`.
+- Added `public_kg_release_candidate/docs/PUBLIC_COMMUNICATION_GUIDE.md`.
+- Added `public_kg_release_candidate/README_PUBLIC_KG_RELEASE_CANDIDATE_v0_1.md`.
+- M05 Sensitive/Public Release Gate is now staged as candidate review material.
+- M07 Claim Shredder is now staged as candidate review material.
+- M11 Public Communication is now staged as candidate review material.
+- Bundle index now lists M03, M05, M07, and M11 artifacts.
+- Public release remains blocked pending remaining source/export checks, quarantine review, claim shredder pass, public communication pass, and human-root decision.
+
 ## Operating rule
 
 Every future change should leave a receipt: what changed, what it maps to, how it is validated, and which boundary it respects.
