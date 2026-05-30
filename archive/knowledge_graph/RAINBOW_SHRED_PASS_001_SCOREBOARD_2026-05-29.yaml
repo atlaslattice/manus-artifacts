@@ -1,0 +1,116 @@
+scoreboard_name: RAINBOW_SHRED_PASS_001_SCOREBOARD_2026-05-29
+status: staging_scoreboard
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: Track module progress for Rainbow Yin Yang Lattice Archive Shred Pass 001.
+
+score_semantics:
+  generated: artifact/schema exists in staging
+  staged: public GitHub staging file exists
+  reviewed: human/model review completed with receipts
+  blocked: cannot proceed without receipt or safety fix
+  complete: all acceptance gates satisfied; still not canon unless separately ratified
+
+modules:
+  - module_id: M01
+    title: Source Passport Module
+    status: staged_first_pass
+    generated_count: 1
+    staged_count: 1
+    first_pass_artifact: archive/knowledge_graph/FIRST_12_SOURCE_PASSPORTS_2026-05-29.yaml
+    next_action: expand_to_first_144_source_passports
+  - module_id: M02
+    title: Public Candidate Bundle Module
+    status: staged_first_pass
+    generated_count: 1
+    staged_count: 1
+    first_pass_artifact: archive/public_candidate_bundle/PUBLIC_CANDIDATE_BUNDLE_0001/
+    next_action: add root docs/public landing page and validator
+  - module_id: M03
+    title: Lattice Hypercube Ontology Module
+    status: staged_first_pass
+    generated_count: 1
+    staged_count: 1
+    first_pass_artifact: archive/knowledge_graph/LATTICE_HYPERCUBE_12x12x12_PUBLIC_EXPLAINER_v0.1.md
+    next_action: add diagram and examples
+  - module_id: M04
+    title: Schema Spine Module
+    status: staged_first_pass
+    generated_count: 4
+    staged_count: 4
+    first_pass_artifacts:
+      - SOURCE_PASSPORT_SCHEMA_v0.1.yaml
+      - CLAIM_PACKET_SCHEMA_v0.1.yaml
+      - CONTRADICTION_LEDGER_SCHEMA_v0.1.yaml
+      - SENSITIVE_RELEASE_GATE_v0.1.yaml
+    next_action: add EvidenceAnchor, ReviewFinding, DecisionRecord, DeltaPacket schemas
+  - module_id: M05
+    title: Sensitive Release Gate Module
+    status: staged_first_pass
+    generated_count: 1
+    staged_count: 1
+    first_pass_artifact: archive/knowledge_graph/SENSITIVE_RELEASE_GATE_v0.1.yaml
+    next_action: add test fixtures
+  - module_id: M06
+    title: Claude Quarantine Module
+    status: staged_first_pass
+    generated_count: 1
+    staged_count: 1
+    first_pass_artifact: archive/knowledge_graph/CLAUDE_ADVERSARIAL_REVIEW_QUEUE_2026-05-28.md
+    next_action: add first 12 Claude review items
+  - module_id: M07
+    title: Claim Shredder Module
+    status: staged_first_pass
+    generated_count: 1
+    staged_count: 1
+    first_pass_artifact: archive/knowledge_graph/FIRST_12_CLAIM_PACKETS_2026-05-29.yaml
+    next_action: expand_to_first_144_claim_packets
+  - module_id: M08
+    title: Contradiction / Missing Receipt Module
+    status: staged_first_pass
+    generated_count: 2
+    staged_count: 2
+    first_pass_artifacts:
+      - archive/knowledge_graph/MISSING_RECEIPT_NODE_REGISTER_2026-05-28.yaml
+      - archive/knowledge_graph/CONTRADICTION_LEDGER_SCHEMA_v0.1.yaml
+    next_action: create first contradiction ledger entries
+  - module_id: M09
+    title: Toy Graph / Demo Module
+    status: staged_first_pass
+    generated_count: 1
+    staged_count: 1
+    first_pass_artifact: archive/public_candidate_bundle/PUBLIC_CANDIDATE_BUNDLE_0001/TOY_GRAPH_DEMO_v0.1.json
+    next_action: add markdown walkthrough under 50 lines
+  - module_id: M10
+    title: OpenAI Eval Fixtures Module
+    status: staged_first_pass
+    generated_count: 2
+    staged_count: 2
+    first_pass_artifacts:
+      - archive/knowledge_graph/BULLSHIT_OLYMPICS_FALSE_AUTHORITY_FIXTURES_2026-05-28.yaml
+      - archive/knowledge_graph/OPENAI_STRUCTURED_EXTRACTION_SCHEMA_v0.1.yaml
+    next_action: add eval runner placeholder and expected outputs
+  - module_id: M11
+    title: Public Communication Module
+    status: queued
+    generated_count: 0
+    staged_count: 0
+    next_action: write first public explainer
+  - module_id: M12
+    title: Swarm Completion / Scoreboard Module
+    status: staged_first_pass
+    generated_count: 1
+    staged_count: 1
+    first_pass_artifact: archive/knowledge_graph/RAINBOW_SHRED_PASS_001_SCOREBOARD_2026-05-29.yaml
+    next_action: update after each new artifact
+
+totals:
+  modules_total: 12
+  modules_with_first_pass_artifact: 11
+  modules_queued: 1
+  canon_promotions: 0
+  deployments: 0
+  authority_grants: 0
+
+keeper: Scoreboards show progress. They do not grant authority.
