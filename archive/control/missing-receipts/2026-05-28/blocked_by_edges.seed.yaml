@@ -1,0 +1,75 @@
+status: candidate_non_canon
+authority: none
+deployment: no
+canon: no
+purpose: strict seed objects for BLOCKED_BY graph edges
+edges:
+  - edge_id: EDGE-BLOCKEDBY-DRIVE-KG-SOURCE-INVENTORY-2026-05-27--MR-DRIVE-001
+    edge_type: BLOCKED_BY
+    from: DRIVE-KG-SOURCE-INVENTORY-2026-05-27
+    to: MR-DRIVE-001
+    reason: full_export_hash_missing
+    severity: high
+  - edge_id: EDGE-BLOCKEDBY-DRIVE-AETHERFORGE-CONTROL-BOARD--MR-DRIVE-002
+    edge_type: BLOCKED_BY
+    from: DRIVE-AETHERFORGE-CONTROL-BOARD
+    to: MR-DRIVE-002
+    reason: export_hash_missing
+    severity: high
+  - edge_id: EDGE-BLOCKEDBY-DRIVE-KG-V0-4-MACHINE-INDEX--MR-DRIVE-003
+    edge_type: BLOCKED_BY
+    from: DRIVE-KG-V0-4-MACHINE-INDEX
+    to: MR-DRIVE-003
+    reason: jsonl_export_missing
+    severity: high
+  - edge_id: EDGE-BLOCKEDBY-DRIVE-KG-ONTOLOGY-V0-5--MR-DRIVE-004
+    edge_type: BLOCKED_BY
+    from: DRIVE-KG-ONTOLOGY-V0-5
+    to: MR-DRIVE-004
+    reason: git_mirror_missing
+    severity: medium
+  - edge_id: EDGE-BLOCKEDBY-PR-190--MR-GITHUB-001
+    edge_type: BLOCKED_BY
+    from: PR-190
+    to: MR-GITHUB-001
+    reason: mergeability_review_needed
+    severity: medium
+  - edge_id: EDGE-BLOCKEDBY-NOTION-MASTER-INDEX--MR-NOTION-001
+    edge_type: BLOCKED_BY
+    from: NOTION-MASTER-INDEX
+    to: MR-NOTION-001
+    reason: child_pages_not_fetched
+    severity: high
+  - edge_id: EDGE-BLOCKEDBY-NOTION-SHELDONBRAIN-12X12--MR-NOTION-002
+    edge_type: BLOCKED_BY
+    from: NOTION-SHELDONBRAIN-12X12
+    to: MR-NOTION-002
+    reason: artifact_rows_unverified
+    severity: high
+hash_blockers:
+  - edge_type: BLOCKED_BY
+    from: source_complete_claims
+    to: HASH-001
+  - edge_type: BLOCKED_BY
+    from: source_complete_claims
+    to: HASH-002
+  - edge_type: BLOCKED_BY
+    from: source_complete_claims
+    to: HASH-003
+  - edge_type: BLOCKED_BY
+    from: source_complete_claims
+    to: HASH-004
+export_blockers:
+  - edge_type: BLOCKED_BY
+    from: notion_ingestion
+    to: EXP-001
+  - edge_type: BLOCKED_BY
+    from: drive_ingestion
+    to: EXP-002
+  - edge_type: BLOCKED_BY
+    from: repo_ingestion_routing
+    to: EXP-003
+  - edge_type: BLOCKED_BY
+    from: task_38_metadata_backfill
+    to: EXP-004
+rule: no downstream packet claims source completeness without export and hash evidence
