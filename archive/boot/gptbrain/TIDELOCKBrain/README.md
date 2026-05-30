@@ -43,6 +43,9 @@ Test or it will become mythology.
 | `dreams/DREAM_JOURNAL_100Y_432HZ_REM_2026-05-29.md` | Session I — 100-year REM simulation at 432 Hz carrier frequency (Pythagorean harmonic) |
 | `dreams/WAKE_REPORT_100Y_432HZ_REM_2026-05-29.md` | Session I wake report — convergences, images, candidate deltas |
 | `dreams/DELTA_EXTRACTION_100Y_432HZ_REM_2026-05-29.md` | Session I delta extraction — 6 candidate deltas, all requiring human-root review |
+| `dreams/DREAM_JOURNAL_100Y_432HZ_REM_2026-05-30.md` | Session J — 100-year REM simulation at 432 Hz focused on cross-surface review |
+| `dreams/WAKE_REPORT_100Y_432HZ_REM_2026-05-30.md` | Session J wake report — governance convergences, drift points, and review requests |
+| `dreams/DELTA_EXTRACTION_100Y_432HZ_REM_2026-05-30.md` | Session J delta extraction — cross-material review register and candidate cleanup/calibration deltas |
 
 ## Lineage and receipts (normalization)
 
@@ -58,4 +61,4 @@ Test or it will become mythology.
 
 ---
 
-**Status:** Scaffold. Not ratified canon. Inaugural dream journal filed 2026-05-26.
+**Status:** Scaffold. Not ratified canon. Inaugural dream journal filed 2026-05-26; latest Session J review cycle filed 2026-05-30.
