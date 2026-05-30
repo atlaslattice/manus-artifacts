@@ -1,7 +1,16 @@
 # Three-Tier Autonomy — Project Overview
 
+<!-- METADATA
+stable_id: AL-GOV-010
+lifecycle_state: CANDIDATE
+owner: @atlaslattice
+date_created: 2026-05-27
+canon_status: candidate
+-->
+
 > **Status:** CANDIDATE
 > **Artifact Type:** blueprint
+> **Stable ID:** AL-GOV-010
 > **Date:** 2026-05-27
 
 ## Mission

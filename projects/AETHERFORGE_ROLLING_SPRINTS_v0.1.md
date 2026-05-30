@@ -45,12 +45,27 @@ Each sprint must:
 
 - This sprint artifact now governs a 12-wave campaign (`AL-EXEC-144-001`) with 12 tasks per wave.
 - Wave completion requires: linked artifacts, validation receipts, and TIDELOCK execution logging.
-- Active wave: **Wave 2 — Taxonomy/IDs/Lifecycle Expansion**.
+- Active wave: **Wave 3 — Metadata Backfill**.
 
-## Wave 2 Scope
+## Wave 2 Scope (Completed)
 
 1. ID grammar and namespace contract publication
 2. Relation vocabulary expansion for graph linking
 3. Lifecycle transition and guard contract codification
 4. Registry expansion with Wave 2 artifacts and links
 5. Validation and execution receipts
+
+## Wave 3 Scope
+
+1. Backfill stable IDs for mission-critical artifacts linked from `README.md`
+2. Backfill lifecycle state fields on every mission-critical artifact
+3. Backfill provenance blocks on major doctrine/spec/roadmap artifacts
+4. Add explicit owners for top-level domains
+5. Normalize artifact titles for registry consistency
+6. Add missing outbound graph links for all registered artifacts
+7. Add related artifacts sections to flagship docs
+8. Mark deprecated artifacts where superseded replacements exist
+9. Add replacement links for all deprecated artifacts
+10. Standardize date formatting across major artifacts
+11. Audit top-level folders for naming consistency
+12. Publish a metadata coverage report by domain

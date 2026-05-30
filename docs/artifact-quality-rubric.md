@@ -1,7 +1,16 @@
 # Artifact Quality Rubric
 
+<!-- METADATA
+stable_id: AL-ARCH-007
+lifecycle_state: CANDIDATE
+owner: @atlaslattice
+date_created: 2026-05-28
+canon_status: candidate
+-->
+
 > **Status:** CANDIDATE  
 > **Artifact Type:** rubric / guide  
+> **Stable ID:** AL-ARCH-007
 > **Date:** 2026-05-28  
 > **Related:** [Evidence standards](./evidence-standards.md), [Contributor decision tree](./contributor-decision-tree.md), [Review SLA](./review-sla.md)
 

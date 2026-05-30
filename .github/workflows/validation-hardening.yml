@@ -52,8 +52,16 @@ jobs:
           set -o pipefail
           python scripts/validate_lifecycle_consistency.py | tee reports/validation-hardening/lifecycle-consistency.txt
 
+      - name: Generate domain metadata coverage report
+        id: domain_coverage
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          python scripts/generate_domain_coverage_report.py | tee reports/validation-hardening/domain-coverage.txt
+
       - name: Upload validation reports on failure
-        if: ${{ always() && (steps.metadata_completeness.outcome == 'failure' || steps.provenance_fields.outcome == 'failure' || steps.lifecycle_consistency.outcome == 'failure') }}
+        if: ${{ always() && (steps.metadata_completeness.outcome == 'failure' || steps.provenance_fields.outcome == 'failure' || steps.lifecycle_consistency.outcome == 'failure' || steps.domain_coverage.outcome == 'failure') }}
         uses: actions/upload-artifact@v4
         with:
           name: validation-hardening-reports
@@ -61,6 +69,8 @@ jobs:
           path: |
             reports/validation-hardening/
             docs/provenance-validation-summary.json
+            docs/domain-metadata-coverage-report.md
+            docs/domain-metadata-coverage-report.json
 
       - name: Fail job on validation issues
         if: always()
@@ -68,7 +78,8 @@ jobs:
         run: |
           if [ "${{ steps.metadata_completeness.outcome }}" = "failure" ] || \
              [ "${{ steps.provenance_fields.outcome }}" = "failure" ] || \
-             [ "${{ steps.lifecycle_consistency.outcome }}" = "failure" ]; then
+             [ "${{ steps.lifecycle_consistency.outcome }}" = "failure" ] || \
+             [ "${{ steps.domain_coverage.outcome }}" = "failure" ]; then
             echo "Validation hardening checks reported failures."
             exit 1
           fi

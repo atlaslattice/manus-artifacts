@@ -22,8 +22,8 @@ This campaign operationalizes the approved objective: make Atlas Lattice a world
 | Wave | Theme | Tasks | Status |
 |---|---|---:|---|
 | 1 | Mission + governance baseline | 12 | ✅ Complete |
-| 2 | Taxonomy/IDs/lifecycle expansion | 12 | ✅ In Progress |
-| 3 | Metadata backfill | 12 | ⬜ Planned |
+| 2 | Taxonomy/IDs/lifecycle expansion | 12 | ✅ Complete |
+| 3 | Metadata backfill | 12 | 🔵 In Progress |
 | 4 | Validation hardening | 12 | ⬜ Planned |
 | 5 | Registry and graph automation | 12 | ⬜ Planned |
 | 6 | Discoverability surfaces | 12 | ⬜ Planned |

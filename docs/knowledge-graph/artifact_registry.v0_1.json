@@ -1,6 +1,6 @@
 {
   "schema_version": "0.2",
-  "artifact_count": 64,
+  "artifact_count": 73,
   "artifacts": [
     {
       "id": "AL-MISSION-001",
@@ -1532,6 +1532,163 @@
         {
           "relation": "relates_to",
           "target_id": "AL-MISSION-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-ARCH-005",
+      "title": "Glossary — Atlas Lattice Archive",
+      "artifact_type": "reference",
+      "status": "CANDIDATE",
+      "path": "docs/GLOSSARY.md",
+      "links": [
+        {
+          "relation": "supports",
+          "target_id": "AL-ARCH-006"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-ARCH-006",
+      "title": "Start Here — Atlas Lattice Archive",
+      "artifact_type": "navigation",
+      "status": "CANDIDATE",
+      "path": "docs/START_HERE.md",
+      "links": [
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-ARCH-005"
+        }
+      ]
+    },
+    {
+      "id": "AL-ARCH-007",
+      "title": "Artifact Quality Rubric",
+      "artifact_type": "rubric",
+      "status": "CANDIDATE",
+      "path": "docs/artifact-quality-rubric.md",
+      "links": [
+        {
+          "relation": "governs",
+          "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-GOV-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-ARCH-008",
+      "title": "Quarterly Report 2026 Q2",
+      "artifact_type": "report",
+      "status": "CANDIDATE",
+      "path": "docs/quarterly-report-2026-Q2.md",
+      "links": [
+        {
+          "relation": "reports_on",
+          "target_id": "AL-EXEC-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-KG-006",
+      "title": "Lattice Hypercube 12x12x12 Public Explainer v0.1",
+      "artifact_type": "explainer",
+      "status": "CANDIDATE",
+      "path": "docs/LATTICE_HYPERCUBE_12x12x12.md",
+      "links": [
+        {
+          "relation": "documents",
+          "target_id": "AL-KG-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-GOV-009",
+      "title": "Chinook Guardian Project Overview",
+      "artifact_type": "blueprint",
+      "status": "CANDIDATE",
+      "path": "projects/chinook-guardian/README.md",
+      "links": [
+        {
+          "relation": "governed_by",
+          "target_id": "AL-GOV-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-GOV-010",
+      "title": "Three-Tier Autonomy Project Overview",
+      "artifact_type": "blueprint",
+      "status": "CANDIDATE",
+      "path": "projects/three-tier-autonomy/README.md",
+      "links": [
+        {
+          "relation": "governed_by",
+          "target_id": "AL-GOV-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-HEALTH-003",
+      "title": "Domain Metadata Coverage Report",
+      "artifact_type": "report",
+      "status": "CANDIDATE",
+      "path": "docs/domain-metadata-coverage-report.md",
+      "links": [
+        {
+          "relation": "generated_by",
+          "target_id": "AL-CI-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-HEALTH-001"
+        },
+        {
+          "relation": "reports_on",
+          "target_id": "AL-KG-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-LOG-006",
+      "title": "TIDELOCKBRAIN Wave 3 Execution Receipt 2026-05-30",
+      "artifact_type": "receipt",
+      "status": "CANDIDATE",
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_WAVE3_144_TASK_EXECUTION_RECEIPT_2026-05-30.md",
+      "links": [
+        {
+          "relation": "receipts",
+          "target_id": "AL-EXEC-144-001"
+        },
+        {
+          "relation": "follows",
+          "target_id": "AL-LOG-005"
         }
       ]
     }

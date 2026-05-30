@@ -1,5 +1,17 @@
 # 📖 Glossary — Atlas Lattice Archive
 
+<!-- METADATA
+stable_id: AL-ARCH-005
+lifecycle_state: CANDIDATE
+owner: @atlaslattice
+date_created: 2026-05-26
+canon_status: candidate
+-->
+
+> **Status:** CANDIDATE
+> **Artifact Type:** reference
+> **Stable ID:** AL-ARCH-005
+
 > Terminology reference for all systems, protocols, and concepts in this archive.
 > If a term you encounter isn't here, open an issue.
 

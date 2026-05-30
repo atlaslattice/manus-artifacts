@@ -1,5 +1,17 @@
 # 🚪 Start Here — Atlas Lattice Archive
 
+<!-- METADATA
+stable_id: AL-ARCH-006
+lifecycle_state: CANDIDATE
+owner: @atlaslattice
+date_created: 2026-05-26
+canon_status: candidate
+-->
+
+> **Status:** CANDIDATE
+> **Artifact Type:** navigation
+> **Stable ID:** AL-ARCH-006
+
 > Choose your path through 580+ artifacts across AI governance, constitutional OS design, multi-agent architecture, and regenerative infrastructure.
 
 ---

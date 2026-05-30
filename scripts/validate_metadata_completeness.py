@@ -112,6 +112,26 @@ def main() -> None:
     )
     failures += 0 if not orphaned_artifacts else 1
 
+    # Check for duplicate stable IDs embedded in markdown files across docs/ and projects/
+    markdown_id_paths: defaultdict[str, list[str]] = defaultdict(list)
+    for root_name in ('docs', 'projects'):
+        for markdown_path in sorted((REPO_ROOT / root_name).rglob('*.md')):
+            metadata = extract_markdown_metadata(markdown_path)
+            sid = metadata.get('stable_id', '').strip()
+            if sid:
+                markdown_id_paths[sid].append(markdown_path.relative_to(REPO_ROOT).as_posix())
+    duplicate_markdown_ids = [
+        f"{sid}: {', '.join(paths)}"
+        for sid, paths in sorted(markdown_id_paths.items())
+        if len(paths) > 1
+    ]
+    print_check(
+        'Duplicate stable IDs in markdown files',
+        not duplicate_markdown_ids,
+        duplicate_markdown_ids or [f'Unique stable IDs in markdown: {len(markdown_id_paths)}'],
+    )
+    failures += 0 if not duplicate_markdown_ids else 1
+
     registry_ids = {artifact.get('id') for artifact in artifacts if artifact.get('id')}
     missing_targets = []
     for artifact in artifacts:

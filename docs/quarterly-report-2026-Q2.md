@@ -1,5 +1,17 @@
 # Quarterly Report — 2026 Q2
 
+<!-- METADATA
+stable_id: AL-ARCH-008
+lifecycle_state: CANDIDATE
+owner: @atlaslattice
+date_created: 2026-05-28
+canon_status: candidate
+-->
+
+> **Status:** CANDIDATE
+> **Artifact Type:** report
+> **Stable ID:** AL-ARCH-008
+
 > *Status: CANDIDATE — not canon until ratified by @atlaslattice*
 
 ## Period

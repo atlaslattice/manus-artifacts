@@ -1,5 +1,17 @@
 # LATTICE_HYPERCUBE_12x12x12_PUBLIC_EXPLAINER_v0.1
 
+<!-- METADATA
+stable_id: AL-KG-006
+lifecycle_state: CANDIDATE
+owner: @atlaslattice
+date_created: 2026-05-26
+canon_status: candidate
+-->
+
+> **Status:** CANDIDATE
+> **Artifact Type:** explainer
+> **Stable ID:** AL-KG-006
+
 STATUS: PUBLIC-CANDIDATE EXPLAINER — NOT CANON  
 CANON: no  
 DEPLOYMENT: no  

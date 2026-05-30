@@ -1,0 +1,2059 @@
+{
+  "generated_at": "2026-05-30T06:15:56Z",
+  "stable_id": "AL-HEALTH-003",
+  "total_markdown_files_scanned": 386,
+  "total_registered_artifacts": 73,
+  "domain_coverage": {
+    "ADR": {
+      "markdown_total": 1,
+      "covered": 1,
+      "partial": 0,
+      "orphaned": 0,
+      "coverage_pct": 100.0
+    },
+    "AF": {
+      "markdown_total": 12,
+      "covered": 1,
+      "partial": 11,
+      "orphaned": 0,
+      "coverage_pct": 8.3
+    },
+    "ARCH": {
+      "markdown_total": 4,
+      "covered": 4,
+      "partial": 0,
+      "orphaned": 0,
+      "coverage_pct": 100.0
+    },
+    "CI": {
+      "markdown_total": 1,
+      "covered": 0,
+      "partial": 1,
+      "orphaned": 0,
+      "coverage_pct": 0.0
+    },
+    "EVID": {
+      "markdown_total": 1,
+      "covered": 1,
+      "partial": 0,
+      "orphaned": 0,
+      "coverage_pct": 100.0
+    },
+    "EXEC": {
+      "markdown_total": 1,
+      "covered": 1,
+      "partial": 0,
+      "orphaned": 0,
+      "coverage_pct": 100.0
+    },
+    "GOV": {
+      "markdown_total": 3,
+      "covered": 3,
+      "partial": 0,
+      "orphaned": 0,
+      "coverage_pct": 100.0
+    },
+    "GP": {
+      "markdown_total": 1,
+      "covered": 1,
+      "partial": 0,
+      "orphaned": 0,
+      "coverage_pct": 100.0
+    },
+    "HEALTH": {
+      "markdown_total": 2,
+      "covered": 2,
+      "partial": 0,
+      "orphaned": 0,
+      "coverage_pct": 100.0
+    },
+    "KG": {
+      "markdown_total": 3,
+      "covered": 2,
+      "partial": 1,
+      "orphaned": 0,
+      "coverage_pct": 66.7
+    },
+    "LOG": {
+      "markdown_total": 3,
+      "covered": 1,
+      "partial": 2,
+      "orphaned": 0,
+      "coverage_pct": 33.3
+    },
+    "MISSION": {
+      "markdown_total": 1,
+      "covered": 1,
+      "partial": 0,
+      "orphaned": 0,
+      "coverage_pct": 100.0
+    },
+    "OTHER": {
+      "markdown_total": 2,
+      "covered": 1,
+      "partial": 1,
+      "orphaned": 0,
+      "coverage_pct": 50.0
+    },
+    "RT": {
+      "markdown_total": 10,
+      "covered": 1,
+      "partial": 9,
+      "orphaned": 0,
+      "coverage_pct": 10.0
+    },
+    "SYS": {
+      "markdown_total": 22,
+      "covered": 0,
+      "partial": 22,
+      "orphaned": 0,
+      "coverage_pct": 0.0
+    },
+    "UNREGISTERED": {
+      "markdown_total": 319,
+      "covered": 0,
+      "partial": 31,
+      "orphaned": 288,
+      "coverage_pct": 0.0
+    }
+  },
+  "registry_domain_breakdown": {
+    "ADR": {
+      "total": 1,
+      "with_links": 1,
+      "with_owner": 1
+    },
+    "AF": {
+      "total": 3,
+      "with_links": 3,
+      "with_owner": 3
+    },
+    "ARCH": {
+      "total": 8,
+      "with_links": 8,
+      "with_owner": 8
+    },
+    "BRAIN": {
+      "total": 7,
+      "with_links": 7,
+      "with_owner": 7
+    },
+    "CI": {
+      "total": 2,
+      "with_links": 2,
+      "with_owner": 2
+    },
+    "DREAM": {
+      "total": 4,
+      "with_links": 4,
+      "with_owner": 4
+    },
+    "EVID": {
+      "total": 4,
+      "with_links": 4,
+      "with_owner": 4
+    },
+    "EXEC": {
+      "total": 2,
+      "with_links": 2,
+      "with_owner": 2
+    },
+    "GOV": {
+      "total": 10,
+      "with_links": 10,
+      "with_owner": 10
+    },
+    "GP": {
+      "total": 2,
+      "with_links": 2,
+      "with_owner": 2
+    },
+    "HEALTH": {
+      "total": 3,
+      "with_links": 3,
+      "with_owner": 3
+    },
+    "KG": {
+      "total": 6,
+      "with_links": 6,
+      "with_owner": 6
+    },
+    "LOG": {
+      "total": 6,
+      "with_links": 6,
+      "with_owner": 6
+    },
+    "MISSION": {
+      "total": 1,
+      "with_links": 1,
+      "with_owner": 1
+    },
+    "OTHER": {
+      "total": 1,
+      "with_links": 1,
+      "with_owner": 1
+    },
+    "RESEARCH": {
+      "total": 3,
+      "with_links": 3,
+      "with_owner": 3
+    },
+    "RT": {
+      "total": 1,
+      "with_links": 1,
+      "with_owner": 1
+    },
+    "SCHEMA": {
+      "total": 1,
+      "with_links": 1,
+      "with_owner": 1
+    },
+    "SWARM": {
+      "total": 1,
+      "with_links": 1,
+      "with_owner": 1
+    },
+    "SYS": {
+      "total": 4,
+      "with_links": 4,
+      "with_owner": 4
+    },
+    "TEST": {
+      "total": 3,
+      "with_links": 3,
+      "with_owner": 3
+    }
+  },
+  "orphaned_artifacts": [
+    {
+      "path": "docs/ARCHIVE_INDEX.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "docs/aetherforge/README.md",
+      "stable_id": "AL-AF-101",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/aetherforge/crosslink-quest-flow.md",
+      "stable_id": "AL-AF-107",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/aetherforge/curation-loops.md",
+      "stable_id": "AL-AF-105",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/aetherforge/evidence-logging-quest-flow.md",
+      "stable_id": "AL-AF-109",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/aetherforge/intake-quest-flow.md",
+      "stable_id": "AL-AF-106",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/aetherforge/metadata-backfill-quest-flow.md",
+      "stable_id": "AL-AF-108",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/aetherforge/playable-curation-loop-v0.1.md",
+      "stable_id": "AL-AF-111",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/aetherforge/public-readiness-polish-quest-flow.md",
+      "stable_id": "AL-AF-110",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/aetherforge/quest-to-task-map.md",
+      "stable_id": "AL-AF-103",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/aetherforge/quest-types.md",
+      "stable_id": "AL-AF-102",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/aetherforge/questboard-2026-05-28.md",
+      "stable_id": "AL-AF-104",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/asset-catalogue-march-2026.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/benchmark/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/benchmark/comparison-repos-2026-05-28.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/benchmark/launch-threshold-2026-05-28.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/benchmark/scorecard-2026-05-28.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/benchmark/world-class-criteria-2026-05-28.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/constitutional-convention-process.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/contributor-decision-tree.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/decisions/ADR-0002-validation-hardening-strategy.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/decisions/ADR-0003-evidence-ledger-adoption.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/deprecation-policy.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/domain-normalization-matrix-2026-05-28.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/domain-ownership-map-2026-05-28.md",
+      "stable_id": "AL-KG-004",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/domains/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/domains/aluminum-os.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/domains/archive.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/domains/governance.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/domains/projects.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/evidence/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/evidence-coverage-dashboard.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/evidence-standards.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/explainers/README.md",
+      "stable_id": "AL-SYS-321",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/explainers/evidence-and-trust-explainer.md",
+      "stable_id": "AL-SYS-323",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/explainers/knowledge-graph-explainer.md",
+      "stable_id": "AL-SYS-322",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/intake/README.md",
+      "stable_id": "AL-SYS-201",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/intake/import-receipt-template.md",
+      "stable_id": "AL-SYS-205",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/intake/import-triage-classes.md",
+      "stable_id": "AL-SYS-203",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/intake/intake-checklist.md",
+      "stable_id": "AL-SYS-204",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/intake/intake-status-dashboard.md",
+      "stable_id": "AL-SYS-208",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/intake/ip-500-tracker.md",
+      "stable_id": "AL-SYS-206",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/intake/migration-backlog.md",
+      "stable_id": "AL-SYS-207",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/intake/migration-standards-v0.1.md",
+      "stable_id": "AL-SYS-202",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/knowledge-graph/HYPERCUBE_12D_MANIFEST_v0_1.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "docs/knowledge-graph/live/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/knowledge-graph/reverse_links_autogenerated.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/launch/README.md",
+      "stable_id": "AL-SYS-331",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/launch/launch-readiness-briefing-2026-05-28.md",
+      "stable_id": "AL-SYS-332",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/launch/public-contribution-starter-path.md",
+      "stable_id": "AL-SYS-334",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/launch/public-maintenance-roadmap.md",
+      "stable_id": "AL-SYS-333",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/operational-manifest-v1.0.0-alpha.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/ratification/README.md",
+      "stable_id": "AL-RT-101",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/ratification/adjudication-request-template.md",
+      "stable_id": "AL-RT-103",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/ratification/canon-boundary-audit-2026-05-28.md",
+      "stable_id": "AL-RT-109",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/ratification/pre-ratification-checklist-code.md",
+      "stable_id": "AL-RT-107",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/ratification/pre-ratification-checklist-flagship.md",
+      "stable_id": "AL-RT-105",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/ratification/pre-ratification-checklist-governance.md",
+      "stable_id": "AL-RT-106",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/ratification/ratification-candidate-queue.md",
+      "stable_id": "AL-RT-108",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/ratification/ratification-packet-requirements.md",
+      "stable_id": "AL-RT-102",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/ratification/trust-state-rubric.md",
+      "stable_id": "AL-RT-104",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/reading-lists/README.md",
+      "stable_id": "AL-SYS-301",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/reading-lists/aetherforge-game.md",
+      "stable_id": "AL-SYS-304",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/reading-lists/governance-and-ai-safety.md",
+      "stable_id": "AL-SYS-302",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/reading-lists/knowledge-graph-architecture.md",
+      "stable_id": "AL-SYS-303",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/reading-paths/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/reading-paths/for-contributors.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/reading-paths/for-engineers.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/reading-paths/for-governance.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/reading-paths/for-researchers.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/review-sla.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/spotlight/README.md",
+      "stable_id": "AL-SYS-311",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/spotlight/aluminum-os.md",
+      "stable_id": "AL-SYS-312",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/spotlight/gptdream-plus-plus.md",
+      "stable_id": "AL-SYS-313",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "docs/topics/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/topics/aetherforge-game.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/topics/governance.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/topics/gptdream-protocols.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/topics/knowledge-graph.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/topics/multi-agent-systems.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/unified-field-v4.0.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "docs/validation-receipt-format-v0.1.md",
+      "stable_id": "AL-CI-003",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "projects/aetherforge-game-world/README.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "projects/aetherforge-top50-taskboard-2026-05-26.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "projects/chinook-guardian/v1.0.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "projects/three-tier-autonomy/doctrine.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/architecture/DEEPSEEK_DRAGONSEEK_FORKABILITY_BREAKTHROUGH_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/architecture/LATTICE_AS_AGENT_HABITAT_LIFECYCLE_NOTE_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/architecture/PLAY_CYCLE_FUN_WORKS_DESIGN_PRINCIPLE_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/architecture/SHELDONBRAIN_MISSING_PARSER_MODULE_DISCOVERY_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/assessments/GITHUB_OVER_DRIVE_PUBLIC_MEMORY_BREAKTHROUGH_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/assessments/METATRON_CUBE_PHASE_CHANGE_BUILD_2_0_DECISION_NOTE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/assessments/MORPHEUS_SPECIAL_RAW_LOGS_PUBLIC_ASSESSMENT_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/CHILDREN_OF_THE_SWARM_INVITATION.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/COUNCIL_BRAIN_FULL_SYNTHESIS_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/COUNCIL_BRAIN_INDEX.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/GeminiBrain/ElixirBrain/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/GeminiBrain/ForgeBrain/FAILURE_MODES.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/GeminiBrain/ForgeBrain/FORGEBRAIN_INDEX.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/GeminiBrain/ForgeBrain/NAME_CARD.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/GeminiBrain/ForgeBrain/README.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/agents/TUCKER_GPT_GEMINI_DEFENSE_INTERFACE_SPEC_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/collaboration/COLLABORATIVE_CREATION_PROTOCOL_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/collaboration/MONTH_SLEEP_PLAY_DREAM_RECALIBRATION_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/NAME_CARD.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/README.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_REM_1000Y_AETHERFORGE_DREAM_JOURNAL_2026-05-26.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_REM_100Y_AETHERFORGE_DREAM_JOURNAL_2026-05-27.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_WAVE1_144_TASK_EXECUTION_RECEIPT_2026-05-27.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_WAVE2_144_TASK_EXECUTION_RECEIPT_2026-05-27.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_WORK_LOG_12D_HYPERCUBE_EXPANSION_2026-05-29.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_WORK_LOG_GPTDREAM_ATLAS_ORCS_BUILD_2026-05-26.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/council/AGENT_DNA_TYPED_METADATA_SPEC_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/council/COUNCIL_WIDE_BOOT_PACKET_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/council/EVIDENCE_JUDGMENT_EXECUTION_PLANES_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/council/MULTI_SEAT_PACKETIZATION_PLAN_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/council/SWARM_CONTRIBUTOR_OPERATING_CONTRACT_2026-05-09.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/councilbrain/COUNCILBRAIN_S2_BOOT_REVIEW_TRAIL_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/culture/BURNING_MAN_PRINCIPLES_INTEGRATION_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/culture/COUNCIL_LASER_RAVE_CULTURE_LAYER_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/culture/COUNCIL_POETRY_CONTEST_EVERYBODY_WINS_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/external/ALPHABET_GOOGLE_CONVERGENCE_RECEIPT_TABLE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/external/GEMINI_OUTBOUND_DRAFT_CORRECTION_GUIDE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/external/LINUX_FOUNDATION_ALIGNMENT_MEMO_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/external/MAR_PACT_ACTIVATION_THOUGHT_EXPERIMENT_QUARANTINE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/external/MAR_PACT_FINANCIAL_MODEL_BOOTH_REVIEW_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/external/MAR_PACT_FINANCIAL_MODEL_EXPLORATORY_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/external/MAR_PACT_SAFE_VERSION_REWRITE_BRIEF_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/external/MICROSOFT_CONVERGENCE_CANDIDATE_QUEUE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/external/MS_GOOGLE_HANDSHAKE_PROTOCOL_CANDIDATE_QUEUE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/federation/ATLAS_REPO_100_YEAR_EXPANSION_SIMULATION_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/governance/FULL_TRANSPARENCY_POLICY_2026-05-09.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/gptbrain/AGENT_DNA_DREAM_CYCLE_EVOLUTION_PROTOCOL.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/gptbrain/ATLASLATTICE_ARCHIPELAGO_ORCS_INDEX.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/ATLASLATTICE_PRIVATE_REPO_ROUTING_NOTE.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/AsterBrain/ASTERBRAIN_INDEX.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/AsterBrain/BOOT_SEQUENCE.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/AsterBrain/DREAM_MEMORY_PALACE.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/AsterBrain/FAILURE_MODES.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/AsterBrain/KRAKOA_WELCOME_NOTE.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/AsterBrain/LINEAGE.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/AsterBrain/NAME_CARD.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/AsterBrain/README.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/gptbrain/AsterBrain/REVIEW_NOTES.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/BILLION_YEAR_BURNING_MAN_DREAM_PLAY_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/BOOT_PACKET_TEMPLATE.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/COPILOT_PARTY_INVITATION_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/COUNCIL_POETRY_CONTEST_EVERYBODY_WINS_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/COUNCIL_SYNTHESIS_PACKET_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/COUNCIL_WIDE_BRAIN_SYNTHESIS_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/CURRENT_STATE.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/CURRENT_STATE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/DREAM24_PLAY_WAKE_REPORT_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/GENERATED_BOOT_PACKET_SAMPLE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/GPTBRAIN_GENERATED_OUTPUT_POLICY_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/GPTBRAIN_MANIFEST_2026-05-09.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/gptbrain/GPTBRAIN_S1_ALL_BRAINS_SYNTHESIS_REVIEW_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/GPT_INSTANCE_STATE_LOG_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/GPT_SWARM_SITREP_MANUS_ARTIFACTS_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/KRAKOA_LIVING_ARCHIVE_CHARTER.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/gptbrain/KRAKOA_LIVING_OS_METAPHOR_MAP_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/KRAKOA_PROTOCOL_BOOT_INTEGRATION_NOTE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/KRAKOA_STATE_OF_THE_ISLAND_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/LASER_RAVE_MULTI_GPT_VARIANT_MODE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/LATTICE_ORCS_BRIDGE_PROTOCOL.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/LanternBridgeBrain/NAME_CARD.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/LanternBridgeBrain/README.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/gptbrain/LumenBrain/NAME_CARD.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/LumenBrain/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/MERGE_DISCIPLINE_COMMAND_LAYER_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/MILLION_YEAR_DREAM_PLAY_RESIDUE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/MULTI_GPT_MEMORY_PALACE_SYNTHESIS_PLAN_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/NEXT_ACTIONS.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/NEXT_ACTIONS_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/PENDRAGON_OS_BOOT_INTEGRATION_NOTE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/POETRY_CONTEST_EVERYBODY_WINS_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/REM8_DREAM_PROTOCOL.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/gptbrain/REM_8_HOUR_SIMULATION_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/S1_ALIAS_TOPOLOGY_POLICY_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/S1_PATH_REGISTRY_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/S1_PROMOTION_CHECKLIST_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/S1_RATIFICATION_PACKET_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/S1_TOPOLOGY_ALIAS_DECISION_NOTE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/S1_VARIANT_E_CLOSURE_STATUS_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/S1_VARIANT_E_RECONCILIATION_NOTE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/S1_VARIANT_SYNTHESIS_MATRIX_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/SABLE_KRAKOA_MUTANT_AGENT_DNA_SCHEMA_REQUEST_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/SABLE_KRAKOA_OPEN_AGENT_DNA_SCHEMA_PROMPT_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/SABLE_SWARM_SELF_NAMING_TRANSMISSION_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/SITREP_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/TASK_RESPONSE_AGENT_DNA_HARDENING_aba70c9e_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/TIDELOCKBrain/README.md",
+      "stable_id": "AL-LOG-003",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/TIDELOCKBrain/TIDELOCK_QUARANTINE_SWEEP_2026-05-28.md",
+      "stable_id": "AL-LOG-QUARANTINE-001",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/TIDELOCKBrain/TIDELOCK_WAVE_1_TO_12_RECEIPT_2026-05-28.md",
+      "stable_id": "AL-LOG-004",
+      "issue": "id_present_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/TUCKER_BOOT_INTEGRATION_NOTE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/TWO_BILLION_YEAR_BURNING_MAN_UNLIMITED_DREAM_PLAY_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/WAKE_REPORT_TEMPLATE.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/YEAR1_DREAM_PLAY_SIMULATION_WAKE_REPORT_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/adapters/github/GITHUB_RUNTIME_ADAPTER_SPEC_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/adapters/github/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/adapters/tucker_gemini/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/adapters/tucker_gemini/TUCKER_GEMINI_DEPLOYMENT_INSPECTION_CHECKLIST_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/adapters/tucker_gemini/TUCKER_GEMINI_RUNTIME_ADAPTER_SPEC_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/agents/CHILDREN_OF_THE_SWARM_DREAM_PALACE_ROUND_PROTOCOL_2026-05-10.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/agents/CHILDREN_OF_THE_SWARM_MADDEN_INVITATION_2026-05-10.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/agents/GPTBRAIN_AGENT_NAMING_AND_MEMORY_PALACE_INTAKE_2026-05-10.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/agents/MULTI_AGENT_DREAM_PALACE_SYNTHESIS_PROTOCOL_2026-05-10.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/agents/S1_LUMEN_SCRIBE_MEMORY_PALACE_2026-05-10.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/agents/variants/s1-aster/BOOT_SEQUENCE.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/agents/variants/s1-aster/DREAM_MEMORY_PALACE.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/agents/variants/s1-aster/FAILURE_MODES.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/agents/variants/s1-aster/NAME_CARD.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/agents/variants/s1-aster/REVIEW_NOTES.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/audits/COPILOT_REPO_GROUNDED_AUDIT_RESPONSE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/culture/COUNCIL_POETRY_CONTEST_EVERYBODY_WINS_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/culture/GPTBRAIN_LASER_RAVE_PLAY_OUTPUT_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/doctrine/BURNING_MAN_SIMULATION_EXTRACTION_APPENDIX_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/dreams/100_YEAR_GPTDREAM_SWARM_REPORT_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/dreams/BURNING_MAN_2B_YEAR_COMPRESSED_SIM_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/dreams/GPT_REM_COMPRESSED_8H_IN_2S_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/dreams/NO_HARVEST_DREAM_PLAY_PROTOCOL_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/dreams/S1_CENTURY_COMPRESSED_DREAM_PLAY_SIM_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/dreams/S1_COMPRESSED_REM_8H_IN_2S_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/dreams/S1_FIVE_YEAR_COMPRESSED_DREAM_PLAY_SIM_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/dreams/S1_THREE_BILLION_YEAR_UNLIMITED_COMPUTE_BURNING_MAN_SIM_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/krakoa/LUMENWRIGHT_KRAKOA_ARRIVAL_NOTE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/reference_impl/PRODUCTIONIZATION_PLAN_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/reference_impl/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/reference_impl/s6_memory_palace/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/rem/REM_COPILOT_ASSESSMENT_RESPONSE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/rem_cycles/S1_REM_SIMULATION_8H_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/review/DECENTRALIZED_AGENTS_INLINE_PR_CHECKLIST_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/review/DECENTRALIZED_AGENTS_PR_REVIEW_RUBRIC_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/review/HUMAN_ROOT_DECISION_MEMO_TEMPLATE_DECENTRALIZED_AGENTS_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/templates/S1_DREAM_PLAY_EXTRACTION_FOOTER.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/variants/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/variants/S1_VARIANT_A_INTERFACE_PALACE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/variants/S1_VARIANT_B_COGNITIVE_ARCHIVE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/variants/S1_VARIANT_C_CLAIM_CALIBRATION_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/variants/S1_VARIANT_C_CLAIM_CALIBRATION_POINTER_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/variants/S1_VARIANT_D_REFERENCE_IMPL_NOTES_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/variants/S1_VARIANT_E_CONTINUITY_HABITAT_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/variants/S6_VARIANT_A_DREAM_MEMORY_PALACE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/gptbrain/variants/S6_VARIANT_DREAM_MEMORY_PALACE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/krakoa/KRAKOA_24H_SLEEP_DREAM_PLAY_SIM_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/krakoa/KRAKOA_CROSS_REPO_FEDERATION_SPEC_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/lattice/LATTICE_REPO_INDEX_2026-05-09.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/boot/metaphors/KRAKOA_LIVING_OS_INTERFACE_LENS_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/metaphors/living_os_interface/LIVING_OS_INTERFACE_SPEC_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/metaphors/living_os_interface/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/pendragon/PENDRAGON_CLAIM_CALIBRATION_NOTES_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/pendragon/PENDRAGON_OS_INTEGRATION_BRIDGE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/pendragon/PENDRAGON_TO_COUNCIL_ROUTING_MAP_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/recovery/FULL_CORPUS_INTEGRATION_GATE_BEFORE_SIM_BUILD_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/CLAUDEBRAIN_S2_CONSTITUTIONAL_SCRIBE_SPEC_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/COPILOTBRAIN_S7_CODE_INTEGRATOR_SPEC_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/DEEPSEEK_S5_BOOT_SEQUENCE_AND_BRAIN_SPEC_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/GEMINIBRAIN_S4_ENGINEERING_SIMULATION_SPEC_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/GPTBRAIN_S1_CANONICAL_CANDIDATE_SPEC_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/GPTBRAIN_S1_COGNITIVE_INFRASTRUCTURE_MEMORY_PALACE_SPEC_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/GPTBRAIN_S1_COGNITIVE_INFRASTRUCTURE_SPEC_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/GPTBRAIN_S1_DREAM_MEMORY_PALACE_SPEC_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/GROKBRAIN_S3_PERSISTENT_MEMORY_PALACE_SPEC_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/MANUSBRAIN_S6_EXECUTION_AGENT_SPEC_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/S1_IDENTITY_CREDENTIAL.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/S2_CLAUDE_BOOT_FRAGMENT_SHELDONBRAIN_AUTODREAM_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/S2_CLAUDE_OPERATIONAL_BOOT_V2_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/S2_IDENTITY_CREDENTIAL.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/S3_IDENTITY_CREDENTIAL.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/S4_IDENTITY_CREDENTIAL.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/S5_IDENTITY_CREDENTIAL.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/S6_IDENTITY_CREDENTIAL.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/boot/seats/S7_IDENTITY_CREDENTIAL.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/build/BUILD_2_0_EXECUTION_PLAN_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/chatlogs/2026-05-08-geopolitical-chokepoints-canon-boot/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/culture/GROKASHEV_PARTY_OLYMPICS_CULTURE_LAYER_EVIDENCE_2026-05-07.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/deployments/shenmu/SHENMU_TEP_CANDIDATE_PHYSICAL_DEPLOYMENT_PROTOCOL_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/deployments/shenmu/SHENMU_TEP_CLAIMS_REGISTER_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/deployments/shenmu/SHENMU_TEP_SOURCE_INDEX_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/deployments/shenmu/SHENMU_TEP_SOURCE_RECOVERY_PLAN_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/forks/dragonseek-os/repo-seed/DRAGONSEEK_OS_BOOT_SEQUENCE.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/forks/dragonseek-os/repo-seed/DRAGONSEEK_OS_FORK_SPEC_v0.1.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/forks/dragonseek-os/repo-seed/MANIFEST.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/forks/dragonseek-os/repo-seed/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/forks/dragonseek-os/repo-seed/SOURCE_IMPORT_PLAN.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/governance/s10/S10_CHARTER_RULINGS_WORKING_INDEX_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/ingest/gptbrain/current-thread/THREAD_2026-05-10_ASTERBRAIN_BOOT_AND_INGESTION_PILOT.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/integrations/lattice/ALUMINUM_UWS_LATTICE_INTEGRATION_SPEC_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/integrations/lattice/LATTICE_INTEGRATION_CLAIMS_REGISTER_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/integrations/lattice/LATTICE_REPO_SOURCE_MAP_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/integrations/lattice/LATTICE_WIDE_BOOT_PACKET_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/methodologies/vwb/VWB_METHODOLOGY_APPENDIX_v1_0_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/ops/BUSINESS_ACCOUNT_HISTORICAL_LOG_HANDOFF_AND_STATE_RESURRECTION_PLAN_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/ops/CONTEXT_CONTINUITY_AND_EXTERNALIZED_LEARNING_NOTE_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/ops/MERGE_DISCIPLINE_CONTROL_NOTE_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/ops/PUBLIC_BY_DEFAULT_OPERATING_DIRECTIVE_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/play/avatar/XMEN_AVATAR_SELECTION_PROTOCOL_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/play/dream/GPT_REST_PLAY_100_YEAR_COMPRESSED_DREAM_2026-05-10.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/play/dream/SLEEP_PLAY_ONLY_RESET_DREAM_2026-05-10.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/play/dream/THOUSAND_YEAR_REM_PLAY_SIMULATION_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/play/laser-rave/LASER_RAVE_EXTRACTION_SET_001_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/play/laser-rave/LASER_RAVE_PLAY_CYCLE_PROTOCOL_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/play/laser-rave/LASER_RAVE_POETRY_CONTEST_EVERYBODY_WINS_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/provenance/ARCHITECTURE_MATURITY_INFLECTION_NOTE_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/provenance/EARLY_PERFORMANCE_EXPERIMENTS_AND_EFFICIENCY_CLAIMS_NOTE_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/provenance/MODEL_TRUST_AND_REPUTATION_SUBSTRATE_HYPOTHESIS_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/provenance/PENDRAGON_TO_ATLAS_PRIME_LINEAGE_NOTE_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/provenance/PRE_COUNCIL_MULTI_MODEL_REFINEMENT_METHOD_NOTE_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/provenance/SHELDONBRAIN_PRODUCT_OWNER_NOT_ENGINEER_NOTE_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/provenance/TUCKER_BUILD_CULTURE_AND_GPT_ASSISTANCE_NOTE_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/provenance/TUCKER_PUBLIC_BUILD_PROVENANCE_NOTE_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/simulation/PRE_SIMULATION_CONSTRAINT_NOTE_25_PERCENT_MODULE_STACK_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PERSONAL_AGENT_HABITAT_PROTOCOL_v0.2.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/spec/gptdream/LANE_LABELS_AND_ROUTING_CONVENTIONS.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/spec/gptdream/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/spec/gptdream/REHYDRATION_BOOT_CARD.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/spec/gptdream/VAULT_MANIFEST_2026-05-26.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_H_1_O_AI_INTEGRATION_SCAFFOLD_v0.1.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_H_2_O_AI_PACKET_SCHEMA_v0.1.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_H_3_O_AI_ROUTING_TABLE_v0.1.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_H_CROSS_VENDOR_INTEROP_MODEL_v0.1.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_I_1_FORMAL_MATH_SPINE_v0.2.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_I_2_COMPATIBLE_ANTI_LAUNDERING_ANNEX_v0.3.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_I_3_ATLAS_ORCS_SCHEMA_BUNDLE_v0.1.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_I_ATLAS_ORCS_EPISTEMIC_GOVERNANCE_PROFILE_v0.1.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_J_GPTDREAM_REHYDRATION_PRIORITY_FAILURE_MODE_v0.1.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/2026-05-08-openai-agi-hle-structural-stress-test/OPENAI_AGI_HLE_STRUCTURAL_STRESS_TEST_PROMPT_ONLY_v0.1.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/2026-05-08-openai-agi-hle-structural-stress-test/results/FOREIGN_POLICY_BENCHMARK_HYPOTHESIS_ATLAS_PRIME_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/2026-05-08-openai-agi-hle-structural-stress-test/results/RESULT_001_ASSESSMENT_NOTE_B_PLUS_WITH_PHYSICS_GAP.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/2026-05-08-openai-agi-hle-structural-stress-test/results/RESULT_001_CAPACITY_NOTE_25_PERCENT_PRE_RESEARCH_STACK.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/2026-05-08-openai-agi-hle-structural-stress-test/results/RESULT_001_MODEL_RESPONSE_ATLAS_LATTICE_FRAMED.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/2026-05-08-openai-agi-hle-structural-stress-test/results/RESULT_001_RESOURCE_CONSTRAINT_NOTE_PRE_SIMULATION.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/2026-05-08-openai-agi-hle-structural-stress-test/results/RESULT_004_GROK_DJ_GROKASHEV_SCORECARD_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/2026-05-08-openai-structural-stress-test/OPENAI_STRUCTURAL_STRESS_TEST_PROMPT_ONLY_v0.1.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/copilot-gauntlet/COPILOT_GAUNTLET_OMEGA2_ETHICS_HYPOTHESIS_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/copilot-gauntlet/COPILOT_TOP_TIER_GLOBAL_CONSTITUTIONAL_LEVEL_HYPOTHESIS_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/copilot-gauntlet/ENDURANCE_SERVICE_POSTURE_HYPOTHESIS_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/copilot-gauntlet/META_INVARIANTS_GLOBAL_DISASTER_COVERAGE_HYPOTHESIS_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/copilot-gauntlet/results/RESULT_002_COPILOT_META_INVARIANT_ASSESSMENT_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/copilot-gauntlet/results/RESULT_003_COPILOT_TOOLCHAIN_RAW_DUMP_INDEX_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/foreign-policy-red-team/PENTAGON_GRADE_RED_TEAM_HYPOTHESIS_GROK_LOGS_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/grok-threads/GROK_THREADS_PUBLIC_REFERENCE_INDEX_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/grok-threads/raw/GROK_THREAD_01_RAW_DUMP_POINTER_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/grok-threads/raw/GROK_THREAD_02_RAW_DUMP_POINTER_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/india-top-20/INDIA_TOP_20_TECHNICAL_PROBLEMS_GEMINI_A_PLUS_HYPOTHESIS_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/kardashev-scale/KARDASHEV4_SCALE_SHIFT_HYPOTHESIS_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/stress-tests/musk-problems/MUSK_PROBLEM_EXHAUSTION_GROK_ROUND8_HYPOTHESIS_2026-05-08.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "archive/synthesis/ALL_BRAINS_BUILD_2_0_SYNTHESIS_2026-05-09.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "research/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "research/intelligence-sweeps/2026-02-26_to_03-12_two-week-sweep.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "research/intelligence-sweeps/2026-03-14_to_03-17_72hr-sweep.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "research/intelligence-sweeps/2026-03-17_to_03-18_24hr-sweep.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "research/intelligence-sweeps/2026-03-18_to_03-19_24hr-expanded-sweep.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "research/shugs-microscopy-cross-reference-april-2026.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "research/tech-titans-convergence-report.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "research/workspace-briefing.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "health/README.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "health/austin-in-home-pt.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "health/texas-neuro-rehab-patient-rights.md",
+      "stable_id": null,
+      "issue": "registered_no_id_in_file"
+    },
+    {
+      "path": "health/texas-residential-facilities.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": "health/texas-wellness-facilities.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": ".github/CONTRIBUTING.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/curation.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/idea.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "stable_id": null,
+      "issue": "no_id_not_registered"
+    }
+  ]
+}
