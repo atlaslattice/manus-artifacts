@@ -1,0 +1,22 @@
+{
+  "source_surface": "drive",
+  "source_id": "",
+  "title": "",
+  "drive_url_or_id": "",
+  "export_timestamp_utc": "",
+  "exported_by": "",
+  "raw_export_status": "raw|semi_raw|partial|inaccessible|missing_receipt",
+  "rights_status": "unknown|private|public|rights_cleared|needs_review",
+  "canon_status": "not_canon",
+  "deployment_status": "not_deployed",
+  "authority_scope": "none",
+  "target_drive_path": "",
+  "target_github_path": "",
+  "raw_files_path": "raw_files/",
+  "google_exports_path": "google_exports/",
+  "attachments_path": "attachments/",
+  "checksums_path": "checksums.sha256",
+  "contradiction_status": "not_checked|checked_none_found|checked_found",
+  "review_state": "pending|in_review|blocked|ready_for_human_root",
+  "notes": ""
+}
