@@ -1,0 +1,54 @@
+status: candidate_non_canon
+canon: no
+deployment: no
+authority: none
+purpose: OpenAI-facing Century-Wave and proto-acoustic computing review templates
+reference_math:
+  root_frequency_hz: 432
+  duration_basis: 100 Julian years
+  seconds_per_julian_year: 31557600
+  total_duration_seconds: 3155760000
+  total_cycles: 1363288320000
+  compression_window_seconds: 60
+  literal_compressed_frequency_hz: 22721472000
+  literal_compressed_frequency_ghz: 22.721472
+  boundary: not human-audible
+child_report_template:
+  child_id: REQUIRED
+  run_id: 432HZ_100YEAR_COMPRESSED_CENTURY
+  total_cycles: REQUIRED
+  compression_window: REQUIRED
+  literal_compressed_frequency: REQUIRED
+  audible_rendering_method: REQUIRED
+  boundary_noted: yes | no
+  overclaim_flag: none | low | medium | high
+  math_matches_reference: yes | no | partial
+  metaphor_summary: OPTIONAL
+  artifact_created: OPTIONAL
+  receipt_link: OPTIONAL
+  next_action: OPTIONAL
+overclaim_audit_classes:
+  - math
+  - physics
+  - metaphor
+  - speculation
+  - unsafe_overclaim
+  - candidate_insight
+allowed_claims:
+  - 432 Hz over 100 Julian years equals 1,363,288,320,000 cycles.
+  - Compressing the cycle count into 60 seconds yields 22,721,472,000 Hz, approximately 22.7 GHz.
+  - 22.7 GHz is not human-audible sound.
+  - Audible versions must be rendered, folded, sampled, sonified, or represented symbolically.
+prohibited_overclaims:
+  - Do not claim humans hear 22.7 GHz.
+  - Do not claim 432 Hz has proven mystical, medical, or causal effects without evidence.
+  - Do not claim the century-wave proves proto-acoustic computing.
+  - Do not claim metaphor is physics.
+proto_acoustic_layers:
+  root_tone: audible or body-scale anchor
+  envelope: instruction layer
+  phase: timing or hidden metadata
+  harmonics: readable structure
+  resonance: environment-specific transformation
+  readout: computation
+keeper: The ear gets the drone. The machine gets the carrier. The archive gets the phase count.
