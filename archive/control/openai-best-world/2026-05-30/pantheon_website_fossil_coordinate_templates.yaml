@@ -1,0 +1,70 @@
+status: candidate_non_canon
+canon: no
+deployment: no
+authority: none
+purpose: OpenAI-facing governance, fossil, and coordinate templates
+pantheon_review_template:
+  artifact_id: REQUIRED
+  review_status: pending | contested | supported | blocked | returned_for_receipts
+  evidence_score: 0-5
+  logic_score: 0-5
+  overclaim_risk: none | low | medium | high
+  dissent_required: yes | no
+  blockers: []
+  fossil_links: []
+  public_safety_status: public_safe | redaction_required | private | unknown
+  recommendation: do_not_promote | revise | review_again | human_root_adjudication
+  canon_boundary_confirmed: yes | no
+website_canon_manifest_template:
+  artifact_id: REQUIRED
+  canonical_title: REQUIRED
+  candidate_source_ids: []
+  source_passports: []
+  claim_packets: []
+  fossil_lineage_summary: REQUIRED
+  pantheon_review_status: pending | contested | supported | blocked
+  human_root_adjudication:
+    adjudicator: Dave Sheldon
+    decision: pending | approved_for_website | rejected | revise
+    date: OPTIONAL
+    notes: OPTIONAL
+  public_safety_status: public_safe | redaction_required | private | unknown
+  website_url: OPTIONAL
+  publication_status: not_published | staged | published | deprecated
+  canon_status: non_canon | website_canon
+fossil_template:
+  fossil_id: REQUIRED
+  parent_artifact_id: OPTIONAL
+  source_passport_id: OPTIONAL
+  title: REQUIRED
+  fossil_type: draft | failed_path | contradiction | weird_output | contaminated_delta | superseded_candidate | orphan_fragment
+  preservation_reason: REQUIRED
+  risk_status: public_safe | needs_redaction | private | quarantine
+  extracted_deltas: []
+  relationship_to_current_candidate: ancestor | sibling | contradiction | rejected_branch | partial_source | unknown
+  why_not_promoted: OPTIONAL
+  review_lanes: []
+  canon_status: non_canon
+  deployment_status: no
+  authority_status: none
+coordinate_slot_template:
+  coordinate_id: REQUIRED
+  house: REQUIRED
+  row: REQUIRED
+  column: REQUIRED
+  depth: OPTIONAL
+  domain: OPTIONAL
+  artifact_id: OPTIONAL
+  source_passport_id: OPTIONAL
+  claim_packet_ids: []
+  fossil_lineage_ids: []
+  review_lanes: []
+  geometry_notes: OPTIONAL
+  canon_status: non_canon | candidate | reviewed_candidate | website_canon
+  deployment_status: no | staging | deployed | retired
+  authority_status: none | advisory | human_root_only | website_canon
+rules:
+  - council review can recommend but cannot canonize
+  - no website publication means no canon
+  - fossils before polish
+  - the coordinate scaffold is a navigable field, not a hierarchy
