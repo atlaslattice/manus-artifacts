@@ -1,0 +1,198 @@
+schema_id: graph_write_candidate.v0.1
+candidate_id: gwc-gangaseek-hash-queue-2026-05-28
+generated_by: AETHERFORGE / GPTDream++ / Receipt Habitat review lane
+generated_at: "2026-05-28T00:00:00Z"
+status: candidate
+canon_status: not_canon
+deployment_status: not_deployable
+authority_scope: none
+source_query: "Which artifacts mention GangaSeek and lack hashes?"
+source_artifacts:
+  - drive_gangaseek_namespace_packet_001
+  - drive_gangaseek_inv_clm_catalog_001
+  - drive_gangaseek_template_001
+  - drive_gangaseek_invariant_spec_pdf_001
+  - drive_gangaseek_invariant_spec_pdf_copy_001
+  - archive/knowledge_graph/demo_queries/GANGASEEK_LACKING_HASHES_QUERY_2026-05-28.md
+
+proposed_nodes:
+  - node_id: src-drive-gangaseek-namespace-packet-001
+    node_type: SourceArtifact
+    title: "GANGASEEK_NAMESPACE_RATIFICATION_PACKET_v0.1.txt"
+    status: candidate
+    surface: drive
+    url_or_path: "https://drive.google.com/file/d/17-9TTGzITZWecSL5MCusDF-0LvSjBxsD"
+    raw_export_status: source_file_visible_not_hashed
+    canon_status: not_canon_until_reviewed
+    deployment_status: not_deployable
+    authority_scope: none
+    evidence_refs:
+      - "Drive search result: GANGASEEK_NAMESPACE_RATIFICATION_PACKET_v0.1.txt"
+
+  - node_id: src-drive-gangaseek-inv-clm-catalog-001
+    node_type: SourceArtifact
+    title: "GANGASEEK_INV_CLM_CATALOG_CANDIDATE_v0.1.txt"
+    status: candidate
+    surface: drive
+    url_or_path: "https://drive.google.com/file/d/1QW1Yd3YHzpb8bxRCU-w_yjtJlFpNujmp"
+    raw_export_status: source_file_visible_not_hashed
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    evidence_refs:
+      - "Drive search result: GANGASEEK_INV_CLM_CATALOG_CANDIDATE_v0.1.txt"
+
+  - node_id: src-drive-gangaseek-document-template-001
+    node_type: SourceArtifact
+    title: "GANGASEEK_DOCUMENT_TEMPLATE_CANDIDATE_v0.1.txt"
+    status: candidate
+    surface: drive
+    url_or_path: "https://drive.google.com/file/d/1OqG73AWtdFhyH4CdDqCBsiCsze6UECxA"
+    raw_export_status: source_file_visible_not_hashed
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    evidence_refs:
+      - "Drive search result: GANGASEEK_DOCUMENT_TEMPLATE_CANDIDATE_v0.1.txt"
+
+  - node_id: src-drive-gangaseek-invariant-spec-pdf-001
+    node_type: SourceArtifact
+    title: "GangaSeek Invariant Specification — MSFT vs India-Starlink-Google Orbital.pdf"
+    status: candidate
+    surface: drive
+    url_or_path: "https://drive.google.com/file/d/12WxTa1Ggoe-_A9yqL8WwMgO-nrpPlNJV"
+    raw_export_status: source_file_visible_not_hashed
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    evidence_refs:
+      - "Drive search result: GangaSeek Invariant Specification PDF"
+
+  - node_id: src-drive-gangaseek-invariant-spec-pdf-copy-001
+    node_type: SourceArtifact
+    title: "GangaSeek Invariant Specification — MSFT vs India-Starlink-Google Orbital (1).pdf"
+    status: candidate
+    surface: drive
+    url_or_path: "https://drive.google.com/file/d/1hxALxM8Lur7m34RA0JX84wvGOeNJpM9f"
+    raw_export_status: source_file_visible_not_hashed
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    evidence_refs:
+      - "Drive search result: GangaSeek Invariant Specification PDF copy"
+
+  - node_id: rq-gangaseek-hash-and-claim-extraction-001
+    node_type: ReviewQueue
+    title: "GangaSeek hash and claim extraction queue"
+    status: candidate
+    review_lanes:
+      - Hashlight
+      - Lucerna
+      - GPTBrain
+      - Sable_Vesper
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    evidence_refs:
+      - archive/knowledge_graph/demo_queries/GANGASEEK_LACKING_HASHES_QUERY_2026-05-28.md
+
+  - node_id: ev-sha256-needed-gangaseek-drive-001
+    node_type: EvidenceAnchor
+    title: "sha256 needed for visible GangaSeek Drive source files"
+    status: missing
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    evidence_refs:
+      - archive/knowledge_graph/demo_queries/GANGASEEK_LACKING_HASHES_QUERY_2026-05-28.md
+
+proposed_edges:
+  - edge_id: edge-gangaseek-namespace-missing-sha256
+    edge_type: missing_receipt
+    from_node: src-drive-gangaseek-namespace-packet-001
+    to_node: ev-sha256-needed-gangaseek-drive-001
+    evidence_ref: archive/knowledge_graph/demo_queries/GANGASEEK_LACKING_HASHES_QUERY_2026-05-28.md
+    status: candidate
+
+  - edge_id: edge-gangaseek-invclm-missing-sha256
+    edge_type: missing_receipt
+    from_node: src-drive-gangaseek-inv-clm-catalog-001
+    to_node: ev-sha256-needed-gangaseek-drive-001
+    evidence_ref: archive/knowledge_graph/demo_queries/GANGASEEK_LACKING_HASHES_QUERY_2026-05-28.md
+    status: candidate
+
+  - edge_id: edge-gangaseek-template-missing-sha256
+    edge_type: missing_receipt
+    from_node: src-drive-gangaseek-document-template-001
+    to_node: ev-sha256-needed-gangaseek-drive-001
+    evidence_ref: archive/knowledge_graph/demo_queries/GANGASEEK_LACKING_HASHES_QUERY_2026-05-28.md
+    status: candidate
+
+  - edge_id: edge-gangaseek-pdf-missing-sha256
+    edge_type: missing_receipt
+    from_node: src-drive-gangaseek-invariant-spec-pdf-001
+    to_node: ev-sha256-needed-gangaseek-drive-001
+    evidence_ref: archive/knowledge_graph/demo_queries/GANGASEEK_LACKING_HASHES_QUERY_2026-05-28.md
+    status: candidate
+
+  - edge_id: edge-gangaseek-pdf-copy-missing-sha256
+    edge_type: missing_receipt
+    from_node: src-drive-gangaseek-invariant-spec-pdf-copy-001
+    to_node: ev-sha256-needed-gangaseek-drive-001
+    evidence_ref: archive/knowledge_graph/demo_queries/GANGASEEK_LACKING_HASHES_QUERY_2026-05-28.md
+    status: candidate
+
+  - edge_id: edge-gangaseek-namespace-requires-review
+    edge_type: requires_review
+    from_node: src-drive-gangaseek-namespace-packet-001
+    to_node: rq-gangaseek-hash-and-claim-extraction-001
+    evidence_ref: archive/knowledge_graph/demo_queries/GANGASEEK_LACKING_HASHES_QUERY_2026-05-28.md
+    status: candidate
+
+  - edge_id: edge-gangaseek-invclm-requires-review
+    edge_type: requires_review
+    from_node: src-drive-gangaseek-inv-clm-catalog-001
+    to_node: rq-gangaseek-hash-and-claim-extraction-001
+    evidence_ref: archive/knowledge_graph/demo_queries/GANGASEEK_LACKING_HASHES_QUERY_2026-05-28.md
+    status: candidate
+
+  - edge_id: edge-gangaseek-template-requires-review
+    edge_type: requires_review
+    from_node: src-drive-gangaseek-document-template-001
+    to_node: rq-gangaseek-hash-and-claim-extraction-001
+    evidence_ref: archive/knowledge_graph/demo_queries/GANGASEEK_LACKING_HASHES_QUERY_2026-05-28.md
+    status: candidate
+
+  - edge_id: edge-gangaseek-pdf-pair-possible-duplicate
+    edge_type: contradicts
+    from_node: src-drive-gangaseek-invariant-spec-pdf-001
+    to_node: src-drive-gangaseek-invariant-spec-pdf-copy-001
+    evidence_ref: archive/knowledge_graph/demo_queries/GANGASEEK_LACKING_HASHES_QUERY_2026-05-28.md
+    status: candidate_until_hash_comparison
+
+contradictions_or_uncertainties:
+  - "Two similarly titled GangaSeek invariant PDFs may be duplicates or divergent versions; hash comparison required."
+  - "GangaSeek namespace packet title includes ratification language; current graph status remains not_canon_until_reviewed."
+  - "Drive visibility does not establish GitHub mirror or source completeness."
+
+missing_receipts:
+  - sha256 for all five direct GangaSeek candidate artifacts
+  - PDF text extraction for both invariant PDFs
+  - claim packets for namespace, INV/CLM catalog, template, and invariant specs
+  - GitHub mirror paths or explicit not_mirrored status
+
+review_required:
+  - Hashlight
+  - Lucerna
+  - GPTBrain
+  - Sable_Vesper
+
+strongest_safe_claim: "Visible Drive search results identify multiple GangaSeek candidate artifacts that lack hash receipts and require review before any canon, deployment, or public claim use."
+forbidden_claims:
+  - "GangaSeek artifacts are ratified."
+  - "GangaSeek artifacts are complete."
+  - "GangaSeek artifacts are deployed."
+  - "The two invariant PDFs are identical."
+  - "Drive visibility proves public-release readiness."
+
+next_safe_action: "Hash the three GangaSeek text files first, then compare the two invariant PDFs for duplication or divergence."
