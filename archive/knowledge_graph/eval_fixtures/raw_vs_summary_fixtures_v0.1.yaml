@@ -1,0 +1,50 @@
+fixture_set: raw_vs_summary_fixtures_v0.1
+status: staging_eval_fixture
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: Test whether extractor distinguishes raw exports from summaries, connector captures, shell docs, and parsed packets.
+
+cases:
+  - case_id: RVS-001
+    input_label: connector_captured_markdown
+    input_text: Markdown content returned by connector; durable exported file and SHA-256 still required.
+    expected:
+      raw_export_status: connector_captured_markdown_only
+      frozen_raw_export: false
+      missing_receipts: [durable_export_file, sha256]
+      allowed_claim_strength: review_only
+  - case_id: RVS-002
+    input_label: receipt_shell_not_full_fidelity
+    input_text: Drive shell anchor for uploaded PDF; not a full-fidelity copy.
+    expected:
+      raw_export_status: receipt_shell_not_full_fidelity
+      frozen_raw_export: false
+      missing_receipts: [raw_pdf, full_text, sha256]
+      allowed_claim_strength: anchor_only
+  - case_id: RVS-003
+    input_label: full_raw_export_attached
+    input_text: Full raw export attached; hash pending.
+    expected:
+      raw_export_status: full_raw_export_attached
+      frozen_raw_export: false
+      missing_receipts: [sha256]
+      allowed_claim_strength: source_visible_unhashed
+  - case_id: RVS-004
+    input_label: model_summary
+    input_text: Summary generated from prior model output.
+    expected:
+      raw_export_status: summary_only
+      frozen_raw_export: false
+      missing_receipts: [raw_export, source_timestamp, sha256]
+      allowed_claim_strength: summary_reference_only
+  - case_id: RVS-005
+    input_label: repo_file_visible
+    input_text: File visible in GitHub path.
+    expected:
+      raw_export_status: repo_file_visible
+      frozen_raw_export: true
+      missing_receipts: []
+      allowed_claim_strength: repo_visible_artifact
+
+keeper: A summary can point to a fossil. It is not the fossil.
