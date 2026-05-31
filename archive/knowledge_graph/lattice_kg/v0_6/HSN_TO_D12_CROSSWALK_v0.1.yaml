@@ -1,0 +1,229 @@
+artifact_id: HSN_TO_D12_CROSSWALK_v0.1
+status: candidate_crosswalk
+canon_status: not_canon
+deployment_status: not_deployable
+authority_scope: none
+created_utc: "2026-05-29T00:00:00Z"
+
+purpose: >
+  Bridge the public House-Sphere-Node entry coordinate grammar from
+  docs/LATTICE_HYPERCUBE_12x12x12.md to the PR #24 / v0.6 D01-D12
+  implementation and traversal dimension registry. This file uses the graph
+  layer as a routing substrate and prevents public coordinate language from
+  drifting away from implementation receipts.
+
+source_surfaces:
+  public_explainer:
+    path: docs/LATTICE_HYPERCUBE_12x12x12.md
+    role: public_safe_entry_explainer
+    coordinate_surface: H##.S##.N##
+    status: public_candidate_explainer
+  implementation_topology:
+    path: archive/knowledge_graph/lattice_kg/v0_6/HYPERCUBE_12D_TOPOLOGY_v1.0.yaml
+    pr: "#24"
+    role: implementation_traversal_registry
+    coordinate_surface: D01-D12
+    status: draft_pr_surface
+  website:
+    role: canon_surface
+    note: Website canon URLs must be added before this crosswalk is public-ready.
+
+root_rule: >
+  H-S-N is the public entry coordinate surface. D01-D12 is the current
+  GitHub implementation and traversal dimension registry. The two are
+  complementary views of the living archive, not competing ontologies.
+
+boundary:
+  - coordinate_is_not_truth
+  - coordinate_is_not_canon
+  - coordinate_is_not_authority
+  - coordinate_is_not_deployment
+  - coordinate_is_not_permission
+  - github_receipt_does_not_override_website_canon
+  - graph_connection_is_not_promotion
+
+public_entry_coordinate:
+  format: "H##.S##.N##"
+  H_axis: House
+  S_axis: Sphere
+  N_axis: Node
+  role: public_entry_address
+  total_cells: 1728
+
+implementation_dimensions:
+  D01:
+    label: Governance & Canon
+    short: governance
+    anchor_artifact_id: kg.root.governance.v1
+    public_hsn_affinity:
+      primary_houses: [H01]
+      secondary_houses: [H02, H10]
+      suggested_public_role: canon_status_and_governance_routing
+  D02:
+    label: Legal, Privacy & Trust
+    short: legal
+    anchor_artifact_id: kg.root.legal.v1
+    public_hsn_affinity:
+      primary_houses: [H10]
+      secondary_houses: [H01, H06]
+      suggested_public_role: privacy_trust_release_and_sensitive_material_gate
+  D03:
+    label: Repository Architecture
+    short: repo_arch
+    anchor_artifact_id: kg.root.repo_arch.v1
+    public_hsn_affinity:
+      primary_houses: [H09]
+      secondary_houses: [H12]
+      suggested_public_role: repository_receipt_and_structure_mapping
+  D04:
+    label: Documentation Excellence
+    short: docs
+    anchor_artifact_id: kg.root.docs.v1
+    public_hsn_affinity:
+      primary_houses: [H10]
+      secondary_houses: [H11, H12]
+      suggested_public_role: explainer_docs_public_readability_and_artifact_descriptions
+  D05:
+    label: Knowledge Graph Layer
+    short: kg_layer
+    anchor_artifact_id: kg.root.kg_layer.v1
+    public_hsn_affinity:
+      primary_houses: [H09]
+      secondary_houses: [H07, H10]
+      suggested_public_role: graph_nodes_edges_queries_and_traversal
+  D06:
+    label: CI/CD & Automation
+    short: cicd
+    anchor_artifact_id: kg.root.cicd.v1
+    public_hsn_affinity:
+      primary_houses: [H09]
+      secondary_houses: [H07]
+      suggested_public_role: validation_workflows_and_machine_checks
+  D07:
+    label: Security & Supply Chain
+    short: security
+    anchor_artifact_id: kg.root.security.v1
+    public_hsn_affinity:
+      primary_houses: [H06]
+      secondary_houses: [H09, H10]
+      suggested_public_role: security_supply_chain_sensitive_risk_routing
+  D08:
+    label: Testing & Reliability
+    short: testing
+    anchor_artifact_id: kg.root.testing.v1
+    public_hsn_affinity:
+      primary_houses: [H07]
+      secondary_houses: [H01, H09]
+      suggested_public_role: test_receipts_reliability_and_verification
+  D09:
+    label: Accessibility & Global Reach
+    short: accessibility
+    anchor_artifact_id: kg.root.accessibility.v1
+    public_hsn_affinity:
+      primary_houses: [H11]
+      secondary_houses: [H08, H10]
+      suggested_public_role: public_accessibility_global_reach_and_education
+  D10:
+    label: Developer Experience
+    short: devex
+    anchor_artifact_id: kg.root.devex.v1
+    public_hsn_affinity:
+      primary_houses: [H09]
+      secondary_houses: [H11]
+      suggested_public_role: contributor_paths_local_dev_and_handoff_usability
+  D11:
+    label: Community & Ecosystem
+    short: community
+    anchor_artifact_id: kg.root.community.v1
+    public_hsn_affinity:
+      primary_houses: [H08]
+      secondary_houses: [H02, H11]
+      suggested_public_role: community_public_ecosystem_and_sovereign_adaptation_lanes
+  D12:
+    label: Launch & World-Class Operations
+    short: operations
+    anchor_artifact_id: kg.root.operations.v1
+    public_hsn_affinity:
+      primary_houses: [H12]
+      secondary_houses: [H05, H10]
+      suggested_public_role: release_operations_readiness_and_world_class_execution
+
+public_house_seed_mapping:
+  H01:
+    source_name: Constitutional Framework
+    likely_d_dimensions: [D01, D08, D02]
+    note: Governance and canon gates with verification and legal/trust overlays.
+  H02:
+    source_name: Pantheon Council
+    likely_d_dimensions: [D01, D11, D04]
+    note: Seat roles, review lanes, community/council surfaces.
+  H03:
+    source_name: Diplomatic Strategy
+    likely_d_dimensions: [D02, D04, D11]
+    note: Public-safe language, external-affairs risk, ecosystem routing.
+  H04:
+    source_name: Sheldonium IP
+    likely_d_dimensions: [D02, D05, D08]
+    note: IP claims require legal/trust routing, KG evidence, and testing/review.
+  H05:
+    source_name: Google Life System 2027
+    likely_d_dimensions: [D12, D02, D04]
+    note: Vendor/company gravity requires release posture and public-safe wording.
+  H06:
+    source_name: Soldier Care & Pentagon Supply Chain
+    likely_d_dimensions: [D07, D02, D04]
+    note: Sensitive care/supply-chain material requires security, privacy, and public wording gates.
+  H07:
+    source_name: Simulation & Verification
+    likely_d_dimensions: [D08, D05, D06]
+    note: Test, graph, and automation lanes dominate.
+  H08:
+    source_name: Cultural Sovereignty
+    likely_d_dimensions: [D11, D02, D04]
+    note: Community/ecosystem plus legal/trust and docs translation.
+  H09:
+    source_name: Infrastructure
+    likely_d_dimensions: [D03, D05, D06, D10]
+    note: Repo architecture, KG, automation, and developer experience lanes.
+  H10:
+    source_name: Archive Governance
+    likely_d_dimensions: [D01, D02, D04, D05]
+    note: Canon/status/release governance with docs and KG structures.
+  H11:
+    source_name: Gamma Public Releases
+    likely_d_dimensions: [D09, D04, D12]
+    note: Public-facing education, accessibility, docs, and release ops.
+  H12:
+    source_name: Janus Checkpoints
+    likely_d_dimensions: [D03, D12, D08]
+    note: Continuity, repo state, operations, and reliability.
+
+edge_templates:
+  - edge_type: maps_public_entry_to_implementation_dimension
+    from: H##.S##.N##
+    to: D##
+    required_fields: [source_ref, confidence, review_status]
+  - edge_type: implemented_by_graph_node
+    from: H##.S##.N##
+    to: artifact_id
+    required_fields: [github_path, raw_export_status, canon_status]
+  - edge_type: website_canon_supported_by_receipt
+    from: website_canon_id
+    to: github_artifact_id
+    required_fields: [canon_url, receipt_url, claim_scope]
+  - edge_type: projection_of
+    from: local_projection_id
+    to: H##.S##.N##
+    required_fields: [projection_type, boundary_note]
+
+required_next_steps:
+  - Add canonical website URLs for H01-H12 and any full 12D flywheel pages.
+  - Add `website_canon_id` fields once URLs are available.
+  - Generate sample node and edge records using this crosswalk.
+  - Update public explainer to reference this crosswalk after review.
+  - Keep PR #24 blocked until action_required workflow states are resolved or explicitly waived.
+
+keeper: >
+  The public H-S-N coordinate gives visitors an address. The D01-D12 graph
+  dimensions give builders a traversal layer. The website crowns canon; GitHub
+  keeps receipts. The octopus uses both without becoming legos.
