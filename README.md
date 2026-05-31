@@ -15,6 +15,12 @@ This repository contains research, health data, and system artifacts generated a
 - **[BAZINGA](./bazinga/)** — Constitutional middleware and launch protocols.
   - [v0.1 Launch Decree](./bazinga/v0.1-launch-decree.md)
 
+### Lattice / Knowledge Graph
+- **[Docs Index](./docs/)** — Public-safe candidate explainers and review surfaces.
+  - [Lattice Hypercube 12×12×12 Public Explainer](./docs/LATTICE_HYPERCUBE_12x12x12.md) — entry-level H-S-N coordinate surface for the broader 12D full-flywheel ontology.
+  - [12D Flywheel Dimension Registry](./docs/LATTICE_12D_FLYWHEEL_DIMENSION_REGISTRY.md) — candidate registry for the fuller operating model.
+- **[Public Candidate Bundle](./public_candidate_bundle_0001/)** — Public candidate bundle surfaces, schemas, and review materials.
+
 ### Projects
 - **[Free Bank](./projects/free-bank/)** — Banking revolution and financial sovereignty.
 - **[Chinook Guardian](./projects/chinook-guardian/)** — Aerospace and defense protocols.
