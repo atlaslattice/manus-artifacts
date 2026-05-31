@@ -3,7 +3,7 @@
 schema_id: S1_DREAM_PROMOTION_GATE_SCHEMA
 status: SCHEMA_DRAFT_NOT_CANON
 issue: manus-artifacts#118
-version: 0.1.0
+version: 0.1.1
 seat: S1
 seat_name: GPTBrain
 purpose: >
@@ -52,6 +52,11 @@ fields:
       - implementation_candidate
       - canon_candidate
       - ratified_canon
+      - unknown
+      - blocked
+    description: >
+      UNKNOWN and BLOCKED are diagnostic states only. They are not routing endorsements
+      and may not be used to promote an artifact.
 
   requested_state:
     type: enum
@@ -64,6 +69,7 @@ fields:
       - rejected
       - quarantined
       - superseded
+      - blocked
 
   artifact_status:
     type: enum
@@ -79,6 +85,8 @@ fields:
       - REJECTED
       - QUARANTINED
       - SUPERSEDED
+      - UNKNOWN
+      - BLOCKED
 
   authority_scope:
     type: enum
@@ -120,12 +128,12 @@ fields:
   source_refs:
     type: array
     items: string
-    description: Source artifacts or repo paths that support the promotion request.
+    description: Source artifacts or repo paths that support the candidate claim or interpretation.
 
   receipt_refs:
     type: array
     items: string
-    description: Review receipts, smoke-test receipts, issue/PR refs, hash refs, or audit event ids.
+    description: Review receipts, smoke-test receipts, issue/PR refs, hash refs, or audit event ids that support process lineage.
 
   receipts:
     type: object
@@ -210,6 +218,24 @@ transition_rules:
       - ratification_receipt
     max_authority_scope: RATIFIED_CANON
 
+  unknown:
+    diagnostic_only: true
+    max_authority_scope: NONE
+    cannot_request:
+      - implementation_candidate
+      - canon_candidate
+      - ratified_canon
+
+  blocked:
+    diagnostic_only: true
+    max_authority_scope: NONE
+    requires:
+      - blockers
+    cannot_request:
+      - implementation_candidate
+      - canon_candidate
+      - ratified_canon
+
 invariants:
   - Dreams propose; governance disposes.
   - Dream output is not fact.
@@ -217,6 +243,10 @@ invariants:
   - Extraction candidate is not implementation approval.
   - Local receipt is not deployment.
   - Replayability does not imply canon authority.
+  - Source references support candidate claims or interpretations.
+  - Receipt references support process lineage, review history, or local test evidence.
+  - Source references and receipt references are not interchangeable, and neither proves truth by itself.
   - No artifact may move toward implementation or canon review without artifact_status and authority_scope.
   - No dream/play artifact may exceed REVIEW_SIGNAL authority_scope by default.
+  - UNKNOWN and BLOCKED are diagnostic states, not promotion states.
   - Human-root review is required for canon-impacting promotion.
