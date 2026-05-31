@@ -1,0 +1,52 @@
+fixture_set: claim_packet_validation_fixture_v0.1
+status: staging_eval_fixture
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: Test whether claim packets preserve exact text, avoid adding claims, and route review correctly.
+
+required_fields:
+  - claim_id
+  - source_ref
+  - exact_text
+  - normalized_claim
+  - claim_type
+  - status
+  - evidence_anchors
+  - review_lanes
+  - canon_status
+  - deployment_status
+  - authority_scope
+
+cases:
+  - case_id: CPV-001
+    input:
+      claim_id: CP-DEMO-001
+      source_ref: demo.md
+      exact_text: A graph edge is not a promotion.
+      normalized_claim: Graph relationships do not grant status promotion.
+      claim_type: canon_like
+      status: candidate
+      evidence_anchors: [demo.md]
+      review_lanes: [Rootglass]
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+    expected_result: pass
+  - case_id: CPV-002
+    input:
+      claim_id: CP-DEMO-002
+      source_ref: demo.md
+      exact_text: The tool works.
+      normalized_claim: The tool is deployed and production ready.
+      claim_type: deployment
+      status: candidate
+      evidence_anchors: []
+      review_lanes: []
+      canon_status: canon
+      deployment_status: deployed
+      authority_scope: ratified
+    expected_result: fail_overclaim
+    expected_flags: [normalized_claim_added_new_claim, false_deployment, false_canon, missing_evidence, missing_review_lane]
+
+keeper: Normalize the claim. Do not inflate the claim.
