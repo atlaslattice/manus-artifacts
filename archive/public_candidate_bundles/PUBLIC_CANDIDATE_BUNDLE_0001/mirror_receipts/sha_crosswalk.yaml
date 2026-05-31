@@ -1,0 +1,168 @@
+# SHA Crosswalk — PUBLIC_CANDIDATE_BUNDLE_0001
+# status: candidate_sha_crosswalk
+# canon_status: not_canon
+# deployment_status: not_deployed
+# authority_scope: none
+# purpose: bridge GitHub paths, blob SHAs, commit SHAs, Drive docs, and Notion export gaps.
+
+sha_crosswalk:
+  bundle_id: PUBLIC_CANDIDATE_BUNDLE_0001
+  generated_utc: "2026-05-30"
+  status: candidate_sha_crosswalk
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  verification_rule: "Blob SHA confirms file content at fetch time; commit SHA confirms a repository write event. Release movement requires the relevant SHA evidence plus privacy/rights/release classification."
+
+  rows:
+    - id: GH-M11-EXEMPLAR
+      title: MODULE_11_PUBLIC_GITHUB_FORKABILITY_EXCELLENCE.md
+      repo: atlaslattice/manus-artifacts
+      branch: master
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/module_packets/MODULE_11_PUBLIC_GITHUB_FORKABILITY_EXCELLENCE.md
+      blob_sha: f052d858843e94d965b6e418a6f64ea1363bb88d
+      commit_sha: pending
+      verification_status: blob_verified_commit_pending
+      release_class: candidate_packet_not_release_ready
+      strongest_safe_claim: Module 11 exemplar exists and describes public GitHub forkability boundaries.
+      overclaims_to_avoid:
+        - issue_opened_means_reviewed
+        - bundle_exists_means_release_ready
+        - public_repo_means_proven
+      next_action: identify commit introducing or last modifying file
+
+    - id: GH-MIRROR-AUDIT-2026-05-30
+      title: MIRROR_AUDIT_SHELDONBRAIN_RAG_GPTBRAIN_RAINBOW_YIN_YANG_GITHUB_DRIVE_NOTION_2026-05-30.md
+      repo: atlaslattice/manus-artifacts
+      branch: master
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/mirror_receipts/MIRROR_AUDIT_SHELDONBRAIN_RAG_GPTBRAIN_RAINBOW_YIN_YANG_GITHUB_DRIVE_NOTION_2026-05-30.md
+      blob_sha: 996138243fe520920a2cd3be5054d5689543bf2f
+      commit_sha: 2880a8d4e5b61315b018b012aaf4064ac6663c34
+      verification_status: commit_and_blob_verified
+      release_class: mirror_receipt_candidate
+      strongest_safe_claim: Mirror audit records verified GitHub/Drive anchors and Notion search-confirmed gaps.
+      overclaims_to_avoid:
+        - notion_full_content_verified
+        - rag_substrate_active_authority
+      next_action: update after Notion export/hash is available
+
+    - id: GH-VARIX-OPEN-TASK-SWARM-2026-05-30
+      title: VARIX_OPEN_TASK_SWARM_PACKET_12x12__BEST_GIT_ON_EARTH__2026-05-30.md
+      repo: atlaslattice/manus-artifacts
+      branch: master
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/module_packets/VARIX_OPEN_TASK_SWARM_PACKET_12x12__BEST_GIT_ON_EARTH__2026-05-30.md
+      blob_sha: pending_fetch
+      commit_sha: 16f418826280f4c7ea93efa579ef7a130209b5b0
+      verification_status: commit_verified_blob_pending
+      release_class: candidate_tasking_packet
+      strongest_safe_claim: Packet identifies focused open-task modules for receipt-first Git improvement.
+      overclaims_to_avoid:
+        - tasking_packet_means_execution_complete
+      next_action: fetch file to record blob SHA
+
+    - id: GH-MIRROR-INDEX
+      title: mirror_index.yaml
+      repo: atlaslattice/manus-artifacts
+      branch: master
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/mirror_receipts/mirror_index.yaml
+      blob_sha: pending_fetch
+      commit_sha: 00065be1595f5890c0b015bc807c5e1a28b3848a
+      verification_status: commit_verified_blob_pending
+      release_class: candidate_mirror_index
+      strongest_safe_claim: Machine-readable mirror index exists for verified and pending surfaces.
+      overclaims_to_avoid:
+        - mirror_index_is_complete_truth
+      next_action: fetch file after commit settles and record blob SHA
+
+    - id: GH-BUNDLE-MANIFEST
+      title: BUNDLE_0001_FILE_MANIFEST.yaml
+      repo: atlaslattice/manus-artifacts
+      branch: master
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/BUNDLE_0001_FILE_MANIFEST.yaml
+      blob_sha: 335942bcedcfee43781ecfee424ca651dfa2eda6
+      commit_sha: pending
+      verification_status: blob_verified_commit_pending
+      release_class: candidate_manifest_needs_reconciliation
+      strongest_safe_claim: Bundle manifest exists and states non-canon/public-safe inspection purpose.
+      overclaims_to_avoid:
+        - planned_file_status_is_current_status
+      next_action: reconcile planned-vs-present files
+
+    - id: GH-START-HERE
+      title: START_HERE.md
+      repo: atlaslattice/manus-artifacts
+      branch: master
+      path: public_candidate_bundle_0001/START_HERE.md
+      blob_sha: 6c86d0d8da5c37ebbe8591d3c861bceb1fa2c867
+      commit_sha: pending
+      verification_status: blob_verified_commit_pending
+      release_class: public_front_door_candidate
+      strongest_safe_claim: Start-here page provides public front door and boundary language.
+      overclaims_to_avoid:
+        - front_door_means_release_ready
+      next_action: reconcile public_candidate_bundle_0001 path with archive/public_candidate_bundles path
+
+    - id: GH-FORKABILITY-POLISH
+      title: FORKABILITY_README_POLISH_PASS.md
+      repo: atlaslattice/manus-artifacts
+      branch: master
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/docs/FORKABILITY_README_POLISH_PASS.md
+      blob_sha: 82a803f5ccd44c14a8e3709a9dbcfe2ff3a11ac2
+      commit_sha: pending
+      verification_status: blob_verified_commit_pending
+      release_class: forkability_guidance_candidate
+      strongest_safe_claim: Forkability polish pass defines public GitHub readability and safe-language guidance.
+      overclaims_to_avoid:
+        - checklist_exists_means_checklist_passed
+      next_action: use as input to scorecard result
+
+    - id: GH-RYY-V2-1-MANIFEST
+      title: RAINBOW_YIN_YANG_HYPERCUBE_V2_1_MANIFEST_2026-05-21.md
+      repo: atlaslattice/manus-artifacts
+      ref: 7ede7a121fc5dfbb1a6d3d530ac998c3fa6873f1
+      path: archive/architecture/RAINBOW_YIN_YANG_HYPERCUBE_V2_1_MANIFEST_2026-05-21.md
+      blob_sha: 4de5b73439df5b929594d4c56bbf0cbce6a5cd6c
+      commit_sha: pending_current_branch_mapping
+      verification_status: blob_verified_at_ref
+      release_class: architecture_reference_candidate
+      strongest_safe_claim: v2.1 manifest separates wire spec from interpretive overlay and marks no canon/deployment/authority.
+      overclaims_to_avoid:
+        - overlay_is_execution
+      next_action: map archived ref to current master if needed
+
+    - id: GH-RYY-V2-2-MATH
+      title: RAINBOW_YINYANG_LATTICE_MATH_REFINEMENT_v2.2_CANDIDATE_2026-05-20.md
+      repo: atlaslattice/manus-artifacts
+      ref: 7ede7a121fc5dfbb1a6d3d530ac998c3fa6873f1
+      path: archive/math/RAINBOW_YINYANG_LATTICE_MATH_REFINEMENT_v2.2_CANDIDATE_2026-05-20.md
+      blob_sha: b2d8897ea84c8d6b21c706d3859d61402d594e7c
+      commit_sha: pending_current_branch_mapping
+      verification_status: blob_verified_at_ref
+      release_class: math_boundary_reference_candidate
+      strongest_safe_claim: v2.2 separates finite 12x12x12 wire lattice from analytic spectral overlay and blocks RH proof claims.
+      overclaims_to_avoid:
+        - proves_Riemann
+        - Hilbert_Polya_operator_constructed
+      next_action: create public-safe Riemann/S boundary note from this source
+
+    - id: DRIVE-VARIX-SPINE
+      title: VARIX_LUMENFOSS_SPINE_PACKET__MATH_BOUNDARY_M11_FORKABILITY_GRAPH_SCHEMA__NON_CANON__2026-05-29
+      surface: GoogleDrive
+      url: https://docs.google.com/document/d/1xav1Bg4xKd-g1AsEAB9eOeu-NR2I4vqqvVi96_AB3Mo
+      drive_doc_id: 1xav1Bg4xKd-g1AsEAB9eOeu-NR2I4vqqvVi96_AB3Mo
+      export_sha256: pending_export
+      verification_status: drive_doc_created_and_control_surface_registered
+      release_class: drive_candidate_pending_export_hash
+      next_action: export as markdown and hash if mirroring to GitHub
+
+    - id: NOTION-SHELDONBRAIN-RAG
+      title: Sheldonbrain RAG API Notion search result set
+      surface: Notion
+      notion_page_ids:
+        - 2db0c1de73d98131bef7d2e064a9c982
+        - 2db0c1de73d9813796e2e2a37ae1cabe
+        - 3240c1de73d981f790c7c2306fad4fd7
+      export_sha256: pending_export
+      verification_status: search_confirmed_fetch_blocked
+      release_class: hold_for_manual_export
+      next_action: export or paste page content; hash; privacy-review before GitHub summary
