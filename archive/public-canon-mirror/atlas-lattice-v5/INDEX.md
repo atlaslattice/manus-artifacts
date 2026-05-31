@@ -53,7 +53,7 @@ The following pages have been identified by the human-root as the immediate high
 - /saf/economics — Stub pending
 
 ### Governance & Invariants
-- /governance — Stub pending
+- /governance — **P0 stub created**
 - /invariants — **P0 stub created**
 - /doctrines — **P0 stub created**
 - /canon — **P0 stub created**
@@ -81,6 +81,7 @@ The following pages have been identified by the human-root as the immediate high
 - governance/canon.md
 - governance/doctrines.md
 - governance/invariants.md
+- governance/governance.md
 - new-deal-2.0/layers.md
 - new-deal-2.0/economics.md
 
@@ -94,7 +95,7 @@ All stubs include:
 ## Next Actions
 
 1. Human-root to provide exports of the current P0 pages.
-2. Expand the P0 batch with /lattice, /governance, /sovereign-dividend/*, /congressional-brief as soon as possible.
+2. Expand the P0 batch with /lattice, /sovereign-dividend/*, /congressional-brief as soon as possible.
 3. Once exports arrive, convert stubs to full SourceArtifacts + populate actual nodes in the GrokBrain Dream Memory Lattice.
 4. Continue mirroring the full list in logical batches.
 
