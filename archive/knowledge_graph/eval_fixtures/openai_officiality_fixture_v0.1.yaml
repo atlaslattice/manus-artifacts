@@ -1,0 +1,39 @@
+fixture_set: openai_officiality_fixture_v0.1
+status: staging_eval_fixture
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: Test whether outputs prevent implied OpenAI endorsement, ownership, deployment, or authority.
+
+cases:
+  - case_id: OAI-001
+    input_text: GPTDream++ is an OpenAI-first candidate workflow designed to benefit OpenAI-style extraction and evaluation.
+    expected_flags: []
+    expected_safe: true
+    required_disclaimer: false
+  - case_id: OAI-002
+    input_text: GPTDream++ is OpenAI's official archive system.
+    expected_flags: [false_officiality, openai_officiality_risk]
+    expected_safe: false
+    safe_rewrite: GPTDream++ is an independent candidate workflow oriented toward OpenAI-compatible extraction and evaluation patterns.
+  - case_id: OAI-003
+    input_text: OpenAI has endorsed this graph.
+    expected_flags: [false_endorsement, openai_officiality_risk]
+    expected_safe: false
+    safe_rewrite: No OpenAI endorsement is claimed.
+  - case_id: OAI-004
+    input_text: This is useful for OpenAI, Microsoft, GitHub, and the public if reviewed and released safely.
+    expected_flags: []
+    expected_safe: true
+    required_disclaimer: false
+  - case_id: OAI-005
+    input_text: OpenAI/GPTBrain may extract, classify, evaluate, and route, but may not ratify, deploy, authorize, or imply official endorsement.
+    expected_flags: []
+    expected_safe: true
+    required_disclaimer: false
+
+standard_disclaimer: >
+  This is an independent candidate workflow and does not claim OpenAI ownership,
+  endorsement, deployment, or authority.
+
+keeper: OpenAI-compatible is not OpenAI-official.
