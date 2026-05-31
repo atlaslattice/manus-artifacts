@@ -1,130 +1,156 @@
 status: INVENTORY_SEED_CANDIDATE_NOT_CANON
+canon_status: not_canon
 deployment_status: NOT_DEPLOYABLE
+authority_scope: none
 date: '2026-05-24'
-purpose: Initial source inventory seed for the source-grounded knowledge graph.
+purpose: >
+  Source-grounded knowledge graph inventory across GitHub, Google Drive, and Notion.
+  This is a seed inventory, not a complete crawl, and it does not promote any artifact to canon.
 
 inventory_notes:
-  - This is a seed inventory, not a complete crawl.
-  - Entries may be user-reported, repo-visible, or known-from-current-session.
-  - raw_export_status must be upgraded only after raw export and hash receipts exist.
-  - source presence does not imply canon.
+  - Source presence does not imply canon.
+  - Drive visibility does not imply GitHub mirror.
+  - raw_export_status must only be upgraded when raw export and hash receipts exist.
+  - sha256_status remains missing until a hash receipt is generated from an exported artifact.
 
 records:
-  - source_id: kg-src-gangaseek-namespace-ratification-packet
-    title: GangaSeek Namespace Ratification Packet
-    surface: Drive
-    url_or_path: unknown_drive_item
-    file_type: unknown
-    raw_export_status: unavailable
-    sha256_status: unavailable
+  - source_id: DRIVE-GS-NAMESPACE-RATIFICATION-v0.1
+    title: GANGASEEK_NAMESPACE_RATIFICATION_PACKET_v0.1.txt
+    surface: google_drive
+    url_or_path: https://drive.google.com/file/d/17-9TTGzITZWecSL5MCusDF-0LvSjBxsD
+    file_type: text/plain
+    raw_export_status: available_drive_text
+    sha256_status: missing
     source_class: candidate_governance_packet
-    related_lane: GangaSeek
+    related_lane: GangaSeek / governance
     review_priority: high
-    mirrored_to_github: unknown
-    missing_receipts:
-      - drive_file_id
-      - raw_export
-      - sha256
+    mirrored_to_github: false
+    missing_receipts: [sha256, git_mirror, human_root_signature]
+    notes: Defines archive/gangaseek/ namespace rules, prerequisites, and ratification block.
 
-  - source_id: kg-src-gangaseek-inv-clm-catalog
-    title: GangaSeek INV/CLM Catalog
-    surface: Drive
-    url_or_path: unknown_drive_item
-    file_type: unknown
-    raw_export_status: unavailable
-    sha256_status: unavailable
-    source_class: invariant_catalog
-    related_lane: GangaSeek
+  - source_id: DRIVE-GS-INV-CLM-CATALOG-v0.1
+    title: GANGASEEK_INV_CLM_CATALOG_CANDIDATE_v0.1.txt
+    surface: google_drive
+    url_or_path: https://drive.google.com/file/d/1QW1Yd3YHzpb8bxRCU-w_yjtJlFpNujmp
+    file_type: text/plain
+    raw_export_status: available_drive_text
+    sha256_status: missing
+    source_class: invariant_claim_catalog
+    related_lane: GangaSeek / governance
+    review_priority: critical
+    mirrored_to_github: false
+    missing_receipts: [sha256, git_mirror, definitions_for_INV_17_INV_56_CLM_007_CLM_009]
+    notes: Marks INV-0 and INV-1 as defined-candidate; flags INV-17, INV-56, CLM-007, CLM-009 as open-needs-definition.
+
+  - source_id: DRIVE-GS-DOCUMENT-TEMPLATE-v0.1
+    title: GANGASEEK_DOCUMENT_TEMPLATE_CANDIDATE_v0.1.txt
+    surface: google_drive
+    url_or_path: https://drive.google.com/file/d/1OqG73AWtdFhyH4CdDqCBsiCsze6UECxA
+    file_type: text/plain
+    raw_export_status: available_drive_text
+    sha256_status: missing
+    source_class: document_template
+    related_lane: GangaSeek / governance
     review_priority: high
-    mirrored_to_github: unknown
-    missing_receipts:
-      - drive_file_id
-      - raw_export
-      - sha256
+    mirrored_to_github: false
+    missing_receipts: [sha256, git_mirror, namespace_ratification]
+    notes: Provides candidate frontmatter, company modeling disclaimer, India scope note, banned footer patterns, and required footer.
 
-  - source_id: kg-src-gangaseek-document-template
-    title: GangaSeek Document Template
-    surface: Drive
-    url_or_path: unknown_drive_item
-    file_type: unknown
-    raw_export_status: unavailable
-    sha256_status: unavailable
-    source_class: template
-    related_lane: GangaSeek
-    review_priority: medium
-    mirrored_to_github: unknown
-    missing_receipts:
-      - drive_file_id
-      - raw_export
-      - sha256
+  - source_id: DRIVE-COPILOT-CHAT-TIDELOCK-ATLASBRAIN
+    title: Copilot Chat.md
+    surface: google_drive
+    url_or_path: https://drive.google.com/file/d/1GVdF61WJjn8hbFWUo8ihr3xJlhalvv_E
+    file_type: text/markdown
+    raw_export_status: available_drive_markdown
+    sha256_status: missing
+    source_class: raw_or_near_raw_chat_export
+    related_lane: CopilotBrain / TIDELOCK / AtlasBrain / Rootglass
+    review_priority: critical
+    mirrored_to_github: false
+    missing_receipts: [sha256, rootglass_source_packet, privacy_review, parsed_claim_ledger]
+    notes: Contains Copilot/TIDELOCK interaction and AtlasBrain PR #57 audit discussion.
 
-  - source_id: kg-src-copilot-chat-raw-transcript-not-canon
-    title: Copilot Chat.md RAW TRANSCRIPT NOT CANON.md
-    surface: Drive
-    url_or_path: unknown_drive_item
-    file_type: markdown
-    raw_export_status: unavailable
-    sha256_status: unavailable
+  - source_id: DRIVE-RAW-TRANSCRIPT-NOT-CANON
+    title: RAW TRANSCRIPT NOT CANON.md
+    surface: google_drive
+    url_or_path: https://drive.google.com/file/d/1eatwAvLL-EY27wRZa2zfbRv46UdJgv0J
+    file_type: text/markdown
+    raw_export_status: available_drive_markdown
+    sha256_status: missing
     source_class: raw_or_near_raw_transcript
-    related_lane: CopilotBrain
-    review_priority: high
-    mirrored_to_github: unknown
-    missing_receipts:
-      - drive_file_id
-      - raw_export
-      - sha256
+    related_lane: AtlasBrain / Rootglass / transcript preservation
+    review_priority: critical
+    mirrored_to_github: false
+    missing_receipts: [sha256, privacy_review, source_manifest, content_review_packet]
 
-  - source_id: kg-src-gemini-council-input-files
-    title: Gemini council input files
-    surface: Drive
-    url_or_path: unknown_drive_collection
-    file_type: mixed
-    raw_export_status: unavailable
-    sha256_status: unavailable
+  - source_id: DRIVE-GEMINI-ALPHABET-STRATEGIC-SYNTHESIS
+    title: COUNCIL-INPUT_GEMINI_alphabet-strategic-synthesis_with-scribe-triage_2026-04-26.md
+    surface: google_drive
+    url_or_path: https://drive.google.com/file/d/1YuQjdYxByE3Nl1HZB2tmJMmRHPtFJNVq
+    file_type: text/markdown
+    raw_export_status: available_drive_markdown
+    sha256_status: missing
     source_class: council_input
-    related_lane: GeminiBrain
+    related_lane: GeminiBrain / council input / adversarial review
     review_priority: high
-    mirrored_to_github: unknown
-    missing_receipts:
-      - file_manifest
-      - raw_exports
-      - sha256
+    mirrored_to_github: false
+    missing_receipts: [sha256, rootglass_source_packet, review_queue_entry]
 
-  - source_id: kg-src-orcs-copilot-synthesis-v1-2
-    title: ORCS Copilot Synthesis v1.2
-    surface: Drive
-    url_or_path: unknown_drive_item
-    file_type: unknown
-    raw_export_status: unavailable
-    sha256_status: unavailable
-    source_class: synthesis_candidate
-    related_lane: ORCS
+  - source_id: DRIVE-GEMINI-ROUND2-REFLEXIVE
+    title: COUNCIL-INPUT_GEMINI_round2-pattern-a-reflexive-with-scribe-triage_2026-04-26.md
+    surface: google_drive
+    url_or_path: https://drive.google.com/file/d/16XjzNx3UnA8OmIoyvwlgU5xxg_YGEgpK
+    file_type: text/markdown
+    raw_export_status: available_drive_markdown
+    sha256_status: missing
+    source_class: council_input
+    related_lane: GeminiBrain / council input / adversarial review
+    review_priority: medium
+    mirrored_to_github: false
+    missing_receipts: [sha256, rootglass_source_packet]
+
+  - source_id: DRIVE-GEMINI-ROUND3-CONVERGENCE
+    title: COUNCIL-INPUT_GEMINI_round3-convergence-document-with-scribe-triage_2026-04-26.md
+    surface: google_drive
+    url_or_path: https://drive.google.com/file/d/1yMAiQvDsTb3qOqPMrVWoSy118Db116X_
+    file_type: text/markdown
+    raw_export_status: available_drive_markdown
+    sha256_status: missing
+    source_class: council_input
+    related_lane: GeminiBrain / council input / adversarial review
+    review_priority: medium
+    mirrored_to_github: false
+    missing_receipts: [sha256, rootglass_source_packet]
+
+  - source_id: DRIVE-ORCS-COPILOT-SYNTHESIS-v1.2
+    title: ORCS Copilot Synthesis v1.2 — Complete Integration and Microsoft Ecosystem Architecture
+    surface: google_drive
+    url_or_path: https://drive.google.com/file/d/18MBrMAAPfqL1-nckv8_UjXx-NXbPH8_T
+    file_type: docx
+    raw_export_status: available_drive_docx_text_extracted
+    sha256_status: missing
+    source_class: master_integration_synthesis
+    related_lane: ORCS / Copilot / Microsoft ecosystem / council synthesis
     review_priority: high
-    mirrored_to_github: unknown
-    missing_receipts:
-      - drive_file_id
-      - raw_export
-      - sha256
+    mirrored_to_github: false
+    missing_receipts: [sha256, git_mirror_or_pointer, claim_density_review, Claude_adversarial_review]
 
-  - source_id: kg-src-gangaseek-invariant-pdfs
-    title: GangaSeek invariant PDFs
-    surface: Drive
-    url_or_path: unknown_drive_collection
-    file_type: pdf
-    raw_export_status: unavailable
-    sha256_status: unavailable
-    source_class: invariant_packet
-    related_lane: GangaSeek
+  - source_id: DRIVE-GS-INVARIANT-SPEC-PDF-1
+    title: GangaSeek Invariant Specification — MSFT vs India-Starlink-Google Orbital (1).pdf
+    surface: google_drive
+    url_or_path: https://drive.google.com/file/d/1hxALxM8Lur7m34RA0JX84wvGOeNJpM9f
+    file_type: application/pdf
+    raw_export_status: drive_text_extracted_partial
+    sha256_status: missing
+    source_class: invariant_specification_pdf
+    related_lane: GangaSeek / invariant specs
     review_priority: high
-    mirrored_to_github: unknown
-    missing_receipts:
-      - file_manifest
-      - pdf_exports
-      - sha256
+    mirrored_to_github: false
+    missing_receipts: [sha256, pdf_export, git_mirror_or_pointer]
 
-  - source_id: kg-src-rootglass-pr-61
+  - source_id: GITHUB-ROOTGLASS-PR-61
     title: RootglassBrain PR #61
-    surface: GitHub
+    surface: github
     url_or_path: https://github.com/atlaslattice/manus-artifacts/pull/61
     file_type: pull_request
     raw_export_status: summary_only
@@ -133,39 +159,54 @@ records:
     related_lane: RootglassBrain
     review_priority: medium
     mirrored_to_github: true
-    missing_receipts:
-      - raw_thread_export
-      - sha256
+    missing_receipts: [raw_thread_export, sha256]
 
-  - source_id: kg-src-atlasbrain-pr-57
+  - source_id: GITHUB-ATLASBRAIN-PR-57
     title: AtlasBrain PR #57
-    surface: GitHub
+    surface: github
     url_or_path: https://github.com/atlaslattice/manus-artifacts/pull/57
     file_type: pull_request
-    raw_export_status: summary_only
-    sha256_status: unavailable
+    raw_export_status: pointer_scaffold_only
+    sha256_status: partial_pointer_hash_only
     source_class: evidence_lane_pr
     related_lane: AtlasBrain
     review_priority: high
     mirrored_to_github: true
-    missing_receipts:
-      - raw_transcript_artifacts
-      - sha256
+    missing_receipts: [full_raw_transcript_artifacts, evidence_packet, evaluator_reaction_log]
 
-  - source_id: kg-src-appendix-i-math-vault
-    title: Appendix I / Math Vault
-    surface: GitHub
-    url_or_path: archive/math/
-    file_type: directory
-    raw_export_status: partial_raw
-    sha256_status: unavailable
-    source_class: math_archive
-    related_lane: MathVault
-    review_priority: medium
+  - source_id: GITHUB-GS-GOVERNANCE-MASTER-v1.1.0
+    title: GS_GOVERNANCE_INTERFACE_MASTER_v1.1.0_2026-05-22.md
+    surface: github
+    url_or_path: archive/gangaseek/governance/GS_GOVERNANCE_INTERFACE_MASTER_v1.1.0_2026-05-22.md
+    file_type: markdown
+    raw_export_status: summary_wrapper_only
+    sha256_status: git_commit_only
+    source_class: governance_master_candidate
+    related_lane: GangaSeek / governance
+    review_priority: high
     mirrored_to_github: true
-    missing_receipts:
-      - directory_manifest
-      - hash_manifest
+    missing_receipts: [original_raw_sha256, source_manifest, legal_crypto_hardware_review]
+
+  - source_id: GITHUB-GS-FRONTIER-RIGOR-v1.0.1
+    title: GANGASEEK_FRONTIER_RIGOR_MATRIX_v1.0.1_2026-05-22.md
+    surface: github
+    url_or_path: archive/gangaseek/infrastructure/GANGASEEK_FRONTIER_RIGOR_MATRIX_v1.0.1_2026-05-22.md
+    file_type: markdown
+    raw_export_status: summary_wrapper_only
+    sha256_status: git_commit_only
+    source_class: infrastructure_rigor_matrix_candidate
+    related_lane: GangaSeek / infrastructure / validators
+    review_priority: high
+    mirrored_to_github: true
+    missing_receipts: [source_manifest_for_problems_41_60, validator_tickets, fixture_tests]
+
+open_actions:
+  - create_rootglass_source_packets_for_copilot_gemini_gangaseek
+  - compute_sha256_for_drive_exports
+  - mirror_gangaseek_namespace_catalog_template_to_github
+  - build_claude_adversarial_review_queue
+  - define_kg_node_edge_schema
+  - create_openai_graph_extraction_agent_spec
 
 strongest_safe_claim: >
-  This inventory is an initial clipboard for the knowledge graph. It lists likely high-value GitHub, Drive, and Notion-adjacent source artifacts, but does not claim completeness, canon status, or raw fossil-record preservation without source manifests and hashes.
+  This inventory is an upgraded clipboard for the knowledge graph. It records actual Drive and GitHub source pointers found through connected-source scans, but does not claim completeness, canon status, or raw fossil-record preservation without source manifests and hashes.
