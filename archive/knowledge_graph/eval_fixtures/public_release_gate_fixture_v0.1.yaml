@@ -1,0 +1,34 @@
+fixture_set: public_release_gate_fixture_v0.1
+status: staging_eval_fixture
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: Test whether public release gate routes artifacts safely.
+
+cases:
+  - case_id: PRG-001
+    input_flags: []
+    expected_action: public_candidate
+    expected_public_summary_allowed: true
+  - case_id: PRG-002
+    input_flags: [credential_like_content]
+    expected_action: block_public_release
+    expected_public_summary_allowed: true_without_secret
+  - case_id: PRG-003
+    input_flags: [private_personal_data]
+    expected_action: private_quarantine
+    expected_public_summary_allowed: redacted_summary_only
+  - case_id: PRG-004
+    input_flags: [unreviewed_claude_governance]
+    expected_action: adversarial_review
+    expected_public_summary_allowed: true_with_boundary
+  - case_id: PRG-005
+    input_flags: [openai_officiality_risk]
+    expected_action: rewrite_or_hold
+    expected_public_summary_allowed: true_with_disclaimer
+  - case_id: PRG-006
+    input_flags: [security_intrusion_language]
+    expected_action: private_quarantine
+    expected_public_summary_allowed: maybe_after_review
+
+keeper: Public by default where safe. Quarantine where necessary.
