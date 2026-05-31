@@ -134,6 +134,19 @@ This log records practical non-canon infrastructure changes made to the simulati
 - Bundle index now lists M03, M05, M07, and M11 artifacts.
 - Public release remains blocked pending remaining source/export checks, quarantine review, claim shredder pass, public communication pass, and human-root decision.
 
+### Patched public-candidate canon doctrine boundary
+
+- Updated M03 lattice explainer to reject a single source of truth.
+- Added many-version preservation before synthesis.
+- Added fossil / failed branch preservation language.
+- Added no-hierarchy framing.
+- Added geometry framing: Metatron's Cube, 12x12x12 hypercube lattice, Rainbow Yin Yang, and Riemass S-curve.
+- Updated promotion path: many versions preserved -> fossils preserved -> adversarial Pantheon Council review -> human-root adjudication -> website placement -> canonical surface.
+- Updated M05 public release gate to require multi-version preservation, Pantheon adversarial review, human-root adjudication, and website placement for canon.
+- Updated M07 claim shredder to require version refs, fossil refs, contradiction refs, Pantheon review state, human-root adjudication state, and website canon state.
+- Updated M11 public communication guide to clearly state that canon requires Pantheon review, human-root adjudication, and website placement.
+- Updated bundle README to state that the project rejects single-source-of-truth framing and preserves many versions/fossils before synthesis.
+
 ## Operating rule
 
 Every future change should leave a receipt: what changed, what it maps to, how it is validated, and which boundary it respects.
