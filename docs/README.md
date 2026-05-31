@@ -11,6 +11,7 @@ This directory contains public-safe candidate explainers and review surfaces.
 
 - [Lattice Hypercube 12×12×12 Public Explainer](./LATTICE_HYPERCUBE_12x12x12.md) — entry-level H-S-N coordinate surface for the broader 12D full-flywheel ontology.
 - [12D Flywheel Dimension Registry](./LATTICE_12D_FLYWHEEL_DIMENSION_REGISTRY.md) — candidate registry for the 12D operating model; not canon, not deployment, not authority.
+- [Computing Paradigm Test Nodes](./LATTICE_COMPUTING_PARADIGM_TEST_NODES.md) — first candidate H-S-N test nodes for neural, neuromorphic, reversible, acoustic/resonance, and hybrid flywheel computing.
 
 ## Boundary
 
