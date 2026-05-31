@@ -1,0 +1,253 @@
+schema_version: repos_public_private.seed.v0.1
+status: candidate_inventory_seed
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+source_surface: GitHub
+inventory_scope: pilot_12_of_approx_750_repos
+human_gate_required: true
+source_issue: https://github.com/atlaslattice/manus-artifacts/issues/245
+keeper_line: Build the atlas OpenAI can reason over; do not crown the map.
+
+repo_inventory:
+  - repo_id: repo_0001
+    repo_name: sheldonbrain-rag-api
+    owner_or_org: atlaslattice
+    url: https://github.com/atlaslattice/sheldonbrain-rag-api
+    visibility: public
+    repo_kind: unknown
+    default_branch: master
+    license_status: unknown
+    license_id: null
+    archive_status: active
+    source_surface: GitHub
+    primary_domain: Sheldonbrain / RAG API
+    public_release_class: public_candidate
+    raw_export_status: not_exported
+    latest_commit_known: null
+    receipt_status: partial
+    sensitive_risk: unknown
+    openai_operability_score: unknown
+    codex_patch_ready: unknown
+    blockers: [license_status_unknown, latest_commit_not_recorded, raw_export_not_collected]
+    next_safe_action: Inspect README, license, file tree, and latest commit.
+  - repo_id: repo_0002
+    repo_name: Sovereign-Shredder-Core
+    owner_or_org: atlaslattice
+    url: https://github.com/atlaslattice/Sovereign-Shredder-Core
+    visibility: public
+    repo_kind: unknown
+    default_branch: main
+    license_status: unknown
+    license_id: null
+    archive_status: active
+    source_surface: GitHub
+    primary_domain: Sovereign Shredder / archive tooling
+    public_release_class: public_candidate
+    raw_export_status: not_exported
+    latest_commit_known: null
+    receipt_status: partial
+    sensitive_risk: unknown
+    openai_operability_score: unknown
+    codex_patch_ready: unknown
+    blockers: [license_status_unknown, latest_commit_not_recorded, raw_export_not_collected]
+    next_safe_action: Inspect README, license, file tree, tests, and patch scope.
+  - repo_id: repo_0003
+    repo_name: A2A
+    owner_or_org: atlaslattice
+    url: https://github.com/atlaslattice/A2A
+    visibility: public
+    repo_kind: unknown
+    default_branch: main
+    license_status: unknown
+    license_id: null
+    archive_status: archived
+    source_surface: GitHub
+    primary_domain: Agent-to-agent / interop candidate
+    public_release_class: public_candidate_review
+    raw_export_status: not_exported
+    latest_commit_known: null
+    receipt_status: partial
+    sensitive_risk: unknown
+    openai_operability_score: unknown
+    codex_patch_ready: no
+    blockers: [archived_repo, license_status_unknown, latest_commit_not_recorded, raw_export_not_collected]
+    next_safe_action: Inspect archived status, purpose, license, and staleness.
+  - repo_id: repo_0004
+    repo_name: noosphere-archive
+    owner_or_org: atlaslattice
+    url: redacted_private_repo
+    visibility: private
+    repo_kind: archive
+    default_branch: main
+    license_status: unknown
+    license_id: null
+    archive_status: active
+    source_surface: GitHub
+    primary_domain: Noosphere archive
+    public_release_class: private_review
+    raw_export_status: not_exported
+    latest_commit_known: null
+    receipt_status: partial
+    sensitive_risk: possible
+    openai_operability_score: unknown
+    codex_patch_ready: no
+    blockers: [private_repo, public_safe_pointer_only, license_status_unknown, raw_export_not_collected]
+    next_safe_action: Keep private; classify source roots and create public-safe pointer only after review.
+  - repo_id: repo_0005
+    repo_name: banking-revolution-archive
+    owner_or_org: atlaslattice
+    url: redacted_private_repo
+    visibility: private
+    repo_kind: archive
+    default_branch: master
+    license_status: unknown
+    archive_status: active
+    source_surface: GitHub
+    primary_domain: Banking research archive
+    public_release_class: private_quarantine
+    raw_export_status: not_exported
+    receipt_status: partial
+    sensitive_risk: likely
+    codex_patch_ready: no
+    related_repos: [repo_0007]
+    blockers: [private_repo, banking_related, quarantine_route_required, raw_export_not_collected]
+    next_safe_action: Keep private/quarantine; do not public mirror unless human-root explicitly reviews and redacts.
+  - repo_id: repo_0006
+    repo_name: ai-labor-exploitation
+    owner_or_org: atlaslattice
+    url: redacted_private_repo
+    visibility: private
+    repo_kind: unknown
+    default_branch: master
+    license_status: unknown
+    archive_status: active
+    source_surface: GitHub
+    primary_domain: AI labor / social impact
+    public_release_class: private_review
+    raw_export_status: not_exported
+    receipt_status: partial
+    sensitive_risk: possible
+    codex_patch_ready: no
+    blockers: [private_repo, sensitive_claim_review_needed, raw_export_not_collected]
+    next_safe_action: Private review; inspect for personal/private/legal-risk material before public pointer.
+  - repo_id: repo_0007
+    repo_name: banking-revolution
+    owner_or_org: atlaslattice
+    url: redacted_private_repo
+    visibility: private
+    repo_kind: source
+    default_branch: master
+    license_status: unknown
+    archive_status: active
+    source_surface: GitHub
+    primary_domain: Banking research
+    public_release_class: private_quarantine
+    raw_export_status: not_exported
+    receipt_status: partial
+    sensitive_risk: likely
+    codex_patch_ready: no
+    related_repos: [repo_0005]
+    blockers: [private_repo, banking_related, quarantine_route_required, raw_export_not_collected]
+    next_safe_action: Private/quarantine route only unless human-root explicitly reviews and redacts.
+  - repo_id: repo_0008
+    repo_name: healthcare-ai
+    owner_or_org: atlaslattice
+    url: redacted_private_repo
+    visibility: private
+    repo_kind: unknown
+    default_branch: master
+    license_status: unknown
+    archive_status: active
+    source_surface: GitHub
+    primary_domain: Healthcare AI
+    public_release_class: private_review
+    raw_export_status: not_exported
+    receipt_status: partial
+    sensitive_risk: likely
+    codex_patch_ready: no
+    blockers: [private_repo, health_related, rights_privacy_review_required, raw_export_not_collected]
+    next_safe_action: Keep private; no public raw mirroring without rights/privacy review and safe summary.
+  - repo_id: repo_0009
+    repo_name: surveillance-capitalism
+    owner_or_org: atlaslattice
+    url: redacted_private_repo
+    visibility: private
+    repo_kind: unknown
+    default_branch: master
+    license_status: unknown
+    archive_status: active
+    source_surface: GitHub
+    primary_domain: Surveillance capitalism
+    public_release_class: private_review
+    raw_export_status: not_exported
+    receipt_status: partial
+    sensitive_risk: possible
+    codex_patch_ready: no
+    blockers: [private_repo, privacy_security_review_required, raw_export_not_collected]
+    next_safe_action: Private review; inspect for sensitive/security/privacy claims before any public summary.
+  - repo_id: repo_0010
+    repo_name: gig-economy-exploitation
+    owner_or_org: atlaslattice
+    url: redacted_private_repo
+    visibility: private
+    repo_kind: unknown
+    default_branch: master
+    license_status: unknown
+    archive_status: active
+    source_surface: GitHub
+    primary_domain: Gig economy / labor
+    public_release_class: private_review
+    raw_export_status: not_exported
+    receipt_status: partial
+    sensitive_risk: possible
+    codex_patch_ready: no
+    blockers: [private_repo, legal_or_personal_risk_review_required, raw_export_not_collected]
+    next_safe_action: Private review; inspect for personal/private/legal-risk material.
+  - repo_id: repo_0011
+    repo_name: content-moderation-trauma
+    owner_or_org: atlaslattice
+    url: redacted_private_repo
+    visibility: private
+    repo_kind: unknown
+    default_branch: master
+    license_status: unknown
+    archive_status: active
+    source_surface: GitHub
+    primary_domain: Content moderation / trauma
+    public_release_class: private_review
+    raw_export_status: not_exported
+    receipt_status: partial
+    sensitive_risk: likely
+    codex_patch_ready: no
+    blockers: [private_repo, trauma_related, privacy_review_required, raw_export_not_collected]
+    next_safe_action: Keep private; produce only carefully reviewed public-safe summaries.
+  - repo_id: repo_0012
+    repo_name: ai-safety-hypocrisy
+    owner_or_org: atlaslattice
+    url: redacted_private_repo
+    visibility: private
+    repo_kind: unknown
+    default_branch: master
+    license_status: unknown
+    archive_status: active
+    source_surface: GitHub
+    primary_domain: AI safety criticism / governance discourse
+    public_release_class: private_review
+    raw_export_status: not_exported
+    receipt_status: partial
+    sensitive_risk: possible
+    codex_patch_ready: no
+    blockers: [private_repo, public_claim_risk_review_required, attribution_boundary_review_required, raw_export_not_collected]
+    next_safe_action: Private review; inspect for public-claim risk and attribution boundaries.
+
+completion_note:
+  rc_001_collect_repo_list: complete_for_first_12_pilot_slice
+  rc_002_assign_repo_ids: complete_for_first_12_pilot_slice
+  rc_003_separate_visibility: complete_for_first_12_pilot_slice
+  rc_004_record_owner_url_branch_visibility: complete_for_first_12_pilot_slice
+  rc_005_license_status: pending
+  rc_006_raw_export_receipt_status: pending
+  rc_007_blocker_ledger_entries: partially_initialized
+  ready_for_public_release: false
+  ready_for_codex_patch_planning: false
