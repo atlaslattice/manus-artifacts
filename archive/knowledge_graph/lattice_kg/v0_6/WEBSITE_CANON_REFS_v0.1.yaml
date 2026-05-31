@@ -1,0 +1,113 @@
+artifact_id: WEBSITE_CANON_REFS_v0.1
+status: placeholder_requires_human_root_urls
+canon_status: not_canon
+deployment_status: not_deployable
+authority_scope: none
+created_utc: "2026-05-31T00:00:00Z"
+
+purpose: >
+  Provide a receipt-safe placeholder ledger for website canon URLs that will
+  anchor the Atlas Lattice / Rainbow Yin Yang Lattice / 12D hypercube / 12x12x12
+  ontology to the actual canon surface. This file intentionally does not invent
+  website URLs. It exists to prevent GitHub, Notion, Drive, or model outputs from
+  being mistaken for canon before canonical website references are supplied.
+
+source_authority_stack:
+  website:
+    role: canon_surface
+    authority: highest_project_canon
+    status: urls_required
+  github:
+    role: public_kg_workbench_and_receipt_shelf
+    authority: receipt_substrate
+    status: implementation_and_archive_surface
+  notion:
+    role: semantic_archive_and_workspace
+    authority: archival_planning_surface
+    status: may_be_stale_or_partial
+  drive:
+    role: raw_and_staged_workspace
+    authority: raw_or_private_source_storage
+    status: requires_privacy_and_release_status
+  model_outputs:
+    role: candidate_signal
+    authority: none
+  human_root:
+    role: final_interpretive_authority_and_override_gate
+    authority: ratification_and_veto
+
+boundary:
+  - website_canon_required_for_canon_claims
+  - github_receipt_does_not_override_website_canon
+  - notion_archive_does_not_override_website_canon
+  - drive_raw_material_does_not_equal_public_release
+  - model_output_does_not_equal_canon
+  - public_kg_traversal_does_not_equal_authority
+
+required_canon_refs:
+  - canon_id: WEBSITE-CANON-12D-HYPERCUBE
+    title: Canonical 12D Hypercube / Full Flywheel Ontology Page
+    website_url: TBD_BY_HUMAN_ROOT
+    status: missing_url
+    required_for:
+      - docs/LATTICE_HYPERCUBE_12x12x12.md
+      - archive/knowledge_graph/lattice_kg/v0_6/HYPERCUBE_12D_TOPOLOGY_v1.0.yaml
+      - archive/knowledge_graph/lattice_kg/v0_6/HSN_TO_D12_CROSSWALK_v0.1.yaml
+  - canon_id: WEBSITE-CANON-12X12X12-LATTICE
+    title: Canonical 12x12x12 House-Sphere-Node Lattice Page
+    website_url: TBD_BY_HUMAN_ROOT
+    status: missing_url
+    required_for:
+      - docs/LATTICE_HYPERCUBE_12x12x12.md
+      - archive/knowledge_graph/lattice_kg/v0_6/HSN_TO_D12_CROSSWALK_v0.1.yaml
+  - canon_id: WEBSITE-CANON-RAINBOW-YIN-YANG-LATTICE
+    title: Canonical Rainbow Yin Yang Lattice Page
+    website_url: TBD_BY_HUMAN_ROOT
+    status: missing_url
+    required_for:
+      - docs/LATTICE_HYPERCUBE_12x12x12.md
+  - canon_id: WEBSITE-CANON-LIVING-ARCHIVE-OCTOPUS
+    title: Canonical Living Archive / Octopus Not Legos Page
+    website_url: TBD_BY_HUMAN_ROOT
+    status: missing_url
+    required_for:
+      - docs/LATTICE_HYPERCUBE_PR24_PUBLIC_EXPLAINER_CROSSWALK_2026-05-29.md
+      - archive/knowledge_graph/lattice_kg/v0_6/HSN_TO_D12_CROSSWALK_v0.1.yaml
+  - canon_id: WEBSITE-CANON-HUMAN-ROOT-AUTHORITY
+    title: Canonical Human-Root Authority / Ratification Boundary Page
+    website_url: TBD_BY_HUMAN_ROOT
+    status: missing_url
+    required_for:
+      - public_release_gate
+      - claim_calibration
+      - canon_promotion_workflows
+
+canon_ref_record_schema:
+  required_fields:
+    - canon_id
+    - title
+    - website_url
+    - status
+    - claim_scope
+    - last_seen_utc
+    - mirrored_to_github_path
+    - review_status
+    - human_root_note
+  allowed_status:
+    - missing_url
+    - url_supplied_unverified
+    - fetched_verified
+    - mirrored_to_github
+    - superseded
+    - retired
+
+next_actions:
+  - Human-root supplies canonical website URLs.
+  - Lucerna verifies each URL and strongest safe claim scope.
+  - Hashlight records capture timestamp and hash if available.
+  - GPTBrain updates claim-class ledgers to distinguish website_canon from implementation_receipt.
+  - TIDELOCK wires refs into graph seed files and validators.
+
+keeper: >
+  Website crowns canon. GitHub keeps receipts. This file records the empty
+  sockets without inventing the crown jewels.
