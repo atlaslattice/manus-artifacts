@@ -1,0 +1,79 @@
+artifact_id: SHARED-STATUS-SPINE-SCHEMA-2026-05-30
+version: "0.1"
+status: candidate_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+write_scope: staging_only
+purpose: Prevent cross-domain schema drift and authority laundering by requiring every first-wave object to carry the same status spine.
+
+required_fields:
+  source_surface:
+    type: string
+    required: true
+    description: Surface where the object/source currently lives, e.g. github, drive, notion, chat, upload, website, external.
+  raw_export_status:
+    type: string
+    required: true
+    allowed_values:
+      - full_raw
+      - partial_raw
+      - summary_only
+      - drive_native_visible
+      - linked_only
+      - unavailable
+      - redacted
+      - sealed
+      - not_applicable
+  canon_status:
+    type: string
+    required: true
+    allowed_values:
+      - not_canon
+      - candidate
+      - council_reviewed
+      - human_adjudicated
+      - website_canon
+      - deprecated
+  deployment_status:
+    type: string
+    required: true
+    allowed_values:
+      - not_deployed
+      - simulation_only
+      - staged
+      - deployed
+      - not_applicable
+  authority_effect:
+    type: string
+    required: true
+    allowed_values:
+      - none
+      - advisory
+      - review_route
+      - storage_not_canon
+      - canon_gate
+  review_route:
+    type: array
+    items: string
+    required: true
+    description: Review lanes required before further use.
+
+applies_to:
+  - SourceArtifact
+  - RawExport
+  - ParsedPacket
+  - ClaimPacket
+  - ReviewPacket
+  - EvidenceAnchor
+  - GraphNode
+  - GraphEdge
+  - SynthesisArtifact
+
+validation_rule: >
+  If any required field is missing, the object is incomplete and routes to TIDELOCK / GPTBrain before reuse.
+
+must_not_infer:
+  - shared_status_spine_does_not_grant_authority
+  - shared_status_spine_does_not_prove_truth
+  - shared_status_spine_does_not_make_public_release_safe
