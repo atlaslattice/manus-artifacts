@@ -1,0 +1,34 @@
+artifact_id: DOES-NOT-PROVE-SCHEMA-2026-05-30
+version: "0.1"
+status: candidate_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+write_scope: staging_only
+purpose: Make non-claims explicit so receipts, summaries, reviews, and model agreement cannot be mistaken for proof.
+
+field:
+  does_not_prove:
+    type: array
+    items: string
+    required: true
+    applies_to:
+      - ClaimPacket
+      - ReviewPacket
+    examples:
+      - does_not_prove_canon
+      - does_not_prove_deployment
+      - does_not_prove_authority
+      - does_not_prove_legal_compliance
+      - does_not_prove_partnership
+      - does_not_prove_full_raw_lineage
+      - does_not_prove_public_release_safety
+
+validation_rule: >
+  ClaimPacket and ReviewPacket objects must include a does_not_prove list. Empty lists require an explicit reviewer note.
+
+must_not_infer:
+  - listing_non_claims_does_not_validate_claims
+  - review_packet_does_not_ratify
+  - receipt_does_not_approve
+  - model_agreement_does_not_prove
