@@ -8,7 +8,7 @@ OFFICIAL OPENAI CLAIM: NONE
 
 ## Purpose
 
-Provide first candidate H-S-N test nodes for unifying neural networks, neuromorphic computing, reversible computing, and acoustic resonance computing inside the entry-level 12×12×12 coordinate surface and broader 12D full-flywheel ontology.
+Provide first candidate H-S-N test nodes for unifying neural networks, neuromorphic computing, reversible computing, acoustic resonance computing, quantum computing, and post-quantum cryptography inside the entry-level 12×12×12 coordinate surface and broader 12D full-flywheel ontology.
 
 These are not final assignments. They are test nodes for schema validation, review routing, and public-safe explanation.
 
@@ -27,6 +27,15 @@ How is state transformed?
 How is state read?
 What information survives the transformation?
 What receipts support the claim?
+```
+
+For security-related nodes, add:
+
+```text
+What threat model applies?
+What standard or proof supports the claim?
+What migration state is actually complete?
+What remains vulnerable or unverified?
 ```
 
 ## Candidate House
@@ -64,15 +73,6 @@ strongest_safe_wording: >
   attention, or other trainable structures.
 ```
 
-12D emphasis:
-
-```text
-D05 Claim / Semantic Content: learned map
-D06 Evidence / Receipt Strength: papers, benchmark results, code receipts
-D09 Deployment / Execution Boundary: model deployment requires separate gates
-D10 Temporal / Version State: architectures evolve rapidly
-```
-
 ### H04.S02.N01 — Neuromorphic Computing
 
 ```yaml
@@ -94,15 +94,6 @@ strongest_safe_wording: >
   Neuromorphic computing explores brain-inspired, event-driven, sparse,
   temporal, or synapse-like computation in digital, analog, mixed-signal,
   memristive, or other physical hardware systems.
-```
-
-12D emphasis:
-
-```text
-D04 Source / Lineage: chip papers, benchmark reports, hardware docs
-D06 Evidence / Receipt Strength: energy/latency benchmark receipts
-D11 Resonance / Projection State: temporal/event projection
-D12 Conservation / Routing / Quarantine State: avoid overclaiming GPU replacement
 ```
 
 ### H04.S03.N01 — Reversible Computing
@@ -128,15 +119,6 @@ strongest_safe_wording: >
   erasure and its thermodynamic cost in principle.
 ```
 
-12D emphasis:
-
-```text
-D06 Evidence / Receipt Strength: Landauer/reversible logic sources required
-D08 Authority / Canon Boundary: metaphor does not equal proof
-D10 Temporal / Version State: prior state recoverability is central
-D12 Conservation / Routing / Quarantine State: INV-0 analogy must remain bounded
-```
-
 ### H04.S04.N01 — Acoustic / Resonance Computing
 
 ```yaml
@@ -159,15 +141,6 @@ strongest_safe_wording: >
   Acoustic or resonance computing explores whether sound waves, vibration modes,
   phononic behavior, cavities, materials, or resonance dynamics can perform useful
   signal transformation, feature extraction, memory, or reservoir-computing roles.
-```
-
-12D emphasis:
-
-```text
-D04 Source / Lineage: physical reservoir and acoustic/phononic computing sources
-D06 Evidence / Receipt Strength: experiments, simulations, device measurements
-D11 Resonance / Projection State: amplitude, phase, frequency, spatial mode, damping
-D12 Conservation / Routing / Quarantine State: route bold claims to science review
 ```
 
 ### H04.S05.N01 — Hybrid Flywheel Computing Stack
@@ -197,16 +170,118 @@ strongest_safe_wording: >
   and state accounting.
 ```
 
+### H04.S06.N01 — Quantum Computing
+
+```yaml
+coordinate_id: H04.S06.N01
+house: Computation Substrates / State Transformation Systems
+sphere: Quantum Computing
+node: Unitary / Measurement-Bounded State Transformation
+projection_type: quantum_computing_view
+domain_tags:
+  - quantum_computing
+  - quantum_information
+  - reversible_computing
+  - algorithms
+review_status: needs_receipts
+canon_status: public_candidate
+authority_scope: none
+deployment_status: not_deployed
+public_release_status: public_candidate
+strongest_safe_wording: >
+  Quantum computing explores computation using quantum states, unitary evolution,
+  interference, entanglement, and measurement, with potential advantages for
+  specific problem classes but no blanket speedup claim.
+```
+
 12D emphasis:
 
 ```text
-D05 Claim / Semantic Content: integration hypothesis
-D06 Evidence / Receipt Strength: requires component-level and system-level receipts
-D07 Review / Adversarial Status: route to adversarial science and engineering review
-D08 Authority / Canon Boundary: not canon, not proof, not deployment
-D09 Deployment / Execution Boundary: no live execution without explicit gate
-D11 Resonance / Projection State: cross-projection test case
-D12 Conservation / Routing / Quarantine State: preserve failures and contradictions
+D04 Source / Lineage: quantum algorithm, hardware, and error-correction sources
+D05 Claim / Semantic Content: distinguish algorithmic possibility from deployed capability
+D06 Evidence / Receipt Strength: peer-reviewed results, hardware benchmarks, error-rate receipts
+D07 Review / Adversarial Status: route to physics, math, and security review
+D08 Authority / Canon Boundary: quantum label does not prove advantage
+D09 Deployment / Execution Boundary: no operational claim without implementation receipt
+D12 Conservation / Routing / Quarantine State: quarantine hype and unsupported speedup claims
+```
+
+### H04.S07.N01 — Post-Quantum Cryptography
+
+```yaml
+coordinate_id: H04.S07.N01
+house: Computation Substrates / State Transformation Systems
+sphere: Cryptography / Post-Quantum Security
+node: Quantum-Resistant Migration Surface
+projection_type: post_quantum_cryptography_view
+domain_tags:
+  - cryptography
+  - post_quantum_cryptography
+  - key_exchange
+  - digital_signatures
+  - migration_planning
+review_status: needs_adversarial_review
+canon_status: public_candidate
+authority_scope: none
+deployment_status: not_deployed
+public_release_status: public_candidate
+strongest_safe_wording: >
+  Post-quantum cryptography studies and deploys classical cryptographic
+  algorithms intended to resist known quantum attacks, but security depends on
+  current standards, implementation correctness, migration completeness, and
+  continuing cryptanalysis.
+```
+
+12D emphasis:
+
+```text
+D04 Source / Lineage: standards, implementation docs, dependency inventory
+D05 Claim / Semantic Content: separate quantum-resistant intent from proof of security
+D06 Evidence / Receipt Strength: current standards, audits, test vectors, dependency scans
+D07 Review / Adversarial Status: cryptographic review required
+D08 Authority / Canon Boundary: post-quantum label is not self-certifying
+D09 Deployment / Execution Boundary: migration requires explicit gate and inventory
+D10 Temporal / Version State: standards and cryptanalysis evolve
+D12 Conservation / Routing / Quarantine State: preserve deprecated keys, protocols, and migration exceptions as receipts
+```
+
+### H04.S08.N01 — Quantum / Post-Quantum Threat Model Bridge
+
+```yaml
+coordinate_id: H04.S08.N01
+house: Computation Substrates / State Transformation Systems
+sphere: Quantum Security Transition
+node: Harvest-Now-Decrypt-Later / Migration Risk Bridge
+projection_type: cryptography_view
+domain_tags:
+  - quantum_information
+  - cryptography
+  - post_quantum_cryptography
+  - threat_modeling
+  - key_lifecycle
+review_status: needs_adversarial_review
+canon_status: public_candidate
+authority_scope: none
+deployment_status: not_deployed
+public_release_status: public_candidate
+strongest_safe_wording: >
+  Quantum security transition planning should model long-lived data exposure,
+  harvest-now-decrypt-later risk, algorithm agility, key lifecycles, dependency
+  inventory, and staged migration without claiming that a label or coordinate
+  proves security.
+```
+
+12D emphasis:
+
+```text
+D04 Source / Lineage: asset inventory, protocol inventory, key inventory
+D05 Claim / Semantic Content: threat model and migration claim
+D06 Evidence / Receipt Strength: scan outputs, audit reports, standard references
+D07 Review / Adversarial Status: security review and red-team routing
+D08 Authority / Canon Boundary: no self-certifying security posture
+D09 Deployment / Execution Boundary: phased migration and rollback gates
+D10 Temporal / Version State: cryptographic shelf-life and data retention window
+D12 Conservation / Routing / Quarantine State: preserve exceptions, legacy protocols, and failed migrations as fossils
 ```
 
 ## Boundary
@@ -216,6 +291,7 @@ These nodes are test addresses.
 They do not prove the science.
 They do not grant authority.
 They do not deploy a system.
+They do not certify cryptographic security.
 They exist to make review, receipts, and future experiments easier to route.
 ```
 
@@ -226,5 +302,7 @@ Neural learns the map.
 Neuromorphic makes events native.
 Reversible preserves lineage.
 Acoustic lets matter transform signal.
+Quantum explores unitary state transformation.
+Post-quantum crypto preserves confidentiality against future threat models.
 The 12D flywheel decides what else must be recorded before any claim graduates.
 ```
