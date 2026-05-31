@@ -1,0 +1,217 @@
+artifact_id: OPENAI-ADJACENT-TOOL-MATRIX-2026-05-30
+version: "0.1"
+date: 2026-05-30
+status: candidate_tool_matrix
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+write_scope: staging_only
+source_basis:
+  - GitHub search over atlaslattice organization
+  - OpenAI Best-in-World Plural Lattice Execution Packet — Candidate 2026-05-30
+  - OpenAI Adjacent GitHub Tool Audit — 2026-05-30
+keeper:
+  - Forked is not integrated.
+  - Archived is not active.
+  - Present is not useful until routed.
+  - Useful is not canon.
+  - Integrate with receipts.
+  - Nothing dies.
+
+integration_status_enum:
+  - not_found
+  - found_archived_reference
+  - found_active_unintegrated
+  - found_active_candidate_adapter
+  - integrated_staging
+  - integrated_with_tests
+  - public_release_ready
+
+risk_enum:
+  - low
+  - medium
+  - high
+  - unknown
+
+repos:
+  - repo: atlaslattice/open-webui
+    tool_family: openai_adjacent_ui
+    visibility: public
+    archived: true
+    fork_or_present_status: present
+    integration_status: found_archived_reference
+    openai_benefit: local_ui_and_model_interface_reference
+    security_risk: medium
+    maintenance_risk: high
+    adapter_needed: maybe
+    source_passport_status: missing
+    next_action: preserve_as_reference_fork_and_do_not_treat_as_active_integration
+
+  - repo: atlaslattice/AutoGPT
+    tool_family: autonomous_agent_framework
+    visibility: public
+    archived: true
+    fork_or_present_status: present
+    integration_status: found_archived_reference
+    openai_benefit: historical_agent_pattern_reference
+    security_risk: high
+    maintenance_risk: high
+    adapter_needed: no_until_reviewed
+    source_passport_status: missing
+    next_action: preserve_reference_and_extract_only_safe_patterns_after_review
+
+  - repo: atlaslattice/langchain
+    tool_family: retrieval_agent_tooling_framework
+    visibility: public
+    archived: true
+    fork_or_present_status: present
+    integration_status: found_archived_reference
+    openai_benefit: retrieval_chain_tooling_reference
+    security_risk: medium
+    maintenance_risk: high
+    adapter_needed: maybe
+    source_passport_status: missing
+    next_action: compare_to_OpenAI_native_agents_file_search_and_structured_output_before_any_use
+
+  - repo: atlaslattice/browser-use
+    tool_family: browser_automation_agent
+    visibility: public
+    archived: true
+    fork_or_present_status: present
+    integration_status: found_archived_reference
+    openai_benefit: browser_task_automation_reference
+    security_risk: high
+    maintenance_risk: high
+    adapter_needed: yes_if_reactivated
+    source_passport_status: missing
+    next_action: quarantine_as_high_risk_browser_automation_until_security_review
+
+  - repo: atlaslattice/dify
+    tool_family: app_builder_rag_workflow_platform
+    visibility: public
+    archived: true
+    fork_or_present_status: present
+    integration_status: found_archived_reference
+    openai_benefit: workflow_builder_reference
+    security_risk: medium
+    maintenance_risk: high
+    adapter_needed: maybe
+    source_passport_status: missing
+    next_action: preserve_as_reference_not_primary_OpenAI_lane
+
+  - repo: atlaslattice/A2A
+    tool_family: agent_to_agent_protocol
+    visibility: public
+    archived: unknown
+    fork_or_present_status: present
+    integration_status: found_active_unintegrated
+    openai_benefit: interop_protocol_reference
+    security_risk: medium
+    maintenance_risk: unknown
+    adapter_needed: yes
+    source_passport_status: missing
+    next_action: inspect_archived_status_and_define_relation_to_OpenAI_Agents_MCP_and_lattice_graph
+
+  - repo: atlaslattice/ollama
+    tool_family: local_model_runtime
+    visibility: public
+    archived: true
+    fork_or_present_status: present
+    integration_status: found_archived_reference
+    openai_benefit: local_runtime_interop_reference_not_OpenAI_primary
+    security_risk: medium
+    maintenance_risk: high
+    adapter_needed: no_until_required
+    source_passport_status: missing
+    next_action: preserve_for_non_OpenAI_interop_only
+
+  - repo: atlaslattice/sheldonbrain-rag-api
+    tool_family: lineage_ingestion_api
+    visibility: public
+    archived: false
+    fork_or_present_status: active_repo
+    integration_status: found_active_candidate_adapter
+    openai_benefit: primary_lineage_ingestion_engine_candidate
+    security_risk: medium
+    maintenance_risk: medium
+    adapter_needed: yes
+    source_passport_status: missing
+    next_action: inspect_parser_adapter_paths_and_add_source_passport
+
+  - repo: atlaslattice/uws
+    tool_family: universal_workspace_shell
+    visibility: public
+    archived: false
+    fork_or_present_status: active_repo
+    integration_status: found_active_candidate_adapter
+    openai_benefit: workspace_connector_and_tool_adapter_substrate
+    security_risk: medium
+    maintenance_risk: medium
+    adapter_needed: yes
+    source_passport_status: missing
+    next_action: inspect_cli_contracts_and_map_to_GitHub_Drive_Notion_connector_workflows
+
+  - repo: atlaslattice/aluminum-os
+    tool_family: operating_system_integration_substrate
+    visibility: public
+    archived: false
+    fork_or_present_status: active_repo
+    integration_status: found_active_candidate_adapter
+    openai_benefit: integration_OS_candidate_for_GPTBrain_Sheldonbrain_lanes
+    security_risk: medium
+    maintenance_risk: medium
+    adapter_needed: yes
+    source_passport_status: missing
+    next_action: inspect_OpenAI_GitHub_MCP_and_workspace_integration_files
+
+not_found_watchlist:
+  - tool: llamaindex
+    status: not_found
+    reason: high-value retrieval/indexing framework to compare against OpenAI-native retrieval and file search
+    next_action: decide whether to fork_or_reference_after_benefit_review
+  - tool: semantic-kernel
+    status: not_found
+    reason: Microsoft/OpenAI orchestration framework candidate
+    next_action: decide whether to fork_or_reference_after_Copilot_TIDELOCK_review
+  - tool: crewai
+    status: not_found
+    reason: agent crew orchestration reference candidate
+    next_action: decide whether to fork_or_reference_after_agent_safety_review
+  - tool: autogen
+    status: not_found
+    reason: multi-agent orchestration reference candidate
+    next_action: decide whether to fork_or_reference_after_agent_safety_review
+  - tool: openai-agents-sdk-examples
+    status: not_found
+    reason: OpenAI-native agent pattern should be preferred for official API alignment
+    next_action: identify official example repos_or_docs_for_reference_without_claiming_affiliation
+  - tool: mcp-reference-servers
+    status: not_found
+    reason: connector architecture comparison target
+    next_action: identify maintained references_and_create_source_passports
+
+priority_order:
+  p0:
+    - atlaslattice/sheldonbrain-rag-api
+    - atlaslattice/uws
+    - atlaslattice/aluminum-os
+    - openai-agents-sdk-examples
+    - mcp-reference-servers
+  p1:
+    - atlaslattice/A2A
+    - llamaindex
+    - semantic-kernel
+  p2:
+    - atlaslattice/langchain
+    - atlaslattice/open-webui
+    - atlaslattice/dify
+    - atlaslattice/browser-use
+    - atlaslattice/AutoGPT
+    - atlaslattice/ollama
+
+must_not_infer:
+  - forked_or_present_does_not_mean_integrated
+  - archived_does_not_mean_active
+  - integration_status_does_not_mean_deployment
+  - OpenAI_adjacent_does_not_mean_OpenAI_official
+  - useful_tool_does_not_mean_canon
