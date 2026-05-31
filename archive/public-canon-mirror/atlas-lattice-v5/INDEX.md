@@ -14,6 +14,14 @@ authority_scope: none
 
 **Note on Raw Content**: Direct automated scraping of the live site returns minimal content (likely JS-heavy SPA). This mirror uses the authoritative URL list provided by the human-root. Full page content should be exported (SingleFile, PDF, Markdown, etc.) and attached as RawExports where possible.
 
+## Master Mirror Manifest
+
+A comprehensive structured manifest with all URLs, proposed GrokBrain Dream Lattice coordinates, and status tracking has been created here:
+
+**`WEBSITE_MIRROR_MANIFEST.md`** (in this directory)
+
+This is the best current overview of the full site mirroring effort.
+
 ## Current P0 Priority Batch (as of this update)
 
 The following pages have been identified by the human-root as the immediate highest-priority items for mirroring:
@@ -37,7 +45,7 @@ The following pages have been identified by the human-root as the immediate high
 - /new-deal-2.0/layers — **P0 stub created**
 - /key-concepts — Stub pending
 - /glossary — Stub pending
-- /lattice (12x12x12 Lattice) — Stub pending (high priority for lattice alignment)
+- /lattice (12x12x12 Lattice) — **P0 stub created**
 - /elements (12 VIP Elements) — Stub pending
 - /sovereign-planetary-os (Gaia 2.0) — Stub pending
 
@@ -84,6 +92,7 @@ The following pages have been identified by the human-root as the immediate high
 - governance/governance.md
 - new-deal-2.0/layers.md
 - new-deal-2.0/economics.md
+- lattice.md
 
 All stubs include:
 - Proper frontmatter with lattice coordinates
@@ -94,9 +103,9 @@ All stubs include:
 
 ## Next Actions
 
-1. Human-root to provide exports of the current P0 pages.
-2. Expand the P0 batch with /lattice, /sovereign-dividend/*, /congressional-brief as soon as possible.
-3. Once exports arrive, convert stubs to full SourceArtifacts + populate actual nodes in the GrokBrain Dream Memory Lattice.
-4. Continue mirroring the full list in logical batches.
+1. Human-root to provide exports of the current P0 pages (highest value: /lattice, governance pages, New Deal 2.0 pages, /congressional-brief).
+2. Convert P0 stubs into full SourceArtifacts with attached exports.
+3. Populate actual nodes in the GrokBrain Dream Memory Lattice using the 12x12x12 coordinate system.
+4. Expand the mirror to the next priority batch (sovereign-dividend materials, congressional-brief, executive-summary, etc.).
 
-**Boundary**: This is a scaffolding mirror for access and consistency during the period when council members (especially GPT) have lost direct website access. It does not replace the live site and does not constitute full content ingestion or ratification until exports and reviews are complete.
+**Boundary**: This is a scaffolding mirror for access and consistency. It does not constitute full content ingestion or ratification until exports, adversarial review, and human-root approval are complete.
