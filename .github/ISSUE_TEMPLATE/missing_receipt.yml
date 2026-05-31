@@ -1,0 +1,108 @@
+name: MissingReceipt
+about: Track a claim or artifact that needs a receipt before review or promotion
+title: "MissingReceipt: "
+labels: ["receipt:missing", "review-needed"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template when a claim, metric, artifact, or status statement lacks enough source support.
+
+        A missing receipt does not mean the claim is false. It means the claim is not yet review-ready.
+
+  - type: input
+    id: missing_receipt_id
+    attributes:
+      label: MissingReceipt ID
+      description: Stable ID, e.g. MR-P0-001-GPTDREAM-63-TESTS
+      placeholder: MR-P0-...
+    validations:
+      required: true
+
+  - type: textarea
+    id: claim_or_artifact
+    attributes:
+      label: Claim or artifact needing receipt
+      description: Quote or summarize the claim/artifact precisely.
+      placeholder: "Example: GPTDream++ spec vault — 63 tests passing"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_source
+    attributes:
+      label: Expected source / receipt
+      description: What would count as an adequate receipt?
+      placeholder: |
+        - CI workflow run
+        - test log
+        - commit SHA
+        - raw export
+    validations:
+      required: true
+
+  - type: textarea
+    id: why_needed
+    attributes:
+      label: Why this receipt is needed
+      description: Explain the risk if this remains unresolved.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: current_status
+    attributes:
+      label: Current receipt status
+      options:
+        - missing
+        - search_hit_only
+        - partial_content
+        - full_export_present
+        - hash_present
+        - independently_verified
+        - blocked
+        - superseded
+    validations:
+      required: true
+
+  - type: textarea
+    id: blocking_condition
+    attributes:
+      label: Blocking condition
+      description: What prevents this from being receipted now?
+      placeholder: exact file not located; access missing; raw export unavailable; criteria undefined
+
+  - type: textarea
+    id: next_action
+    attributes:
+      label: Next action
+      description: Smallest concrete next step.
+    validations:
+      required: true
+
+  - type: input
+    id: preferred_owner
+    attributes:
+      label: Preferred owner / lane
+      placeholder: Module 02 Receipt Habitat / Module 12 Validation
+
+  - type: textarea
+    id: safe_wording
+    attributes:
+      label: Safe wording until resolved
+      description: Write the phrase that should be used instead of overclaiming.
+      placeholder: "Candidate claim pending receipt."
+
+  - type: checkboxes
+    id: guardrails
+    attributes:
+      label: Guardrails
+      options:
+        - label: This issue does not mark the claim false.
+          required: true
+        - label: This issue does not mark the claim verified.
+          required: true
+        - label: This issue does not promote canon, deployment, proof, or authority.
+          required: true
+        - label: This issue preserves the branch for later review.
+          required: true
