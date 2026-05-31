@@ -1,18 +1,28 @@
-schema_id: lattice_coordinate.schema.v0.1
+schema_id: lattice_coordinate.schema.v0.2
 status: public_candidate
 canon_status: not_canon
 deployment_status: not_deployed
 authority_scope: none
 purpose: >
-  Represent coordinates inside the Rainbow Yin Yang / 12x12x12 Hypercube
-  without flattening the lattice into a single hierarchy, proof system, or
-  source of truth.
+  Represent entry-level H-S-N coordinates inside the Rainbow Yin Yang /
+  12x12x12 Hypercube as an addressable public coordinate surface inside a
+  broader 12D full-flywheel ontology, without flattening the lattice into a
+  single hierarchy, proof system, source of truth, or authority surface.
+
+coordinate_grammar:
+  entry_coordinate: H##.S##.N##
+  house: H
+  sphere: S
+  node: N
+  note: >
+    H-S-N is the entry coordinate surface. The 12D flywheel is the fuller
+    operating model. A coordinate is an address, not the entire ontology.
 
 required_fields:
   - coordinate_id
-  - axis_a
-  - axis_b
-  - axis_c
+  - house
+  - sphere
+  - node
   - projection_type
   - domain_tags
   - artifact_refs
@@ -20,17 +30,19 @@ required_fields:
   - review_status
   - canon_status
   - public_release_status
+  - authority_scope
+  - deployment_status
 
 fields:
   coordinate_id:
     type: string
-    description: Stable coordinate identifier for a cell or projected cell in the 12x12x12 lattice.
-    example: LATTICE-01-04-09
+    description: Stable entry coordinate identifier for a cell or projected cell in the 12x12x12 H-S-N lattice.
+    example: H01.S04.N09
 
-  axis_a:
+  house:
     type: object
     required: [index, label]
-    description: First axis of the 12x12x12 coordinate. Axis names are candidate and may evolve.
+    description: Entry coordinate House component. Houses are candidate top-level domains or habitat families.
     fields:
       index:
         type: integer
@@ -39,10 +51,10 @@ fields:
       label:
         type: string
 
-  axis_b:
+  sphere:
     type: object
     required: [index, label]
-    description: Second axis of the 12x12x12 coordinate. Axis names are candidate and may evolve.
+    description: Entry coordinate Sphere component. Spheres are candidate semantic or operational containers inside or across Houses.
     fields:
       index:
         type: integer
@@ -51,10 +63,10 @@ fields:
       label:
         type: string
 
-  axis_c:
+  node:
     type: object
     required: [index, label]
-    description: Third axis of the 12x12x12 coordinate. Axis names are candidate and may evolve.
+    description: Entry coordinate Node component. Nodes are addressable cells, artifacts, claim families, experiments, prototypes, or review targets.
     fields:
       index:
         type: integer
@@ -62,10 +74,51 @@ fields:
         maximum: 12
       label:
         type: string
+
+  flywheel_dimensions:
+    type: object
+    description: Optional or required-by-profile 12D flywheel metadata. H-S-N does not exhaust the ontology.
+    fields:
+      d01_house:
+        type: object
+        description: Mirrors or expands the House dimension.
+      d02_sphere:
+        type: object
+        description: Mirrors or expands the Sphere dimension.
+      d03_node:
+        type: object
+        description: Mirrors or expands the Node dimension.
+      d04_source_lineage:
+        type: object
+        description: Source, origin, hash, raw-path, export status, or lineage notes.
+      d05_claim_semantic_content:
+        type: object
+        description: Claim text, strongest safe wording, semantic tags, and overclaims to avoid.
+      d06_evidence_receipt_strength:
+        type: object
+        description: Receipt strength, source quality, citations, tests, reproducible runs, contradictions, or gaps.
+      d07_review_adversarial_status:
+        type: object
+        description: Review route, adversarial status, blockers, and next review action.
+      d08_authority_canon_boundary:
+        type: object
+        description: Authority scope, canon status, ratification status, and promotion constraints.
+      d09_deployment_execution_boundary:
+        type: object
+        description: Deployment status, execution permission, sandbox state, or gate requirements.
+      d10_temporal_version_state:
+        type: object
+        description: Version, branch, supersession, fossil state, contradiction branch, or active surface.
+      d11_resonance_projection_state:
+        type: object
+        description: Projection/view state such as graph, frequency, acoustic, neuromorphic, matter-property, color-harmonic, invention archive, or public release view.
+      d12_conservation_routing_quarantine_state:
+        type: object
+        description: Preservation, compression, archive, quarantine, fork, inherit, recovery, reject, or review route.
 
   projection_type:
     type: enum
-    description: The view/projection being used. No projection is the whole cube.
+    description: The view/projection being used. No projection is the whole flywheel.
     values:
       - table_view
       - graph_view
@@ -74,10 +127,14 @@ fields:
       - matter_property_view
       - isotope_element_view
       - acoustic_resonance_view
+      - neural_network_view
       - neuromorphic_view
+      - reversible_computing_view
+      - reservoir_computing_view
       - invention_archive_view
       - review_status_view
       - public_release_view
+      - full_flywheel_view
       - other
 
   domain_tags:
@@ -89,7 +146,10 @@ fields:
       - acoustic_resonance
       - frequency_ranges
       - color_harmonic_spectrum
+      - neural_networks
       - neuromorphic_principles
+      - reversible_computing
+      - reservoir_computing
       - invention_archive
       - review_lane
 
@@ -136,6 +196,24 @@ fields:
       - human_root_adjudicated
       - website_canon
 
+  authority_scope:
+    type: enum
+    values:
+      - none
+      - advisory
+      - gated
+      - ratified
+
+  deployment_status:
+    type: enum
+    values:
+      - not_deployed
+      - not_deployable
+      - sandbox_only
+      - staged
+      - gated
+      - deployed_by_explicit_authorization
+
   public_release_status:
     type: enum
     values:
@@ -151,22 +229,31 @@ fields:
       - blocked_rights
 
 invariants:
+  - hsn_is_entry_coordinate_not_totality
   - coordinate_not_authority
   - projection_not_totality
   - cluster_not_canon
   - graph_edge_not_promotion
+  - resonance_not_proof
+  - node_not_truth
   - many_versions_before_synthesis
   - fossils_preserved
   - council_before_canon
   - website_before_law
+  - human_root_before_authority
 
 safe_wording:
+  - H-S-N is the entry coordinate surface; the 12D flywheel is the fuller operating model.
   - A lattice coordinate is an index handle, not an authority claim.
   - A projection can be useful without being complete.
   - Coordinates help route review; they do not decide truth.
+  - Extra dimensions must not imply authority without status, receipt, review, and human-root gates.
 
 forbidden_wording:
   - This coordinate proves the claim.
+  - H-S-N is the whole ontology.
   - This projection is the whole lattice.
   - This cluster is canon.
   - This graph position grants authority.
+  - Resonance compatibility proves deployment readiness.
+  - A node can self-promote to canon.
