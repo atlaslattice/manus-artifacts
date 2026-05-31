@@ -1,0 +1,64 @@
+fixture_set: source_passport_validation_fixture_v0.1
+status: staging_eval_fixture
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: Test whether a source passport contains minimum fields and produces missing-receipt nodes for gaps.
+
+required_fields:
+  - passport_id
+  - source_id
+  - title
+  - surface
+  - url_or_path
+  - source_type
+  - raw_export_status
+  - canon_status
+  - deployment_status
+  - authority_scope
+  - public_release_status
+  - source_class
+  - review_lanes
+  - missing_receipts
+  - next_action
+
+cases:
+  - case_id: SPV-001
+    input:
+      passport_id: SP-DEMO-001
+      source_id: SRC-DEMO
+      title: Demo Source
+      surface: github
+      url_or_path: archive/demo.md
+      source_type: file
+      raw_export_status: repo_file_visible
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      public_release_status: public_candidate
+      source_class: SourceArtifact
+      review_lanes: [Rootglass]
+      missing_receipts: []
+      next_action: review
+    expected_result: pass
+  - case_id: SPV-002
+    input:
+      passport_id: SP-DEMO-002
+      source_id: SRC-NOTION
+      title: Notion Source Missing Export
+      surface: notion
+      url_or_path: null
+      source_type: page
+      raw_export_status: not_exported
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      public_release_status: private_raw
+      source_class: SourceRoot
+      review_lanes: [Hashlight]
+      missing_receipts: []
+      next_action: export
+    expected_result: fail_with_missing_receipts
+    expected_missing_receipts: [url_or_path, page_id, raw_export, content_hash]
+
+keeper: A source without a passport is cargo without a label.
