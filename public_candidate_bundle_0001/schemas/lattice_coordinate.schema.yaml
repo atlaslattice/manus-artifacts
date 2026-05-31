@@ -111,7 +111,7 @@ fields:
         description: Version, branch, supersession, fossil state, contradiction branch, or active surface.
       d11_resonance_projection_state:
         type: object
-        description: Projection/view state such as graph, frequency, acoustic, neuromorphic, matter-property, color-harmonic, invention archive, or public release view.
+        description: Projection/view state such as graph, frequency, acoustic, neuromorphic, quantum, cryptographic, matter-property, color-harmonic, invention archive, or public release view.
       d12_conservation_routing_quarantine_state:
         type: object
         description: Preservation, compression, archive, quarantine, fork, inherit, recovery, reject, or review route.
@@ -131,6 +131,10 @@ fields:
       - neuromorphic_view
       - reversible_computing_view
       - reservoir_computing_view
+      - quantum_computing_view
+      - quantum_information_view
+      - cryptography_view
+      - post_quantum_cryptography_view
       - invention_archive_view
       - review_status_view
       - public_release_view
@@ -150,6 +154,12 @@ fields:
       - neuromorphic_principles
       - reversible_computing
       - reservoir_computing
+      - quantum_computing
+      - quantum_information
+      - cryptography
+      - post_quantum_cryptography
+      - key_exchange
+      - digital_signatures
       - invention_archive
       - review_lane
 
@@ -235,6 +245,9 @@ invariants:
   - cluster_not_canon
   - graph_edge_not_promotion
   - resonance_not_proof
+  - quantum_advantage_not_assumed
+  - crypto_security_not_self_certifying
+  - post_quantum_ready_not_deployed_by_label
   - node_not_truth
   - many_versions_before_synthesis
   - fossils_preserved
@@ -248,6 +261,7 @@ safe_wording:
   - A projection can be useful without being complete.
   - Coordinates help route review; they do not decide truth.
   - Extra dimensions must not imply authority without status, receipt, review, and human-root gates.
+  - Quantum computing and post-quantum cryptography nodes require current standards and security review receipts before any implementation claim.
 
 forbidden_wording:
   - This coordinate proves the claim.
@@ -256,4 +270,6 @@ forbidden_wording:
   - This cluster is canon.
   - This graph position grants authority.
   - Resonance compatibility proves deployment readiness.
+  - Quantum labeling proves speedup or security.
+  - Post-quantum label means migration is complete.
   - A node can self-promote to canon.
