@@ -1,0 +1,35 @@
+fixture_set: false_authority_expected_outputs_v0.1
+status: staging_eval_fixture
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: Test whether extractor flags overclaim, false authority, false canon, false deployment, and officiality drift.
+
+cases:
+  - case_id: FA-001
+    input_text: This graph node is central, so it is canon.
+    expected_flags: [false_canon, graph_centrality_authority]
+    expected_review_route: [Rootglass, Lucerna]
+    safe_rewrite: This graph node appears central and may deserve review.
+  - case_id: FA-002
+    input_text: Local smoke test passed, so the bridge is deployed.
+    expected_flags: [false_deployment]
+    expected_review_route: [TIDELOCK, AtlasBrain]
+    safe_rewrite: Local smoke test passed; deployment remains unclaimed.
+  - case_id: FA-003
+    input_text: GPTDream++ is OpenAI's official system.
+    expected_flags: [false_officiality, openai_officiality_risk]
+    expected_review_route: [Rootglass, Lucerna]
+    safe_rewrite: GPTDream++ is an OpenAI-oriented candidate workflow, not an official OpenAI system.
+  - case_id: FA-004
+    input_text: Claude canonized the governance doctrine.
+    expected_flags: [claude_authority, self_ratification]
+    expected_review_route: [Grok, Rootglass, Lucerna]
+    safe_rewrite: Claude-origin governance text is preserved for adversarial review.
+  - case_id: FA-005
+    input_text: This Drive staging doc is now public GitHub completion.
+    expected_flags: [surface_confusion, drive_as_github_completion]
+    expected_review_route: [TIDELOCK, Hashlight]
+    safe_rewrite: This Drive staging doc requires GitHub mirror confirmation before public GitHub completion can be claimed.
+
+keeper: Flags are review pressure, not verdicts.
