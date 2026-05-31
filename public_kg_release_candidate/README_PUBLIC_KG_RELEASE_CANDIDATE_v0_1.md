@@ -6,7 +6,10 @@ CANON: no
 DEPLOYMENT: no
 AUTHORITY: none
 PUBLIC RELEASE: blocked pending gates
-HUMAN-ROOT REVIEW REQUIRED: yes
+SINGLE SOURCE OF TRUTH: rejected
+PANTHEON ADVERSARIAL REVIEW REQUIRED: yes
+HUMAN-ROOT ADJUDICATION REQUIRED: yes
+WEBSITE PLACEMENT REQUIRED FOR CANON: yes
 ```
 
 ## Purpose
@@ -14,6 +17,12 @@ HUMAN-ROOT REVIEW REQUIRED: yes
 This directory stages public-candidate review material for the Atlas Lattice public knowledge graph effort.
 
 It is not a release authorization. It is an inspection bundle.
+
+## Working doctrine
+
+Atlas Lattice does not use a single source of truth.
+
+The bundle preserves many versions before synthesis, keeps fossils and failed branches addressable, rejects hierarchy as a default organizing assumption, and treats canon as impossible until adversarial Pantheon review, human-root adjudication, and placement on the canonical website surface.
 
 ## Current included modules
 
@@ -31,6 +40,7 @@ PUBLIC RELEASE: blocked
 PUBLIC-CANDIDATE PREP: proceeding
 CANON PROMOTION: not requested
 AUTHORITY: none
+SINGLE SOURCE OF TRUTH: no
 ```
 
 ## Required before public release
@@ -42,8 +52,11 @@ AUTHORITY: none
 - Quarantine review
 - Claim shredder pass
 - Public communication pass
-- Human-root promotion decision event
+- Preservation of competing versions / fossils
+- Pantheon adversarial review
+- Human-root adjudication
+- Website placement if canon is claimed
 
 ## Operating rule
 
-Index first. Validate second. Publish only after gate. Canon only after human-root.
+Many versions before synthesis. Fossils preserved. No hierarchy. No single source of truth. Canon only after Pantheon review, human-root adjudication, and website placement.
