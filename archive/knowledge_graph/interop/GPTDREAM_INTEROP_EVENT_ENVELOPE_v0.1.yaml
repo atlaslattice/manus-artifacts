@@ -1,0 +1,290 @@
+artifact_id: GPTDREAM_INTEROP_EVENT_ENVELOPE_v0.1
+schema_version: "0.1"
+status: clean_room_candidate_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+official_openai_claim: none
+official_vendor_claims: none
+raw_confidential_source_mirror: false
+created_utc: "2026-05-31T00:00:00Z"
+
+purpose: >
+  Define a public-safe event envelope for GPTDream / Aetherforge / Atlas Lattice
+  interop across GitHub, OneDrive, Notion, model outputs, review lanes, and
+  website canon surfaces. This is a clean-room candidate schema intended to make
+  graph events, mirror events, dream deltas, review packets, and public-release
+  gates inspectable without granting authority to any single provider or model.
+
+root_rule: >
+  OpenAI moves work. Neutral substrate preserves plurality. GitHub keeps
+  receipts. OneDrive preserves the workspace. Website crowns canon. Human-root
+  grants authority.
+
+boundary:
+  - event_is_not_truth
+  - event_is_not_canon
+  - event_is_not_authority
+  - event_is_not_deployment
+  - event_is_not_permission
+  - graph_edge_is_not_promotion
+  - coordinate_is_not_proof
+  - openai_compatible_is_not_openai_official
+  - vendor_reference_is_not_vendor_participation
+
+recommended_format:
+  wire_style: json_object
+  serialization: canonical_json_for_hashing
+  hash_algorithm: sha256
+  json_schema_required: true
+  markdown_render_required: true
+
+required_fields:
+  - event_id
+  - event_type
+  - event_created_utc
+  - source_surface
+  - source_ref
+  - actor_or_lane
+  - artifact_refs
+  - authority_scope
+  - canon_status
+  - deployment_status
+  - privacy_status
+  - raw_export_status
+  - evidence_refs
+  - review_state
+  - next_safest_action
+
+field_definitions:
+  event_id:
+    type: string
+    format: "gptdream.event.<date>.<slug>.<hash8>"
+    description: Globally unique event identifier.
+  event_type:
+    type: enum
+    allowed:
+      - source_ingested
+      - mirror_completed
+      - coordinate_assigned
+      - claim_extracted
+      - evidence_anchor_created
+      - missing_receipt_logged
+      - contradiction_logged
+      - supersession_logged
+      - dream_delta_emitted
+      - play_output_emitted
+      - work_output_emitted
+      - review_requested
+      - review_completed
+      - public_release_gate_requested
+      - website_canon_crosswalk_added
+      - adapter_ingestion_requested
+      - adapter_ingestion_completed
+      - quarantine_applied
+      - quarantine_released
+  event_created_utc:
+    type: string
+    format: ISO-8601 UTC timestamp
+  source_surface:
+    type: enum
+    allowed:
+      - website
+      - github
+      - onedrive
+      - notion
+      - chatgpt_upload
+      - chat_transcript
+      - model_output
+      - local_cli
+      - external_public_source
+      - private_source
+      - unknown
+  source_ref:
+    type: object
+    required: [ref_type, locator, raw_available]
+    properties:
+      ref_type: "url | path | commit_sha | issue | pr | upload_id | transcript_pointer | hash | unknown"
+      locator: string
+      raw_available: boolean
+      notes: string
+  actor_or_lane:
+    type: object
+    properties:
+      actor_name: string
+      lane: string
+      model_or_tool: string
+      human_root_initiated: boolean
+  artifact_refs:
+    type: array
+    item_fields:
+      artifact_id: string
+      title: string
+      path_or_url: string
+      hsn_coordinate: string
+      d12_dimensions: array
+      status: string
+  authority_scope:
+    type: enum
+    allowed: [none, human_root_only, review_lane_only, website_canon, unknown]
+    default: none
+  canon_status:
+    type: enum
+    allowed: [not_canon, website_canon, candidate_public, review_required, rejected, superseded, unknown]
+    default: not_canon
+  deployment_status:
+    type: enum
+    allowed: [not_deployed, simulation_only, local_dry_run, staging_candidate, deployed_with_receipt, unknown]
+    default: not_deployed
+  privacy_status:
+    type: enum
+    allowed: [public, private, mixed, redacted, confidential_quarantine, unknown]
+  raw_export_status:
+    type: enum
+    allowed:
+      - full_raw_attached
+      - full_raw_hashed
+      - partial_raw
+      - pointer_only
+      - summary_only
+      - unavailable
+      - confidential_quarantine
+      - unknown
+  evidence_refs:
+    type: array
+    item_fields:
+      evidence_id: string
+      evidence_type: "commit | issue_comment | file_path | hash | upload | notion_page | onedrive_path | website_url | test_run | workflow_run | human_root_note"
+      locator: string
+      confidence: "C0 | C1 | C2 | C3 | C4 | C5"
+  review_state:
+    type: enum
+    allowed:
+      - unreviewed
+      - lucerna_needed
+      - hashlight_needed
+      - sable_vesper_needed
+      - tidelock_needed
+      - council_needed
+      - human_root_needed
+      - reviewed_candidate
+      - blocked
+      - approved_for_next_step
+  next_safest_action:
+    type: string
+
+optional_fields:
+  trace:
+    type: object
+    properties:
+      parent_event_id: string
+      correlation_id: string
+      source_commit_sha: string
+      workflow_run_id: string
+      issue_number: integer
+      pr_number: integer
+  claim_payload:
+    type: object
+    properties:
+      claims_extracted: array
+      strongest_safe_claim: string
+      overclaims_to_avoid: array
+      missing_evidence: array
+      confidence: "C0 | C1 | C2 | C3 | C4 | C5"
+  coordinate_payload:
+    type: object
+    properties:
+      hsn_coordinate: string
+      d12_dimensions: array
+      coordinate_confidence: "low | medium | high"
+      coordinate_is_candidate: boolean
+      rationale: string
+  mirror_payload:
+    type: object
+    properties:
+      source_path: string
+      mirror_path: string
+      source_commit_sha: string
+      mirror_status: "copied | needs_update | conflict | skipped | blocked | unknown"
+      conflict_policy: "preserve_both | overwrite_forbidden | manual_review"
+  quarantine_payload:
+    type: object
+    properties:
+      quarantine_reason: string
+      raw_public_mirror_allowed: boolean
+      clean_room_derivative_allowed: boolean
+      reviewer_required: array
+
+example_events:
+  mirror_completed:
+    event_id: gptdream.event.2026-05-31.mirror_completed.example0001
+    event_type: mirror_completed
+    event_created_utc: "2026-05-31T00:00:00Z"
+    source_surface: github
+    source_ref:
+      ref_type: path
+      locator: docs/LATTICE_HYPERCUBE_12x12x12.md
+      raw_available: true
+      notes: Public candidate explainer mirrored to OneDrive by local CLI.
+    actor_or_lane:
+      actor_name: Grok CLI
+      lane: mirror_lane
+      model_or_tool: local_cli
+      human_root_initiated: true
+    artifact_refs:
+      - artifact_id: lattice.public_explainer.v0_1
+        title: Lattice Hypercube 12x12x12 Public Explainer
+        path_or_url: docs/LATTICE_HYPERCUBE_12x12x12.md
+        hsn_coordinate: H10.S04.N02
+        d12_dimensions: [D01, D05]
+        status: candidate
+    authority_scope: none
+    canon_status: not_canon
+    deployment_status: not_deployed
+    privacy_status: public
+    raw_export_status: full_raw_hashed
+    evidence_refs: []
+    review_state: hashlight_needed
+    next_safest_action: Verify mirror hash and generate coordinates.seed.jsonl entry.
+
+  quarantine_applied:
+    event_id: gptdream.event.2026-05-31.quarantine_applied.example0002
+    event_type: quarantine_applied
+    event_created_utc: "2026-05-31T00:00:00Z"
+    source_surface: chatgpt_upload
+    source_ref:
+      ref_type: upload_id
+      locator: confidential_uploaded_pdf
+      raw_available: true
+      notes: Raw file is quarantined due to confidentiality labels.
+    actor_or_lane:
+      actor_name: GPTBrain / Lucerna
+      lane: provenance_review
+      model_or_tool: ChatGPT
+      human_root_initiated: true
+    artifact_refs: []
+    authority_scope: none
+    canon_status: not_canon
+    deployment_status: not_deployed
+    privacy_status: confidential_quarantine
+    raw_export_status: confidential_quarantine
+    evidence_refs: []
+    review_state: lucerna_needed
+    next_safest_action: Create only clean-room derivative if human-root approves.
+
+validation_rules:
+  - name: no_authority_without_human_root
+    rule: authority_scope must remain none unless human-root or website canon receipt is attached.
+  - name: no_public_mirror_for_confidential_quarantine
+    rule: raw_export_status confidential_quarantine implies raw_public_mirror_allowed false.
+  - name: coordinate_not_canon
+    rule: hsn_coordinate presence must not change canon_status.
+  - name: deployment_requires_receipt
+    rule: deployment_status deployed_with_receipt requires at least one test_run or deployment evidence_ref.
+  - name: openai_compatible_not_official
+    rule: provider compatibility fields must not imply official endorsement.
+
+keeper: >
+  Events make the octopus traceable. They do not crown the octopus. Every event
+  points to receipts, gaps, review lanes, and next safest action. Human-root remains
+  root.
