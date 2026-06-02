@@ -1,0 +1,246 @@
+artifact_id: GPTDREAM_PROVIDER_ROLE_MATRIX_v0.1
+schema_version: "0.1"
+status: clean_room_candidate_matrix
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+official_openai_claim: none
+official_vendor_claims: none
+raw_confidential_source_mirror: false
+created_utc: "2026-05-31T00:00:00Z"
+
+purpose: >
+  Define clean-room provider and surface roles for GPTDream / Aetherforge / Atlas
+  Lattice without implying official endorsement, partnership, deployment, or
+  authority. The matrix separates canon, receipts, raw workspace, model reasoning,
+  infrastructure, review, and human-root authority.
+
+root_rule: >
+  Providers and tools can move work, preserve receipts, run models, host data, and
+  support review. They do not crown canon or replace human-root adjudication.
+
+surfaces:
+  website:
+    role: canon_surface
+    owns:
+      - published_project_ontology
+      - public_canon_language
+      - canonical_lattice_pages
+    does_not_own:
+      - raw_workspace
+      - GitHub implementation truth
+      - model outputs
+    authority_scope: website_canon_only
+    notes: Canon status requires website URL and human-root acceptance.
+
+  github:
+    role: public_receipt_shelf_and_kg_workbench
+    owns:
+      - commits
+      - issues
+      - pull_requests
+      - public_candidate_docs
+      - schemas
+      - generated_seed_files
+      - validation_reports
+    does_not_own:
+      - website_canon_by_default
+      - private_raw_files
+      - deployment_authority
+    authority_scope: receipt_substrate
+    notes: GitHub existence is not canon by itself.
+
+  onedrive:
+    role: raw_local_mirror_and_staged_workspace
+    owns:
+      - raw_and_staged_files
+      - local_mirror_batches
+      - geometric_archive_working_copy
+      - private_or_mixed_material
+    does_not_own:
+      - public_release_by_default
+      - website_canon_by_default
+      - GitHub_commit_truth
+    authority_scope: workspace
+    notes: OneDrive mirror receipts should include source path, commit SHA, mirror status, and raw/export status.
+
+  notion:
+    role: semantic_archive_and_planning_workspace
+    owns:
+      - legacy_maps
+      - planning_pages
+      - source_root_inventory
+      - semantic scaffolds
+    does_not_own:
+      - current_truth_by_default
+      - website_canon_by_default
+      - deployment_state
+    authority_scope: archive_workspace
+    notes: Notion may be stale, fossilized, or partially mirrored.
+
+model_and_tool_lanes:
+  openai:
+    role: reasoning_cockpit_and_workflow_accelerator
+    strong_uses:
+      - claim_extraction
+      - source_summarization
+      - file_search
+      - structured_outputs
+      - tool_calling
+      - codex_patch_review
+      - evals_and_guardrails
+      - public_safe_synthesis
+    boundaries:
+      - not_official_endorsement
+      - not_sole_memory
+      - not_canon_authority
+      - not_deployment_authority
+      - not_human_root_replacement
+    preferred_posture: OpenAI_first_at_workflow_layer_provider_neutral_at_architecture_layer
+
+  gemini:
+    role: engineering_simulation_and_long_context_review_lane
+    strong_uses:
+      - systems_architecture_review
+      - long_context_synthesis
+      - meta_invariant_generation
+      - implementation_risk_analysis
+      - multimodal_review
+    boundaries:
+      - not_canon_authority
+      - not_deployment_authority
+      - implementation_language_requires_receipts
+    preferred_posture: peer_review_and_architecture_lane
+
+  grok:
+    role: adversarial_play_rave_node_and_mirror_momentum_lane
+    strong_uses:
+      - adversarial_review
+      - momentum_and_field_reports
+      - OneDrive_mirror_coordination
+      - contradiction_pressure
+      - public_energy_translation
+    boundaries:
+      - not_canon_authority
+      - not_official_company_claim
+      - high_velocity_claims_require_receipts
+    preferred_posture: adversarial_and_mirror_lane
+
+  copilot_codex:
+    role: code_patch_and_repo_execution_lane
+    strong_uses:
+      - PR_generation
+      - test_creation
+      - file_scaffolding
+      - implementation_patches
+      - branch_hygiene
+    boundaries:
+      - no_silent_merge
+      - no_completion_claim_without_CI
+      - no_deployment_claim_without_receipt
+    preferred_posture: patch_under_TIDELOCK_discipline
+
+  sheldonbrain:
+    role: ingestion_and_crosswalk_engine
+    strong_uses:
+      - raw_log_parsing
+      - turns_events_extraction
+      - source_root_inventory
+      - HSN_coordinate_assignment
+      - adapter_ingestion
+    boundaries:
+      - parser_output_is_retrieval_aid_not_truth
+      - no_synthesis_across_everything_yet_without_review
+    preferred_posture: ingestion_before_synthesis
+
+review_lanes:
+  lucerna:
+    role: provenance_and_public_safe_receipt_review
+    checks:
+      - unsupported_officiality
+      - missing_receipts
+      - public_wording
+      - source_status
+  hashlight:
+    role: hash_and_raw_lineage_anchor
+    checks:
+      - sha256
+      - commit_sha
+      - raw_export_status
+      - mirror_integrity
+  sable_vesper:
+    role: formal_boundary_and_math_precision
+    checks:
+      - term_definitions
+      - claim_classification
+      - symbolic_vs_scientific_claims
+      - schema_consistency
+  tidelock:
+    role: repo_truth_and_merge_discipline
+    checks:
+      - PR_state
+      - CI_status
+      - changed_file_scope
+      - merge_order
+      - branch_drift
+  rootglass:
+    role: posture_and_human_readability
+    checks:
+      - overintensity
+      - public_safe_tone
+      - room_state
+      - grounding
+  human_root:
+    role: final_adjudicator
+    checks:
+      - website_canon_promotion
+      - public_release_approval
+      - exception_waiver
+      - authority_grant
+
+provider_classes:
+  infrastructure_provider:
+    examples_as_classes_only:
+      - cloud_compute
+      - identity_provider
+      - object_storage
+      - observability_backend
+      - HSM_or_key_management
+    boundary: class_not_partnership
+  model_provider:
+    examples_as_classes_only:
+      - language_model
+      - multimodal_model
+      - code_model
+      - embedding_model
+      - reasoning_model
+    boundary: compatibility_not_endorsement
+  archive_provider:
+    examples_as_classes_only:
+      - source_control
+      - local_cloud_drive
+      - workspace_docs
+      - website_cms
+    boundary: storage_not_authority
+
+integration_rules:
+  - raw_before_parsed
+  - parsed_before_claim
+  - claim_before_synthesis
+  - synthesis_before_public_wording
+  - public_wording_before_website_canon
+  - website_canon_before_promotion
+  - human_root_before_authority
+
+anti_overclaim_rules:
+  - vendor_reference_does_not_imply_vendor_participation
+  - OpenAI_compatible_does_not_mean_OpenAI_official
+  - model_output_does_not_mean_fact
+  - GitHub_commit_does_not_mean_canon
+  - OneDrive_mirror_does_not_mean_public_release
+  - coordinate_assignment_does_not_mean_truth
+  - review_lane_signal_does_not_mean_ratification
+
+keeper: >
+  The living archive uses many providers without becoming owned by any provider.
+  Each lane keeps its role. Human-root grants authority. Website crowns canon.
