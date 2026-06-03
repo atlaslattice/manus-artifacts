@@ -1,0 +1,41 @@
+name: Public Release Gate Review
+about: Request review for an artifact before public_candidate or public_safe mirror. Enforces default blocked posture.
+title: '[GATE-REVIEW] '
+labels: ['public-release-gate', 'candidate', 'review']
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Public release is a gate, not a vibe.** Default blocked. See PUBLIC_RELEASE_GATE.md and machine_readable_release_gate_rules.yaml.
+  - type: input
+    id: artifact_path
+    attributes:
+      label: Path or bundle ref
+      validations:
+        required: true
+  - type: dropdown
+    id: proposed_class
+    attributes:
+      label: Proposed release_class
+      options: [public_safe, public_candidate, needs_review, private, quarantine]
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Self-check (all must be true for GREEN)
+      options:
+        - label: public-safe summary present (no raw private)
+        - label: receipt-labeled + sha if export
+        - label: non-sensitive
+        - label: non-deployable language
+        - label: canon_status:not_canon, deployment:not_deployment, authority:none explicit
+        - label: strongest_safe_claim + overclaims_to_avoid listed
+  - type: textarea
+    id: blockers
+    attributes:
+      label: Known blockers or sensitive terms
+  - type: textarea
+    id: suggested_rewrite_or_quarantine
+    attributes:
+      label: Action requested (promote / redact / quarantine / review lane)
