@@ -1,0 +1,73 @@
+---
+source_surface: github
+source_repo: atlaslattice/manus-artifacts
+github_path: public_candidate_bundle_0001/BUNDLE_0001_FILE_MANIFEST.yaml
+promoted_from: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/BUNDLE_0001_FILE_MANIFEST.yaml
+promotion_record:
+  source_archive_path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/BUNDLE_0001_FILE_MANIFEST.yaml
+  live_target_path: public_candidate_bundle_0001/BUNDLE_0001_FILE_MANIFEST.yaml
+  promotion_status: promoted_to_live_public_candidate
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  preserves_original: true
+  review_required: true
+  promoted_by: Grok CLI patch execution 2026-06-03 per verification packet + BUNDLE_SURFACE_RECONCILIATION.md
+  sha_source: 335942bcedcfee43781ecfee424ca651dfa2eda6
+release_class: public_candidate
+privacy_status: public_safe
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+---
+
+# PUBLIC_CANDIDATE_BUNDLE_0001 (promoted live version)
+# Status: public candidate (promoted from archive per reconciliation)
+# Canon: no
+# Deployment: no
+# Authority: none
+# Purpose: create the first public-safe inspection doorway before mass ingestion. Live surface per BUNDLE_SURFACE_RECONCILIATION.md crosswalk.
+
+bundle_id: PUBLIC_CANDIDATE_BUNDLE_0001
+status: public_candidate_live
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+sprint: SPR-001_RECEIPT_SPINE
+promotion_note: "This is the promoted public-facing copy. Original archive version preserved for lineage (INV-0). See BUNDLE_SURFACE_RECONCILIATION.md for crosswalk and supersession labels."
+
+# (content from archive manifest below, with added public frontmatter; full original in archive/)
+
+required_boundary:
+  - graph_edge_is_not_promotion
+  - cluster_is_not_canon
+  - public_repo_is_not_proof
+  - model_output_is_not_authority
+  - public_visibility_requires_release_review
+  - human_root_has_final_authority
+
+# ... (rest of archive content preserved for fidelity; key files now promoted with receipts)
+
+# Promoted files (this patch)
+promoted_in_this_patch:
+  - BUNDLE_0001_FILE_MANIFEST.yaml (this file)
+  - PR_CHECKLIST.md
+  - (H04_COMPUTATION_SUBSTRATES.md and schema added to docs/ontology/ and bundle/docs/ as related M06 item)
+
+review_lanes:
+  Hashlight: raw lineage / hashes / receipts
+  Lucerna: public-safe wording / provenance / omissions
+  TIDELOCK: GitHub path truth / commits / merge order
+  Rootglass: canon boundary / room state / overclaim pressure
+  Grok: adversarial review / Claude contamination / contradictions
+  GPTBrain: schema calibration / claim packet structure
+  HumanRoot: final authority only
+
+keeper: |
+  The archive surface is the film room.
+  The live surface is the public field.
+  The Rainbow Yin Yang Lattice is the source-code geometry.
+  No work is lost. No fossil is erased. No candidate crowns itself.
+  Public release is a gate. The gate remains held.
+
+disclaimers: "CANDIDATE — NOT CANON — authority:none — human-root decides. Promoted per Grok CLI verification + reconciliation. Receipts before further promotion. graph edge ≠ authority. NOTHING DIES."
