@@ -1,0 +1,31 @@
+name: Contradiction Log
+about: Log a contradiction, conflicting claims, or "both A and not-A" in the archive/lattice. M09 / keeper work. Preserves (INV-0), routes to review.
+title: '[CONTRADICTION] '
+labels: ['contradiction', 'missing-receipt', 'candidate']
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Contradictions are first-class. Nothing dies. Log here so the graph can route them without pretending they are resolved.
+  - type: input
+    id: artifact_a
+    attributes:
+      label: Artifact / claim A (with receipt if any)
+  - type: input
+    id: artifact_b
+    attributes:
+      label: Artifact / claim B (conflicts with A)
+  - type: textarea
+    id: description
+    attributes:
+      label: Nature of contradiction (e.g. "X claims deployment; Y receipt shows placeholder")
+  - type: input
+    id: suggested_route
+    attributes:
+      label: Suggested review lane (TIDELOCK / Rootglass / Lucerna / Grok CLI)
+  - type: textarea
+    id: safe_wording
+    attributes:
+      label: Safe public wording for the contradiction (or "quarantine until receipts")
