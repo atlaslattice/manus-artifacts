@@ -1,0 +1,56 @@
+name: Overclaim Report
+about: Report potential overclaim, canon drift, deployment language, or authority claim in public candidate material. Routes to review per PUBLIC_RELEASE_GATE.
+title: '[OVERCLAIM] '
+labels: ['overclaim', 'candidate', 'review']
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **CANDIDATE — NOT CANON — authority:none**
+        Use this to flag risky language before it fools anyone. Grok CLI / adversarial review loves these.
+  - type: input
+    id: artifact_path
+    attributes:
+      label: Artifact / file / PR / issue path
+      placeholder: e.g. docs/unified-field-v4.0.md or public_candidate_bundle_0001/...
+    validations:
+      required: true
+  - type: textarea
+    id: risky_text
+    attributes:
+      label: Exact risky text / claim
+      description: Quote the overclaim (e.g. "CANONICAL — Supersedes", "first OS with...", "is deployed", "official", "proof").
+    validations:
+      required: true
+  - type: textarea
+    id: why_risky
+    attributes:
+      label: Why this violates gate / hypercube overclaims_to_avoid / graph doctrine
+      description: Ref LATTICE explainer, RELEASE_GATE, "graph edge ≠ authority".
+  - type: textarea
+    id: suggested_safe_rewrite
+    attributes:
+      label: Suggested public-safe rewrite (or "quarantine to archive")
+  - type: input
+    id: source_receipt
+    attributes:
+      label: Source receipt / claim id / commit sha (if any)
+  - type: dropdown
+    id: suggested_route
+    attributes:
+      label: Suggested review lane
+      options:
+        - Rootglass (canon/authority drift)
+        - TIDELOCK (repo/hygiene)
+        - Lucerna (wording/provenance)
+        - AtlasBrain (public claims)
+        - Grok CLI adversarial
+        - Human-root (Dave)
+    validations:
+      required: true
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional context / related packets / 12x12 task ref
