@@ -28,7 +28,8 @@ jobs:
       - name: Export lattice graph
         run: python graph_export.py --json > lattice-graph.generated.json
       - name: Inspect lattice graph summary
-        run: python - <<'PY'
+        run: |
+          python - <<'PY'
           import json
           from pathlib import Path
           graph = json.loads(Path('lattice-graph.generated.json').read_text())
@@ -40,7 +41,8 @@ jobs:
       - name: Export Children Swarm graph
         run: python children_swarm_graph_export.py --json > children-swarm-graph.generated.json
       - name: Inspect Children Swarm graph summary
-        run: python - <<'PY'
+        run: |
+          python - <<'PY'
           import json
           from pathlib import Path
           graph = json.loads(Path('children-swarm-graph.generated.json').read_text())
@@ -54,7 +56,8 @@ jobs:
       - name: Export Lucerna missing receipt graph
         run: python missing_receipt_graph_export.py --json > lucerna-gap-register-graph.generated.json
       - name: Inspect Lucerna missing receipt graph summary
-        run: python - <<'PY'
+        run: |
+          python - <<'PY'
           import json
           from pathlib import Path
           graph = json.loads(Path('lucerna-gap-register-graph.generated.json').read_text())
@@ -66,7 +69,8 @@ jobs:
       - name: Run REM 100-year simulation
         run: python rem_100_year_simulation.py --json --seed 144 > rem-100-year.generated.json
       - name: Inspect REM 100-year simulation summary
-        run: python - <<'PY'
+        run: |
+          python - <<'PY'
           import json
           from pathlib import Path
           rem = json.loads(Path('rem-100-year.generated.json').read_text())
