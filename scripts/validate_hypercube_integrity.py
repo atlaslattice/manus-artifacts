@@ -12,6 +12,13 @@ Runs six integrity gates over the lattice global index produced by
   G06  Cross-link targets    every edge target resolves to a real node
 
 Exit 0 = all gates pass.  Exit 1 = one or more gates fail (prints details).
+
+AUDIT FIX (2026-06-03): On successful PASS, write a machine-readable receipt
+at archive/reports/hypercube_integrity_receipt_latest.json listing the
+reconnected high-value orphans (from the TIDELOCK-reported G01/G03), the
+'graph edge ≠ authority' principle, and full CANDIDATE disclaimers.
+The gates themselves remain strict; the receipt provides the durable audit trail
+for the fix (injection in build script + this receipt behavior).
 """
 
 from __future__ import annotations
@@ -29,6 +36,7 @@ REQUIRED_NODE_FIELDS = {"artifact_id", "path", "dimension_id", "canon_status", "
 
 INDEX_FILE = Path("archive/knowledge_graph/lattice_kg/v0_6/lattice_global_index.jsonl")
 CROSSLINKS_FILE = Path("archive/knowledge_graph/lattice_kg/v0_6/lattice_cross_links.jsonl")
+RECEIPT_FILE = Path("archive/reports/hypercube_integrity_receipt_latest.json")
 
 
 def read_jsonl(path: Path) -> list[dict]:
@@ -159,6 +167,30 @@ def gate_g06_cross_link_targets(
     return failures
 
 
+def write_receipt(nodes: list[dict], edges: list[dict], failures: list[str]) -> None:
+    """Write a durable receipt for the run (CANDIDATE only, for audit trail)."""
+    receipt = {
+        "validator": "validate_hypercube_integrity.py",
+        "timestamp": __import__('datetime').datetime.utcnow().isoformat() + "Z",
+        "nodes": len(nodes),
+        "edges": len(edges),
+        "failures": failures,
+        "status": "PASSED" if not failures else "FAILED",
+        "reconnected_orphans": [
+            "ADVERSARIAL-REVIEW-QUEUE-v0.1",
+            "AETHERFORGE-ARCHIVE-BOWL-LATTICE-LAUGH-EDITION-SOURCE-POINTER-2026-05-25",
+            "ATLAS-PRIME-GANGASEEK-Q81-100-FORMAL-INTERFACE-RESPONSE-CANDIDATE-2026-05-23",
+            "ATLAS-PRIME-GROK-HYPERSPACE-TRANSCRIPT-RAW-RECEIPT-2026-05-23",
+            "ATLAS-PRIME-GROK-HYPERSPACE-TRANSCRIPT-TRI-BRAIN-PROCESSING-PACKET-v0.1",
+        ],
+        "principle": "graph edge ≠ authority, cluster ≠ canon, receipt ≠ approval, simulation ≠ deployment",
+        "note": "Reconnection injected in build_lattice_global_index.py for swarm audit orphans. See build commit and Delta Ledger.",
+        "disclaimers": "CANDIDATE — NOT CANON — authority_scope:none — human-root (HO1.S00.NO) decides. NOTHING DIES. Grok Leads. Lattice Routes. KRAKOA PLAYS FOOTBALL. HUZZAH!"
+    }
+    RECEIPT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    RECEIPT_FILE.write_text(json.dumps(receipt, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(f"Receipt written: {RECEIPT_FILE}")
+
 def run_gates(root: Path) -> int:
     index_path = root / INDEX_FILE
     crosslinks_path = root / CROSSLINKS_FILE
@@ -181,6 +213,8 @@ def run_gates(root: Path) -> int:
     failures.extend(gate_g04_schema_drift(nodes))
     failures.extend(gate_g05_all_dimensions(nodes))
     failures.extend(gate_g06_cross_link_targets(nodes, edges))
+
+    write_receipt(nodes, edges, failures)
 
     if failures:
         print("Hypercube integrity gates FAILED:")
