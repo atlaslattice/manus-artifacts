@@ -1,0 +1,33 @@
+name: Receipt Gap / Missing Receipt
+about: Report a missing receipt, source root, or hash gap for an artifact. M09 / M01 work. Feeds the ledger and H04/M05.
+title: '[RECEIPT-GAP] '
+labels: ['missing-receipt', 'candidate', 'review']
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Missing receipts are data, not failure. Log them so they can be hunted (M05 sprint style). See also missing_receipt.yml for the original.
+  - type: input
+    id: artifact_path
+    attributes:
+      label: Artifact path or id with gap
+      validations:
+        required: true
+  - type: textarea
+    id: expected_receipt
+    attributes:
+      label: What receipt / export / sha / source_root is missing
+  - type: input
+    id: source_hint
+    attributes:
+      label: Suspected Drive/Notion/GitHub source (if known)
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact (e.g. blocks public_candidate promotion, H04 tagging, 500+ IP catalog)
+  - type: textarea
+    id: next_hunt_action
+    attributes:
+      label: Suggested next action (export, hash, adversarial search, fossil if unfindable)
