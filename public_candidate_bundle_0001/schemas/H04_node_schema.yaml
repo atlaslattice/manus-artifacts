@@ -1,0 +1,65 @@
+# H04_node_schema.yaml
+# Public candidate schema for H04 Computation Substrates nodes in Atlas Lattice / Rainbow Yin Yang 12x12x12
+# Status: public_candidate
+# Canon: no
+# Deployment: no
+# Authority: none
+# Per Wave 002 M06 + first12 task10 + Grok CLI patch from verification packet
+
+schema_name: H04_node_schema
+version: v0.1_candidate
+lattice_coordinate: H04 + 12x12x12 + public KG
+earth_anchor: H00.S00.N00
+
+node:
+  required:
+    - node_id          # e.g. H04.NM.01 or H04.11.neuromorphic
+    - substrate_type   # neuromorphic | symbolic | phase_state | acoustic | em_photonic | ...
+    - linked_bands     # array of 1-12 band refs, e.g. ["11 neuromorphic/memory/adaptive", "12 symbolic/color harmonic/cultural resonance"]
+    - computation_principle: string   # short description of how this substrate "computes" / transforms
+    - public_safe_example: string     # concrete, non-private, non-raw example from archive or toy
+    - receipt_refs: array             # list of claim/receipt ids or paths that ground this node
+    - canon_status: "not_canon"       # always for public candidate
+    - deployment_status: "not_deployed"
+    - authority_scope: "none"
+    - keeper_line: string             # e.g. "This substrate models transformation. It does not decide truth."
+  optional:
+    - review_lane: string             # TIDELOCK | Rootglass | Lucerna | ...
+    - overclaims_to_avoid: array
+    - aetherforge_quest_hint: string  # how to play/explore this substrate in Aetherforge without claiming
+    - symbolic_boundary_note: string  # ref to M10 tasks: keep magic separate from measurement
+
+# Example node (toy, public-safe)
+example:
+  node_id: H04.11.neuromorphic
+  substrate_type: neuromorphic
+  linked_bands: ["11 neuromorphic/memory/adaptive"]
+  computation_principle: "State is stored and recalled with nonlinear response and feedback; adaptation occurs via resonance with input patterns."
+  public_safe_example: "Archive artifact tagged with acoustic + memory band shows repeated motif that 'remembers' prior context without raw transcript."
+  receipt_refs: ["claim-lattice-hypercube-...-20260603", "waterboy-lattice-..."]
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  keeper_line: "Neuromorphic models how the lattice holds state for review. It does not run the archive."
+  review_lane: TIDELOCK
+  overclaims_to_avoid: ["this is biological memory", "Aetherforge play verifies the model"]
+  aetherforge_quest_hint: "Quest: find 3 archive items that 'adapt' their motif when probed with new context. Log as receipt, do not claim proof."
+
+# Integration notes
+integration:
+  - ties_to: LATTICE_HYPERCUBE_12x12x12.md (bands 11/12 primary)
+  - ties_to: PUBLIC_RELEASE_GATE.md (all H04 artifacts start blocked)
+  - ties_to: Wave 002 M06 + first12 task 10
+  - ties_to: M10 Symbolic Claim Boundary (for band 12)
+  - graph_edge: mapped_to_cell, yields_claim, receipted_by
+  - best_in_world_test: Stranger can answer: what does this substrate claim to transform? What receipts ground it? What blocks stronger claims? Next safe play or review action?
+
+# Keeper
+keeper: |
+  H04 names how lattice cells and bands may transform knowledge and evidence.
+  Substrates are candidate models, not operating systems or minds.
+  Play discovers patterns. Receipts and human-root decide what is usable.
+  The gate remains held. NOTHING DIES. graph edge ≠ authority.
+  Schema is a trellis, not the vine.
+
+disclaimers: "CANDIDATE — NOT CANON — authority:none — human-root (HO1.S00.NO) decides. All public candidate material. Receipts before wiring."
