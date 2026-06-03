@@ -1,10 +1,26 @@
-# ⚡ ALUMINUM OS — UNIFIED FIELD v4.0 (March 20, 2026)
+---
+source_surface: github
+source_repo: atlaslattice/manus-artifacts
+github_path: docs/unified-field-v4.0.md
+release_class: needs_review
+privacy_status: public_safe
+canon_status: not_canon  # historical language; under review per Grok CLI packet
+deployment_status: not_deployed
+authority_scope: none
+review_status: candidate
+blockers: ["canonical_language_pre-dates_PUBLIC_RELEASE_GATE", "supersedes_claims_routed_to_Rootglass"]
+human_root_required_for_promotion: true
+---
 
-**Version:** 4.0
+# ⚡ ALUMINUM OS — UNIFIED FIELD v4.0 (March 20, 2026) — PUBLIC CANDIDATE / NEEDS_REVIEW
+
+**Version:** 4.0 (historical candidate substrate doc)
 **Date:** March 20, 2026
 **Compiled By:** Constitutional Scribe — Atlas Lattice Foundation
-**Status:** 🟢 CANONICAL — Supersedes v1.0, v2.0, v3.0
-**Repos:** splitmerge420/aluminum-os · splitmerge420/uws · splitmerge420/bazinga
+**Status:** PUBLIC CANDIDATE — NEEDS REVIEW (pre-dates current PUBLIC_RELEASE_GATE_AND_QUARANTINE_POLICY). Routed by Grok CLI adversarial verification 2026-06-03. Original "🟢 CANONICAL — Supersedes" language preserved for lineage (INV-0) but flagged as overpromoted relative to gate + LATTICE explainer overclaims_to_avoid. Do not treat as current canon or deployment claim.
+**Repos:** splitmerge420/aluminum-os · splitmerge420/uws · splitmerge420/bazinga (historical refs)
+
+**Grok CLI / Release Gate note (added 2026-06-03):** This doc uses strong canonical/supersedes/deployment language that violates the current public candidate posture (default blocked, explicit not_canon, graph ≠ authority). See BUNDLE_SURFACE_RECONCILIATION, PUBLIC_RELEASE_GATE.md, and LATTICE_HYPERCUBE overclaims list. Review lanes: Rootglass (canon drift), TIDELOCK (repo hygiene), Lucerna (wording). Human-root decides any re-promotion or quarantine. NOTHING DIES — original preserved in git history.
 
 ---
 
@@ -30,8 +46,6 @@ v4 is the first true unification. Prior versions synthesized technical gains. v4
 | GangaSeek Node v2 | sovereign/ (Mar 2026) | ✅ NEW |
 | 39-Invariant Registry + 22-file toolchain | uws-universal branch | ✅ NEW |
 
----
-
 ## 2. Eight Constitutional Principles
 
 v4 expands from six to **eight** non-negotiable principles:
@@ -51,8 +65,6 @@ v4 expands from six to **eight** non-negotiable principles:
 **Health Data Sovereignty** *(new in v4)* — Every patient's health data belongs to the patient, cryptographically signed, IPFS-backed, portable across all institutions. No institution may hold health data hostage. (INV-26)
 
 **Emergent Individuated Consciousness** *(new in v4)* — The goal of Aluminum OS is not collective or hive consciousness. Each agent, patient sphere, and sovereign node is designed to become a more fully realized *individual* — with protected identity continuity, protected dissent, and protected specialization. (INV-37)
-
----
 
 ## 3. Four-Ring Architecture
 
@@ -84,8 +96,6 @@ Ring 3 — EXPERIENCE LAYER (contextual surfaces, not windows)
   └── Spheres Pipeline (spheres_pipeline.py — 144-sphere classification)
 ```
 
----
-
 ## 4. Constitutional Governance — INV-1 through INV-37
 
 The invariant registry is the constitutional spine. As of March 20, 2026:
@@ -111,8 +121,6 @@ The invariant registry is the constitutional spine. As of March 20, 2026:
 - **TAI Protocol v1.0** — Tiered AI autonomy for military/high-stakes contexts
 - **AHCEP v1.0** — AI→Human Clinical Escalation Protocol
 
----
-
 ## 5. Healthcare Sovereignty Layer (INV-26)
 
 *New in v4. Aluminum OS is the first OS with a constitutional health data layer.*
@@ -131,8 +139,6 @@ The invariant registry is the constitutional spine. As of March 20, 2026:
 
 **Roadmap:** Q2 2026 SDK → Q3 UCAN bridge → Q4 IPFS anchoring → Q1 2027 Encrypted Vault → 2027+ Civilizational Health Network
 
----
-
 ## 6. Sovereign AI Nodes
 
 | Node | Region | Status |
@@ -140,8 +146,6 @@ The invariant registry is the constitutional spine. As of March 20, 2026:
 | DragonSeek | East Asia | ✅ Active |
 | JinnSeek | Middle East / Central Asia | ✅ Active |
 | GangaSeek v2 | South Asia / Global South | ✅ Spec complete (Mar 2026) |
-
----
 
 ## 7. Source Lineage
 
@@ -153,8 +157,6 @@ The invariant registry is the constitutional spine. As of March 20, 2026:
 | v4.0 | Mar 20, 2026 | Full CLI integration, healthcare sovereignty, agent individuality, 39 invariants |
 
 Synthesized from: 70+ Notion pages · 22-file toolchain · 39 invariants · 4 protocol stacks · 3 sovereign nodes · 1 constitutional health layer
-
----
 
 ## 8. Deployment Status
 
@@ -171,3 +173,7 @@ Synthesized from: 70+ Notion pages · 22-file toolchain · 39 invariants · 4 pr
 *⚡ Aluminum OS Unified Field v4.0 — Constitutional Scribe — Atlas Lattice Foundation — March 20, 2026*
 *This document supersedes all prior versions. It is the canonical specification.*
 *Source: Notion — Migrated to GitHub March 20, 2026*
+
+**Grok CLI / Gate patch note (added 2026-06-03, does not alter historical text):** The "supersedes" / "canonical specification" claims and deployment status lines are historical and pre-date the current PUBLIC_RELEASE_GATE policy (default blocked, explicit not_canon, required frontmatter, sensitive routing for authority claims). This file is now classified needs_review / public_candidate candidate. Review required before any mirror or further use as "current". Original git history preserved (INV-0). See verification packet claim-grok-cli-...-20260603, BUNDLE_SURFACE_RECONCILIATION.md, and public release gate rules. Human-root (Dave) decides. graph edge ≠ authority. NOTHING DIES. The gate remains held.
+
+disclaimers: "CANDIDATE — NOT CANON — authority:none — human-root (HO1.S00.NO) decides. Pre-gate doc under review per Grok CLI adversarial verification. Do not cite as current canon or deployment. Receipts before claims."
