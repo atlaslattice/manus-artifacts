@@ -1,0 +1,75 @@
+# STATUS: CANDIDATE — NOT CANON
+# AUTHORITY: NONE
+# DEPLOYMENT: NONE
+profiles:
+  doc:
+    required:
+    - STATUS
+    - AUTHORITY
+    - DEPLOYMENT
+    - artifact_id
+    - path
+    - domain
+    - lane
+    - version
+    optional:
+    - generated_at_utc
+    - author
+    - trust_state
+  schema:
+    required:
+    - artifact_id
+    - version
+    optional:
+    - path
+    - domain
+    - lane
+  test:
+    required:
+    - artifact_id
+    - path
+    - domain
+    - lane
+    optional:
+    - test_receipt
+  script:
+    required:
+    - artifact_id
+    - path
+    - domain
+    - lane
+    optional:
+    - next_safest_action
+  data:
+    required:
+    - artifact_id
+    - path
+    - domain
+    optional:
+    - generated_at_utc
+  project:
+    required:
+    - artifact_id
+    - path
+    - domain
+    - lane
+    optional:
+    - owner
+  quest:
+    required:
+    - artifact_id
+    - path
+    - domain
+    - lane
+    - version
+    optional:
+    - difficulty
+  governance:
+    required:
+    - artifact_id
+    - path
+    - domain
+    - lane
+    - version
+    optional:
+    - ratification_event_id

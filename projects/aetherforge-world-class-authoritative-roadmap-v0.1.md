@@ -77,3 +77,9 @@ Execution is unambiguous, world-class targets are measurable, contract checks ar
 - Next-144 execution board: `aetherforge-next144-taskboard-2026-05-28.md`
 - Portfolio: `aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md`
 - Sprint: `aetherforge-top10-taskboard-2026-05-28.md` (AX-11 through AX-20)
+
+## Module jump links
+- Module 01-03: [Lattice KG v1.0 index](../archive/knowledge_graph/lattice_kg/v1_0/README.md)
+- Module 04-06: [Metadata dashboard](../docs/METADATA_CONFORMANCE_DASHBOARD.md) and [Discoverability scorecard](../docs/DISCOVERABILITY_SCORECARD.md)
+- Module 07-09: [Aetherforge dashboard](../docs/AETHERFORGE_QUEST_DASHBOARD.md) and [Security triage playbook](../docs/SECURITY_TRIAGE_PLAYBOOK.md)
+- Module 10-12: [CI reliability SLO](../docs/CI_RELIABILITY_SLO.md) and [Launch packet](../docs/LAUNCH_v1_RELEASE_PACKET.md)

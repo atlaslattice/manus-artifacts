@@ -1,0 +1,22 @@
+# STATUS: CANDIDATE — NOT CANON
+# AUTHORITY: NONE
+# DEPLOYMENT: NONE
+docs:
+- docs/**
+knowledge-graph:
+- archive/knowledge_graph/**
+gptdream:
+- archive/spec/gptdream/**
+- schemas/atlas_orcs/**
+aetherforge:
+- projects/aetherforge*
+- archive/knowledge_graph/lattice_kg/v1_0/AETHERFORGE*
+governance:
+- archive/governance/**
+- .github/**
+module-01:
+- archive/knowledge_graph/lattice_kg/v1_0/LATTICE_*
+module-10:
+- .github/workflows/**
+- scripts/run_*
+- scripts/validate_*

@@ -199,3 +199,8 @@ Operational execution board for the next 144 sequenced tasks derived from the wo
 ## Quest-loop completion contract
 
 A task is complete only when bounded scope, explicit validation receipts, blockers, and next safest action are recorded.
+
+## Jump links
+- [Knowledge Graph start here](../docs/START_HERE_KNOWLEDGE_GRAPH.md)
+- [Governance start here](../docs/START_HERE_GOVERNANCE.md)
+- [Run local checks](../scripts/run_local_checks.sh)

@@ -1,0 +1,76 @@
+# STATUS: CANDIDATE — NOT CANON
+# AUTHORITY: NONE
+# DEPLOYMENT: NONE
+artifact_id: KNOWLEDGE_GRAPH-KG-20260603-lattice-ontology-v1-0
+version: 1.0.0
+frozen: true
+node_families:
+- source
+- fact
+- claim
+- evidence
+- review_lane
+- risk_node
+- action_candidate
+- quest
+- artifact
+- domain
+- lane
+- provenance
+edge_families:
+- derived_from
+- supports
+- contradiction
+- contradicts
+- supersedes
+- patches
+- routes_to
+- reviews
+- blocks
+- extends
+- implements
+- cites
+- links_to
+canon_state_machine:
+  states:
+  - raw
+  - candidate
+  - under_review
+  - approved
+  - quarantined
+  - superseded
+  - ratified
+  allowed_transitions:
+    raw:
+    - candidate
+    - quarantined
+    candidate:
+    - under_review
+    - quarantined
+    - superseded
+    under_review:
+    - approved
+    - quarantined
+    - superseded
+    approved:
+    - ratified
+    - superseded
+    - quarantined
+    quarantined:
+    - under_review
+    - superseded
+    superseded: []
+    ratified:
+    - superseded
+  guards:
+  - nothing_can_promote_itself
+  - ratified_requires_ratification_event_id
+  - candidate_defaults_to_not_deployable
+quest_links:
+  quest_node_family: quest
+  kg_node_links_field: kg_node_links
+  accepts_relations:
+  - routes_to
+  - implements
+  - reviews
+  - supports

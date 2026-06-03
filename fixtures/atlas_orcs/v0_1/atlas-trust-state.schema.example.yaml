@@ -1,0 +1,11 @@
+# STATUS: CANDIDATE — NOT CANON
+# AUTHORITY: NONE
+# DEPLOYMENT: NONE
+schema_version: '0.1'
+artifact_id: ATLAS-TRUST-STATE-FIXTURE
+canon_status: not_canon
+deployment_status: not_deployable
+self_ratified: false
+provenance_receipt_id: null
+summary_ref: null
+source_ref: null

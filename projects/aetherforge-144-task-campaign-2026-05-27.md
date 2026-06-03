@@ -39,3 +39,9 @@ Program-level sequencing surface for the full 144-category execution campaign.
 - [`projects/aetherforge-top10-taskboard-2026-05-28.md`](./aetherforge-top10-taskboard-2026-05-28.md)
 - [`projects/aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md`](./aetherforge-metatrons-cube-top50-taskboard-2026-05-26.md)
 - [`projects/aetherforge-world-class-authoritative-roadmap-v0.1.md`](./aetherforge-world-class-authoritative-roadmap-v0.1.md)
+
+## Module artifact jump links
+- [Module 01 contracts](../archive/knowledge_graph/lattice_kg/v1_0/README.md)
+- [Module 05 governance guardrails](../archive/knowledge_graph/lattice_kg/v1_0/LATTICE_GOVERNANCE_GUARDRAILS_v1.0.md)
+- [Module 07 quest map](../archive/knowledge_graph/lattice_kg/v1_0/AETHERFORGE_TASK_QUEST_MAP_v1.0.md)
+- [Module 12 release packet](../docs/LAUNCH_v1_RELEASE_PACKET.md)

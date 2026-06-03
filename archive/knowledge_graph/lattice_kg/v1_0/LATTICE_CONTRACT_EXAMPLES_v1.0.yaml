@@ -1,0 +1,43 @@
+# STATUS: CANDIDATE — NOT CANON
+# AUTHORITY: NONE
+# DEPLOYMENT: NONE
+valid_node:
+  artifact_id: DOCS-DOCS-20260603-example-doc
+  node_family: artifact
+  canon_status: candidate
+  deployment_status: not_deployable
+valid_edge:
+  edge_id: EDGE-LINKS_TO-00001
+  from_id: DOCS-DOCS-20260603-example-doc
+  to_id: KNOWLEDGE_GRAPH-KG-20260603-lattice-ontology-v1-0
+  relation_type: links_to
+  recorded_at_utc: '2026-06-03T00:00:00Z'
+valid_provenance:
+  source_receipt: docs/example.md
+  sha256: bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+  generated_at_utc: '2026-06-03T00:00:00Z'
+  author: Copilot
+  tool_chain:
+  - python3
+valid_claim:
+  claim_id: CLAIM-001
+  claim_text: Example claim
+  evidence_refs:
+  - EVID-001
+  trust_level: candidate_reviewed
+  status: candidate
+valid_contradiction:
+  contradiction_id: CON-001
+  from_id: CLAIM-001
+  to_id: CLAIM-002
+  contradiction_type: semantic
+  evidence_refs:
+  - EVID-010
+  recorded_at_utc: '2026-06-03T00:00:00Z'
+  resolution_status: open
+valid_supersedes:
+  supersedes_id: SUP-001
+  deprecated_artifact_id: DOCS-DOCS-20260501-old
+  replacement_id: DOCS-DOCS-20260603-new
+  reason: Contract refresh
+  effective_date: '2026-06-03'

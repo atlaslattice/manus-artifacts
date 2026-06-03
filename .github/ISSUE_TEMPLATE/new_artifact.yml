@@ -1,0 +1,19 @@
+# STATUS: CANDIDATE — NOT CANON
+# AUTHORITY: NONE
+# DEPLOYMENT: NONE
+name: New artifact contribution
+description: Submit a new candidate artifact
+title: '[artifact] '
+body:
+- type: input
+  id: artifact_path
+  attributes:
+    label: Artifact path
+- type: textarea
+  id: summary
+  attributes:
+    label: Summary
+- type: input
+  id: nx_task
+  attributes:
+    label: NX task

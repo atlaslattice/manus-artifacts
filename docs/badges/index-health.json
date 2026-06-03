@@ -1,0 +1,9 @@
+{
+  "STATUS": "CANDIDATE \u2014 NOT CANON",
+  "AUTHORITY": "NONE",
+  "DEPLOYMENT": "NONE",
+  "schemaVersion": 1,
+  "label": "index health",
+  "message": "7%",
+  "color": "red"
+}

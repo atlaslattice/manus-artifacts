@@ -28,3 +28,19 @@ Use deterministic retrieval keys first:
 2. Confirm artifact exists at indexed path.
 3. Confirm candidate boundary (`not_canon`, `not_deployable` unless ratified).
 4. Confirm receipts exist for validation, blockers, and next safest action.
+
+## v1.0 query recipes
+
+1. Build the v1.0 index and inspect completeness:
+   - `python3 scripts/build_lattice_global_index_v2.py --repo-root .`
+2. Find under-linked artifacts with JSON output:
+   - `python3 scripts/detect_underlinked_artifacts.py --repo-root . --output json`
+3. Detect missing metadata fields:
+   - `python3 scripts/detect_missing_metadata.py --repo-root .`
+4. Validate lineage and contradiction integrity:
+   - `python3 scripts/validate_lineage_chain.py --repo-root .`
+   - `python3 scripts/validate_contradiction_pairs.py --repo-root .`
+5. Generate the reverse index and query by path:
+   - `python3 scripts/build_reverse_index.py --repo-root .`
+6. Run the full compliance sweep:
+   - `python3 scripts/run_full_compliance_sweep.py`

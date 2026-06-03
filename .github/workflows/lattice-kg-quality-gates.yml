@@ -4,46 +4,20 @@ on:
   push:
     paths:
       - 'archive/knowledge_graph/lattice_kg/v0_5/**'
-      - 'schemas/lattice_global_index.schema.json'
-      - 'schemas/lattice_graph_manifest.schema.json'
-      - 'scripts/build_lattice_global_index.py'
-      - 'scripts/validate_lattice_quality_gates.py'
-      - 'scripts/generate_state_of_lattice_report.py'
-      - 'scripts/query_lattice.py'
-      - 'tests/test_lattice_kg_hypercube_program.py'
-      - 'tests/test_world_class_execution_surfaces.py'
-      - 'tests/test_unified_mission_frame.py'
-      - 'tests/test_lattice_quality_gate_adversarial.py'
-      - 'fixtures/gptdreampp_openai/**'
-      - 'archive/spec/gptdream/**'
-      - 'projects/aetherforge-world-class-authoritative-roadmap-v0.1.md'
-      - 'projects/aetherforge-144-task-campaign-2026-05-27.md'
-      - 'projects/aetherforge-top10-taskboard-2026-05-28.md'
-      - 'projects/README.md'
-      - 'forks/**'
-      - 'README.md'
+      - 'archive/knowledge_graph/lattice_kg/v1_0/**'
+      - 'docs/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'schemas/**'
       - '.github/workflows/lattice-kg-quality-gates.yml'
   pull_request:
     paths:
       - 'archive/knowledge_graph/lattice_kg/v0_5/**'
-      - 'schemas/lattice_global_index.schema.json'
-      - 'schemas/lattice_graph_manifest.schema.json'
-      - 'scripts/build_lattice_global_index.py'
-      - 'scripts/validate_lattice_quality_gates.py'
-      - 'scripts/generate_state_of_lattice_report.py'
-      - 'scripts/query_lattice.py'
-      - 'tests/test_lattice_kg_hypercube_program.py'
-      - 'tests/test_world_class_execution_surfaces.py'
-      - 'tests/test_unified_mission_frame.py'
-      - 'tests/test_lattice_quality_gate_adversarial.py'
-      - 'fixtures/gptdreampp_openai/**'
-      - 'archive/spec/gptdream/**'
-      - 'projects/aetherforge-world-class-authoritative-roadmap-v0.1.md'
-      - 'projects/aetherforge-144-task-campaign-2026-05-27.md'
-      - 'projects/aetherforge-top10-taskboard-2026-05-28.md'
-      - 'projects/README.md'
-      - 'forks/**'
-      - 'README.md'
+      - 'archive/knowledge_graph/lattice_kg/v1_0/**'
+      - 'docs/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'schemas/**'
       - '.github/workflows/lattice-kg-quality-gates.yml'
   workflow_dispatch:
 
@@ -53,7 +27,20 @@ permissions:
 jobs:
   lattice-kg-quality-gates:
     runs-on: ubuntu-latest
-
+    strategy:
+      fail-fast: true
+      matrix:
+        validator:
+          - build-index-v1
+          - build-index-v2
+          - broken-links
+          - edge-directions
+          - supersedes-chain
+          - governance-self-promotion
+          - governance-trust-state
+          - governance-deployment-state
+          - supply-chain
+          - pytest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -63,11 +50,49 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Build deterministic global index snapshot
-        run: python scripts/build_lattice_global_index.py --repo-root .
+      - name: Run validator matrix
+        id: run-validator
+        shell: bash
+        run: |
+          set -euo pipefail
+          case "${{ matrix.validator }}" in
+            build-index-v1)
+              python3 scripts/build_lattice_global_index.py --repo-root . | tee build-index-v1.report.json
+              ;;
+            build-index-v2)
+              python3 scripts/build_lattice_global_index_v2.py --repo-root . | tee build-index-v2.report.json
+              ;;
+            broken-links)
+              python3 scripts/validate_markdown_links.py --repo-root . | tee broken-links.report.json
+              ;;
+            edge-directions)
+              python3 scripts/validate_edge_directions.py --repo-root . | tee edge-directions.report.json
+              ;;
+            supersedes-chain)
+              python3 scripts/validate_supersedes_chain.py --repo-root . | tee supersedes-chain.report.json
+              ;;
+            governance-self-promotion)
+              python3 scripts/validate_no_self_promotion.py --repo-root . | tee governance-self-promotion.report.json
+              ;;
+            governance-trust-state)
+              python3 scripts/validate_trust_state.py --repo-root . | tee governance-trust-state.report.json
+              ;;
+            governance-deployment-state)
+              python3 scripts/validate_deployment_state.py --repo-root . | tee governance-deployment-state.report.json
+              ;;
+            supply-chain)
+              python3 scripts/validate_supply_chain_workflow.py | tee supply-chain.report.json
+              ;;
+            pytest)
+              python3 -m pytest -q tests/ | tee pytest.report.txt
+              ;;
+          esac
 
-      - name: Validate completeness, link integrity, stale-index, and retrieval gates
-        run: python scripts/validate_lattice_quality_gates.py --repo-root . --index archive/knowledge_graph/lattice_kg/v0_5/lattice_global_index.v0.1.json --max-age-days 7
-
-      - name: Run focused lattice execution tests
-        run: python -m pytest -q tests/test_lattice_kg_hypercube_program.py tests/test_world_class_execution_surfaces.py tests/test_unified_mission_frame.py tests/test_lattice_quality_gate_adversarial.py
+      - name: Upload validator report on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.validator }}-report
+          path: |
+            *.report.json
+            *.report.txt

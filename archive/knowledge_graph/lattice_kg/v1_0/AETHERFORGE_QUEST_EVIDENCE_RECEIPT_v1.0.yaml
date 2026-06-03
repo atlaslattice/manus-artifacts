@@ -1,0 +1,22 @@
+# STATUS: CANDIDATE — NOT CANON
+# AUTHORITY: NONE
+# DEPLOYMENT: NONE
+receipt_schema:
+  required:
+  - receipt_id
+  - quest_id
+  - completed_at_utc
+  - evidence_type
+  - evidence_path
+  - validator
+  - acceptance_gate_result
+  - xp_awarded
+example:
+  receipt_id: QUEST-REC-001
+  quest_id: NX-001
+  completed_at_utc: '2026-06-03T00:00:00Z'
+  evidence_type: test
+  evidence_path: tests/test_governance_integrity.py
+  validator: pytest
+  acceptance_gate_result: pass
+  xp_awarded: 40

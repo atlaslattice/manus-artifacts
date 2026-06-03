@@ -1,0 +1,15 @@
+# STATUS: CANDIDATE — NOT CANON
+# AUTHORITY: NONE
+# DEPLOYMENT: NONE
+name: Bug / broken link report
+description: Report a broken validator, link, or regression
+title: '[bug] '
+body:
+- type: textarea
+  id: steps
+  attributes:
+    label: Reproduction
+- type: input
+  id: affected_path
+  attributes:
+    label: Affected path

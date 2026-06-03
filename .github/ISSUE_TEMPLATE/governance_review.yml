@@ -1,0 +1,15 @@
+# STATUS: CANDIDATE — NOT CANON
+# AUTHORITY: NONE
+# DEPLOYMENT: NONE
+name: Governance review request
+description: Request review for governance-sensitive artifacts
+title: '[governance] '
+body:
+- type: input
+  id: artifact_id
+  attributes:
+    label: Artifact ID
+- type: textarea
+  id: evidence
+  attributes:
+    label: Evidence

@@ -1,0 +1,28 @@
+# STATUS: CANDIDATE — NOT CANON
+# AUTHORITY: NONE
+# DEPLOYMENT: NONE
+artifact_id: AETHERFORGE-AETHERFORGE-20260603-aetherforge-quest-schema-v1-0
+version: 1.0.0
+quest_schema:
+  required:
+  - quest_id
+  - quest_title
+  - quest_type
+  - difficulty
+  - status
+  - linked_nx_tasks
+  - acceptance_criteria
+  - rewards
+  - evidence_receipt_template
+  - kg_node_links
+  enums:
+    quest_type:
+    - explore
+    - build
+    - validate
+    - defend
+    status:
+    - open
+    - active
+    - complete
+    - blocked

@@ -1,0 +1,40 @@
+# STATUS: CANDIDATE — NOT CANON
+# AUTHORITY: NONE
+# DEPLOYMENT: NONE
+artifact_id: KNOWLEDGE_GRAPH-KG-20260603-lattice-provenance-claim-schema-v1-0
+version: 1.0.0
+classes:
+  ProvenanceBit:
+    required:
+    - source_receipt
+    - sha256
+    - generated_at_utc
+    - author
+    - tool_chain
+  ClaimNode:
+    required:
+    - claim_id
+    - claim_text
+    - evidence_refs
+    - trust_level
+    - status
+  ProvChain:
+    required:
+    - chain_id
+    - claim_id
+    - hops
+examples:
+  ProvenanceBit:
+    source_receipt: archive/example.md
+    sha256: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    generated_at_utc: '2026-06-03T00:00:00Z'
+    author: Copilot
+    tool_chain:
+    - python3
+  ClaimNode:
+    claim_id: CLAIM-001
+    claim_text: Candidate claim
+    evidence_refs:
+    - EVID-001
+    trust_level: candidate_reviewed
+    status: candidate

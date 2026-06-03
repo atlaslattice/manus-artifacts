@@ -41,3 +41,9 @@ AUTHORITY: NONE
 ## Quest-loop completion rule
 
 A task is only complete when scope, tests, blockers, and next safest action are recorded in repo artifacts.
+
+## Jump links
+- [Campaign board](./aetherforge-144-task-campaign-2026-05-27.md)
+- [Authority roadmap](./aetherforge-world-class-authoritative-roadmap-v0.1.md)
+- [Lattice KG v1.0](../archive/knowledge_graph/lattice_kg/v1_0/README.md)
+- [Quest dashboard](../docs/AETHERFORGE_QUEST_DASHBOARD.md)

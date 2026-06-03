@@ -1,0 +1,35 @@
+# STATUS: CANDIDATE — NOT CANON
+# AUTHORITY: NONE
+# DEPLOYMENT: NONE
+artifact_id: KNOWLEDGE_GRAPH-KG-20260603-lattice-edge-schema-v1-0
+version: 1.0.0
+edge_schema:
+  base_required:
+  - edge_id
+  - from_id
+  - to_id
+  - relation_type
+  - recorded_at_utc
+  contradiction:
+    required:
+    - contradiction_id
+    - from_id
+    - to_id
+    - contradiction_type
+    - evidence_refs
+    - recorded_at_utc
+    - resolution_status
+  supersedes:
+    required:
+    - supersedes_id
+    - deprecated_artifact_id
+    - replacement_id
+    - reason
+    - effective_date
+  patches:
+    required:
+    - supersedes_id
+    - deprecated_artifact_id
+    - replacement_id
+    - reason
+    - effective_date
