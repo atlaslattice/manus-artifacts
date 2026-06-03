@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atlaslattice.org/schemas/sheldonbrain_ingest_packet.schema.json",
+  "title": "Sheldonbrain Ingest Packet",
+  "type": "object",
+  "required": [
+    "packet_id",
+    "source_id",
+    "source_surface",
+    "source_url_or_path",
+    "raw_export_status",
+    "canon_status",
+    "deployment_status",
+    "authority_scope",
+    "ingest_mode",
+    "boundary"
+  ],
+  "properties": {
+    "packet_id": {"type": "string"},
+    "source_id": {"type": "string"},
+    "source_surface": {"enum": ["notion", "drive", "github", "chat", "external", "unknown"]},
+    "source_url_or_path": {"type": "string"},
+    "raw_export_status": {"enum": ["raw", "semi_raw", "partial", "inaccessible", "missing_receipt", "pending"]},
+    "canon_status": {"const": "not_canon"},
+    "deployment_status": {"const": "not_deployed"},
+    "authority_scope": {"const": "none"},
+    "ingest_mode": {"enum": ["source_root", "raw_export", "claim_extraction", "graph_proposal", "contradiction_review"]},
+    "claims": {"type": "array", "items": {"type": "object"}},
+    "proposed_nodes": {"type": "array", "items": {"type": "object"}},
+    "proposed_edges": {"type": "array", "items": {"type": "object"}},
+    "missing_receipts": {"type": "array", "items": {"type": "string"}},
+    "contradictions": {"type": "array", "items": {"type": "object"}},
+    "overclaims": {"type": "array", "items": {"type": "object"}},
+    "retrieval_trace": {"type": "array", "items": {"type": "object"}},
+    "boundary": {"type": "string"}
+  },
+  "additionalProperties": true
+}
