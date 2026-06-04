@@ -102,6 +102,7 @@ This expectation is enforced through our [Code of Conduct](./CODE_OF_CONDUCT.md)
 | [Master Source Registry](./docs/MASTER_SOURCE_REGISTRY.md) | Multi-source KG synthesis intake ledger (this repo + gits + Notion + Drive) |
 | [Artifact Source-of-Truth Index](./docs/ARTIFACT_SOURCE_OF_TRUTH_INDEX.md) | Canon-state tracking index with ratification fields |
 | [Lattice Hypercube 12×12×12](./docs/LATTICE_HYPERCUBE_12x12x12.md) | H-S-N coordinate system explainer — Rainbow Yin-Yang lattice |
+| [KTL v2.0 Spec (Candidate)](./KRAKOAN_TONE_LANGUAGE_SPECIFICATION_V2.0.md) | Complete Krakoan Tone Language spoken-machine specification candidate |
 | [Contributor Playbook](./docs/CONTRIBUTOR_PLAYBOOK.md) | Unified governance, workflow, and quality-gate operator guide |
 | [Architecture Crosswalk](./docs/ARCHITECTURE_CROSSWALK.md) | Specs ↔ schemas ↔ implementation ↔ tests trace map |
 | [Quality Gates Dashboard](./docs/QUALITY_GATES_DASHBOARD.md) | CI and local pass/fail validation command surface |
