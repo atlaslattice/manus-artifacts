@@ -1,0 +1,67 @@
+# Atlas Domain Module Schema v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-domain-module
+description: Defines a domain module (a bounded context within Atlas/ORCS)
+
+fields:
+  module_id:
+    type: string
+    required: true
+
+  module_name:
+    type: string
+    required: true
+
+  description:
+    type: string
+    required: true
+
+  owning_seat:
+    type: string
+    required: true
+
+  route_classes:
+    type: array
+    items: string
+    required: true
+    description: ORCS route classes handled by this module
+
+  artifact_types_accepted:
+    type: array
+    items: string
+    required: true
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate_canon, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, deployment_candidate, deployed]
+    default: not_deployable
+
+  governance_profile_id:
+    type: string
+    required: false
+
+  active:
+    type: boolean
+    required: true
+    default: false
+    description: Whether this module is currently active
+
+  created_at:
+    type: string
+    format: iso8601
+    required: true
+
+constraints:
+  - canon_status defaults to not_canon
+  - deployment_status defaults to not_deployable
+  - route_classes must be non-empty

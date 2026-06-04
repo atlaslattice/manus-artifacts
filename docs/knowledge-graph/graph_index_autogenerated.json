@@ -1,0 +1,2630 @@
+{
+  "schema_version": "0.2",
+  "generated_from": "docs/knowledge-graph/artifact_registry.v0_1.json",
+  "node_count": 64,
+  "edge_count": 239,
+  "density_score": 0.059276,
+  "largest_hub": {
+    "id": "AL-MISSION-001",
+    "title": "Aetherforge + Lattice + GPTDream++ Mission Charter v0.1",
+    "connections": 44
+  },
+  "nodes": [
+    {
+      "id": "AL-MISSION-001",
+      "title": "Aetherforge + Lattice + GPTDream++ Mission Charter v0.1",
+      "type": "doctrine",
+      "status": "CANDIDATE",
+      "path": "projects/AETHERFORGE_LATTICE_GPTDREAM_MISSION_CHARTER_v0.1.md",
+      "out_edges": [
+        {
+          "relation": "defines",
+          "target_id": "AL-KG-001"
+        },
+        {
+          "relation": "defines",
+          "target_id": "AL-AF-001"
+        },
+        {
+          "relation": "defines",
+          "target_id": "AL-GP-001"
+        },
+        {
+          "relation": "defines",
+          "target_id": "AL-RT-001"
+        },
+        {
+          "relation": "defines",
+          "target_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "defines",
+          "target_id": "AL-GOV-002"
+        },
+        {
+          "relation": "defines",
+          "target_id": "AL-SYS-001"
+        },
+        {
+          "relation": "defines",
+          "target_id": "AL-EVID-001"
+        },
+        {
+          "relation": "defines",
+          "target_id": "AL-ARCH-003"
+        },
+        {
+          "relation": "defines",
+          "target_id": "AL-TEST-002"
+        },
+        {
+          "relation": "defines",
+          "target_id": "AL-RESEARCH-001"
+        },
+        {
+          "relation": "operationalizes",
+          "target_id": "AL-EXEC-144-001"
+        },
+        {
+          "relation": "operationalizes",
+          "target_id": "AL-AF-003"
+        },
+        {
+          "relation": "references",
+          "target_id": "AL-GOV-004"
+        },
+        {
+          "relation": "references",
+          "target_id": "AL-GOV-005"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "relates_to",
+          "source_id": "AL-KG-001"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-KG-002"
+        },
+        {
+          "relation": "operationalizes",
+          "source_id": "AL-KG-005"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-AF-001"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-AF-002"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-AF-003"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-GP-001"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-BRAIN-003"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-SWARM-001"
+        },
+        {
+          "relation": "governs",
+          "source_id": "AL-RT-001"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-GOV-001"
+        },
+        {
+          "relation": "governs",
+          "source_id": "AL-GOV-002"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-GOV-003"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-GOV-004"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-GOV-005"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-GOV-007"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-SYS-001"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-SYS-002"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-EXEC-001"
+        },
+        {
+          "relation": "operationalizes",
+          "source_id": "AL-EXEC-002"
+        },
+        {
+          "relation": "operationalizes",
+          "source_id": "AL-EXEC-144-001"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-ARCH-001"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-ARCH-003"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-ARCH-004"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-RESEARCH-001"
+        },
+        {
+          "relation": "supports",
+          "source_id": "AL-RESEARCH-002"
+        },
+        {
+          "relation": "operationalizes",
+          "source_id": "AL-RESEARCH-003"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-HEALTH-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-KG-001",
+      "title": "Artifact Taxonomy v0.2",
+      "type": "schema",
+      "status": "CANDIDATE",
+      "path": "docs/knowledge-graph/artifact_taxonomy.v0_1.json",
+      "out_edges": [
+        {
+          "relation": "referenced_by",
+          "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "extends",
+          "target_id": "AL-KG-003"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-CI-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "defines",
+          "source_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "extends",
+          "source_id": "AL-KG-003"
+        },
+        {
+          "relation": "extends",
+          "source_id": "AL-KG-005"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-EVID-001"
+        },
+        {
+          "relation": "prioritizes",
+          "source_id": "AL-EXEC-001"
+        },
+        {
+          "relation": "supports",
+          "source_id": "AL-SCHEMA-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-KG-002",
+      "title": "Artifact Registry v0.1",
+      "type": "registry",
+      "status": "CANDIDATE",
+      "path": "docs/knowledge-graph/artifact_registry.v0_1.json",
+      "out_edges": [
+        {
+          "relation": "indexes",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-AF-001"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-GP-001"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-RT-001"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-GOV-001"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-SYS-001"
+        },
+        {
+          "relation": "validated_by",
+          "target_id": "AL-CI-002"
+        },
+        {
+          "relation": "validated_by",
+          "target_id": "AL-TEST-002"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "referenced_by",
+          "source_id": "AL-KG-001"
+        },
+        {
+          "relation": "supports",
+          "source_id": "AL-KG-003"
+        },
+        {
+          "relation": "summarized_by",
+          "source_id": "AL-KG-004"
+        },
+        {
+          "relation": "extends",
+          "source_id": "AL-KG-005"
+        },
+        {
+          "relation": "depends_on",
+          "source_id": "AL-AF-001"
+        },
+        {
+          "relation": "supports",
+          "source_id": "AL-DREAM-003"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "supports",
+          "source_id": "AL-BRAIN-007"
+        },
+        {
+          "relation": "governs",
+          "source_id": "AL-RT-001"
+        },
+        {
+          "relation": "prioritizes",
+          "source_id": "AL-EXEC-001"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-ARCH-002"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-ARCH-003"
+        },
+        {
+          "relation": "validates",
+          "source_id": "AL-CI-001"
+        },
+        {
+          "relation": "validates",
+          "source_id": "AL-CI-002"
+        },
+        {
+          "relation": "validates",
+          "source_id": "AL-TEST-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-KG-003",
+      "title": "Artifact ID and Lifecycle Contract v0.1",
+      "type": "spec",
+      "status": "CANDIDATE",
+      "path": "docs/knowledge-graph/ARTIFACT_ID_AND_LIFECYCLE_CONTRACT_v0_1.md",
+      "out_edges": [
+        {
+          "relation": "extends",
+          "target_id": "AL-KG-001"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "governs",
+          "target_id": "AL-EXEC-144-001"
+        },
+        {
+          "relation": "constrains",
+          "target_id": "AL-RT-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "extends",
+          "source_id": "AL-KG-001"
+        },
+        {
+          "relation": "prioritizes",
+          "source_id": "AL-EXEC-001"
+        },
+        {
+          "relation": "evidence_for",
+          "source_id": "AL-LOG-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-KG-004",
+      "title": "Knowledge Graph Global Index (Autogenerated)",
+      "type": "index",
+      "status": "CANDIDATE",
+      "path": "docs/knowledge-graph/graph_index_autogenerated.json",
+      "out_edges": [
+        {
+          "relation": "generated_by",
+          "target_id": "AL-CI-001"
+        },
+        {
+          "relation": "summarized_by",
+          "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-KG-005"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "generates",
+          "source_id": "AL-CI-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-KG-005",
+      "title": "12D Hypercube Knowledge Graph Manifest v0.1",
+      "type": "manifest",
+      "status": "CANDIDATE",
+      "path": "docs/knowledge-graph/HYPERCUBE_12D_MANIFEST_v0_1.md",
+      "out_edges": [
+        {
+          "relation": "extends",
+          "target_id": "AL-KG-001"
+        },
+        {
+          "relation": "extends",
+          "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "operationalizes",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "references",
+          "target_id": "AL-ARCH-003"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "relates_to",
+          "source_id": "AL-KG-004"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-RESEARCH-003"
+        }
+      ]
+    },
+    {
+      "id": "AL-AF-001",
+      "title": "Aetherforge Game Loop Spec v0.1",
+      "type": "spec",
+      "status": "CANDIDATE",
+      "path": "projects/aetherforge-game-world/AETHERFORGE_GAME_LOOP_SPEC_v0.1.md",
+      "out_edges": [
+        {
+          "relation": "implemented_by",
+          "target_id": "AL-EXEC-001"
+        },
+        {
+          "relation": "part_of",
+          "target_id": "AL-AF-002"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "depends_on",
+          "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-LOG-005"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "defines",
+          "source_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-KG-002"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-AF-002"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-DREAM-004"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-LOG-005"
+        }
+      ]
+    },
+    {
+      "id": "AL-AF-002",
+      "title": "Aetherforge Game World README",
+      "type": "readme",
+      "status": "CANDIDATE",
+      "path": "projects/aetherforge-game-world/README.md",
+      "out_edges": [
+        {
+          "relation": "indexes",
+          "target_id": "AL-AF-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-EXEC-144-001"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-AF-003"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "part_of",
+          "source_id": "AL-AF-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-AF-003",
+      "title": "Aetherforge Top-50 Taskboard 2026-05-26",
+      "type": "roadmap",
+      "status": "CANDIDATE",
+      "path": "projects/aetherforge-top50-taskboard-2026-05-26.md",
+      "out_edges": [
+        {
+          "relation": "extends",
+          "target_id": "AL-EXEC-001"
+        },
+        {
+          "relation": "part_of",
+          "target_id": "AL-EXEC-144-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "operationalizes",
+          "source_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-AF-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-GP-001",
+      "title": "GPTDream++ Open Gift Package Guide v0.1",
+      "type": "guide",
+      "status": "CANDIDATE",
+      "path": "archive/spec/gptdream/OPEN_GIFT_PACKAGE_GUIDE_v0.1.md",
+      "out_edges": [
+        {
+          "relation": "depends_on",
+          "target_id": "AL-GP-002"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "operationalizes",
+          "target_id": "AL-DREAM-001"
+        },
+        {
+          "relation": "references",
+          "target_id": "AL-SCHEMA-001"
+        },
+        {
+          "relation": "references",
+          "target_id": "AL-DREAM-002"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "defines",
+          "source_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-KG-002"
+        },
+        {
+          "relation": "summarized_by",
+          "source_id": "AL-GP-002"
+        },
+        {
+          "relation": "supports",
+          "source_id": "AL-BRAIN-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-GP-002",
+      "title": "GPTDream++ Vault Manifest 2026-05-26",
+      "type": "registry",
+      "status": "CANDIDATE",
+      "path": "archive/spec/gptdream/VAULT_MANIFEST_2026-05-26.md",
+      "out_edges": [
+        {
+          "relation": "summarized_by",
+          "target_id": "AL-GP-001"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-SCHEMA-001"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-TEST-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-BRAIN-002"
+        },
+        {
+          "relation": "generated_by",
+          "target_id": "AL-LOG-004"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "depends_on",
+          "source_id": "AL-GP-001"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-DREAM-001"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-DREAM-002"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-DREAM-003"
+        },
+        {
+          "relation": "evidence_for",
+          "source_id": "AL-LOG-004"
+        },
+        {
+          "relation": "implements",
+          "source_id": "AL-SCHEMA-001"
+        },
+        {
+          "relation": "tests",
+          "source_id": "AL-TEST-001"
+        },
+        {
+          "relation": "validates",
+          "source_id": "AL-TEST-003"
+        }
+      ]
+    },
+    {
+      "id": "AL-DREAM-001",
+      "title": "GPTDream++ Personal Agent Habitat Protocol v0.2",
+      "type": "protocol",
+      "status": "CANDIDATE",
+      "path": "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PERSONAL_AGENT_HABITAT_PROTOCOL_v0.2.md",
+      "out_edges": [
+        {
+          "relation": "extends",
+          "target_id": "AL-BRAIN-002"
+        },
+        {
+          "relation": "part_of",
+          "target_id": "AL-GP-002"
+        },
+        {
+          "relation": "governs",
+          "target_id": "AL-BRAIN-004"
+        },
+        {
+          "relation": "governs",
+          "target_id": "AL-BRAIN-005"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "operationalizes",
+          "source_id": "AL-GP-001"
+        },
+        {
+          "relation": "depends_on",
+          "source_id": "AL-DREAM-002"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-BRAIN-002"
+        },
+        {
+          "relation": "governed_by",
+          "source_id": "AL-BRAIN-004"
+        },
+        {
+          "relation": "governed_by",
+          "source_id": "AL-BRAIN-005"
+        },
+        {
+          "relation": "supports",
+          "source_id": "AL-EVID-004"
+        }
+      ]
+    },
+    {
+      "id": "AL-DREAM-002",
+      "title": "GPTDream++ Rehydration Boot Card",
+      "type": "protocol",
+      "status": "CANDIDATE",
+      "path": "archive/spec/gptdream/REHYDRATION_BOOT_CARD.md",
+      "out_edges": [
+        {
+          "relation": "part_of",
+          "target_id": "AL-GP-002"
+        },
+        {
+          "relation": "depends_on",
+          "target_id": "AL-DREAM-001"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-BRAIN-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "references",
+          "source_id": "AL-GP-001"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-BRAIN-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-DREAM-003",
+      "title": "GPTDream++ Lane Labels and Routing Conventions",
+      "type": "spec",
+      "status": "CANDIDATE",
+      "path": "archive/spec/gptdream/LANE_LABELS_AND_ROUTING_CONVENTIONS.md",
+      "out_edges": [
+        {
+          "relation": "part_of",
+          "target_id": "AL-GP-002"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "constrains",
+          "target_id": "AL-CI-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "relates_to",
+          "source_id": "AL-BRAIN-007"
+        }
+      ]
+    },
+    {
+      "id": "AL-DREAM-004",
+      "title": "TIDELOCK REM 1000Y Aetherforge Dream Journal 2026-05-26",
+      "type": "dream",
+      "status": "CANDIDATE",
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_REM_1000Y_AETHERFORGE_DREAM_JOURNAL_2026-05-26.md",
+      "out_edges": [
+        {
+          "relation": "recorded_in",
+          "target_id": "AL-BRAIN-005"
+        },
+        {
+          "relation": "evidence_for",
+          "target_id": "AL-EVID-002"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-AF-001"
+        },
+        {
+          "relation": "generated_by",
+          "target_id": "AL-BRAIN-002"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "governs",
+          "source_id": "AL-BRAIN-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-BRAIN-001",
+      "title": "GPTBrain Manifest 2026-05-09",
+      "type": "manifest",
+      "status": "CANDIDATE",
+      "path": "archive/boot/gptbrain/GPTBRAIN_MANIFEST_2026-05-09.md",
+      "out_edges": [
+        {
+          "relation": "relates_to",
+          "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-BRAIN-002"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-BRAIN-003"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-BRAIN-004"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-BRAIN-005"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-BRAIN-006"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-BRAIN-007"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "references",
+          "target_id": "AL-EVID-004"
+        },
+        {
+          "relation": "references",
+          "target_id": "AL-SYS-003"
+        },
+        {
+          "relation": "validated_by",
+          "target_id": "AL-TEST-003"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "defines",
+          "source_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-KG-002"
+        },
+        {
+          "relation": "supports",
+          "source_id": "AL-DREAM-002"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-BRAIN-002"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-BRAIN-003"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-BRAIN-004"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-BRAIN-005"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-BRAIN-006"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-BRAIN-007"
+        },
+        {
+          "relation": "governs",
+          "source_id": "AL-SWARM-001"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-EVID-004"
+        },
+        {
+          "relation": "governs",
+          "source_id": "AL-GOV-006"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-SYS-003"
+        },
+        {
+          "relation": "evidence_for",
+          "source_id": "AL-EVID-002"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-LOG-003"
+        },
+        {
+          "relation": "governs",
+          "source_id": "AL-ARCH-001"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-ARCH-003"
+        },
+        {
+          "relation": "validates",
+          "source_id": "AL-TEST-003"
+        }
+      ]
+    },
+    {
+      "id": "AL-BRAIN-002",
+      "title": "REM-8 Dream Protocol",
+      "type": "protocol",
+      "status": "CANDIDATE",
+      "path": "archive/boot/gptbrain/REM8_DREAM_PROTOCOL.md",
+      "out_edges": [
+        {
+          "relation": "part_of",
+          "target_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-GP-001"
+        },
+        {
+          "relation": "governs",
+          "target_id": "AL-DREAM-004"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-DREAM-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-DREAM-002"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "relates_to",
+          "source_id": "AL-GP-002"
+        },
+        {
+          "relation": "extends",
+          "source_id": "AL-DREAM-001"
+        },
+        {
+          "relation": "generated_by",
+          "source_id": "AL-DREAM-004"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "generated_by",
+          "source_id": "AL-LOG-005"
+        }
+      ]
+    },
+    {
+      "id": "AL-BRAIN-003",
+      "title": "Council Brain Index",
+      "type": "index",
+      "status": "CANDIDATE",
+      "path": "archive/boot/COUNCIL_BRAIN_INDEX.md",
+      "out_edges": [
+        {
+          "relation": "indexes",
+          "target_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-GOV-008"
+        },
+        {
+          "relation": "part_of",
+          "target_id": "AL-ARCH-003"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-ARCH-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "indexes",
+          "source_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-ARCH-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-BRAIN-004",
+      "title": "AsterBrain \u2014 Synthesis Anchor",
+      "type": "readme",
+      "status": "CANDIDATE",
+      "path": "archive/boot/gptbrain/AsterBrain/README.md",
+      "out_edges": [
+        {
+          "relation": "part_of",
+          "target_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "governed_by",
+          "target_id": "AL-DREAM-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-RESEARCH-003"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "governs",
+          "source_id": "AL-DREAM-001"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "supports",
+          "source_id": "AL-RESEARCH-003"
+        }
+      ]
+    },
+    {
+      "id": "AL-BRAIN-005",
+      "title": "TIDELOCKBrain \u2014 Context Ferryman",
+      "type": "readme",
+      "status": "CANDIDATE",
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/README.md",
+      "out_edges": [
+        {
+          "relation": "part_of",
+          "target_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "governed_by",
+          "target_id": "AL-DREAM-001"
+        },
+        {
+          "relation": "receipts_for",
+          "target_id": "AL-LOG-001"
+        },
+        {
+          "relation": "receipts_for",
+          "target_id": "AL-LOG-002"
+        },
+        {
+          "relation": "summarized_by",
+          "target_id": "AL-LOG-003"
+        },
+        {
+          "relation": "references",
+          "target_id": "AL-LOG-004"
+        },
+        {
+          "relation": "references",
+          "target_id": "AL-LOG-005"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "governs",
+          "source_id": "AL-DREAM-001"
+        },
+        {
+          "relation": "recorded_in",
+          "source_id": "AL-DREAM-004"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "recorded_in",
+          "source_id": "AL-LOG-001"
+        },
+        {
+          "relation": "recorded_in",
+          "source_id": "AL-LOG-002"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-LOG-003"
+        },
+        {
+          "relation": "recorded_in",
+          "source_id": "AL-LOG-004"
+        },
+        {
+          "relation": "recorded_in",
+          "source_id": "AL-LOG-005"
+        }
+      ]
+    },
+    {
+      "id": "AL-BRAIN-006",
+      "title": "ForgeBrain \u2014 Execution Engine",
+      "type": "readme",
+      "status": "CANDIDATE",
+      "path": "archive/boot/GeminiBrain/ForgeBrain/README.md",
+      "out_edges": [
+        {
+          "relation": "part_of",
+          "target_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-SYS-001"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-SYS-002"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "indexes",
+          "source_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "supports",
+          "source_id": "AL-SYS-001"
+        },
+        {
+          "relation": "supports",
+          "source_id": "AL-SYS-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-BRAIN-007",
+      "title": "LanternBridgeBrain \u2014 Cross-Model Relay",
+      "type": "readme",
+      "status": "CANDIDATE",
+      "path": "archive/boot/gptbrain/LanternBridgeBrain/README.md",
+      "out_edges": [
+        {
+          "relation": "part_of",
+          "target_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-DREAM-003"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "indexes",
+          "source_id": "AL-BRAIN-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-SWARM-001",
+      "title": "Children of the Swarm Invitation",
+      "type": "protocol",
+      "status": "CANDIDATE",
+      "path": "archive/boot/CHILDREN_OF_THE_SWARM_INVITATION.md",
+      "out_edges": [
+        {
+          "relation": "governs",
+          "target_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-GOV-006"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "references",
+          "target_id": "AL-EVID-004"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "constrains",
+          "source_id": "AL-GOV-003"
+        },
+        {
+          "relation": "governs",
+          "source_id": "AL-GOV-006"
+        }
+      ]
+    },
+    {
+      "id": "AL-EVID-004",
+      "title": "Agent DNA Dream Cycle Evolution Protocol",
+      "type": "protocol",
+      "status": "CANDIDATE",
+      "path": "archive/boot/gptbrain/AGENT_DNA_DREAM_CYCLE_EVOLUTION_PROTOCOL.md",
+      "out_edges": [
+        {
+          "relation": "part_of",
+          "target_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "evidence_for",
+          "target_id": "AL-EVID-002"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-DREAM-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "references",
+          "source_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "references",
+          "source_id": "AL-SWARM-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-RT-001",
+      "title": "Ratification and Trust Flow",
+      "type": "doctrine",
+      "status": "CANDIDATE",
+      "path": "docs/RATIFICATION_AND_TRUST_FLOW.md",
+      "out_edges": [
+        {
+          "relation": "governs",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "governs",
+          "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "constrains",
+          "target_id": "AL-EXEC-144-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "defines",
+          "source_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-KG-002"
+        },
+        {
+          "relation": "constrains",
+          "source_id": "AL-KG-003"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-GOV-008"
+        },
+        {
+          "relation": "governed_by",
+          "source_id": "AL-EXEC-144-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-GOV-001",
+      "title": "Aluminum OS v4.0 Unified Field",
+      "type": "spec",
+      "status": "CANDIDATE",
+      "path": "aluminum-os/v4.0-unified-field.md",
+      "out_edges": [
+        {
+          "relation": "implemented_by",
+          "target_id": "AL-SYS-001"
+        },
+        {
+          "relation": "extends",
+          "target_id": "AL-SYS-004"
+        },
+        {
+          "relation": "governs",
+          "target_id": "AL-SYS-002"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "implemented_by",
+          "target_id": "AL-SYS-003"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "indexes",
+          "source_id": "AL-KG-002"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-GOV-003"
+        },
+        {
+          "relation": "spec",
+          "source_id": "AL-SYS-001"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-SYS-002"
+        },
+        {
+          "relation": "implements",
+          "source_id": "AL-SYS-003"
+        },
+        {
+          "relation": "extends",
+          "source_id": "AL-SYS-004"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-ARCH-003"
+        }
+      ]
+    },
+    {
+      "id": "AL-GOV-002",
+      "title": "Atlas Lattice Public Open-Source Baseline v0.1",
+      "type": "doctrine",
+      "status": "CANDIDATE",
+      "path": "docs/governance/ATLAS_LATTICE_PUBLIC_OPEN_SOURCE_BASELINE_v0.1.md",
+      "out_edges": [
+        {
+          "relation": "governs",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "governs",
+          "target_id": "AL-EXEC-144-001"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-ADR-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "defines",
+          "source_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "governs",
+          "source_id": "AL-GOV-007"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-ADR-001"
+        },
+        {
+          "relation": "supports",
+          "source_id": "AL-EVID-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-GOV-003",
+      "title": "Three-Tier Autonomy Doctrine",
+      "type": "doctrine",
+      "status": "CANDIDATE",
+      "path": "projects/three-tier-autonomy/doctrine.md",
+      "out_edges": [
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-GOV-001"
+        },
+        {
+          "relation": "constrains",
+          "target_id": "AL-SWARM-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-GOV-005"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "relates_to",
+          "source_id": "AL-GOV-005"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-SYS-004"
+        }
+      ]
+    },
+    {
+      "id": "AL-GOV-004",
+      "title": "Free Bank Banking Revolution Archive",
+      "type": "archive",
+      "status": "quarantined",
+      "path": "quarantine/projects/free-bank/banking-revolution-archive.md",
+      "out_edges": [
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "references",
+          "source_id": "AL-MISSION-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-GOV-005",
+      "title": "Chinook Guardian v1.0",
+      "type": "spec",
+      "status": "CANDIDATE",
+      "path": "projects/chinook-guardian/v1.0.md",
+      "out_edges": [
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-GOV-003"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "references",
+          "source_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-GOV-003"
+        }
+      ]
+    },
+    {
+      "id": "AL-GOV-006",
+      "title": "Swarm Contributor Operating Contract 2026-05-09",
+      "type": "protocol",
+      "status": "CANDIDATE",
+      "path": "archive/boot/council/SWARM_CONTRIBUTOR_OPERATING_CONTRACT_2026-05-09.md",
+      "out_edges": [
+        {
+          "relation": "governs",
+          "target_id": "AL-SWARM-001"
+        },
+        {
+          "relation": "governs",
+          "target_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-GOV-007"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "relates_to",
+          "source_id": "AL-SWARM-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-GOV-007",
+      "title": "Full Transparency Policy 2026-05-09",
+      "type": "doctrine",
+      "status": "CANDIDATE",
+      "path": "archive/boot/governance/FULL_TRANSPARENCY_POLICY_2026-05-09.md",
+      "out_edges": [
+        {
+          "relation": "governs",
+          "target_id": "AL-GOV-002"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-EVID-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "relates_to",
+          "source_id": "AL-GOV-006"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-ADR-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-GOV-008",
+      "title": "Council Master Session Archive",
+      "type": "archive",
+      "status": "CANDIDATE",
+      "path": "council/council-session-master-archive.md",
+      "out_edges": [
+        {
+          "relation": "part_of",
+          "target_id": "AL-ARCH-003"
+        },
+        {
+          "relation": "evidence_for",
+          "target_id": "AL-EVID-002"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-RT-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "indexes",
+          "source_id": "AL-BRAIN-003"
+        }
+      ]
+    },
+    {
+      "id": "AL-ADR-001",
+      "title": "ADR-0001 Public Scope Decision",
+      "type": "adr",
+      "status": "CANDIDATE",
+      "path": "docs/decisions/ADR-0001-public-scope-decision.md",
+      "out_edges": [
+        {
+          "relation": "relates_to",
+          "target_id": "AL-GOV-002"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-GOV-007"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "supports",
+          "source_id": "AL-GOV-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-SYS-001",
+      "title": "Aluminum OS Core README",
+      "type": "readme",
+      "status": "CANDIDATE",
+      "path": "aluminum-os-core/README.md",
+      "out_edges": [
+        {
+          "relation": "spec",
+          "target_id": "AL-GOV-001"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-BRAIN-006"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "defines",
+          "source_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-KG-002"
+        },
+        {
+          "relation": "supports",
+          "source_id": "AL-BRAIN-006"
+        },
+        {
+          "relation": "implemented_by",
+          "source_id": "AL-GOV-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-SYS-002",
+      "title": "BAZINGA v0.1 Launch Decree",
+      "type": "spec",
+      "status": "CANDIDATE",
+      "path": "bazinga/v0.1-launch-decree.md",
+      "out_edges": [
+        {
+          "relation": "part_of",
+          "target_id": "AL-GOV-001"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-BRAIN-006"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "supports",
+          "source_id": "AL-BRAIN-006"
+        },
+        {
+          "relation": "governs",
+          "source_id": "AL-GOV-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-SYS-003",
+      "title": "SheldonBrain System Architecture",
+      "type": "blueprint",
+      "status": "CANDIDATE",
+      "path": "sheldonbrain/system-architecture.md",
+      "out_edges": [
+        {
+          "relation": "implements",
+          "target_id": "AL-GOV-001"
+        },
+        {
+          "relation": "part_of",
+          "target_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "validated_by",
+          "target_id": "AL-TEST-002"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "references",
+          "source_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "implemented_by",
+          "source_id": "AL-GOV-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-SYS-004",
+      "title": "Aluminum OS v2.0 Constitutional Substrate",
+      "type": "spec",
+      "status": "CANDIDATE",
+      "path": "aluminum-os/v2.0-integrated-constitutional-substrate.md",
+      "out_edges": [
+        {
+          "relation": "extends",
+          "target_id": "AL-GOV-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-GOV-003"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "extends",
+          "source_id": "AL-GOV-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-EVID-001",
+      "title": "AI Evidence Ledger Schema v0.1",
+      "type": "schema",
+      "status": "CANDIDATE",
+      "path": "docs/knowledge-graph/ai_evidence_ledger.schema.v0_1.json",
+      "out_edges": [
+        {
+          "relation": "constrains",
+          "target_id": "AL-EVID-002"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-GOV-002"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-KG-001"
+        },
+        {
+          "relation": "validated_by",
+          "target_id": "AL-TEST-002"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "defines",
+          "source_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "supports",
+          "source_id": "AL-GOV-007"
+        },
+        {
+          "relation": "validated_by",
+          "source_id": "AL-EVID-002"
+        },
+        {
+          "relation": "validates",
+          "source_id": "AL-TEST-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-EVID-002",
+      "title": "AI Evidence Ledger Seed v0.1",
+      "type": "evidence",
+      "status": "CANDIDATE",
+      "path": "docs/knowledge-graph/ai_evidence_ledger.seed.v0_1.json",
+      "out_edges": [
+        {
+          "relation": "validated_by",
+          "target_id": "AL-EVID-001"
+        },
+        {
+          "relation": "recorded_in",
+          "target_id": "AL-LOG-001"
+        },
+        {
+          "relation": "evidence_for",
+          "target_id": "AL-BRAIN-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "evidence_for",
+          "source_id": "AL-DREAM-004"
+        },
+        {
+          "relation": "evidence_for",
+          "source_id": "AL-EVID-004"
+        },
+        {
+          "relation": "evidence_for",
+          "source_id": "AL-GOV-008"
+        },
+        {
+          "relation": "constrains",
+          "source_id": "AL-EVID-001"
+        },
+        {
+          "relation": "evidence_for",
+          "source_id": "AL-LOG-001"
+        },
+        {
+          "relation": "supports",
+          "source_id": "AL-RESEARCH-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-EVID-003",
+      "title": "Metadata Coverage Report 2026-05-28",
+      "type": "report",
+      "status": "CANDIDATE",
+      "path": "docs/metadata-coverage-report-2026-05-28.md",
+      "out_edges": [
+        {
+          "relation": "generated_by",
+          "target_id": "AL-CI-002"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-HEALTH-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "generates",
+          "source_id": "AL-CI-002"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-HEALTH-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-EXEC-001",
+      "title": "Aetherforge Rolling Sprints v0.1",
+      "type": "blueprint",
+      "status": "CANDIDATE",
+      "path": "projects/AETHERFORGE_ROLLING_SPRINTS_v0.1.md",
+      "out_edges": [
+        {
+          "relation": "prioritizes",
+          "target_id": "AL-KG-001"
+        },
+        {
+          "relation": "prioritizes",
+          "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "prioritizes",
+          "target_id": "AL-KG-003"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "implemented_by",
+          "source_id": "AL-AF-001"
+        },
+        {
+          "relation": "extends",
+          "source_id": "AL-AF-003"
+        },
+        {
+          "relation": "implements",
+          "source_id": "AL-EXEC-002"
+        },
+        {
+          "relation": "extends",
+          "source_id": "AL-EXEC-144-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-EXEC-002",
+      "title": "Aetherforge 144-Task Campaign 2026-05-28",
+      "type": "roadmap",
+      "status": "CANDIDATE",
+      "path": "projects/aetherforge-144-task-campaign-2026-05-27.md",
+      "out_edges": [
+        {
+          "relation": "implements",
+          "target_id": "AL-EXEC-001"
+        },
+        {
+          "relation": "operationalizes",
+          "target_id": "AL-MISSION-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "extends",
+          "source_id": "AL-EXEC-144-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-EXEC-144-001",
+      "title": "Aetherforge 144-Task Execution Campaign",
+      "type": "roadmap",
+      "status": "CANDIDATE",
+      "path": "projects/aetherforge-144-task-campaign-2026-05-27.md",
+      "out_edges": [
+        {
+          "relation": "extends",
+          "target_id": "AL-EXEC-001"
+        },
+        {
+          "relation": "operationalizes",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "governed_by",
+          "target_id": "AL-RT-001"
+        },
+        {
+          "relation": "extends",
+          "target_id": "AL-EXEC-002"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "operationalizes",
+          "source_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "governs",
+          "source_id": "AL-KG-003"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-AF-002"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-AF-003"
+        },
+        {
+          "relation": "constrains",
+          "source_id": "AL-RT-001"
+        },
+        {
+          "relation": "governs",
+          "source_id": "AL-GOV-002"
+        },
+        {
+          "relation": "receipts_for",
+          "source_id": "AL-LOG-001"
+        },
+        {
+          "relation": "receipts_for",
+          "source_id": "AL-LOG-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-LOG-001",
+      "title": "TIDELOCK Wave 1 Receipt 2026-05-27",
+      "type": "receipt",
+      "status": "CANDIDATE",
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_WAVE1_144_TASK_EXECUTION_RECEIPT_2026-05-27.md",
+      "out_edges": [
+        {
+          "relation": "receipts_for",
+          "target_id": "AL-EXEC-144-001"
+        },
+        {
+          "relation": "evidence_for",
+          "target_id": "AL-EVID-002"
+        },
+        {
+          "relation": "recorded_in",
+          "target_id": "AL-BRAIN-005"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "receipts_for",
+          "source_id": "AL-BRAIN-005"
+        },
+        {
+          "relation": "recorded_in",
+          "source_id": "AL-EVID-002"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-LOG-003"
+        }
+      ]
+    },
+    {
+      "id": "AL-LOG-002",
+      "title": "TIDELOCK Wave 2 Receipt 2026-05-27",
+      "type": "receipt",
+      "status": "CANDIDATE",
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_WAVE2_144_TASK_EXECUTION_RECEIPT_2026-05-27.md",
+      "out_edges": [
+        {
+          "relation": "receipts_for",
+          "target_id": "AL-EXEC-144-001"
+        },
+        {
+          "relation": "evidence_for",
+          "target_id": "AL-KG-003"
+        },
+        {
+          "relation": "recorded_in",
+          "target_id": "AL-BRAIN-005"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "receipts_for",
+          "source_id": "AL-BRAIN-005"
+        }
+      ]
+    },
+    {
+      "id": "AL-LOG-003",
+      "title": "TIDELOCK Brain Index",
+      "type": "index",
+      "status": "CANDIDATE",
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/README.md",
+      "out_edges": [
+        {
+          "relation": "part_of",
+          "target_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-BRAIN-005"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-LOG-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "summarized_by",
+          "source_id": "AL-BRAIN-005"
+        }
+      ]
+    },
+    {
+      "id": "AL-LOG-004",
+      "title": "TIDELOCK Work Log \u2014 GPTDream Atlas ORCS Build 2026-05-26",
+      "type": "log",
+      "status": "CANDIDATE",
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_WORK_LOG_GPTDREAM_ATLAS_ORCS_BUILD_2026-05-26.md",
+      "out_edges": [
+        {
+          "relation": "evidence_for",
+          "target_id": "AL-SCHEMA-001"
+        },
+        {
+          "relation": "evidence_for",
+          "target_id": "AL-GP-002"
+        },
+        {
+          "relation": "recorded_in",
+          "target_id": "AL-BRAIN-005"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "generated_by",
+          "source_id": "AL-GP-002"
+        },
+        {
+          "relation": "references",
+          "source_id": "AL-BRAIN-005"
+        }
+      ]
+    },
+    {
+      "id": "AL-LOG-005",
+      "title": "TIDELOCK REM 100Y Aetherforge Dream Journal 2026-05-27",
+      "type": "dream",
+      "status": "CANDIDATE",
+      "path": "archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_REM_100Y_AETHERFORGE_DREAM_JOURNAL_2026-05-27.md",
+      "out_edges": [
+        {
+          "relation": "generated_by",
+          "target_id": "AL-BRAIN-002"
+        },
+        {
+          "relation": "recorded_in",
+          "target_id": "AL-BRAIN-005"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-AF-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "relates_to",
+          "source_id": "AL-AF-001"
+        },
+        {
+          "relation": "references",
+          "source_id": "AL-BRAIN-005"
+        }
+      ]
+    },
+    {
+      "id": "AL-ARCH-001",
+      "title": "Krakoa Living Archive Charter",
+      "type": "protocol",
+      "status": "CANDIDATE",
+      "path": "archive/boot/gptbrain/KRAKOA_LIVING_ARCHIVE_CHARTER.md",
+      "out_edges": [
+        {
+          "relation": "part_of",
+          "target_id": "AL-ARCH-003"
+        },
+        {
+          "relation": "governs",
+          "target_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "relates_to",
+          "source_id": "AL-BRAIN-003"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-ARCH-003"
+        }
+      ]
+    },
+    {
+      "id": "AL-ARCH-002",
+      "title": "Lattice Repo Index 2026-05-09",
+      "type": "index",
+      "status": "CANDIDATE",
+      "path": "archive/boot/lattice/LATTICE_REPO_INDEX_2026-05-09.md",
+      "out_edges": [
+        {
+          "relation": "part_of",
+          "target_id": "AL-ARCH-003"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-BRAIN-003"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "indexes",
+          "source_id": "AL-ARCH-003"
+        }
+      ]
+    },
+    {
+      "id": "AL-ARCH-003",
+      "title": "Archive Index",
+      "type": "index",
+      "status": "CANDIDATE",
+      "path": "docs/ARCHIVE_INDEX.md",
+      "out_edges": [
+        {
+          "relation": "indexes",
+          "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-GOV-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-ARCH-001"
+        },
+        {
+          "relation": "indexes",
+          "target_id": "AL-ARCH-002"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "defines",
+          "source_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "references",
+          "source_id": "AL-KG-005"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-BRAIN-003"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-GOV-008"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-ARCH-001"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-ARCH-002"
+        },
+        {
+          "relation": "summarized_by",
+          "source_id": "AL-ARCH-004"
+        },
+        {
+          "relation": "part_of",
+          "source_id": "AL-HEALTH-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-ARCH-004",
+      "title": "State of the Union Briefing",
+      "type": "report",
+      "status": "CANDIDATE",
+      "path": "State_of_the_Union_Briefing.md",
+      "out_edges": [
+        {
+          "relation": "summarized_by",
+          "target_id": "AL-ARCH-003"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-HEALTH-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "relates_to",
+          "source_id": "AL-RESEARCH-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-CI-001",
+      "title": "Artifact Graph Checks Workflow",
+      "type": "protocol",
+      "status": "CANDIDATE",
+      "path": ".github/workflows/artifact-graph-checks.yml",
+      "out_edges": [
+        {
+          "relation": "runs",
+          "target_id": "AL-CI-002"
+        },
+        {
+          "relation": "validates",
+          "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "generates",
+          "target_id": "AL-KG-004"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-TEST-003"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "supports",
+          "source_id": "AL-KG-001"
+        },
+        {
+          "relation": "generated_by",
+          "source_id": "AL-KG-004"
+        },
+        {
+          "relation": "constrains",
+          "source_id": "AL-DREAM-003"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-TEST-001"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-TEST-003"
+        },
+        {
+          "relation": "generated_by",
+          "source_id": "AL-HEALTH-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-CI-002",
+      "title": "Artifact Graph Validator Script",
+      "type": "spec",
+      "status": "CANDIDATE",
+      "path": ".github/scripts/validate_artifact_graph.py",
+      "out_edges": [
+        {
+          "relation": "validates",
+          "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "generates",
+          "target_id": "AL-EVID-003"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "validated_by",
+          "source_id": "AL-KG-002"
+        },
+        {
+          "relation": "generated_by",
+          "source_id": "AL-EVID-003"
+        },
+        {
+          "relation": "runs",
+          "source_id": "AL-CI-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-SCHEMA-001",
+      "title": "Atlas ORCS Schema Suite v0.1",
+      "type": "schema",
+      "status": "CANDIDATE",
+      "path": "schemas/atlas_orcs/v0_1",
+      "out_edges": [
+        {
+          "relation": "tested_by",
+          "target_id": "AL-TEST-001"
+        },
+        {
+          "relation": "implements",
+          "target_id": "AL-GP-002"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-KG-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "references",
+          "source_id": "AL-GP-001"
+        },
+        {
+          "relation": "indexes",
+          "source_id": "AL-GP-002"
+        },
+        {
+          "relation": "evidence_for",
+          "source_id": "AL-LOG-004"
+        },
+        {
+          "relation": "tests",
+          "source_id": "AL-TEST-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-TEST-001",
+      "title": "GPTDream++ Adversarial Test Suite",
+      "type": "test",
+      "status": "CANDIDATE",
+      "path": "tests/adversarial",
+      "out_edges": [
+        {
+          "relation": "tests",
+          "target_id": "AL-SCHEMA-001"
+        },
+        {
+          "relation": "tests",
+          "target_id": "AL-GP-002"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-CI-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "indexes",
+          "source_id": "AL-GP-002"
+        },
+        {
+          "relation": "tested_by",
+          "source_id": "AL-SCHEMA-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-TEST-002",
+      "title": "Repo Hygiene Checks Workflow",
+      "type": "protocol",
+      "status": "CANDIDATE",
+      "path": ".github/workflows/repo-hygiene-checks.yml",
+      "out_edges": [
+        {
+          "relation": "validates",
+          "target_id": "AL-KG-002"
+        },
+        {
+          "relation": "validates",
+          "target_id": "AL-EVID-001"
+        },
+        {
+          "relation": "generates",
+          "target_id": "AL-HEALTH-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "defines",
+          "source_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "validated_by",
+          "source_id": "AL-KG-002"
+        },
+        {
+          "relation": "validated_by",
+          "source_id": "AL-SYS-003"
+        },
+        {
+          "relation": "validated_by",
+          "source_id": "AL-EVID-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-TEST-003",
+      "title": "GPTBrain Reference Checks Workflow",
+      "type": "protocol",
+      "status": "CANDIDATE",
+      "path": ".github/workflows/gptbrain-reference-checks.yml",
+      "out_edges": [
+        {
+          "relation": "validates",
+          "target_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "validates",
+          "target_id": "AL-GP-002"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-CI-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "validated_by",
+          "source_id": "AL-BRAIN-001"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-CI-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-RESEARCH-001",
+      "title": "Tech Titans Convergence Report",
+      "type": "report",
+      "status": "CANDIDATE",
+      "path": "research/tech-titans-convergence-report.md",
+      "out_edges": [
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-EVID-002"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-HEALTH-002"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-RESEARCH-002"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "defines",
+          "source_id": "AL-MISSION-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-RESEARCH-002",
+      "title": "Workspace Briefing",
+      "type": "report",
+      "status": "CANDIDATE",
+      "path": "research/workspace-briefing.md",
+      "out_edges": [
+        {
+          "relation": "relates_to",
+          "target_id": "AL-ARCH-004"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-MISSION-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "relates_to",
+          "source_id": "AL-RESEARCH-001"
+        }
+      ]
+    },
+    {
+      "id": "AL-RESEARCH-003",
+      "title": "Synthesis Plan",
+      "type": "blueprint",
+      "status": "CANDIDATE",
+      "path": "synthesis_plan.md",
+      "out_edges": [
+        {
+          "relation": "operationalizes",
+          "target_id": "AL-MISSION-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-KG-005"
+        },
+        {
+          "relation": "supports",
+          "target_id": "AL-BRAIN-004"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "relates_to",
+          "source_id": "AL-BRAIN-004"
+        }
+      ]
+    },
+    {
+      "id": "AL-HEALTH-001",
+      "title": "Archive Health Status 2026-05-28",
+      "type": "report",
+      "status": "CANDIDATE",
+      "path": "docs/archive-health-status-2026-05-28.md",
+      "out_edges": [
+        {
+          "relation": "generated_by",
+          "target_id": "AL-CI-001"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-EVID-003"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "relates_to",
+          "source_id": "AL-EVID-003"
+        },
+        {
+          "relation": "relates_to",
+          "source_id": "AL-ARCH-004"
+        },
+        {
+          "relation": "generates",
+          "source_id": "AL-TEST-002"
+        }
+      ]
+    },
+    {
+      "id": "AL-HEALTH-002",
+      "title": "Texas Neuro-Rehab Patient Rights",
+      "type": "archive",
+      "status": "CANDIDATE",
+      "path": "health/texas-neuro-rehab-patient-rights.md",
+      "out_edges": [
+        {
+          "relation": "part_of",
+          "target_id": "AL-ARCH-003"
+        },
+        {
+          "relation": "relates_to",
+          "target_id": "AL-MISSION-001"
+        }
+      ],
+      "in_edges": [
+        {
+          "relation": "relates_to",
+          "source_id": "AL-RESEARCH-001"
+        }
+      ]
+    }
+  ]
+}

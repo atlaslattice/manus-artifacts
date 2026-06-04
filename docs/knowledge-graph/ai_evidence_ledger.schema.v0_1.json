@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Evidence Ledger Entry v0.1",
+  "type": "object",
+  "required": [
+    "entry_id",
+    "system_name",
+    "claim_id",
+    "claim_summary",
+    "source_paths",
+    "evidence_receipt",
+    "trust_state",
+    "review_status",
+    "created_utc"
+  ],
+  "properties": {
+    "entry_id": {"type": "string", "pattern": "^AL-EVID-[A-Z0-9-]+$"},
+    "system_name": {"type": "string", "minLength": 1},
+    "claim_id": {"type": "string", "minLength": 1},
+    "claim_summary": {"type": "string", "minLength": 1},
+    "source_paths": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "minItems": 1
+    },
+    "evidence_receipt": {"type": "string", "minLength": 1},
+    "trust_state": {
+      "type": "string",
+      "enum": ["UNVERIFIED", "CANDIDATE", "TRIAGED", "HUMAN_REVIEWED", "RATIFIED"]
+    },
+    "review_status": {
+      "type": "string",
+      "enum": ["PENDING", "IN_REVIEW", "ACCEPTED", "REJECTED"]
+    },
+    "reviewed_by": {"type": ["string", "null"]},
+    "reviewed_at": {"type": ["string", "null"], "format": "date-time"},
+    "created_utc": {"type": "string", "format": "date-time"},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}

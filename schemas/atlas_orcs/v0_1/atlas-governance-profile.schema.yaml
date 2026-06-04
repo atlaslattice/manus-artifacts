@@ -1,0 +1,81 @@
+# Atlas Governance Profile Schema v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-governance-profile
+description: Defines the governance context (Γ) for a deployment or review scope
+
+fields:
+  profile_id:
+    type: string
+    required: true
+
+  profile_name:
+    type: string
+    required: true
+
+  recognized_authorities:
+    type: array
+    items: string
+    required: true
+    description: >
+      List of authority keys recognized by this governance context.
+      Only these may authorize ratification events.
+
+  permitted_transitions:
+    type: array
+    items:
+      from_state: string
+      to_state: string
+      requires_delta_type: string
+    required: true
+
+  ratification_requires_human:
+    type: boolean
+    required: true
+    default: true
+    constraint: "MUST be true. Ratification always requires human gate."
+
+  execution_gate_required:
+    type: boolean
+    required: true
+    default: true
+    constraint: "MUST be true. Execution always requires D-Phi-1/CAS-001-A gate."
+
+  canon_requires_website_publication:
+    type: boolean
+    required: true
+    default: true
+    constraint: "MUST be true. Canon requires website publication."
+
+  tidelock_routing_rules:
+    type: array
+    items: string
+    required: false
+    description: Conditions that trigger TIDELOCKBrain routing
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate_canon, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, deployment_candidate, deployed]
+    default: not_deployable
+
+  created_at:
+    type: string
+    format: iso8601
+    required: true
+
+constraints:
+  - ratification_requires_human must be true
+  - execution_gate_required must be true
+  - canon_requires_website_publication must be true
+  - recognized_authorities must be non-empty
+  - canon_status defaults to not_canon
+  - deployment_status defaults to not_deployable

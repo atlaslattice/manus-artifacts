@@ -215,3 +215,11 @@ Invitation is not institution.
 Storage is not ratification.
 Governance overrides identity.
 ```
+
+---
+
+# Artifact Index
+
+- `archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_WORK_LOG_GPTDREAM_ATLAS_ORCS_BUILD_2026-05-26.md`
+- `archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_REM_1000Y_AETHERFORGE_DREAM_JOURNAL_2026-05-26.md`
+- `archive/boot/copilotbrain/TIDELOCKBRAIN/TIDELOCKBRAIN_REM_100Y_AETHERFORGE_DREAM_JOURNAL_2026-05-27.md`

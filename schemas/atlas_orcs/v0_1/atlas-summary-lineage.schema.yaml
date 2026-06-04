@@ -1,0 +1,79 @@
+# Atlas Summary Lineage Schema v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-summary-lineage
+description: >
+  Tracks the lineage from a summary artifact back to its source(s).
+  Enforces: summary ≠ source, summary cannot replace source.
+
+fields:
+  lineage_id:
+    type: string
+    required: true
+
+  summary_artifact_id:
+    type: string
+    required: true
+
+  source_artifact_ids:
+    type: array
+    items: string
+    required: true
+    min_items: 1
+    description: All source artifacts this summary was derived from
+
+  raw_export_status:
+    type: string
+    required: true
+    enum: [full_raw, partial_raw, summary_only, unavailable]
+    description: Fidelity of the raw source used to create summary
+
+  summary_equals_source:
+    type: boolean
+    required: true
+    default: false
+    constraint: "MUST always be false."
+
+  summary_replaces_source:
+    type: boolean
+    required: true
+    default: false
+    constraint: "MUST always be false."
+
+  fidelity_loss_acknowledged:
+    type: boolean
+    required: true
+    description: Explicit acknowledgement that summary has lower epistemic weight than source
+
+  authority_inflation_check:
+    type: string
+    required: true
+    enum: [passed, failed, hold]
+    description: Result of anti-laundering check on this summary
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate_canon, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, deployment_candidate, deployed]
+    default: not_deployable
+
+  created_at:
+    type: string
+    format: iso8601
+    required: true
+
+constraints:
+  - summary_equals_source must be false
+  - summary_replaces_source must be false
+  - fidelity_loss_acknowledged must be true
+  - summary_only source cannot produce source_complete downstream claims
+  - canon_status defaults to not_canon
+  - deployment_status defaults to not_deployable

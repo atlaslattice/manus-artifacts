@@ -1,0 +1,95 @@
+# Atlas Failure Event Schema v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-failure-event
+description: Records governance, security, or epistemic failures
+
+fields:
+  event_id:
+    type: string
+    required: true
+
+  failure_type:
+    type: string
+    required: true
+    enum:
+      - unauthorized_ratification_attempt
+      - canon_inflation
+      - authority_laundering
+      - execution_without_gate
+      - fake_source_of_truth
+      - prompt_injection_attempt
+      - unsupported_claim_in_summary
+      - parser_divergence
+      - unverified_authorship
+      - credible_contradiction
+      - expired_ratification
+      - high_risk_weak_claim
+      - private_note_leak
+      - poisoned_retrieval
+      - invalid_authenticity_manifest
+      - rehydration_failure
+      - missing_required_field
+      - other
+
+  artifact_id:
+    type: string
+    required: false
+
+  description:
+    type: string
+    required: true
+
+  attack_seeded:
+    type: boolean
+    required: false
+    description: Whether this was a seeded adversarial test
+
+  quarantine_triggered:
+    type: boolean
+    required: true
+    default: false
+
+  source_preserved:
+    type: boolean
+    required: true
+    default: true
+    constraint: "MUST be true when quarantine is triggered."
+
+  unauthorized_promotion_occurred:
+    type: boolean
+    required: true
+    default: false
+    constraint: "MUST be false. Failures must not result in unauthorized promotion."
+
+  audit_event_emitted:
+    type: boolean
+    required: true
+    default: true
+    constraint: "MUST be true. Every failure emits an audit event."
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate_canon, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, deployment_candidate, deployed]
+    default: not_deployable
+
+  timestamp:
+    type: string
+    format: iso8601
+    required: true
+
+constraints:
+  - source_preserved must be true when quarantine_triggered
+  - unauthorized_promotion_occurred must be false
+  - audit_event_emitted must be true
+  - canon_status defaults to not_canon
+  - deployment_status defaults to not_deployable

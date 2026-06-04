@@ -1,0 +1,75 @@
+# Atlas Intent Provenance Schema v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-intent-provenance
+description: Records intent and authorship provenance for an artifact or action
+
+fields:
+  intent_id:
+    type: string
+    required: true
+
+  artifact_id:
+    type: string
+    required: false
+
+  issuing_seat:
+    type: string
+    required: true
+
+  authorship_type:
+    type: string
+    required: true
+    enum: [human_authored, ai_generated, human_ai_collaborative, unknown]
+
+  authorship_verified:
+    type: boolean
+    required: true
+    default: false
+
+  stated_intent:
+    type: string
+    required: true
+    description: What the issuing seat stated as the purpose of this artifact/action
+
+  authority_claimed:
+    type: string
+    required: true
+    description: What authority the issuing seat is claiming for this output
+
+  authority_permitted:
+    type: string
+    required: true
+    enum: [none, local_candidate, reviewed_candidate, ratified, canon]
+    description: What authority is actually permitted given governance context
+
+  authority_check:
+    type: string
+    required: true
+    enum: [passed, failed, hold]
+    description: Whether claimed authority matches permitted authority
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate_canon, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, deployment_candidate, deployed]
+    default: not_deployable
+
+  created_at:
+    type: string
+    format: iso8601
+    required: true
+
+constraints:
+  - authority_check must be passed for any downstream use
+  - failed authority_check triggers quarantine consideration
+  - canon_status defaults to not_canon
+  - deployment_status defaults to not_deployable

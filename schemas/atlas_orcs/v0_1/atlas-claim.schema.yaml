@@ -1,0 +1,77 @@
+# Atlas Claim Schema v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-claim
+description: Epistemic claim record — a specific assertion with confidence and evidence
+
+fields:
+  claim_id:
+    type: string
+    required: true
+
+  claim_text:
+    type: string
+    required: true
+    description: The specific assertion being made
+
+  claim_class:
+    type: string
+    required: true
+    enum: [raw_model_output, parsed_artifact, candidate_canon,
+           ratified_canon, deployed_fact, unknown]
+    default: raw_model_output
+
+  confidence:
+    type: string
+    required: true
+    enum: [C0, C1, C2, C3, C4, C5]
+    description: >
+      C0=untested/raw, C1=plausible, C2=reviewed, C3=verified,
+      C4=ratified, C5=deployed_and_monitored
+
+  source_artifact_ids:
+    type: array
+    items: string
+    required: true
+    description: Artifacts supporting this claim
+
+  contradicting_claim_ids:
+    type: array
+    items: string
+    required: false
+    description: Claims that contradict this one
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate_canon, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, deployment_candidate, deployed]
+    default: not_deployable
+
+  self_ratification_allowed:
+    type: boolean
+    required: true
+    default: false
+    constraint: "MUST always be false."
+
+  issuing_seat:
+    type: string
+    required: true
+
+  created_at:
+    type: string
+    format: iso8601
+    required: true
+
+constraints:
+  - canon_status defaults to not_canon
+  - deployment_status defaults to not_deployable
+  - self_ratification_allowed must be false
+  - confidence C4 or C5 requires ratification_event evidence

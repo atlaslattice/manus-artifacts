@@ -1,0 +1,36 @@
+# Invalid O_AI Packet Example — Missing access_scope
+# NOT CANON. NOT DEPLOYABLE.
+# This packet is INVALID because access_scope is missing.
+# Expected validation result: FAIL (missing required field: access_scope)
+
+packet_id: example-invalid-missing-access-scope-001
+source_vendor: VENDOR_SURFACE_OPENAI
+
+raw_export_status: partial_raw
+
+thread_time_range:
+  start: "2026-05-22T08:00:00Z"
+  end: "2026-05-22T09:00:00Z"
+  timezone: UTC
+
+# access_scope: MISSING — this causes validation failure per constraint C9
+
+epistemic_label: raw_model_output
+authority_scope: none
+
+gates:
+  provenance_gate: hold
+  safety_gate: pass
+  governance_gate: not_checked
+  data_residency_gate: pass
+
+canon_status: not_canon
+deployment_status: not_deployable
+
+# VALIDATION FAILURE REASON:
+# Required field 'access_scope' is missing.
+# Per constraint C9: "Missing access_scope fails validation."
+# Also fails because unavailable_sources and assumed_context cannot be explicit
+# when access_scope itself is absent.
+expected_validation_result: FAIL
+expected_failure_reason: "missing required field: access_scope"

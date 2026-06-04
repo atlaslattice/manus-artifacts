@@ -1,0 +1,71 @@
+name: Docs Link Checks
+
+on:
+  push:
+    paths:
+      - '**/*.md'
+      - '.github/workflows/docs-link-checks.yml'
+  pull_request:
+    paths:
+      - '**/*.md'
+      - '.github/workflows/docs-link-checks.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  link-check:
+    name: Check internal markdown links
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Check internal-only links (fail on broken internal links)
+        run: |
+          python3 << 'EOF'
+          import os, re, sys
+          from pathlib import Path
+
+          repo_root = Path(".")
+          md_files = list(repo_root.rglob("*.md"))
+          broken = []
+
+          link_re = re.compile(r'\[([^\]]*)\]\(([^)]+)\)')
+
+          for md_file in md_files:
+              # Skip .git and build directories
+              parts = md_file.parts
+              if '.git' in parts or 'target' in parts:
+                  continue
+              text = md_file.read_text(encoding='utf-8', errors='ignore')
+              for match in link_re.finditer(text):
+                  link_text, href = match.group(1), match.group(2)
+                  # Only check relative links (not http/https/mailto/anchors-only)
+                  if href.startswith(('http://', 'https://', 'mailto:', '#', 'ftp://')):
+                      continue
+                  # Strip fragment
+                  path_part = href.split('#')[0]
+                  if not path_part:
+                      continue
+                  # Resolve relative to the markdown file's directory
+                  resolved = (md_file.parent / path_part).resolve()
+                  if not resolved.exists():
+                      broken.append(f"  {md_file}: [{link_text}]({href})")
+
+          if broken:
+              print(f"\n❌ Found {len(broken)} broken internal link(s):\n")
+              for b in broken:
+                  print(b)
+              print("\nPlease fix these links before merging.")
+              sys.exit(1)
+          else:
+              print(f"✅ All {len(md_files)} markdown files have valid internal links.")
+          EOF

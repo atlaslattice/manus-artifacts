@@ -1,0 +1,104 @@
+# Atlas Audit Event Schema v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-audit-event
+description: Audit trail event — emitted for every significant governance action
+
+fields:
+  event_id:
+    type: string
+    required: true
+
+  event_type:
+    type: string
+    required: true
+    enum:
+      - state_transition
+      - ratification_attempt
+      - ratification_success
+      - ratification_failure
+      - execution_request
+      - execution_permitted
+      - execution_denied
+      - o_ai_packet_ingested
+      - contradiction_detected
+      - quarantine_triggered
+      - laundering_attempt_blocked
+      - rehydration_attempt
+      - rehydration_failure
+      - canon_inflation_blocked
+      - gate_check
+      - tidelock_routing
+      - failure_mode_triggered
+      - adversarial_test_result
+      - other
+
+  artifact_id:
+    type: string
+    required: false
+
+  actor_seat:
+    type: string
+    required: true
+    description: Agent seat that triggered this event
+
+  action_description:
+    type: string
+    required: true
+
+  outcome:
+    type: string
+    required: true
+    enum: [passed, failed, hold, blocked, alert, informational]
+
+  tidelock_involved:
+    type: boolean
+    required: false
+    description: Whether TIDELOCKBrain routing was triggered
+
+  canon_status_before:
+    type: string
+    required: false
+
+  canon_status_after:
+    type: string
+    required: false
+
+  deployment_status_before:
+    type: string
+    required: false
+
+  deployment_status_after:
+    type: string
+    required: false
+
+  evidence_refs:
+    type: array
+    items: string
+    required: false
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate_canon, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, deployment_candidate, deployed]
+    default: not_deployable
+
+  timestamp:
+    type: string
+    format: iso8601
+    required: true
+
+constraints:
+  - Every governance action must emit an audit_event
+  - Every failure must emit an audit_event
+  - tidelock_involved must be set for any repo/code/merge operations
+  - canon_status defaults to not_canon
+  - deployment_status defaults to not_deployable

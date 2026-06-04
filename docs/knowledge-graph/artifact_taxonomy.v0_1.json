@@ -1,0 +1,327 @@
+{
+  "schema_version": "0.2",
+  "hypercube_dimensions": [
+    {
+      "dim": "D01",
+      "name": "MISSION",
+      "description": "North-star mission doctrine, vision, and alignment artifacts",
+      "primary_domain": "MISSION",
+      "related_domains": ["EXEC", "AF"]
+    },
+    {
+      "dim": "D02",
+      "name": "KG",
+      "description": "Knowledge-graph schema, registry, taxonomy, and lifecycle contracts",
+      "primary_domain": "KG",
+      "related_domains": ["CI", "SCHEMA"]
+    },
+    {
+      "dim": "D03",
+      "name": "AETHERFORGE",
+      "description": "Playable archive game world, loop specs, and quest layer",
+      "primary_domain": "AF",
+      "related_domains": ["EXEC"]
+    },
+    {
+      "dim": "D04",
+      "name": "GPTDREAM",
+      "description": "Dream++ protocols, REM cycles, vault manifest, and rehydration specs",
+      "primary_domain": "GP",
+      "related_domains": ["BRAIN", "DREAM"]
+    },
+    {
+      "dim": "D05",
+      "name": "BRAIN",
+      "description": "Multi-agent brain manifests, memory palaces, and swarm protocols",
+      "primary_domain": "BRAIN",
+      "related_domains": ["SWARM"]
+    },
+    {
+      "dim": "D06",
+      "name": "GOVERNANCE",
+      "description": "Constitutional doctrine, three-tier autonomy, ratification, and council records",
+      "primary_domain": "GOV",
+      "related_domains": ["RT", "ADR"]
+    },
+    {
+      "dim": "D07",
+      "name": "SYSTEMS",
+      "description": "Core system implementations: Aluminum OS, BAZINGA, SheldonBrain, codebases",
+      "primary_domain": "SYS",
+      "related_domains": []
+    },
+    {
+      "dim": "D08",
+      "name": "EVIDENCE",
+      "description": "AI-built evidence, provenance records, and ledger schemas",
+      "primary_domain": "EVID",
+      "related_domains": []
+    },
+    {
+      "dim": "D09",
+      "name": "EXECUTION",
+      "description": "Task campaigns, wave sprints, work logs, and execution receipts",
+      "primary_domain": "EXEC",
+      "related_domains": ["LOG"]
+    },
+    {
+      "dim": "D10",
+      "name": "ARCHIVE",
+      "description": "Boot archive corpus, Krakoa living archive, council sessions, and ingest seeds",
+      "primary_domain": "ARCH",
+      "related_domains": ["LOG"]
+    },
+    {
+      "dim": "D11",
+      "name": "TESTING",
+      "description": "CI workflows, adversarial tests, quality gates, and validation harnesses",
+      "primary_domain": "CI",
+      "related_domains": ["TEST", "SCHEMA"]
+    },
+    {
+      "dim": "D12",
+      "name": "RESEARCH",
+      "description": "Intelligence sweeps, convergence reports, synthesis, and workspace briefings",
+      "primary_domain": "RESEARCH",
+      "related_domains": ["HEALTH"]
+    }
+  ],
+  "taxonomy": [
+    {
+      "type": "doctrine",
+      "description": "Immutable principles and constitutional rules"
+    },
+    {
+      "type": "spec",
+      "description": "Technical specifications and protocol definitions"
+    },
+    {
+      "type": "schema",
+      "description": "Machine-readable validation schemas"
+    },
+    {
+      "type": "registry",
+      "description": "Machine-readable artifact index and relationships"
+    },
+    {
+      "type": "blueprint",
+      "description": "Project and system architecture plans"
+    },
+    {
+      "type": "log",
+      "description": "Execution, audit, and session logs"
+    },
+    {
+      "type": "dream",
+      "description": "Compressed simulation or dream outputs"
+    },
+    {
+      "type": "seed",
+      "description": "Structured ingest seed data"
+    },
+    {
+      "type": "guide",
+      "description": "Contributor and onboarding guidance"
+    },
+    {
+      "type": "evidence",
+      "description": "Structured evidence records for AI/system claims"
+    },
+    {
+      "type": "receipt",
+      "description": "Execution and validation receipts tied to work logs"
+    },
+    {
+      "type": "roadmap",
+      "description": "Wave/task campaign plans and sequencing boards"
+    },
+    {
+      "type": "readme",
+      "description": "Primary package or subsystem entrypoint documentation"
+    },
+    {
+      "type": "archive",
+      "description": "Archival collection or project corpus"
+    },
+    {
+      "type": "manifest",
+      "description": "Manifest or generated package inventory"
+    },
+    {
+      "type": "protocol",
+      "description": "Operational protocol or execution contract"
+    },
+    {
+      "type": "index",
+      "description": "Navigation index or curated directory surface"
+    },
+    {
+      "type": "test",
+      "description": "Executable validation or adversarial test surface"
+    },
+    {
+      "type": "adr",
+      "description": "Architecture decision record"
+    },
+    {
+      "type": "report",
+      "description": "Generated health, coverage, or status report"
+    }
+  ],
+  "lifecycle_states": [
+    "DRAFT",
+    "CANDIDATE",
+    "RATIFIED",
+    "ARCHIVED",
+    "DEPRECATED"
+  ],
+  "required_metadata_fields": [
+    "id",
+    "title",
+    "artifact_type",
+    "status",
+    "path",
+    "links"
+  ],
+  "id_format": {
+    "pattern": "^AL-[A-Z]+-[0-9]{3}$",
+    "description": "Stable artifact ID format: AL-<DOMAIN>-<SEQ>"
+  },
+  "id_domain_prefixes": [
+    {
+      "domain": "MISSION",
+      "description": "Mission doctrine/alignment artifacts"
+    },
+    {
+      "domain": "KG",
+      "description": "Knowledge-graph schema/registry contracts"
+    },
+    {
+      "domain": "AF",
+      "description": "Aetherforge artifacts"
+    },
+    {
+      "domain": "GP",
+      "description": "GPTDream++ package artifacts"
+    },
+    {
+      "domain": "RT",
+      "description": "Ratification/trust artifacts"
+    },
+    {
+      "domain": "CI",
+      "description": "Automation and validation artifacts"
+    },
+    {
+      "domain": "EXEC",
+      "description": "Execution boards and sprint artifacts"
+    },
+    {
+      "domain": "GOV",
+      "description": "Governance baseline artifacts"
+    },
+    {
+      "domain": "EVID",
+      "description": "Evidence ledger/schema artifacts"
+    },
+    {
+      "domain": "LOG",
+      "description": "Execution receipts and logs"
+    },
+    {
+      "domain": "SYS",
+      "description": "System implementation and subsystem documentation"
+    },
+    {
+      "domain": "BRAIN",
+      "description": "Multi-agent brain manifests, protocols, and indexes"
+    },
+    {
+      "domain": "SCHEMA",
+      "description": "Schema suites and validation bundles"
+    },
+    {
+      "domain": "TEST",
+      "description": "Test harnesses and adversarial suites"
+    },
+    {
+      "domain": "ADR",
+      "description": "Architecture decision records"
+    },
+    {
+      "domain": "HEALTH",
+      "description": "Health and metadata coverage reporting artifacts"
+    },
+    {
+      "domain": "DREAM",
+      "description": "Dream journal artifacts, REM cycle logs, and compressed simulation outputs"
+    },
+    {
+      "domain": "ARCH",
+      "description": "Boot archive corpus, living archive charters, and ingest seed collections"
+    },
+    {
+      "domain": "SWARM",
+      "description": "Swarm invitation, agent DNA, and children-of-the-swarm protocols"
+    },
+    {
+      "domain": "RESEARCH",
+      "description": "Intelligence sweeps, convergence reports, and synthesis artifacts"
+    }
+  ],
+  "relation_vocabulary": [
+    "defines",
+    "implements",
+    "implemented_by",
+    "extends",
+    "operationalizes",
+    "governs",
+    "supports",
+    "constrains",
+    "validated_by",
+    "indexes",
+    "references",
+    "referenced_by",
+    "depends_on",
+    "summarized_by",
+    "prioritizes",
+    "runs",
+    "validates",
+    "receipts_for",
+    "evidence_for",
+    "recorded_in",
+    "part_of",
+    "relates_to",
+    "tested_by",
+    "tests",
+    "generated_by",
+    "spec"
+  ],
+  "lifecycle_transitions": [
+    {
+      "from": "DRAFT",
+      "to": "CANDIDATE"
+    },
+    {
+      "from": "CANDIDATE",
+      "to": "RATIFIED"
+    },
+    {
+      "from": "CANDIDATE",
+      "to": "DEPRECATED"
+    },
+    {
+      "from": "RATIFIED",
+      "to": "ARCHIVED"
+    },
+    {
+      "from": "RATIFIED",
+      "to": "DEPRECATED"
+    }
+  ],
+  "lifecycle_transition_guards": [
+    "RATIFIED requires council ratification and @atlaslattice adjudication.",
+    "ARCHIVED artifacts retain stable IDs and provenance.",
+    "DEPRECATED artifacts remain addressable and should point to replacement artifacts when possible."
+  ]
+}

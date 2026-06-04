@@ -1,0 +1,83 @@
+# Atlas Provenance Receipt Schema v0.1
+# NOT CANON. NOT DEPLOYABLE.
+# schema_version: "0.1"
+
+schema_version: "0.1"
+schema_id: atlas-provenance-receipt
+description: >
+  Verifiable record that a specific event occurred.
+  A receipt is NOT proof of truth — it is proof that something was recorded.
+
+fields:
+  receipt_id:
+    type: string
+    required: true
+    description: Stable unique identifier for this receipt
+
+  event_type:
+    type: string
+    required: true
+    enum: [artifact_created, state_transition, ratification, governance_decision,
+           execution_request, ingestion, contradiction_detected, quarantine_triggered,
+           audit_check, rehydration_attempt, failure, unknown]
+
+  artifact_id:
+    type: string
+    required: true
+    description: Artifact this receipt attests to
+
+  previous_state:
+    type: string
+    required: false
+    description: Trust state before event (for state transitions)
+
+  new_state:
+    type: string
+    required: false
+    description: Trust state after event (for state transitions)
+
+  issuing_seat:
+    type: string
+    required: true
+    description: Agent seat that issued this receipt
+
+  timestamp:
+    type: string
+    format: iso8601
+    required: true
+
+  evidence_refs:
+    type: array
+    items: string
+    required: true
+    description: References to evidence supporting this receipt
+
+  receipt_is_truth:
+    type: boolean
+    required: true
+    default: false
+    constraint: "MUST always be false. Receipt ≠ truth."
+
+  sha256_if_available:
+    type: string
+    required: false
+
+  canon_status:
+    type: string
+    required: true
+    enum: [not_canon, candidate_canon, ratified_canon]
+    default: not_canon
+
+  deployment_status:
+    type: string
+    required: true
+    enum: [not_deployable, deployment_candidate, deployed]
+    default: not_deployable
+
+constraints:
+  - receipt_is_truth must be false
+  - A receipt records that an event occurred; it does not establish epistemic truth
+  - evidence_refs must be non-empty
+  - summary receipt does not equal source truth
+  - canon_status defaults to not_canon
+  - deployment_status defaults to not_deployable

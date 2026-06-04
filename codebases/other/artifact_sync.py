@@ -23,6 +23,7 @@ import os
 import json
 import subprocess
 import hashlib
+import stat
 from datetime import datetime
 from typing import Dict, List, Optional
 from pathlib import Path
@@ -35,6 +36,7 @@ class ArtifactSync:
         self.data_source = "collection://2d20c1de-73d9-80ce-a9af-000b011d52f0"
         self.drive_inbox = "Atlas Vault Inbox"
         self.drive_vault = "Krakoa_Vault"
+        self.max_artifact_bytes = int(os.getenv("ARTIFACT_MAX_BYTES", "1048576"))
         
         # Sync status tracking
         self.sync_log = []
@@ -51,15 +53,28 @@ class ArtifactSync:
         
         path = Path(filepath)
         
-        if not path.exists():
+        try:
+            file_stat = path.stat()
+            if not stat.S_ISREG(file_stat.st_mode):
+                return {"success": False, "error": f"Path is not a file: {filepath}"}
+            file_size = file_stat.st_size
+            if file_size > self.max_artifact_bytes:
+                return {
+                    "success": False,
+                    "error": (
+                        f"Artifact too large ({file_size} bytes). "
+                        f"Set ARTIFACT_MAX_BYTES to increase the limit."
+                    ),
+                }
+            content = path.read_text(encoding="utf-8", errors="replace")
+        except FileNotFoundError:
             return {"success": False, "error": f"File not found: {filepath}"}
-        
-        # Read content
-        content = path.read_text()
+        except OSError as e:
+            return {"success": False, "error": f"Unable to read file: {e}"}
         
         # Generate artifact metadata
         artifact = {
-            "id": self._generate_id(filepath),
+            "id": self._generate_id(filepath, content),
             "filename": path.name,
             "title": title or path.stem,
             "content": content,
@@ -67,7 +82,7 @@ class ArtifactSync:
             "priority": priority,
             "category": category,
             "timestamp": datetime.now().isoformat(),
-            "hash": hashlib.md5(content.encode()).hexdigest()
+            "hash": hashlib.sha256(content.encode("utf-8")).hexdigest()
         }
         
         results = {
@@ -97,19 +112,22 @@ class ArtifactSync:
             "results": results["platforms"]
         })
         
+        results["success"] = all(
+            platform_result.get("success") or platform_result.get("skipped")
+            for platform_result in results["platforms"].values()
+        )
+        
         return results
     
-    def _generate_id(self, filepath: str) -> str:
+    def _generate_id(self, filepath: str, content: str) -> str:
         """Generate unique artifact ID."""
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        file_hash = hashlib.md5(filepath.encode()).hexdigest()[:8]
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
+        seed = f"{filepath}:{content}"
+        file_hash = hashlib.sha256(seed.encode("utf-8")).hexdigest()[:12]
         return f"ART_{timestamp}_{file_hash}"
     
     def _sync_to_notion(self, artifact: Dict) -> Dict:
         """Sync artifact to Notion database."""
-        
-        # Truncate content for Notion (max ~2000 chars for property)
-        summary = artifact["content"][:2000] if len(artifact["content"]) > 2000 else artifact["content"]
         
         # Create page content
         content = f"""## Artifact: {artifact['title']}
@@ -158,7 +176,8 @@ class ArtifactSync:
                 
                 return {"success": True, "url": url}
             else:
-                return {"success": False, "error": result.stderr}
+                error = (result.stderr or result.stdout or "").strip()
+                return {"success": False, "error": error or f"Command failed with code {result.returncode}"}
         except Exception as e:
             return {"success": False, "error": str(e)}
     
@@ -177,7 +196,8 @@ class ArtifactSync:
             if result.returncode == 0:
                 return {"success": True, "path": f"{self.drive_inbox}/{Path(filepath).name}"}
             else:
-                return {"success": False, "error": result.stderr}
+                error = (result.stderr or result.stdout or "").strip()
+                return {"success": False, "error": error or f"Command failed with code {result.returncode}"}
         except Exception as e:
             return {"success": False, "error": str(e)}
     
@@ -224,19 +244,24 @@ class ArtifactSync:
             result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
             
             if result.returncode == 0 and artifact_id in result.stdout:
-                return {"exists": True}
+                return {"exists": True, "error": None}
             else:
-                return {"exists": False}
+                error = (result.stderr or "").strip()
+                return {"exists": False, "error": error or None}
         except Exception as e:
-            return {"error": str(e)}
+            return {"exists": False, "error": str(e)}
     
     def sync_directory(self, directory: str, pattern: str = "*.md") -> List[Dict]:
         """Sync all matching files in a directory."""
         
         path = Path(directory)
+        if not path.exists():
+            return [{"success": False, "error": f"Directory not found: {directory}"}]
+        if not path.is_dir():
+            return [{"success": False, "error": f"Path is not a directory: {directory}"}]
         results = []
         
-        for filepath in path.glob(pattern):
+        for filepath in sorted(path.glob(pattern)):
             print(f"\n{'='*60}")
             print(f"Syncing: {filepath}")
             result = self.sync_artifact(str(filepath))
@@ -289,7 +314,7 @@ class DualPlatformArchiver:
         try:
             result = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
             return "keep" in result.stdout.lower()
-        except:
+        except Exception:
             return False
     
     def archive(
@@ -316,10 +341,15 @@ class DualPlatformArchiver:
             results["platforms"]["keep"] = self._archive_to_keep(content, title)
         else:
             results["platforms"]["keep"] = {
-                "success": False,
+                "skipped": True,
                 "reason": "Google Keep integration not available in Zapier MCP",
                 "action_required": "Add Google Keep to Zapier MCP configuration"
             }
+        
+        results["success"] = all(
+            platform_result.get("success") or platform_result.get("skipped")
+            for platform_result in results["platforms"].values()
+        )
         
         return results
     
@@ -348,7 +378,10 @@ class DualPlatformArchiver:
         
         try:
             result = subprocess.run(cmd, capture_output=True, text=True, timeout=60)
-            return {"success": result.returncode == 0}
+            if result.returncode == 0:
+                return {"success": True}
+            error = (result.stderr or result.stdout or "").strip()
+            return {"success": False, "error": error or f"Command failed with code {result.returncode}"}
         except Exception as e:
             return {"success": False, "error": str(e)}
     

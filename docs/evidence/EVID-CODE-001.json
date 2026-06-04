@@ -1,0 +1,15 @@
+{
+  "schema_version": "0.1",
+  "evidence_id": "EVID-CODE-001",
+  "artifact_id": "AL-SCHEMA-001",
+  "artifact_title": "Atlas ORCS Schema Suite v0.1",
+  "artifact_path": "schemas/atlas_orcs/v0_1",
+  "claim": "This schema suite was designed and built by David Sheldon via conversational AI collaboration",
+  "evidence_type": "build_receipt",
+  "evidence_date": "2026-05-26",
+  "evidence_source": "archive/spec/gptdream/VAULT_MANIFEST_2026-05-26.md",
+  "ai_systems_involved": ["Claude", "GPT", "Gemini"],
+  "verification_method": "pytest_passing",
+  "test_command": "python -m pytest -q tests/adversarial/",
+  "notes": "63 tests passing as of 2026-05-26 vault build"
+}

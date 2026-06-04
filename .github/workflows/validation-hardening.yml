@@ -1,0 +1,85 @@
+name: Validation Hardening
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validation-hardening:
+    name: validation-hardening
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Prepare validation report directory
+        run: mkdir -p reports/validation-hardening
+
+      - name: Validate metadata completeness
+        id: metadata_completeness
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          python scripts/validate_metadata_completeness.py | tee reports/validation-hardening/metadata-completeness.txt
+
+      - name: Validate provenance fields
+        id: provenance_fields
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          python scripts/validate_provenance_fields.py | tee reports/validation-hardening/provenance-fields.txt
+
+      - name: Validate lifecycle consistency
+        id: lifecycle_consistency
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          python scripts/validate_lifecycle_consistency.py | tee reports/validation-hardening/lifecycle-consistency.txt
+
+      - name: Generate domain metadata coverage report
+        id: domain_coverage
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          python scripts/generate_domain_coverage_report.py | tee reports/validation-hardening/domain-coverage.txt
+
+      - name: Upload validation reports on failure
+        if: ${{ always() && (steps.metadata_completeness.outcome == 'failure' || steps.provenance_fields.outcome == 'failure' || steps.lifecycle_consistency.outcome == 'failure' || steps.domain_coverage.outcome == 'failure') }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-hardening-reports
+          if-no-files-found: warn
+          path: |
+            reports/validation-hardening/
+            docs/provenance-validation-summary.json
+            docs/domain-metadata-coverage-report.md
+            docs/domain-metadata-coverage-report.json
+
+      - name: Fail job on validation issues
+        if: always()
+        shell: bash
+        run: |
+          if [ "${{ steps.metadata_completeness.outcome }}" = "failure" ] || \
+             [ "${{ steps.provenance_fields.outcome }}" = "failure" ] || \
+             [ "${{ steps.lifecycle_consistency.outcome }}" = "failure" ] || \
+             [ "${{ steps.domain_coverage.outcome }}" = "failure" ]; then
+            echo "Validation hardening checks reported failures."
+            exit 1
+          fi

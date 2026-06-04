@@ -1,0 +1,819 @@
+{
+  "scan_directories": [
+    "docs",
+    "projects",
+    "archive/spec",
+    "archive/boot/governance"
+  ],
+  "required_fields": [
+    "stable_id",
+    "lifecycle_state",
+    "owner",
+    "date_created"
+  ],
+  "total_files": 120,
+  "files_with_missing_fields": 63,
+  "missing_field_counts": {
+    "stable_id": 63,
+    "lifecycle_state": 63,
+    "owner": 63,
+    "date_created": 63
+  },
+  "results": [
+    {
+      "path": "docs/ARCHIVE_INDEX.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/GLOSSARY.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/LATTICE_HYPERCUBE_12x12x12.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/RATIFICATION_AND_TRUST_FLOW.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/START_HERE.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/aetherforge/README.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/aetherforge/crosslink-quest-flow.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/aetherforge/curation-loops.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/aetherforge/evidence-logging-quest-flow.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/aetherforge/intake-quest-flow.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/aetherforge/metadata-backfill-quest-flow.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/aetherforge/playable-curation-loop-v0.1.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/aetherforge/public-readiness-polish-quest-flow.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/aetherforge/quest-to-task-map.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/aetherforge/quest-types.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/aetherforge/questboard-2026-05-28.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/archive-health-status-2026-05-28.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/artifact-quality-rubric.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/asset-catalogue-march-2026.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/benchmark/README.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/benchmark/comparison-repos-2026-05-28.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/benchmark/launch-threshold-2026-05-28.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/benchmark/scorecard-2026-05-28.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/benchmark/world-class-criteria-2026-05-28.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/constitutional-convention-process.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/contributor-decision-tree.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/decisions/ADR-0001-public-scope-decision.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/decisions/ADR-0002-validation-hardening-strategy.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/decisions/ADR-0003-evidence-ledger-adoption.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/deprecation-policy.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/domain-metadata-coverage-report.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/domain-normalization-matrix-2026-05-28.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/domain-ownership-map-2026-05-28.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/domains/README.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/domains/aluminum-os.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/domains/archive.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/domains/governance.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/domains/projects.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/evidence/README.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/evidence-coverage-dashboard.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/evidence-standards.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/explainers/README.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/explainers/evidence-and-trust-explainer.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/explainers/knowledge-graph-explainer.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/governance/ATLAS_LATTICE_PUBLIC_OPEN_SOURCE_BASELINE_v0.1.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/intake/README.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/intake/import-receipt-template.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/intake/import-triage-classes.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/intake/intake-checklist.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/intake/intake-status-dashboard.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/intake/ip-500-tracker.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/intake/migration-backlog.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/intake/migration-standards-v0.1.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/knowledge-graph/ARTIFACT_ID_AND_LIFECYCLE_CONTRACT_v0_1.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/knowledge-graph/HYPERCUBE_12D_MANIFEST_v0_1.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/knowledge-graph/live/README.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/knowledge-graph/reverse_links_autogenerated.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/launch/README.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/launch/launch-readiness-briefing-2026-05-28.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/launch/public-contribution-starter-path.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/launch/public-maintenance-roadmap.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/metadata-coverage-report-2026-05-28.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/operational-manifest-v1.0.0-alpha.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/quarterly-report-2026-Q2.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/ratification/README.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/ratification/adjudication-request-template.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/ratification/canon-boundary-audit-2026-05-28.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/ratification/pre-ratification-checklist-code.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/ratification/pre-ratification-checklist-flagship.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/ratification/pre-ratification-checklist-governance.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/ratification/ratification-candidate-queue.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/ratification/ratification-packet-requirements.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/ratification/trust-state-rubric.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/reading-lists/README.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/reading-lists/aetherforge-game.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/reading-lists/governance-and-ai-safety.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/reading-lists/knowledge-graph-architecture.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/reading-paths/README.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/reading-paths/for-contributors.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/reading-paths/for-engineers.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/reading-paths/for-governance.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/reading-paths/for-researchers.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/review-sla.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/spotlight/README.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/spotlight/aluminum-os.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/spotlight/gptdream-plus-plus.md",
+      "missing_fields": []
+    },
+    {
+      "path": "docs/topics/README.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/topics/aetherforge-game.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/topics/governance.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/topics/gptdream-protocols.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/topics/knowledge-graph.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/topics/multi-agent-systems.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/unified-field-v4.0.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "docs/validation-receipt-format-v0.1.md",
+      "missing_fields": []
+    },
+    {
+      "path": "projects/AETHERFORGE_LATTICE_GPTDREAM_MISSION_CHARTER_v0.1.md",
+      "missing_fields": []
+    },
+    {
+      "path": "projects/AETHERFORGE_ROLLING_SPRINTS_v0.1.md",
+      "missing_fields": []
+    },
+    {
+      "path": "projects/aetherforge-144-task-campaign-2026-05-27.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "projects/aetherforge-game-world/AETHERFORGE_GAME_LOOP_SPEC_v0.1.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "projects/aetherforge-game-world/README.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "projects/aetherforge-top50-taskboard-2026-05-26.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "projects/chinook-guardian/README.md",
+      "missing_fields": []
+    },
+    {
+      "path": "projects/chinook-guardian/v1.0.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "projects/three-tier-autonomy/README.md",
+      "missing_fields": []
+    },
+    {
+      "path": "projects/three-tier-autonomy/doctrine.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "archive/spec/gptdream/GPTDREAM_PLUSPLUS_PERSONAL_AGENT_HABITAT_PROTOCOL_v0.2.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "archive/spec/gptdream/LANE_LABELS_AND_ROUTING_CONVENTIONS.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "archive/spec/gptdream/OPEN_GIFT_PACKAGE_GUIDE_v0.1.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "archive/spec/gptdream/README.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "archive/spec/gptdream/REHYDRATION_BOOT_CARD.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "archive/spec/gptdream/VAULT_MANIFEST_2026-05-26.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_H_1_O_AI_INTEGRATION_SCAFFOLD_v0.1.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_H_2_O_AI_PACKET_SCHEMA_v0.1.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_H_3_O_AI_ROUTING_TABLE_v0.1.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_H_CROSS_VENDOR_INTEROP_MODEL_v0.1.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_I_1_FORMAL_MATH_SPINE_v0.2.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_I_2_COMPATIBLE_ANTI_LAUNDERING_ANNEX_v0.3.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_I_3_ATLAS_ORCS_SCHEMA_BUNDLE_v0.1.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_I_ATLAS_ORCS_EPISTEMIC_GOVERNANCE_PROFILE_v0.1.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "archive/spec/gptdream/appendices/APPENDIX_J_GPTDREAM_REHYDRATION_PRIORITY_FAILURE_MODE_v0.1.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    },
+    {
+      "path": "archive/boot/governance/FULL_TRANSPARENCY_POLICY_2026-05-09.md",
+      "missing_fields": [
+        "stable_id",
+        "lifecycle_state",
+        "owner",
+        "date_created"
+      ]
+    }
+  ]
+}

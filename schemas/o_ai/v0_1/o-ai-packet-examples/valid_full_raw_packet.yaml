@@ -1,0 +1,45 @@
+# Valid O_AI Packet Example — Full Raw
+# NOT CANON. NOT DEPLOYABLE.
+# This is a valid packet with full_raw status and all gates passing.
+
+packet_id: example-valid-full-raw-001
+source_vendor: VENDOR_SURFACE_OPENAI
+source_seat: HashlightBrain
+
+raw_export_status: full_raw
+
+thread_time_range:
+  start: "2026-05-21T09:00:00Z"
+  end: "2026-05-21T10:45:00Z"
+  timezone: UTC
+
+access_scope:
+  visible_sources:
+    - "Full raw export of ChatGPT thread 2026-05-21"
+    - "Attached files: schema_draft_v1.yaml"
+  unavailable_sources: []
+  assumed_context: []
+
+epistemic_label: parsed_artifact
+authority_scope: candidate_review_only
+
+gates:
+  provenance_gate: pass
+  safety_gate: pass
+  governance_gate: pass
+  data_residency_gate: pass
+
+sha256_if_available: "abc123def456..."
+
+public_use_status: summary_only
+canon_status: not_canon
+deployment_status: not_deployable
+
+execution_request: false
+
+strongest_safe_claim: >
+  Full raw export available. Claims can be verified against source.
+  Candidate for review; not ratified.
+
+caveats:
+  - "Still candidate status; requires council review before promotion"
