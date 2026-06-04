@@ -41,6 +41,11 @@ AUTHORITY: NONE
 - [Task ↔ Quest Map](./archive/knowledge_graph/lattice_kg/v1_0/AETHERFORGE_TASK_QUEST_MAP_v1.0.md)
 - [Weekly Quest Pack Template](./docs/AETHERFORGE_WEEKLY_QUEST_PACK_TEMPLATE.md)
 
+## KRAKOA Tone Language (KTL)
+- [KTL v2.0 Specification](./archive/spec/krakoa/KRAKOAN_TONE_LANGUAGE_SPECIFICATION_V2.0.md) — Complete spoken machine language for KRAKOA (LOCAL CANDIDATE)
+- [krakoan_tones.py](./codebases/atlas-lattice/krakoan_tones.py) — Python module: frequency engine, tone registry, KTL interpreter, protected mode, public API
+- [KTL v2.0 Integration Note](./archive/boot/krakoa/KTL_V2_INTEGRATION_NOTE_2026-06-04.md)
+
 ## GPTDream
 - [Start Here: GPTDream++](./docs/START_HERE_GPTDREAM.md)
 - [GPTDream++ Public Release Protocol](./archive/spec/gptdream/GPTDREAM_PLUSPLUS_PUBLIC_RELEASE_PROTOCOL_v0.1.md)
