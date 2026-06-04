@@ -1,4 +1,4 @@
-schema_id: lattice_coordinate.schema.v0.2
+schema_id: lattice_coordinate.schema.v0.3
 status: public_candidate
 canon_status: not_canon
 deployment_status: not_deployed
@@ -32,6 +32,7 @@ required_fields:
   - public_release_status
   - authority_scope
   - deployment_status
+  - sensitivity_class
 
 fields:
   coordinate_id:
@@ -183,6 +184,21 @@ fields:
     items: string
     description: Contradiction or fossil lineage records associated with this coordinate.
 
+  sensitivity_class:
+    type: enum
+    description: Required routing class for public/private/VIP/security-sensitive handling. This field gates review and release posture; it never grants authority.
+    values:
+      - public_safe
+      - private_review
+      - vip_sensitive
+      - security_sensitive
+      - crypto_sensitive
+      - export_control_sensitive
+      - personal_sensitive
+      - health_sensitive
+      - legal_sensitive
+      - blocked_public_release
+
   review_status:
     type: enum
     values:
@@ -190,6 +206,9 @@ fields:
       - needs_source_passport
       - needs_receipts
       - needs_adversarial_review
+      - needs_security_review
+      - needs_crypto_review
+      - needs_vip_review
       - reviewed_public_safe
       - human_root_review_needed
       - deferred
@@ -237,6 +256,9 @@ fields:
       - blocked_privacy
       - blocked_receipt
       - blocked_rights
+      - blocked_security
+      - blocked_vip
+      - blocked_export_control
 
 invariants:
   - hsn_is_entry_coordinate_not_totality
@@ -248,6 +270,9 @@ invariants:
   - quantum_advantage_not_assumed
   - crypto_security_not_self_certifying
   - post_quantum_ready_not_deployed_by_label
+  - vip_status_requires_explicit_review_route
+  - security_sensitive_requires_gated_release
+  - public_safe_requires_receipt_review
   - node_not_truth
   - many_versions_before_synthesis
   - fossils_preserved
@@ -262,6 +287,7 @@ safe_wording:
   - Coordinates help route review; they do not decide truth.
   - Extra dimensions must not imply authority without status, receipt, review, and human-root gates.
   - Quantum computing and post-quantum cryptography nodes require current standards and security review receipts before any implementation claim.
+  - VIP-sensitive and security-sensitive nodes require explicit sensitivity class, gated review, and release decision before public use.
 
 forbidden_wording:
   - This coordinate proves the claim.
@@ -272,4 +298,6 @@ forbidden_wording:
   - Resonance compatibility proves deployment readiness.
   - Quantum labeling proves speedup or security.
   - Post-quantum label means migration is complete.
+  - VIP label grants priority, authority, or public-release permission.
+  - Security-sensitive label means safe to disclose.
   - A node can self-promote to canon.
