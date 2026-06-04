@@ -1,0 +1,45 @@
+# Public Release Packet — PRCQ-018 / AUTH-06
+# CANDIDATE — NOT CANON — authority_scope:none
+
+artifact_id: "prcq-018-auth-06"
+title: "deployment_status enum"
+version: "v0.1"
+date: "2026-06-04"
+agent: "TIDELOCK (Copilot)"
+source_surface: "github"
+provenance_class: "enum_only"
+raw_export_status: "policy_only"
+canon_status: "not_canon"
+deployment_status: "not_deployed"
+authority_scope: "none"
+public_release_class: "public_noncanon"
+privacy_status: "public_safe"
+rights_status: "open_source_mit"
+
+redline_scan:
+  result: "GREEN"
+  notes: "Pure 6-value closed-world enum defining deployment lifecycle. No content referenced."
+
+strongest_safe_claim: >
+  The deployment_status field uses a 6-value closed-world enum
+  (not_deployed, staging, deployed_website, deployed_github_pages,
+  deployed_external, deployment_retired)
+  that fully describes the deployment lifecycle of any artifact in this system.
+
+overclaims_to_avoid:
+  - "Do not claim any artifact is deployed based on this enum definition alone"
+  - "deployed_website does not imply canon — deployment and canonization are separate"
+  - "This enum does not grant deployment permission to any artifact"
+
+missing_receipts:
+  - "none"
+
+review_required_by:
+  - Hashlight
+  - Lucerna
+  - TIDELOCK
+  - Rootglass
+
+next_safe_action: >
+  Add deployment_status enum to all Atlas/ORCS schemas and validate
+  with closed-world test T18 (Module 6).

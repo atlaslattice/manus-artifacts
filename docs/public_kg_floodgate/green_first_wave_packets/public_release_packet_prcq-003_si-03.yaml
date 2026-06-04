@@ -1,0 +1,43 @@
+# Public Release Packet — PRCQ-003 / SI-03
+# CANDIDATE — NOT CANON — authority_scope:none
+
+artifact_id: "prcq-003-si-03"
+title: "Stable source_id values for named GitHub repos"
+version: "v0.1"
+date: "2026-06-04"
+agent: "TIDELOCK (Copilot)"
+source_surface: "github"
+provenance_class: "schema_only"
+raw_export_status: "policy_only"
+canon_status: "not_canon"
+deployment_status: "not_deployed"
+authority_scope: "none"
+public_release_class: "public_noncanon"
+privacy_status: "public_safe"
+rights_status: "open_source_mit"
+
+redline_scan:
+  result: "GREEN"
+  notes: "Pure format schema. No content. No exports. No authority. No PII."
+
+strongest_safe_claim: >
+  The format github:{owner}/{repo}@{sha} is the stable source_id pattern
+  for named GitHub repositories in this system, providing a pinned, reproducible pointer.
+
+overclaims_to_avoid:
+  - "Do not claim this is the only valid source_id format system-wide"
+  - "Do not claim @sha guarantees content integrity without independent hash verification"
+  - "Do not claim this format is authoritative outside this system"
+
+missing_receipts:
+  - "none — policy_only classification requires no raw export receipt"
+
+review_required_by:
+  - Hashlight
+  - Lucerna
+  - TIDELOCK
+  - Rootglass
+
+next_safe_action: >
+  Add this source_id format to machine_readable_release_gate_rules.yaml
+  and include in schema validation tests (Module 3).

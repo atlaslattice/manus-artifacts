@@ -1,0 +1,43 @@
+# Public Release Packet — PRCQ-006 / SI-06
+# CANDIDATE — NOT CANON — authority_scope:none
+
+artifact_id: "prcq-006-si-06"
+title: "Surface field enum/schema for every source"
+version: "v0.1"
+date: "2026-06-04"
+agent: "TIDELOCK (Copilot)"
+source_surface: "github"
+provenance_class: "enum_only"
+raw_export_status: "policy_only"
+canon_status: "not_canon"
+deployment_status: "not_deployed"
+authority_scope: "none"
+public_release_class: "public_noncanon"
+privacy_status: "public_safe"
+rights_status: "open_source_mit"
+
+redline_scan:
+  result: "GREEN"
+  notes: "Pure closed-world enum. No content accessed. Values: github, google_docs, google_sheets, google_drive, notion, local, website, unknown."
+
+strongest_safe_claim: >
+  Every source in this system has an assigned surface value drawn from
+  a closed-world 8-value enum defined in ENUMERATION_REGISTRY.md;
+  unknown is valid during indexing and must be resolved before promotion.
+
+overclaims_to_avoid:
+  - "Do not claim the surface enum is complete for all possible future sources"
+  - "Do not claim a known surface value implies the source is reviewed or exported"
+
+missing_receipts:
+  - "none — enum definition requires no raw export"
+
+review_required_by:
+  - Hashlight
+  - Lucerna
+  - TIDELOCK
+  - Rootglass
+
+next_safe_action: >
+  Add surface enum to schemas/atlas_orcs/v0_1/ and validate presence
+  with scripts/validate_floodgate_enums.py (Module 3).

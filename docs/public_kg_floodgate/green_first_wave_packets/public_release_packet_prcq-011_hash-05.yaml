@@ -1,0 +1,54 @@
+# Public Release Packet — PRCQ-011 / HASH-05
+# CANDIDATE — NOT CANON — authority_scope:none
+
+artifact_id: "prcq-011-hash-05"
+title: "Google Sheets export checklist"
+version: "v0.1"
+date: "2026-06-04"
+agent: "TIDELOCK (Copilot)"
+source_surface: "google_sheets"
+provenance_class: "checklist_only"
+raw_export_status: "policy_only"
+canon_status: "not_canon"
+deployment_status: "not_deployed"
+authority_scope: "none"
+public_release_class: "public_noncanon"
+privacy_status: "public_safe"
+rights_status: "open_source_mit"
+
+redline_scan:
+  result: "GREEN"
+  notes: "Pure checklist. No sheet content accessed. Steps are procedural only."
+
+strongest_safe_claim: >
+  The Google Sheets export checklist defines the minimum required steps
+  before any Google Sheet may be classified as frozen_snapshot or
+  full_raw_export_attached in this system.
+
+checklist:
+  - "[ ] Confirm sheet is not actively being edited"
+  - "[ ] Record sheet ID and current revision"
+  - "[ ] Export relevant tabs as CSV or TSV"
+  - "[ ] Upload exported file(s) to repository at pinned path"
+  - "[ ] Record source_id as gsheet:{sheet_id}@frozen:{date}"
+  - "[ ] Update raw_export_status to frozen_snapshot"
+  - "[ ] Note any tabs marked [PRIVATE] or [PENDING]"
+  - "[ ] Route to Hashlight for hash gap review"
+
+overclaims_to_avoid:
+  - "Do not claim a completed checklist means the content is accurate or canon"
+  - "Do not apply this checklist to Google Docs — use PRCQ-010"
+  - "Completing this checklist does not advance canon_status"
+
+missing_receipts:
+  - "none"
+
+review_required_by:
+  - Hashlight
+  - Lucerna
+  - TIDELOCK
+  - Rootglass
+
+next_safe_action: >
+  Cross-reference with PRCQ-010 and add both checklists to
+  machine_readable_release_gate_rules.yaml.

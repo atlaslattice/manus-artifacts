@@ -1,0 +1,44 @@
+# Public Release Packet — PRCQ-009 / HASH-03
+# CANDIDATE — NOT CANON — authority_scope:none
+
+artifact_id: "prcq-009-hash-03"
+title: "Uploaded markdown full_raw_export_attached rule"
+version: "v0.1"
+date: "2026-06-04"
+agent: "TIDELOCK (Copilot)"
+source_surface: "github"
+provenance_class: "policy_rule"
+raw_export_status: "policy_only"
+canon_status: "not_canon"
+deployment_status: "not_deployed"
+authority_scope: "none"
+public_release_class: "public_noncanon"
+privacy_status: "public_safe"
+rights_status: "open_source_mit"
+
+redline_scan:
+  result: "GREEN"
+  notes: "Pure policy rule for GitHub markdown files. No content accessed."
+
+strongest_safe_claim: >
+  A markdown file uploaded to a pinned GitHub commit SHA is considered
+  to have raw_export_status: full_raw_export_attached upon successful
+  push verification — the file IS the export.
+
+overclaims_to_avoid:
+  - "Do not claim the content is reviewed or validated by this status"
+  - "Do not claim full_raw_export_attached implies canon_candidate"
+  - "Do not apply this rule to non-markdown binary files without a separate PRCQ"
+
+missing_receipts:
+  - "none"
+
+review_required_by:
+  - Hashlight
+  - Lucerna
+  - TIDELOCK
+  - Rootglass
+
+next_safe_action: >
+  Add this rule to the GitHub export checklist (PRCQ-012)
+  and validate in T09 export checklist test (Module 6).

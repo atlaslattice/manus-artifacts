@@ -1,0 +1,54 @@
+# Public Release Packet — PRCQ-010 / HASH-04
+# CANDIDATE — NOT CANON — authority_scope:none
+
+artifact_id: "prcq-010-hash-04"
+title: "Google Docs export checklist"
+version: "v0.1"
+date: "2026-06-04"
+agent: "TIDELOCK (Copilot)"
+source_surface: "google_docs"
+provenance_class: "checklist_only"
+raw_export_status: "policy_only"
+canon_status: "not_canon"
+deployment_status: "not_deployed"
+authority_scope: "none"
+public_release_class: "public_noncanon"
+privacy_status: "public_safe"
+rights_status: "open_source_mit"
+
+redline_scan:
+  result: "GREEN"
+  notes: "Pure checklist. No document content accessed. Steps are procedural only."
+
+strongest_safe_claim: >
+  The Google Docs export checklist defines the minimum required steps
+  before any Google Doc may be classified as frozen_snapshot or
+  full_raw_export_attached in this system.
+
+checklist:
+  - "[ ] Confirm document is not actively being edited"
+  - "[ ] Record document ID and current revision"
+  - "[ ] Export as Markdown or plain text"
+  - "[ ] Upload exported file to repository at pinned path"
+  - "[ ] Record source_id as gdoc:{doc_id}@frozen:{date}"
+  - "[ ] Update raw_export_status to frozen_snapshot"
+  - "[ ] Note any sections marked [REDACTED] or [PENDING]"
+  - "[ ] Route to Hashlight for hash gap review"
+
+overclaims_to_avoid:
+  - "Do not claim a completed checklist means the content is accurate or canon"
+  - "Do not claim a frozen snapshot is reviewed content"
+  - "Completing this checklist does not advance canon_status"
+
+missing_receipts:
+  - "none — checklist definition requires no raw export"
+
+review_required_by:
+  - Hashlight
+  - Lucerna
+  - TIDELOCK
+  - Rootglass
+
+next_safe_action: >
+  Add this checklist to the GitHub export checklists index and
+  reference from ENUMERATION_REGISTRY.md.

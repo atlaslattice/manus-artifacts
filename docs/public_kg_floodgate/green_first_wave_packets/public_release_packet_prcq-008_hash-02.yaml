@@ -1,0 +1,44 @@
+# Public Release Packet — PRCQ-008 / HASH-02
+# CANDIDATE — NOT CANON — authority_scope:none
+
+artifact_id: "prcq-008-hash-02"
+title: "Live Google Docs remain not_exported until frozen"
+version: "v0.1"
+date: "2026-06-04"
+agent: "TIDELOCK (Copilot)"
+source_surface: "google_docs"
+provenance_class: "policy_rule"
+raw_export_status: "policy_only"
+canon_status: "not_canon"
+deployment_status: "not_deployed"
+authority_scope: "none"
+public_release_class: "public_noncanon"
+privacy_status: "public_safe"
+rights_status: "open_source_mit"
+
+redline_scan:
+  result: "GREEN"
+  notes: "Pure policy rule. No live document content accessed or referenced. Rule applies to all live Google Docs in this system."
+
+strongest_safe_claim: >
+  Any live (unfrozen) Google Doc in this system MUST carry
+  raw_export_status: not_exported until an explicit freeze event
+  is recorded with a frozen_snapshot receipt.
+
+overclaims_to_avoid:
+  - "Do not claim a live Google Doc's content is absent or deleted"
+  - "Do not claim this rule implies the content is PII-free"
+  - "Do not use a live Google Doc as a source without freeze confirmation"
+
+missing_receipts:
+  - "none — rule definition requires no raw export"
+
+review_required_by:
+  - Hashlight
+  - Lucerna
+  - TIDELOCK
+  - Rootglass
+
+next_safe_action: >
+  Add this rule to machine_readable_release_gate_rules.yaml
+  under google_docs surface handling.

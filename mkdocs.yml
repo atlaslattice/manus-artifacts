@@ -7,3 +7,9 @@ theme:
 nav:
   - Home: index.md
   - Graph View: graph_view.md
+  - Public KG Floodgate:
+    - Overview: ../docs/public_kg_floodgate/README.md
+    - GREEN Wave Manifest: ../docs/public_kg_floodgate/GREEN_FIRST_WAVE_RELEASE_MANIFEST_v0.1.md
+    - Classification Queue: ../docs/public_kg_floodgate/PUBLIC_RELEASE_CLASSIFICATION_QUEUE_v0.1.md
+    - Release Packet Template: ../docs/public_kg_floodgate/PUBLIC_RELEASE_PACKET_TEMPLATE_v0.1.md
+    - Enumeration Registry: ../docs/public_kg_floodgate/ENUMERATION_REGISTRY.md

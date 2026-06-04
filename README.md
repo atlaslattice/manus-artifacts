@@ -48,6 +48,7 @@ graph TD
 - **[Aetherforge Game World (Module 8)](./projects/aetherforge-game-world/README.md)** — Quest taxonomy, Archive Bowl index, Omnispec candidate framing, and onboarding template.
 - **[Aetherforge Top-100 Quest Ledger](./projects/aetherforge-game-world/AETHERFORGE_TOP100_QUEST_LEDGER_v0.1.md)** — Optimal next-100 tasks across all repo components in Metatron's Cube ring topology.
 - **[Aetherforge 144-Task Campaign (2026-05-28)](./projects/aetherforge-144-task-campaign-2026-05-28.md)** — 12 waves of 12 tasks sequenced for world-class execution.
+- **[Aetherforge Beta-144 Campaign (2026-06-04)](./projects/aetherforge-beta144-taskboard-2026-06-04.md)** — TIDELOCK edition: 12 modules × 12 tasks, GREEN floodgate + schema + KG + GPTDream++.
 - **[Aetherforge Top-10 Sprint Board (2026-05-28)](./projects/aetherforge-top10-taskboard-2026-05-28.md)** — Current top-10 unblocked sprint execution list.
 - **[Projects Board Hierarchy](./projects/README.md)** — Routing map linking 144→100→50→10 boards and project lanes.
 
@@ -72,6 +73,14 @@ graph TD
 - **[Archive Index](./docs/ARCHIVE_INDEX.md)** — Directory routing map across archive and adjacent lanes.
 - **[Glossary](./docs/GLOSSARY.md)** — Shared vocabulary for governance, Aetherforge, and GPTDream++ protocols.
 - **[Lattice Hypercube 12×12×12](./docs/LATTICE_HYPERCUBE_12x12x12.md)** — Public-safe candidate explainer for the Atlas Lattice / Rainbow Yin Yang Lattice.
+
+### Public KG Floodgate
+- **[Floodgate README](./docs/public_kg_floodgate/README.md)** — Orientation for the controlled public release scaffold. *Publish the metal detector before opening the vault.*
+- **[GREEN First Wave Manifest](./docs/public_kg_floodgate/GREEN_FIRST_WAVE_RELEASE_MANIFEST_v0.1.md)** — 10 GREEN public_noncanon packets: enums, schemas, checklists, boundaries.
+- **[Release Classification Queue](./docs/public_kg_floodgate/PUBLIC_RELEASE_CLASSIFICATION_QUEUE_v0.1.md)** — 24-item PRCQ: 10 GREEN released, 14 YELLOW held for redline scan.
+- **[Release Packet Template](./docs/public_kg_floodgate/PUBLIC_RELEASE_PACKET_TEMPLATE_v0.1.md)** — Canonical skeleton for all public release packets.
+- **[Enumeration Registry](./docs/public_kg_floodgate/ENUMERATION_REGISTRY.md)** — All 6 enum families (source_id, surface, raw_export_status, canon_status, deployment_status, authority_scope) in one table.
+- **[10 GREEN Packets](./docs/public_kg_floodgate/green_first_wave_packets/)** — Individual YAML release packets for PRCQ-003, 006, 007, 008, 009, 010, 011, 012, 017, 018.
 
 ### About
 - **[David Sheldon](./about/david-sheldon.md)** — Visionary and system architect.

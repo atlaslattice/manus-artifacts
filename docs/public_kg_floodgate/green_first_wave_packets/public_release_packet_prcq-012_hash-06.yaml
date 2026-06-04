@@ -1,0 +1,52 @@
+# Public Release Packet — PRCQ-012 / HASH-06
+# CANDIDATE — NOT CANON — authority_scope:none
+
+artifact_id: "prcq-012-hash-06"
+title: "GitHub files export checklist"
+version: "v0.1"
+date: "2026-06-04"
+agent: "TIDELOCK (Copilot)"
+source_surface: "github"
+provenance_class: "checklist_only"
+raw_export_status: "policy_only"
+canon_status: "not_canon"
+deployment_status: "not_deployed"
+authority_scope: "none"
+public_release_class: "public_noncanon"
+privacy_status: "public_safe"
+rights_status: "open_source_mit"
+
+redline_scan:
+  result: "GREEN"
+  notes: "Pure checklist for GitHub file exports. No content accessed."
+
+strongest_safe_claim: >
+  A GitHub file is considered full_raw_export_attached when it exists
+  at a pinned commit SHA and has been verified present via the
+  steps in this checklist.
+
+checklist:
+  - "[ ] Confirm file exists at a specific commit SHA (not just HEAD)"
+  - "[ ] Record source_id as github:{owner}/{repo}@{sha}"
+  - "[ ] Verify file is text-readable (not binary without decoder)"
+  - "[ ] Update raw_export_status to full_raw_export_attached"
+  - "[ ] Note any [REDACTED] markers in file content"
+  - "[ ] Route to Hashlight if file contains cross-surface references"
+
+overclaims_to_avoid:
+  - "Do not claim file presence means the content is reviewed"
+  - "Do not use @HEAD as a stable source_id for archived purposes"
+  - "Completing this checklist does not advance canon_status"
+
+missing_receipts:
+  - "none"
+
+review_required_by:
+  - Hashlight
+  - Lucerna
+  - TIDELOCK
+  - Rootglass
+
+next_safe_action: >
+  Add this checklist to machine_readable_release_gate_rules.yaml
+  under github surface handling.

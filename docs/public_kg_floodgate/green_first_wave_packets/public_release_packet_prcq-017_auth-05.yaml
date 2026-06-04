@@ -1,0 +1,45 @@
+# Public Release Packet — PRCQ-017 / AUTH-05
+# CANDIDATE — NOT CANON — authority_scope:none
+
+artifact_id: "prcq-017-auth-05"
+title: "canon_status enum"
+version: "v0.1"
+date: "2026-06-04"
+agent: "TIDELOCK (Copilot)"
+source_surface: "github"
+provenance_class: "enum_only"
+raw_export_status: "policy_only"
+canon_status: "not_canon"
+deployment_status: "not_deployed"
+authority_scope: "none"
+public_release_class: "public_noncanon"
+privacy_status: "public_safe"
+rights_status: "open_source_mit"
+
+redline_scan:
+  result: "GREEN"
+  notes: "Pure 6-value closed-world enum defining canonization lifecycle. No content referenced."
+
+strongest_safe_claim: >
+  The canon_status field uses a 6-value closed-world enum
+  (not_canon, canon_candidate, council_review, ratified, canon, deprecated_canon)
+  that fully describes the canonization lifecycle of any artifact in this system.
+
+overclaims_to_avoid:
+  - "Do not claim any artifact is currently canon based on this enum definition alone"
+  - "Do not use this enum to bypass the ratification + adjudication requirement"
+  - "ratified != canon — adjudication by @atlaslattice is required for the final step"
+  - "This enum does not grant canon authority to any artifact"
+
+missing_receipts:
+  - "none"
+
+review_required_by:
+  - Hashlight
+  - Lucerna
+  - TIDELOCK
+  - Rootglass
+
+next_safe_action: >
+  Add canon_status enum to all Atlas/ORCS schemas and validate
+  with closed-world test T17 (Module 6).

@@ -1,0 +1,45 @@
+# Public Release Packet — PRCQ-007 / HASH-01
+# CANDIDATE — NOT CANON — authority_scope:none
+
+artifact_id: "prcq-007-hash-01"
+title: "Allowed raw_export_status enum"
+version: "v0.1"
+date: "2026-06-04"
+agent: "TIDELOCK (Copilot)"
+source_surface: "github"
+provenance_class: "enum_only"
+raw_export_status: "policy_only"
+canon_status: "not_canon"
+deployment_status: "not_deployed"
+authority_scope: "none"
+public_release_class: "public_noncanon"
+privacy_status: "public_safe"
+rights_status: "open_source_mit"
+
+redline_scan:
+  result: "GREEN"
+  notes: "Pure 6-value closed-world enum. No content accessed."
+
+strongest_safe_claim: >
+  The raw_export_status field uses a 6-value closed-world enum
+  (not_exported, export_in_progress, partial_export_attached,
+  full_raw_export_attached, policy_only, frozen_snapshot)
+  that fully describes the export lifecycle of any source document.
+
+overclaims_to_avoid:
+  - "Do not treat policy_only as equivalent to a full export"
+  - "Do not claim a non-not_exported status implies the content is reviewed"
+  - "Do not add values outside this enum without a new PRCQ"
+
+missing_receipts:
+  - "none"
+
+review_required_by:
+  - Hashlight
+  - Lucerna
+  - TIDELOCK
+  - Rootglass
+
+next_safe_action: >
+  Add raw_export_status enum to all relevant schemas and validate
+  with closed-world test T16 (Module 6).
