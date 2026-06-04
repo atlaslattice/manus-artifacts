@@ -1,0 +1,129 @@
+# INDEX_COVERAGE_MATRIX.yaml
+# status: candidate_index_coverage_matrix
+# canon_status: not_canon
+# deployment_status: not_deployed
+# authority_scope: none
+# proof_status: not_a_proof
+# goal: best_in_world_for_openai_operability
+
+index_coverage_matrix:
+  generated_utc: "2026-06-03"
+  repository: atlaslattice/manus-artifacts
+  status: candidate_index_coverage_matrix
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  rule: "Search-found is useful evidence of discoverability, not proof of completeness, truth, release-readiness, or authority."
+
+  probes:
+    - id: IDX-001
+      expected_artifact: Bundle 0001 validation checklist
+      expected_path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/docs/BUNDLE_0001_VALIDATION_CHECKLIST.md
+      search_query: "Bundle 0001 Validation Checklist"
+      found: true
+      found_paths:
+        - archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/docs/BUNDLE_0001_VALIDATION_CHECKLIST.md
+        - archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/README.md
+        - archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/module_packets/MODULE_11_FORKABILITY_SCORECARD_RESULT_v0.1.md
+      blob_sha: fd6dc1e6f92106a8de508a91182b018ba74b5028
+      status: pass
+      next_action: keep in SHA crosswalk and link from external reviewer checklist
+
+    - id: IDX-002
+      expected_artifact: Mirror index
+      expected_path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/mirror_receipts/mirror_index.yaml
+      search_query: "mirror_index.yaml"
+      found: true
+      found_paths:
+        - archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/README.md
+        - archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/module_packets/VARIX_OPEN_TASK_SWARM_PACKET_12x12__BEST_GIT_ON_EARTH__2026-05-30.md
+        - archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/mirror_receipts/sha_crosswalk.yaml
+        - archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/module_packets/MODULE_11_FORKABILITY_SCORECARD_RESULT_v0.1.md
+        - archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/mirror_receipts/MIRROR_AUDIT_SHELDONBRAIN_RAG_GPTBRAIN_RAINBOW_YIN_YANG_GITHUB_DRIVE_NOTION_2026-05-30.md
+        - archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/docs/BUNDLE_0001_VALIDATION_CHECKLIST.md
+      blob_sha: 9d16e1fcb160b6e3999f7066d9b49b797b810e4c
+      status: pass
+      next_action: expand with every high-value bundle path
+
+    - id: IDX-003
+      expected_artifact: SHA crosswalk
+      expected_path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/mirror_receipts/sha_crosswalk.yaml
+      search_query: "sha_crosswalk.yaml"
+      found: true
+      found_paths:
+        - archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/README.md
+        - archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/docs/BUNDLE_0001_VALIDATION_CHECKLIST.md
+        - archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/module_packets/MODULE_11_FORKABILITY_SCORECARD_RESULT_v0.1.md
+      blob_sha: af1e1597185e5efb7235e4be48cffb8a1f953fee
+      status: partial_pass
+      next_action: direct path fetch succeeds; search discoverability should be improved by linking from README and checklist
+
+    - id: IDX-004
+      expected_artifact: Children of GPT Swarm Delta Ledger
+      expected_path: archive/boot/council/CHILDREN_OF_THE_GPT_SWARM_DELTA_LEDGER_2026-05-31.md
+      search_query: "children of the GPT swarm delta ledger"
+      found: true
+      found_paths:
+        - archive/reports/CHILDREN_OF_THE_GPT_SWARM_DELTA_LEDGER_2026-05-30.md
+        - archive/boot/council/CHILDREN_OF_THE_GPT_SWARM_DELTA_LEDGER_2026-05-31.md
+        - archive/reports/SWARM_INGESTION_STATUS_AUDIT_2026-05-28.md
+        - archive/status/CURRENT_BUILD_MAP_2026-06-03.md
+      blob_sha: 47fdeaa23827c1eab8427c8d61c36defd5506a02
+      status: pass
+      next_action: keep ledger as candidate digest; do not treat as canon
+
+    - id: IDX-005
+      expected_artifact: No merged mind references
+      expected_path: mixed
+      search_query: "NO MERGED MIND"
+      found: true
+      found_paths:
+        - aluminum-os/ALUMINUM_PROTOCOL_SPECIFICATION.md
+        - archive/boot/council/CHILDREN_OF_THE_GPT_SWARM_DELTA_LEDGER_2026-05-31.md
+        - children-of-the-swarm/continuity-os/native-thread-ingestion-packet.md
+        - aluminum-os/ALUMINUM_V2_1_KERNEL_SPECIFICATION.md
+      status: pass
+      next_action: add specific A2A enforcement receipt path when verified
+
+    - id: IDX-006
+      expected_artifact: External reviewer checklist
+      expected_path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/docs/EXTERNAL_REVIEWER_CHECKLIST.md
+      search_query: "EXTERNAL_REVIEWER_CHECKLIST"
+      found: false_before_creation
+      found_after_creation: pending_recheck
+      commit_sha: 9ac303324d3ed07abbb0466e13530b1b13857432
+      blob_sha: 8d861028beef47d12fd36bf9548f397e7e9efb67
+      status: newly_created_pending_search_index_recheck
+      next_action: rerun search after index delay; link from README if approved
+
+    - id: IDX-007
+      expected_artifact: Exact TIDELOCK index expansion claim
+      expected_path: unknown
+      search_query: "374 artifacts 39 domains"
+      found: false
+      status: gap
+      next_action: request TIDELOCK_INDEX_EXPANSION_RECEIPT.md or demote claim to self_reported
+
+    - id: IDX-008
+      expected_artifact: Exact TIDELOCK index expansion claim variant
+      expected_path: unknown
+      search_query: "TIDELOCK index expanded 187 374 artifacts 39 domains"
+      found: false
+      status: gap
+      next_action: request exact receipt file with before/after artifact/domain counts
+
+  summary:
+    representative_search_coverage: positive
+    newly_created_bundle_files_searchable: true_for_several
+    complete_indexing_verified: false
+    missing_critical_receipts:
+      - TIDELOCK_INDEX_EXPANSION_RECEIPT.md
+      - external_reviewer_checklist_search_recheck_after_index_delay
+      - comprehensive_expected_file_list
+
+  strongest_safe_claim: >
+    Representative GitHub search coverage is positive for new Bundle 0001 artifacts and major swarm ledgers,
+    but full repository indexing is not verified. The exact TIDELOCK 187-to-374 artifact expansion claim still
+    needs a receipt file or should remain self-reported.
+
+  keeper: "Best in the world means the index has a test, and the test admits its gaps."
