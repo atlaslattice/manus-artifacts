@@ -1,0 +1,26 @@
+status: candidate_contradiction_log_entry
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+boundary: "contradiction edge is not truth; it marks review need"
+
+contradiction_id: ""
+source_a:
+  source_id: ""
+  title: ""
+  url_or_path: ""
+  claim_id: ""
+  claim_text: ""
+source_b:
+  source_id: ""
+  title: ""
+  url_or_path: ""
+  claim_id: ""
+  claim_text: ""
+contradiction_type: "factual | temporal | scope | authority | canon_status | deployment_status | rights | source_lineage | other"
+evidence_status: "candidate | directly_supported | missing_receipt | disputed | resolved"
+review_lane: "ClaudeCatcher / Rootglass / Ledgerwake / HumanRoot"
+risk_level: "low | medium | high | critical"
+resolution_status: "open | under_review | resolved | preserved_unmerged"
+resolution_note: ""
+next_safe_action: ""
