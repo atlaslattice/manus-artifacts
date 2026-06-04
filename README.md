@@ -69,6 +69,7 @@ Execution hierarchy: 144-Task Campaign (program) → Next-144 (execution queue) 
 ## Archives & Research
 
 - **[Archive Index](./archive/README.md)** — Top-level archive lanes and subsystem entry points.
+- **[KTL v2.0 Spec](./archive/spec/krakoa/KRAKOAN_TONE_LANGUAGE_SPECIFICATION_V2.0.md)** — Krakoan Tone Language: the complete spoken machine language for KRAKOA (144-tone / 12×12 ontology).
 - **[GPTBrain](./archive/boot/gptbrain/)** — Multi-seat AI council brain architecture.
 - **[Children of the Swarm](./archive/boot/gptbrain/agents/)** — 7-seat AI agent squad.
 - **[Janus Checkpoints](./archives/janus-checkpoints/)** — Session state and resurrection logs.
