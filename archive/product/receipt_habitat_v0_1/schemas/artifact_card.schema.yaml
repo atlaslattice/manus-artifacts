@@ -1,0 +1,56 @@
+schema_id: artifact_card.v0.1
+status: candidate_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: >
+  Define the first human-facing card for a graph write candidate. Artifact cards
+  make status, receipts, missing evidence, review lanes, and forbidden claims
+  visible before synthesis.
+required_fields:
+  - artifact_id
+  - title
+  - surface
+  - source_type
+  - url_or_path
+  - status_strip
+  - evidence
+  - claims
+  - graph
+  - routing
+fields:
+  artifact_id:
+    type: string
+  title:
+    type: string
+  surface:
+    enum: [github, notion, drive, gamma, chat, external, unknown]
+  source_type:
+    enum: [repo, pr, issue, file, notion_page, doc, transcript, cluster, graph_write_candidate, unknown]
+  url_or_path:
+    type: string_or_null
+  created_or_modified:
+    type: string_or_null
+  status_strip:
+    type: object
+    required: [raw_export_status, canon_status, deployment_status, authority_scope, review_state]
+  evidence:
+    type: object
+    required: [stable_id, sha256_if_available, source_refs, mirror_refs, commit_or_pr_refs]
+  claims:
+    type: object
+    required: [strongest_safe_claim, claims_extracted, forbidden_claims, overclaims_to_avoid]
+  graph:
+    type: object
+    required: [proposed_nodes, proposed_edges, missing_receipts, contradictions_or_uncertainties, review_required]
+  routing:
+    type: object
+    required: [assigned_review_lanes, next_safe_action, public_release_status]
+hard_rules:
+  - artifact_card is not the artifact
+  - artifact_card never grants authority
+  - artifact_card never promotes canon
+  - artifact_card never claims deployment
+  - canon_status, deployment_status, and authority_scope must be visible in the status strip
+  - missing_receipts must appear before synthesis-oriented prose
+  - public_release_status must be separate from GitHub presence
