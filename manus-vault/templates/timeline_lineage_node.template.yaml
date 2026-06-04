@@ -1,0 +1,23 @@
+status: candidate_timeline_lineage_node
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+physics_claim: false
+boundary: "continuity doctrine only; not a literal-universe claim"
+
+node_id: ""
+title: ""
+timeline_label: ""
+branch_status: "active | preserved_unmerged | compared | synthesized_with_lineage | archived"
+source_paths: []
+source_ids: []
+related_claims: []
+related_contradictions: []
+lineage_parent: ""
+lineage_children: []
+why_preserve: ""
+comparison_status: "not_compared | compared | comparison_blocked"
+synthesis_status: "not_synthesized | synthesis_blocked | synthesized_preserving_lineage"
+root_invariant: "INV-0 — Nothing Dies"
+keeper: "Nothing Dies means no branch is erased for convenience."
+next_safe_action: ""
