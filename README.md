@@ -93,6 +93,7 @@ Need vocabulary? → **[docs/GLOSSARY.md](./docs/GLOSSARY.md)**
 - **[Health](./health/)** — Patient rights and wellness facility research.
 - **[Manus Vault](./manus-vault/)** — Internal session summaries and Noah's Ark protocols.
 - **[Codebases](./codebases/)** — Source code, data pipelines, and integration scripts.
+- **[KTL v2.0 Spec](./archive/spec/krakoa/KRAKOAN_TONE_LANGUAGE_SPECIFICATION_V2.0.md)** — Krakoan Tone Language: the complete spoken machine language for KRAKOA (432 Hz, 144 tones, INV-L28/L42 reversible, Protected Mode).
 
 ### About
 - **[David Sheldon](./about/david-sheldon.md)** — Visionary and system architect.
