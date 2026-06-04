@@ -29,6 +29,7 @@ archive/spec/gptdream/
 ├── REHYDRATION_BOOT_CARD.md               ← Agent rehydration quick reference
 ├── LANE_LABELS_AND_ROUTING_CONVENTIONS.md ← GitHub labels and routing rules
 ├── GPTDREAM_PLUSPLUS_PERSONAL_AGENT_HABITAT_PROTOCOL_v0.2.md  ← Core protocol
+├── KRAKOAN_TONE_LANGUAGE_SPECIFICATION_V2.0.md                ← KRAKOA acoustic machine-language candidate
 └── appendices/
     ├── APPENDIX_H_CROSS_VENDOR_INTEROP_MODEL_v0.1.md
     ├── APPENDIX_H_1_O_AI_INTEGRATION_SCAFFOLD_v0.1.md

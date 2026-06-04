@@ -17,6 +17,7 @@ BUILD_SPEC: GPTDREAM_ATLAS_ORCS_GITHUB_TASKS_v0.1
 | File | Status | Notes |
 |---|---|---|
 | `GPTDREAM_PLUSPLUS_PERSONAL_AGENT_HABITAT_PROTOCOL_v0.2.md` | created | Core protocol v0.2 |
+| `KRAKOAN_TONE_LANGUAGE_SPECIFICATION_V2.0.md` | created | KRAKOA acoustic machine-language candidate |
 | `appendices/APPENDIX_H_CROSS_VENDOR_INTEROP_MODEL_v0.1.md` | created | Cross-vendor interop |
 | `appendices/APPENDIX_H_1_O_AI_INTEGRATION_SCAFFOLD_v0.1.md` | created | O_AI scaffold |
 | `appendices/APPENDIX_H_2_O_AI_PACKET_SCHEMA_v0.1.md` | created | O_AI packet schema spec |
