@@ -1,0 +1,180 @@
+# export_hash_manifest.yaml
+# status: candidate_export_hash_manifest
+# canon_status: not_canon
+# deployment_status: not_deployed
+# authority_scope: none
+# proof_status: not_a_proof
+# purpose: track export/fixity state for GitHub, Drive, and Notion materials.
+
+export_hash_manifest:
+  bundle_id: PUBLIC_CANDIDATE_BUNDLE_0001
+  generated_utc: "2026-06-05"
+  status: candidate_export_hash_manifest
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  proof_status: not_a_proof
+  strongest_safe_claim: >
+    This manifest records which Bundle 0001 materials have GitHub blob/commit receipts and which still need
+    raw export SHA-256 hashes from Drive, Notion, or other source systems. It does not claim complete fixity coverage.
+
+  hash_policy:
+    blob_sha: confirms GitHub object content at a ref
+    commit_sha: confirms GitHub write event
+    sha256_export_hash: confirms exported file bytes from a source system
+    release_effect: none_by_default
+
+  rows:
+    - id: EXP-GH-README
+      source_surface: GitHub
+      title: Bundle 0001 archive README
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/README.md
+      export_type: repository_file
+      mime_type: text/markdown
+      blob_sha: a483c575799338bb84301ee94796ed7e13606c77
+      commit_sha: 1162b69405ef51dd296ddfcd521bf664b42ca32e
+      sha256_export_hash: not_applicable_git_blob_used
+      status: git_fixity_present
+      next_action: include in metadata export bundle
+
+    - id: EXP-GH-MIRROR-INDEX
+      source_surface: GitHub
+      title: Mirror Index
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/mirror_receipts/mirror_index.yaml
+      export_type: repository_file
+      mime_type: application/x-yaml
+      blob_sha: 9d16e1fcb160b6e3999f7066d9b49b797b810e4c
+      commit_sha: 00065be1595f5890c0b015bc807c5e1a28b3848a
+      sha256_export_hash: not_applicable_git_blob_used
+      status: git_fixity_present
+      next_action: update after all material paths are added
+
+    - id: EXP-GH-SHA-CROSSWALK
+      source_surface: GitHub
+      title: SHA Crosswalk
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/mirror_receipts/sha_crosswalk.yaml
+      export_type: repository_file
+      mime_type: application/x-yaml
+      blob_sha: af1e1597185e5efb7235e4be48cffb8a1f953fee
+      commit_sha: 445ce4540a6127b735424d1f1720d0d99dacde68
+      sha256_export_hash: not_applicable_git_blob_used
+      status: git_fixity_present
+      next_action: fill pending rows
+
+    - id: EXP-GH-VALIDATION-CHECKLIST
+      source_surface: GitHub
+      title: Bundle 0001 Validation Checklist
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/docs/BUNDLE_0001_VALIDATION_CHECKLIST.md
+      export_type: repository_file
+      mime_type: text/markdown
+      blob_sha: fd6dc1e6f92106a8de508a91182b018ba74b5028
+      commit_sha: pending
+      sha256_export_hash: not_applicable_git_blob_used
+      status: git_blob_present_commit_pending
+      next_action: identify commit SHA or leave as blob-only receipt
+
+    - id: EXP-GH-EXTERNAL-REVIEWER
+      source_surface: GitHub
+      title: External Reviewer Checklist
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/docs/EXTERNAL_REVIEWER_CHECKLIST.md
+      export_type: repository_file
+      mime_type: text/markdown
+      blob_sha: 8d861028beef47d12fd36bf9548f397e7e9efb67
+      commit_sha: 9ac303324d3ed07abbb0466e13530b1b13857432
+      sha256_export_hash: not_applicable_git_blob_used
+      status: git_fixity_present
+      next_action: link from README after review
+
+    - id: EXP-GH-TOY-GRAPH
+      source_surface: GitHub
+      title: Toy Graph Demo README
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/examples/toy_graph_demo/README.md
+      export_type: repository_file
+      mime_type: text/markdown
+      blob_sha: e79ab5b3cb6309e7469ff3310d4e7b2846121abe
+      commit_sha: pending
+      sha256_export_hash: not_applicable_git_blob_used
+      status: git_blob_present_commit_pending
+      next_action: add expected output and validation command
+
+    - id: EXP-GH-LOC-BRIDGE
+      source_surface: GitHub
+      title: LOC Ingestion Readiness Bridge
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/reports/LOC_INGESTION_READINESS_BRIDGE_v0.1_2026-06-03.md
+      export_type: repository_file
+      mime_type: text/markdown
+      blob_sha: 1795db81cbee21506e3aa23f400c856d350e3317
+      commit_sha: 752fadc38f28bc9462616b8dbd8f717ad1642225
+      sha256_export_hash: not_applicable_git_blob_used
+      status: git_fixity_present
+      next_action: convert to metadata package
+
+    - id: EXP-GH-HYDRATED-MANIFEST
+      source_surface: GitHub
+      title: Hydrated Materials Manifest
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/metadata/HYDRATED_MATERIALS_MANIFEST_v0.1.yaml
+      export_type: repository_file
+      mime_type: application/x-yaml
+      blob_sha: pending_fetch
+      commit_sha: d42ede52674445ffe0d1bbc8650af8640f0a81e6
+      sha256_export_hash: not_applicable_git_blob_used
+      status: git_commit_present_blob_pending
+      next_action: fetch blob SHA
+
+    - id: EXP-GH-METADATA-RECORDS
+      source_surface: GitHub
+      title: Artifact Metadata Records
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/metadata/artifact_metadata_records.yaml
+      export_type: repository_file
+      mime_type: application/x-yaml
+      blob_sha: pending_fetch
+      commit_sha: 9268229492d35edbb1a1dba9ee082b4742b39b31
+      sha256_export_hash: not_applicable_git_blob_used
+      status: git_commit_present_blob_pending
+      next_action: fetch blob SHA
+
+    - id: EXP-DRIVE-VARIX-SPINE
+      source_surface: GoogleDrive
+      title: VARIX_LUMENFOSS_SPINE_PACKET__MATH_BOUNDARY_M11_FORKABILITY_GRAPH_SCHEMA__NON_CANON__2026-05-29
+      source_id: 1xav1Bg4xKd-g1AsEAB9eOeu-NR2I4vqqvVi96_AB3Mo
+      export_type: Google Doc markdown/pdf export pending
+      mime_type: pending_export
+      blob_sha: not_applicable
+      commit_sha: not_applicable
+      sha256_export_hash: pending_export
+      status: source_doc_known_export_hash_missing
+      next_action: export doc and hash bytes before claiming full fixity
+
+    - id: EXP-DRIVE-KG-CONTROL
+      source_surface: GoogleDrive
+      title: Lattice Knowledge Graph Control Surface 2026-05-27
+      source_id: 1jkdvv-z27lmxzkVcnvlSFavZaWJb8eAsJ9e3FQAeRC0
+      export_type: Google Sheet csv/xlsx export pending
+      mime_type: pending_export
+      blob_sha: not_applicable
+      commit_sha: not_applicable
+      sha256_export_hash: pending_export
+      status: source_sheet_known_export_hash_missing
+      next_action: export sheet and hash bytes before claiming full fixity
+
+    - id: EXP-NOTION-SHELDONBRAIN-RAG
+      source_surface: Notion
+      title: Sheldonbrain RAG API / Gemini Embeddings / GCP Deployment / Aluminum OS Hardwire Integration pages
+      source_id: multiple_search_confirmed_pages
+      export_type: markdown/html export pending
+      mime_type: pending_export
+      blob_sha: not_applicable
+      commit_sha: not_applicable
+      sha256_export_hash: pending_export
+      status: search_confirmed_fetch_blocked_export_hash_missing
+      next_action: manual export or pasted content, privacy review, SHA-256 hash, public-safe summary
+
+  summary:
+    git_fixity_present_count: 5
+    git_blob_or_commit_partial_count: 4
+    external_export_hash_missing_count: 3
+    complete_fixity_coverage: false
+    rights_clearance_complete: false
+    release_ready: false
+
+  keeper: "A blob SHA is a handle. An export hash is a fossil. A receipt is not a crown."
