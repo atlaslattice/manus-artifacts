@@ -1,0 +1,39 @@
+schema_id: edge.schema.v0.1
+status: candidate
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+required:
+  - edge_id
+  - source_node_id
+  - edge_type
+  - target_node_id
+  - evidence_ref
+  - canon_effect
+  - authority_effect
+properties:
+  edge_id: stable local ID
+  source_node_id: node ID
+  edge_type:
+    - derived_from
+    - summarizes
+    - supports
+    - contradicts
+    - mentions
+    - supersedes
+    - requires_review
+    - missing_receipt_for
+    - same_source_as
+    - candidate_delta_for
+    - dream_extracted_delta
+    - unsafe_promotion_risk
+    - audits_mirror_status_for
+    - reports_progress_for
+  target_node_id: node ID
+  evidence_ref: receipt ID, artifact ID, or source locator
+  status: candidate | reviewed | disputed | deprecated
+  canon_effect: none
+  authority_effect: none
+  review_required: true | false
+  risk_flags: list
+rule: Graph edge is not promotion. Graph centrality is not authority.
