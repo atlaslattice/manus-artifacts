@@ -1,0 +1,23 @@
+schema_id: delta.schema.v0.1
+status: candidate
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+required:
+  - delta_id
+  - delta_type
+  - source_artifact_id
+  - proposed_action
+  - canon_status
+properties:
+  delta_id: stable local ID
+  delta_type: new_source_path | missing_receipt | contradiction | schema_improvement | safer_edge_type | review_routing_need | risk_flag | task_coordinate | public_release_need | rights_issue
+  source_artifact_id: artifact ID
+  extracted_from: claim_id | dreamstate_id | review_id | issue_id | artifact_id
+  proposed_action: concrete action
+  write_target: drive_staging | github_staging | review_queue | issue | none
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  notes: optional
+rule: Deltas are work proposals, not doctrine.
