@@ -1,0 +1,41 @@
+schema_id: artifact.schema.v0.1
+status: candidate
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+required:
+  - artifact_id
+  - title
+  - artifact_type
+  - source_surface
+  - source_ref
+  - raw_export_status
+  - canon_status
+  - deployment_status
+  - authority_scope
+  - release_class
+properties:
+  artifact_id: stable local ID
+  title: human-readable title
+  artifact_type: document | spreadsheet | code | issue | pr | transcript | image | deck | model_output | other
+  source_surface: notion | drive | github | chat | gamma | external | unknown
+  source_ref: URL, path, file ID, issue number, PR number, or explicit missing marker
+  source_hash: optional hash or stable ID
+  raw_export_status: raw | semi_raw | summary_only | unavailable | blocked | unknown
+  canon_status: not_canon | candidate | ratified | deprecated | unknown
+  deployment_status: not_deployed | staged | deployed | unknown
+  authority_scope: none | advisory | human_root_required | unknown
+  release_class: private_review | public_candidate | rights_blocked | sensitive | open_source_ready | unknown
+  notes: optional
+rule: Artifact existence does not imply canon, deployment, authority, or proof.
+examples:
+  - artifact_id: ART-DOGE-AUDIT-0001
+    title: DOGE Broadcast World Interface Audit Notice
+    artifact_type: document
+    source_surface: drive
+    source_ref: docs.google.com/document/d/1HeAA2...
+    raw_export_status: semi_raw
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    release_class: public_candidate
