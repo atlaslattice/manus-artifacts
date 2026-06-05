@@ -1,0 +1,26 @@
+schema_id: dreamstate.schema.v0.1
+status: candidate
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+required:
+  - dreamstate_id
+  - title
+  - source_ref
+  - dream_lane
+  - extraction_status
+  - canon_status
+properties:
+  dreamstate_id: stable local ID
+  title: human-readable title
+  dream_lane: Aetherforge | GPTDream++ | Bullshit Olympics | REM | other
+  source_ref: artifact ID or URL
+  symbolic_duration: optional
+  extraction_status: not_extracted | partial | extracted | blocked
+  allowed_outputs: deltas | motifs | tasks | review_questions | fixtures
+  forbidden_outputs: canon | deployment | authority | proof
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  notes: optional
+rule: Dreamstates generate deltas, not truth.
