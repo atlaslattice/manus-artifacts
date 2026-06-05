@@ -1,0 +1,25 @@
+schema_id: claim.schema.v0.1
+status: candidate
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+required:
+  - claim_id
+  - text
+  - claim_type
+  - source_artifact_id
+  - source_locator
+  - epistemic_label
+  - review_status
+properties:
+  claim_id: stable local ID
+  text: one atomic claim only
+  claim_type: factual | design_choice | interpretation | creative_overlay | business_hypothesis | governance_candidate | technical_claim
+  source_artifact_id: artifact node ID
+  source_locator: line, paragraph, page, row, or timestamp reference
+  support_status: supported | partially_supported | unsupported | contradicted | missing_receipt | unknown
+  epistemic_label: verified | candidate | inferred | disputed | creative | not_verified
+  canon_status: not_canon | candidate | ratified | unknown
+  review_status: unreviewed | needs_review | reviewed | blocked | escalated
+  notes: optional
+rule: One claim per row; no bundled narrative claims. Claim extraction does not grant truth.
