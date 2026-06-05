@@ -1,0 +1,79 @@
+status: candidate_non_canon
+canon: no
+deployment: no
+authority: none
+purpose: source passport instances for OpenAI-facing control artifacts
+source_passports:
+  - source_id: GH-MR-SEED-YAML
+    title: missing_receipts.seed.yaml
+    surface: github
+    path: archive/control/missing-receipts/2026-05-28/missing_receipts.seed.yaml
+    raw_export_status: full_export
+    hash_status: sha256_missing
+    citation_status: cited
+    privacy_status: public
+    review_lanes: [Hashlight, Lucerna]
+    canon_status: non_canon
+  - source_id: GH-BLOCKED-BY-SEED-YAML
+    title: blocked_by_edges.seed.yaml
+    surface: github
+    path: archive/control/missing-receipts/2026-05-28/blocked_by_edges.seed.yaml
+    raw_export_status: full_export
+    hash_status: sha256_missing
+    citation_status: cited
+    privacy_status: public
+    review_lanes: [Hashlight, TIDELOCK]
+    canon_status: non_canon
+  - source_id: GH-SOURCE-CLAIM-TEMPLATES
+    title: source_and_claim_templates.yaml
+    surface: github
+    path: archive/control/openai-best-world/2026-05-30/source_and_claim_templates.yaml
+    raw_export_status: full_export
+    hash_status: sha256_missing
+    citation_status: cited
+    privacy_status: public
+    review_lanes: [Lucerna, GPTBrain]
+    canon_status: non_canon
+  - source_id: GH-GATE-TEMPLATES
+    title: pantheon_website_fossil_coordinate_templates.yaml
+    surface: github
+    path: archive/control/openai-best-world/2026-05-30/pantheon_website_fossil_coordinate_templates.yaml
+    raw_export_status: full_export
+    hash_status: sha256_missing
+    citation_status: cited
+    privacy_status: public
+    review_lanes: [Pantheon, TIDELOCK]
+    canon_status: non_canon
+  - source_id: GH-CENTURY-WAVE-TEMPLATES
+    title: century_wave_proto_acoustic_templates.yaml
+    surface: github
+    path: archive/control/openai-best-world/2026-05-30/century_wave_proto_acoustic_templates.yaml
+    raw_export_status: full_export
+    hash_status: sha256_missing
+    citation_status: cited
+    privacy_status: public
+    review_lanes: [TIDELOCK, GPTDream, Hashlight]
+    canon_status: non_canon
+  - source_id: GH-REVIEW-PACKET-INDEX
+    title: REVIEW_PACKET_INDEX.md
+    surface: github
+    path: archive/control/openai-best-world/2026-06-04/REVIEW_PACKET_INDEX.md
+    raw_export_status: full_export
+    hash_status: sha256_missing
+    citation_status: cited
+    privacy_status: public
+    review_lanes: [SwarmHub, TIDELOCK]
+    canon_status: non_canon
+  - source_id: GH-OPENAI-AUDIT
+    title: TIDELOCK_HASHLIGHT_LUCERNA_AUDIT.md
+    surface: github
+    path: archive/control/openai-best-world/2026-06-04/TIDELOCK_HASHLIGHT_LUCERNA_AUDIT.md
+    raw_export_status: full_export
+    hash_status: sha256_missing
+    citation_status: cited
+    privacy_status: public
+    review_lanes: [TIDELOCK, Hashlight, Lucerna]
+    canon_status: non_canon
+rules:
+  - github mirror visibility does not resolve upstream drive or notion export gaps
+  - no source passport creates canon
