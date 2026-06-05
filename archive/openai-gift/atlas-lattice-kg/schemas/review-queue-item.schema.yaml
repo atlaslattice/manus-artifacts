@@ -1,0 +1,23 @@
+schema_id: review_queue_item.schema.v0.1
+status: candidate
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+required:
+  - review_id
+  - target_id
+  - review_type
+  - priority
+  - status
+properties:
+  review_id: stable local ID
+  target_id: artifact_id | claim_id | edge_id | delta_id | task_id
+  review_type: source_verification | attribution_audit | overclaim_lint | proof_risk | rights_review | public_release | technical_review | human_root_decision
+  priority: P0 | P1 | P2 | P3
+  owner_lane: Bullshit Olympics | Sheldonbrain | TIDELOCK | Hashlight | Lucerna | HumanRoot | other
+  blocking: true | false
+  status: open | in_progress | blocked | complete | superseded
+  next_action: concrete action
+  canon_effect: none
+  notes: optional
+rule: Review queue routes work; it does not decide truth.
