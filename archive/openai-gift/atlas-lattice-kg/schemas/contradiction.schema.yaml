@@ -1,0 +1,23 @@
+schema_id: contradiction.schema.v0.1
+status: candidate
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+required:
+  - contradiction_id
+  - claim_a
+  - claim_b
+  - contradiction_type
+  - review_lane
+properties:
+  contradiction_id: stable local ID
+  claim_a: claim_id or artifact_id
+  claim_b: claim_id or artifact_id
+  contradiction_type: status_conflict | authorship_conflict | version_conflict | source_conflict | factual_conflict | authority_conflict | deployment_conflict
+  evidence_a: source locator or receipt ID
+  evidence_b: source locator or receipt ID
+  review_lane: Bullshit Olympics | TIDELOCK | Lucerna | Hashlight | HumanRoot | other
+  severity: P0 | P1 | P2 | P3
+  resolution_status: unresolved | routed | resolved | superseded
+  notes: optional
+rule: Contradiction edge preserves disagreement; it is not a verdict.
