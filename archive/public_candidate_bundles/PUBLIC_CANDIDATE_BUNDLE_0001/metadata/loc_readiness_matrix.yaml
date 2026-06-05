@@ -1,0 +1,160 @@
+# loc_readiness_matrix.yaml
+# status: candidate_loc_readiness_matrix
+# canon_status: not_canon
+# deployment_status: not_deployed
+# authority_scope: none
+# proof_status: not_a_proof
+# no_claim: LOC approval, LOC partnership, submission readiness, rights clearance, preservation completeness
+
+loc_readiness_matrix:
+  bundle_id: PUBLIC_CANDIDATE_BUNDLE_0001
+  generated_utc: "2026-06-05"
+  status: candidate_loc_readiness_matrix
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  proof_status: not_a_proof
+  strongest_safe_claim: >
+    Bundle 0001 has begun an institutional-style readiness matrix for metadata, fixity, rights,
+    privacy, format, provenance, and review status. This is not LOC approval, not submission readiness,
+    and not preservation completeness.
+
+  readiness_dimensions:
+    metadata: title, creator, contributor, date, description, type, subject, language, identifier
+    fixity: blob_sha, commit_sha, sha256_export_hash
+    rights: rights_status, license_status, third_party_material_status
+    privacy: privacy_status, sensitive_terms_status
+    preservation: format, mime_type, encoding, disclosure, transparency, dependencies
+    review: reviewer_lanes, missing_receipts, overclaims_to_avoid, next_safest_action
+
+  rows:
+    - id: LOC-MAT-0001
+      artifact_id: MAT-0001
+      title: Bundle 0001 archive README
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/README.md
+      metadata_status: partial
+      fixity_status: blob_and_commit_present
+      rights_status: pending_review
+      privacy_status: public_expected
+      license_status: pending_review
+      format_status: markdown_known
+      preservation_status: candidate_preservable
+      review_status: needs_librarian_review
+      next_action: add to bundle-level Dublin Core/JSON export
+
+    - id: LOC-MAT-0003
+      artifact_id: MAT-0003
+      title: Bundle 0001 File Manifest
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/BUNDLE_0001_FILE_MANIFEST.yaml
+      metadata_status: partial
+      fixity_status: blob_present_commit_pending
+      rights_status: pending_review
+      privacy_status: public_expected
+      license_status: pending_review
+      format_status: yaml_known
+      preservation_status: candidate_preservable
+      review_status: needs_planned_vs_present_reconciliation
+      next_action: reconcile actual file state against planned rows
+
+    - id: LOC-MAT-0005
+      artifact_id: MAT-0005
+      title: Mirror Index
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/mirror_receipts/mirror_index.yaml
+      metadata_status: partial
+      fixity_status: blob_and_commit_present
+      rights_status: pending_review
+      privacy_status: public_expected
+      license_status: pending_review
+      format_status: yaml_known
+      preservation_status: strong_candidate
+      review_status: needs_expansion
+      next_action: add every high-value path and export hash status
+
+    - id: LOC-MAT-0006
+      artifact_id: MAT-0006
+      title: SHA Crosswalk
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/mirror_receipts/sha_crosswalk.yaml
+      metadata_status: partial
+      fixity_status: blob_and_commit_present_with_pending_rows
+      rights_status: pending_review
+      privacy_status: public_expected
+      license_status: pending_review
+      format_status: yaml_known
+      preservation_status: strong_candidate
+      review_status: needs_completion
+      next_action: fill missing commit SHAs and export hashes
+
+    - id: LOC-MAT-0011
+      artifact_id: MAT-0011
+      title: Bundle 0001 Validation Checklist
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/docs/BUNDLE_0001_VALIDATION_CHECKLIST.md
+      metadata_status: partial
+      fixity_status: blob_present_commit_pending
+      rights_status: pending_review
+      privacy_status: public_expected
+      license_status: pending_review
+      format_status: markdown_known
+      preservation_status: candidate_preservable
+      review_status: useful_needs_script_companion
+      next_action: add validation script or command checklist
+
+    - id: LOC-MAT-0012
+      artifact_id: MAT-0012
+      title: External Reviewer Checklist
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/docs/EXTERNAL_REVIEWER_CHECKLIST.md
+      metadata_status: partial
+      fixity_status: blob_and_commit_present
+      rights_status: pending_review
+      privacy_status: public_expected
+      license_status: pending_review
+      format_status: markdown_known
+      preservation_status: candidate_preservable
+      review_status: ready_for_reviewer_use_candidate
+      next_action: link from README after review
+
+    - id: LOC-MAT-0018
+      artifact_id: MAT-0018
+      title: Toy Graph Demo README
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/examples/toy_graph_demo/README.md
+      metadata_status: partial
+      fixity_status: blob_present_commit_pending
+      rights_status: likely_public_expected_but_pending_review
+      privacy_status: fake_sample_only
+      license_status: pending_review
+      format_status: markdown_known
+      preservation_status: candidate_preservable
+      review_status: needs_validation_snapshot
+      next_action: add expected output and demo validation command
+
+    - id: LOC-MAT-0022
+      artifact_id: MAT-0022
+      title: LOC Ingestion Readiness Bridge
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/reports/LOC_INGESTION_READINESS_BRIDGE_v0.1_2026-06-03.md
+      metadata_status: partial
+      fixity_status: blob_and_commit_present
+      rights_status: pending_review
+      privacy_status: public_expected
+      license_status: pending_review
+      format_status: markdown_known
+      preservation_status: candidate_preservable
+      review_status: needs_librarian_review
+      next_action: convert bridge recommendations into machine-readable metadata exports
+
+  blockers:
+    - license_strategy_unresolved
+    - rights_status_pending_for_public_reuse
+    - raw_export_hashes_missing
+    - Notion_export_hashes_missing
+    - Drive_export_hashes_missing
+    - librarian_review_not_complete
+    - LOC_submission_readiness_not_claimed
+
+  next_best_actions:
+    - create bundle_dc.json
+    - create bundle_mods_candidate.xml
+    - complete export_hash_manifest.yaml
+    - expand artifact_metadata_records.yaml to all materials
+    - reconcile split bundle surfaces
+    - create validation script companion
+
+  keeper: "Metadata is oxygen. Fixity is rope. Rights review is weather. No summit claims from base camp."
