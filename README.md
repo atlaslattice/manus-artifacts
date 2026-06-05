@@ -72,6 +72,9 @@ All artifacts remain candidate work unless explicitly ratified as canon.
   - [Failure Ledger Template](./docs/FAILURE_LEDGER_TEMPLATE.md)
   - [Swarm Health Scorecard](./health/SWARM_HEALTH_SCORECARD.md)
 
+### Krakoan Musical Machine Language
+- **[KML 12×12 Ontology E145 v0.1](./archive/spec/krakoa/KRAKOAN_MUSICAL_MACHINE_LANGUAGE_12x12_ONTOLOGY_E145_v0.1.md)** — 54-glyph 12D executable language layer with cymatic correspondence engine (CANDIDATE)
+
 ### Archives & Research
 - **[Archive Index (ops/spec/KG)](./archive/README.md)** — Operational, governance, and protocol artifact archive.
 - **[Codebases](./codebases/README.md)** — Implementation sandboxes and application snapshots.
