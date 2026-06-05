@@ -24,6 +24,7 @@ The **Atlas Lattice Foundation** is an independent AI governance and knowledge a
 - 🧩 **[Aetherforge 12×12 Hypercube Campaign (144 Missions)](./projects/aetherforge-144-task-campaign-2026-05-27.md)** — Full world-class public roadmap across 12 faces
 - ⚡ **[Aetherforge Next-144 Execution Taskboard](./projects/aetherforge-next144-taskboard-2026-05-28.md)** — Immediate dependency-first execution queue and Top-25 strike sequence
 - 🧭 **[Aetherforge GitHub Portfolio 12×12 Taskboard](./projects/aetherforge-github-portfolio-12x12-taskboard-2026-06-05.md)** — Portfolio-wide 12-module implementation board for flagship/support/archive curation
+- 🤖 **[Aetherforge AI Habitat Next-144 Taskboard](./projects/aetherforge-ai-habitat-next144-taskboard-2026-06-05.md)** — Modules 13–24: AI architecture, identity, safety, memory, orchestration, and world-class cadence
 - 🗺️ **[Aetherforge Top-50 Taskboard](./projects/aetherforge-top50-taskboard-2026-05-26.md)** — Roadmap to world-class public archive status
 
 ---
