@@ -4,9 +4,28 @@
 STATUS: CANDIDATE INDEXING PROTOCOL — NOT CANON
 DEPLOYMENT: NO
 AUTHORITY: NONE
-PURPOSE: Normalize archives across Website, GitHub, Notion, Drive/OneDrive, chat exports, and model outputs into a 12×12×12 lattice with E145 meta-coordination.
+PURPOSE: Normalize archives across Website, GitHub, Notion, Drive/OneDrive, chat exports, and model outputs into a House × Sphere × Node index with full 12D artifact metadata and E145 meta-coordination.
 HUMAN-ROOT: REQUIRED FOR CANON / DEPLOYMENT / AUTHORITY CHANGES
 ```
+
+## Correction note
+
+Earlier wording incorrectly treated the third coordinate axis as `Z = state / authority / data-nature type`.
+
+Correct model:
+
+```text
+12×12×12 index coordinate = House × Sphere × Node.
+Full artifact semantics = 12D metadata envelope around that coordinate.
+```
+
+So:
+
+```text
+Hxx.Syy.Nzz = indexing coordinate only.
+```
+
+Authority, provenance, review state, raw-export state, deployment state, resonance state, and canon status are **not** the third coordinate axis. They are typed dimensions in the 12D artifact envelope.
 
 ## Core rule
 
@@ -46,12 +65,12 @@ source_surfaces:
     caution: model output is not authority
 ```
 
-## 12×12×12 coordinate model
+## 12×12×12 indexing coordinate model
 
 Each indexed item receives a coordinate:
 
 ```text
-Hxx.Syy.Zzz
+Hxx.Syy.Nzz
 ```
 
 Where:
@@ -60,87 +79,102 @@ Where:
 H_axis:
   name: House / functional domain
   range: H01-H12
-  purpose: What domain does this artifact belong to?
+  purpose: What major functional domain does this artifact belong to?
 
 S_axis:
-  name: Sphere / semantic layer
+  name: Sphere / semantic subdomain
   range: S01-S12 per house
   purpose: What semantic container or subdomain does this artifact occupy?
 
-Z_axis:
-  name: State / authority / data-nature type
-  range: Z01-Z12
-  purpose: What kind of state is this? What can it NOT infer?
-```
-
-## Z-axis authority firewall
-
-```yaml
-Z_axis_candidate:
-  Z01_RAW_SOURCE:
-    description: Fossil/raw export/source tape.
-    authority_effect: none
-
-  Z02_PARSED_VIEW:
-    description: Parser-derived representation.
-    authority_effect: none
-
-  Z03_CLAIM:
-    description: Atomic assertion extracted from source.
-    authority_effect: none
-
-  Z04_EVIDENCE:
-    description: Evidence supporting or contradicting a claim.
-    authority_effect: none
-
-  Z05_REVIEW:
-    description: Review packet, adversarial note, or critique.
-    authority_effect: review_only
-
-  Z06_CANDIDATE:
-    description: Candidate artifact or doctrine.
-    authority_effect: none
-
-  Z07_RATIFICATION_RECEIPT:
-    description: Human-root or defined governance gate receipt.
-    authority_effect: scoped_ratification_possible
-
-  Z08_CANON_SURFACE:
-    description: Public canon surface after explicit promotion.
-    authority_effect: canon_scope_defined_by_receipt
-
-  Z09_RUNTIME_RECEIPT:
-    description: Test/CI/smoke/runtime proof artifact.
-    authority_effect: runtime_evidence_only
-
-  Z10_QUARANTINE:
-    description: Blocked, unsafe, incomplete, or contradicted item.
-    authority_effect: block_promotion
-
-  Z11_DREAM_PLAY_CULTURE:
-    description: Simulation, morale, myth, play, creative overlay.
-    authority_effect: none
-
-  Z12_META_COORDINATION:
-    description: E145/read-across/index/meta-routing surfaces.
-    authority_effect: coordinate_only
+N_axis:
+  name: Node / item slot / local cell
+  range: N01-N12 per sphere
+  purpose: Which local indexed node, artifact slot, or cell within the House/Sphere does this occupy?
 ```
 
 Hard rule:
 
 ```text
-Governance authority cannot be inferred from H or S alone.
-Only explicit Z07/Z08 evidence with human-root receipt can support canon movement.
+House/Sphere/Node is an address, not authority.
+A coordinate can locate an artifact, but it cannot promote the artifact.
+```
+
+## Full 12D artifact envelope
+
+Every H/S/N coordinate should be wrapped in a broader 12D metadata envelope. Candidate dimensions:
+
+```yaml
+artifact_12d_envelope:
+  D01_coordinate:
+    field: Hxx.Syy.Nzz
+    purpose: House/Sphere/Node index address.
+
+  D02_source_surface:
+    field: website | github | notion | drive_onedrive | chat_transcript | model_output | external_web
+    purpose: Where the artifact came from.
+
+  D03_raw_export:
+    field: raw_export_status
+    purpose: Whether source tape exists.
+
+  D04_hash_provenance:
+    field: sha256 | commit_sha | blob_sha | checksum_manifest
+    purpose: Whether content can be verified.
+
+  D05_lineage_state:
+    field: raw | parsed | summarized | superseded | quarantined | fossilized
+    purpose: Whether this is source, derivative, or preserved history.
+
+  D06_claim_state:
+    field: raw_source | parsed_fact | claim_packet | evidence | contradiction | review_note
+    purpose: What epistemic role the item plays.
+
+  D07_review_state:
+    field: unreviewed | in_review | reviewed | blocked | approved | contradicted
+    purpose: Review progress.
+
+  D08_authority_scope:
+    field: none | advisory | review | ratification | execution
+    purpose: What authority, if any, the artifact may carry.
+
+  D09_canon_state:
+    field: not_canon | candidate | ratified | canon
+    purpose: Canon status, never inferred from coordinate alone.
+
+  D10_deployment_state:
+    field: not_deployed | simulated | staging | deployed
+    purpose: Runtime/deployment status.
+
+  D11_resonance_overlay:
+    field: tone | polarity | chiral_dissonance | creative_overlay | not_applicable
+    purpose: Optional interpretive/spectral metadata; not authority.
+
+  D12_e145_meta:
+    field: e145_index_status | route | gap | duplicate | contradiction | dashboard_node
+    purpose: E145 read-across/meta-coordination status.
+```
+
+## Authority firewall
+
+```text
+Governance authority cannot be inferred from House, Sphere, Node, resonance, centrality, or graph connectivity.
+```
+
+Canon or deployment movement requires explicit status evidence in the 12D envelope and human-root review where applicable:
+
+```text
+D08_authority_scope + D09_canon_state + D10_deployment_state + D04_hash_provenance + human-root receipt.
 ```
 
 ## E145 role
 
-E145 is the meta-coordinator across the 12×12×12 lattice.
+E145 is the meta-coordinator across the H/S/N index and the full 12D artifact envelope.
 
 ```yaml
 E145:
   role:
-    - read across all H/S/Z coordinates
+    - read across all House/Sphere/Node coordinates
+    - read across the 12D metadata envelope
     - detect gaps, duplicates, contradictions, and missing receipts
     - recommend review routes
     - emit index packets
@@ -171,7 +205,20 @@ archive_packet:
   coordinate:
     H:
     S:
-    Z:
+    N:
+  artifact_12d_envelope:
+    D01_coordinate:
+    D02_source_surface:
+    D03_raw_export:
+    D04_hash_provenance:
+    D05_lineage_state:
+    D06_claim_state:
+    D07_review_state:
+    D08_authority_scope:
+    D09_canon_state:
+    D10_deployment_state:
+    D11_resonance_overlay:
+    D12_e145_meta:
   e145_index_status:
   artifact_status:
     canon_status:
@@ -203,10 +250,10 @@ UNKNOWN
 ## Surface normalization rules
 
 ```text
-Website page → rendered export → hash → source artifact → coordinate.
-GitHub file → commit/blob SHA → artifact packet → coordinate.
-Notion page → export or API fetch → raw_export_status → coordinate.
-Drive/OneDrive file → file inventory + hash → coordinate.
+Website page → rendered export → hash → source artifact → H/S/N coordinate + 12D envelope.
+GitHub file → commit/blob SHA → artifact packet → H/S/N coordinate + 12D envelope.
+Notion page → export or API fetch → raw_export_status → H/S/N coordinate + 12D envelope.
+Drive/OneDrive file → file inventory + hash → H/S/N coordinate + 12D envelope.
 Chat thread → raw export if available → summary/parse marked derived.
 Model output → candidate assessment only unless source-backed.
 ```
@@ -223,6 +270,8 @@ Website visibility ≠ human-root approval unless receipt-linked.
 Graph edge ≠ authority.
 Cluster ≠ truth.
 Centrality ≠ canon.
+Coordinate ≠ authority.
+Resonance ≠ approval.
 E145 coordination ≠ E145 authority.
 ```
 
@@ -231,19 +280,20 @@ E145 coordination ≠ E145 authority.
 ```text
 1. Build surface inventory manifests.
 2. Add raw_export_status to every packet.
-3. Assign provisional H/S/Z coordinates.
-4. Hash raw exports where possible.
-5. Create contradiction and duplicate queues.
-6. Route high-risk claims to review seats.
-7. Create E145 dashboard index.
-8. Only after review, prepare human-root promotion packets.
+3. Assign provisional H/S/N coordinates.
+4. Wrap each coordinate in the 12D artifact envelope.
+5. Hash raw exports where possible.
+6. Create contradiction and duplicate queues.
+7. Route high-risk claims to review seats.
+8. Create E145 dashboard index.
+9. Only after review, prepare human-root promotion packets.
 ```
 
 ## Keeper
 
 ```text
-The archive becomes world-class when every source has a coordinate,
-every coordinate has a status,
-every status has a receipt,
+The archive becomes world-class when every source has a House/Sphere/Node coordinate,
+every coordinate has a 12D envelope,
+every envelope has status and receipts,
 and no receipt crowns itself.
 ```
