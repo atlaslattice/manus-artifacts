@@ -1,0 +1,345 @@
+# artifact_metadata_records.yaml
+# status: candidate_metadata_records
+# canon_status: not_canon
+# deployment_status: not_deployed
+# authority_scope: none
+# proof_status: not_a_proof
+# goal: best_in_world_for_openai_operability
+
+artifact_metadata_records:
+  generated_utc: "2026-06-03"
+  bundle_id: PUBLIC_CANDIDATE_BUNDLE_0001
+  status: candidate_metadata_records
+  canon_status: not_canon
+  deployment_status: not_deployed
+  authority_scope: none
+  proof_status: not_a_proof
+  schema_note: "Dublin Core / MODS candidate fields are preliminary and require librarian review before institutional use."
+
+  records:
+    - artifact_id: MAT-0001
+      title: Bundle 0001 archive README
+      type: front_door
+      genre: public_candidate_landing_page
+      format: text/markdown
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/README.md
+      identifier:
+        blob_sha: a483c575799338bb84301ee94796ed7e13606c77
+        commit_sha: 1162b69405ef51dd296ddfcd521bf664b42ca32e
+      creator: GPTBrain / Varix execution pass
+      publisher: atlaslattice/manus-artifacts
+      date: "2026-06-03"
+      language: en
+      description: Public-safe inspection doorway for Bundle 0001 with boundary language and start path.
+      subject:
+        - public_candidate_bundle
+        - forkability
+        - receipt_spine
+        - no_canon
+      rights_status: pending_review
+      privacy_status: public_expected
+      license_status: pending_review
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      proof_status: not_a_proof
+      strongest_safe_claim: Bundle README provides public candidate orientation but does not establish release readiness or authority.
+      next_safest_action: keep synchronized with external reviewer checklist and surface reconciliation.
+
+    - artifact_id: MAT-0002
+      title: START_HERE public candidate front door
+      type: front_door
+      genre: orientation_document
+      format: text/markdown
+      path: public_candidate_bundle_0001/START_HERE.md
+      identifier:
+        blob_sha: 6c86d0d8da5c37ebbe8591d3c861bceb1fa2c867
+      creator: prior public candidate bundle pass
+      publisher: atlaslattice/manus-artifacts
+      date: unknown_pending_commit_trace
+      language: en
+      description: Alternate public-facing start path for Atlas Lattice / Rainbow Yin Yang Lattice public candidate work.
+      subject:
+        - start_here
+        - public_knowledge_graph
+        - rainbow_yin_yang_lattice
+        - sheldonbrain
+      rights_status: pending_review
+      privacy_status: public_expected
+      license_status: pending_review
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      proof_status: not_a_proof
+      strongest_safe_claim: START_HERE gives a useful public orientation but must be reconciled with the archive bundle root.
+      next_safest_action: compare path references and decide primary front door.
+
+    - artifact_id: MAT-0003
+      title: Bundle 0001 File Manifest
+      type: manifest
+      genre: inventory
+      format: application/x-yaml
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/BUNDLE_0001_FILE_MANIFEST.yaml
+      identifier:
+        blob_sha: 335942bcedcfee43781ecfee424ca651dfa2eda6
+      creator: public candidate bundle pass
+      publisher: atlaslattice/manus-artifacts
+      date: unknown_pending_commit_trace
+      language: en
+      description: Bundle inventory and blocker map with non-canon boundaries and planned file list.
+      subject:
+        - manifest
+        - blockers
+        - review_lanes
+        - public_release_gate
+      rights_status: pending_review
+      privacy_status: public_expected
+      license_status: pending_review
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      proof_status: not_a_proof
+      strongest_safe_claim: Manifest records bundle purpose, planned files, blockers, and review lanes.
+      next_safest_action: reconcile planned status with actual present files.
+
+    - artifact_id: MAT-0005
+      title: Mirror Index
+      type: receipt
+      genre: machine_readable_mirror_map
+      format: application/x-yaml
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/mirror_receipts/mirror_index.yaml
+      identifier:
+        blob_sha: 9d16e1fcb160b6e3999f7066d9b49b797b810e4c
+        commit_sha: 00065be1595f5890c0b015bc807c5e1a28b3848a
+      creator: GPTBrain / Varix execution pass
+      publisher: atlaslattice/manus-artifacts
+      date: "2026-06-03"
+      language: en
+      description: Machine-readable map of GitHub, Drive, Notion, and related mirror surfaces.
+      subject:
+        - mirror_index
+        - provenance
+        - cross_surface_receipts
+        - search_confirmed
+      rights_status: pending_review
+      privacy_status: public_expected
+      license_status: pending_review
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      proof_status: not_a_proof
+      strongest_safe_claim: Mirror index improves discoverability and receipt routing but is not complete truth.
+      next_safest_action: expand with all high-value bundle paths and Notion export hashes.
+
+    - artifact_id: MAT-0006
+      title: SHA Crosswalk
+      type: receipt
+      genre: fixity_crosswalk
+      format: application/x-yaml
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/mirror_receipts/sha_crosswalk.yaml
+      identifier:
+        blob_sha: af1e1597185e5efb7235e4be48cffb8a1f953fee
+        commit_sha: 445ce4540a6127b735424d1f1720d0d99dacde68
+      creator: GPTBrain / Varix execution pass
+      publisher: atlaslattice/manus-artifacts
+      date: "2026-06-03"
+      language: en
+      description: Crosswalk from artifact paths to blob SHAs, commit SHAs, Drive IDs, Notion gaps, and release status.
+      subject:
+        - fixity
+        - sha
+        - provenance
+        - commit_receipts
+      rights_status: pending_review
+      privacy_status: public_expected
+      license_status: pending_review
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      proof_status: not_a_proof
+      strongest_safe_claim: SHA crosswalk provides fixity scaffolding for selected materials but has pending rows.
+      next_safest_action: fill missing commit SHAs and export hashes.
+
+    - artifact_id: MAT-0009
+      title: Module 11 Forkability Scorecard Result v0.1
+      type: packet
+      genre: scorecard_result
+      format: text/markdown
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/module_packets/MODULE_11_FORKABILITY_SCORECARD_RESULT_v0.1.md
+      identifier:
+        blob_sha: 9dd2c67e825f94e8b089aa61605a684cdc814f6d
+      creator: GPTBrain / Varix execution pass
+      publisher: atlaslattice/manus-artifacts
+      date: "2026-06-03"
+      language: en
+      description: Baseline scorecard for public GitHub forkability of Bundle 0001.
+      subject:
+        - module_11
+        - forkability
+        - scorecard
+        - public_git
+      rights_status: pending_review
+      privacy_status: public_expected
+      license_status: pending_review
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      proof_status: not_a_proof
+      score: "44/75"
+      strongest_safe_claim: Bundle 0001 is meaningfully forkable for guided reviewers but not yet world-class for cold external contributors.
+      next_safest_action: rerun after path reconciliation and external reviewer checklist linkage.
+
+    - artifact_id: MAT-0011
+      title: Bundle 0001 Validation Checklist
+      type: checklist
+      genre: validation_checklist
+      format: text/markdown
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/docs/BUNDLE_0001_VALIDATION_CHECKLIST.md
+      identifier:
+        blob_sha: fd6dc1e6f92106a8de508a91182b018ba74b5028
+      creator: GPTBrain / Varix execution pass
+      publisher: atlaslattice/manus-artifacts
+      date: "2026-06-03"
+      language: en
+      description: Validation checklist for safe inspection of Bundle 0001 candidate files.
+      subject:
+        - validation
+        - reviewer_path
+        - overclaim_lint
+        - release_gate
+      rights_status: pending_review
+      privacy_status: public_expected
+      license_status: pending_review
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      proof_status: not_a_proof
+      strongest_safe_claim: Checklist makes inspection safer but does not validate claims or authorize release.
+      next_safest_action: add command/script companion.
+
+    - artifact_id: MAT-0012
+      title: External Reviewer Checklist
+      type: checklist
+      genre: external_reviewer_onboarding
+      format: text/markdown
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/docs/EXTERNAL_REVIEWER_CHECKLIST.md
+      identifier:
+        blob_sha: 8d861028beef47d12fd36bf9548f397e7e9efb67
+        commit_sha: 9ac303324d3ed07abbb0466e13530b1b13857432
+      creator: GPTBrain / Varix execution pass
+      publisher: atlaslattice/manus-artifacts
+      date: "2026-06-03"
+      language: en
+      description: Cold external reviewer path with missing receipt and overclaim report templates.
+      subject:
+        - external_review
+        - missing_receipts
+        - overclaim_report
+        - public_inspection
+      rights_status: pending_review
+      privacy_status: public_expected
+      license_status: pending_review
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      proof_status: not_a_proof
+      strongest_safe_claim: External reviewer checklist makes the bundle kinder to strangers and stricter for history.
+      next_safest_action: link from README after review.
+
+    - artifact_id: MAT-0018
+      title: Toy Graph Demo README
+      type: demo
+      genre: fake_data_graph_demo
+      format: text/markdown
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/examples/toy_graph_demo/README.md
+      identifier:
+        blob_sha: e79ab5b3cb6309e7469ff3310d4e7b2846121abe
+      creator: prior Module 11/forkability pass
+      publisher: atlaslattice/manus-artifacts
+      date: unknown_pending_commit_trace
+      language: en
+      description: Fake/sample graph demo for sources, claims, evidence, missing receipts, and review routes.
+      subject:
+        - toy_graph
+        - fake_data
+        - graph_is_not_canon
+        - public_safe_demo
+      rights_status: public_expected
+      privacy_status: public_safe_fake_data
+      license_status: pending_review
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      proof_status: not_a_proof
+      strongest_safe_claim: Toy demo shows graph shape without exposing private archive cargo.
+      next_safest_action: add expected output snapshot and validation command.
+
+    - artifact_id: MAT-0019
+      title: First 12 Public Inspection Issues
+      type: issue_plan
+      genre: inspection_issue_seed_plan
+      format: text/markdown
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/issues/FIRST_12_PUBLIC_INSPECTION_ISSUES.md
+      identifier:
+        blob_sha: df53c68c6a1962de69b2a73eeb8e2d92dfc773e6
+      creator: prior Module 11/forkability pass
+      publisher: atlaslattice/manus-artifacts
+      date: unknown_pending_commit_trace
+      language: en
+      description: Defines first 12 public inspection issue patterns for representative artifacts.
+      subject:
+        - public_inspection
+        - issue_templates
+        - review_lanes
+        - missing_receipts
+      rights_status: pending_review
+      privacy_status: public_expected
+      license_status: pending_review
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      proof_status: not_a_proof
+      strongest_safe_claim: Issue plan routes review work but does not approve publication.
+      next_safest_action: seed actual issues or cross-link existing issues.
+
+    - artifact_id: MAT-0022
+      title: LOC Ingestion Readiness Bridge v0.1
+      type: report
+      genre: institutional_archive_readiness_bridge
+      format: text/markdown
+      path: archive/public_candidate_bundles/PUBLIC_CANDIDATE_BUNDLE_0001/reports/LOC_INGESTION_READINESS_BRIDGE_v0.1_2026-06-03.md
+      identifier:
+        blob_sha: 1795db81cbee21506e3aa23f400c856d350e3317
+        commit_sha: 752fadc38f28bc9462616b8dbd8f717ad1642225
+      creator: GPTBrain / Varix execution pass
+      publisher: atlaslattice/manus-artifacts
+      date: "2026-06-03"
+      language: en
+      description: Candidate bridge from Bundle 0001 receipt discipline toward LOC-style ingestion readiness.
+      subject:
+        - LOC_readiness
+        - metadata_crosswalk
+        - preservation
+        - fixity
+        - rights_review
+      rights_status: pending_review
+      privacy_status: public_expected
+      license_status: pending_review
+      canon_status: not_canon
+      deployment_status: not_deployed
+      authority_scope: none
+      proof_status: not_a_proof
+      strongest_safe_claim: Bridge defines a candidate path toward institutional archive readiness, not LOC approval or submission readiness.
+      next_safest_action: create LOC readiness matrix and export hash manifest.
+
+  next_records_to_add:
+    - MAT-0013 Archivist Trust Failure Protocol
+    - MAT-0014 Sensitive Term Release Gate
+    - MAT-0016 archive PR checklist
+    - MAT-0017 public candidate PR checklist
+    - MAT-0023 Bundle Surface Reconciliation
+    - MAT-0024 Current Build Map
+    - MAT-0025 Execution Queue
+    - MAT-0027 Overclaim report issue template
+
+  keeper: "Metadata is oxygen. Fixity is rope. No summit claims from base camp."
