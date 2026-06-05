@@ -1,0 +1,23 @@
+schema_id: receipt.schema.v0.1
+status: candidate
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+required:
+  - receipt_id
+  - receipt_type
+  - target_id
+  - source_ref
+  - receipt_status
+properties:
+  receipt_id: stable local ID
+  receipt_type: raw_source | export | hash | review | contradiction | human_root_ruling | public_release | rights_clearance | external_citation
+  target_id: artifact_id | claim_id | task_id | edge_id
+  source_ref: URL, file ID, commit SHA, issue URL, line reference, or explicit missing marker
+  hash_status: present | absent | not_applicable | unknown
+  raw_export_status: raw | semi_raw | summary_only | unavailable | blocked | unknown
+  reviewer: optional
+  timestamp: optional ISO timestamp
+  receipt_status: valid | pending | missing | disputed | superseded
+  notes: optional
+rule: Receipt presence does not imply canon, deployment, or authority.
