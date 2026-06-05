@@ -1,0 +1,21 @@
+schema_id: missing_receipt.schema.v0.1
+status: candidate
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+required:
+  - missing_receipt_id
+  - missing_for
+  - missing_type
+  - severity
+  - next_action
+properties:
+  missing_receipt_id: stable local ID
+  missing_for: artifact_id | claim_id | edge_id | task_id
+  missing_type: raw_source | hash | export | review | rights | human_root | external_citation | git_mirror | notion_export
+  severity: P0 | P1 | P2 | P3
+  blocker_status: blocking | non_blocking | unknown
+  next_action: concrete follow-up
+  owner_lane: optional
+  notes: optional
+rule: Missing receipt blocks promotion, not preservation.
