@@ -1,0 +1,101 @@
+artifact_id: OPENAI_GRADE_SOURCE_STATUS_ENUM_v0.1
+schema_version: "0.1"
+status: candidate_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+official_openai_claim: none
+created_utc: "2026-06-03T00:00:00Z"
+
+purpose: >
+  Provide a shared source-status vocabulary for OpenAI Grade evidence hygiene
+  across GitHub, OneDrive, Notion, website canon refs, uploaded files, local CLI
+  reports, and model outputs.
+
+root_rule: >
+  Source status describes what kind of evidence exists. It does not decide truth,
+  canon, deployment, authority, or permission.
+
+source_status_enum:
+  raw_available:
+    confidence_floor: C2
+    public_use: conditional
+    description: Full raw source is available and preservable.
+  raw_hashed:
+    confidence_floor: C3
+    public_use: conditional
+    description: Full raw source is available with SHA-256 or equivalent hash.
+  partial_raw:
+    confidence_floor: C2
+    public_use: review_required
+    description: Partial raw source available; completeness is not claimed.
+  pointer_only:
+    confidence_floor: C1
+    public_use: review_required
+    description: Source pointer exists but raw content is not attached.
+  summary_only:
+    confidence_floor: C1
+    public_use: limited
+    description: Only a summary exists; cannot support high-confidence claims.
+  mirror_reported:
+    confidence_floor: C1
+    public_use: review_required
+    description: Mirror has been reported but not independently verified.
+  mirror_verified:
+    confidence_floor: C3
+    public_use: conditional
+    description: Mirror path and source receipt have been verified.
+  confidential_quarantine:
+    confidence_floor: C1
+    public_use: blocked_raw_only
+    description: Raw source exists but must not be publicly mirrored.
+  missing:
+    confidence_floor: C0
+    public_use: blocked
+    description: Source is referenced but not located.
+  unknown:
+    confidence_floor: C0
+    public_use: blocked
+    description: Status has not yet been inspected.
+
+required_context_fields:
+  - source_surface
+  - source_locator
+  - source_status
+  - raw_export_status
+  - hash_status
+  - privacy_status
+  - canon_status
+  - deployment_status
+  - authority_scope
+
+source_surfaces:
+  - website
+  - github
+  - onedrive
+  - notion
+  - chatgpt_upload
+  - chat_transcript
+  - local_cli
+  - model_output
+  - external_public_source
+  - private_source
+  - unknown
+
+validation_rules:
+  - id: source_status_unknown_blocks_claim_promotion
+    rule: unknown or missing source status cannot support candidate_public, website_canon, or deployed status.
+  - id: summary_only_is_not_evidence_complete
+    rule: summary_only cannot be treated as evidence_complete.
+  - id: confidential_quarantine_blocks_raw_public_mirror
+    rule: confidential_quarantine blocks raw public mirroring unless human-root/legal/provenance review explicitly clears a derivative.
+  - id: mirror_reported_needs_verification
+    rule: mirror_reported must be upgraded to mirror_verified before supporting high-confidence claims.
+  - id: website_canon_requires_url
+    rule: website_canon status requires stable website URL and human-root acceptance.
+  - id: deployment_requires_deployment_receipt
+    rule: deployed status requires deployment evidence, not merely code, docs, or simulation output.
+
+keeper: >
+  A source has a state. A state constrains claims. Claims do not outgrow their
+  receipts.
