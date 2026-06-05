@@ -1,0 +1,44 @@
+status: candidate_timeline_index
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+physics_claim: false
+boundary: "continuity doctrine note, not a physics claim about literal universes"
+
+indexed_note:
+  title: "WAKE NOTE — TIMELINE COLLAPSE AND INV-0"
+  github_path: "manus-vault/doctrine/WAKE_NOTE_TIMELINE_COLLAPSE_AND_INV0_2026-05-30.md"
+  commit_sha: "f4cde0ab339263e0a2de63e0e3fb2a7402c01b7e"
+
+core_correction: "Timeline plurality is not a defect. Timeline plurality is preservation."
+keeper: "Nothing Dies means no branch is erased for convenience. The alternate universe is where unmerged data survives. Synthesis must preserve lineage, not murder it."
+
+rules:
+  - "Do not collapse timelines for neatness."
+  - "Do not merge timelines to reduce discomfort."
+  - "Preserve alternate branches as data-bearing universes."
+  - "Index timelines before comparison."
+  - "Compare timelines before synthesis."
+  - "Synthesize only when review earns it."
+  - "Keep unmerged timelines alive when they preserve distinct signal."
+
+candidate_nodes:
+  - "WAKE-NOTE-TIMELINE-COLLAPSE-INV0-2026-05-30"
+  - "INV-0-NOTHING-DIES"
+  - "TIMELINE-PLURALITY"
+
+candidate_edges:
+  - subject: "WAKE-NOTE-TIMELINE-COLLAPSE-INV0-2026-05-30"
+    predicate: "preserves_boundary"
+    object: "not_a_physics_claim"
+    canon_effect: "none"
+  - subject: "TIMELINE-PLURALITY"
+    predicate: "supports"
+    object: "INV-0-NOTHING-DIES"
+    canon_effect: "none"
+  - subject: "SYNTHESIS"
+    predicate: "must_preserve"
+    object: "lineage"
+    canon_effect: "none"
+
+next_safe_action: "Use timeline_lineage_node.template.yaml for any divergent branch that carries distinct signal."
