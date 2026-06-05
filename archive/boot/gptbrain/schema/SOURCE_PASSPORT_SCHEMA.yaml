@@ -1,0 +1,151 @@
+# Source Passport Schema
+
+schema_id: SOURCE_PASSPORT_SCHEMA
+status: SCHEMA_DRAFT_NOT_CANON
+issue: manus-artifacts#251
+version: 0.1.0
+purpose: >
+  Provide a minimal source passport for Drive, Notion, GitHub, website, chat,
+  and other imported artifacts so ingestion preserves provenance, privacy,
+  parent links, negative authority status, and fossil visibility.
+
+required_fields:
+  - passport_id
+  - origin_surface
+  - source_ref
+  - imported_at
+  - privacy_status
+  - artifact_status
+  - authority_scope
+  - parent_refs
+  - does_not_prove
+
+fields:
+  passport_id:
+    type: string
+    example: SRC-PASSPORT-2026-0531-0001
+
+  origin_surface:
+    type: enum
+    values:
+      - drive
+      - notion
+      - github
+      - website
+      - chat
+      - canvas
+      - external_web
+      - unknown
+
+  source_ref:
+    type: string
+    description: Raw URL, repo path, document id, issue/pr ref, file id, or source pointer.
+
+  imported_at:
+    type: datetime
+
+  imported_by:
+    type: string
+    nullable: true
+
+  source_hash:
+    type: string
+    nullable: true
+
+  title:
+    type: string
+    nullable: true
+
+  privacy_status:
+    type: enum
+    values:
+      - public
+      - mixed
+      - private
+      - sealed
+      - unknown
+
+  artifact_status:
+    type: enum
+    values:
+      - raw_source
+      - parsed_index
+      - extraction_candidate
+      - synthesis_candidate
+      - fossil
+      - superseded_with_child
+      - website_canon
+      - quarantined
+      - unknown
+
+  authority_scope:
+    type: enum
+    values:
+      - none
+      - review_signal
+      - local_test_evidence
+      - implementation_candidate
+      - canon_candidate
+      - website_canon
+    default: none
+
+  parent_refs:
+    type: array
+    items: string
+    description: Source passports, issues, PRs, commits, or artifact ids this object descends from.
+
+  child_refs:
+    type: array
+    items: string
+
+  fossil_status:
+    type: enum
+    values:
+      - active_lineage
+      - preserved_parent
+      - failed_branch
+      - wrong_but_useful
+      - superseded_not_deleted
+      - drift_evidence
+      - not_applicable
+    default: not_applicable
+
+  negative_status_memory:
+    type: object
+    properties:
+      not_single_source_of_truth:
+        type: boolean
+        default: true
+      not_canon:
+        type: boolean
+        default: true
+      not_deployed:
+        type: boolean
+        default: true
+      not_authority:
+        type: boolean
+        default: true
+      not_permission:
+        type: boolean
+        default: true
+
+  does_not_prove:
+    type: array
+    items: string
+    default:
+      - truth
+      - canon_status
+      - deployment_readiness
+      - human_approval
+      - external_authority
+
+  missing_receipts:
+    type: array
+    items: string
+
+invariants:
+  - A source passport indexes evidence; it does not crown truth.
+  - Graph usefulness does not imply canon.
+  - High-connectivity nodes do not imply hierarchy.
+  - Parent preservation is mandatory before synthesis child creation.
+  - Website canon requires Pantheon adversarial review and human-root adjudication.
