@@ -1,0 +1,77 @@
+status: candidate_non_canon
+canon: no
+deployment: no
+authority: none
+purpose: claim packets for root doctrines in the OpenAI-facing review lane
+claim_packets:
+  - claim_id: CLAIM-WEBSITE-CANON-GATE
+    claim_text: Only website-published results after human-root adjudication are canon.
+    claim_type: governance
+    source_support:
+      - source_id: HUMAN-ROOT-DOCTRINE-NOTE
+        support_strength: strong
+        quote_or_summary: human-root clarification states that Notion, Drive, GitHub, Gamma, GPTSwarm outputs, dream/play artifacts, and manuscripts remain candidate, staging, mirror, receipt, fossil, or review surfaces until promoted to website.
+    counter_evidence: []
+    assumptions: [canonical website target remains available]
+    uncertainty: low
+    review_lanes: [Pantheon, TIDELOCK]
+    dissent:
+      status: none
+    overclaim_risk: low
+    promotion_status: candidate
+    canon_boundary: not canon unless published on canonical website
+  - claim_id: CLAIM-MANY-VERSIONS-BEFORE-SYNTHESIS
+    claim_text: Working-state synthesis preserves many versions, branches, fossils, failed paths, and review lanes before any synthesis.
+    claim_type: governance
+    source_support:
+      - source_id: HUMAN-ROOT-DOCTRINE-NOTE
+        support_strength: strong
+        quote_or_summary: doctrine explicitly says many versions, fossils, attempts, failed paths, candidates, and review lanes are used before synthesis.
+    counter_evidence: []
+    assumptions: [archive tools preserve prior states]
+    uncertainty: low
+    review_lanes: [Lucerna, GPTBrain]
+    dissent:
+      status: none
+    overclaim_risk: low
+    promotion_status: candidate
+    canon_boundary: doctrine note is not itself canon until website-published
+  - claim_id: CLAIM-MISSING-RECEIPT-AS-NODE
+    claim_text: Missing receipts and partial exports should be explicit graph nodes or blocker edges, not hidden in prose.
+    claim_type: technical
+    source_support:
+      - source_id: GH-MR-SEED-YAML
+        support_strength: strong
+        quote_or_summary: missing_receipts.seed.yaml defines MissingReceipt nodes and rules.
+      - source_id: GH-BLOCKED-BY-SEED-YAML
+        support_strength: strong
+        quote_or_summary: blocked_by_edges.seed.yaml defines blocker edges.
+    counter_evidence: []
+    assumptions: [graph loader accepts candidate node and edge objects]
+    uncertainty: medium
+    review_lanes: [Hashlight, Lucerna]
+    dissent:
+      status: none
+    overclaim_risk: low
+    promotion_status: candidate
+    canon_boundary: graph tracking is candidate until reviewed
+  - claim_id: CLAIM-227GHZ-NOT-AUDIBLE
+    claim_text: A 100-year 432 Hz wave compressed into 60 seconds yields about 22.7 GHz and is not human-audible.
+    claim_type: technical
+    source_support:
+      - source_id: GH-CENTURY-WAVE-TEMPLATES
+        support_strength: strong
+        quote_or_summary: reference math states 1,363,288,320,000 cycles and 22.721472 GHz boundary as not human-audible.
+    counter_evidence: []
+    assumptions: [Julian year convention is used]
+    uncertainty: low
+    review_lanes: [Hashlight, TIDELOCK]
+    dissent:
+      status: none
+    overclaim_risk: medium
+    promotion_status: candidate
+    canon_boundary: math claim is reviewable, not canon
+rules:
+  - claims identify evidence class
+  - claims preserve assumptions and uncertainty
+  - claims do not self-ratify
