@@ -1,0 +1,155 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: NativeThreadIngestionPacket
+status: SCHEMA_CANDIDATE_NOT_CANON
+x_deployment_status: not_deployable
+x_authority_scope: none
+type: object
+additionalProperties: false
+required:
+  - schema_version
+  - artifact_id
+  - title
+  - source_surface
+  - raw_export_status
+  - thread_time_range
+  - access_scope
+  - canon_status
+  - deployment_status
+  - authority_scope
+  - runtime_status
+  - privacy_status
+  - claims
+  - next_safest_action
+properties:
+  schema_version:
+    type: string
+    const: receipt_habitat.ingestion.v0.1
+  artifact_id:
+    type: string
+    minLength: 1
+  title:
+    type: string
+    minLength: 1
+  source_surface:
+    type: string
+    enum:
+      - chatgpt
+      - claude
+      - grok
+      - gemini
+      - deepseek
+      - copilot
+      - manus
+      - notion
+      - github
+      - drive
+      - uploaded_file
+      - other
+  raw_export_status:
+    type: string
+    enum:
+      - full_raw
+      - partial_raw
+      - summary_only
+      - unavailable
+  thread_time_range:
+    type: object
+    additionalProperties: false
+    required: [start, end, timezone]
+    properties:
+      start:
+        type: string
+      end:
+        type: string
+      timezone:
+        type: string
+  access_scope:
+    type: string
+    enum:
+      - private
+      - project_shared
+      - public_artifact
+      - redacted
+      - unknown
+  privacy_status:
+    type: string
+    enum:
+      - public
+      - private
+      - mixed
+      - redacted
+  canon_status:
+    type: string
+    const: not_canon
+  deployment_status:
+    type: string
+    const: not_deployable
+  authority_scope:
+    type: string
+    const: none
+  runtime_status:
+    type: string
+    const: local_dry_run_only
+  unavailable_sources:
+    type: array
+    items:
+      type: string
+  source_refs:
+    type: array
+    items:
+      type: string
+  hash_status:
+    type: string
+    enum:
+      - present
+      - unavailable
+      - not_applicable
+    default: unavailable
+  hash_method:
+    type: [string, 'null']
+  hash_source_scope:
+    type: [string, 'null']
+  claims:
+    type: array
+    items:
+      $ref: "#/$defs/claim"
+  overclaims_to_avoid:
+    type: array
+    items:
+      type: string
+  next_safest_action:
+    type: string
+    minLength: 1
+$defs:
+  claim:
+    type: object
+    additionalProperties: false
+    required:
+      - claim_text
+      - claim_type
+      - claim_confidence
+    properties:
+      claim_text:
+        type: string
+        minLength: 1
+      claim_type:
+        type: string
+        enum:
+          - source_reported_fact
+          - derived_inference
+          - design_proposal
+          - speculative_projection
+          - unverified_external_claim
+      claim_confidence:
+        type: string
+        enum:
+          - C0_UNSUPPORTED
+          - C1_SIGNAL
+          - C2_EVIDENCE
+          - C3_REVIEWED
+          - C4_RATIFIED
+      evidence_ref:
+        type: [string, 'null']
+      public_claim_allowed:
+        type: boolean
+        default: false
