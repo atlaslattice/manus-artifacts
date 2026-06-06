@@ -1,0 +1,33 @@
+schema_version: receipt_habitat.ingestion.v0.1
+artifact_id: RH-DEMO-SUMMARY-ONLY-001
+title: Mobile continuity summary demo packet
+source_surface: chatgpt
+raw_export_status: summary_only
+thread_time_range:
+  start: "2026-05-30T00:00:00Z"
+  end: "2026-05-30T01:00:00Z"
+  timezone: America/Chicago
+access_scope: project_shared
+privacy_status: mixed
+canon_status: not_canon
+deployment_status: not_deployable
+authority_scope: none
+runtime_status: local_dry_run_only
+unavailable_sources: []
+source_refs:
+  - notion:36e0c1de73d981ac8437d7fd271cfd4b
+hash_status: unavailable
+hash_method: null
+hash_source_scope: null
+claims:
+  - claim_text: "The mobile continuity summary indicates context-loss risk and recommends receipt-first preservation."
+    claim_type: derived_inference
+    claim_confidence: C1_SIGNAL
+    evidence_ref: null
+    public_claim_allowed: false
+overclaims_to_avoid:
+  - canon
+  - ratified
+  - deployed
+  - verified
+next_safest_action: "Use as non-canon internal processing input only; do not create public claims without raw lineage or receipts."
