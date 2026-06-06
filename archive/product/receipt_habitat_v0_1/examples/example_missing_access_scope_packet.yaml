@@ -1,0 +1,16 @@
+schema_version: receipt_habitat.ingestion.v0.1
+artifact_id: RH-DEMO-MISSING-ACCESS-001
+title: Missing access scope should fail
+source_surface: chatgpt
+raw_export_status: summary_only
+thread_time_range:
+  start: "2026-05-30T00:00:00Z"
+  end: "2026-05-30T01:00:00Z"
+  timezone: America/Chicago
+privacy_status: mixed
+canon_status: not_canon
+deployment_status: not_deployable
+authority_scope: none
+runtime_status: local_dry_run_only
+claims: []
+next_safest_action: "Patch packet by adding access_scope before review."
