@@ -1,0 +1,87 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: ReceiptHabitatReviewPacket
+status: SCHEMA_CANDIDATE_NOT_CANON
+x_deployment_status: not_deployable
+x_authority_scope: none
+type: object
+additionalProperties: false
+required:
+  - schema_version
+  - artifact_id
+  - review_verdict
+  - canon_status
+  - deployment_status
+  - authority_scope
+  - runtime_status
+  - strongest_safe_claim
+  - next_safest_action
+properties:
+  schema_version:
+    type: string
+    const: receipt_habitat.review.v0.1
+  artifact_id:
+    type: string
+  source_packet_ref:
+    type: [string, 'null']
+  review_verdict:
+    type: string
+    enum:
+      - approve
+      - patch
+      - block
+  blocker_level:
+    type: string
+    enum:
+      - none
+      - minor
+      - major
+      - blocking
+    default: none
+  canon_status:
+    type: string
+    const: not_canon
+  deployment_status:
+    type: string
+    const: not_deployable
+  authority_scope:
+    type: string
+    const: none
+  runtime_status:
+    type: string
+    const: local_dry_run_only
+  raw_export_status:
+    type: string
+    enum:
+      - full_raw
+      - partial_raw
+      - summary_only
+      - unavailable
+  public_claim_allowed:
+    type: boolean
+    default: false
+  review_dissent:
+    type: array
+    items:
+      type: string
+  falsification_condition:
+    type: [string, 'null']
+  unresolved_questions:
+    type: array
+    items:
+      type: string
+  missing_receipts:
+    type: array
+    items:
+      type: string
+  overclaims_detected:
+    type: array
+    items:
+      type: string
+  overclaims_to_avoid:
+    type: array
+    items:
+      type: string
+  strongest_safe_claim:
+    type: string
+  next_safest_action:
+    type: string
