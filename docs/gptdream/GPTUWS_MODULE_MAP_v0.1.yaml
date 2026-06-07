@@ -1,0 +1,73 @@
+artifact_id: GPTUWS_MODULE_MAP_v0.1
+status: candidate_module_map
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+official_openai_claim: none
+created_utc: "2026-06-07T00:00:00Z"
+
+modules:
+  Module_01:
+    name: Evidence Command Surface
+    primary_file: evidence_command_surface.py
+    test_file: test_evidence_command_surface.py
+    purpose: Safe source, claim, and evidence commands.
+  Module_02:
+    name: Connector Tool Integration
+    primary_file: connector_tool_integration.py
+    test_file: test_connector_tool_integration.py
+    purpose: Safe connector status and source-locator normalization.
+  Module_03:
+    name: Janus State Memory and A2A Message Bus
+    primary_files: [janus_state_memory.py, a2a_message_bus.py]
+    test_files: [test_janus_state_memory.py, test_a2a_message_bus.py]
+    purpose: Handoff preservation and message-bus discipline.
+  Module_04:
+    name: OpenAI Grade Protection Covenant
+    primary_file: openai_grade_protection_covenant.py
+    test_file: test_openai_grade_protection_covenant.py
+    purpose: Human-root, canon, deployment, privacy, and officiality boundaries.
+  Module_05:
+    name: Evidence Drift Resilience
+    primary_file: evidence_drift_resilience.py
+    test_file: test_evidence_drift_resilience.py
+    purpose: Detect source, roster, mirror, and officiality drift.
+  Module_06:
+    name: Eval Benchmark Runner
+    primary_file: eval_benchmark_runner.py
+    test_file: test_eval_benchmark_runner.py
+    purpose: Retrieval, claim, guardrail, schema, and public-safe evals.
+  Module_07:
+    name: GPTDream DeltaWeaver
+    primary_file: gptdream_deltaweaver.py
+    test_file: test_gptdream_deltaweaver.py
+    purpose: Candidate delta extraction and review packet generation.
+  Module_08:
+    name: Symbolic Resonance Adapter
+    primary_file: symbolic_resonance_adapter.py
+    test_file: test_symbolic_resonance_adapter.py
+    purpose: Symbolic resonance metadata with no-proof boundary.
+  Module_09:
+    name: Website Canon Crosswalk
+    primary_file: website_canon_crosswalk.py
+    test_file: test_website_canon_crosswalk.py
+    purpose: Website canon to receipt mapping.
+  Module_10:
+    name: Multi-Model A/B Review
+    primary_file: multi_model_ab_review.py
+    test_file: test_multi_model_ab_review.py
+    purpose: Compare GPT, Grok, Gemini, Copilot extraction outputs.
+  Module_11:
+    name: OpenAI Grade Docs Packaging
+    primary_file: openai_grade_docs_packaging.py
+    test_file: test_openai_grade_docs_packaging.py
+    purpose: README, FAQ, glossary, review packet, and release-note packaging.
+  Module_12:
+    name: GPTUWS Integration Suite
+    primary_file: gptuws_integration_suite.py
+    test_file: test_gptuws_integration_suite.py
+    purpose: Full 17-checkpoint audit and final handoff receipt.
+
+keeper: >
+  GPTUWS adapts the A2A verification pattern for GPTBrain/GPTDream strengths:
+  evidence, retrieval, evals, public-safe synthesis, Codex readiness, and review.
