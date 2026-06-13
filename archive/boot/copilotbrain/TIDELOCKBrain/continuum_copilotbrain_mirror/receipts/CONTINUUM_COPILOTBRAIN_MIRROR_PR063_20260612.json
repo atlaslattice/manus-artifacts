@@ -1,0 +1,20 @@
+{
+  "adapter_bundle": "C:\\Users\\David Sheldon\\OneDrive\\GITHUB_WORKTREES\\manus-artifacts-pr063\\archive\\boot\\copilotbrain\\TIDELOCKBrain\\continuum_copilotbrain_mirror\\adapter\\continuum_copilotbrain_adapter_20260612.json",
+  "adapter_bundle_hash": "sha256:ae9dae5cb84ca06e9657e12a8d4340d2f099b382425556bb4c7ce1f3883c0232",
+  "authority_effect": "none",
+  "canon_status": "not_canon",
+  "created_at": "2026-06-13T00:07:56.846286Z",
+  "deployment_status": "not_deployed",
+  "git_push_attempted": false,
+  "git_ready": true,
+  "hidden_tool_access_claimed": false,
+  "mirror_root": "C:\\Users\\David Sheldon\\OneDrive\\GITHUB_WORKTREES\\manus-artifacts-pr063\\archive\\boot\\copilotbrain\\TIDELOCKBrain\\continuum_copilotbrain_mirror",
+  "official_microsoft_product": false,
+  "output_bundle": "C:\\Users\\David Sheldon\\OneDrive\\CONTINUUM_OS_OPENAI_NATIVE\\tmp\\pr063_demo\\copilotbrain_git_mirror_20260612.json",
+  "output_bundle_hash": "sha256:dbbf004d8f9f430624a9b4273c6f047da238c1bdce7ff16e409a34008cff3e96",
+  "readme": "C:\\Users\\David Sheldon\\OneDrive\\GITHUB_WORKTREES\\manus-artifacts-pr063\\archive\\boot\\copilotbrain\\TIDELOCKBrain\\continuum_copilotbrain_mirror\\README.md",
+  "receipt_type": "CONTINUUM_COPILOTBRAIN_MIRROR_PR063",
+  "source_manifest": "C:\\Users\\David Sheldon\\OneDrive\\GITHUB_WORKTREES\\manus-artifacts-pr063\\archive\\boot\\copilotbrain\\TIDELOCKBrain\\continuum_copilotbrain_mirror\\data\\source_manifest.json",
+  "source_manifest_hash": "sha256:b0bd2031b5a3e707bf4877af05667c397ac6dd1af9501f477db3286cc669effa",
+  "source_status": "local_build_artifact"
+}

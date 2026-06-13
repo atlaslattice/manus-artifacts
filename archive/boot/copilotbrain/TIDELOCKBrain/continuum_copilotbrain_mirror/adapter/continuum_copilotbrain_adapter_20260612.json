@@ -1,0 +1,253 @@
+{
+  "authority_effect": "none",
+  "bundle_type": "ContinuumCopilotbrainAdapterBundle",
+  "canon_status": "not_canon",
+  "capabilities": [
+    {
+      "authority_effect": "none",
+      "canon_status": "not_canon",
+      "capability_id": "copilotbrain.answer_from_sources",
+      "default_route_mode": "read_only",
+      "deployment_status": "not_deployed",
+      "display_name": "Answer from Copilotbrain source material with citations",
+      "lane_ref": "continuum_copilot.datum.local_source_lane",
+      "packet_type": "CopilotbrainCapabilityPacket",
+      "requires_receipt": true,
+      "requires_source_refs": true,
+      "risk_level": "low",
+      "source_status": "candidate",
+      "stale_claim_guard": true
+    },
+    {
+      "authority_effect": "none",
+      "canon_status": "not_canon",
+      "capability_id": "copilotbrain.microsoft_adapter_review",
+      "default_route_mode": "read_only",
+      "deployment_status": "not_deployed",
+      "display_name": "Review Windows/Microsoft adapter claims with stale-tool guard",
+      "lane_ref": "continuum_copilot.datum.local_source_lane",
+      "packet_type": "CopilotbrainCapabilityPacket",
+      "requires_receipt": true,
+      "requires_source_refs": true,
+      "risk_level": "medium",
+      "source_status": "candidate",
+      "stale_claim_guard": true
+    },
+    {
+      "authority_effect": "none",
+      "canon_status": "not_canon",
+      "capability_id": "copilotbrain.handoff_packet",
+      "default_route_mode": "read_only",
+      "deployment_status": "not_deployed",
+      "display_name": "Generate structured Copilot to Codex handoff packets",
+      "lane_ref": "continuum_copilot.datum.local_source_lane",
+      "packet_type": "CopilotbrainCapabilityPacket",
+      "requires_receipt": true,
+      "requires_source_refs": true,
+      "risk_level": "low",
+      "source_status": "candidate",
+      "stale_claim_guard": true
+    }
+  ],
+  "deployment_status": "not_deployed",
+  "handoffs": [
+    {
+      "authority_effect": "none",
+      "blocked_assumptions": [
+        "autonomous_windows_control",
+        "canon_authority",
+        "credential_access",
+        "deployment_authority",
+        "hidden_windows_tool_access",
+        "official_microsoft_copilot_identity",
+        "token_access",
+        "unverified_tool_claim"
+      ],
+      "canon_status": "not_canon",
+      "created_at": "2026-06-13T00:07:56.836865Z",
+      "deployment_status": "not_deployed",
+      "direction": "copilotbrain_to_codex",
+      "handoff_id": "handoff.copilotbrain_to_codex.k1_modules",
+      "lane_ref": "continuum_copilot.datum.local_source_lane",
+      "packet_type": "CopilotbrainHandoffPacket",
+      "receipt_required": true,
+      "requested_output_shape": "DeltaReviewItemPacket JSONL plus source-passport refs",
+      "risk_level": "low",
+      "source_refs": [
+        "k1_lcs_to_continuum_module_manifest.json",
+        "K1_LCS_TO_CONTINUUM_OPENAI_NATIVE_12x12_MAP.md",
+        "k1_lcs_candidate_deltas.jsonl"
+      ],
+      "source_status": "candidate",
+      "task_summary": "Extract reviewable K1-LCS module/task deltas into Continuum review queue."
+    },
+    {
+      "authority_effect": "none",
+      "blocked_assumptions": [
+        "autonomous_windows_control",
+        "canon_authority",
+        "credential_access",
+        "deployment_authority",
+        "hidden_windows_tool_access",
+        "official_microsoft_copilot_identity",
+        "token_access",
+        "unverified_tool_claim"
+      ],
+      "canon_status": "not_canon",
+      "created_at": "2026-06-13T00:07:56.836901Z",
+      "deployment_status": "not_deployed",
+      "direction": "codex_to_copilotbrain",
+      "handoff_id": "handoff.codex_to_copilotbrain.windows_presence",
+      "lane_ref": "continuum_copilot.datum.local_source_lane",
+      "packet_type": "CopilotbrainHandoffPacket",
+      "receipt_required": true,
+      "requested_output_shape": "read-only critique with explicit evidence refs and no hidden-tool claims",
+      "risk_level": "medium",
+      "source_refs": [
+        "CONTINUUM_PRESENCE_GATE_PR061_20260612.md",
+        "presence_gate.py"
+      ],
+      "source_status": "candidate",
+      "task_summary": "Ask Copilot-side lane to review PR-061 passwordless presence gate against Microsoft identity concepts."
+    }
+  ],
+  "lane": {
+    "allowed_roles": [
+      "source_backed_answering",
+      "windows_and_microsoft_adapter_review",
+      "handoff_packet_generation",
+      "claim_boundary_audit",
+      "task_decomposition"
+    ],
+    "allowed_transports": [
+      "local_json",
+      "jsonl_queue",
+      "markdown_receipt",
+      "manual_copy"
+    ],
+    "authority_effect": "none",
+    "blocked_claims": [
+      "autonomous_windows_control",
+      "canon_authority",
+      "credential_access",
+      "deployment_authority",
+      "hidden_windows_tool_access",
+      "official_microsoft_copilot_identity",
+      "token_access",
+      "unverified_tool_claim"
+    ],
+    "canon_status": "not_canon",
+    "deployment_status": "not_deployed",
+    "display_name": "Continuum Copilot / DATUM",
+    "lane_id": "continuum_copilot.datum.local_source_lane",
+    "mode": "source_backed_assistant",
+    "official_status": "not_official_microsoft_product",
+    "packet_type": "ContinuumCopilotLanePacket",
+    "provider_lineage": "microsoft_copilot_source_material",
+    "rule": "Continuum Copilot is a local source-backed assistant lane. It may use Copilotbrain artifacts as candidate source material, but it does not impersonate Microsoft Copilot or assert hidden tool access.",
+    "source_ref": "copilotbrain.source.k1_lcs_srd_v0_2_20260607",
+    "source_status": "candidate"
+  },
+  "next_adapter_steps": [
+    "Add a local query helper over Copilotbrain chunks.",
+    "Add Cockpit lane card for Continuum Copilot / DATUM.",
+    "Add handoff inbox/outbox folders under a shared Continuum handoff root.",
+    "If official Microsoft APIs are later available, attach them as optional adapters only."
+  ],
+  "public_line": "Continuum Copilot is a local source-backed assistant lane: Copilotbrain memory plus Continuum receipts, not Microsoft impersonation.",
+  "schema_version": "0.1.0-pr062-candidate",
+  "source": {
+    "artifact_count": 7,
+    "artifact_paths": [
+      "k1_lcs_candidate_deltas.jsonl",
+      "K1_LCS_SRD_v0_2_extracted.txt",
+      "k1_lcs_to_continuum_module_manifest.json",
+      "K1_LCS_TO_CONTINUUM_OPENAI_NATIVE_12x12_MAP.md",
+      "rag_store/chunks.jsonl",
+      "rag_store/deltas.jsonl",
+      "source_extraction_summary.json"
+    ],
+    "authority_effect": "none",
+    "canon_status": "not_canon",
+    "deployment_status": "not_deployed",
+    "extraction_counts": {
+      "artifact_id": "copilotbrain-k1-lcs-srd-v0-2-20260607",
+      "authority_effect": "none",
+      "chars": 146949,
+      "counts": {
+        "assumptions": 12,
+        "constraints": 10,
+        "mission_objectives": 10,
+        "module_requirements": 120,
+        "module_requirements_by_module": {
+          "MOD-01": 10,
+          "MOD-02": 10,
+          "MOD-03": 10,
+          "MOD-04": 10,
+          "MOD-05": 10,
+          "MOD-06": 10,
+          "MOD-07": 10,
+          "MOD-08": 10,
+          "MOD-09": 10,
+          "MOD-10": 10,
+          "MOD-11": 10,
+          "MOD-12": 10
+        },
+        "open_items": 10,
+        "risk_ids": [
+          "RISK-001",
+          "RISK-002",
+          "RISK-003",
+          "RISK-004",
+          "RISK-005",
+          "RISK-006",
+          "RISK-007",
+          "RISK-008",
+          "RISK-009",
+          "RISK-010",
+          "RISK-011",
+          "RISK-012",
+          "RISK-013",
+          "RISK-014",
+          "RISK-015",
+          "RISK-016",
+          "RISK-017",
+          "RISK-018",
+          "RISK-019",
+          "RISK-020"
+        ],
+        "risks": 20,
+        "system_requirements": 18
+      },
+      "does_not_prove": [
+        "official program status",
+        "classification authority",
+        "technical feasibility at planetary scale",
+        "canon ratification"
+      ],
+      "extracted_text": "C:\\Users\\David Sheldon\\OneDrive\\CONTINUUM_OS_OPENAI_NATIVE\\source_material\\copilotbrain\\K1_LCS_SRD_v0_2_20260607\\K1_LCS_SRD_v0_2_extracted.txt",
+      "pages": 146,
+      "sha256_text": "0a6aa5f0ff5ef95e85856b87ddce9a6900f51342065c68e8fb63bf8559523001",
+      "source_pdf": "C:\\Users\\David Sheldon\\OneDrive\\Copilot\\CopilotBrain\\source_artifacts\\K1_LCS_SRD_v0_2_20260607\\Kardashev-I Lattice Coordination System - SRD v0.2 (3).pdf",
+      "status": "CANDIDATE_NOT_CANON_SOURCE_EXTRACTION"
+    },
+    "packet_type": "CopilotbrainSourcePacket",
+    "source_hash": "sha256:94b3243a2f6230c331c5a2adb92c756c7e6adb4053bce963662ca41be84a6ae3",
+    "source_id": "copilotbrain.source.k1_lcs_srd_v0_2_20260607",
+    "source_root": "C:\\Users\\David Sheldon\\OneDrive\\CONTINUUM_OS_OPENAI_NATIVE\\source_material\\copilotbrain\\K1_LCS_SRD_v0_2_20260607",
+    "source_status": "candidate",
+    "total_bytes": 716082
+  },
+  "source_status": "candidate",
+  "summary": {
+    "blocked_claim_count": 8,
+    "capability_count": 3,
+    "handoff_count": 2,
+    "hidden_tool_access_claimed": false,
+    "lane_count": 1,
+    "official_microsoft_product": false,
+    "output_path": "C:\\Users\\David Sheldon\\OneDrive\\CONTINUUM_OS_OPENAI_NATIVE\\tmp\\pr063_demo\\continuum_copilotbrain_adapter_20260612.json",
+    "source_artifact_count": 7,
+    "source_total_bytes": 716082
+  }
+}
