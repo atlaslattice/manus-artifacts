@@ -1,0 +1,60 @@
+artifact_id: SOURCE-PASSPORTS-P0-ACTIVE-REPOS-001-2026-05-31
+version: "0.1"
+status: candidate_source_passports
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+write_scope: staging_only
+source_passports:
+  - passport_id: PASS-GH-SHELDONBRAIN-RAG-API-001
+    repo: atlaslattice/sheldonbrain-rag-api
+    source_surface: github
+    role: active_candidate_lineage_ingestion_tool
+    raw_export_status: not_exported
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_effect: none
+    review_route: [TIDELOCK, GPTBrain, Hashlight]
+    openai_benefit: candidate lineage ingestion and graph node proposal engine
+    missing_receipts:
+      - file_tree_inspection
+      - parser_path_index
+      - test_status
+      - integration_adapter_receipts
+    next_action: inspect README and file tree for parser and adapter paths
+  - passport_id: PASS-GH-UWS-001
+    repo: atlaslattice/uws
+    source_surface: github
+    role: active_candidate_universal_workspace_shell
+    raw_export_status: not_exported
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_effect: none
+    review_route: [TIDELOCK, GPTBrain, Hashlight]
+    openai_benefit: connector and workspace command substrate candidate
+    missing_receipts:
+      - cli_contract_index
+      - connector_surface_index
+      - test_status
+      - integration_adapter_receipts
+    next_action: inspect README and CLI contracts
+  - passport_id: PASS-GH-ALUMINUM-OS-001
+    repo: atlaslattice/aluminum-os
+    source_surface: github
+    role: active_candidate_integration_os_substrate
+    raw_export_status: not_exported
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_effect: none
+    review_route: [TIDELOCK, GPTBrain, Hashlight]
+    openai_benefit: OS-level integration substrate candidate for GPTBrain and Sheldonbrain lanes
+    missing_receipts:
+      - repo_tree_inspection
+      - OpenAI_integration_file_index
+      - test_status
+      - deployment_boundary_review
+    next_action: inspect README and integration files
+must_not_infer:
+  - source_passport_does_not_mean_integrated
+  - source_passport_does_not_mean_public_ready
+  - source_passport_does_not_mean_canon

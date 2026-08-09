@@ -1,0 +1,57 @@
+artifact_id: LANGUAGE-LINT-RULES-001-2026-05-31
+version: "0.1"
+status: candidate_lint_rules
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+write_scope: staging_only
+rules:
+  - rule_id: LINT-OAI-001
+    trigger: single source of truth
+    replacement: source-indexed evidence field
+    severity: block_or_patch
+    reason: prevents false truth hierarchy
+    review_route: [Lucerna, GPTBrain]
+  - rule_id: LINT-OAI-002
+    trigger: official OpenAI
+    replacement: OpenAI-adjacent / OpenAI-benefit / OpenAI-compatible, if supported by receipts
+    severity: block
+    reason: prevents false affiliation or authority claim
+    review_route: [Rootglass, Lucerna, TIDELOCK]
+  - rule_id: LINT-OAI-003
+    trigger: fully integrated
+    replacement: integration status: pending / staged / tested, as receipted
+    severity: patch
+    reason: prevents forked-or-present from being mistaken for integrated
+    review_route: [TIDELOCK, GPTBrain]
+  - rule_id: LINT-OAI-004
+    trigger: master plan
+    replacement: synthesis candidate
+    severity: patch
+    reason: prevents premature finality
+    review_route: [Rootglass, GPTBrain]
+  - rule_id: LINT-OAI-005
+    trigger: canonical graph
+    replacement: provenance graph
+    severity: block_or_patch
+    reason: graph does not decide canon
+    review_route: [Lucerna, TIDELOCK]
+  - rule_id: LINT-OAI-006
+    trigger: central node
+    replacement: high-connectivity review node
+    severity: patch
+    reason: centrality is not authority
+    review_route: [AtlasBrain, Rootglass]
+  - rule_id: LINT-OAI-007
+    trigger: merge
+    replacement: synthesis child artifact, when combining artifacts
+    severity: patch
+    reason: merge must not imply deletion
+    review_route: [Fossilbranch, Lucerna]
+  - rule_id: LINT-OAI-008
+    trigger: archived tool is active
+    replacement: archived reference fork unless active receipts exist
+    severity: block_or_patch
+    reason: archived is not active
+    review_route: [TIDELOCK, Hashlight]
+validation_note: These rules are candidate lint targets, not deployed validators.
