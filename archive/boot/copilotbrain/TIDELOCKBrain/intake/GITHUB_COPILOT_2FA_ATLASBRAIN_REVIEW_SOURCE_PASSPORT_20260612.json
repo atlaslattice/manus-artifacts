@@ -1,0 +1,23 @@
+{
+  "authority_effect": "none",
+  "canon_status": "not_canon",
+  "deployment_status": "not_deployed",
+  "derived_public_artifact": "archive/boot/copilotbrain/TIDELOCKBrain/intake/GITHUB_COPILOT_2FA_ATLASBRAIN_REVIEW_PUBLIC_SAFE_20260612.md",
+  "human_root_required_for_raw_publication": true,
+  "packet_type": "TIDELOCKBrainSourcePassportPacket",
+  "privacy_boundary": "raw transcript contains GitHub 2FA/account-recovery discussion; public lane receives summary only unless explicitly approved",
+  "raw_local_path": "CONTINUUM_OS_OPENAI_NATIVE/source_material/tidelockbrain/raw/GITHUB_COPILOT_2FA_ATLASBRAIN_REVIEW_RAW_20260612.txt",
+  "raw_sha256": "9300B3B06237817868C1707BE49E9B7984006EF4FA23C91A24D0C9EB328BCFFE",
+  "raw_source_ref": "Codex attachment e7fa2fd4-063e-48da-9053-4f139d6e7329/pasted-text.txt",
+  "review_status": "candidate_review_input",
+  "source_status": "preserved_source_material",
+  "title": "GitHub Copilot 2FA / PR-063 / AtlasBrain review transcript",
+  "useful_delta_tags": [
+    "github_2fa_recovery_friction",
+    "pr063_external_style_review",
+    "atlasbrain_review_preparation",
+    "world_class_or_bust_rubric",
+    "plain_front_door",
+    "cathedral_meta_structure_risk"
+  ]
+}

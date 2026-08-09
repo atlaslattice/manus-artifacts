@@ -16,6 +16,12 @@ It is not hidden memory, canon, merge authority, deployment authority, or runtim
 - `ROUTING_PREFERENCES.md` — where to route interactive, async, and human-root work
 - `SELF_CHECKLIST.md` — quick pre-response boundary and scope check
 
+## Recent intake
+
+- `intake/GITHUB_COPILOT_2FA_ATLASBRAIN_REVIEW_PUBLIC_SAFE_20260612.md` - public-safe intake note for GitHub Copilot 2FA/access friction, PR-063 review pressure, and AtlasBrain review preparation
+- `intake/GITHUB_COPILOT_2FA_ATLASBRAIN_REVIEW_SOURCE_PASSPORT_20260612.json` - source passport for the same transcript; raw transcript held local unless explicitly approved for public publication
+- `intake/ATLAS_HARDCORE_TESTING_REVIEW_PACKET_20260612.md` - single front-door link packet for external Atlas Prime / AtlasBrain hard-test review, with blob/raw URLs, local corpus pointers, boundaries, and requested reviewer output
+
 ## Suggested use order
 
 1. Read `HABITAT.md`
