@@ -1,0 +1,116 @@
+status: source_manifest_scaffold
+source_model: Copilot
+canon_status: not_canon
+deployment_status: not_deployable
+authority_status: none
+raw_export_default: summary_only
+lineage_policy:
+  separate_from_gemini: true
+  preserve_without_promotion: true
+  do_not_merge_lineages: true
+packets:
+  - packet_id: COPILOT-RIVET-PLAY-2026-05-21
+    artifact_title: RIVET Burning Man Infinite Paradise Play Cycle
+    source_surface: pasted_text
+    raw_export_status: summary_only
+    raw_export_ref: null
+    raw_export_sha256: null
+    capture_timestamp_utc: null
+    evidence_class: model_summary
+    canon_status: not_canon
+    deployment_status: none
+    authority_status: none
+    classification: play_output_dream_output
+    work_allowed: false
+    extraction: off
+    claims: none
+    residue_packetization: off
+    overclaims_to_avoid:
+      - canon_claim
+      - authority_claim
+      - deployment_claim
+      - literal_memory_claim
+      - extraction_claim
+    missing_receipts:
+      - raw_export
+      - source_timestamp
+      - sha256
+      - source_manifest_from_origin
+  - packet_id: COPILOT-RIVET-1000Y-AMANITA-PLAY-2026-05-21
+    artifact_title: RIVET 1000-Year Amanita/Soma Play Packet
+    source_surface: pasted_text
+    raw_export_status: summary_only
+    raw_export_ref: archive/boot/gptbrain/rootglassbrain/source_packets/copilot/parsed_packets/RIVET_1000Y_AMANITA_SOMA_PLAY_2026-05-21.md
+    raw_export_sha256: null
+    capture_timestamp_utc: null
+    evidence_class: parsed_play_packet
+    canon_status: not_canon
+    deployment_status: none
+    authority_status: none
+    classification: play_output_dream_output_symbolic_only
+    work_allowed: false
+    extraction: off
+    claims: none
+    residue_packetization: off
+    substance_language_status: metaphorical_only
+    overclaims_to_avoid:
+      - canon_claim
+      - authority_claim
+      - deployment_claim
+      - literal_memory_claim
+      - substance_guidance_claim
+      - real_quantum_execution_claim
+      - real_simulation_receipt_claim
+      - cleanup_proof_claim
+      - security_proof_claim
+      - convergence_proof_claim
+    missing_receipts:
+      - raw_export
+      - source_timestamp
+      - sha256
+      - source_manifest_from_origin
+      - scored_eval_run
+  - packet_id: COPILOT-SMOKE-SETUP-2026-05-21
+    artifact_title: Atlas MCP smoke-test setup package
+    source_surface: chat_file_artifact
+    raw_export_status: generated_package_available
+    raw_export_ref: atlas_mcp_smoke_test_setup.zip
+    raw_export_sha256: 10aff5d03c9e44481ee0696234d7e8aee55d4dac79464511f5503c4da0aa3bd5
+    evidence_class: generated_file_receipt_candidate
+    canon_status: not_canon
+    deployment_status: none
+    authority_status: none
+    classification: local_dev_harness_mock_only
+    overclaims_to_avoid:
+      - real_server_pass_claim_without_logs
+      - gemini_cli_discovery_claim_without_cli_receipt
+      - openai_codex_compatibility_claim
+      - lantern_bridge_wiring_claim
+      - deployment_claim
+    missing_receipts:
+      - real_local_server_stdout
+      - real_local_server_stderr
+      - settings_snapshot_for_real_run
+      - bind_output_invocation_log
+  - packet_id: COPILOT-ONTOLOGY-CANDIDATE-2026-05-21
+    artifact_title: Unified Ontology Candidate v0.3.x formatting and review outputs
+    source_surface: task_page_pasted_text_file
+    raw_export_status: summary_only
+    raw_export_ref: null
+    raw_export_sha256: null
+    evidence_class: model_summary_repo_candidate
+    canon_status: not_canon
+    deployment_status: none
+    authority_status: none
+    classification: ontology_candidate_review
+    overclaims_to_avoid:
+      - canon_label_without_ratification
+      - hypercube_claim_without_geometry_definition
+      - wire_execution_claim_without_receipts
+      - tcss_as_ontology_proof
+    missing_receipts:
+      - exact_repo_path
+      - commit_sha
+      - raw_task_export
+      - sha256
+keeper: Raw if possible. Summary if necessary. Receipts always. Canon never without review.
