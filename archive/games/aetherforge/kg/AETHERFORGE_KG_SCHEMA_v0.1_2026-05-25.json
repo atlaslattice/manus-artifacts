@@ -1,0 +1,122 @@
+{
+  "schema_id": "AETHERFORGE-KG-SCHEMA-v0.1-2026-05-25",
+  "status": "candidate_schema_not_canon",
+  "canon_status": "not_canon",
+  "deployment_status": "not_deployed",
+  "authority_scope": "none",
+  "proof_status": "not_a_proof",
+  "node_types": {
+    "SourceSurface": {
+      "required": ["surface_id", "surface_type", "connector_status", "visibility"],
+      "fields": {
+        "surface_id": "string",
+        "surface_type": "notion|drive|github|gamma|website|swarm|manus|uploaded_file|pasted_text|external_web|unknown",
+        "connector_status": "direct|proxy|referenced_only|missing|unknown",
+        "visibility": "private|public|mixed|unknown",
+        "contamination_default": "clean|quarantine_first|unknown",
+        "notes": "string"
+      }
+    },
+    "RawArtifact": {
+      "required": ["artifact_id", "title", "source_surface_id", "raw_export_status", "canon_status", "authority_scope"],
+      "fields": {
+        "artifact_id": "string",
+        "title": "string",
+        "source_surface_id": "string",
+        "source_locator": "string",
+        "raw_export_status": "absent|unavailable|pending|partial|attached|hashed|verified|not_supported",
+        "source_hash": "string|null",
+        "created_at": "string|null",
+        "updated_at": "string|null",
+        "artifact_type": "index|protocol|governance|dream_play|simulation|presentation|code|transcript|report|unknown",
+        "canon_status": "not_canon|candidate|website_aligned_candidate|canon|unknown",
+        "authority_scope": "none|advisory|human_root_only|website_only|unknown",
+        "contamination_flags": "array"
+      }
+    },
+    "ParsedView": {
+      "required": ["parsed_view_id", "artifact_id", "parser"],
+      "fields": {
+        "parsed_view_id": "string",
+        "artifact_id": "string",
+        "parser": "human|model|script|connector|unknown",
+        "parse_confidence": "low|medium|high|unknown",
+        "parse_warnings": "array"
+      }
+    },
+    "Claim": {
+      "required": ["claim_id", "artifact_id", "claim_text", "claim_type", "evidence_status"],
+      "fields": {
+        "claim_id": "string",
+        "artifact_id": "string",
+        "claim_text": "string",
+        "claim_type": "factual|governance|technical|creative_overlay|simulation|financial|geopolitical|rights|unknown",
+        "evidence_status": "unverified|verified|disputed|not_evidence",
+        "overclaim_flags": "array"
+      }
+    },
+    "Motif": {
+      "required": ["motif_id", "label", "motif_type", "authority_scope"],
+      "fields": {
+        "motif_id": "string",
+        "label": "string",
+        "motif_type": "narrative|gameplay|architectural|symbolic|governance|cultural|technical",
+        "authority_scope": "none"
+      }
+    },
+    "Delta": {
+      "required": ["delta_id", "source_claim_id", "description", "safe_use"],
+      "fields": {
+        "delta_id": "string",
+        "source_claim_id": "string",
+        "description": "string",
+        "safe_use": "string",
+        "review_route": "array"
+      }
+    },
+    "Risk": {
+      "required": ["risk_id", "risk_type", "severity", "mitigation"],
+      "fields": {
+        "risk_id": "string",
+        "source_claim_id": "string|null",
+        "risk_type": "false_officiality|vendor_capture|attribution_laundering|geopolitical_mirage|simulation_crown|fabricated_citation|cultural_extraction|provenance_gap|unknown",
+        "severity": "low|medium|high|critical",
+        "mitigation": "string"
+      }
+    },
+    "ReviewLane": {
+      "required": ["lane_id", "lane_name", "lane_role"],
+      "fields": {
+        "lane_id": "string",
+        "lane_name": "GPTBrain|AtlasBrain|CouncilBrain|TIDELOCK|Lucerna|Hashlight|Rootglass|Human-root|Website",
+        "lane_role": "string"
+      }
+    },
+    "CanonGate": {
+      "required": ["gate_id", "gate_type", "decision"],
+      "fields": {
+        "gate_id": "string",
+        "gate_type": "human_root|website",
+        "decision": "none|promoted|rejected|parked|superseded",
+        "decision_receipt": "string|null"
+      }
+    }
+  },
+  "edge_types": [
+    "contains",
+    "parsed_as",
+    "receipted_by",
+    "yields_claim",
+    "expresses_motif",
+    "suggests_delta",
+    "implies_risk",
+    "supports",
+    "contradicts",
+    "qualifies",
+    "supersedes",
+    "routed_to",
+    "reviewed_by",
+    "submitted_to_gate"
+  ],
+  "keeper": "The graph may reveal the route. It may not move the gate."
+}
