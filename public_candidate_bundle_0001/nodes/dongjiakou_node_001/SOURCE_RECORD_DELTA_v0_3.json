@@ -1,0 +1,119 @@
+{
+  "artifact_id":"DJK-NODE-001-SOURCE-DELTA-v0.3",
+  "status":"PUBLIC_CANDIDATE_NON_CANON",
+  "parent":"SOURCE_RECORD_DELTA_v0_2.json",
+  "search_date":"2026-10-06",
+  "purpose":"Highest-value receipt search requested after Run 1. No UNKNOWN is promoted unless a public receipt was found.",
+  "new_records":[
+    {
+      "source_record_id":"DJK-SR-0014",
+      "field":"historical_plant_level_ton_water_electricity",
+      "value":2.5,
+      "unit":"kWh/m3",
+      "date_boundary":"2023 report/interview",
+      "status":"REPORTED_HISTORICAL_BOUNDARY_AMBIGUOUS",
+      "source_name":"Qingdao Daily / Guanhai interview with Qingdao desalination executive",
+      "source_uri":"https://m.guanhai.com.cn/p/259072.html",
+      "note":"Useful historical whole-plant-like indicator. Do not use to define 2025/2026 delta_aux because system boundary and configuration differ from the 2025 UF+RO 2.2 kWh/m3 receipt."
+    },
+    {
+      "source_record_id":"DJK-SR-0015",
+      "field":"chemical_cleaning_heat_pump_upgrade",
+      "status":"REPORTED_PROCUREMENT_ACTIVE",
+      "date_boundary":"2026",
+      "source_name":"Qingdao Public Resources — chemical-cleaning air-source heat-pump system tender",
+      "source_uri":"https://ggzy.qingdao.gov.cn/c/TradeDetals-ZtbShow/182320-5021-0-0-0/f60d4e1e-a8a3-412c-baaf-4b2f96de30d4-B03CE5B6FC1D2D3C2D5FCEBC39AA2406.html",
+      "raw_record":{
+        "purpose":"chemical cleaning heating system",
+        "air_source_heat_pump_units":4,
+        "insulated_tanks":3,
+        "tank_volume_m3_each":30,
+        "control_systems":1,
+        "tender_ceiling_CNY":860000,
+        "parent_upgrade_total_investment_CNY":70000000,
+        "ultra_long_special_treasury_bond_fraction":0.15
+      },
+      "note":"First tender was later voided for insufficient qualified bidders; procurement was re-tendered. This proves an active chemical-cleaning infrastructure upgrade, not a cleaning-frequency or fouling-rate history."
+    },
+    {
+      "source_record_id":"DJK-SR-0016",
+      "field":"self_cleaning_prefilter_upgrade",
+      "status":"REPORTED_PROCUREMENT_ACTIVE",
+      "date_boundary":"2026",
+      "source_name":"Dongjiakou self-cleaning filter procurement",
+      "source_uri":"https://sd.zhaobiao.lanyancloud.com/notice/a6b719e1c3e34427",
+      "raw_record":{
+        "custom_self_cleaning_filters":10,
+        "maximum_tender_price_CNY":2600000,
+        "basis":"operator research成果 / customized domestic replacement"
+      },
+      "note":"Direct evidence of pretreatment modernization relevant to fouling control. Not evidence of achieved fouling reduction until operating results are available."
+    },
+    {
+      "source_record_id":"DJK-SR-0017",
+      "field":"ecological_monitoring_summary",
+      "status":"REPORTED_EVALUATION_NOT_RAW_DATA",
+      "date_boundary":"multi-year historical data",
+      "source_name":"Draft national standard — Seawater desalination concentrate discharge standard",
+      "source_uri":"https://std.samr.gov.cn/dcpspTools/gbPlan/download?path=%2Fzxd%2F2022005015%2F20_%E6%A0%87%E5%87%86%E8%B5%B7%E8%8D%89%2F20_DI_2022005015_%E6%B5%B7%E6%B0%B4%E6%B7%A1%E5%8C%96%E6%B5%93%E7%9B%90%E6%B0%B4%E6%8E%92%E6%94%BE%E6%A0%87%E5%87%86.pdf",
+      "raw_record":{
+        "sites":"Qingdao Baifa and Dongjiakou nearby waters",
+        "indicators":["temperature","salinity","dissolved oxygen","nutrients","sediment","plankton/benthic and other biological indicators"],
+        "summary":"reported variables remained within normal variation and no obvious ecological impact from concentrate discharge was identified in the summarized historical evaluation"
+      },
+      "note":"Useful evidence that a monitoring history exists. Primary station-level time series still required for ORCS VERIFIED ecological baseline."
+    },
+    {
+      "source_record_id":"DJK-SR-0018",
+      "field":"brine_monitoring_and_dispersion_summary",
+      "status":"REPORTED_SECONDARY",
+      "date_boundary":"2023 report summarizing Dongjiakou operating experience",
+      "source_name":"Lianyungang Belt-and-Road seawater comprehensive-utilization intake/outfall demonstration report",
+      "source_uri":"https://www.fygroup.com/uploads/allimg/20230919/1-2309191056052T.pdf",
+      "raw_record":{
+        "outlet_brine_testing":"manual daily testing reported",
+        "online_monitoring":"not reported as required in the cited summary",
+        "OUC_followup_years":[2017,2022],
+        "salinity_dispersion_distance_m_approx":100,
+        "summary":"outfall salinity reported to approach ambient after roughly 100 m; no problem identified in the cited follow-up summaries"
+      },
+      "note":"Does not provide current 2026 brine chemistry or raw OUC monitoring tables."
+    }
+  ],
+  "search_not_resolved":[
+    {
+      "field":"2026_plant_specific_effective_electricity_tariff_CNY_kWh",
+      "status":"SEARCH_NOT_FOUND",
+      "note":"Historical 0.555 CNY/kWh is confirmed for 2018-2020, but no 2026 Dongjiakou bill, contract, retail settlement, or market transaction receipt was located."
+    },
+    {
+      "field":"current_whole_site_SEC_kWh_m3",
+      "status":"SEARCH_NOT_RESOLVED",
+      "note":"Current 2.2 kWh/m3 is explicitly UF+RO dual-membrane electricity. A 2023 2.5 kWh/m3 plant-level quote is historical/boundary-ambiguous and is not used to impute delta_aux."
+    },
+    {
+      "field":"current_measured_recovery_fraction",
+      "status":"SEARCH_NOT_RESOLVED",
+      "note":"45-50% remains a technology/application range. No dated 2025/2026 measured feed/product pair was located."
+    },
+    {
+      "field":"current_brine_chemistry",
+      "status":"SEARCH_NOT_RESOLVED",
+      "note":"A source says outlet concentrate is manually tested daily, but no current analytical values were located."
+    },
+    {
+      "field":"CIP_fouling_chronology",
+      "status":"PARTIALLY_OPENED_NOT_RESOLVED",
+      "note":"2026 chemical-cleaning heat-pump procurement and self-cleaning-filter procurement prove active cleaning/pretreatment upgrades, but no dated cleaning-frequency, normalized flux, differential-pressure, or foulant analysis time series was located."
+    }
+  ],
+  "promotion_effect":{
+    "tariff":"remains UNKNOWN",
+    "whole_site_SEC":"remains UNKNOWN",
+    "current_recovery":"remains UNKNOWN",
+    "current_brine_chemistry":"remains UNKNOWN",
+    "F01_readiness":"improved from generic hypothesis to site-specific upgrade context",
+    "F02_readiness":"unchanged; no ultrasound installation or operating receipt",
+    "ecology_readiness":"improved historical monitoring provenance, but raw primary dataset still missing"
+  }
+}
