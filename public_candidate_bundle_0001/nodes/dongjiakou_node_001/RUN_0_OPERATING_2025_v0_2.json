@@ -1,0 +1,37 @@
+{
+  "artifact_id":"DJK-NODE-001-RUN-0-OPERATING-2025-v0.2",
+  "status":"EXECUTED_DERIVED_OPERATING_BASELINE_NON_CANON",
+  "operating_year":2025,
+  "reported_product_supply_m3":17930000,
+  "derived_utilization_U":0.4912328767,
+  "reported_UF_RO_process_train_SEC_kWh_m3":2.2,
+  "derived_process_train_energy_GWh":39.446,
+  "chemical_cost_CNY_m3_relation":"<",
+  "chemical_cost_CNY_m3_upper_bound":0.15,
+  "derived_annual_chemical_cost_CNY_upper_bound":2689500,
+  "mass_balance_using_reported_technology_recovery_range":{
+    "0.45":{
+      "annual_feed_m3":39844444.4444,
+      "annual_product_m3":17930000,
+      "annual_reject_equivalent_m3":21914444.4444
+    },
+    "0.50":{
+      "annual_feed_m3":35860000,
+      "annual_product_m3":17930000,
+      "annual_reject_equivalent_m3":17930000
+    }
+  },
+  "economics":{
+    "current_effective_electricity_tariff_CNY_kWh":"UNKNOWN",
+    "current_electricity_cost_CNY":"UNKNOWN",
+    "historical_2018_2020_tariff_CNY_kWh":0.555,
+    "historical_tariff_counterfactual_only_CNY_for_2025_process_energy":21892530,
+    "warning":"The historical tariff counterfactual is not a 2025 or 2026 electricity-cost claim."
+  },
+  "notes":[
+    "The 2025 utilization receipt upgrades Run 0 from nameplate-only to a dated operating-volume calibration.",
+    "2.2 kWh/m3 is still process-train SEC, not whole-site SEC.",
+    "45-50% remains a technology/application range, not a dated measured 2025 recovery value.",
+    "Reject-equivalent remains modeled feed minus product, not measured marine discharge."
+  ]
+}

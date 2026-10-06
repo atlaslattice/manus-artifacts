@@ -1,0 +1,73 @@
+{
+  "artifact_id":"DJK-NODE-001-PROFILE-v0.2",
+  "status":"PUBLIC_CANDIDATE_NON_CANON",
+  "parent":"NODE_001_PROFILE_v0_1.json",
+  "node_id":"DONGJIAKOU-NODE-001",
+  "new_dated_operating_claims":[
+    {
+      "property":"annual_product_supply_m3",
+      "year":2025,
+      "value":17930000,
+      "evidence":"REPORTED",
+      "sources":["DJK-SR-0007"]
+    },
+    {
+      "property":"utilization_fraction_U",
+      "year":2025,
+      "value":0.4912328767,
+      "derivation":"17.93M / (100,000*365)",
+      "evidence":"DERIVED",
+      "sources":["DJK-SR-0007","DJK-SR-0001"]
+    },
+    {
+      "property":"annual_product_supply_m3",
+      "year":2020,
+      "value":12620000,
+      "evidence":"REPORTED",
+      "sources":["DJK-SR-0008"]
+    },
+    {
+      "property":"utilization_fraction_U",
+      "year":2020,
+      "value":0.3457534247,
+      "derivation":"12.62M / (100,000*365)",
+      "evidence":"DERIVED",
+      "sources":["DJK-SR-0008","DJK-SR-0001"]
+    },
+    {
+      "property":"electricity_tariff_CNY_kWh",
+      "period":"2018-01-01 through 2020-12-31",
+      "value":0.555,
+      "tax_status":"including tax",
+      "state":"HISTORICAL",
+      "evidence":"REPORTED",
+      "sources":["DJK-SR-0008","DJK-SR-0009"]
+    },
+    {
+      "property":"effective_current_electricity_tariff_CNY_kWh",
+      "period":"2026",
+      "value":"UNKNOWN",
+      "note":"No plant-specific bill, retail contract or market-settlement receipt located."
+    },
+    {
+      "property":"reported_supply_price_CNY_m3",
+      "period":"2026 report",
+      "value":4.25,
+      "evidence":"REPORTED",
+      "sources":["DJK-SR-0007"]
+    }
+  ],
+  "new_model_implication":"Run 0 can now be evaluated as an operating-year 2025 technical baseline. Current electricity-cost economics remain blocked on the 2026 plant-specific tariff.",
+  "unchanged_unknowns":[
+    "whole_site_SEC_kWh_m3",
+    "delta_aux_kWh_m3",
+    "current_measured_recovery_fraction",
+    "current_feed_and_reject_stream_map",
+    "current_brine_composition",
+    "fouling_rate_and_cleaning_frequency",
+    "current_CIP_and_additive_chemistry",
+    "current_ecological_monitoring_primary_data",
+    "hydraulic_unused_head_profile",
+    "roof_structural_and_interconnection_limits"
+  ]
+}

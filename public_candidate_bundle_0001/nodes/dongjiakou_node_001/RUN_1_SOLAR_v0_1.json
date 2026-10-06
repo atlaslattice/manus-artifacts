@@ -1,0 +1,52 @@
+{
+  "artifact_id":"DJK-NODE-001-RUN-1-SOLAR-v0.1",
+  "status":"EXECUTED_TECHNICAL_SENSITIVITY_NON_CANON",
+  "baseline":"DJK-NODE-001-RUN-0-OPERATING-2025-v0.2",
+  "site_inputs":{
+    "desalination_workshop_footprint_m2":17474.32,
+    "effective_active_module_coverage_fraction":0.60,
+    "active_module_area_m2":10484.592,
+    "coverage_status":"MODELED_CONSERVATIVE",
+    "roof_structural_suitability":"UNKNOWN",
+    "interconnection_limit":"UNKNOWN"
+  },
+  "local_generation_reference":{
+    "reference_capacity_MWp":12.4956,
+    "reference_generation_MWh_year":14022.86,
+    "derived_yield_kWh_per_kWp_year":1122.223823,
+    "evidence":"DERIVED_FROM_LOCAL_REPORTED_PROJECT"
+  },
+  "cases":{
+    "S01_A":{
+      "module_efficiency_fraction":0.23,
+      "status":"MODELED_CONSERVATIVE",
+      "DC_capacity_MWp":2.41145616,
+      "annual_generation_GWh":2.70619355,
+      "fraction_of_2025_UF_RO_process_energy":0.0686050183,
+      "current_cost_saving_CNY":"UNKNOWN",
+      "historical_0_555_tariff_counterfactual_CNY":1501937.42,
+      "location_based_CO2_avoided_tonnes_using_2023_Shandong_factor":1675.40
+    },
+    "S01_B_SEA_SHIELD":{
+      "module_efficiency_fraction":0.248,
+      "module_class":"LONGi Hi-MO 9 Sea-Shield 670W class",
+      "status":"COMMERCIAL_COMPONENT_IN_MODELED_SITE_LAYOUT",
+      "DC_capacity_MWp":2.600178816,
+      "annual_generation_GWh":2.917982611,
+      "fraction_of_2025_UF_RO_process_energy":0.0739741066,
+      "current_cost_saving_CNY":"UNKNOWN",
+      "historical_0_555_tariff_counterfactual_CNY":1619480.35,
+      "location_based_CO2_avoided_tonnes_using_2023_Shandong_factor":1806.52
+    }
+  },
+  "carbon_boundary":{
+    "Shandong_2023_average_grid_factor_kgCO2_kWh":0.6191,
+    "status":"REPORTED_LATEST_OFFICIAL_FACTOR_LOCATED",
+    "warning":"Not a 2026 marginal emissions factor and not a lifecycle PV carbon calculation."
+  },
+  "conclusions":[
+    "Using the 2025 reported operating volume, the same roof-PV cases correspond to about 6.9-7.4% of UF+RO annual process-train electricity rather than 3.4-3.6% of nameplate-full-load electricity.",
+    "Current CNY savings remain UNKNOWN until a plant-specific current electricity tariff is sourced.",
+    "No cost, carbon or energy credit is assigned to mini-hydro, compute, fouling control, sono-CIP, resource recovery or OAE in Run 1."
+  ]
+}

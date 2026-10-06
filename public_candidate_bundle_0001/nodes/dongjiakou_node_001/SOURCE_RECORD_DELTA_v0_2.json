@@ -1,0 +1,132 @@
+{
+  "artifact_id":"DJK-NODE-001-SOURCE-DELTA-v0.2",
+  "status":"PUBLIC_CANDIDATE_NON_CANON",
+  "parent":"SOURCE_RECORD_CHAIN_v0_1.json",
+  "source_records":[
+    {
+      "source_record_id":"DJK-SR-0007",
+      "record_kind":"MANUAL_TRANSCRIPTION",
+      "source_family":"OTHER",
+      "source_name":"Qingdao News — 2025 Dongjiakou annual water supply",
+      "evaluation_date":"2026-03-23",
+      "retrieval_timestamp":"2026-10-06T20:00:00Z",
+      "source_uri":"https://news.qingdaonews.com/qingdao/2026-03/23/content_23724311.htm",
+      "source_locator":"Dongjiakou section",
+      "raw_record":{
+        "design_capacity_m3_day":100000,
+        "reported_2025_supply_m3":17930000,
+        "reported_current_supply_price_CNY_m3":4.25
+      },
+      "raw_value":17930000,
+      "raw_unit":"m3/year",
+      "raw_qualifier":"2025 actual reported supply; price is a 2026 reported current supply price, not a 2025 revenue receipt.",
+      "upstream_record_id_stability":"UNKNOWN",
+      "notes":"Unlocks a dated utilization observation."
+    },
+    {
+      "source_record_id":"DJK-SR-0008",
+      "record_kind":"MANUAL_TRANSCRIPTION",
+      "source_family":"OTHER",
+      "source_name":"Qingdao Government — 2021 response on desalination scale and support",
+      "evaluation_date":"2021-04-15",
+      "retrieval_timestamp":"2026-10-06T20:00:00Z",
+      "source_uri":"https://www.qingdao.gov.cn/zwgk/xxgk/hyfz/gkml/jytabl/202112/t20211224_4132292.shtml",
+      "source_locator":"2020 supply and electricity support paragraphs",
+      "raw_record":{
+        "reported_2020_Dongjiakou_supply_m3":12620000,
+        "preferential_electricity_support_period":"2018-01-01 through 2020-12-31",
+        "preferential_tariff_CNY_kWh_including_tax":0.555,
+        "beneficiary_operator_reference":"Biyuan company / Dongjiakou operator"
+      },
+      "raw_qualifier":"Historical operating and tariff context only; current effective tariff remains unknown.",
+      "upstream_record_id_stability":"DURABLE"
+    },
+    {
+      "source_record_id":"DJK-SR-0009",
+      "record_kind":"MANUAL_TRANSCRIPTION",
+      "source_family":"OTHER",
+      "source_name":"2017 National Seawater Utilization Report — project electricity price support",
+      "evaluation_date":"2018-12-24",
+      "retrieval_timestamp":"2026-10-06T20:00:00Z",
+      "source_uri":"https://www.gov.cn/xinwen/2018-12/24/5351606/files/b3772449b77a405f9094973e53115969.pdf",
+      "source_locator":"electricity price support section",
+      "raw_record":{
+        "projects":["Qingdao Baifa","Dongjiakou Economic Zone desalination","Weifang Qingshuiyuan Phase I"],
+        "preferential_tariff_CNY_kWh_including_tax":0.555,
+        "effective_start":"2018-01-01",
+        "duration_years":3
+      },
+      "raw_qualifier":"Confirms Dongjiakou-specific historical tariff; not current tariff.",
+      "upstream_record_id_stability":"DURABLE"
+    },
+    {
+      "source_record_id":"DJK-SR-0010",
+      "record_kind":"MANUAL_TRANSCRIPTION",
+      "source_family":"OTHER",
+      "source_name":"Dongjiakou project detail disclosure — workshop footprint",
+      "evaluation_date":"2022-02-04",
+      "retrieval_timestamp":"2026-10-06T20:00:00Z",
+      "source_uri":"https://www.sohu.com/a/520576936_528099",
+      "source_locator":"desalination workshop description",
+      "raw_record":{
+        "desalination_workshop_footprint_m2":17474.32,
+        "workshop_length_m":193.3,
+        "workshop_width_m":90.4
+      },
+      "raw_qualifier":"Secondary project-detail source; structural roof suitability remains unknown.",
+      "upstream_record_id_stability":"UNKNOWN"
+    },
+    {
+      "source_record_id":"DJK-SR-0011",
+      "record_kind":"MANUAL_TRANSCRIPTION",
+      "source_family":"OTHER",
+      "source_name":"Qingdao City Investment — Chery industrial rooftop PV reference",
+      "evaluation_date":"2024-08-11",
+      "retrieval_timestamp":"2026-10-06T20:00:00Z",
+      "source_uri":"https://www.qdct.cn/content/details15_1485.html",
+      "source_locator":"project capacity and 25-year average generation",
+      "raw_record":{
+        "PV_capacity_MWp":12.4956,
+        "average_generation_MWh_year":14022.86,
+        "development_mode":"self-consumption plus surplus grid export"
+      },
+      "raw_qualifier":"Local Qingdao empirical yield reference; not Dongjiakou measured PV output.",
+      "upstream_record_id_stability":"DURABLE"
+    },
+    {
+      "source_record_id":"DJK-SR-0012",
+      "record_kind":"MANUAL_TRANSCRIPTION",
+      "source_family":"OTHER",
+      "source_name":"LONGi Hi-MO 9 Sea-Shield datasheet",
+      "evaluation_date":"2026-06-24",
+      "retrieval_timestamp":"2026-10-06T20:00:00Z",
+      "source_uri":"https://static.longi.com/GGS_LR_8_66_HYD_022_LR_8_66_HYD_630_670_M_V2_30_30_and_15_V4_1_pdf_EN_526da7cf78.pdf",
+      "source_locator":"LR8-66HYD 630-670M",
+      "raw_record":{
+        "max_module_efficiency_fraction":0.248,
+        "max_module_power_W":670,
+        "module_dimensions_mm":[2382,1134,30],
+        "marine_design_note":"salt-spray resistant Sea-Shield class"
+      },
+      "raw_qualifier":"Commercial module specification; site structural and interconnection suitability unknown.",
+      "upstream_record_id_stability":"DURABLE"
+    },
+    {
+      "source_record_id":"DJK-SR-0013",
+      "record_kind":"MANUAL_TRANSCRIPTION",
+      "source_family":"OTHER",
+      "source_name":"China MEE + National Bureau of Statistics — 2023 electricity CO2 factors",
+      "evaluation_date":"2025-12-31",
+      "retrieval_timestamp":"2026-10-06T20:00:00Z",
+      "source_uri":"https://www.mee.gov.cn/xxgk2018/xxgk/xxgk01/202512/W020251231726284332528.pdf",
+      "source_locator":"Table 3 provincial electricity average CO2 emission factors",
+      "raw_record":{
+        "province":"Shandong",
+        "electricity_average_CO2_factor_kg_per_kWh":0.6191,
+        "factor_year":2023
+      },
+      "raw_qualifier":"Latest official provincial factor located; not a 2026 marginal grid-emissions factor.",
+      "upstream_record_id_stability":"DURABLE"
+    }
+  ]
+}
