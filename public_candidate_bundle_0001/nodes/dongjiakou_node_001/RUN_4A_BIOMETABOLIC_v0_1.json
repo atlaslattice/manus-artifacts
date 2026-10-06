@@ -1,0 +1,72 @@
+{
+  "artifact_id": "DJK-NODE-001-RUN-4A-BIOMETABOLIC-v0.1",
+  "status": "EXECUTED_PARAMETRIC_TRANSFER_FUNCTION_NON_CANON",
+  "study_classification": "TECHNICAL_FEASIBILITY_PLUS_CONDITIONAL_ECONOMICS",
+  "baseline_credit": {
+    "food_waste_feed_tonnes_day": 0,
+    "biogas_m3_year": 0,
+    "methane_energy_credit": 0,
+    "wastewater_bioreactor_credit": 0,
+    "reclaimed_water_credit": 0,
+    "struvite_credit": 0,
+    "ammonium_credit": 0,
+    "compost_credit": 0,
+    "reason": "No Node-001 feedstock allocation, chemistry, product assay or off-take receipt."
+  },
+  "local_food_waste_reference": {
+    "source_record_id": "DJK-SR-0043",
+    "cumulative_food_waste_tonnes": 260000,
+    "cumulative_biogas_m3": 5260000,
+    "derived_reference_biogas_m3_tonne": 20.2307692308,
+    "warning": "Retrospective Qingdao operating reference; not a Dongjiakou design yield."
+  },
+  "food_waste_transfer_function": {
+    "equation": "V_biogas_reference = M_verified_food_waste * 20.2307692308 m3/t",
+    "illustrative_cases": [
+      {
+        "feed_tonnes_day": 1,
+        "annual_feed_tonnes": 365,
+        "reference_biogas_m3_year": 7384.23076923
+      },
+      {
+        "feed_tonnes_day": 5,
+        "annual_feed_tonnes": 1825,
+        "reference_biogas_m3_year": 36921.1538462
+      },
+      {
+        "feed_tonnes_day": 10,
+        "annual_feed_tonnes": 3650,
+        "reference_biogas_m3_year": 73842.3076923
+      },
+      {
+        "feed_tonnes_day": 25,
+        "annual_feed_tonnes": 9125,
+        "reference_biogas_m3_year": 184605.769231
+      },
+      {
+        "feed_tonnes_day": 50,
+        "annual_feed_tonnes": 18250,
+        "reference_biogas_m3_year": 369211.538462
+      }
+    ],
+    "energy_output": "UNKNOWN until CH4 fraction, flare/use split and conversion efficiency are measured"
+  },
+  "wastewater_transfer_function": {
+    "theoretical_methane_ceiling_STP_m3_per_kg_biodegradable_COD_removed": 0.35,
+    "use_rule": "theoretical ceiling only; requires measured eligible flow, COD, biodegradable fraction, COD removal and dissolved methane loss",
+    "Node_001_input_values": "UNKNOWN"
+  },
+  "compost_and_nutrient_outputs": {
+    "compost_tonnes_year": "UNKNOWN",
+    "P_product_yield": "UNKNOWN",
+    "N_recovery": "UNKNOWN",
+    "reclaimed_water_m3_year": "UNKNOWN"
+  },
+  "conclusions": [
+    "Qingdao provides a strong local operating precedent for food-waste dry anaerobic digestion.",
+    "Dongjiakou already has AO/MBBR wastewater biological treatment and high reclaimed-water reuse; new anaerobic treatment must be selective and incremental.",
+    "No municipal food waste is assumed available because regional treatment capacity already exists.",
+    "Digestate composting remains zero-credit until mass, contaminant, pathogen, maturity and off-take data close.",
+    "Future seawater-Mg to struvite coupling is physically coherent but receives zero credit until material purity, nutrient chemistry and conservation accounting close."
+  ]
+}

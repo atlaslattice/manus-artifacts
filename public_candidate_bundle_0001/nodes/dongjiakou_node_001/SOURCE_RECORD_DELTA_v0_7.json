@@ -3,61 +3,130 @@
   "status": "PUBLIC_CANDIDATE_NON_CANON",
   "parent": "SOURCE_RECORD_DELTA_v0_6.json",
   "search_date": "2026-10-06",
-  "purpose": "DeepSeek-requested search for published eligible-load set under Qianwan/Dongjiakou green-direct plan and formal integrated-node boundary.",
-  "source_records": [
+  "purpose": "Biometabolic integration: food-waste anaerobic digestion, selective wastewater bioreactors, digestate composting and nutrient recovery.",
+  "records": [
     {
-      "source_record_id": "DJK-SR-0038",
-      "field": "Qingdao_green_direct_load_scope_followup",
-      "source_name": "Qingdao Municipal Government — Port Green Transformation Three-Year Action Plan (2026-2028)",
-      "source_uri": "https://www.qingdao.gov.cn/zwgk/xxgk/jtys/gkml/gwfg/202609/t20260918_10733879.shtml",
-      "status": "REPORTED_OFFICIAL_PLAN_SCOPE",
+      "source_record_id": "DJK-SR-0042",
+      "field": "Qingdao_integrated_organic_waste_resource_park",
+      "status": "REPORTED_OPERATING_REGIONAL_PRECEDENT_NOT_NODE_ALLOCATED",
+      "source_uri": "https://www.qingdao.gov.cn/ywdt/zwyw/202608/t20260806_10694915.shtml",
       "raw_record": {
-        "planned_wind_MW_approx": 214,
-        "planned_PV_MW_approx": 81,
-        "dedicated_lines": true,
-        "intended_supply": "Qianwan and Dongjiakou port areas",
-        "existing_port_loads_policy_opportunity": true,
-        "source_grid_load_storage": true,
-        "virtual_power_plant_target_by_2028": 1,
-        "published_end_user_list": false
+        "food_waste_process": "dry anaerobic digestion",
+        "unified_biogas_handling": true,
+        "annual_biogas_handled_m3_park_scale": 7100000,
+        "thermal_energy_utilization_fraction_reported_gt": 0.9,
+        "reclaimed_water_reuse_fraction": 0.4136
       },
-      "qualifier": "Official plan defines port-area supply scope but does not name Dongjiakou desalination or a compute block as enrolled users."
+      "note": "Park-scale metrics combine multiple waste/gas sources. Do not attribute these outputs to Dongjiakou."
     },
     {
-      "source_record_id": "DJK-SR-0039",
-      "field": "multi_user_green_direct_eligible_user_scope",
-      "source_name": "NDRC / NEA — 2026 multi-user green-power direct-connection notice",
-      "source_uri": "https://www.nea.gov.cn/20260520/9e1c4277ce324c8ab82a84da98da7980/c.html",
-      "status": "REPORTED_NATIONAL_POLICY",
+      "source_record_id": "DJK-SR-0043",
+      "field": "Qingdao_food_waste_dry_AD_operating_reference",
+      "status": "REPORTED_OPERATING_LOCAL_REFERENCE_NOT_NODE_FEEDSTOCK",
+      "source_uri": "https://epaper.qingdaonews.com/qdwb/h5/html5/2024-12/07/content_144694_1602463.htm",
       "raw_record": {
-        "green_demand_users_supported": true,
-        "industrial_and_zero_carbon_parks_supported": true,
-        "compute_facilities_priority_supported": true,
-        "self_consumed_share_of_available_generation_min": 0.6,
-        "direct_green_share_of_total_load_min": 0.3,
-        "direct_green_share_of_total_load_min_2030": 0.35
+        "design_food_waste_tonnes_day": 500,
+        "cumulative_food_waste_processed_tonnes": 260000,
+        "cumulative_biogas_m3": 5260000,
+        "cumulative_CO2_reduction_tonnes_reported": 40000,
+        "process": "screening + dry anaerobic digestion",
+        "biogas_use": "power generation / grid export"
       },
-      "qualifier": "Policy eligibility does not establish Node-001 participation, allocation or contract."
+      "derived": {
+        "cumulative_reported_biogas_m3_per_tonne": 20.2307692308
+      },
+      "note": "Retrospective local operating reference, not a design yield."
     },
     {
-      "source_record_id": "DJK-SR-0040",
-      "field": "eligible_load_set_search_result",
-      "status": "SEARCH_NOT_FOUND",
-      "search_result": {
-        "Dongjiakou_desalination_named_in_green_direct_user_list": false,
-        "named_compute_project_in_green_direct_user_list": false,
-        "MW_or_MWh_allocation_to_Node001": false,
-        "dedicated_line_to_desal_meter": false,
-        "PPA_or_direct_green_price": false
+      "source_record_id": "DJK-SR-0044",
+      "field": "Qingdao_food_waste_existing_capacity",
+      "status": "REPORTED_CITY_AND_WEST_COAST_EXISTING_INFRASTRUCTURE",
+      "source_uri": "https://www.qingdao.gov.cn/zwgk/xxgk/sthj/gkml/gwfg/202606/t20260610_10638285.shtml",
+      "raw_record": {
+        "Qingdao_main_food_waste_biochemical_capacity_tonnes_day": 500,
+        "West_Coast_circular_industrial_park_food_waste_capacity_tonnes_day": 100
       },
-      "qualifier": "Negative receipt-search result. Public plan remains area-level, not end-user-level."
+      "note": "Node-001 must not assume municipal food-waste diversion; feed requires on-node origin, surplus, or explicit allocation."
+    },
+    {
+      "source_record_id": "DJK-SR-0045",
+      "field": "Dongjiakou_industrial_wastewater_reuse",
+      "status": "REPORTED_OPERATING_NODE_REGION_WATER_INFRASTRUCTURE",
+      "source_uri": "https://www.suez-asia.com/zh-cn/our-offering/success-stories/our-references/industrial-wastewater-treatment-in-dongjiakou-qingdao",
+      "raw_record": {
+        "total_wastewater_treatment_capacity_m3_day": 23200,
+        "mainline_process": "AO biological treatment for organic industrial wastewater + domestic wastewater",
+        "sideline_process": "high-density clarification + V-filter for Qingdao Iron and Steel wastewater",
+        "reclaimed_water_fraction_of_total_treatment_reported": 0.9,
+        "Qingdao_Iron_and_Steel_reuse_fraction_reported": 1
+      },
+      "note": "New anaerobic sidestream must complement rather than degrade existing reuse."
+    },
+    {
+      "source_record_id": "DJK-SR-0046",
+      "field": "Dongjiakou_port_wastewater_bioreactor",
+      "status": "REPORTED_HISTORICAL_OPERATING_INFRASTRUCTURE",
+      "source_uri": "https://www.mee.gov.cn/ywdt/gs/wqgs_1/201808/W020180824572868425776.pdf",
+      "raw_record": {
+        "design_capacity_m3_day": 15000,
+        "reported_actual_treatment_m3_day_at_source_date": 4000,
+        "biological_process": "MBBR",
+        "downstream": "secondary clarification + fiber disk filtration + disinfection",
+        "reclaimed_water_reuse_path": true,
+        "marine_tailwater_path": true
+      },
+      "note": "Proposed BIO02 is selective anaerobic pretreatment/resource recovery, not replacement of proven MBBR/AO polishing."
+    },
+    {
+      "source_record_id": "DJK-SR-0047",
+      "field": "Shandong_struvite_pilot",
+      "status": "MEASURED_PILOT_SCALE_PROVINCIAL_REFERENCE_NOT_NODE_PERFORMANCE",
+      "source_uri": "https://www.sciencedirect.com/science/article/abs/pii/S1385894725074509",
+      "doi": "10.1016/j.cej.2025.166612",
+      "raw_record": {
+        "location": "Liaocheng, Shandong",
+        "feed": "agricultural wastewater after anaerobic treatment",
+        "phosphorus_recovery_fraction_range": [
+          0.7,
+          0.75
+        ],
+        "struvite_particle_size_mm_gt": 2,
+        "struvite_purity_fraction_reported": 0.7225
+      },
+      "note": "Provincial pilot precedent only; not a Dongjiakou yield."
+    },
+    {
+      "source_record_id": "DJK-SR-0048",
+      "field": "full_scale_struvite_control_evidence",
+      "status": "MEASURED_FULL_SCALE_EXTERNAL_REFERENCE",
+      "source_uri": "https://www.sciencedirect.com/science/article/pii/S0043135425020251",
+      "doi": "10.1016/j.watres.2025.125122",
+      "raw_record": {
+        "historical_data_years_gt": 5,
+        "system": "full-scale fluidized-bed struvite crystallization reactor",
+        "reported_P_loss_to_mainline_fraction_up_to": 0.25,
+        "finding": "product yield depends strongly on recycle flow/fines and differs from solution conversion"
+      },
+      "note": "Supports separate Conversion vs Yield accounting and C01 analytics."
+    },
+    {
+      "source_record_id": "DJK-SR-0049",
+      "field": "Dongjiakou_odor_control_context",
+      "status": "REPORTED_ACTIVE_ENVIRONMENTAL_MANAGEMENT_CONTEXT",
+      "source_uri": "https://www.xihaian.gov.cn/ywdt/zwyw/202507/t20250708_9810241.shtml",
+      "raw_record": {
+        "program": "odor-free industrial park 2.0",
+        "VOC_and_odor_material_items_tracked": 111,
+        "emission_generation_nodes_mapped": 126
+      },
+      "note": "BIO modules need enclosed handling, odor treatment, and methane/ammonia leak monitoring as deployment gates."
     }
   ],
-  "promotion_effect": {
-    "integrated_node_boundary": "PROPOSED_AND_FORMALIZED",
-    "regional_green_direct_supply_scope": "VERIFIED_AT_PORT_AREA_LEVEL",
-    "Node001_green_direct_access": "UNKNOWN",
-    "Node001_green_direct_credit": 0,
-    "specific_eligible_load_set": "NOT_PUBLICLY_RESOLVED"
+  "outcomes": {
+    "food_waste_AD": "LOCAL_COMMERCIAL_PRECEDENT_STRONG_NODE_FEEDSTOCK_UNKNOWN",
+    "wastewater_bioreactor": "EXISTING_LOCAL_BIOLOGICAL_TREATMENT_STRONG_ANAEROBIC_SIDESTREAM_UNTESTED",
+    "composting": "TECHNOLOGY_LOGICAL_OUTPUT_QUANTITY_AND_PRODUCT_QUALITY_UNKNOWN",
+    "nutrient_recovery": "PILOT_AND_FULL_SCALE_PRECEDENT_STRONG_NODE_CHEMISTRY_UNKNOWN",
+    "node_credit": "ZERO_UNTIL_NODE_SPECIFIC_FEED_FLOW_OUTPUT_AND_VETOES_CLOSE"
   }
 }
