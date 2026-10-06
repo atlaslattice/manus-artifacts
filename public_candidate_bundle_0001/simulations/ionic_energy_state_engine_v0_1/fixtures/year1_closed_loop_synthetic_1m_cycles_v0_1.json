@@ -1,0 +1,52 @@
+{
+  "scenario_id": "SYNTHETIC_CLOSED_LOOP_1M_CYCLES_YEAR1",
+  "status": "SYNTHETIC_FIXTURE_NOT_PERFORMANCE_CLAIM",
+  "working_medium": {
+    "name": "generic reusable ionic working medium",
+    "molar_mass_g_per_mol": null,
+    "feedstock_concentration_g_per_m3": null
+  },
+  "deployment": {
+    "horizon_days": 365,
+    "nodes": 1,
+    "scheduled_cycles_per_year_per_node": 1000000,
+    "uptime_fraction": 1,
+    "working_inventory_mol_per_node": 1000
+  },
+  "closed_loop": {
+    "retention_fraction_per_cycle": 0.999999,
+    "fresh_fill_cost_usd_per_mol": 1,
+    "makeup_cost_usd_per_mol": 1,
+    "disposal_cost_usd_per_mol_lost": 0
+  },
+  "economics": {
+    "capex_usd_per_node": 100000,
+    "fixed_opex_usd_per_node_year": 10000,
+    "variable_opex_usd_per_cycle_node": 0.001,
+    "component_replacement_cost_usd_per_node": 1000,
+    "component_replacement_interval_cycles": 100000
+  },
+  "energy": {
+    "gross_recovered_J_per_mol_cycle": 0,
+    "process_input_J_per_mol_cycle": 0,
+    "electricity_cost_usd_per_kWh": 0.08
+  },
+  "baseline": {
+    "fresh_material_cost_usd_per_mol": 1,
+    "disposal_cost_usd_per_mol": 0
+  },
+  "checkpoint_cycles": [
+    1,
+    100,
+    1000,
+    100000,
+    1000000
+  ],
+  "host_infrastructure_reference": {
+    "reported_project_count": 167,
+    "reported_total_desalination_capacity_tonnes_per_day": 3077000,
+    "capacity_m3_per_day": null,
+    "use_in_calculation": false,
+    "note": "Reference only. Existing provenance verifies 167 desalination projects and 3.077 Mt/day total capacity; it does not verify that all 167 are ionic-resource extraction retrofits."
+  }
+}
