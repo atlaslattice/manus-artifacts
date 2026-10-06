@@ -139,3 +139,67 @@ A candidate may move from resource screen to energy benchmark only when it has a
 Do not hunt for the ion with the biggest number.
 Hunt for the cheapest circular path between two useful states.
 ```
+
+
+## Year-1 closed-loop deployment layer
+
+The simulation now includes:
+
+```text
+year1_closed_loop_deployment_v0_1.py
+fixtures/year1_closed_loop_synthetic_1m_cycles_v0_1.json
+YEAR1_CLOSED_LOOP_TEST_RECEIPT_2026-10-06.md
+```
+
+This layer tracks:
+
+```text
+working-medium retention per cycle
+annual makeup / burn rate
+inventory turnovers per year
+first-fill cost
+CAPEX
+fixed + variable OPEX
+component replacement intervals
+process-energy cost
+cycle-1 / cycle-100 / later marginal and average cost
+open-loop material-use comparator
+optional feedstock mass / raw-water requirement
+optional host-infrastructure throughput fraction
+year-1 net energy / levelized cost when real energy inputs exist
+```
+
+High cycle count creates a severe retention requirement.
+
+For a constant restored working inventory:
+
+```text
+annual inventory turnovers ≈ cycles/year * (1 - retention)
+```
+
+So approximately:
+
+```text
+1,000,000 cycles/year
+  <= 1 inventory turnover/year
+  requires 99.9999% retention/cycle
+
+1,000,000,000 cycles/year
+  <= 1 inventory turnover/year
+  requires 99.9999999% retention/cycle
+```
+
+This is why "reusable billions of times" is economically powerful only when leakage, degradation, and separation/makeup costs are correspondingly tiny.
+
+### 167-project infrastructure reference boundary
+
+The existing Stars-Ocean provenance record supports:
+
+```text
+167 Chinese desalination projects
+3.077 million tonnes/day total desalination capacity
+```
+
+and separately reports a Chinese seawater-resource R&D program involving deuterium, lithium, uranium, and other trace resources.
+
+The current simulator therefore treats 167 as a **host-infrastructure sensitivity reference** only. It does not assert that all 167 projects are already retrofit resource-extraction plants.
