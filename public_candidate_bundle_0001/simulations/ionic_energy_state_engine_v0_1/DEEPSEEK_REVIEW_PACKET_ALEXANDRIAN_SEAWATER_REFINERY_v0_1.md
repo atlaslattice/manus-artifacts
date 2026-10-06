@@ -100,9 +100,9 @@ for:
 10. Local wastewater/river/industrial low-salinity streams for salinity-gradient power.
 11. Brine chemistry, antiscalants, cleaning chemicals and trace contaminants.
 12. Brine-discharge ecological limits and monitoring requirements.
-13. Public evidence for microplastic, PFAS/heavy-metal, or other contaminant capture/destruction at desalination facilities.
+13. Public evidence for microplastic, PFAS/heavy-metal, or other contaminant capture/destruction at desalination facilities. Specifically evaluate whether a PolyGone-style passive microplastic interception stage is compatible with Chinese desalination or wastewater partner streams; return independent performance data if available rather than relying only on vendor claims.
 14. Local carbonate chemistry, pH/alkalinity monitoring and discharge criteria.
-15. Candidate Mg/Ca carbonation and CO2-mineralization projects.
+15. Candidate Mg/Ca carbonation and ocean-alkalinity-enhancement projects. Please cross-check Chinese work from Shandong University, Tongji University, SUSTech/Qingdao groups and the Institute of Oceanology, Chinese Academy of Sciences, including the 2026 1,000 m3 southern Yellow Sea calcium-alkali field demonstration. Identify which results are lab, mesocosm, shipboard, field, modeled, or deployed.
 16. Any public documentation that the 167 desalination facilities are Atlas Lattice nodes; if none, explicitly return NOT VERIFIED.
 
 ## ORCS bridge
@@ -144,3 +144,59 @@ This is an application mapping, not a claim that these are the exact canonical D
 - Where does site heterogeneity make a standardized skid unrealistic?
 - Which 3-5 facilities give the most informative pilot set?
 - What claims in the white paper should be downgraded or deleted?
+
+
+## New named external lanes for review — 2026-10-06
+
+### PolyGone microplastic interception
+
+Please verify independently:
+
+```text
+technology: passive/recyclable microplastic-binding filtration medium
+company: PolyGone Systems
+public deployment claim: ACUA wastewater-treatment pilot
+reported start: September 2024
+reported deployment: 720 filters
+reported host capacity: 40 million gallons/day
+reported cumulative capture: 520 million microplastics
+patent family: aquatic microplastics removal, priority 2021-03-23
+```
+
+Return third-party monitoring, particle-size efficiency, polymer selectivity, pressure/head-loss, media lifetime, regeneration cycles, CAPEX/OPEX and captured-plastic fate where public.
+
+### Chinese ocean alkalinity / carbonate research
+
+Please refine the public record for:
+
+```text
+2024 Shandong University:
+  olivine OAE in East/South China Sea; Ni/Cr constraints
+
+2026 Tongji University:
+  natural silicates + industrial byproducts for coastal OAE
+
+2026 South China Sea:
+  shipboard ecological-response experiments
+
+2026 Institute of Oceanology, CAS / Qingdao:
+  calcium-alkali coupling
+  lab + mesocosm + 1,000 m3 southern Yellow Sea field demonstration
+  published estimated atmospheric CO2 uptake under test conditions
+
+2026 North China Sea:
+  microcosm OAE biogeochemistry work, currently preprint/under review
+```
+
+For each, return:
+- exact institution
+- experiment scale
+- alkalinity / reagent chemistry
+- energy and reagent requirements
+- carbon accounting method
+- pH / TA / DIC response
+- trace-metal / ecological response
+- duration
+- independent replication status
+- CAPEX/OPEX if any
+- whether it is research, pilot, demonstration, or operational deployment.
