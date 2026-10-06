@@ -3,94 +3,148 @@
   "status": "PUBLIC_CANDIDATE_NON_CANON",
   "parent": "SOURCE_RECORD_DELTA_v0_5.json",
   "search_date": "2026-10-06",
-  "purpose": "Regional green-power receipt pass + coincidence/BESS gating after C01 Run 3.",
-  "source_records": [
+  "purpose": "Downstream industrial-symbiosis receipt hunt.",
+  "records": [
+    {
+      "source_record_id": "DJK-SR-0031",
+      "field": "Qingdao_construction_waste",
+      "status": "REPORTED_CITY_SCALE_NOT_NODE_ALLOCATED",
+      "source_uri": "https://www.qingdao.gov.cn/zwgk/xxgk/sthj/gkml/gwfg/202606/t20260610_10638285.shtml",
+      "raw_record": {
+        "generated_tonnes_2025": 27879750,
+        "resource_utilized_tonnes_2025": 14653000,
+        "balance_utilized_tonnes_2025": 11881300,
+        "registered_processors": 61,
+        "operating_processors": 37,
+        "city_processing_capacity_tonnes_year": 109400000
+      }
+    },
+    {
+      "source_record_id": "DJK-SR-0032",
+      "field": "Qingdao_shellfish_waste_pathways",
+      "status": "REPORTED_PATHWAYS_NOT_QUANTIFIED_FEEDSTOCK",
+      "source_uri": "https://ocean.qingdao.gov.cn/zfxxgk/jytabl/202505/t20250513_10392395.shtml",
+      "raw_record": {
+        "shell_powder": "water-based coatings / putty substitute",
+        "crab_shell": "chitin",
+        "oyster_shell": "calcium-carbonate products",
+        "Dongjiakou_specific_feedstock": "UNKNOWN"
+      }
+    },
     {
       "source_record_id": "DJK-SR-0033",
-      "field": "Qingdao_port_green_direct_plan",
-      "source_name": "Qingdao Municipal Government — Qingdao Port Green Transformation Three-Year Action Plan (2026-2028)",
-      "source_uri": "https://www.qingdao.gov.cn/zwgk/xxgk/jtys/gkml/gwfg/202609/t20260918_10733879.shtml",
-      "status": "REPORTED_OFFICIAL_PLANNED_REGIONAL_INFRASTRUCTURE",
+      "field": "Dongjiakou_grain_terminal",
+      "status": "REPORTED_OPERATING_INFRASTRUCTURE",
+      "source_uri": "https://www.qingdao.gov.cn/ywdt/qsdt/202511/t20251127_10381917.shtml",
       "raw_record": {
-        "Qianwan_Dongjiakou_peripheral_wind_MW_approx": 214,
-        "Qianwan_Dongjiakou_peripheral_PV_MW_approx": 81,
-        "dedicated_transmission_lines_planned": true,
-        "intended_supply": "Qianwan and Dongjiakou port areas",
-        "green_direct_project_target": "strive to begin implementation by 2028",
-        "Qianwan_north_wind_MW": 20.1,
-        "Qianwan_wind_target_annual_generation_kWh_min": 30000000,
-        "new_distributed_PV_total_MW_min": 15,
-        "Dongjiakou_port_PV_MW_approx": 5,
-        "virtual_power_plant_target_count_by_2028": 1,
-        "architecture": "source-grid-load-storage integrated supply/use"
-      },
-      "qualifier": "Verifies the regional port plan. Does not establish that desalination Node-001 has an allocation, interconnection, PPA, or right to use the dedicated line."
+        "wheat_unloaded_tonnes": 68250,
+        "unload_time_hours": 21
+      }
     },
     {
       "source_record_id": "DJK-SR-0034",
-      "field": "national_multi_user_green_direct_policy",
-      "source_name": "NDRC / National Energy Administration — Multi-user green power direct connection notice (2026)",
-      "source_uri": "https://www.nea.gov.cn/20260520/9e1c4277ce324c8ab82a84da98da7980/c.html",
-      "status": "REPORTED_NATIONAL_POLICY",
+      "field": "Dongjiakou_cold_chain",
+      "status": "REPORTED_PROJECT_INFRASTRUCTURE",
+      "source_uri": "https://www.qingdao.gov.cn/ywdt/zwyw/202207/t20220708_6234140.shtml",
       "raw_record": {
-        "multiple_legal_entity_users_permitted": true,
-        "existing_load_green_demand_users_permitted": true,
-        "industrial_and_zero_carbon_parks_permitted": true,
-        "compute_facilities_priority_support": true,
-        "annual_self_consumed_fraction_of_available_generation_min": 0.6,
-        "direct_green_fraction_of_total_load_min": 0.3,
-        "direct_green_fraction_of_total_load_min_2030": 0.35
-      },
-      "qualifier": "Policy pathway only; not Node-001 project approval."
+        "investment_CNY": 30000000000,
+        "planned_unloading_tonnes_year": 3000000,
+        "planned_transaction_value_CNY_year": 60000000000
+      }
     },
     {
       "source_record_id": "DJK-SR-0035",
-      "field": "Shandong_green_direct_scope",
-      "source_name": "Shandong 2026 green-direct policy implementation context",
-      "source_uri": "https://www.sdxc.gov.cn/sdfb/fbsy/202608/t20260819_18033322.htm",
-      "status": "REPORTED_PROVINCIAL_POLICY_CONTEXT",
+      "field": "Dongjiakou_worker_housing",
+      "status": "REPORTED_OPERATING_HOUSING",
+      "source_uri": "https://zhufang.qingdao.gov.cn/bzf/web/monitor/project/0a4dc548e80e1000",
       "raw_record": {
-        "coastal_key_port_existing_loads_supported": true,
-        "compute_infrastructure_supported": true,
-        "green_demand_key_industrial_users_supported": true,
-        "multi_user_green_direct_supported": true
-      },
-      "qualifier": "Makes a port + desalination + compute multi-user concept policy-plausible, not approved."
+        "units": 890,
+        "site_area_mu": 24,
+        "building_area_m2": 58600,
+        "buildings": 4
+      }
     },
     {
       "source_record_id": "DJK-SR-0036",
-      "field": "Shandong_renewable_system_context",
-      "source_name": "Shandong government press-conference reporting — July 2026 installed renewable capacity",
-      "source_uri": "https://news.10jqka.com.cn/20260818/c679041159.shtml",
-      "status": "REPORTED_PROVINCIAL_SYSTEM_CONTEXT",
+      "field": "Boli_redevelopment_housing",
+      "status": "REPORTED_ACTIVE_CONSTRUCTION",
+      "source_uri": "https://ggzy.qingdao.gov.cn/c/TradeDetals-ZtbShow/162616-5021-0-1-0/db701678-79fa-4e63-9cea-63f26f759c39-B03CE5B6FC1D2D3C2D5FCEBC39AA2406.html",
       "raw_record": {
-        "Shandong_PV_capacity_MW_2026_07": 97354,
-        "Shandong_wind_capacity_MW_2026_07": 34228,
-        "non_fossil_capacity_MW_2026_07": 146000,
-        "non_fossil_share_total_capacity": 0.558
-      },
-      "qualifier": "Regional context only; not a Node-001 supply receipt."
+        "total_investment_CNY": 3432870000,
+        "total_building_area_m2": 279195.39,
+        "parking_spaces": 2343
+      }
     },
     {
       "source_record_id": "DJK-SR-0037",
-      "field": "Shandong_2026_renewable_mechanism_price_context",
-      "source_name": "Shandong DRC / Energy Bureau 2026 mechanism-price auction result",
-      "source_uri": "https://finance.sina.com.cn/wm/2026-03-17/doc-inhrhxzs3924560.shtml",
-      "status": "REPORTED_POLICY_PRICE_CONTEXT_NOT_NODE_PPA",
+      "field": "Shandong_3D_print_farm",
+      "status": "REPORTED_OPERATING_NONSTRUCTURAL_FABRICATION",
+      "source_uri": "https://finance.sina.com.cn/jjxw/2026-05-06/doc-inhwwrqu8676550.shtml",
       "raw_record": {
-        "wind_mechanism_price_CNY_kWh": 0.31,
-        "PV_mechanism_price_CNY_kWh": 0.261,
-        "deep_offshore_mechanism_price_CNY_kWh": 0.38
+        "printers_approx": 200,
+        "annual_output_value_CNY_lower_bound": 1000000,
+        "structural_construction_proof": false
+      }
+    },
+    {
+      "source_record_id": "DJK-SR-0038",
+      "field": "Qingdao_recycled_3D_print_concrete_IP",
+      "status": "REPORTED_PATENT_ACTIVE",
+      "source_uri": "https://patents.google.com/patent/CN119504201B/zh",
+      "raw_record": {
+        "assignee": "Qingdao Agricultural University",
+        "grant_date": "2026-02-24",
+        "concept": "3D-print low-carbon concrete with modified recycled aggregate"
+      }
+    },
+    {
+      "source_record_id": "DJK-SR-0039",
+      "field": "QUT_solid_waste_aggregate_IP",
+      "status": "REPORTED_PATENT_R_AND_D",
+      "source_uri": "https://patents.google.com/patent/CN120483600A/en",
+      "raw_record": {
+        "assignee": "Qingdao University of Technology",
+        "feedstocks": [
+          "red mud",
+          "steel slag",
+          "blast-furnace slag",
+          "fly ash"
+        ],
+        "direct_3D_printing_claim": false
       },
-      "qualifier": "Generator-side mechanism prices only. Not Node-001 retail/PPA/direct-connection price."
+      "note": "Exact QUT waste-glass 3D-print patent mentioned previously was not independently located."
+    },
+    {
+      "source_record_id": "DJK-SR-0040",
+      "field": "Dongjiakou_new_materials_pilot_base",
+      "status": "REPORTED_ACTIVE_INNOVATION_INFRASTRUCTURE",
+      "source_uri": "https://www.qingdao.gov.cn/ywdt/qsdt/202512/t20251202_10388160.shtml",
+      "raw_record": {
+        "investment_CNY_approx": 700000000,
+        "site_area_mu_approx": 200,
+        "pilot_workshops": 8,
+        "simultaneous_pilot_projects": 30
+      }
+    },
+    {
+      "source_record_id": "DJK-SR-0041",
+      "field": "BAETA_material_identity",
+      "status": "MEASURED_PRIMARY_LITERATURE",
+      "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12412650/",
+      "raw_record": {
+        "identity": "PET-derived bis-aminoamide CO2 sorbent",
+        "capture_capacity_mol_CO2_per_kg_up_to": 3.4,
+        "pelletization_demonstrated": true,
+        "structural_composite_proof": false
+      }
     }
   ],
-  "promotion_effect": {
-    "regional_214MW_wind_81MW_PV_claim": "VERIFIED_AS_OFFICIAL_PLAN",
-    "Node001_access_to_regional_green_direct": "UNKNOWN",
-    "Node001_green_power_contract_price": "UNKNOWN",
-    "S02_BESS_optimum": "UNKNOWN_PENDING_HOURLY_TRACES",
-    "coincidence_analysis": "SPECIFIABLE_NOW",
-    "energy_portfolio_classification": "TECHNICAL_FEASIBILITY_PLUS_CONDITIONAL_ECONOMICS"
+  "outcomes": {
+    "construction_waste": "REGIONAL_STRONG_NODE_ALLOCATION_UNKNOWN",
+    "shellfish_waste": "PATHWAY_REAL_QUANTITY_UNKNOWN",
+    "food_logistics": "STRONG_A01_GREENHOUSE_UNPROVEN",
+    "housing": "REAL_DEMAND_HSG01_PRINTED_HOUSING_UNPROVEN",
+    "additive_manufacturing": "LOCAL_R_AND_D_AND_EMPLOYMENT_PRECEDENT_STRUCTURAL_DEPLOYMENT_UNPROVEN",
+    "BAETA": "CORRECTED_TO_CO2_SORBENT"
   }
 }

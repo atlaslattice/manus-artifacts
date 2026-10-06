@@ -1,0 +1,97 @@
+{
+  "artifact_id": "DJK-DOWNSTREAM-SYMBIOSIS-COMPONENTS-v0.1",
+  "status": "PROPOSED_DOWNSTREAM_VALUE_LAYER_NON_CANON",
+  "study_classification": "TECHNICAL_FEASIBILITY_PLUS_CONDITIONAL_ECONOMICS",
+  "parent_node": "Dongjiakou Integrated Energy-Water-Compute Node v0.1",
+  "rule": "Downstream components consume core-node flows and earn value only through measured outputs. Zero aggregate credit until component ledgers close.",
+  "components": {
+    "A01": {
+      "name": "Controlled-environment food pilot",
+      "status": "PROPOSED_ZERO_CREDIT",
+      "receipt_support": [
+        "Dongjiakou operating grain terminal",
+        "Dongjiakou cold-chain logistics infrastructure"
+      ],
+      "unknowns": [
+        "greenhouse/site",
+        "crop/yield",
+        "water demand",
+        "heat-grade match",
+        "CO2 source/purity",
+        "nutrient/discharge balance"
+      ]
+    },
+    "M01": {
+      "name": "Additive/distributed manufacturing pilot",
+      "status": "PROPOSED_ZERO_CREDIT",
+      "preferred_first_venue": "Dongjiakou new-materials pilot base",
+      "receipt_support": [
+        "Qingdao 2025 construction waste stream",
+        "Shandong 200-printer employment precedent",
+        "Qingdao recycled-material 3D-print IP",
+        "Dongjiakou pilot workshops"
+      ],
+      "unknowns": [
+        "Dongjiakou feedstock contract",
+        "qualified printable mix",
+        "printer",
+        "mechanical/durability/fire/chloride tests",
+        "energy/water intensity",
+        "offtake"
+      ]
+    },
+    "HSG01": {
+      "name": "Housing pilot",
+      "status": "PROPOSED_ZERO_CREDIT",
+      "note": "HSG01 avoids collision with existing H01 hydro identifier.",
+      "receipt_support": [
+        "Dongjiakou 890-unit worker/talent apartment",
+        "Boli active redevelopment housing"
+      ],
+      "unknowns": [
+        "3D structural system approval",
+        "pilot parcel",
+        "code approval",
+        "marine durability",
+        "LCA",
+        "insurance/maintenance"
+      ]
+    },
+    "F01_BAETA": {
+      "name": "PET-derived BAETA carbon-capture pilot",
+      "status": "PROPOSED_ZERO_CREDIT",
+      "correction": "BAETA is a CO2 sorbent, not a structural print composite.",
+      "receipt_support": [
+        "Science Advances 2025 primary literature"
+      ],
+      "unknowns": [
+        "PET supply",
+        "capture-source flow/composition",
+        "manufacturing energy/reagents",
+        "regeneration duty",
+        "CO2 sink/use",
+        "degradation",
+        "lifecycle carbon"
+      ]
+    }
+  },
+  "accounting": {
+    "standalone_component_ledger": true,
+    "inter_component_transfer_ledger": true,
+    "aggregate_node_ledger": true,
+    "double_counting_prohibited": true,
+    "node_pass": "AND(all mandatory component vetoes pass)",
+    "examples": [
+      "compute heat to A01: meter once, debit C01 heat availability, credit A01 useful heat once",
+      "captured CO2 to A01: greenhouse use is not permanent-removal credit unless later durably stored",
+      "Mg/Ca to M01: same recovered material cannot also be sold elsewhere",
+      "city construction waste to M01: no node feedstock credit until contracted, transported and measured"
+    ]
+  },
+  "suggested_progression": [
+    "M01-0 material coupon validation",
+    "M01-1 nonstructural printed components",
+    "M01-2 civil non-life-safety elements",
+    "HSG01 structural pilot only after code/fire/chloride/durability gates"
+  ]
+}
