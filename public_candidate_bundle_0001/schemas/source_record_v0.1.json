@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "atlaslattice.source_record.v0.1",
+  "title": "Atlas Lattice SourceRecord v0.1",
+  "description": "Immutable raw-source receipt used before normalization into physics_profile properties. Raw stays recoverable.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "source_record_id",
+    "record_kind",
+    "source_name",
+    "retrieval_timestamp",
+    "source_uri",
+    "raw_record"
+  ],
+  "properties": {
+    "source_record_id": { "type": "string", "minLength": 1 },
+    "record_kind": {
+      "type": "string",
+      "enum": ["SOURCE_CAPTURE", "MANUAL_TRANSCRIPTION", "SYNTHETIC_FIXTURE"]
+    },
+    "source_family": {
+      "type": ["string", "null"],
+      "enum": ["AME", "NUBASE", "ENSDF", "DDEP", "IAEA", "NIST_ASD", "PRIMARY_EXPERIMENT", "OTHER", null]
+    },
+    "source_name": { "type": "string" },
+    "source_version": { "type": ["string", "null"] },
+    "evaluation_date": { "type": ["string", "null"], "format": "date" },
+    "retrieval_timestamp": { "type": "string", "format": "date-time" },
+    "source_uri": { "type": "string" },
+    "source_locator": {
+      "type": ["string", "null"],
+      "description": "Dataset, table, record, page, line, nuclide key, or other locator."
+    },
+    "doi": { "type": ["string", "null"] },
+    "accession": { "type": ["string", "null"] },
+    "upstream_record_id": { "type": ["string", "integer", "null"] },
+    "upstream_record_id_stability": {
+      "type": ["string", "null"],
+      "enum": ["DURABLE", "RELEASE_SCOPED", "TRANSIENT", "UNKNOWN", null]
+    },
+    "release_metadata": {
+      "type": ["object", "null"],
+      "description": "Release identity required when upstream IDs can change. For ENSDF API this should include dataGeneratedAt and API/schema version when available."
+    },
+    "raw_record": {
+      "type": ["string", "object", "array"],
+      "description": "Unnormalized source payload or exact transcribed record."
+    },
+    "raw_value": { "type": ["string", "number", "boolean", "array", "object", "null"] },
+    "raw_uncertainty": { "type": ["string", "number", "array", "object", "null"] },
+    "raw_unit": { "type": ["string", "null"] },
+    "raw_qualifier": { "type": ["string", "array", "null"] },
+    "checksum": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": { "type": "string" },
+        "value": { "type": "string" }
+      }
+    },
+    "retrieval_request": {
+      "type": ["object", "null"],
+      "description": "Optional deterministic request metadata: endpoint/query, sparse fields, pagination, or file selector."
+    },
+    "notes": { "type": ["string", "null"] }
+  },
+  "x-atlas-invariants": [
+    "SourceRecord is append-only/immutable after capture; corrections create a new SourceRecord.",
+    "Raw source representation is preserved before normalization.",
+    "Transient upstream database IDs are never treated as durable identity without release metadata.",
+    "Synthetic fixtures are never admissible as scientific evidence.",
+    "A normalized property may cite multiple SourceRecords; disagreement is preserved rather than overwritten."
+  ]
+}
