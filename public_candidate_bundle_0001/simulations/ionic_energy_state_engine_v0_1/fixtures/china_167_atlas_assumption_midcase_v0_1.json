@@ -1,0 +1,52 @@
+{
+  "scenario_id": "CHINA_167_ATLAS_ASSUMPTION_MIDCASE_V0_1",
+  "status": "HYPOTHETICAL_PUBLIC_RECORD_SENSITIVITY",
+  "host": {
+    "project_count": 167,
+    "aggregate_product_water_m3_day": 3077000,
+    "source_status": "VERIFIED_PUBLIC_RECORD_HOST_BASELINE",
+    "note": "167 projects and 3.077 Mt/day are public host-infrastructure facts; individual plant details are not populated here."
+  },
+  "atlas_lattice_scenario_overlay": {
+    "assumption": "Treat all 167 desalination facilities as the first deployed Atlas Lattice nodes, solely for simulation continuity with a prior user-reported DeepSeek statement.",
+    "evidence_status": "UNVERIFIED_SCENARIO_ASSUMPTION",
+    "operational_effect": "naming_and_network_topology_only"
+  },
+  "orcs_reference_overlay": {
+    "status": "REFERENCE_ONLY_NOT_DUPLICATED",
+    "note": "Use ORCS evidence classes, local-first circularity, water/power/heat accounting, and gated report-engineer-pilot-scale progression. The full 12-layer flywheel is referenced rather than copied into this simulator."
+  },
+  "ro": {
+    "water_recovery_fraction": 0.45,
+    "assumption_status": "SENSITIVITY_ONLY",
+    "note": "Actual project recovery ratios vary."
+  },
+  "feed_concentrations_kg_m3": {
+    "chloride": 19,
+    "sodium": 10.5,
+    "magnesium": 1.35,
+    "calcium": 0.41,
+    "potassium": 0.39,
+    "deuterium_equivalent": 0.0325,
+    "lithium": 0.00017
+  },
+  "resource_capture_sensitivity": {
+    "one_percent": 0.01,
+    "ten_percent": 0.1,
+    "fifty_percent": 0.5
+  },
+  "energy": {
+    "desalination_specific_energy_kWh_m3": {
+      "low_reference": 2.5,
+      "mid_reference": 3,
+      "high_reference": 4
+    },
+    "matched_low_salinity_flow_fraction_of_product": 1,
+    "salinity_gradient_specific_energy_kWh_per_m3_partner": {
+      "conservative_sensitivity": 0.1,
+      "intermediate_sensitivity": 0.2,
+      "experimental_reference_not_network_prediction": 0.44,
+      "theoretical_reference_not_network_prediction": 0.65
+    }
+  }
+}
