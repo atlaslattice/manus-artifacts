@@ -1,0 +1,35 @@
+{
+  "artifact_id":"DJK-NODE-001-RUN-0-v0.1",
+  "status":"EXECUTED_BASELINE_SIMULATION_NON_CANON",
+  "execution_date":"2026-10-06",
+  "execution_mode":"deterministic; no Monte Carlo; no UNKNOWN imputation",
+  "inputs":{
+    "product_capacity_m3_day":100000,
+    "UF_RO_process_train_SEC_kWh_m3":2.2,
+    "chemical_cost_CNY_m3_relation":"<",
+    "chemical_cost_CNY_m3_upper_bound":0.15,
+    "recovery_cases":[0.45,0.50],
+    "utilization_U":"UNKNOWN",
+    "whole_site_SEC_kWh_m3":"UNKNOWN",
+    "plant_effective_tariff_CNY_kWh":"UNKNOWN"
+  },
+  "coefficients_per_U":{
+    "annual_product_m3":36500000,
+    "annual_process_train_energy_GWh":80.3,
+    "annual_chemical_cost_CNY_upper_bound":5475000
+  },
+  "mass_balance":{
+    "0.45":{"feed_m3_day":222222.22222222222,"product_m3_day":100000,"reject_equivalent_m3_day":122222.22222222222,"annual_feed_m3_per_U":81111111.1111111,"annual_reject_equivalent_m3_per_U":44611111.11111111},
+    "0.50":{"feed_m3_day":200000,"product_m3_day":100000,"reject_equivalent_m3_day":100000,"annual_feed_m3_per_U":73000000,"annual_reject_equivalent_m3_per_U":36500000}
+  },
+  "U1_reference_not_operating_claim":{"annual_product_m3":36500000,"annual_process_train_energy_GWh":80.3,"annual_chemical_cost_CNY_upper_bound":5475000},
+  "maintenance_event_ledger":[
+    {"event":"2023/24 combined UF+RO procurement","contract_CNY":6850218,"allocation":"UNKNOWN","source":"DJK-SR-0003"},
+    {"event":"2025 first-stage RO replacement","element_count":1638,"contract_CNY":5162976,"source":"DJK-SR-0004"},
+    {"event":"2025/26 UF replacement","element_count":2448,"tender_ceiling_CNY":15912000,"source":"DJK-SR-0005"},
+    {"event":"2026 first-stage RO replacement","element_count":4914,"award_CNY_including_tax":15381311.4,"source":"DJK-SR-0006"}
+  ],
+  "historical_PPP_context":{"water_price_CNY_m3":4.25,"guaranteed_volume_m3_day":70000,"implied_annual_value_CNY":108587500,"current_revenue_claim":false},
+  "retrofit_credit":{"S01_solar":0,"H01_mini_hydro":0,"C01_compute":0,"F01_adaptive_fouling":0,"F02_sono_CIP":0,"resource_recovery":0,"OAE":0},
+  "unknown_upgrade_requirements":["actual utilization U","whole-site SEC / delta_aux","plant effective tariff","current measured recovery","current flow map","current brine chemistry","complete maintenance chronology","fouling/CIP history","primary ecological monitoring","unused hydraulic head","roof/interconnection constraints"]
+}

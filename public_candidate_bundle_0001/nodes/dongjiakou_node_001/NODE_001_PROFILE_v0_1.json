@@ -1,0 +1,45 @@
+{
+  "artifact_id":"DJK-NODE-001-PROFILE-v0.1",
+  "status":"PUBLIC_CANDIDATE_NON_CANON",
+  "node_id":"DONGJIAKOU-NODE-001",
+  "identity":{
+    "name":"Dongjiakou Seawater Desalination Project",
+    "location":"Qingdao, Shandong, China",
+    "atlas_node_identity_status":"UNVERIFIED_SCENARIO_ASSUMPTION"
+  },
+  "temporal_state_rule":"Never let a plant have one timeless value when the plant itself keeps evolving.",
+  "allowed_temporal_states":["CURRENT","HISTORICAL","PLANNED","SUPERSEDED","UNKNOWN"],
+  "normalized_claims":[
+    {"property":"product_capacity_m3_day","value":100000,"state":"CURRENT","evidence":"REPORTED","sources":["DJK-SR-0001"]},
+    {"property":"process_configuration","value":"UF+RO high-efficiency dual-membrane coupling","state":"CURRENT","evidence":"REPORTED","sources":["DJK-SR-0001"]},
+    {"property":"original_project_capex_CNY","value":450000000,"state":"HISTORICAL","evidence":"REPORTED","sources":["DJK-SR-0001"]},
+    {"property":"UF_RO_process_train_SEC_kWh_m3","value":2.2,"qualifier":"approximate; process-train boundary","state":"CURRENT","evidence":"REPORTED","sources":["DJK-SR-0001"]},
+    {"property":"chemical_cost_CNY_m3","relation":"<","value":0.15,"state":"CURRENT","evidence":"REPORTED","sources":["DJK-SR-0001"]},
+    {"property":"recovery_fraction","lower":0.45,"upper":0.50,"qualifier":"technology/application range; current measured node value not yet sourced","state":"CURRENT","evidence":"REPORTED","sources":["DJK-SR-0001"]},
+    {"property":"ERD_efficiency_fraction","relation":">","value":0.96,"qualifier":"technology/application statement; current node measurement not separately sourced","state":"CURRENT","evidence":"REPORTED","sources":["DJK-SR-0001"]},
+    {"property":"historical_PPP_water_price_CNY_m3","value":4.25,"state":"HISTORICAL","evidence":"REPORTED","sources":["DJK-SR-0002"]},
+    {"property":"historical_PPP_guaranteed_volume_m3_day","value":70000,"state":"HISTORICAL","evidence":"REPORTED","sources":["DJK-SR-0002"]}
+  ],
+  "maintenance_events":[
+    {"event_id":"DJK-ME-2023-12-UFRO","status":"COMPLETED","contract_CNY":6850218,"scope":"combined UF+RO; allocation unresolved","sources":["DJK-SR-0003"]},
+    {"event_id":"DJK-ME-2025-05-RO","status":"COMPLETED","element_count":1638,"contract_CNY":5162976,"sources":["DJK-SR-0004"]},
+    {"event_id":"DJK-ME-2025-12-UF","status":"PROCUREMENT_RECEIPT","element_count":2448,"tender_ceiling_CNY":15912000,"sources":["DJK-SR-0005"]},
+    {"event_id":"DJK-ME-2026-09-RO","status":"AWARDED","element_count":4914,"award_CNY_including_tax":15381311.4,"sources":["DJK-SR-0006"]}
+  ],
+  "unknowns":[
+    "actual_utilization_fraction_U",
+    "whole_site_SEC_kWh_m3",
+    "delta_aux_kWh_m3",
+    "plant_effective_electricity_tariff_CNY_kWh",
+    "current_measured_recovery_fraction",
+    "current_feed_and_reject_stream_map",
+    "current_brine_composition",
+    "membrane_survival_distribution",
+    "fouling_rate_and_cleaning_frequency",
+    "current_CIP_and_additive_chemistry",
+    "current_ecological_monitoring_primary_data",
+    "hydraulic_unused_head_profile",
+    "roof_structural_and_interconnection_limits"
+  ],
+  "run0_module_credit":{"S01_solar":0,"H01_mini_hydro":0,"C01_compute":0,"F01_fouling":0,"F02_sono_CIP":0,"resource_recovery":0,"OAE":0}
+}
