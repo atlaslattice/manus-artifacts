@@ -477,13 +477,43 @@ A technically successful pathway can destroy its own revenue assumption by overs
 
 The ocean-regeneration claim has to be harder than "we filtered seawater."
 
-### 8.1 Microplastics
+### 8.1 Microplastics — PolyGone candidate interception lane
 
 Membrane systems can retain microplastics effectively, and recent SWRO plant studies report substantial removal.
 
 But conventional desalination transfers many retained materials into reject streams.
 
-Therefore the net-positive path is:
+A more explicit candidate interception module is now available in the external technology landscape: **PolyGone Systems** has filed patent applications for aquatic-microplastics removal and reports a field-scale deployment at the Atlantic County Utilities Authority wastewater-treatment plant. The company describes a passive/recyclable microplastic-binding filtration medium and reports an ACUA deployment beginning in September 2024 with 720 filters at a 40-million-gallon/day facility.
+
+These are **company/patent deployment claims, not independent proof of performance at Chinese desalination plants**.
+
+For the 167-node simulation, PolyGone therefore enters as:
+
+```text
+CANDIDATE_MODULE:
+  passive microplastic-binding media / interception arrays
+
+PLACEMENT OPTIONS:
+  intake pretreatment
+  treated-wastewater partner stream
+  low-salinity stream before salinity-gradient module
+  polishing stage before ecological discharge
+
+REQUIRED VALIDATION:
+  particle-size capture curve
+  polymer-specific selectivity
+  flow/head-loss penalty
+  regeneration/reuse cycles
+  captured-plastic mass balance
+  disposal/upcycling route
+  marine-biofouling behavior
+  CAPEX/OPEX
+  independent downstream monitoring
+```
+
+This is especially attractive architecturally because it can remove microplastics **before** they become a concentrated brine liability or can be placed on wastewater streams that would otherwise carry plastics to the coast.
+
+The net-positive path remains:
 
 ```text
 capture
@@ -492,6 +522,8 @@ capture
  -> recycle / destroy / securely sequester
  -> measure downstream concentration
 ```
+
+Company-reported particle counts are useful pilot signals but should not receive ORCS `VERIFIED` status until independently reproduced or supported by third-party monitoring.
 
 ### 8.2 Persistent toxins
 
@@ -506,34 +538,60 @@ permeate cleanliness != ocean regeneration
 pollutant concentration != pollutant destruction
 ```
 
-### 8.3 pH and carbonate chemistry
+### 8.3 Ocean alkalinity enhancement and carbonate chemistry — active Chinese research lane
 
 There is no single "optimal ocean pH" that should be imposed across every coastline.
 
-Coastal pH varies naturally and interacts with:
+Coastal pH varies naturally and interacts with temperature, salinity, alkalinity, dissolved inorganic carbon, biological activity, local geology, upwelling and freshwater inflow.
 
-- temperature
-- salinity
-- alkalinity
-- dissolved inorganic carbon
-- biological activity
-- local geology
-- upwelling
-- freshwater inflow.
+However, **ocean alkalinity enhancement (OAE) is an active Chinese research lane**, not merely a hypothetical Atlas extension.
 
-The regenerative objective should therefore be:
+Relevant external precedents include:
 
-> keep discharge chemistry inside an ecologically acceptable, site-specific envelope and avoid worsening local acidification or carbonate stress.
+- **2024 — Shandong University / collaborators:** analysis of olivine-based OAE in the East and South China Seas, explicitly treating nickel and chromium release as ecological constraints.
+- **2026 — Tongji University / Fujian Ocean Innovation Center:** comparative study of natural silicates and industrial by-products as coastal OAE materials.
+- **2026 — Chinese South China Sea research:** shipboard experiments on ecological responses of size-fractionated microalgae to olivine-driven alkalinity enhancement.
+- **2026 — Institute of Oceanology, Chinese Academy of Sciences / Qingdao collaborators:** laboratory, mesocosm and **1,000 m3 offshore southern Yellow Sea demonstration** of calcium–alkali coupling. The published field experiment converted dissolved inorganic carbon into CaCO3 and estimated 77.6 kg of subsequent atmospheric CO2 uptake under that specific single-application test. The authors explicitly state that long-term effectiveness, ecological effects and practical scalability still require further evaluation.
+- **2026 — North China Sea microcosm work:** ongoing research tests alkalinity increases around 500 micromol/kg and short-term plankton/biogeochemical responses; this lane remains under peer-review and must not be treated as deployed proof.
+
+This creates a much stronger 167-node candidate architecture:
+
+```text
+Mg/Ca-rich desalination stream
+  -> characterize carbonate chemistry
+  -> choose resource-recovery vs OAE/carbonation routing
+  -> controlled alkaline/carbonation intervention only where justified
+  -> continuous TA + pH + DIC + salinity + temperature telemetry
+  -> biological/ecotoxicology monitoring
+  -> independent downstream verification
+```
+
+The important systems insight is that the same Mg/Ca streams considered for mineral recovery may also be relevant to carbon-mineralization or alkalinity pathways. Those uses can **compete for the same material**, so the optimizer must compare:
+
+```text
+commodity value
+vs carbon-removal value
+vs ecological value
+vs energy/reagent cost
+vs local discharge need
+```
+
+OAE must not become a license to drive pH upward indiscriminately.
+
+The regenerative objective remains:
+
+> keep discharge chemistry inside a site-specific ecological envelope while testing whether carefully bounded alkalinity/carbonation interventions can improve carbon uptake or reduce acidification stress without unacceptable biological or trace-metal impacts.
 
 Minimum measurements should include:
 
 - pH on an appropriate seawater scale
 - total alkalinity
-- dissolved inorganic carbon where feasible
-- temperature
-- salinity
+- dissolved inorganic carbon
+- temperature and salinity
 - dissolved oxygen
-- relevant saturation-state proxies for sensitive habitats.
+- carbonate saturation state where relevant
+- trace metals associated with the chosen alkaline material
+- plankton / benthic / habitat indicators appropriate to the site.
 
 ### 8.4 Brine is not automatically bad and ZLD is not automatically good
 
@@ -843,3 +901,10 @@ That is exactly what the simulation is designed to find out.
 12. IEA. *Understanding the energy-AI nexus*. Representative hyperscale AI data center >=100 MW. https://www.iea.org/reports/energy-and-ai/understanding-the-energy-ai-nexus
 13. Atlas Lattice / ORCS repository. *Open Regenerative Compute Standard README* and metrics-and-verification stack. https://github.com/atlaslattice/open-regenerative-compute-standard
 14. Atlas Lattice provenance. *STARS-OCEAN-002*, 2026-08-14.
+15. PolyGone Systems. *Method, apparatus, and system for aquatic microplastics removal*, US20240182338A1; priority 2021-03-23, publication 2024-06-06. https://patents.google.com/patent/US20240182338A1/en
+16. PolyGone Systems. *ACUA Microplastic Remediation Pilot Project*. Company-reported field deployment; performance claims require independent verification. https://www.polygonesystems.com/acua-project-page
+17. Zhu et al. *Sustainable carbon sequestration via olivine based ocean alkalinity enhancement in the East and South China Sea: Adhering to environmental norms for nickel and chromium*. Science of the Total Environment 930 (2024) 172853. https://doi.org/10.1016/j.scitotenv.2024.172853
+18. Li et al. *Alkaline materials for coastal ocean alkalinity enhancement: A comparative study of natural silicates and industrial byproducts*. Marine Pollution Bulletin 226 (2026) 119338. https://doi.org/10.1016/j.marpolbul.2026.119338
+19. Bian et al. *Differential responses of size-fractionated eukaryotic microalgae to ocean alkalinity enhancement in oligotrophic seawaters*. Applied and Environmental Microbiology (2026). https://doi.org/10.1128/aem.00092-26
+20. Liu et al. *A new pathway to enhance the oceanic carbon sink: inorganic carbonate precipitation driven by calcium-alkali coupling*. Journal of Environmental Management 413 (2026) 130294. https://doi.org/10.1016/j.jenvman.2026.130294
+21. Xin et al. *Biogeochemical responses to ocean alkalinity enhancement in the North China Sea*. EGUsphere preprint (2026), under review. https://egusphere.copernicus.org/preprints/2026/egusphere-2026-5281/
