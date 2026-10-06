@@ -1,0 +1,845 @@
+# Alexandrian Seawater Refinery
+## A 167-Project Multi-Resource, Closed-Loop Energy and Ocean-Regeneration Simulation
+### White Paper v0.1 — 2026-10-06
+
+```text
+STATUS: RESEARCH PROPOSAL / SIMULATION
+CANON: NO
+DEPLOYMENT CLAIM: NO
+ENERGY SOURCE CLAIM: NO
+ATLAS-167 CLAIM: UNVERIFIED SCENARIO ASSUMPTION
+ORCS ROLE: REFERENCE / ACCOUNTING INTERFACE
+```
+
+## Abstract
+
+China's public 2025 seawater-utilization reporting states that the country had **167 desalination projects totaling 3.077 million tonnes/day** of aggregate capacity at year-end. A 2026 national action plan targets more than **4.5 million tonnes/day by 2030**. Public reporting also describes Chinese research and technology-development activity around comprehensive brine utilization and strategic seawater resources, including lithium, uranium, deuterium, bromine/potassium, and other species.
+
+This paper asks a deliberately bounded counterfactual:
+
+> What happens if the 167-project desalination fleet is modeled as a distributed seawater refinery, renewable-gradient energy network, closed-loop materials platform, and coastal ecological-monitoring system?
+
+A second scenario layer assumes — solely for continuity with a prior user-reported DeepSeek statement — that these 167 facilities are the first Atlas Lattice nodes. That identity is **not independently verified** and changes none of the physics or public-record calculations.
+
+The central proposal is not a single-isotope machine. It is a **cascading polygeneration architecture**:
+
+```text
+seawater
+  -> contaminant-aware intake / pretreatment
+  -> desalinated water
+  -> pressure-energy recovery
+  -> brine routing manifold
+      -> salinity-gradient energy where paired low-salinity water exists
+      -> bulk mineral recovery
+      -> selective high-value resource recovery
+      -> H/D research lane
+      -> Mg/Ca carbon mineralization
+      -> residual-water recovery / ZLD where justified
+      -> ecologically bounded discharge
+  -> common mass / energy / cost / ecology / provenance ledger
+```
+
+The governing accounting rule is:
+
+> **Products are not power. Gradients are power.**
+
+Recovered minerals or isotopes may generate revenue, strategic value, avoided mining, circular working media, or reduced waste. Electrical energy must still come from a physically identified free-energy source or supplied input.
+
+---
+
+## 1. Evidence boundary
+
+### 1.1 Verified public host facts
+
+Public Chinese reporting for end-2025 gives:
+
+- **167 seawater-desalination projects**
+- **3.077 million tonnes/day** total project capacity.
+
+China's 2026 *Seawater Desalination Industry Development Action Plan* targets:
+
+- more than **4.5 million tonnes/day** total capacity by 2030
+- more than **1.5 million tonnes/day** of additional capacity.
+
+Public Chinese reporting also states that work is underway on concentrated-brine utilization and that technical reserves are being developed for extraction of strategic elements from seawater.
+
+### 1.2 Unverified Atlas scenario
+
+For one simulation lane only:
+
+```text
+ASSUMPTION:
+the 167 desalination facilities are the first deployed Atlas Lattice nodes.
+
+STATUS:
+UNVERIFIED_SCENARIO_ASSUMPTION
+
+EFFECT:
+network naming and deployment topology only.
+No physical parameter receives favorable treatment because of this assumption.
+```
+
+If public records do not support the Atlas identity, the simulation remains valid as a generic 167-project refinery-network model.
+
+### 1.3 ORCS reference boundary
+
+The Open Regenerative Compute Standard is referenced rather than reproduced. The parts used here are:
+
+- evidence-class labeling
+- local-first circularity
+- explicit water / power / heat boundaries
+- downstream water-quality protection
+- report -> engineer -> pilot -> scale
+- audit-ready receipts.
+
+The 12-layer flywheel remains a broader integration map. This paper adds a **paper-specific 12-domain deployment scorecard** later; it should not be mistaken for an exact transcription of the historical D-FLYWHEEL layer names.
+
+---
+
+## 2. Why a multi-resource refinery?
+
+The strongest reason is mass balance.
+
+A desalination plant already pays to:
+
+- draw seawater
+- pretreat it
+- pressurize or heat it
+- separate water
+- manage a concentrated residual stream.
+
+Once that infrastructure exists, a resource-recovery module can potentially share pumps, pipes, sensors, pretreatment, land, grid interconnection, operators, laboratories, and discharge monitoring.
+
+That does **not** make an added recovery stage cheap by default. It does mean the incremental economics can be dramatically better than constructing an isolated ocean-mining facility from scratch.
+
+A 2026 review of desalination brine valorization describes brine as a potential source of **water, minerals, chemicals, and energy**, while also emphasizing energy use, scale-up, and material performance as persistent constraints.
+
+The correct optimization problem is therefore:
+
+```text
+For every stream:
+  identify its composition
+  identify every plausible valuable transformation
+  route it to the path with the best net value
+  preserve downstream options
+  account for every energy/material/ecology cost
+```
+
+No single ion has to "win."
+
+---
+
+## 3. Network-scale mass-balance simulation
+
+### 3.1 Mid-case assumptions
+
+This first-pass network model uses:
+
+```text
+public product-water capacity: 3.077 million m3/day
+project count: 167
+illustrative SWRO water recovery: 45%
+```
+
+The 45% value is a **sensitivity assumption**, not a claim about the actual fleet.
+
+It implies approximately:
+
+```text
+feed seawater:    6.838 million m3/day
+product water:    3.077 million m3/day
+brine/reject:     3.761 million m3/day
+annual feed:      2.496 km3/year
+annual product:   1.123 km3/year
+annual brine:     1.373 km3/year
+```
+
+Average public capacity per project is roughly **18,425 m3/day**, although the real fleet is heterogeneous.
+
+### 3.2 Representative incoming material inventory
+
+Using representative seawater concentrations, the feed stream carries approximately:
+
+| Species | Incoming inventory/day | Incoming inventory/year |
+|---|---:|---:|
+| Chloride | 129,918 t/day | 47.42 Mt/year |
+| Sodium | 71,797 t/day | 26.21 Mt/year |
+| Magnesium | 9,231 t/day | 3.37 Mt/year |
+| Calcium | 2,803 t/day | 1.02 Mt/year |
+| Potassium | 2,667 t/day | 0.97 Mt/year |
+| Deuterium-equivalent | 222 t/day | 81,113 t/year |
+| Lithium | 1.16 t/day | 424 t/year |
+
+These are **feed-throughput inventories, not recoverable production forecasts**.
+
+They answer only:
+
+> How much of each material passes through the hypothetical network under this mass-balance assumption?
+
+Recovery fraction, selectivity, purity, yield, sorbent life, reagent use, energy, CAPEX, OPEX, product price, ecological impact, and market saturation remain separate variables.
+
+### 3.3 Why deuterium still deserves attention
+
+Deuterium is an isotope rather than an ordinary dissolved ion, so it cannot be compared to lithium or magnesium by concentration alone.
+
+Still, the inventory comparison is useful.
+
+At the assumed network throughput, D-equivalent feed inventory is roughly **222 t/day**, compared with only about **1.16 t/day of Li**.
+
+That does not prove D is cheaper to recover. Isotope separation is often difficult precisely because H and D are chemically similar.
+
+It does show why a large water-processing network makes D worth keeping in the candidate set: the absolute feedstock is large and the working medium can, in principle, be recycled rather than consumed once.
+
+---
+
+## 4. Cascading process architecture
+
+The refinery should not be a serial train in which every litre undergoes every treatment. It should be a **routing problem**.
+
+### Stage 0 — characterize
+
+At each plant measure:
+
+- feed and brine flow
+- conductivity / salinity
+- pressure and temperature
+- major ions
+- selected trace elements
+- antiscalants and cleaning chemicals
+- suspended solids / particles
+- microplastics where relevant
+- priority organic contaminants where relevant
+- dissolved oxygen
+- pH, alkalinity, dissolved inorganic carbon
+- existing energy-recovery-device performance
+- local marine/ecological baseline.
+
+### Stage 1 — protect and clean the intake
+
+Conventional and membrane pretreatment already remove particles, colloids and biological foulants.
+
+A regenerative retrofit can extend this into a measured **pollution-capture lane**:
+
+```text
+screens / flotation / MF / UF
+  -> capture macro- and micro-particles
+  -> characterize plastic/mineral/biological fraction
+  -> recycle or securely dispose of captured solids
+```
+
+Modern membrane literature reports high microplastic retention, and real SWRO plants have demonstrated substantial overall microplastic removal.
+
+But this has a critical boundary:
+
+> **Capturing microplastics into a concentrate is not ocean cleaning if they are subsequently discharged back to the sea.**
+
+Ocean-regeneration credit requires capture plus recycling, destruction, or secure sequestration of the residual.
+
+### Stage 2 — desalination and pressure recovery
+
+Existing SWRO pressure-recovery equipment should receive full baseline credit.
+
+The retrofit must not claim savings already achieved by installed pressure exchangers.
+
+Any new hydraulic-energy module is judged against the site's measured current energy-recovery performance.
+
+### Stage 3 — branch the brine
+
+After pressure recovery, use a routing manifold.
+
+Potential branches:
+
+```text
+A. salinity-gradient energy
+B. Na/Cl / bulk salt chemistry
+C. Mg/Ca/K recovery
+D. trace-resource recovery
+E. H/D research
+F. carbon mineralization
+G. additional water recovery / MLD / ZLD
+H. ecologically conditioned residual discharge
+```
+
+These branches are **not additive by default**.
+
+For example:
+
+- removing salts changes the available salinity gradient
+- mixing brine with wastewater destroys some chemical potential that might otherwise support mineral recovery
+- raising pH for Mg precipitation changes carbonate chemistry
+- carbon mineralization changes Mg/Ca availability
+- additional water recovery further concentrates contaminants.
+
+The optimization engine must preserve these dependencies.
+
+---
+
+## 5. Energy architecture
+
+### 5.1 Desalination load
+
+Using illustrative specific-energy sensitivities:
+
+| SWRO electricity | Network electricity | Average load |
+|---|---:|---:|
+| 2.5 kWh/m3 | 2.81 TWh/year | 321 MW |
+| 3.0 kWh/m3 | 3.37 TWh/year | 385 MW |
+| 4.0 kWh/m3 | 4.49 TWh/year | 513 MW |
+
+This is a **load**, not new generation.
+
+It makes efficiency the first energy opportunity.
+
+### 5.2 Salinity-gradient energy
+
+The mixing of high- and low-salinity water has real Gibbs free energy.
+
+A published mixing-entropy-battery experiment using wastewater effluent and seawater reported **0.44 kWh/m3** net recovery from the low-salinity stream, versus a stated **0.65 kWh/m3** theoretical value for that case.
+
+However, later critical literature emphasizes that practical salinity-gradient systems can suffer substantial losses from pretreatment, pumping, fouling, concentration polarization and membrane cost.
+
+Therefore this paper uses a sensitivity band rather than a forecast.
+
+If the 167-project network had a matched low-salinity stream equal to its product-water flow:
+
+| Net/reference specific energy | Average power |
+|---|---:|
+| 0.10 kWh/m3 | 12.8 MW |
+| 0.20 kWh/m3 | 25.6 MW |
+| 0.44 kWh/m3 experimental reference | 56.4 MW |
+| 0.65 kWh/m3 theoretical reference | 83.3 MW |
+
+These numbers are **not predictions for the real Chinese fleet**.
+
+For scale, IEA uses about **100 MW** as a representative hyperscale AI-data-center capacity.
+
+So salinity-gradient energy is potentially meaningful, but the current network sensitivity does **not** justify claiming that blue energy alone powers a city or a hyperscale data center.
+
+### 5.3 Resource revenue versus electrical output
+
+The refinery can still transform economics even if electrical generation is modest.
+
+A product stream can:
+
+- generate commodity revenue
+- reduce chemical purchases
+- supply a reusable electrochemical working medium
+- reduce imported strategic-resource demand
+- reduce the volume or toxicity of residual waste
+- avoid disposal cost
+- reduce terrestrial mining pressure.
+
+That economic value belongs in the cashflow ledger, not the electricity ledger.
+
+### 5.4 Data-center integration
+
+A co-located compute campus becomes interesting as a **symbiotic load**, not because desalination magically creates enough electricity.
+
+Potential exchanges:
+
+```text
+desalination -> reliable water
+resource refinery -> commodity/reagent streams
+SGE/pressure recovery -> partial electrical offset
+renewables/grid -> primary electricity
+data center -> low-grade heat
+low-grade heat -> selected brine/water-treatment processes
+compute -> digital twin / optimization / monitoring
+```
+
+Waste heat must receive an exergy-aware accounting treatment. "Free heat" can still require pumps, heat exchangers and cooling infrastructure.
+
+---
+
+## 6. Closed-loop ionic economics
+
+The companion Year-1 simulator separates:
+
+- CAPEX
+- first fill
+- makeup/burn
+- process energy
+- fixed OPEX
+- variable OPEX
+- component replacement
+- disposal/residual treatment
+- gross recovered work
+- net work.
+
+For a reusable working inventory:
+
+```text
+annual inventory turnover ~= cycles/year * (1 - retention per cycle)
+```
+
+This creates a powerful but unforgiving result.
+
+At one million cycles/year:
+
+```text
+<= 1 working-inventory turnover/year
+requires about 99.9999% retention each cycle
+```
+
+At one billion cycles/year:
+
+```text
+<= 1 working-inventory turnover/year
+requires about 99.9999999% retention each cycle
+```
+
+So the user's core economic intuition is correct in a narrow accounting sense:
+
+> Once CAPEX and first-fill cost are sunk, cycle 100 can be dramatically cheaper than cycle 1.
+
+But chemistry does not automatically become cheaper with age.
+
+Fouling, corrosion, pumping, regeneration, electrode loss, membrane replacement and separation losses remain recurring costs and may worsen over time.
+
+The desired working medium is therefore not merely abundant. It is:
+
+```text
+abundant
++ cheap to prepare
++ highly retained
++ durable over many cycles
++ low-toxicity
++ easy to recover
++ low parasitic energy
++ compatible with existing equipment
+```
+
+---
+
+## 7. Multi-resource recovery priorities
+
+### 7.1 Bulk first
+
+The largest streams deserve first screening:
+
+- sodium/chloride
+- magnesium
+- calcium
+- potassium.
+
+They may not have the highest unit value, but the network throughput is enormous.
+
+### 7.2 Magnesium and calcium as a carbon lane
+
+2026 desalination literature specifically identifies Mg2+ and Ca2+ rich brine as a feedstock for CO2 mineralization.
+
+This can potentially combine:
+
+```text
+brine treatment
++ CO2 utilization
++ Mg/Ca recovery
++ stable carbonate/mineral products
+```
+
+The pH requirement is process-specific and must be separated from the final marine-discharge pH target.
+
+### 7.3 Trace and strategic species
+
+Candidate high-value lanes include:
+
+- lithium
+- bromine
+- boron
+- rubidium/cesium where locally justified
+- deuterium
+- other strategic trace resources.
+
+Natural uranium can be tracked as a resource-recovery item in public-record analysis, but this paper does not specify enrichment or nuclear-fuel-cycle operations.
+
+### 7.4 Do not flood the market
+
+At network scale, a successful recovery technology can produce enough material to change the commodity market.
+
+Every economic simulation therefore needs:
+
+```text
+capture fraction
+purity
+local offtake
+global market size
+price elasticity
+transport cost
+storage cost
+product qualification
+```
+
+A technically successful pathway can destroy its own revenue assumption by oversupplying the market.
+
+---
+
+## 8. Ocean-regeneration lane
+
+The ocean-regeneration claim has to be harder than "we filtered seawater."
+
+### 8.1 Microplastics
+
+Membrane systems can retain microplastics effectively, and recent SWRO plant studies report substantial removal.
+
+But conventional desalination transfers many retained materials into reject streams.
+
+Therefore the net-positive path is:
+
+```text
+capture
+ -> quantify
+ -> prevent re-entry
+ -> recycle / destroy / securely sequester
+ -> measure downstream concentration
+```
+
+### 8.2 Persistent toxins
+
+RO and NF can reject contaminants such as PFAS, but again they usually **concentrate rather than destroy** them.
+
+A toxin-removal claim requires a second-stage concentrate treatment or secure disposal pathway.
+
+For this white paper:
+
+```text
+permeate cleanliness != ocean regeneration
+pollutant concentration != pollutant destruction
+```
+
+### 8.3 pH and carbonate chemistry
+
+There is no single "optimal ocean pH" that should be imposed across every coastline.
+
+Coastal pH varies naturally and interacts with:
+
+- temperature
+- salinity
+- alkalinity
+- dissolved inorganic carbon
+- biological activity
+- local geology
+- upwelling
+- freshwater inflow.
+
+The regenerative objective should therefore be:
+
+> keep discharge chemistry inside an ecologically acceptable, site-specific envelope and avoid worsening local acidification or carbonate stress.
+
+Minimum measurements should include:
+
+- pH on an appropriate seawater scale
+- total alkalinity
+- dissolved inorganic carbon where feasible
+- temperature
+- salinity
+- dissolved oxygen
+- relevant saturation-state proxies for sensitive habitats.
+
+### 8.4 Brine is not automatically bad and ZLD is not automatically good
+
+Direct brine discharge can harm local ecosystems when salinity, temperature or treatment chemicals exceed ecological tolerance.
+
+But zero-liquid discharge can itself be energy- and material-intensive.
+
+The objective is not a slogan.
+
+It is:
+
+```text
+minimum total lifecycle ecological burden
+subject to downstream water-quality protection
+```
+
+---
+
+## 9. ORCS / 12-layer flywheel bridge
+
+ORCS already contains the strongest discipline this paper needs:
+
+- evidence classes
+- local-first circularity
+- water, power and heat accounting
+- downstream-water-quality protection
+- gated deployment
+- public receipts.
+
+The historical 12-layer flywheel is therefore referenced rather than reprinted.
+
+For this seawater-refinery application, use the following **paper-specific 12-domain scorecard**:
+
+| Domain | Example metric |
+|---|---|
+| 1. Compute productivity | useful compute/J, uptime, co-location benefit |
+| 2. Energy | net kWh, avoided kWh, grid burden |
+| 3. Water | freshwater delivered, water recovered, local water balance |
+| 4. Heat | useful heat recovery, rejected thermal load |
+| 5. Materials | tonnes recovered, working-medium retention |
+| 6. Carbon | lifecycle CO2e, mineralized CO2 |
+| 7. Ocean/coastal ecology | salinity plume, benthic/plankton indicators |
+| 8. Pollution/toxins/plastics | captured and permanently removed pollutant mass |
+| 9. Food/agriculture interface | usable water/heat/nutrients without ecosystem transfer |
+| 10. Jobs/community | local jobs, skills, affordability, public benefit |
+| 11. Resilience/resource security | import substitution, redundancy, emergency water |
+| 12. Governance/provenance | source coverage, independent monitoring, auditability |
+
+A facility does not become "net positive" because the scores are added together.
+
+Each domain gets:
+
+```text
+baseline
+intervention
+measured delta
+uncertainty
+externalities
+pass/fail gate
+```
+
+A major failure in ecology or downstream water quality can veto an aggregate positive score.
+
+---
+
+## 10. One-year deployment model
+
+The one-year model should be run at two levels.
+
+### Level A — facility
+
+For each plant:
+
+```text
+product water/day
+feed water/day
+brine/day
+actual SEC
+existing pressure recovery
+major-ion profile
+pollutant profile
+candidate recovery technologies
+CAPEX
+OPEX
+component lifetime
+working-medium retention
+product price / offtake
+ecological baseline
+```
+
+### Level B — network
+
+Aggregate:
+
+```text
+annual water
+annual electrical load
+annual recovered energy
+annual resource inventory
+annual captured product
+annual working-medium burn
+annual component replacement
+annual waste/residual mass
+annual revenue
+annual ecological delta
+```
+
+The simulator already contains:
+
+- a one-year closed-loop burn-rate model
+- material reuse versus open-loop comparator
+- the 167-project mass balance
+- salinity-gradient energy sensitivities
+- evidence boundaries.
+
+Actual CAPEX/payback remains intentionally blank until plant- and technology-specific public records are inserted.
+
+---
+
+## 11. Proposed pilot strategy
+
+Do **not** retrofit all 167 projects simultaneously.
+
+### Phase 1 — digital twin of all 167
+
+Populate public values and mark unknowns.
+
+Generate site-specific Pareto fronts for:
+
+```text
+energy
+resource recovery
+water
+carbon
+ecology
+cost
+```
+
+### Phase 2 — choose 3-5 representative plants
+
+Selection criteria:
+
+- different seawater chemistry
+- different climate/temperature
+- different desalination technology
+- different industrial cluster
+- proximity to treated wastewater or other low-salinity streams
+- different ecological sensitivity.
+
+### Phase 3 — common modular skid
+
+A reusable experimental interface could expose:
+
+```text
+sample / bypass port
+brine characterization
+pressure-recovery interface
+branching manifold
+bulk-ion cartridge
+trace-ion cartridge
+H/D research cartridge
+SGE cartridge
+carbonation cartridge
+pollutant-capture cartridge
+ecological telemetry
+energy/cost/provenance ledger
+```
+
+The point of standardization is not identical chemistry. It is identical **measurement and interfaces**.
+
+### Phase 4 — scale only winners
+
+A module scales when it shows:
+
+- positive net economics or justified public value
+- acceptable lifecycle energy
+- stable component life
+- low working-medium burn
+- no downstream-water-quality degradation
+- independently reproduced results.
+
+---
+
+## 12. Data-center or city-power interpretation
+
+This architecture can support a data center or city in three different ways:
+
+1. **direct energy** from pressure recovery, salinity gradients and other verified gradients
+2. **cost offsets** from material/resource co-products
+3. **infrastructure symbiosis** through water, heat, storage, compute and grid coordination.
+
+These should never be collapsed into one "power output" number.
+
+Under the current sensitivity, salinity-gradient power alone is roughly tens of MW, not enough to justify a claim of independently powering a 100-MW hyperscale AI facility.
+
+A realistic net-positive compute campus would therefore combine:
+
+- conventional grid/renewables
+- high-efficiency compute
+- pressure/blue-energy recovery
+- storage
+- circular water
+- useful heat routing
+- resource-refinery revenues
+- ecological remediation.
+
+The refinery's value is **system-level leverage**, not one miraculous generator.
+
+---
+
+## 13. DeepSeek refinement request
+
+The attached DeepSeek packet asks for public-record correction of:
+
+- the actual 167-project list
+- SWRO versus thermal/hybrid technology
+- individual capacities
+- recovery ratios
+- existing pressure-recovery devices
+- brine-utilization projects
+- actual strategic-element recovery
+- CAPEX/OPEX
+- local power prices
+- membrane/sorbent lifetimes
+- brine chemistry
+- pollutant handling
+- ecological requirements
+- market/offtake constraints
+- candidate pilot sites
+- any public evidence for the Atlas-node identity.
+
+The requested evidence vocabulary is:
+
+```text
+MEASURED
+REPORTED
+DERIVED
+MODELED
+UNKNOWN
+```
+
+If a number cannot be sourced, it stays UNKNOWN.
+
+---
+
+## 14. Falsification criteria
+
+Downgrade or reject a module when:
+
+- it has negative net energy after auxiliaries
+- recovered-product revenue does not cover its incremental lifecycle cost
+- capture merely transfers pollution into an untreated residual
+- ecological burden worsens
+- a resource lane destroys a more valuable downstream gradient
+- working-medium loss defeats closed-loop economics
+- fouling/corrosion destroys component life
+- local feed chemistry defeats selectivity
+- commodity-market saturation destroys price assumptions
+- the standardized architecture cannot accommodate site heterogeneity.
+
+This is a deliberate feature.
+
+A failed lane teaches the refinery where **not** to route matter.
+
+---
+
+## 15. Conclusion
+
+The interesting breakthrough is not any single recovered isotope.
+
+It is the possibility that existing desalination infrastructure can become a **state-transition foundry**:
+
+```text
+water -> freshwater
+pressure -> recovered work
+salinity gradient -> electrical work
+ions -> products / reusable media
+Mg/Ca -> minerals + possible CO2 storage
+pollutants -> captured residuals
+heat -> useful process input
+data -> better routing and ecological control
+```
+
+Almost every component already exists somewhere in laboratory, pilot or industrial practice.
+
+The novel question is whether assembling them behind one transparent mass-energy-cost-ecology ledger creates a better system than today's one-product desalination model.
+
+That is exactly what the simulation is designed to find out.
+
+> **Do not ask seawater for one product. Ask every state transition to pay rent — in water, energy, materials, carbon, ecology, resilience, or information.**
+
+---
+
+## References
+
+1. National Development and Reform Commission of China. *Seawater Desalination Industry Development Action Plan*, 2026. https://www.ndrc.gov.cn/xwdt/tzgg/202607/t20260716_1406549.html
+2. NDRC policy summary, 2026: >4.5 Mt/day national desalination capacity target by 2030. https://www.ndrc.gov.cn/xxgk/jd/jd/202607/t20260717_1406556.html
+3. People's Daily / Tianjin Economic-Technological Development Area summary of the 2025 National Seawater Utilization Report: 167 projects, 3.077 Mt/day at end-2025. https://www.teda.gov.cn/contents/13/112306.html
+4. Xinhua public reporting on Chinese strategic-element extraction from seawater, 2026. https://ydyl.gansu.gov.cn/enggsydyl/jmhz/202606/t20260609_37187.html
+5. Morgante et al. *A global outlook of the desalination industry and state-of-the-art technologies for brine valorisation*. Desalination 621 (2026) 119718. https://doi.org/10.1016/j.desal.2025.119718
+6. Suu et al. *Mineral carbonation in seawater desalination brine: Review and future perspective*. Desalination 629 (2026) 120112. https://doi.org/10.1016/j.desal.2026.120112
+7. Ye et al. *Performance of a mixing entropy battery alternately flushed with wastewater effluent and seawater*. Energy & Environmental Science (2014). https://doi.org/10.1039/C4EE01034E
+8. Yip et al. *Salinity gradient energy is not a competitive source of renewable energy*. Joule (2023), critical system-level analysis.
+9. Barrientos-Riosalido et al. *Removal and reincorporation of microplastics at several stages of two SWRO plants*. Desalination (2025) 119329. https://doi.org/10.1016/j.desal.2025.119329
+10. Ali et al. *PFAS separation by NF and RO membranes: critical evaluation*. Environmental Science: Water Research & Technology (2024). https://doi.org/10.1039/D4EW00066H
+11. US EPA. *Guidelines for Measuring Changes in Seawater pH and Associated Carbonate Chemistry in Coastal Environments*. https://www.epa.gov/sciencematters/guidelines-measuring-changes-seawater-ph
+12. IEA. *Understanding the energy-AI nexus*. Representative hyperscale AI data center >=100 MW. https://www.iea.org/reports/energy-and-ai/understanding-the-energy-ai-nexus
+13. Atlas Lattice / ORCS repository. *Open Regenerative Compute Standard README* and metrics-and-verification stack. https://github.com/atlaslattice/open-regenerative-compute-standard
+14. Atlas Lattice provenance. *STARS-OCEAN-002*, 2026-08-14.
