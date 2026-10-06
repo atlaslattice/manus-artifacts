@@ -1,0 +1,420 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "atlaslattice.physics_profile.v0.1",
+  "title": "Atlas Lattice Physics Profile v0.1",
+  "description": "Typed nuclear/atomic property profile attached to an H-S-N node. This is not a coordinate system. It extends lattice_coordinate.schema.v0.3 and preserves H##.S##.N## as the Atlas entry address.",
+  "type": "object",
+  "additionalProperties": false,
+
+  "x-atlas-status": {
+    "artifact_status": "CANDIDATE",
+    "canon_status": "NOT_CANON",
+    "deployment_status": "NOT_DEPLOYED",
+    "authority_scope": "NONE"
+  },
+
+  "x-atlas-parent-contract": {
+    "schema": "lattice_coordinate.schema.v0.3",
+    "coordinate_grammar": "H##.S##.N##",
+    "attachment": "physics_profile attached to an H-S-N node",
+    "note": "H.S.N is the address. The physics profile describes a physical object/state associated with that address."
+  },
+
+  "required": [
+    "coordinate_id",
+    "profile_status",
+    "nuclide",
+    "charge_states"
+  ],
+
+  "properties": {
+    "coordinate_id": {
+      "type": "string",
+      "pattern": "^H(0[1-9]|1[0-2])\\.S(0[1-9]|1[0-2])\\.N(0[1-9]|1[0-2])$",
+      "description": "Atlas public entry coordinate. Must remain House-Sphere-Node."
+    },
+
+    "profile_status": {
+      "$ref": "#/$defs/evidence_status",
+      "default": "CANDIDATE"
+    },
+
+    "geometry": {
+      "type": "object",
+      "description": "Optional Atlas geometry alignment. These fields organize relationships; they do not constitute physical proof.",
+      "additionalProperties": false,
+      "properties": {
+        "metatrons_cube_node": {
+          "type": ["string", "null"]
+        },
+        "rainbow_yin_yang_polarity": {
+          "type": ["string", "null"]
+        },
+        "riemass_s_curve_position": {
+          "type": ["string", "null"],
+          "description": "Upstream spelling intentionally preserved for provenance compatibility. Any future correction should be handled through aliasing/version migration."
+        }
+      }
+    },
+
+    "nuclide": {
+      "type": "object",
+      "description": "Intrinsic or neutral-reference properties of one nuclide. These are stored once and shared across its charge states.",
+      "additionalProperties": false,
+      "required": ["Z", "N", "A"],
+      "properties": {
+        "nuclide_label": {
+          "type": ["string", "null"],
+          "description": "Human-readable label such as Re-187."
+        },
+        "element_symbol": {
+          "type": ["string", "null"]
+        },
+        "Z": {
+          "$ref": "#/$defs/atomic_number_property"
+        },
+        "N": {
+          "$ref": "#/$defs/neutron_number_property"
+        },
+        "A": {
+          "$ref": "#/$defs/mass_number_property"
+        },
+        "J_pi": {
+          "$ref": "#/$defs/property",
+          "description": "Ground-state nuclear spin/parity."
+        },
+        "atomic_mass": {
+          "$ref": "#/$defs/property"
+        },
+        "mass_excess": {
+          "$ref": "#/$defs/property"
+        },
+        "binding_energy_per_nucleon": {
+          "$ref": "#/$defs/property"
+        },
+        "neutron_separation_energy": {
+          "$ref": "#/$defs/property"
+        },
+        "proton_separation_energy": {
+          "$ref": "#/$defs/property"
+        },
+        "magnetic_moment": {
+          "$ref": "#/$defs/property"
+        },
+        "quadrupole_moment": {
+          "$ref": "#/$defs/property"
+        },
+        "charge_radius": {
+          "$ref": "#/$defs/property"
+        },
+        "deformation_beta2": {
+          "$ref": "#/$defs/property"
+        },
+        "shell_closure_indicator": {
+          "$ref": "#/$defs/property"
+        },
+        "neutral_half_life": {
+          "$ref": "#/$defs/property"
+        },
+        "neutral_decay_modes": {
+          "$ref": "#/$defs/property"
+        },
+        "Q_beta_minus_atomic": {
+          "$ref": "#/$defs/property",
+          "description": "Neutral-atom beta-minus Q value or evaluated equivalent."
+        },
+        "Q_beta_plus_atomic": {
+          "$ref": "#/$defs/property"
+        },
+        "Q_electron_capture_atomic": {
+          "$ref": "#/$defs/property"
+        },
+        "Q_alpha": {
+          "$ref": "#/$defs/property"
+        }
+      }
+    },
+
+    "charge_states": {
+      "type": "array",
+      "description": "Charge-state-dependent atomic/nuclear behavior. Nuclide-level properties are not duplicated here.",
+      "items": {
+        "$ref": "#/$defs/charge_state"
+      }
+    },
+
+    "projections": {
+      "type": "object",
+      "description": "Non-nuclear Atlas projections. Presence here does not imply a validated physical coupling to the nuclear profile.",
+      "additionalProperties": false,
+      "properties": {
+        "spectral_profile": {
+          "$ref": "#/$defs/projection"
+        },
+        "acoustic_profile": {
+          "$ref": "#/$defs/projection"
+        },
+        "material_profile": {
+          "$ref": "#/$defs/projection"
+        }
+      }
+    }
+  },
+
+  "$defs": {
+    "evidence_status": {
+      "type": "string",
+      "enum": [
+        "MEASURED",
+        "EVALUATED",
+        "DERIVED",
+        "REFERENCE",
+        "SIMULATED",
+        "PROPOSED",
+        "DISPUTED",
+        "SUPERSEDED",
+        "QUARANTINED",
+        "CANDIDATE"
+      ]
+    },
+
+    "uncertainty": {
+      "oneOf": [
+        {
+          "type": "number",
+          "description": "Symmetric uncertainty in the same unit as the value unless otherwise stated."
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["minus", "plus"],
+          "properties": {
+            "minus": { "type": "number" },
+            "plus": { "type": "number" },
+            "confidence_level": { "type": ["number", "null"] },
+            "notes": { "type": ["string", "null"] }
+          },
+          "description": "Asymmetric uncertainty."
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+
+    "property": {
+      "type": "object",
+      "description": "Scientific value plus its evidence/provenance envelope. Claims carry state; document existence alone does not establish truth.",
+      "additionalProperties": false,
+      "required": ["evidence_status"],
+      "properties": {
+        "value": {
+          "type": [
+            "number",
+            "string",
+            "boolean",
+            "array",
+            "object",
+            "null"
+          ]
+        },
+        "uncertainty": {
+          "$ref": "#/$defs/uncertainty"
+        },
+        "unit": {
+          "type": ["string", "null"]
+        },
+        "evidence_status": {
+          "$ref": "#/$defs/evidence_status"
+        },
+        "source_uri": {
+          "type": ["string", "null"]
+        },
+        "source_locator": {
+          "type": ["string", "null"],
+          "description": "Optional DOI, dataset record, table, page, line, accession ID, or local receipt identifier."
+        },
+        "claim_id": {
+          "type": ["string", "null"]
+        },
+        "method": {
+          "type": ["string", "null"]
+        },
+        "derived_from": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": []
+        },
+        "timestamp": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "notes": {
+          "type": ["string", "null"]
+        }
+      }
+    },
+
+    "atomic_number_property": {
+      "allOf": [
+        { "$ref": "#/$defs/property" },
+        {
+          "properties": {
+            "value": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 200
+            }
+          }
+        }
+      ]
+    },
+
+    "neutron_number_property": {
+      "allOf": [
+        { "$ref": "#/$defs/property" },
+        {
+          "properties": {
+            "value": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 400
+            }
+          }
+        }
+      ]
+    },
+
+    "mass_number_property": {
+      "allOf": [
+        { "$ref": "#/$defs/property" },
+        {
+          "properties": {
+            "value": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 600
+            }
+          }
+        }
+      ]
+    },
+
+    "charge_number_property": {
+      "allOf": [
+        { "$ref": "#/$defs/property" },
+        {
+          "properties": {
+            "value": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 200
+            }
+          }
+        }
+      ]
+    },
+
+    "charge_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["q"],
+      "properties": {
+        "charge_state_label": {
+          "type": ["string", "null"],
+          "description": "Human-readable label such as Re-187^75+."
+        },
+        "q": {
+          "$ref": "#/$defs/charge_number_property"
+        },
+        "electron_count": {
+          "$ref": "#/$defs/property",
+          "description": "Derived nominal bound-electron count, normally Z-q."
+        },
+        "ionization_fraction": {
+          "$ref": "#/$defs/property",
+          "description": "Derived q/Z where defined."
+        },
+        "bare_nucleus": {
+          "$ref": "#/$defs/property",
+          "description": "Derived true when q=Z."
+        },
+        "electron_configuration": {
+          "$ref": "#/$defs/property"
+        },
+        "total_electronic_binding_energy": {
+          "$ref": "#/$defs/property"
+        },
+        "electron_capture_available": {
+          "$ref": "#/$defs/property"
+        },
+        "bound_state_beta_available": {
+          "$ref": "#/$defs/property"
+        },
+        "internal_conversion_available": {
+          "$ref": "#/$defs/property"
+        },
+        "half_life": {
+          "$ref": "#/$defs/property",
+          "description": "Charge-state-specific half-life."
+        },
+        "decay_modes": {
+          "$ref": "#/$defs/property"
+        },
+        "branching_ratios": {
+          "$ref": "#/$defs/property"
+        },
+        "effective_Q_values": {
+          "$ref": "#/$defs/property",
+          "description": "Charge-state-specific or derived decay energetics where evaluated."
+        },
+        "experimental_environment": {
+          "$ref": "#/$defs/property",
+          "description": "Storage ring, ion trap, plasma, beam, or other relevant measurement context."
+        },
+        "measurement_method": {
+          "$ref": "#/$defs/property"
+        }
+      }
+    },
+
+    "projection": {
+      "type": "object",
+      "description": "Non-nuclear Atlas projection. It must remain explicitly evidence-labelled and does not become a physical law by co-location in the lattice.",
+      "additionalProperties": false,
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "$ref": "#/$defs/evidence_status",
+          "default": "CANDIDATE"
+        },
+        "mapping": {
+          "type": ["object", "null"]
+        },
+        "notes": {
+          "type": ["string", "null"]
+        },
+        "source_uri": {
+          "type": ["string", "null"]
+        },
+        "source_locator": {
+          "type": ["string", "null"]
+        }
+      }
+    }
+  },
+
+  "x-atlas-invariants": [
+    "H.S.N remains the Atlas entry coordinate; physics_profile never replaces it.",
+    "A should equal Z+N when all three are populated.",
+    "For an ordinary positive ion or bare nucleus, q should satisfy 0 <= q <= Z.",
+    "electron_count should equal Z-q for the simple bound-electron representation used here.",
+    "ionization_fraction should equal q/Z when Z is nonzero.",
+    "Nuclide-level quantities are stored once rather than duplicated per charge state.",
+    "Every scientific property carries an evidence_status.",
+    "Non-nuclear projections remain CANDIDATE unless evidence explicitly supports a stronger status.",
+    "The upstream field name riemass_s_curve_position is preserved for lineage compatibility.",
+    "Contradictions and superseded values are preserved through provenance rather than silently overwritten.",
+    "Coordinate co-location does not by itself establish physical causation or coupling."
+  ]
+}
