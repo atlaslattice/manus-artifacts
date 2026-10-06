@@ -1,0 +1,163 @@
+{
+  "artifact_id": "DJK-INTEGRATED-NODE-PROFILE-v0.1",
+  "status": "PUBLIC_CANDIDATE_NON_CANON",
+  "study_classification": "TECHNICAL_FEASIBILITY_PLUS_CONDITIONAL_ECONOMICS",
+  "node_boundary": {
+    "concept": "Integrated energy-water-compute-port node",
+    "hsn_coordinate": "UNASSIGNED",
+    "hsn_rule": "Use H##.S##.N## only after an explicit taxonomy/coordinate assignment; do not invent a coordinate.",
+    "current_component_anchor": "DONGJIAKOU-NODE-001 desalination component",
+    "aggregate_claim_status": "PROPOSED_BOUNDARY"
+  },
+  "components": [
+    {
+      "component_id": "W01_DESAL",
+      "type": "desalination",
+      "evidence_profile": "EXISTING_RECEIPT_BACKED",
+      "current_runs": [
+        "RUN_0",
+        "RUN_0.2",
+        "RUN_1",
+        "RUN_2",
+        "RUN_3"
+      ],
+      "vetoes": [
+        "INV-19 downstream water quality",
+        "permit/discharge noncompliance",
+        "water-service failure"
+      ],
+      "regulatory_regime": [
+        "water",
+        "environment",
+        "PPP/contract"
+      ],
+      "contractual_basis": "PARTIAL_HISTORICAL_RECEIPTS"
+    },
+    {
+      "component_id": "G01_REGIONAL_GREEN",
+      "type": "generation",
+      "evidence_profile": "OFFICIAL_PLAN_REGIONAL_ACCESS_UNKNOWN",
+      "assets": [
+        "~214 MW wind planned around Qianwan/Dongjiakou",
+        "~81 MW PV planned around Qianwan/Dongjiakou",
+        "~5 MW Dongjiakou port-area distributed PV planned"
+      ],
+      "node001_access": "UNKNOWN",
+      "energy_credit": 0,
+      "regulatory_regime": [
+        "energy",
+        "direct-green connection",
+        "grid/interconnection"
+      ],
+      "contractual_basis": "UNKNOWN"
+    },
+    {
+      "component_id": "S01_ROOFTOP_PV",
+      "type": "generation",
+      "evidence_profile": "EXECUTED_TECHNICAL_SENSITIVITY",
+      "node_credit_rule": "measured PV may be allocated once only",
+      "regulatory_regime": [
+        "distributed generation",
+        "interconnection"
+      ],
+      "contractual_basis": "PROPOSED_SITE_LAYOUT"
+    },
+    {
+      "component_id": "B01_STORAGE",
+      "type": "storage",
+      "evidence_profile": "SPECIFIED_ZERO_CREDIT",
+      "asset_classes": [
+        "BESS",
+        "product-water storage",
+        "thermal storage"
+      ],
+      "credit": 0,
+      "gating_receipts": [
+        "hourly mismatch",
+        "physical capacity",
+        "efficiency/degradation",
+        "operating envelope"
+      ]
+    },
+    {
+      "component_id": "C01_COMPUTE",
+      "type": "compute_and_control_plane",
+      "evidence_profile": "EXECUTED_PARAMETRIC_TECHNICAL_SENSITIVITY",
+      "actuator_authority": "NONE",
+      "pilot_scale_kW_IT": [
+        100,
+        250
+      ],
+      "expansion_gates_kW_IT": [
+        500,
+        1000
+      ],
+      "vendor_architecture": {
+        "primary_eligible_local_family": "DeepSeek",
+        "local_challenger_failover": "Qwen3",
+        "optional_external_adversarial_audit": "OpenAI GPT",
+        "note": "Exact model/checkpoint versions are deployment-manifest state, not constitutional dependencies."
+      },
+      "vetoes": [
+        "INV-19",
+        "cybersecurity isolation failure",
+        "unapproved OT write path"
+      ],
+      "regulatory_regime": [
+        "compute/data",
+        "cybersecurity",
+        "energy"
+      ],
+      "contractual_basis": "PROPOSED"
+    },
+    {
+      "component_id": "P01_PORT_LOADS",
+      "type": "port_loads",
+      "evidence_profile": "REGIONAL_PLAN_EXISTS_LOAD_SET_UNRESOLVED",
+      "green_direct_eligibility": "UNKNOWN_FOR_SPECIFIC_LOADS",
+      "regulatory_regime": [
+        "port",
+        "energy",
+        "grid"
+      ],
+      "contractual_basis": "UNKNOWN"
+    },
+    {
+      "component_id": "GRID01",
+      "type": "grid_interface",
+      "evidence_profile": "POLICY_PATHWAY_VERIFIED_NODE_CONTRACT_UNKNOWN",
+      "functions": [
+        "import",
+        "export",
+        "multi-user direct-green",
+        "VPP participation"
+      ],
+      "regulatory_regime": [
+        "Shandong energy",
+        "grid",
+        "direct-green policy"
+      ],
+      "contractual_basis": "UNKNOWN"
+    }
+  ],
+  "accounting_rules": [
+    "Every component retains its own evidence profile and ledger.",
+    "Aggregate node benefit may not erase a component-level veto.",
+    "Cross-subsidy is reported explicitly; it is not renamed synergy.",
+    "Energy, water, carbon, heat, material, and revenue flows are conserved across component boundaries.",
+    "One physical kWh, m3, kg, or tonne may receive at most one primary accounting credit.",
+    "UNKNOWN remains UNKNOWN and is never backfilled from aggregate node performance."
+  ],
+  "node_veto_rule": "NODE_PASS requires every veto-bearing component to pass its own veto set. A profitable or low-carbon component cannot offset a failed ecological/safety/compliance veto elsewhere.",
+  "cross_subsidy_rule": "Report component standalone economics, transfer payments, and aggregate economics separately.",
+  "control_plane_rule": "AI recommendation -> deterministic validator -> human/operator approval -> PLC/SCADA. No LLM actuator authority.",
+  "green_direct_status": {
+    "official_regional_plan": "REPORTED",
+    "eligible_load_set_named_in_public_plan": false,
+    "Dongjiakou_desal_named_as_participant": false,
+    "compute_named_as_specific_project_participant": false,
+    "node_allocation_MW_MWh": "UNKNOWN",
+    "contract_price": "UNKNOWN",
+    "energy_credit": 0
+  }
+}

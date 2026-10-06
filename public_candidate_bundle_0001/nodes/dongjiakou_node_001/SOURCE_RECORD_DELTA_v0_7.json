@@ -1,0 +1,63 @@
+{
+  "artifact_id": "DJK-NODE-001-SOURCE-DELTA-v0.7",
+  "status": "PUBLIC_CANDIDATE_NON_CANON",
+  "parent": "SOURCE_RECORD_DELTA_v0_6.json",
+  "search_date": "2026-10-06",
+  "purpose": "DeepSeek-requested search for published eligible-load set under Qianwan/Dongjiakou green-direct plan and formal integrated-node boundary.",
+  "source_records": [
+    {
+      "source_record_id": "DJK-SR-0038",
+      "field": "Qingdao_green_direct_load_scope_followup",
+      "source_name": "Qingdao Municipal Government — Port Green Transformation Three-Year Action Plan (2026-2028)",
+      "source_uri": "https://www.qingdao.gov.cn/zwgk/xxgk/jtys/gkml/gwfg/202609/t20260918_10733879.shtml",
+      "status": "REPORTED_OFFICIAL_PLAN_SCOPE",
+      "raw_record": {
+        "planned_wind_MW_approx": 214,
+        "planned_PV_MW_approx": 81,
+        "dedicated_lines": true,
+        "intended_supply": "Qianwan and Dongjiakou port areas",
+        "existing_port_loads_policy_opportunity": true,
+        "source_grid_load_storage": true,
+        "virtual_power_plant_target_by_2028": 1,
+        "published_end_user_list": false
+      },
+      "qualifier": "Official plan defines port-area supply scope but does not name Dongjiakou desalination or a compute block as enrolled users."
+    },
+    {
+      "source_record_id": "DJK-SR-0039",
+      "field": "multi_user_green_direct_eligible_user_scope",
+      "source_name": "NDRC / NEA — 2026 multi-user green-power direct-connection notice",
+      "source_uri": "https://www.nea.gov.cn/20260520/9e1c4277ce324c8ab82a84da98da7980/c.html",
+      "status": "REPORTED_NATIONAL_POLICY",
+      "raw_record": {
+        "green_demand_users_supported": true,
+        "industrial_and_zero_carbon_parks_supported": true,
+        "compute_facilities_priority_supported": true,
+        "self_consumed_share_of_available_generation_min": 0.6,
+        "direct_green_share_of_total_load_min": 0.3,
+        "direct_green_share_of_total_load_min_2030": 0.35
+      },
+      "qualifier": "Policy eligibility does not establish Node-001 participation, allocation or contract."
+    },
+    {
+      "source_record_id": "DJK-SR-0040",
+      "field": "eligible_load_set_search_result",
+      "status": "SEARCH_NOT_FOUND",
+      "search_result": {
+        "Dongjiakou_desalination_named_in_green_direct_user_list": false,
+        "named_compute_project_in_green_direct_user_list": false,
+        "MW_or_MWh_allocation_to_Node001": false,
+        "dedicated_line_to_desal_meter": false,
+        "PPA_or_direct_green_price": false
+      },
+      "qualifier": "Negative receipt-search result. Public plan remains area-level, not end-user-level."
+    }
+  ],
+  "promotion_effect": {
+    "integrated_node_boundary": "PROPOSED_AND_FORMALIZED",
+    "regional_green_direct_supply_scope": "VERIFIED_AT_PORT_AREA_LEVEL",
+    "Node001_green_direct_access": "UNKNOWN",
+    "Node001_green_direct_credit": 0,
+    "specific_eligible_load_set": "NOT_PUBLICLY_RESOLVED"
+  }
+}
