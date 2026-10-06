@@ -1,0 +1,132 @@
+{
+  "artifact_id": "DJK-NODE-001-RUN-3-COMPUTE-v0.2",
+  "status": "EXECUTED_PARAMETRIC_TECHNICAL_SENSITIVITY_NON_CANON",
+  "supersedes": "RUN_3_COMPUTE_v0_1.json",
+  "study_classification": "TECHNICAL_FEASIBILITY_PLUS_CONDITIONAL_ECONOMICS",
+  "baseline": {
+    "operating_year": 2025,
+    "UF_RO_process_energy_GWh": 39.446,
+    "average_UF_RO_process_power_MW": 4.5029680365,
+    "S01_A_PV_GWh_year": 2.70619355,
+    "S01_B_PV_GWh_year": 2.917982611,
+    "Shandong_2023_average_grid_factor_kgCO2_kWh": 0.6191,
+    "current_effective_tariff_CNY_kWh": "UNKNOWN"
+  },
+  "compute_equations": {
+    "IT_energy_GWh": "P_IT_MW * 8.76 * L",
+    "facility_energy_GWh": "IT_energy_GWh * PUE",
+    "location_average_grid_CO2_t": "grid_energy_GWh * 1000 * 0.6191",
+    "useful_heat_upper_bound_GWhth": "IT_energy_GWh",
+    "useful_heat_credit": "IT_energy_GWh * f_capture * f_temperature_match * f_temporal_match",
+    "verified_HP_electricity_saved_GWh": "min(Q_useful,Q_CIP_demand)/COP_HP",
+    "node_net_electric_delta_GWh": "new_incremental_clean_generation + verified_process_electric_savings + verified_HP_electricity_savings - compute_facility_energy"
+  },
+  "unknown_parameters": {
+    "L_IT_load_factor": "UNKNOWN_0_TO_1",
+    "actual_PUE": "UNKNOWN_GE_1",
+    "WUE": "UNKNOWN",
+    "compute_cooling_water_source": "UNKNOWN",
+    "hourly_solar_compute_overlap": "UNKNOWN",
+    "PV_curtailment": "NOT_ESTABLISHED",
+    "useful_heat_capture_fraction": "UNKNOWN",
+    "coolant_supply_return_temperature": "UNKNOWN",
+    "CIP_temperature_setpoint": "UNKNOWN",
+    "CIP_thermal_demand": "UNKNOWN",
+    "heat_pump_COP": "UNKNOWN"
+  },
+  "reference_scenario": {
+    "PUE": 1.25,
+    "status": "SECTOR_POLICY_REFERENCE_NOT_NODE_RECEIPT",
+    "source_record_ids": [
+      "DJK-SR-0026",
+      "DJK-SR-0027"
+    ],
+    "load_factor_L": 1,
+    "warning": "Used only to expose facility-level load that the PUE=1 thermodynamic floor hides."
+  },
+  "tiers": [
+    {
+      "case_id": "C01-PILOT-100",
+      "IT_capacity_kW": 100,
+      "IT_energy_GWh_at_L1": 0.876,
+      "facility_energy_GWh_at_L1_PUE1": 0.876,
+      "facility_energy_GWh_at_L1_PUE1_25": 1.095,
+      "process_energy_share_at_PUE1": 0.0222075749,
+      "process_energy_share_at_PUE1_25": 0.0277594686,
+      "S01_A_annual_energy_ratio_to_facility_at_PUE1_25": 2.4714096347,
+      "S01_B_annual_energy_ratio_to_facility_at_PUE1_25": 2.6648243023,
+      "grid_only_location_CO2_t_at_PUE1_25": 677.9145,
+      "IT_heat_first_law_upper_bound_GWhth": 0.876,
+      "deployment_role": "recommended first commissioning tier"
+    },
+    {
+      "case_id": "C01-PILOT-250",
+      "IT_capacity_kW": 250,
+      "IT_energy_GWh_at_L1": 2.19,
+      "facility_energy_GWh_at_L1_PUE1": 2.19,
+      "facility_energy_GWh_at_L1_PUE1_25": 2.7375,
+      "process_energy_share_at_PUE1": 0.0555189373,
+      "process_energy_share_at_PUE1_25": 0.0693986716,
+      "S01_A_annual_energy_ratio_to_facility_at_PUE1_25": 0.9885638539,
+      "S01_B_annual_energy_ratio_to_facility_at_PUE1_25": 1.0659297209,
+      "grid_only_location_CO2_t_at_PUE1_25": 1694.78625,
+      "IT_heat_first_law_upper_bound_GWhth": 2.19,
+      "deployment_role": "earned expansion tier; annual PV energy magnitude is near facility energy at PUE=1.25, but hourly matching is UNKNOWN"
+    },
+    {
+      "case_id": "C01-500",
+      "IT_capacity_kW": 500,
+      "IT_energy_GWh_at_L1": 4.38,
+      "facility_energy_GWh_at_L1_PUE1": 4.38,
+      "facility_energy_GWh_at_L1_PUE1_25": 5.475,
+      "process_energy_share_at_PUE1": 0.1110378746,
+      "process_energy_share_at_PUE1_25": 0.1387973432,
+      "S01_A_annual_energy_ratio_to_facility_at_PUE1_25": 0.4942819269,
+      "S01_B_annual_energy_ratio_to_facility_at_PUE1_25": 0.5329648605,
+      "grid_only_location_CO2_t_at_PUE1_25": 3389.5725,
+      "IT_heat_first_law_upper_bound_GWhth": 4.38,
+      "deployment_role": "gated scale case"
+    },
+    {
+      "case_id": "C01-1000",
+      "IT_capacity_kW": 1000,
+      "IT_energy_GWh_at_L1": 8.76,
+      "facility_energy_GWh_at_L1_PUE1": 8.76,
+      "facility_energy_GWh_at_L1_PUE1_25": 10.95,
+      "process_energy_share_at_PUE1": 0.2220757491,
+      "process_energy_share_at_PUE1_25": 0.2775946864,
+      "S01_A_annual_energy_ratio_to_facility_at_PUE1_25": 0.2471409635,
+      "S01_B_annual_energy_ratio_to_facility_at_PUE1_25": 0.2664824302,
+      "grid_only_location_CO2_t_at_PUE1_25": 6779.145,
+      "IT_heat_first_law_upper_bound_GWhth": 8.76,
+      "deployment_role": "later gated scale case"
+    }
+  ],
+  "anti_double_counting": {
+    "rule": "PV_credit_compute + PV_credit_desalination <= measured_PV_generation",
+    "existing_S01_PV_is_incremental_to_node": false,
+    "note": "Routing existing S01 generation to compute changes attribution. It does not make C01 electrically neutral unless verified curtailment is captured or new generation/savings are added."
+  },
+  "heat_credit": {
+    "baseline_useful_heat_GWhth": 0,
+    "reason": "No public CIP setpoint, thermal duty, heat-pump COP map, coolant temperature or temporal overlap receipt.",
+    "low_grade_heat_rule": "Thermal quantity is not equal to electric value. Only displaced measured heat-pump electricity or another verified sink earns electric credit."
+  },
+  "ORCS_gates": {
+    "PUE": "MEASURE",
+    "WUE": "MEASURE",
+    "CUE": "MEASURE_WITH_BOUNDARY",
+    "INV_19_Water_Cohesion": "VETO",
+    "downstream_water_quality": "NO_DEGRADATION_REQUIRED",
+    "evidence_classes": "verified/derived/proposed",
+    "model_service_benefit": "ZERO_UNTIL_BEFORE_AFTER_MEASURED"
+  },
+  "result": {
+    "C01_is_energy_source": false,
+    "C01_net_positive": "NOT_PROVEN",
+    "recommended_first_tier": "100 kW IT",
+    "recommended_next_tier": "250 kW IT after pilot gates",
+    "larger_tiers": "500 kW and 1 MW are gated",
+    "surprising_but_bounded_finding": "At the 1.25 PUE reference, a full-load 250 kW IT facility consumes about 2.738 GWh/year, close in annual-energy magnitude to S01's 2.706-2.918 GWh/year. This is not hourly self-powering and cannot double-count PV."
+  }
+}

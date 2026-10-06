@@ -1,0 +1,42 @@
+{
+  "artifact_id": "DJK-C01-MODEL-SOURCE-SNAPSHOT-v0.2",
+  "status": "PUBLIC_REFERENCE_SNAPSHOT_NON_CANON",
+  "supersedes": "C01_MODEL_SOURCE_SNAPSHOT_v0_1.json",
+  "snapshot_date": "2026-10-06",
+  "sources": [
+    {
+      "family": "DeepSeek",
+      "uri": "https://api-docs.deepseek.com/updates/",
+      "current_refs": [
+        "DeepSeek-V4.1-Flash / deepseek-flash",
+        "DeepSeek-V4-Pro / deepseek-v4-pro"
+      ],
+      "evidence": "official current docs"
+    },
+    {
+      "family": "Qwen",
+      "uri": "https://qwenlm.github.io/blog/qwen3/",
+      "current_refs": [
+        "Qwen3 open-weight family"
+      ],
+      "evidence": "official Qwen release; local checkpoint remains benchmark-dependent"
+    },
+    {
+      "family": "Qwen hosted",
+      "uri": "https://www.alibabacloud.com/help/en/model-studio/newly-released-models",
+      "current_refs": [
+        "qwen3.8-max-0902"
+      ],
+      "evidence": "Alibaba Cloud current model reference; not asserted open-weight/local"
+    },
+    {
+      "family": "OpenAI GPT",
+      "uri": "https://openai.com/index/gpt-5-6/",
+      "current_refs": [
+        "GPT-5.6 Sol"
+      ],
+      "evidence": "official current OpenAI release; optional external audit lane"
+    }
+  ],
+  "correction_note": "v0.1 included unreconciled GPT model names. v0.2 replaces them with currently verified official references and keeps the architecture version-replaceable."
+}

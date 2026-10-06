@@ -1,0 +1,117 @@
+{
+  "artifact_id": "DJK-C01-MODEL-ROUTING-POLICY-v0.2",
+  "status": "PROPOSED_OPERATIONS_ARCHITECTURE_NON_CANON",
+  "supersedes": "C01_MODEL_ROUTING_POLICY_v0_1.json",
+  "snapshot_date": "2026-10-06",
+  "principles": [
+    "Use deterministic/statistical control and forecasting where they outperform or out-efficiency LLMs.",
+    "Use LLMs for semantic reasoning, document interpretation, diagnostics, planning and explanation—not for direct actuation.",
+    "Primary means first eligible advisory candidate, not monopoly share or authority.",
+    "Cross-model agreement is not evidence; measurements and receipts are evidence."
+  ],
+  "authority_boundary": {
+    "LLM_actuator_authority": "NONE",
+    "OT_write_credentials_for_models": "NONE",
+    "physical_control_authority": "existing PLC/SCADA, hard interlocks, approved deterministic control",
+    "recommendation_path": "model -> deterministic constraint validator -> operator approval -> PLC/SCADA",
+    "emergency_behavior": "compute/advisory plane may fail without preventing plant operation",
+    "model_self_modification_of_control_policy": "PROHIBITED"
+  },
+  "network_boundary": {
+    "OT_network": "segmented",
+    "AI_data_plane": "read-only telemetry replica or approved broker",
+    "remote_model_default_data": "redacted/aggregated/non-secret",
+    "raw_OT_data_egress": "DENY_BY_DEFAULT",
+    "credentials": "never exposed in model context",
+    "external_calls": "logged and policy-gated"
+  },
+  "model_roles": [
+    {
+      "role": "PRIMARY_ELIGIBLE_LOCAL_ADVISORY_FAMILY",
+      "family": "DeepSeek",
+      "current_reference": [
+        "DeepSeek-V4.1-Flash (deepseek-flash)",
+        "DeepSeek-V4-Pro (deepseek-v4-pro)"
+      ],
+      "tasks": [
+        "Chinese technical-language operations copilot",
+        "maintenance-log parsing",
+        "telemetry summarization",
+        "digital-twin reasoning",
+        "root-cause hypothesis generation",
+        "tool/code workflows"
+      ],
+      "note": "Current official references; exact deployment checkpoint/API/local configuration must be pinned in the deployment manifest."
+    },
+    {
+      "role": "LOCAL_CHALLENGER_FAILOVER",
+      "family": "Qwen3",
+      "current_reference": [
+        "Qwen3 open-weight family for local benchmark",
+        "Qwen3.8 hosted family as optional current reference"
+      ],
+      "tasks": [
+        "independent replay",
+        "multimodal inspection",
+        "offline continuity",
+        "tool-use challenger",
+        "disagreement detection"
+      ],
+      "note": "Local and hosted Qwen lanes are distinct; exact checkpoint selected by measured accuracy, latency, energy and data-residency fit."
+    },
+    {
+      "role": "OPTIONAL_EXTERNAL_ADVERSARIAL_AUDIT",
+      "family": "OpenAI GPT",
+      "current_reference": [
+        "GPT-5.6 Sol"
+      ],
+      "tasks": [
+        "independent engineering audit",
+        "code review",
+        "claim hygiene",
+        "hard-case cross-check",
+        "adversarial review of optimization proposals"
+      ],
+      "note": "Optional, non-critical-path, data-egress gated; no raw OT data by default."
+    }
+  ],
+  "ORCS_vendor_diversity": {
+    "invariant_reference": "INV-7 / INV-7c",
+    "max_single_vendor_capability_weighted_routing_share": 0.47,
+    "implication": "DeepSeek may be the plurality/default eligible local family while the router prevents single-vendor monoculture. Qwen and an approved independent third lane provide fallback/cross-validation when policy permits.",
+    "fallback_count_target": 2,
+    "exact_routing_shares": "MEASURED_NOT_PREASSIGNED"
+  },
+  "routing_features": [
+    "task class",
+    "data sensitivity/residency",
+    "latency SLA",
+    "measured task accuracy",
+    "false-negative rate for anomaly tasks",
+    "energy per correct task",
+    "joules per token where meaningful",
+    "tool-call reliability",
+    "model/version health",
+    "vendor-share cap",
+    "cost only after tariff/model pricing boundaries are known"
+  ],
+  "operational_logging": [
+    "timestamp",
+    "task class",
+    "data-boundary label",
+    "exact model/version/checkpoint",
+    "hardware or remote provider",
+    "prompt/template hash",
+    "input snapshot hash",
+    "tool calls",
+    "output hash",
+    "latency",
+    "energy if measurable",
+    "confidence/uncertainty",
+    "challenger result",
+    "operator disposition",
+    "downstream physical outcome if any"
+  ],
+  "disagreement_policy": "Disagreement escalates; agreement still does not authorize physical action.",
+  "benchmark_rule": "No family is permanently privileged. Routing priority can change only after benchmark receipts and policy review."
+}

@@ -1,0 +1,99 @@
+{
+  "artifact_id": "DJK-NODE-001-SOURCE-DELTA-v0.5",
+  "status": "PUBLIC_CANDIDATE_NON_CANON",
+  "parent": "SOURCE_RECORD_DELTA_v0_4.json",
+  "search_date": "2026-10-06",
+  "purpose": "C01 compute rigor pass: PUE reference, Qingdao regional-compute context, current model-family snapshot, and thermal-sink boundary.",
+  "source_records": [
+    {
+      "source_record_id": "DJK-SR-0026",
+      "field": "PUE_reference",
+      "source_name": "MIIT — 2025 national green computing facilities",
+      "source_uri": "https://www.miit.gov.cn/jgsj/jns/nyjy/art/2025/art_7caf70f0c83b459a956e0aaa1c16ad00.html",
+      "status": "REPORTED_POLICY_AND_SECTOR_REFERENCE",
+      "raw_record": {
+        "national_green_computing_facilities_average_PUE_2025": 1.25
+      },
+      "qualifier": "Sector reference only. Not a Dongjiakou C01 measured PUE."
+    },
+    {
+      "source_record_id": "DJK-SR-0027",
+      "field": "PUE_policy_target",
+      "source_name": "China national data-center energy-efficiency standard revision materials",
+      "source_uri": "https://std.samr.gov.cn/gb/search/gbDetailed?id=2E4DD4D8E2E84A4BE06397BE0A0AE354",
+      "status": "REPORTED_POLICY_CONTEXT",
+      "raw_record": {
+        "new_or_expanded_large_ultra_large_data_center_PUE_target_2025_max": 1.25,
+        "national_hub_data_center_project_PUE_target_max": 1.2,
+        "Shandong_plan_new_data_center_PUE_target_2025_max": 1.25
+      },
+      "qualifier": "Policy/standard context, not Node-001 performance."
+    },
+    {
+      "source_record_id": "DJK-SR-0028",
+      "field": "Qingdao_regional_compute_context",
+      "source_name": "Digital Qingdao 2026 Action Plan",
+      "source_uri": "https://www.qingdao.gov.cn/zwgk/xxgk/dsjj/gkml/gwfg/202604/t20260413_10559916.shtml",
+      "status": "REPORTED_POLICY_CONTEXT",
+      "raw_record": {
+        "standard_racks_target_min": 67000,
+        "intelligent_compute_share_target_min": 0.6,
+        "supports_heterogeneous_compute": true,
+        "supports_green_power_direct_connection": true,
+        "supports_source_grid_load_storage_pilots": true
+      },
+      "qualifier": "Regional policy context only; does not imply approval or deployment at Dongjiakou."
+    },
+    {
+      "source_record_id": "DJK-SR-0029",
+      "field": "DeepSeek_current_model_snapshot",
+      "source_name": "DeepSeek API change log and model docs",
+      "source_uri": "https://api-docs.deepseek.com/updates/",
+      "status": "REPORTED_CURRENT_MODEL_REFERENCE",
+      "raw_record": {
+        "deepseek_flash": "DeepSeek-V4.1-Flash",
+        "deepseek_v4_pro": "DeepSeek-V4-Pro",
+        "tool_calls": true,
+        "responses_api": true
+      },
+      "qualifier": "Dated implementation snapshot; model routing architecture remains replaceable."
+    },
+    {
+      "source_record_id": "DJK-SR-0030",
+      "field": "Qwen_model_snapshot",
+      "source_name": "Qwen / Alibaba Cloud Model Studio",
+      "source_uri": "https://www.alibabacloud.com/help/en/model-studio/newly-released-models",
+      "status": "REPORTED_CURRENT_MODEL_REFERENCE",
+      "raw_record": {
+        "hosted_current_reference": "qwen3.8-max-0902",
+        "local_open_weight_family_reference": "Qwen3 open-weight family; exact checkpoint to be hardware/energy benchmarked"
+      },
+      "qualifier": "Hosted Qwen3.8 and local open-weight Qwen3 are distinct deployment lanes; do not conflate them."
+    },
+    {
+      "source_record_id": "DJK-SR-0031",
+      "field": "OpenAI_model_snapshot",
+      "source_name": "OpenAI GPT-5.6 release",
+      "source_uri": "https://openai.com/index/gpt-5-6/",
+      "status": "REPORTED_CURRENT_MODEL_REFERENCE",
+      "raw_record": {
+        "current_external_audit_reference": "GPT-5.6 Sol"
+      },
+      "qualifier": "Optional external audit reference only; no direct plant control and no default raw-OT data egress."
+    },
+    {
+      "source_record_id": "DJK-SR-0032",
+      "field": "CIP_thermal_sink_status",
+      "source_name": "Dongjiakou chemical-cleaning air-source heat-pump procurement",
+      "source_uri": "https://ggzy.qingdao.gov.cn/c/TradeDetals-ZtbShow/182320-5021-0-0-0/f60d4e1e-a8a3-412c-baaf-4b2f96de30d4-B03CE5B6FC1D2D3C2D5FCEBC39AA2406.html",
+      "status": "REPORTED_PROCUREMENT_ACTIVE",
+      "raw_record": {
+        "heat_pump_units": 4,
+        "insulated_tanks": 3,
+        "tank_volume_m3_each": 30,
+        "tender_ceiling_CNY": 860000
+      },
+      "qualifier": "Public notice does not expose CIP setpoint temperature, heat-pump COP map, thermal duty or schedule; C01 useful-heat credit remains zero."
+    }
+  ]
+}
