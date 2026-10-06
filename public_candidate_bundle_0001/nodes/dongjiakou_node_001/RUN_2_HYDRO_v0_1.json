@@ -1,0 +1,62 @@
+{
+  "artifact_id": "DJK-NODE-001-RUN-2-HYDRO-v0.1",
+  "status": "EXECUTED_PARAMETRIC_SENSITIVITY_NON_CANON",
+  "baseline": {
+    "H_available_m": "UNKNOWN",
+    "hydro_credit_GWh_year": 0,
+    "reason": "No public Dongjiakou receipt identifies unused dissipated head."
+  },
+  "stream_basis": {
+    "stream": "2025 reported product-water volume",
+    "annual_volume_m3": 17930000,
+    "average_flow_m3_s": 0.56855619,
+    "note": "Does not assert product-water pressure is disposable."
+  },
+  "physics": {
+    "equation": "E = rho*g*V*H*eta",
+    "rho_kg_m3": 1000,
+    "g_m_s2": 9.80665,
+    "ideal_energy_GWh_per_m_head_at_eta_1": 0.0488425651,
+    "illustrative_energy_GWh_per_m_head_at_eta_0_8": 0.0390740521,
+    "illustrative_average_power_kW_per_m_head_at_eta_0_8": 4.46050823,
+    "illustrative_process_energy_fraction_per_m_head_at_eta_0_8": 0.0009905707
+  },
+  "illustrative_eta_0_8_sensitivity": [
+    {
+      "H_m": 1,
+      "annual_energy_GWh": 0.0390740521,
+      "average_power_kW": 4.46050823,
+      "fraction_of_2025_UF_RO_process_energy": 0.0009905707
+    },
+    {
+      "H_m": 5,
+      "annual_energy_GWh": 0.1953702606,
+      "average_power_kW": 22.30254116,
+      "fraction_of_2025_UF_RO_process_energy": 0.0049528535
+    },
+    {
+      "H_m": 10,
+      "annual_energy_GWh": 0.3907405211,
+      "average_power_kW": 44.60508232,
+      "fraction_of_2025_UF_RO_process_energy": 0.0099057071
+    },
+    {
+      "H_m": 20,
+      "annual_energy_GWh": 0.7814810422,
+      "average_power_kW": 89.21016464,
+      "fraction_of_2025_UF_RO_process_energy": 0.0198114141
+    },
+    {
+      "H_m": 50,
+      "annual_energy_GWh": 1.9537026056,
+      "average_power_kW": 223.02541159,
+      "fraction_of_2025_UF_RO_process_energy": 0.0495285354
+    }
+  ],
+  "interpretation": [
+    "At eta=0.8, every verified 10 m of genuinely unused head on the 2025 product-volume stream would correspond to about 0.391 GWh/year, roughly 0.99% of 2025 UF+RO process electricity.",
+    "Sensitivity table is a transfer function, not evidence that these heads exist.",
+    "Intake seawater is reported to gravity-flow into the pump suction pool; 400-630 m SWRO pump head is motor-supplied and excluded.",
+    "Current monetary savings remain UNKNOWN."
+  ]
+}

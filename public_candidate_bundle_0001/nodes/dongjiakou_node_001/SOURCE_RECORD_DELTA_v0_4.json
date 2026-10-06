@@ -1,0 +1,122 @@
+{
+  "artifact_id": "DJK-NODE-001-SOURCE-DELTA-v0.4",
+  "status": "PUBLIC_CANDIDATE_NON_CANON",
+  "parent": "SOURCE_RECORD_DELTA_v0_3.json",
+  "search_date": "2026-10-06",
+  "purpose": "DeepSeek-requested second-layer receipt search: pricing-policy, subsidy/audit, and hydraulic/EIA layers; plus H01 hydro gating.",
+  "new_records": [
+    {
+      "source_record_id": "DJK-SR-0019",
+      "field": "annual_product_supply_2021",
+      "status": "REPORTED_HISTORICAL",
+      "source_name": "Qingdao Water Group 2022 financing memorandum",
+      "source_uri": "https://pdf.dfcfw.com/pdf/H2_AN202210131579120402_1.pdf",
+      "raw_record": {
+        "actual_average_supply_m3_day_2021": 33400,
+        "design_capacity_m3_day": 100000
+      },
+      "derived": {
+        "annual_supply_m3_2021": 12191000,
+        "utilization_fraction_U_2021": 0.334
+      },
+      "note": "Adds a third dated utilization point. Financing disclosure also confirms PPP minimum-volume structure; do not treat as a current operating contract."
+    },
+    {
+      "source_record_id": "DJK-SR-0020",
+      "field": "historical_plant_level_sec",
+      "status": "REPORTED_HISTORICAL_PLANT_LEVEL_BOUNDARY_NOT_METERED",
+      "source_name": "Qingdao Daily / Guanhai — desalination Qingdao pathway",
+      "source_uri": "https://epaper.guanhai.com.cn/conpaper/qdrb/html/2024-10/12/content_144590_1378386.htm",
+      "raw_record": {
+        "reported_electricity_kWh_per_m3": 2.5,
+        "reporting_year": 2024,
+        "wording": "Dongjiakou plant electricity consumption per tonne reduced to 2.5 kWh"
+      },
+      "note": "Plant-level wording, but not an exposed fence-line meter boundary. Do not subtract from later 2.2 kWh/m3 UF+RO to infer current delta_aux."
+    },
+    {
+      "source_record_id": "DJK-SR-0021",
+      "field": "electricity_policy_context",
+      "status": "REPORTED_POLICY",
+      "source_name": "Shandong policy on seawater desalination and comprehensive utilization",
+      "source_uri": "https://m.sd.gov.cn/jpaas-jpolicy-web-server/front/info/detail?iid=17ccd4cddb8c43629dad972ce8ac182e",
+      "raw_record": {
+        "two_part_tariff_demand_capacity_charge_waiver_through": "2025-12-31",
+        "eligible_desalination_market_transaction_support": true
+      },
+      "note": "Supports leaving 2026 effective plant settlement UNKNOWN unless a plant receipt is found."
+    },
+    {
+      "source_record_id": "DJK-SR-0022",
+      "field": "municipal_subsidy_context",
+      "status": "REPORTED_MUNICIPAL_AGGREGATE_NOT_PLANT_ALLOCATED",
+      "source_name": "Qingdao municipal 2025 budget",
+      "source_uri": "https://www.qingdao.gov.cn/zwgk/zdgk/czxx/szfyjs/czys/202502/P020250227340443129972.pdf",
+      "raw_record": {
+        "city_seawater_desalination_operating_subsidy_budget_CNY_2025": 188000000
+      },
+      "note": "City-wide context only. No Dongjiakou allocation inferred."
+    },
+    {
+      "source_record_id": "DJK-SR-0023",
+      "field": "intake_hydraulic_boundary",
+      "status": "REPORTED_SECONDARY",
+      "source_name": "Dongjiakou project detail disclosure",
+      "source_uri": "https://www.sohu.com/a/520576936_528099",
+      "raw_record": {
+        "intake_pipe_length_km": 1.7,
+        "intake_pipe_nominal_diameter_mm": 1600,
+        "intake_mode": "nearshore open intake",
+        "hydraulic_note": "seawater reported to flow by gravity into the intake-pump suction pool"
+      },
+      "note": "Does not establish harvestable head."
+    },
+    {
+      "source_record_id": "DJK-SR-0024",
+      "field": "RO_high_pressure_pump_design",
+      "status": "REPORTED_ENGINEERING_DESIGN",
+      "source_name": "Industrial Water Treatment 2020 — Dongjiakou equipment selection",
+      "source_uri": "https://www.iwt.cn/article/2020/1005-829X/20200926.shtml",
+      "raw_record": {
+        "SWRO_high_pressure_pump_count": 5,
+        "pump_flow_m3_h_each": 920,
+        "motor_power_kW_each": 2100,
+        "selected_pump_efficiency_fraction": 0.861,
+        "operating_head_m_range": [
+          400,
+          630
+        ],
+        "design_energy_kWh_m3": 3.51,
+        "direct_operating_cost_share": {
+          "electricity": 0.69,
+          "chemicals": 0.12,
+          "membrane_replacement": 0.08,
+          "maintenance": 0.07,
+          "management": 0.04
+        }
+      },
+      "note": "Motor-supplied RO process pressure; explicitly excluded from H01 hydro recovery."
+    },
+    {
+      "source_record_id": "DJK-SR-0025",
+      "field": "planned_intake_relocation",
+      "status": "REPORTED_PLANNED_INFRASTRUCTURE",
+      "source_name": "Qingdao public-resources intake relocation project",
+      "source_uri": "https://ggzy.qingdao.gov.cn/c/TradeDetals-ZtbShow/171328-5021-0-0-0/78fcc342-cd09-4ae0-a2c8-f30b2453754f-B03CE5B6FC1D2D3C2D5FCEBC39AA2406.html",
+      "raw_record": {
+        "new_intake_length_m": 1565,
+        "design_intake_tonnes_day": 840000,
+        "desalination_master_plan_product_capacity_tonnes_day": 300000
+      },
+      "note": "Planned/headroom infrastructure; no public unused-head value exposed."
+    }
+  ],
+  "search_outcomes": {
+    "current_2026_tariff": "NOT_FOUND",
+    "whole_site_SEC": "PARTIALLY_CLARIFIED_BUT_CURRENT_UNKNOWN",
+    "current_recovery": "NOT_FOUND",
+    "current_brine_chemistry": "NOT_FOUND",
+    "hydraulic_unused_head": "NOT_FOUND",
+    "plant_specific_2024_2025_subsidy_audit": "NOT_FOUND"
+  }
+}
