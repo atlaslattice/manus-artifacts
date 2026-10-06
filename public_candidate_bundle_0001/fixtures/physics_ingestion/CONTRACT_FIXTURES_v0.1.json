@@ -1,0 +1,63 @@
+{
+  "fixture_set": "atlaslattice.physics_ingestion.contract_fixtures.v0.1",
+  "status": "SYNTHETIC_ONLY",
+  "warning": "No value in this file is admissible as scientific evidence.",
+  "cases": [
+    {
+      "case_id": "valid_symmetric_uncertainty",
+      "expected": "VALID",
+      "property": {
+        "value": 10.0,
+        "uncertainty": 0.2,
+        "unit": "s",
+        "evidence_status": "MEASURED",
+        "source_record_refs": ["fixture:measurement:001"]
+      }
+    },
+    {
+      "case_id": "valid_asymmetric_uncertainty",
+      "expected": "VALID",
+      "property": {
+        "value": 10.0,
+        "uncertainty": {"minus": 0.3, "plus": 0.5},
+        "unit": "s",
+        "evidence_status": "MEASURED",
+        "source_record_refs": ["fixture:measurement:002"]
+      }
+    },
+    {
+      "case_id": "invalid_legacy_lower_upper_shape",
+      "expected": "INVALID",
+      "property": {
+        "value": 10.0,
+        "uncertainty": {"lower": 0.3, "upper": 0.5},
+        "unit": "s",
+        "evidence_status": "MEASURED",
+        "source_record_refs": ["fixture:measurement:003"]
+      }
+    },
+    {
+      "case_id": "valid_upper_limit_semantics",
+      "expected": "VALID",
+      "property": {
+        "value": 5.0,
+        "uncertainty": null,
+        "unit": "s",
+        "evidence_status": "EVALUATED",
+        "value_relation": "UPPER_LIMIT",
+        "source_record_refs": ["fixture:evaluation:001"]
+      }
+    },
+    {
+      "case_id": "identity_field",
+      "expected": "VALID",
+      "property": {
+        "value": 2,
+        "uncertainty": null,
+        "unit": null,
+        "evidence_status": "IDENTITY",
+        "source_record_refs": ["fixture:identity:he"]
+      }
+    }
+  ]
+}
