@@ -1,0 +1,96 @@
+{
+  "artifact_id": "DJK-NODE-001-SOURCE-DELTA-v0.6",
+  "status": "PUBLIC_CANDIDATE_NON_CANON",
+  "parent": "SOURCE_RECORD_DELTA_v0_5.json",
+  "search_date": "2026-10-06",
+  "purpose": "Regional green-power receipt pass + coincidence/BESS gating after C01 Run 3.",
+  "source_records": [
+    {
+      "source_record_id": "DJK-SR-0033",
+      "field": "Qingdao_port_green_direct_plan",
+      "source_name": "Qingdao Municipal Government — Qingdao Port Green Transformation Three-Year Action Plan (2026-2028)",
+      "source_uri": "https://www.qingdao.gov.cn/zwgk/xxgk/jtys/gkml/gwfg/202609/t20260918_10733879.shtml",
+      "status": "REPORTED_OFFICIAL_PLANNED_REGIONAL_INFRASTRUCTURE",
+      "raw_record": {
+        "Qianwan_Dongjiakou_peripheral_wind_MW_approx": 214,
+        "Qianwan_Dongjiakou_peripheral_PV_MW_approx": 81,
+        "dedicated_transmission_lines_planned": true,
+        "intended_supply": "Qianwan and Dongjiakou port areas",
+        "green_direct_project_target": "strive to begin implementation by 2028",
+        "Qianwan_north_wind_MW": 20.1,
+        "Qianwan_wind_target_annual_generation_kWh_min": 30000000,
+        "new_distributed_PV_total_MW_min": 15,
+        "Dongjiakou_port_PV_MW_approx": 5,
+        "virtual_power_plant_target_count_by_2028": 1,
+        "architecture": "source-grid-load-storage integrated supply/use"
+      },
+      "qualifier": "Verifies the regional port plan. Does not establish that desalination Node-001 has an allocation, interconnection, PPA, or right to use the dedicated line."
+    },
+    {
+      "source_record_id": "DJK-SR-0034",
+      "field": "national_multi_user_green_direct_policy",
+      "source_name": "NDRC / National Energy Administration — Multi-user green power direct connection notice (2026)",
+      "source_uri": "https://www.nea.gov.cn/20260520/9e1c4277ce324c8ab82a84da98da7980/c.html",
+      "status": "REPORTED_NATIONAL_POLICY",
+      "raw_record": {
+        "multiple_legal_entity_users_permitted": true,
+        "existing_load_green_demand_users_permitted": true,
+        "industrial_and_zero_carbon_parks_permitted": true,
+        "compute_facilities_priority_support": true,
+        "annual_self_consumed_fraction_of_available_generation_min": 0.6,
+        "direct_green_fraction_of_total_load_min": 0.3,
+        "direct_green_fraction_of_total_load_min_2030": 0.35
+      },
+      "qualifier": "Policy pathway only; not Node-001 project approval."
+    },
+    {
+      "source_record_id": "DJK-SR-0035",
+      "field": "Shandong_green_direct_scope",
+      "source_name": "Shandong 2026 green-direct policy implementation context",
+      "source_uri": "https://www.sdxc.gov.cn/sdfb/fbsy/202608/t20260819_18033322.htm",
+      "status": "REPORTED_PROVINCIAL_POLICY_CONTEXT",
+      "raw_record": {
+        "coastal_key_port_existing_loads_supported": true,
+        "compute_infrastructure_supported": true,
+        "green_demand_key_industrial_users_supported": true,
+        "multi_user_green_direct_supported": true
+      },
+      "qualifier": "Makes a port + desalination + compute multi-user concept policy-plausible, not approved."
+    },
+    {
+      "source_record_id": "DJK-SR-0036",
+      "field": "Shandong_renewable_system_context",
+      "source_name": "Shandong government press-conference reporting — July 2026 installed renewable capacity",
+      "source_uri": "https://news.10jqka.com.cn/20260818/c679041159.shtml",
+      "status": "REPORTED_PROVINCIAL_SYSTEM_CONTEXT",
+      "raw_record": {
+        "Shandong_PV_capacity_MW_2026_07": 97354,
+        "Shandong_wind_capacity_MW_2026_07": 34228,
+        "non_fossil_capacity_MW_2026_07": 146000,
+        "non_fossil_share_total_capacity": 0.558
+      },
+      "qualifier": "Regional context only; not a Node-001 supply receipt."
+    },
+    {
+      "source_record_id": "DJK-SR-0037",
+      "field": "Shandong_2026_renewable_mechanism_price_context",
+      "source_name": "Shandong DRC / Energy Bureau 2026 mechanism-price auction result",
+      "source_uri": "https://finance.sina.com.cn/wm/2026-03-17/doc-inhrhxzs3924560.shtml",
+      "status": "REPORTED_POLICY_PRICE_CONTEXT_NOT_NODE_PPA",
+      "raw_record": {
+        "wind_mechanism_price_CNY_kWh": 0.31,
+        "PV_mechanism_price_CNY_kWh": 0.261,
+        "deep_offshore_mechanism_price_CNY_kWh": 0.38
+      },
+      "qualifier": "Generator-side mechanism prices only. Not Node-001 retail/PPA/direct-connection price."
+    }
+  ],
+  "promotion_effect": {
+    "regional_214MW_wind_81MW_PV_claim": "VERIFIED_AS_OFFICIAL_PLAN",
+    "Node001_access_to_regional_green_direct": "UNKNOWN",
+    "Node001_green_power_contract_price": "UNKNOWN",
+    "S02_BESS_optimum": "UNKNOWN_PENDING_HOURLY_TRACES",
+    "coincidence_analysis": "SPECIFIABLE_NOW",
+    "energy_portfolio_classification": "TECHNICAL_FEASIBILITY_PLUS_CONDITIONAL_ECONOMICS"
+  }
+}

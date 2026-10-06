@@ -1,0 +1,144 @@
+# Dongjiakou Node-001 — Hourly Coincidence & Multi-Buffer Analysis Specification v0.1
+
+**Status:** SPECIFICATION / NON-CANON. No optimized dispatch or BESS size is claimed.
+
+## Why this exists
+
+Annual energy matching is not hourly matching. S01 rooftop PV, proposed regional wind/PV, flexible compute, water storage, thermal storage and BESS all operate on different time scales.
+
+The optimizer must consume a dated time series before it is allowed to recommend storage, compute dispatch, RO flexibility, or direct-green allocation.
+
+## Required time resolution
+
+Preferred: 15-minute telemetry. Minimum first pass: hourly data for a complete year.
+
+No synthetic weather/load profile may silently replace a missing plant trace.
+
+## Required time-series columns
+
+```text
+timestamp
+product_water_flow_m3_h
+feed_flow_m3_h
+UF_RO_power_kW
+whole_site_power_kW
+S01_rooftop_PV_AC_kW
+regional_green_direct_delivered_kW
+grid_import_kW
+grid_export_kW
+product_water_demand_m3_h
+product_water_storage_m3
+CIP_active
+CIP_thermal_demand_kWth
+compute_critical_IT_kW
+compute_flexible_IT_kW
+compute_facility_kW
+BESS_charge_kW
+BESS_discharge_kW
+BESS_SOC_kWh
+thermal_store_charge_kWth
+thermal_store_discharge_kWth
+thermal_store_state_kWhth
+curtailment_kW
+```
+
+## Hard constraints
+
+1. Delivered water must meet the required demand/service level.
+2. Product-water storage stays inside measured physical min/max.
+3. RO/UF ramp, minimum-load, start and water-quality constraints remain UNKNOWN until operator receipts exist; no flexibility credit is assigned before those bounds are known.
+4. BESS SOC, power, efficiency, degradation and reserve limits are explicit.
+5. Compute critical workloads are non-sheddable only when the service contract says so; flexible workloads move only within declared deadlines.
+6. Existing S01 PV is credited once: PV_to_desal + PV_to_compute + PV_to_BESS + PV_export + PV_curtailment = measured_PV.
+7. Regional green power is credited only after metered delivery/allocation.
+8. Ecology/INV-19 remains a veto.
+9. No energy is harvested twice from RO concentrate pressure already served by ERD.
+10. UNKNOWN parameters are not sampled.
+
+## Pareto objective
+
+Do not add unlike units into a scalar numerator.
+
+The base optimization returns a Pareto front over:
+
+```text
+minimize grid_import_kWh
+minimize location-based CO2 subject to factor boundary
+minimize curtailment_kWh
+minimize peak_grid_import_kW
+minimize BESS throughput/degradation burden
+minimize process starts/ramping/wear once measured
+minimize chemical use once causal model exists
+maximize water-service reliability
+maximize verified useful-heat utilization
+maximize verified regional compute service
+maximize resilience / islandable service where defined
+```
+
+Economics becomes an additional Pareto axis only after tariff, PPA, wheeling, demand-charge and asset-cost receipts exist.
+
+A scalar objective is allowed only when every term has an explicit normalization or monetization basis and the weights are published.
+
+## Multi-buffer portfolio
+
+Candidate flexibility resources:
+
+```text
+WATER BUFFER
+existing product-water storage + allowable process scheduling
+credit: ZERO until storage capacity, demand trace and RO flexibility bounds are measured
+
+BESS
+electrical shifting
+credit: ZERO until hourly mismatch exists and power/energy sizing is optimized from measured traces
+
+COMPUTE
+flexible non-critical workloads
+credit: ZERO until workload deadlines, facility load, PUE and actual dispatch are measured
+
+THERMAL
+CIP tanks / heat-pump system / optional thermal store
+credit: ZERO until temperature, duty, COP and schedule are measured
+
+GREEN DIRECT
+regional dedicated wind/PV delivery
+credit: ZERO until Node-001 is an approved participant and delivered kWh are metered
+```
+
+## Required outputs
+
+```text
+annual grid import/export
+renewable self-consumption
+renewable curtailment
+peak import
+BESS cycles / throughput
+water-storage utilization
+RO ramp/start count
+compute shifted kWh
+thermal recovered kWhth
+verified displaced heat-pump kWh
+ecological veto status
+source/receipt completeness
+```
+
+No single best portfolio is emitted while economic/preferences data are absent.
+
+## Falsification triggers
+
+Re-run immediately when any of these arrive:
+
+```text
+hourly/15-min UF+RO or whole-site power
+hourly product-water demand and tank level
+measured S01 PV output
+green-direct participation/contract/meter data
+BESS vendor power/energy/efficiency/degradation curve
+compute workload trace + PUE
+CIP thermal trace + COP
+RO allowable flexible-operating envelope
+```
+
+## Keeper
+
+**Optimize coincidence, not annual totals. Use the cheapest proven buffer; do not preselect the winner.**
