@@ -1,0 +1,83 @@
+{
+  "artifact_id": "DJK-C01-MODEL-ROUTING-POLICY-v0.1",
+  "status": "PROPOSED_OPERATIONS_ARCHITECTURE_NON_CANON",
+  "snapshot_date": "2026-10-06",
+  "principle": "Use the cheapest/lowest-energy model that meets a measured quality and latency gate; no model receives authority from brand identity.",
+  "authority_boundary": {
+    "LLM_actuator_authority": "NONE",
+    "deterministic_control": "PLC/SCADA and existing plant safety interlocks",
+    "setpoint_or_equipment_changes": "operator approval plus deterministic validation required",
+    "cross_model_consensus": "NOT_EVIDENCE",
+    "disagreement": "route to human review"
+  },
+  "proposed_roles": [
+    {
+      "role": "PRIMARY_LOCAL_OPERATIONS_REASONER",
+      "family": "DeepSeek",
+      "current_reference_models": [
+        "DeepSeek-V4.1-Flash / API id deepseek-flash",
+        "DeepSeek-V4-Pro / API id deepseek-v4-pro"
+      ],
+      "candidate_tasks": [
+        "Chinese-language operations support",
+        "telemetry summarization",
+        "maintenance-document parsing",
+        "digital-twin reasoning",
+        "code/tool workflows"
+      ],
+      "raw_operational_data_policy": "LOCAL/APPROVED PRC BOUNDARY BY DEFAULT"
+    },
+    {
+      "role": "LOCAL_OPEN_WEIGHT_CHALLENGER_AND_FAILOVER",
+      "family": "Qwen3.x",
+      "current_reference_models": [
+        "Qwen3.8 family; exact size/hardware to be benchmarked locally"
+      ],
+      "candidate_tasks": [
+        "independent replay",
+        "multimodal inspection",
+        "tool-use challenger",
+        "offline continuity",
+        "model disagreement detection"
+      ],
+      "raw_operational_data_policy": "LOCAL BY DEFAULT"
+    },
+    {
+      "role": "OPTIONAL_EXTERNAL_ADVERSARIAL_AUDITOR",
+      "family": "OpenAI GPT",
+      "current_reference_models": [
+        "GPT-6.1 Sol",
+        "GPT-6 Astra"
+      ],
+      "candidate_tasks": [
+        "independent audit",
+        "complex cross-check",
+        "code review",
+        "claim hygiene",
+        "red-team of proposed optimizations"
+      ],
+      "raw_operational_data_policy": "REDACTED/AGGREGATED ONLY UNLESS OPERATOR POLICY EXPLICITLY ALLOWS MORE"
+    }
+  ],
+  "routing_logic": [
+    "Routine high-volume tasks -> local efficient model after task-specific benchmark.",
+    "Hard anomaly/root-cause reasoning -> primary plus challenger independently.",
+    "Safety/equipment recommendation -> deterministic physics/constraint checks plus human operator.",
+    "External GPT audit is optional and never required for plant continuity.",
+    "Agreement among models does not promote a claim; receipts and measurements do.",
+    "Every run logs model family, exact model/version, hardware, prompt/template hash, tool calls, input-data boundary, output, energy if measurable, and operator disposition."
+  ],
+  "benchmark_requirements": [
+    "task accuracy / false-negative rate",
+    "latency",
+    "joules per task or joules per token where measurable",
+    "energy per correct task",
+    "tool-call reliability",
+    "hallucination/error rate",
+    "Chinese technical-language performance",
+    "offline failover behavior",
+    "data-residency compliance"
+  ],
+  "provider_endorsement_claim": false,
+  "note": "Model names are a dated implementation snapshot, not a permanent architectural dependency."
+}

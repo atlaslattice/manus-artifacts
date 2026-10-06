@@ -1,0 +1,130 @@
+{
+  "artifact_id": "DJK-NODE-001-RUN-3-COMPUTE-v0.1",
+  "status": "EXECUTED_PARAMETRIC_TECHNICAL_SENSITIVITY_NON_CANON",
+  "study_classification": "TECHNICAL_FEASIBILITY_PLUS_CONDITIONAL_ECONOMICS",
+  "baseline": {
+    "operating_year": 2025,
+    "UF_RO_process_energy_GWh": 39.446,
+    "derived_average_UF_RO_process_power_MW": 4.5029680365,
+    "S01_A_PV_GWh_year": 2.70619355,
+    "S01_A_PV_MWp": 2.41145616,
+    "S01_B_PV_GWh_year": 2.917982611,
+    "S01_B_PV_MWp": 2.600178816,
+    "current_effective_tariff_CNY_kWh": "UNKNOWN",
+    "current_whole_site_SEC_kWh_m3": "UNKNOWN"
+  },
+  "compute_boundary": {
+    "power_rating_boundary": "IT_CRITICAL_LOAD",
+    "IT_load_factor_L": "UNKNOWN_PARAMETER_0_TO_1",
+    "PUE": "UNKNOWN_PARAMETER_GE_1",
+    "WUE_L_per_kWh_IT": "UNKNOWN",
+    "useful_heat_recovery_fraction": "UNKNOWN",
+    "temporal_heat_sink_match_fraction": "UNKNOWN",
+    "temporal_PV_match_fraction": "UNKNOWN",
+    "regional_service_value": "UNKNOWN",
+    "plant_operational_savings": "UNKNOWN"
+  },
+  "design_cases": [
+    {
+      "case_id": "C01-PILOT-100",
+      "role": "recommended commissioning scale",
+      "IT_capacity_MW": 0.1,
+      "IT_energy_GWh_per_L": 0.876,
+      "facility_energy_GWh_formula": "0.876 * L * PUE",
+      "minimum_full_load_facility_energy_GWh_at_PUE_1": 0.876,
+      "minimum_full_load_fraction_of_2025_process_energy": 0.0222075749,
+      "S01_A_annual_energy_ratio_to_IT_at_L1_PUE1": 3.0892620434,
+      "S01_B_annual_energy_ratio_to_IT_at_L1_PUE1": 3.3310303779,
+      "location_average_CO2_t_per_year_per_L_PUE_using_2023_Shandong_factor": 542.3316,
+      "useful_IT_heat_upper_bound_GWhth_per_L": 0.876
+    },
+    {
+      "case_id": "C01-PILOT-250",
+      "role": "recommended commissioning/expansion scale",
+      "IT_capacity_MW": 0.25,
+      "IT_energy_GWh_per_L": 2.19,
+      "facility_energy_GWh_formula": "2.19 * L * PUE",
+      "minimum_full_load_facility_energy_GWh_at_PUE_1": 2.19,
+      "minimum_full_load_fraction_of_2025_process_energy": 0.0555189373,
+      "S01_A_annual_energy_ratio_to_IT_at_L1_PUE1": 1.2357048174,
+      "S01_B_annual_energy_ratio_to_IT_at_L1_PUE1": 1.3324121511,
+      "location_average_CO2_t_per_year_per_L_PUE_using_2023_Shandong_factor": 1355.829,
+      "useful_IT_heat_upper_bound_GWhth_per_L": 2.19
+    },
+    {
+      "case_id": "C01-500",
+      "role": "DeepSeek-requested design case",
+      "IT_capacity_MW": 0.5,
+      "IT_energy_GWh_per_L": 4.38,
+      "facility_energy_GWh_formula": "4.38 * L * PUE",
+      "minimum_full_load_facility_energy_GWh_at_PUE_1": 4.38,
+      "minimum_full_load_fraction_of_2025_process_energy": 0.1110378746,
+      "S01_A_annual_energy_ratio_to_IT_at_L1_PUE1": 0.6178524087,
+      "S01_B_annual_energy_ratio_to_IT_at_L1_PUE1": 0.6662060756,
+      "location_average_CO2_t_per_year_per_L_PUE_using_2023_Shandong_factor": 2711.658,
+      "useful_IT_heat_upper_bound_GWhth_per_L": 4.38
+    },
+    {
+      "case_id": "C01-1000",
+      "role": "DeepSeek-requested design case",
+      "IT_capacity_MW": 1,
+      "IT_energy_GWh_per_L": 8.76,
+      "facility_energy_GWh_formula": "8.76 * L * PUE",
+      "minimum_full_load_facility_energy_GWh_at_PUE_1": 8.76,
+      "minimum_full_load_fraction_of_2025_process_energy": 0.2220757491,
+      "S01_A_annual_energy_ratio_to_IT_at_L1_PUE1": 0.3089262043,
+      "S01_B_annual_energy_ratio_to_IT_at_L1_PUE1": 0.3331030378,
+      "location_average_CO2_t_per_year_per_L_PUE_using_2023_Shandong_factor": 5423.316,
+      "useful_IT_heat_upper_bound_GWhth_per_L": 8.76
+    }
+  ],
+  "solar_coupling_guard": {
+    "rule": "PV energy can be allocated between desalination and compute, but the same kWh cannot be credited to both.",
+    "allocation_parameter_alpha_compute": "UNKNOWN 0..1",
+    "temporal_matching_parameter_beta": "UNKNOWN 0..1",
+    "constraint": "PV_credit_compute + PV_credit_desalination <= measured_PV_generation",
+    "finding": "Routing existing S01 solar to compute does not create additional node energy. It changes attribution unless compute absorbs PV that would otherwise be curtailed.",
+    "curtailment_evidence": "NOT_FOUND",
+    "contextual_observation": "2025 average UF+RO process power (~4.50 MW) exceeds S01 PV DC nameplate (2.41-2.60 MWp), so PV curtailment is not established by current evidence; instantaneous plant load remains unknown."
+  },
+  "electrical_neutrality_gate": {
+    "equation": "incremental_clean_generation_GWh + verified_plant_energy_savings_GWh >= IT_capacity_MW*8.76*L*PUE",
+    "status": "UNPROVEN",
+    "note": "C01 is an electrical load, not an energy source."
+  },
+  "heat_integration": {
+    "candidate_sink": "2026 Dongjiakou chemical-cleaning heat-pump/CIP upgrade",
+    "useful_heat_equation": "Q_useful <= E_IT * capture_fraction * temperature_grade_match * temporal_sink_match",
+    "heat_pump_electricity_avoidance_equation": "E_HP_saved = min(Q_useful, Q_CIP_demand) / COP_HP",
+    "required_unknowns": [
+      "compute coolant supply/return temperature",
+      "CIP temperature requirement",
+      "CIP thermal demand",
+      "heat-pump COP map",
+      "CIP schedule",
+      "heat-exchanger approach temperature",
+      "capture fraction"
+    ],
+    "baseline_credit_GWhth": 0
+  },
+  "ORCS_metrics_required": [
+    "PUE with boundary statement",
+    "WUE plus water-source and discharge accounting",
+    "CUE / location and market carbon boundary",
+    "IT energy by workload",
+    "joules per token and/or energy per correct task for model workloads",
+    "useful recovered heat and sink receipt",
+    "regional-service output receipt",
+    "plant maintenance/energy savings attributable to compute",
+    "INV-19 downstream-water-quality veto"
+  ],
+  "baseline_benefit_credit": {
+    "desalination_energy_savings_from_AI_GWh": 0,
+    "useful_heat_GWhth": 0,
+    "social_value_CNY": 0,
+    "avoided_maintenance_CNY": 0,
+    "PV_curtailment_reduction_GWh": 0,
+    "note": "No compute benefit is credited before measurement."
+  },
+  "recommendation": "Commission at 100-250 kW IT load to measure PUE/WUE/workload energy/heat recovery/service value; scale to 0.5-1 MW only after gates close."
+}

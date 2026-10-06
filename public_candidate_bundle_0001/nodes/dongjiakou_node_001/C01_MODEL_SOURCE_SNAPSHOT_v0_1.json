@@ -1,0 +1,46 @@
+{
+  "artifact_id": "DJK-C01-MODEL-SOURCE-SNAPSHOT-v0.1",
+  "snapshot_date": "2026-10-06",
+  "status": "PUBLIC_REFERENCE_SNAPSHOT_NON_CANON",
+  "sources": [
+    {
+      "family": "DeepSeek",
+      "uri": "https://api-docs.deepseek.com/updates/",
+      "reported_current_refs": [
+        "DeepSeek-V4.1-Flash (deepseek-flash)",
+        "DeepSeek-V4-Pro (deepseek-v4-pro)"
+      ],
+      "capabilities_noted": [
+        "tool calls",
+        "Responses API",
+        "large-context API"
+      ],
+      "note": "Current API snapshot; architecture does not depend permanently on these versions."
+    },
+    {
+      "family": "Qwen3.x",
+      "uri": "https://github.com/QwenLM/Qwen3.8",
+      "reported_current_refs": [
+        "Qwen3.8 family"
+      ],
+      "capabilities_noted": [
+        "open weights",
+        "local deployment via common inference frameworks",
+        "agent/coding/multimodal family"
+      ],
+      "note": "Exact local checkpoint must be benchmarked against hardware and energy."
+    },
+    {
+      "family": "OpenAI GPT",
+      "uri": "https://developers.openai.com/api/docs/models",
+      "reported_current_refs": [
+        "GPT-6.1 Sol",
+        "GPT-6 Astra"
+      ],
+      "capabilities_noted": [
+        "tool-capable frontier API models"
+      ],
+      "note": "Optional external audit lane only; data-boundary approval required."
+    }
+  ]
+}
