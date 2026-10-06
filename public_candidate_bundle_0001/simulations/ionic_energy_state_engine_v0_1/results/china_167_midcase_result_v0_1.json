@@ -1,0 +1,77 @@
+{
+  "scenario_id": "CHINA_167_ATLAS_ASSUMPTION_MIDCASE_V0_1",
+  "status": "LOCAL_CALCULATION_RECEIPT_NOT_DEPLOYMENT_CLAIM",
+  "host": {
+    "projects": 167,
+    "aggregate_product_water_m3_day": 3077000,
+    "average_product_water_m3_day_per_project": 18425.149700598802
+  },
+  "ro_mass_balance_45_percent_recovery": {
+    "feed_m3_day": 6837777.777777778,
+    "product_m3_day": 3077000,
+    "brine_m3_day": 3760777.777777778
+  },
+  "incoming_species_inventory_not_recovery_claim_tonnes_day": {
+    "chloride": 129917.77777777778,
+    "sodium": 71796.66666666667,
+    "magnesium": 9231,
+    "calcium": 2803.488888888889,
+    "potassium": 2666.7333333333336,
+    "deuterium_equivalent": 222.2277777777778,
+    "lithium": 1.1624222222222225
+  },
+  "incoming_species_inventory_not_recovery_claim_tonnes_year": {
+    "chloride": 47419988.88888889,
+    "sodium": 26205783.333333336,
+    "magnesium": 3369315,
+    "calcium": 1023273.4444444445,
+    "potassium": 973357.6666666667,
+    "deuterium_equivalent": 81113.13888888889,
+    "lithium": 424.2841111111112
+  },
+  "desalination_load_reference": {
+    "2.5_kWh_m3": {
+      "GWh_day": 7.6925,
+      "average_MW": 320.5208333333333,
+      "TWh_year": 2.8077625
+    },
+    "3.0_kWh_m3": {
+      "GWh_day": 9.231,
+      "average_MW": 384.625,
+      "TWh_year": 3.369315
+    },
+    "4.0_kWh_m3": {
+      "GWh_day": 12.308,
+      "average_MW": 512.8333333333333,
+      "TWh_year": 4.49242
+    }
+  },
+  "matched_low_salinity_salinity_gradient_sensitivity": {
+    "0.10_kWh_m3": {
+      "GWh_day": 0.3077,
+      "average_MW": 12.820833333333335,
+      "TWh_year": 0.1123105
+    },
+    "0.20_kWh_m3": {
+      "GWh_day": 0.6154,
+      "average_MW": 25.64166666666667,
+      "TWh_year": 0.224621
+    },
+    "0.44_kWh_m3_experimental_reference": {
+      "GWh_day": 1.35388,
+      "average_MW": 56.41166666666666,
+      "TWh_year": 0.4941662
+    },
+    "0.65_kWh_m3_theoretical_reference": {
+      "GWh_day": 2.00005,
+      "average_MW": 83.33541666666667,
+      "TWh_year": 0.73001825
+    }
+  },
+  "boundaries": [
+    "All species values are feed-throughput inventory, not recoverable production.",
+    "45% water recovery is an illustrative network sensitivity.",
+    "Salinity-gradient values assume a matched low-salinity stream equal to product-water flow and are not a 167-site forecast.",
+    "The Atlas-node identity of the 167 facilities is a scenario assumption only."
+  ]
+}
