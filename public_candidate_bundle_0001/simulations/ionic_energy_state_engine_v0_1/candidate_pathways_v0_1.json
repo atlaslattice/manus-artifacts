@@ -1,0 +1,246 @@
+{
+  "schema_version": "0.1",
+  "status": "PUBLIC_CANDIDATE_NON_CANON",
+  "scale": [
+    "VERY_LOW",
+    "LOW",
+    "MEDIUM",
+    "HIGH",
+    "VERY_HIGH",
+    "UNKNOWN"
+  ],
+  "candidates": [
+    {
+      "candidate_id": "DESAL_BRINE_WASTEWATER_GRADIENT",
+      "working_medium": "mixed seawater ions, dominated by Na+/Cl- with Mg2+/SO4^2-/Ca2+/K+ contributions",
+      "energy_origin": "free energy of mixing between streams of different salinity",
+      "conversion_status": "SUPPORTED_ENGINEERING",
+      "resource_context": {
+        "source": "desalination brine + lower-salinity wastewater/freshwater",
+        "concentration_note": "uses bulk mixed-ion streams; no single-ion extraction required"
+      },
+      "screening_prior": {
+        "resource_abundance": "VERY_HIGH",
+        "circularity": "VERY_HIGH",
+        "renewable_gradient_access": "HIGH",
+        "extraction_burden": "LOW",
+        "ecological_burden": "MEDIUM",
+        "infrastructure_compatibility": "VERY_HIGH",
+        "technology_maturity": "HIGH"
+      },
+      "notes": [
+        "Attractive as a co-located energy-recovery lane because both streams can already exist at water infrastructure.",
+        "Net energy is system-specific; membrane resistance, concentration polarization, fouling, pumping and pretreatment must be debited."
+      ]
+    },
+    {
+      "candidate_id": "RIVER_SEAWATER_SALINITY_GRADIENT",
+      "working_medium": "mixed seawater ions",
+      "energy_origin": "natural free energy of mixing at freshwater-seawater interfaces",
+      "conversion_status": "SUPPORTED_ENGINEERING",
+      "resource_context": {
+        "source": "river water + seawater",
+        "concentration_note": "seawater total dissolved solids ~35 g/L; Na and Cl dominate"
+      },
+      "screening_prior": {
+        "resource_abundance": "VERY_HIGH",
+        "circularity": "HIGH",
+        "renewable_gradient_access": "VERY_HIGH",
+        "extraction_burden": "LOW",
+        "ecological_burden": "MEDIUM",
+        "infrastructure_compatibility": "MEDIUM",
+        "technology_maturity": "HIGH"
+      },
+      "notes": [
+        "Thermodynamically renewable as long as the hydrologic cycle re-establishes the salinity gradient.",
+        "Ecological score depends strongly on intake design, estuary disturbance, membrane fouling control and discharge."
+      ]
+    },
+    {
+      "candidate_id": "HUMIDITY_PROTON_TRANSPORT",
+      "working_medium": "protons and other mobile ions in hygroscopic materials",
+      "energy_origin": "humidity / moisture gradient driving ion diffusion and surface-charge redistribution",
+      "conversion_status": "SUPPORTED_RESEARCH",
+      "resource_context": {
+        "source": "ambient atmospheric water vapor",
+        "concentration_note": "working ions are generated/mobilized in hygroscopic media rather than mined as feedstock"
+      },
+      "screening_prior": {
+        "resource_abundance": "VERY_HIGH",
+        "circularity": "VERY_HIGH",
+        "renewable_gradient_access": "HIGH",
+        "extraction_burden": "VERY_LOW",
+        "ecological_burden": "LOW",
+        "infrastructure_compatibility": "MEDIUM",
+        "technology_maturity": "MEDIUM"
+      },
+      "notes": [
+        "Best established today for low-power harvesting and sensing rather than grid-scale power.",
+        "Useful control lane because the external energy source is explicit: atmospheric moisture gradient."
+      ]
+    },
+    {
+      "candidate_id": "MAGNESIUM_SEAWATER_IONIC_LANE",
+      "working_medium": "Mg2+ in seawater / brine",
+      "energy_origin": "candidate concentration, membrane, redox, or selective-ion gradients; pathway-specific",
+      "conversion_status": "CANDIDATE_PATHWAY",
+      "resource_context": {
+        "source": "seawater",
+        "concentration_mg_L": 1350
+      },
+      "screening_prior": {
+        "resource_abundance": "VERY_HIGH",
+        "circularity": "HIGH",
+        "renewable_gradient_access": "MEDIUM",
+        "extraction_burden": "MEDIUM",
+        "ecological_burden": "LOW",
+        "infrastructure_compatibility": "HIGH",
+        "technology_maturity": "MEDIUM"
+      },
+      "notes": [
+        "Abundant divalent ion; attractive for screening because much more concentrated than lithium.",
+        "A specific repeatable energy cycle must be defined before performance claims."
+      ]
+    },
+    {
+      "candidate_id": "DEUTERIUM_BEARING_WATER_LANE",
+      "working_medium": "HDO/D2O/deuterium-bearing aqueous chemistry, with optional D+ state after ionization",
+      "energy_origin": "UNRESOLVED for net energy; established isotope separation can prepare feedstock, while spin/ionic harvest remains hypothesis",
+      "conversion_status": "HYPOTHESIS_ENERGY_PATHWAY",
+      "resource_context": {
+        "source": "natural water / seawater",
+        "deuterium_fraction_note": "roughly 1.5e-4 of hydrogen atoms in VSMOW-scale water; ocean inventory is enormous but isotope is dilute",
+        "approximate_D_equivalent_g_per_m3": "30-35"
+      },
+      "screening_prior": {
+        "resource_abundance": "HIGH",
+        "circularity": "HIGH",
+        "renewable_gradient_access": "UNKNOWN",
+        "extraction_burden": "HIGH",
+        "ecological_burden": "LOW",
+        "infrastructure_compatibility": "HIGH",
+        "technology_maturity": "LOW"
+      },
+      "notes": [
+        "Resource depletion is unlikely to be the first constraint; separation and state-preparation energy are.",
+        "Do not score abundance as energy. Any net-energy mechanism requires a separately identified gradient or nonequilibrium resource."
+      ]
+    },
+    {
+      "candidate_id": "POTASSIUM_SEAWATER_IONIC_LANE",
+      "working_medium": "K+ in seawater / brine",
+      "energy_origin": "candidate concentration, membrane, redox, or selective-ion gradients; pathway-specific",
+      "conversion_status": "CANDIDATE_PATHWAY",
+      "resource_context": {
+        "source": "seawater",
+        "concentration_mg_L": 390
+      },
+      "screening_prior": {
+        "resource_abundance": "HIGH",
+        "circularity": "HIGH",
+        "renewable_gradient_access": "MEDIUM",
+        "extraction_burden": "MEDIUM",
+        "ecological_burden": "LOW",
+        "infrastructure_compatibility": "HIGH",
+        "technology_maturity": "MEDIUM"
+      },
+      "notes": [
+        "Less abundant in seawater than Na/Mg but still orders of magnitude above Li.",
+        "Needs a defined conversion cycle before ranking on energy performance."
+      ]
+    },
+    {
+      "candidate_id": "CALCIUM_SEAWATER_IONIC_LANE",
+      "working_medium": "Ca2+ in seawater / brine",
+      "energy_origin": "candidate concentration, membrane, redox, or selective-ion gradients; pathway-specific",
+      "conversion_status": "CANDIDATE_PATHWAY",
+      "resource_context": {
+        "source": "seawater",
+        "concentration_mg_L": 410
+      },
+      "screening_prior": {
+        "resource_abundance": "HIGH",
+        "circularity": "HIGH",
+        "renewable_gradient_access": "MEDIUM",
+        "extraction_burden": "MEDIUM",
+        "ecological_burden": "LOW",
+        "infrastructure_compatibility": "HIGH",
+        "technology_maturity": "MEDIUM"
+      },
+      "notes": [
+        "Abundant divalent species, but precipitation/scaling chemistry can become an engineering penalty.",
+        "Treat mineral scaling as a process cost and maintenance burden."
+      ]
+    },
+    {
+      "candidate_id": "LITHIUM_SEAWATER_RESOURCE_LANE",
+      "working_medium": "Li+",
+      "energy_origin": "primarily resource recovery / storage carrier; no free ambient energy follows from Li+ abundance",
+      "conversion_status": "RESOURCE_RECOVERY_NOT_ENERGY_SOURCE",
+      "resource_context": {
+        "source": "seawater",
+        "concentration_mg_L": 0.17,
+        "inventory_note": "very large total ocean inventory but extremely dilute"
+      },
+      "screening_prior": {
+        "resource_abundance": "HIGH",
+        "circularity": "HIGH",
+        "renewable_gradient_access": "LOW",
+        "extraction_burden": "VERY_HIGH",
+        "ecological_burden": "MEDIUM",
+        "infrastructure_compatibility": "MEDIUM",
+        "technology_maturity": "MEDIUM"
+      },
+      "notes": [
+        "Excellent electrochemical carrier in batteries, but seawater extraction is concentration-limited.",
+        "Recycling/circular storage is more attractive than treating ocean Li as a primary energy source."
+      ]
+    },
+    {
+      "candidate_id": "HIGHLY_CHARGED_ION_CARRIER",
+      "working_medium": "generic highly charged atomic ion",
+      "energy_origin": "externally supplied ionization work stored as electronic potential energy",
+      "conversion_status": "CARRIER_CONTROL",
+      "resource_context": {
+        "source": "species dependent",
+        "concentration_note": "not a naturally available high-energy state at useful density"
+      },
+      "screening_prior": {
+        "resource_abundance": "UNKNOWN",
+        "circularity": "HIGH",
+        "renewable_gradient_access": "VERY_LOW",
+        "extraction_burden": "VERY_HIGH",
+        "ecological_burden": "LOW",
+        "infrastructure_compatibility": "LOW",
+        "technology_maturity": "HIGH"
+      },
+      "notes": [
+        "Laboratory physics is mature enough to use highly charged ions as a control/reference.",
+        "Closed-cycle neutralization cannot return more energy than was supplied to create the charge state under conventional physics."
+      ]
+    },
+    {
+      "candidate_id": "HELIUM_ION_CARRIER",
+      "working_medium": "He+ / He2+",
+      "energy_origin": "externally supplied ionization work unless coupled to a separate ambient source",
+      "conversion_status": "LOW_PRIORITY_CONTROL",
+      "resource_context": {
+        "source": "terrestrial helium, mostly recovered with natural gas",
+        "renewability_note": "nonrenewable on human timescales; helium can escape Earth to space"
+      },
+      "screening_prior": {
+        "resource_abundance": "LOW",
+        "circularity": "MEDIUM",
+        "renewable_gradient_access": "VERY_LOW",
+        "extraction_burden": "HIGH",
+        "ecological_burden": "MEDIUM",
+        "infrastructure_compatibility": "LOW",
+        "technology_maturity": "HIGH"
+      },
+      "notes": [
+        "Useful physics control but poor sustainability candidate for bulk terrestrial energy systems.",
+        "Scarcity and strategic uses should be treated as opportunity-cost/ecological-resource penalties."
+      ]
+    }
+  ]
+}
