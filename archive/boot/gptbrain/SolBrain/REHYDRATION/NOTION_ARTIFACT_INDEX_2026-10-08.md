@@ -20,6 +20,7 @@ SOURCE_OF_TRUTH: live Notion pages + underlying primary sources
 | AGR01 Grain Diversification + Gypsum-to-Sulfur v0.3 | `3f30c1de-73d9-81be-a155-f9e14eb1753e` | https://app.notion.com/p/3f30c1de73d981bea155f9e14eb1753e |
 | Tiered Sulfur Resilience v0.3 | `3f30c1de-73d9-8119-b351-dd88201ae6a1` | https://app.notion.com/p/3f30c1de73d98119b351dd88201ae6a1 |
 | Sulfur Self-Sufficiency Ceiling + Needs-Matched Scaling + AI v0.3 | `3f30c1de-73d9-815e-8973-c02bd6431c29` | https://app.notion.com/p/3f30c1de73d9815e8973c02bd6431c29 |
+| Sulfur Self-Sufficiency, Needs-Matched Scaling, Node Compute & Multi-Model Audit v0.4 | `3f30c1de-73d9-812e-b23a-e27cd7a2cf2c` | https://app.notion.com/p/3f30c1de73d9812eb23ae27cd7a2cf2c |
 | Piezo/Perovskite Wastewater-to-Fertigation v0.1 | `3f30c1de-73d9-814d-8c28-fd9b190d0b83` | https://app.notion.com/p/3f30c1de73d9814d8c28fd9b190d0b83 |
 | Locality Stream Register | `3f20c1de-73d9-81ef-bc91-c413b3edd8ca` | https://app.notion.com/p/3f20c1de73d981efbc91c413b3edd8ca |
 | S6 Handoff | `3f20c1de-73d9-81b4-a2f0-fd5a1456342e` | https://app.notion.com/p/3f20c1de73d981b4a2f0fd5a1456342e |
