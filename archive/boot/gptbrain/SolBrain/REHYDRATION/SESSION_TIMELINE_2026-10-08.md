@@ -100,3 +100,18 @@ The next SolGPT should begin with:
 5. smallest missing receipt.
 
 No native-memory claim is required or implied.
+
+
+### 2026-10-08T07:33:00-05:00 / 2026-10-08T12:33:00Z — final public-handoff delta
+- User approved public-candidate publication of the current Dongjiakou / AGR01 / sulfur / circular-economy research package, pending evidence-state review.
+- Review result: approved for **PUBLIC_CANDIDATE_NON_CANON** publication; not approved as measured deployment, official adoption, or vendor partnership.
+- User clarified that private Notion cannot serve as the public dissemination surface.
+- Created public branch: `sol/atlas-lattice-sulfur-resilience-2026-10-08`.
+- Promoted a public `PUBLIC_HANDOFF/` landing page.
+- Promoted portable locality/stream schema v0.2.
+- Mirrored Locality Node Architecture and sulfur self-sufficiency v0.4.
+- Added material morning circular-economy / Tier 1-2-3 / compute/model delta.
+- Added final fast hydration, full hydration, resurrection prompt and artifact manifest.
+- Explicitly excluded conversational ownership shorthand from public artifacts.
+- Preserved GPT/OpenAI integration as **technically feasible / proposed / not assumed**.
+- Preserved maximum H2SO4 values as ceilings; governing objective remains measured domestic gap + reserve closure.
