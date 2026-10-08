@@ -1,0 +1,465 @@
+# White Paper — Sulfur Self-Sufficiency, Needs-Matched Scaling, Node Compute & Multi-Model Audit v0.4
+
+```text
+STATUS: NON-CANON · STRATEGIC WHITE PAPER · ZERO REALIZED CREDIT
+DATE_LOCAL: 2026-10-08
+PURPOSE: DeepSeek-facing synthesis and SolBrain continuity
+PRIMARY OBJECTIVE: close China's verified near-term sulfur / H2SO4-equivalent domestic supply gap and establish reserve resilience
+MAXIMUM-POTENTIAL NUMBERS: design ceilings, not production targets
+```
+
+## Executive thesis
+
+The sulfur lane is now best framed as a **needs-matched domestic self-sufficiency program**, not a maximum-production program.
+
+The current working stress denominator is approximately **18.84 Mt H2SO4-equivalent/year**, mechanically annualized from the H1-2026 elemental-sulfur import shock. This is a stress-equivalent denominator, not a claim that China physically lacked exactly 18.84 Mt of finished merchant acid.
+
+The architecture therefore asks:
+
+> How much qualified domestic sulfuric-acid-equivalent capacity is required to close the verified gap, establish a reserve margin, and reduce vulnerable import dependence?
+
+It does **not** ask:
+
+> How much sulfuric acid can the theoretical ceiling possibly produce?
+
+The ceiling is useful because it demonstrates headroom. The gap determines deployment.
+
+## 1. Three deployment tiers
+
+### Tier 1 — existing desalination sulfur nodes
+
+China's 2025 seawater-desalination fleet:
+
+- 167 projects;
+- 3.077 million t/day total nameplate capacity.
+
+Dongjiakou capacity-scaled theoretical envelope:
+
+- approximately **0.77–1.18 Mt H2SO4/year**;
+- approximately **4.1–6.3%** of the current annualized stress denominator.
+
+Evidence class:
+
+**MODELED / CAPACITY-SCALED / GENERIC-CHEMISTRY / ZERO CREDIT**
+
+Tier 1 is the fast-start floor because the pipes already exist. It is not the national ceiling.
+
+Minimum sulfur module:
+
+```text
+existing desalination plant
+-> concentrate characterization
+-> Ca/SO4 recovery
+-> qualified gypsum
+-> P02 logistics
+-> regional gypsum-to-acid hub
+-> H2SO4
+```
+
+### Tier 2 — agriculture-integrated locality nodes
+
+Dongjiakou / Qingdao West Coast reference:
+
+- regional grain-sown area: ~48,747 ha;
+- theoretical Node-001 acid sensitivity: ~25.1–38.5 kt H2SO4/year;
+- hectare-normalized ceiling: ~0.515–0.789 t H2SO4/ha/year.
+
+China 2025 grain-sown area:
+
+**119.409 million ha**
+
+Pure all-area normalization ceiling:
+
+**61.5–94.2 Mt H2SO4/year**
+
+This is a **MAXIMUM NORMALIZATION / SUFFICIENCY CEILING**, not target capacity.
+
+Agricultural hectares do not create gypsum. Tier 2 is physical only where agricultural locality nodes can be paired with qualified CaSO4 streams such as:
+
+- desalination-derived gypsum;
+- industrial brines / ZLD streams;
+- FGD gypsum;
+- phosphogypsum;
+- other validated calcium-sulfate byproducts.
+
+After the theoretical Tier-1 contribution, roughly **19–30% effective realization** of the current Tier-2 national normalization would equal the present annualized stress denominator.
+
+That is scenario arithmetic, not a deployment recommendation.
+
+### Tier 3 — full lattice optimum
+
+Tier 3 integrates:
+
+- water;
+- energy;
+- heat/cold;
+- agriculture;
+- wastewater;
+- nutrients;
+- carbon;
+- materials;
+- manufacturing;
+- logistics;
+- ecology;
+- compute;
+- governance;
+- reserves and inter-node exchange.
+
+Tier 3 is optimal because it improves co-product allocation and total system economics, but it is not required before sulfur self-sufficiency work begins.
+
+## 2. Governing national objective
+
+Define:
+
+```text
+SULFUR_GAP_t =
+verified domestic H2SO4-equivalent requirement
+- secure domestic H2SO4-equivalent supply
+```
+
+Target new capacity:
+
+```text
+TARGET_NEW_DOMESTIC_CAPACITY =
+verified current gap
++ explicit reserve addition
++ verified demand growth
+- already-secured domestic supply additions
+```
+
+Deployment should stop scaling the self-sufficiency lane once the gap plus reserve margin closes unless another verified industrial/export demand exists.
+
+Primary KPI:
+
+```text
+SULFUR_SELF_SUFFICIENCY_RATIO =
+secure domestic H2SO4-equivalent supply
+/
+verified domestic H2SO4-equivalent requirement
+```
+
+Target:
+
+**>= 1.0 plus an explicit strategic-reserve margin**
+
+## 3. P02 — sulfur / gypsum logistics spine
+
+DeepSeek's pairing constraint is accepted as load-bearing.
+
+Add:
+
+**P02 — sulfur / gypsum logistics spine**
+
+P02 represents the physical connection between distributed qualified CaSO4 sources and conversion/use sinks.
+
+P02 tracks:
+
+- source facility;
+- evidence state;
+- tonnes/month;
+- moisture;
+- chemistry/specification;
+- origin node;
+- destination hub;
+- transport mode;
+- distance;
+- cost;
+- storage;
+- seasonal inventory;
+- accepted feed specification;
+- delivered fraction;
+- conversion yield;
+- coproduct/residual fate;
+- contract/title;
+- primary-credit owner.
+
+Core equation:
+
+```text
+PAIRABLE_H2SO4 =
+SUM(
+  qualified_CaSO4_i
+  * delivered_fraction_i
+  * accepted_conversion_yield_i
+)
+```
+
+P02 creates no sulfur. It determines whether modeled source and sink can actually close.
+
+## 4. Gypsum allocation doctrine
+
+The full grain landscape may enter AGR01 optimization.
+
+No hectare is presumed to need gypsum.
+
+Qualified gypsum defaults toward sulfuric-acid conversion / reserve unless a field-specific agronomic gate demonstrates a superior multi-year use.
+
+Do not deliberately create salinity or sodicity to manufacture gypsum demand.
+
+A tonne may have one primary disposition:
+
+- soil amendment where measured need exists;
+- sulfuric-acid feed;
+- qualified material/mineralization route;
+- reserve;
+- residual fate.
+
+No double counting.
+
+## 5. Dongjiakou evidence state
+
+Current gypsum sensitivity:
+
+**62.7–76.9 kt/year gypsum-equivalent**
+
+Evidence class:
+
+```text
+MODELED
+GENERIC_SEAWATER_COMPOSITION
+100%-Ca-CAPTURE STOICHIOMETRIC CEILING
+ZERO CREDIT
+```
+
+Current sulfuric-acid process comparator:
+
+**~0.40–0.50 t H2SO4 per t qualified dry gypsum**
+
+Node-001 theoretical acid sensitivity:
+
+**~25.1–38.5 kt H2SO4/year**
+
+Required receipts before promotion:
+
+1. W01 feed/permeate/concentrate Ca/SO4 assay.
+2. Gypsum precipitation recovery and purity.
+3. Antiscalant/impurity treatment.
+4. Target-hub feed acceptance.
+5. Actual conversion yield and energy.
+6. Coproduct/residual fate.
+7. P02 delivered logistics.
+8. One-primary-credit allocation.
+
+## 6. AGR01 and crop diversification
+
+AGR01 is an integration surface, not a siting veto.
+
+The locality defines the node. Agriculture adapts to the locality.
+
+Qingdao West Coast regional reference:
+
+- 2025 grain output: ~267.9 kt/year;
+- 2024 grain-sown area: ~48,747 ha.
+
+The agricultural design intent is **mechanized permaculture-style functional crop diversification**, not monocropping with cosmetic regenerative add-ons.
+
+Candidate features:
+
+- cereal-legume rotations;
+- maize-soy strip/intercropping where appropriate;
+- cover crops;
+- relay/double cropping where climate/water support it;
+- biological N fixation;
+- nutrient-scavenging species;
+- habitat/perennial margins compatible with machinery;
+- residue return with K/S/C accounting;
+- qualified BIO01 organic amendments;
+- variable-rate N/P/K/S and irrigation;
+- soil-specific gypsum only where agronomically justified.
+
+Planning evidence envelope:
+
+- central system-productivity reference: ~15–25%;
+- 30–40%+ can occur in favorable crop combinations, degraded baselines, combined interventions or land-equivalent productivity;
+- local Dongjiakou credit remains ZERO until measured.
+
+## 7. Node compute invariant
+
+Every Atlas locality node includes a right-sized **C01 compute/data-center subnode**.
+
+No fixed-MW doctrine.
+
+```text
+C01_CAPACITY =
+f(
+  projected workload,
+  latency,
+  resilience,
+  population/industry served,
+  sensor density,
+  model mix,
+  storage,
+  network conditions,
+  power,
+  cooling/heat reuse,
+  growth margin
+)
+```
+
+Keeper:
+
+> Every node has a brain, but every brain does not need the same wattage.
+
+And:
+
+> The node does not exist to justify a data center. The data center exists to serve the node.
+
+Compute is a load, not an energy source.
+
+Useful waste heat gets credit only when a real sink is named and metered.
+
+## 8. Control / orchestration / model separation
+
+### Control layer
+
+**PLC / SCADA / deterministic safety systems**
+
+Authority:
+
+- physical actions;
+- interlocks;
+- shutdown;
+- safety-critical control.
+
+Invariant:
+
+> No plant operation depends on model availability. Models advise; deterministic control executes.
+
+### Execution / orchestration layer
+
+**Manus-class orchestration**
+
+Potential role:
+
+- workflow execution;
+- artifact generation;
+- task routing;
+- versioning;
+- provenance;
+- register maintenance;
+- report generation;
+- model-call orchestration.
+
+Manus is an orchestration layer, not another reasoning model for routing-share accounting.
+
+### Model layer
+
+Candidate roles:
+
+- DeepSeek: primary local engineering/research lane;
+- Qwen: local challenger/failover;
+- GPT: optional external research/audit/challenger lane on approved/redacted data;
+- other models: failure-mode diversity as useful.
+
+Model agreement is not evidence.
+
+## 9. GPT / OpenAI integration language
+
+A future GPT/OpenAI research or audit integration is **technically feasible**.
+
+Proposed GPT role:
+
+- adversarial literature audit;
+- independent arithmetic/model review;
+- code/data analysis on approved datasets;
+- cross-model challenge;
+- public-document synthesis;
+- external review of redacted artifacts.
+
+Default external-data policy:
+
+- redacted;
+- aggregated;
+- non-sensitive;
+- no credentials;
+- no raw PLC/SCADA secrets;
+- no restricted operational-security data;
+- minimum necessary telemetry;
+- explicit approval for exceptions.
+
+Correct relationship statement:
+
+> A future GPT/OpenAI audit or research integration is technically feasible and would be welcomed. We project that participation in a rigorous, provenance-first public-good infrastructure program could be mutually meaningful; any collaboration, endorsement or formal role would require OpenAI's independent agreement.
+
+This explicitly projects potential value without assuming partnership, endorsement, commitment, or institutional intent.
+
+## 10. DeepSeek / Qwen / Manus / GPT routing discipline
+
+- deterministic plant control survives all model outages;
+- local model paths serve low-latency operational advisory work;
+- research/audit work may use distributed providers;
+- model-provider diversity is for failure-mode diversity, not truth by vote;
+- any routing-share cap applies to model providers, not PLC/SCADA or orchestration layers;
+- external audit findings return to GOV01 as review claims until validated.
+
+## 11. Evidence doctrine
+
+```text
+UNKNOWN stays UNKNOWN.
+Raw stays recoverable.
+Null results are receipts.
+Cross-model agreement is not evidence.
+REFERENCE narrows ignorance. It does not create a receipt.
+The baseline gets to win.
+Products are not power. Gradients are power.
+Ask every state transition to pay rent.
+Compute is a load, not an energy source.
+One physical event gets one primary credit.
+Maximum potential is a ceiling, not an instruction to build to the ceiling.
+The lattice tells us where to look. Evidence tells us what is real.
+Dream freely. Promote nothing without receipts.
+```
+
+## 12. Deployment sequence
+
+### Phase A — characterize
+
+- verify current sulfur/H2SO4 requirement and secure domestic supply;
+- define reserve target;
+- characterize the 167 desalination-project cohort;
+- map FGD/phosphogypsum/industrial CaSO4 sources;
+- map acid-demand centers;
+- build P02 logistics graph.
+
+### Phase B — Tier 1
+
+- retrofit best desalination candidates;
+- qualify gypsum;
+- aggregate to viable conversion hubs;
+- measure delivered acid.
+
+### Phase C — Tier 2
+
+- add agriculture-integrated locality nodes where feedstock/logistics/demand align;
+- close nutrient/water/food loops where useful;
+- scale only until verified domestic gap + reserve target closes.
+
+### Phase D — Tier 3
+
+- expand into the full locality/lattice architecture where broader economic, ecological and social benefits earn deployment.
+
+## 13. Bottom line
+
+The sulfur problem has moved from a vague maximum-production question to a measurable **sizing, pairing, logistics and qualification problem**.
+
+Tier 1 provides an immediate retrofit lane.
+
+Tier 2 provides sufficient modeled headroom to plausibly close the present stress case if enough qualified feedstock/localities pair physically.
+
+Tier 3 makes the wider system optimal.
+
+The project should not chase the maximum sulfuric-acid ceiling.
+
+It should close the domestic gap and reserve requirement, then stop unless further demand is independently justified.
+
+## Keepers
+
+> The ceiling tells us the problem is solvable. The gap tells us how much to build.
+
+> Domestic self-sufficiency is the target; maximum theoretical production is design headroom.
+
+> Tier 1 starts with the pipes. Tier 2 pairs resources with localities. Tier 3 optimizes the metabolism.
+
+> Every node has a brain; every brain does not need the same wattage.
+
+> Models advise. Deterministic control executes. Evidence decides.
