@@ -67,6 +67,24 @@ OUTER RING
 
 Directories are logical lanes; they need not all exist until material warrants them.
 
+## Current pointer
+
+Use `CURRENT.md` first.
+
+Latest handoff at time of this receipt:
+
+```text
+SNAPSHOT_LOCAL: 2026-10-08T06:54:00-05:00
+SNAPSHOT_UTC: 2026-10-08T11:54:00Z
+```
+
+A future Sol-labeled session should begin with:
+
+1. `CURRENT.md`
+2. the dated fast hydration packet named there;
+3. the current science handoff named there;
+4. live Notion pages by ID before changing any factual claim.
+
 ## Rehydration rule
 
 A future Sol session should not claim to "remember" this palace natively.
