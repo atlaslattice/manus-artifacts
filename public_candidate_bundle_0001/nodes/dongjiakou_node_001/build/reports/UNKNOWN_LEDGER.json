@@ -1,0 +1,182 @@
+{
+  "artifact_id": "DJK-NODE-001-UNKNOWN-LEDGER",
+  "generated_at": "2026-10-07T02:36:55+00:00",
+  "principle": "UNKNOWN remains UNKNOWN. Every entry below is either an unestablished quantity or an explicit zero-credit baseline. Nothing here may be backfilled from aggregate node performance.",
+  "counts": {
+    "desalination_unknowns": 10,
+    "compute_unknown_parameters": 11,
+    "components": 8,
+    "green_direct_unknowns": 5
+  },
+  "desalination_unknowns": [
+    "whole_site_SEC_kWh_m3",
+    "delta_aux_kWh_m3",
+    "current_measured_recovery_fraction",
+    "current_feed_and_reject_stream_map",
+    "current_brine_composition",
+    "fouling_rate_and_cleaning_frequency",
+    "current_CIP_and_additive_chemistry",
+    "current_ecological_monitoring_primary_data",
+    "hydraulic_unused_head_profile",
+    "roof_structural_and_interconnection_limits"
+  ],
+  "compute_unknown_parameters": {
+    "L_IT_load_factor": "UNKNOWN_0_TO_1",
+    "actual_PUE": "UNKNOWN_GE_1",
+    "WUE": "UNKNOWN",
+    "compute_cooling_water_source": "UNKNOWN",
+    "hourly_solar_compute_overlap": "UNKNOWN",
+    "PV_curtailment": "NOT_ESTABLISHED",
+    "useful_heat_capture_fraction": "UNKNOWN",
+    "coolant_supply_return_temperature": "UNKNOWN",
+    "CIP_temperature_setpoint": "UNKNOWN",
+    "CIP_thermal_demand": "UNKNOWN",
+    "heat_pump_COP": "UNKNOWN"
+  },
+  "component_evidence": [
+    {
+      "component_id": "W01_DESAL",
+      "type": "desalination",
+      "evidence_profile": "EXISTING_RECEIPT_BACKED",
+      "credit": null,
+      "node001_access": null,
+      "contractual_basis": "PARTIAL_HISTORICAL_RECEIPTS",
+      "vetoes": [
+        "INV-19 downstream water quality",
+        "permit/discharge noncompliance",
+        "water-service failure"
+      ]
+    },
+    {
+      "component_id": "G01_REGIONAL_GREEN",
+      "type": "generation",
+      "evidence_profile": "OFFICIAL_PLAN_REGIONAL_ACCESS_UNKNOWN",
+      "credit": 0,
+      "node001_access": "UNKNOWN",
+      "contractual_basis": "UNKNOWN",
+      "vetoes": []
+    },
+    {
+      "component_id": "S01_ROOFTOP_PV",
+      "type": "generation",
+      "evidence_profile": "EXECUTED_TECHNICAL_SENSITIVITY",
+      "credit": null,
+      "node001_access": null,
+      "contractual_basis": "PROPOSED_SITE_LAYOUT",
+      "vetoes": []
+    },
+    {
+      "component_id": "B01_STORAGE",
+      "type": "storage",
+      "evidence_profile": "SPECIFIED_ZERO_CREDIT",
+      "credit": 0,
+      "node001_access": null,
+      "contractual_basis": null,
+      "vetoes": []
+    },
+    {
+      "component_id": "C01_COMPUTE",
+      "type": "compute_and_control_plane",
+      "evidence_profile": "EXECUTED_PARAMETRIC_TECHNICAL_SENSITIVITY",
+      "credit": null,
+      "node001_access": null,
+      "contractual_basis": "PROPOSED",
+      "vetoes": [
+        "INV-19",
+        "cybersecurity isolation failure",
+        "unapproved OT write path"
+      ]
+    },
+    {
+      "component_id": "P01_PORT_LOADS",
+      "type": "port_loads",
+      "evidence_profile": "REGIONAL_PLAN_EXISTS_LOAD_SET_UNRESOLVED",
+      "credit": null,
+      "node001_access": null,
+      "contractual_basis": "UNKNOWN",
+      "vetoes": []
+    },
+    {
+      "component_id": "GRID01",
+      "type": "grid_interface",
+      "evidence_profile": "POLICY_PATHWAY_VERIFIED_NODE_CONTRACT_UNKNOWN",
+      "credit": null,
+      "node001_access": null,
+      "contractual_basis": "UNKNOWN",
+      "vetoes": []
+    },
+    {
+      "component_id": "BIO01_BIOMETABOLIC",
+      "type": "organics_wastewater_nutrient_recovery_composting",
+      "evidence_profile": "PROPOSED_ARCHITECTURE_EXECUTED_PARAMETRIC_TRANSFER_FUNCTION_ZERO_CREDIT",
+      "credit": 0,
+      "node001_access": null,
+      "contractual_basis": "UNKNOWN",
+      "vetoes": [
+        "methane leakage / uncontrolled flaring",
+        "odor/VOC noncompliance",
+        "digestate/compost pathogen or contaminant failure",
+        "wastewater discharge/reuse noncompliance",
+        "marine-water-quality degradation",
+        "hazardous/high-salinity/toxic stream misrouting",
+        "nutrient runoff risk",
+        "double counting of biogas/carbon/nutrients/water/Mg"
+      ]
+    }
+  ],
+  "green_direct_status": {
+    "official_regional_plan": "REPORTED",
+    "eligible_load_set_named_in_public_plan": false,
+    "Dongjiakou_desal_named_as_participant": false,
+    "compute_named_as_specific_project_participant": false,
+    "node_allocation_MW_MWh": "UNKNOWN",
+    "contract_price": "UNKNOWN",
+    "energy_credit": 0
+  },
+  "explicit_zero_credit_baselines": [
+    "RUN_0.retrofit_credit.* \u2014 no retrofit credit assigned",
+    "RUN_2.baseline.hydro_credit_GWh_year = 0 \u2014 no receipt identifies unused head",
+    "RUN_3.heat_credit.baseline_useful_heat_GWhth = 0 \u2014 no measured thermal sink",
+    "RUN_4A.baseline_credit.* = 0 \u2014 no feedstock, chemistry or off-take receipt",
+    "S02.baseline_credit = 0 \u2014 no hourly PV/load/curtailment trace",
+    "INTEGRATED_NODE_PROFILE.green_direct_status.energy_credit = 0 \u2014 node allocation UNKNOWN"
+  ],
+  "data_required_to_close": {
+    "desalination": [
+      "plant-specific 2026 electricity tariff / settlement receipt",
+      "whole-site SEC and delta_aux measurements",
+      "current measured recovery fraction",
+      "feed and reject stream map",
+      "brine composition",
+      "fouling rate and CIP history",
+      "primary ecological monitoring data",
+      "unused hydraulic head profile",
+      "roof structural and interconnection limits"
+    ],
+    "compute": [
+      "CIP_temperature_setpoint",
+      "CIP_thermal_demand",
+      "L_IT_load_factor",
+      "PV_curtailment",
+      "WUE",
+      "actual_PUE",
+      "compute_cooling_water_source",
+      "coolant_supply_return_temperature",
+      "heat_pump_COP",
+      "hourly_solar_compute_overlap",
+      "useful_heat_capture_fraction"
+    ],
+    "biometabolic": [
+      "Node-001 feedstock allocation or on-node generation receipt",
+      "biogas quantity and CH4 composition",
+      "actual conversion/use path",
+      "digestate nutrient mass and product assay",
+      "verified reclaimed-water reuse displacement"
+    ],
+    "grid": [
+      "node allocation in MW / MWh under the direct-green pathway",
+      "contract price and settlement rules",
+      "eligible load set"
+    ]
+  }
+}

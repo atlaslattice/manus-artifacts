@@ -1,0 +1,180 @@
+{
+  "schema_version": "0.1",
+  "scenario_id": "synthetic-qualified-gypsum-to-acid",
+  "resource_basis": "pure-H2SO4-equivalent",
+  "demand": {
+    "basis": "SYNTHETIC",
+    "requirement": {
+      "low": 10000,
+      "high": 10000,
+      "unit": "t_product/y",
+      "status": "SYNTHETIC",
+      "source": null
+    },
+    "secure_domestic_supply": {
+      "low": 6000,
+      "high": 6000,
+      "unit": "t_product/y",
+      "status": "SYNTHETIC",
+      "source": null
+    },
+    "reserve_stock": {
+      "low": 1000,
+      "high": 1000,
+      "unit": "t_product",
+      "status": "SYNTHETIC",
+      "source": null
+    },
+    "reserve_build_years": 2
+  },
+  "routes": [
+    {
+      "id": "route-1",
+      "stream_id": "unique-feed-1",
+      "product_basis": "pure-H2SO4-equivalent",
+      "pathway_kind": "HYBRID",
+      "feed": {
+        "mass": {
+          "low": 10000,
+          "high": 10000,
+          "unit": "t_feed_as_received/y",
+          "status": "SYNTHETIC",
+          "source": null
+        },
+        "dry_fraction": {
+          "low": 0.8,
+          "high": 0.8,
+          "unit": "fraction",
+          "status": "SYNTHETIC",
+          "source": null
+        },
+        "allocated_fraction": {
+          "low": 0.5,
+          "high": 0.5,
+          "unit": "fraction",
+          "status": "SYNTHETIC",
+          "source": null
+        },
+        "delivered_fraction": {
+          "low": 0.9,
+          "high": 0.9,
+          "unit": "fraction",
+          "status": "SYNTHETIC",
+          "source": null
+        },
+        "accepted_fraction": {
+          "low": 0.95,
+          "high": 0.95,
+          "unit": "fraction",
+          "status": "SYNTHETIC",
+          "source": null
+        }
+      },
+      "process": {
+        "yield": {
+          "low": 0.4,
+          "high": 0.4,
+          "unit": "t_product/t_dry_accepted_feed",
+          "status": "SYNTHETIC",
+          "source": null
+        },
+        "conservation_ceiling": {
+          "low": 0.5696603957693224,
+          "high": 0.5696603957693224,
+          "unit": "t_product/t_dry_accepted_feed",
+          "status": "SYNTHETIC",
+          "source": null
+        },
+        "energy_intensity": {
+          "low": 0.1,
+          "high": 0.1,
+          "unit": "MWh/t_dry_accepted_feed",
+          "status": "SYNTHETIC",
+          "source": null
+        },
+        "hub_capacity": {
+          "low": 2000,
+          "high": 2000,
+          "unit": "t_product/y",
+          "status": "SYNTHETIC",
+          "source": null
+        }
+      },
+      "market_ceiling": {
+        "low": 2000,
+        "high": 2000,
+        "unit": "t_product/y",
+        "status": "SYNTHETIC",
+        "source": null
+      },
+      "module_receipts": {
+        "yield": {
+          "status": "PASS",
+          "source": "synthetic test fixture; not a field receipt"
+        },
+        "selectivity": {
+          "status": "PASS",
+          "source": "synthetic test fixture; not a field receipt"
+        },
+        "energy": {
+          "status": "PASS",
+          "source": "synthetic test fixture; not a field receipt"
+        },
+        "reagents": {
+          "status": "PASS",
+          "source": "synthetic test fixture; not a field receipt"
+        },
+        "material_life": {
+          "status": "PASS",
+          "source": "synthetic test fixture; not a field receipt"
+        },
+        "residual_fate": {
+          "status": "PASS",
+          "source": "synthetic test fixture; not a field receipt"
+        },
+        "market_ceiling": {
+          "status": "PASS",
+          "source": "synthetic test fixture; not a field receipt"
+        },
+        "ecology": {
+          "status": "PASS",
+          "source": "synthetic test fixture; not a field receipt"
+        }
+      },
+      "loop_receipts": {
+        "source": {
+          "status": "PASS",
+          "source": "synthetic fixture"
+        },
+        "mass": {
+          "status": "PASS",
+          "source": "synthetic fixture"
+        },
+        "quality": {
+          "status": "PASS",
+          "source": "synthetic fixture"
+        },
+        "right_to_transfer": {
+          "status": "PASS",
+          "source": "synthetic fixture"
+        },
+        "time": {
+          "status": "PASS",
+          "source": "synthetic fixture"
+        },
+        "displacement": {
+          "status": "PASS",
+          "source": "synthetic fixture"
+        },
+        "residual_fate": {
+          "status": "PASS",
+          "source": "synthetic fixture"
+        },
+        "allocation": {
+          "status": "PASS",
+          "source": "synthetic fixture"
+        }
+      }
+    }
+  ]
+}

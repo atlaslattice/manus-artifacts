@@ -1,0 +1,180 @@
+{
+  "schema_version": "0.1",
+  "scenario_id": "dongjiakou-unknown",
+  "resource_basis": "pure-H2SO4-equivalent",
+  "demand": {
+    "basis": "VERIFIED_NEED",
+    "requirement": {
+      "low": null,
+      "high": null,
+      "unit": "t_product/y",
+      "status": "UNKNOWN",
+      "source": null
+    },
+    "secure_domestic_supply": {
+      "low": null,
+      "high": null,
+      "unit": "t_product/y",
+      "status": "UNKNOWN",
+      "source": null
+    },
+    "reserve_stock": {
+      "low": null,
+      "high": null,
+      "unit": "t_product",
+      "status": "UNKNOWN",
+      "source": null
+    },
+    "reserve_build_years": 2
+  },
+  "routes": [
+    {
+      "id": "route-1",
+      "stream_id": "unique-feed-1",
+      "product_basis": "pure-H2SO4-equivalent",
+      "pathway_kind": "HYBRID",
+      "feed": {
+        "mass": {
+          "low": null,
+          "high": null,
+          "unit": "t_feed_as_received/y",
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "dry_fraction": {
+          "low": null,
+          "high": null,
+          "unit": "fraction",
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "allocated_fraction": {
+          "low": null,
+          "high": null,
+          "unit": "fraction",
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "delivered_fraction": {
+          "low": null,
+          "high": null,
+          "unit": "fraction",
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "accepted_fraction": {
+          "low": null,
+          "high": null,
+          "unit": "fraction",
+          "status": "UNKNOWN",
+          "source": null
+        }
+      },
+      "process": {
+        "yield": {
+          "low": null,
+          "high": null,
+          "unit": "t_product/t_dry_accepted_feed",
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "conservation_ceiling": {
+          "low": null,
+          "high": null,
+          "unit": "t_product/t_dry_accepted_feed",
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "energy_intensity": {
+          "low": null,
+          "high": null,
+          "unit": "MWh/t_dry_accepted_feed",
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "hub_capacity": {
+          "low": null,
+          "high": null,
+          "unit": "t_product/y",
+          "status": "UNKNOWN",
+          "source": null
+        }
+      },
+      "market_ceiling": {
+        "low": null,
+        "high": null,
+        "unit": "t_product/y",
+        "status": "UNKNOWN",
+        "source": null
+      },
+      "module_receipts": {
+        "yield": {
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "selectivity": {
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "energy": {
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "reagents": {
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "material_life": {
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "residual_fate": {
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "market_ceiling": {
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "ecology": {
+          "status": "UNKNOWN",
+          "source": null
+        }
+      },
+      "loop_receipts": {
+        "source": {
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "mass": {
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "quality": {
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "right_to_transfer": {
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "time": {
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "displacement": {
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "residual_fate": {
+          "status": "UNKNOWN",
+          "source": null
+        },
+        "allocation": {
+          "status": "UNKNOWN",
+          "source": null
+        }
+      }
+    }
+  ]
+}

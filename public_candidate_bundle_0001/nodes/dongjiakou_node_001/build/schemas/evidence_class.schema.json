@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atlaslattice.invalid/dongjiakou_node_001/build/schemas/evidence_class.schema.json",
+  "title": "Node-001 evidence class",
+  "description": "Closed evidence vocabulary for the Dongjiakou Node-001 pilot package. Declaration order is not a strength ranking. MEASURED is the only class that can establish a current physical state at Node-001.",
+  "type": "string",
+  "enum": [
+    "MEASURED",
+    "REPORTED",
+    "DERIVED",
+    "HISTORICAL",
+    "PLANNED",
+    "MODELED",
+    "SENSITIVITY",
+    "PROPOSED",
+    "REFERENCE",
+    "UNKNOWN"
+  ],
+  "$defs": {
+    "crediting": {
+      "description": "Classes strong enough to carry a primary accounting credit on their own.",
+      "type": "string",
+      "enum": ["MEASURED", "REPORTED", "DERIVED"]
+    },
+    "non_crediting": {
+      "description": "Classes that may never carry a primary accounting credit on their own.",
+      "type": "string",
+      "enum": ["SENSITIVITY", "PROPOSED", "PLANNED", "MODELED", "REFERENCE", "UNKNOWN"]
+    },
+    "non_current": {
+      "description": "Classes that may not populate a current operating state.",
+      "type": "string",
+      "enum": ["HISTORICAL", "PLANNED", "PROPOSED", "SENSITIVITY"]
+    }
+  }
+}

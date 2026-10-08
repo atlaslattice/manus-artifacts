@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.1",
+  "scenario_id": "synthetic-elemental-P",
+  "classification": "SIMULATED_NON_CANON",
+  "input_sha256": "bb2cfd486290458dcdc69b8f7f6b8f1b2bce0cf3202d2095b563703c47859b58",
+  "resource_basis": "elemental-P",
+  "demand_basis": "SYNTHETIC",
+  "routes": [
+    {
+      "route_id": "route-1",
+      "pathway_kind": "BIOLOGICAL",
+      "accepted_dry_feed_t_y": {
+        "low": 3420.0,
+        "high": 3420.0
+      },
+      "gross_product_t_y": {
+        "low": 68.4,
+        "high": 68.4
+      },
+      "capacity_and_market_limited_product_t_y": {
+        "low": 68.4,
+        "high": 68.4
+      },
+      "evidence_gated_product_t_y": {
+        "low": 68.4,
+        "high": 68.4
+      },
+      "energy_load_MWh_y": {
+        "low": 342.0,
+        "high": 342.0
+      },
+      "gate_state": "CONDITIONAL_MODEL_ONLY",
+      "module_receipts_passed": 8,
+      "module_receipts_required": 8,
+      "ecological_or_residual_veto": false,
+      "realized_credit_t_y": 0
+    }
+  ],
+  "evidence_gated_total_t_y": {
+    "low": 68.4,
+    "high": 68.4
+  },
+  "gap_plus_reserve_build_t_y": {
+    "low": 4500.0,
+    "high": 4500.0
+  },
+  "remaining_gap_t_y": {
+    "low": 4431.6,
+    "high": 4431.6
+  },
+  "realized_credit_t_y": 0,
+  "missing_inputs_and_receipts": [],
+  "limitations": [
+    "Endpoint envelopes are bounds, not probabilities or forecasts.",
+    "Source labels and PASS records are supplied assertions; engine does not authenticate them.",
+    "Declared conservation ceiling requires independent chemistry review.",
+    "No network optimizer, seasonal dynamics, LCA, net-energy, capex or operating economics.",
+    "Energy is a gross load; reagents/coproducts/land/water remain receipt requirements.",
+    "A stress-proxy target is not a verified domestic shortage.",
+    "Secure domestic supply must exclude the modeled incremental streams."
+  ]
+}

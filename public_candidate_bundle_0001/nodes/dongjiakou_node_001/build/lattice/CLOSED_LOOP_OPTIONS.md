@@ -1,0 +1,261 @@
+STATUS: ARCHIVE PUBLIC CANDIDATE | CANON: no | DEPLOYMENT: no | AUTHORITY: none | PROOF: no | PUBLIC_RELEASE: candidate
+
+Recovered historical Manus artifact. Current review decisions: [build/review/EVIDENCE_APPENDIX.md](https://github.com/atlaslattice/manus-artifacts/blob/master/public_candidate_bundle_0001/nodes/dongjiakou_node_001/build/review/EVIDENCE_APPENDIX.md).
+
+# Atlas Lattice Dongjiakou Node-001 — Candidate Closed-Loop Regenerative Infrastructure Options
+
+**Document ID:** public_candidate_bundle_0001/nodes/dongjiakou_node_001/build/lattice/CLOSED_LOOP_OPTIONS.md  
+**Status:** Research candidate register; not an approval or marine-discharge claim  
+**Date:** 2026-10-06  
+**Repo:** atlaslattice/manus-artifacts  
+**Reference head:** 4756036f9c428fa3aa1d4cea552ae03367523fb5  
+
+## Executive summary
+
+| Rank | Option | Readiness | Dongjiakou fit | Regenerative claim posture | Ecological veto? |
+|---:|---|---|---|---|---|
+| 1 | Reclaimed water for industrial/port cooling and washdown | Commercial deployment | High: wastewater and port demand | Claim only verified displacement of another source | No, but water-quality failure is a veto |
+| 2 | Struvite using wastewater and seawater magnesium | Pilot; commercial analogues exist | High if a segregated P-rich sidestream exists | Strong mass-loop candidate; assay product and account Mg once | No, subject to contaminant and salinity controls |
+| 3 | Anaerobic digestion plus measured biogas and digestate treatment | Commercial deployment for sludge; node pilot | High for organics, sludge and wastewater | Energy credit only after metered gas composition and conversion | No, but digestate contamination can veto soil return |
+| 4 | Brine mineral cascade: NaCl, Mg, gypsum and bromine | Demonstration/commercial for selected products; mixed maturity | Medium: large RO concentrate and port logistics | Revenue/mass credit only for assayed, contracted products | **Yes if residual salinity or chemicals worsen receiving waters** |
+| 5 | Mineral carbonation with brine or alkaline waste | Lab | Medium: CO2 pilot and RO concentrate | Carbon credit only for measured net, durable mineral carbon and product fate | **Yes if pH, metals or residual brine harm water quality** |
+| 6 | Salicornia/halophyte production with controlled saline irrigation | Field research/pilot | Medium: port land and brine, but land and drainage constrained | Water credit only for verified source displacement; nutrient credit only assayed in harvested biomass | **Yes where groundwater salinity rises** |
+| 7 | IMTA/aquaculture linked to saline streams | Pilot/field research | Medium-low: requires biologically suitable salinity and food-safe product chain | Credit harvested biomass and measured nutrient removal, not assumed assimilation | **Yes: disease, escape, eutrophication or discharge toxicity** |
+| 8 | Seawater air conditioning/deep seawater shared loop | Commercial deployment elsewhere; concept at node | Medium: port/compute cooling load and intake corridor | Energy credit from metered kWh avoided, with pumping parasitics included | **Yes if thermal or discharge plume damages habitat** |
+| 9 | Aquifer storage and recovery / managed aquifer recharge | Pilot to commercial deployment | Low-medium: only after hydrogeology, rights and compatible water are proven | Water credit only metered recharge and recoverable fraction; no “stored” water as reuse | **Yes: contaminant migration, salinisation or clogging** |
+| 10 | Constructed wetlands/mangrove/macroalgae polishing | Pilot/research for saline brine; commercial for some wastewater polishing | Low-medium: wastewater nutrients and port land, not a licence to dilute brine | Credit only measured pollutant load removal and harvested biomass fate | **Yes: invasive species, eutrophication and downstream deterioration** |
+| 11 | Port–desalination–industry symbiosis for heat, CO2, water and materials | Concept pending site contracts | Potentially high, but node-specific evidence absent | Each exchange must be separately metered and contractually received | **Yes if an exchange transfers pollution or creates an unpermitted reject** |
+
+**Decision rule.** These are candidates, not bundled credits. A stream may be counted once in the ledger. One N, P or Mg mass cannot receive both a recovery credit and a compost credit. Reclaimed water counts only when verified reuse displaces another water source. Biogas gets an energy credit only after measured gas quantity and composition and a receipt for actual conversion. A modelled reject-equivalent stream is never restated as a marine discharge claim. No ecological veto can be offset by profit or carbon benefit elsewhere.
+
+## 1. Brine mineral cascade: sodium chloride, magnesium, gypsum, potassium and bromine
+
+**Name and mechanism.** RO concentrate is first characterised and, where compatible with antiscalant and contaminants, dewatered or selectively separated. A cascade can precipitate calcium sulfate/gypsum, concentrate NaCl, then recover magnesium salts and potentially bromine from bittern; each product requires purification and an actual buyer. The 2022 Nature review reports that modern SWRO brines can reach about 8% NaCl and describes sequential recovery of gypsum, NaCl, MgCl2 and CaCl2; its examples are process analysis and a reported SWCC commercial-scale magnesium project, not evidence that every product is commercially viable at Dongjiakou [1].
+
+**Technology readiness.** Mixed: NaCl and bromine are commercial from natural brines/bitterns; desalination-brine recovery is demonstration/commercial for selected projects; selective Mg, K and gypsum routes remain pilot or demonstration depending on process.
+
+**Verifiable results.** The Nature review (2022) states SWRO recovery is typically 30–50% and brine may contain up to 8% NaCl; it also identifies a Saline Water Conversion Corporation NF project at Shoaiba, Saudi Arabia, intended to harvest magnesium [1]. It says ion-exchange and membrane bromine extraction had been researched but not applied to commercial production from desalination brine [1]. These are not Dongjiakou measurements. The same review gives no verified Dongjiakou product yield, purity or sale.
+
+**Relevance to this node.** Uses RO concentrate, port land, electricity, possible waste heat and container/bulk logistics. Magnesium could also supply a separate seawater-assisted struvite train, but the same Mg atom must not be credited twice.
+
+**Accounting treatment under Node-001 rules.** Touches mass, energy, revenue, water and potentially carbon. Credit only assayed product mass meeting a specification, with a dated off-take/receipt and measured parasitic energy. Concentrate volume not recovered remains a reject stream; do not call modelled residuals marine discharge. A Mg product cannot also be credited as Mg in compost or struvite.
+
+**What would be required to claim it.** Continuous concentrate flow and density; ICP-OES/IC assay for Na, Mg, Ca, K, Br, sulfate and trace metals; antiscalant and contaminant screen; mass-balance closure; product purity and moisture assay; energy metering; permitted residual route; and a binding buyer acceptance/weight ticket.
+
+**Failure modes and cautions.** Scaling, antiscalant contamination, mixed salts with no market, high evaporation energy, chemical consumption, dust, worker exposure and residual-liquor disposal can erase benefits. Bromine oxidation chemistry can create hazardous intermediates. Any residual brine or chemical plume that worsens receiving-water quality is a veto-bearing failure.
+
+## 2. Mineral carbonation and CO2 mineralisation
+
+**Name and mechanism.** Alkalinity is created or supplied so Mg and Ca in concentrate, alkaline industrial residues or brine-derived hydroxides react with CO2 to form stable carbonate minerals. The process must include reagent manufacture, electricity, gas conditioning and product fate; otherwise gross carbonate formation is not net carbon removal.
+
+**Technology readiness.** Lab for direct use of real SWRO brine; pilot/demonstration in broader alkaline-waste mineralisation; not commercial deployment demonstrated for Dongjiakou brine.
+
+**Verifiable results.** Bang et al. (2017) used real brine collected from an operating Korean seawater-RO industrial-water process. The brine contained 2,226 mg/L Mg, 714 mg/L Ca and 17,987 mg/L Na; four pH-raise/CO2-bubbling cycles produced identified hydromagnesite, calcite and halite, with reported Mg yield 86% and Ca yield 99% [2]. This was a laboratory experiment, not a pilot, and used NaOH and 99% CO2; it did not establish net energy or lifecycle carbon removal.
+
+**Relevance to this node.** RO concentrate, a measured CO2 source from digestion/industry, alkaline waste or recovered Mg(OH)2, port land and waste heat.
+
+**Accounting treatment under Node-001 rules.** Touches carbon, mass, energy, water and revenue. Carbon credit requires measured inlet CO2, carbon in isolated product, durable mineral identity, reagent and electricity emissions, leakage, and permanent product custody. Carbonate product cannot simultaneously be treated as recovered Mg or compost Mg without a declared allocation rule.
+
+**What would be required to claim it.** Pilot reactor with calibrated gas flow/composition, pH/alkalinity, solids mass, XRD/TGA/elemental carbon assay, residual-water toxicity and metals, full energy/reagent LCA, and a product/off-take or permanent storage contract.
+
+**Failure modes and cautions.** NaOH demand can dominate impacts; precipitation can be impure; residual high-pH water, metals or antiscalant can harm aquatic life. Carbon accounting can double count capture and mineral product. Any downstream deterioration in water quality is a veto.
+
+## 3. Integrated multi-trophic aquaculture (IMTA) with saline streams
+
+**Name and mechanism.** Fish or shellfish production is coupled to extractive organisms such as seaweed, shellfish or microbial/plant compartments so dissolved nutrients and particulates are converted into harvestable biomass. RO brine is not automatically suitable culture water: salinity, boron, residual disinfectants and temperature must be tested, and brine discharge cannot be “treated” merely by routing it through organisms.
+
+**Technology readiness.** Pilot/field research for desalination-brine-linked IMTA; commercial deployment exists for IMTA generally, but no Dongjiakou evidence.
+
+**Verifiable results.** In a 2022 mesocosm study beside a pilot-scale rainbow-trout/perch IMTA system, duckweed accounted for 31% of removed N and 29% of removed P; phytoplankton accounted for 33% and 38%, respectively [3]. This is a real pilot-adjacent biological result, but it is freshwater aquaculture effluent, not RO concentrate. Therefore it supports nutrient-removal mechanism, not brine compatibility.
+
+**Relevance to this node.** Potentially wastewater nutrients, treated saline water or diluted concentrate, port land, waste heat and CO2; harvested seaweed/shellfish could be an off-take.
+
+**Accounting treatment under Node-001 rules.** Touches water, mass, energy, carbon and revenue. Credit only measured nutrient mass in harvested, saleable biomass and independently measured effluent load reduction. Do not credit nutrients retained in unharvested phytoplankton or sediment. If Mg is dosed/recovered for the system, it cannot also receive another Mg credit.
+
+**What would be required to claim it.** Species/salinity toxicity trials; pathogen and contaminant assays; inlet/outlet N, P, COD, TSS and salinity mass balance; biomass harvest weights and tissue nutrient assays; fish-feed and mortality records; biosecurity and escape plan; discharge permit; food/feed safety certificate and buyer receipt.
+
+**Failure modes and cautions.** Disease, escapes, invasive species, harmful algal blooms, bioaccumulation, oxygen depletion and fish-feed externalities are serious. Brine can cause osmotic stress. Treat the proposal as veto-bearing until downstream water quality and ecological monitoring show no deterioration.
+
+## 4. Halophyte agriculture, including Salicornia
+
+**Name and mechanism.** Halophytes use saline irrigation while producing edible shoots, seed, oil or forage; nutrient-rich aquaculture effluent can substitute for fertiliser. The loop is only regenerative if salt loading, drainage and groundwater are measured and the crop biomass is actually harvested and sold or safely returned.
+
+**Technology readiness.** Field research/pilot; not a commercial Dongjiakou recommendation without a contained drainage design.
+
+**Verifiable results.** ICBA and collaborators measured UAE field plots in 2023 using groundwater at 25 dS/m, RO brine at 40 dS/m and aquaculture effluent at 40 dS/m. Aquabrine with bubbler irrigation produced 650 g/m2 fresh tips and 2–2.6 kg/m2 dry forage; pressure-compensated drip/subsurface systems had salt loads to groundwater of 14–36 kg/m2, while bubbler irrigation reached 135–195 kg/m2. An exemplar 75 kg/m2 loading was modelled to raise aquifer salinity 2.6 dS/m/year [4]. These are measured field results plus a modelled consequence; they demonstrate both production and ecological risk.
+
+**Relevance to this node.** RO concentrate, nutrient-rich wastewater/aquaculture water, port land and CO2; requires lined beds and drainage capture.
+
+**Accounting treatment under Node-001 rules.** Touches water, mass, carbon and revenue. Reclaimed-water credit requires measured displacement of freshwater. N/P/Mg credit requires tissue assay and one ledger allocation; if residues go to compost, do not also credit harvested nutrient. Soil carbon credit requires measured, durable stock change, not assumed biomass carbon.
+
+**What would be required to claim it.** Plot-scale salinity and boron trials; lined drainage and lysimeters; groundwater monitoring wells; crop yield and tissue nutrient/contaminant assays; irrigation metering; product acceptance; salt export/disposal plan; and multi-season evidence that groundwater quality does not deteriorate.
+
+**Failure modes and cautions.** Salt accumulation, boron toxicity, groundwater salinisation, food-chain contamination and invasive spread can outweigh benefits. The ICBA result shows drainage is strongly irrigation-method dependent. Groundwater deterioration is a veto, not an offsettable cost.
+
+## 5. Constructed wetlands, mangrove or macroalgae polishing
+
+**Name and mechanism.** Wetlands remove nutrients through plant uptake, microbial transformation, sedimentation and adsorption; macroalgae can convert dissolved nutrients to harvestable biomass. Mangrove or saline cells should receive treated, compatible water, not untreated RO concentrate, unless a site-specific ecological pilot proves salinity, metals and discharge effects safe.
+
+**Technology readiness.** Commercial deployment for some municipal wastewater wetlands; pilot/research for direct RO-brine polishing and mangrove/macroalgae use at this node.
+
+**Verifiable results.** A 2024 U.S. EPA-supported review notes that most constructed-wetland design/performance research remains unit-level and emphasises site-specific performance monitoring [5]. I located no verifiable, quantitative operating result demonstrating that a constructed wetland, mangrove or macroalgal cell safely polishes Dongjiakou-type SWRO concentrate to a permitted marine-discharge standard. **NO VERIFIABLE RESULT LOCATED** for the claimed direct-brine loop.
+
+**Relevance to this node.** Treated wastewater nutrients, stormwater and possibly a separately diluted saline stream; port land and harvested biomass. It should not be used to disguise concentrate dilution as brine treatment.
+
+**Accounting treatment under Node-001 rules.** Touches water, mass, carbon and revenue. Credit only measured load removal at inlet/outlet and a verified fate for harvested biomass or sediment; nutrients trapped in soil/sediment are not automatically recovered. Residual flow remains a reject/discharge subject to permit.
+
+**What would be required to claim it.** Salinity-gradient pilot; continuous flow, EC, temperature, DO and redox; TN/TP/ammonia/nitrate, metals, organics, microplastics and toxicity assays; ecological surveys; biomass harvest and contaminant assay; hydraulic residence time; and discharge permit.
+
+**Failure modes and cautions.** Salt shock, invasive plants, mosquito/vector issues, methane/N2O emissions, nutrient remobilisation, harmful algal blooms and habitat alteration are possible. Any downstream water-quality deterioration is a veto.
+
+## 6. Struvite and nutrient recovery, including seawater-magnesium-assisted precipitation
+
+**Name and mechanism.** Magnesium, ammonium and phosphate are adjusted to precipitate magnesium ammonium phosphate (struvite), which can be separated as a slow-release fertiliser. Seawater or Mg-rich brine can supply Mg, but calcium and other ions can create impurities; product quality and a real agricultural off-take are necessary.
+
+**Technology readiness.** Pilot-scale demonstrated; commercial struvite plants exist for suitable wastewater sidestreams; seawater-assisted route is pilot.
+
+**Verifiable results.** Aguado et al. (CALAGUA, Universitat Politècnica de València) operated a pilot crystallisation reactor in 2019 on source-separated urine. Using seawater as Mg source, they obtained 0.99 g struvite/L urine, exceeded 90% precipitation efficiency and exceeded 87% P recovery efficiency; crystals were over 110 micrometres and up to 320 micrometres. Seawater precipitates included amorphous calcium phosphate and impurities, unlike the almost-pure MgCl2 product [6].
+
+**Relevance to this node.** Wastewater/urine or digester centrate, seawater or Mg-rich RO concentrate, port fertiliser logistics and possible recovered CO2/alkalinity.
+
+**Accounting treatment under Node-001 rules.** Touches mass, water, energy and revenue. Credit P/N/Mg only once, based on influent/outlet and product assays. If Mg is recovered as a separate mineral, it cannot also be claimed as struvite Mg; if digestate is composted, the same N/P/Mg cannot receive compost credit.
+
+**What would be required to claim it.** Sidestream segregation; flow and nutrient mass balance; Mg/Ca dosing record; crystal mass and moisture; XRD and ICP assay; pathogen, metals and organic-contaminant tests; energy and chemical meters; agronomic/regulated fertiliser acceptance; and buyer receipt.
+
+**Failure modes and cautions.** Scaling upstream, impurity carryover, ammonia loss, variable urine strength, product contamination and poor settling can reduce recovery. Salinity and residual chemicals must not worsen receiving waters. Nutrient credit must follow the actual fate of fines and rejected liquor.
+
+## 7. Reclaimed water reuse for desalination, port and compute processes
+
+**Name and mechanism.** Treated municipal or industrial wastewater is polished to the quality required for cooling towers, washdown, process water or possibly non-product desalination uses. The loop closes only when metered reclaimed water demonstrably displaces a defined potable, groundwater or other source, with quality and health controls matched to end use.
+
+**Technology readiness.** Commercial deployment.
+
+**Verifiable results.** U.S. EPA (updated 2026) defines industrial reuse as recycled water used in applications such as manufacturing and data-centre cooling, and documents the Quincy Water Reuse Facility: Microsoft and the City of Quincy treat and recirculate data-centre cooling water, reducing reliance on local potable groundwater [7]. The EPA page also identifies Fairfax County reuse for industrial cooling and nutrient-discharge reduction [7]. The page is a case-study source, not a Dongjiakou performance guarantee.
+
+**Relevance to this node.** Wastewater, port washdown, cooling towers, compute pilot, desalination pretreatment/utility water and stormwater.
+
+**Accounting treatment under Node-001 rules.** Water ledger only receives a reuse credit when source water displaced, volume, quality and user receipt are measured. Energy, chemical and reject volumes remain in the energy/mass ledgers. Reuse is not “zero discharge” if concentrate or treatment residuals still leave the site.
+
+**What would be required to claim it.** Metered source and reclaimed flows; end-use contract; online EC/turbidity/TOC and microbiological monitoring; PFAS/metals/boron where relevant; cooling-cycle and blowdown records; baseline source-water counterfactual; permit and incident records.
+
+**Failure modes and cautions.** Legionella, corrosion/scaling, concentrate build-up, cross-connections, PFAS/trace contaminants and accidental potable-system contamination. A failed quality barrier or downstream deterioration is a veto.
+
+## 8. Anaerobic digestion, measured biogas and digestate/compost return
+
+**Name and mechanism.** Separated food/port organics, sewage sludge or compatible wastewater solids are anaerobically converted to biogas and digestate. Biogas can fuel CHP or upgrading; digestate can be dewatered, nutrient-recovered or composted, but only the measured final product—not theoretical feedstock potential—gets credited.
+
+**Technology readiness.** Commercial deployment for wastewater sludge and organics; proposed node integration is pilot until feedstock and permitting are proven.
+
+**Verifiable results.** EPA AgSTAR states biogas is typically 50–75% methane [8]. IEA Bioenergy’s 2015 report documents anaerobic digestion of sewage sludge as an established route and reviews nutrient recovery from digestate [9]. These are general measured/operational ranges and an institutional review, not a Dongjiakou plant result; no Dongjiakou gas volume is known.
+
+**Relevance to this node.** Port food waste, wastewater sludge, organics, digestate, CO2-rich biogas fraction, waste heat and port/adjacent agricultural off-take.
+
+**Accounting treatment under Node-001 rules.** Touches mass, energy, carbon and revenue. Biogas receives energy credit only after calibrated gas-meter volume, methane/CO2/H2S composition, lower heating value, actual engine/boiler/upgrader receipt and parasitic-energy accounting. Digestate N/P/Mg may receive either recovery credit or compost/soil-return credit, never both for one mass.
+
+**What would be required to claim it.** Weighbridge and contamination records; feedstock TS/VS and nutrient assays; gas meter and chromatograph; flare/engine/upgrader logs; digestate mass, stability, pathogen, metals, PFAS and nutrient assays; soil-application permit; compost/off-take ticket; methane-leak monitoring; and carbon boundary including avoided emissions.
+
+**Failure modes and cautions.** Feedstock contamination, salinity inhibition, foaming, H2S corrosion, methane leakage, digestate pathogens/metals/PFAS, odour and nutrient runoff. Soil return must stop if soil or receiving water quality deteriorates.
+
+## 9. Seawater air conditioning and deep-seawater utilisation
+
+**Name and mechanism.** Cold deep seawater is pumped through heat exchangers to serve district cooling, while a closed chilled-water loop serves buildings and compute equipment. Dongjiakou could also share seawater intake/outfall infrastructure, but intake ecology, thermal plume, biofouling and pumping energy must be included.
+
+**Technology readiness.** Commercial deployment in suitable coastal climates; proposed site is concept pending bathymetry, temperature profile and load study.
+
+**Verifiable results.** A 2022 peer-reviewed assessment describes SWAC using deep seawater as cold as 3–5°C at roughly 700 m depth and evaluates district cooling systems [10]. These are measured environmental/design parameters from the literature, not a Dongjiakou operating result. A 2015 Makai technical brochure claims 25% or more energy savings for seawater-cooled condensers, but this is vendor material and is not used as the evidentiary result [11].
+
+**Relevance to this node.** Seawater intake corridor, port buildings, desalination plant, compute cooling, waste heat and shared utility piping.
+
+**Accounting treatment under Node-001 rules.** Energy and water ledgers: credit measured cooling delivered and verified kWh displaced minus pumps, heat exchangers and treatment. Carbon follows metered electricity and counterfactual; intake/outfall volumes remain water flows, not avoided water use.
+
+**What would be required to claim it.** Seasonal CTD temperature/salinity survey; bathymetry and intake modelling; heat-load and chilled-water meters; pump kWh; fouling/chemical records; thermal and ecological plume model validated by monitoring; permits; and customer meter/contract showing displaced electric cooling.
+
+**Failure modes and cautions.** Deep-water habitat disturbance, entrainment, thermal or nutrient plume, biofouling chemicals, corrosion, pipe failure and climate-driven temperature changes. Ecological deterioration is veto-bearing.
+
+## 10. Port–desalination–industry industrial symbiosis
+
+**Name and mechanism.** A symbiosis network exchanges real streams: reclaimed water to port/industry, low-grade heat to digesters or greenhouses, CO2 to controlled cultivation or carbonation, brine minerals to a buyer, and waste organics to digestion. It is infrastructure only when exchange boundaries, ownership, quality, meters and off-take contracts are explicit; a conceptual Sankey is not a circular loop.
+
+**Technology readiness.** Concept for Dongjiakou; individual exchanges range from commercial deployment to pilot.
+
+**Verifiable results.** **NO VERIFIABLE RESULT LOCATED** for a named Dongjiakou, Qingdao or directly comparable integrated desalination–port–compute–biometabolic deployment with measured exchange volumes and quality. The 2019 review literature defines industrial symbiosis as reuse of one firm’s waste as another firm’s raw material, but it does not establish Node-001 results [12].
+
+**Relevance to this node.** All streams: RO concentrate, wastewater, biogas/CO2, waste heat, reclaimed water, port land and mineral products.
+
+**Accounting treatment under Node-001 rules.** Every exchange is a separate ledger transaction. Revenue requires invoice/receipt; water requires verified source displacement; energy requires metering; carbon requires boundary and counterfactual; mass requires assays. A downstream user’s unverified “intended use” cannot close the loop, and a reject-equivalent cannot be re-labelled as marine discharge.
+
+**What would be required to claim it.** Named counterparties; quality specifications and permits; tie-in design; calibrated custody-transfer meters; laboratory assays; dispatch and invoice records; outage/rejection logs; lifecycle boundary; and a residual-stream register.
+
+**Failure modes and cautions.** Counterparty failure, incompatible contaminants, stranded pipes, contract asymmetry, cross-contamination and pollution shifting. The node must not claim regenerative status if a partner’s downstream water quality deteriorates.
+
+## 11. Aquifer storage and recovery / managed aquifer recharge
+
+**Name and mechanism.** Treated compatible water is infiltrated or injected into a suitable aquifer for later recovery or environmental benefit. ASR/MAR is storage, not consumption avoidance: recovery, water-quality compatibility, rights and monitoring determine the credit.
+
+**Technology readiness.** Commercial deployment in some regions; pilot/feasibility at Dongjiakou.
+
+**Verifiable results.** The ITRC MAR overview documents Wildwood, New Jersey’s ASR system operating since 1967, with injected water forming a recoverable freshwater lens in a saline aquifer. It also reports a Ramganga Basin, India pilot with 10 recharge wells: nearly 14 million gallons/year average recharge at 153,000 gallons/day over three months, up to nine times recharge without wells [13]. These results are not Qingdao hydrogeology.
+
+**Relevance to this node.** Verified reclaimed water, stormwater or treated surface water; port land for infiltration, but not raw brine or nutrient-rich digestate without extensive treatment.
+
+**Accounting treatment under Node-001 rules.** Water, mass and energy. Credit only measured recharge and the verified recoverable fraction or a documented environmental service; account pumping and treatment energy. Storage must not be counted as reclaimed reuse until recovered water displaces another source.
+
+**What would be required to claim it.** Hydrogeological survey, core and aquifer mineralogy; injection/recovery wells; baseline heads and chemistry; compatibility and reactive-transport tests; tracer/recovery test; continuous volume, pressure and quality monitoring; water rights and permit; contingency shutdown plan.
+
+**Failure modes and cautions.** Clogging, geochemical mobilisation, microbial growth, salinity migration, contaminant plume, land subsidence and unrecoverable storage. Any aquifer deterioration is a veto.
+
+## Options investigated and rejected
+
+| Candidate | Decision | Why rejected or held |
+|---|---|---|
+| Direct discharge dilution as a “closed loop” | Reject | Dilution is not recovery. A modelled reject-equivalent cannot be restated as a marine-discharge claim, and brine ecological effects remain possible. |
+| Direct irrigation of ordinary crops with RO concentrate | Reject | Most crops are salt-sensitive; without a contained, measured halophyte trial it risks soil and groundwater salinisation. |
+| Bromine recovery as an assumed revenue stream | Hold | The 2022 review says desalination-brine bromine routes are researched but not commercially applied; require product assay and buyer before credit. |
+| “Zero liquid discharge” without a residual fate | Reject | Evaporation/crystallisation can transfer contaminants to solids and consume substantial energy; no credit without mass balance and lawful product/residual destination. |
+| Unverified algae desalination claims | Reject | Electrical-conductivity decline is not a salt mass balance, and no verified direct-brine polishing result was located for this node. |
+| Carbon credits based on gross CO2 uptake or theoretical crop yield | Reject | Carbon must be net, measured and durable; crop yield and mineralisation need actual assays and counterfactual energy accounting. |
+| Marine outfall as regeneration | Reject | Outfall is a discharge pathway, not a closed material loop; ecological monitoring and permit compliance remain independent constraints. |
+
+## What would close each gap
+
+| Option | Minimum evidence package before Node-001 claim |
+|---|---|
+| Mineral cascade | Flow/density, ICP-OES/IC, contaminant and antiscalant assay, product purity, energy meter, residual permit, buyer weight ticket |
+| Carbonation | CO2 flow/composition, solids carbon/XRD/TGA, reagent and kWh boundary, residual-water toxicity, durable product custody |
+| IMTA | Salinity/toxicity trial, inlet/outlet nutrient mass balance, harvested biomass assay, biosecurity, food/feed certificate, discharge permit |
+| Halophytes | Lined plots, irrigation/drainage meters, lysimeters and groundwater wells, crop/tissue assays, salt export plan, multi-season no-deterioration evidence |
+| Wetland/mangrove/macroalgae | Salinity-gradient pilot, load removal assays, DO/redox, metals/organics, ecological survey, biomass fate, discharge permit |
+| Struvite | Sidestream metering, N/P/Mg/Ca assays, crystal purity/contaminants, mass closure, fertiliser acceptance and buyer receipt |
+| Reclaimed water | Source-displacement baseline, custody meters, end-use contract, online quality and microbiology, concentrate/blowdown register, permit |
+| AD/digestate | Feed weighbridge, TS/VS and nutrient assays, gas meter/chromatograph, conversion receipt, leak checks, digestate/compost assays and off-take |
+| SWAC/deep seawater | CTD/bathymetry, seasonal load and kWh meters, pumping parasitics, plume/ecology monitoring, permit, customer displacement record |
+| Industrial symbiosis | Named counterparties, quality specs, tie-in permits, custody meters, invoices, outage/rejection logs and residual-stream register |
+| ASR/MAR | Hydrogeology/core study, compatibility tests, tracer pilot, injection/recovery meters, water-quality monitoring, rights and contingency plan |
+
+## Full source list
+
+[1]: https://www.nature.com/articles/s41545-022-00153-6 "Seawater desalination concentrate—a new frontier for sustainable resource recovery and utilization, 2022"
+
+[2]: https://www.mdpi.com/2075-163X/7/11/207 "CO2 Mineralization Using Brine Discharged from a Seawater Desalination Plant, Bang et al., 2017"
+
+[3]: https://pmc.ncbi.nlm.nih.gov/articles/PMC9698553/ "Integrated Multitrophic Aquaculture; Analysing Contributions of Different Biological Compartments to Nutrient Removal, Paolacci et al., 2022"
+
+[4]: https://www.biosaline.org/publications/drainage-salt-leaching-impacts-and-growth-salicornia-bigelovii-irrigated-different "Drainage, Salt-leaching Impacts, and the Growth of Salicornia bigelovii Irrigated with Different Saline Waters, ICBA and collaborators, 2023"
+
+[5]: https://pmc.ncbi.nlm.nih.gov/articles/PMC11235211/ "Implementing Constructed Wetlands for Nutrient Reduction at the Watershed Scale, 2024"
+
+[6]: https://pubmed.ncbi.nlm.nih.gov/30954828/ "P-recovery in a pilot-scale struvite crystallisation reactor for source separated urine systems using seawater and magnesium chloride as magnesium sources, Aguado et al., 2019"
+
+[7]: https://www.epa.gov/waterreuse/water-reuse-industrial-applications-resources "U.S. EPA Water Reuse for Industrial Applications Resources, updated 2026"
+
+[8]: https://www.epa.gov/agstar/how-does-anaerobic-digestion-work "U.S. EPA AgSTAR: How Does Anaerobic Digestion Work?, 2025"
+
+[9]: https://task37.ieabioenergy.com/wp-content/uploads/sites/32/2022/02/Wastewater_biogas_grey_web-1.pdf "IEA Bioenergy Task 37: Sustainable biogas production in municipal wastewater treatment plants, 2015"
+
+[10]: https://pure.iiasa.ac.at/18033/1/1-s2.0-S0360544222012622-main.pdf "Seawater air-conditioning and ammonia district cooling, Hunt et al., 2022"
+
+[11]: https://www.makai.com/brochures/Makai%20Seawater%20Air%20Conditioning%20Brochure%202015_9_17.pdf "Makai Seawater Air Conditioning: A Basic Understanding, 2015; vendor brochure, not used as primary quantitative evidence"
+
+[12]: https://www.mdpi.com/2071-1050/11/24/7095 "The Potential of Industrial Symbiosis: Case Analysis and Main Drivers, Neves et al., 2019"
+
+[13]: https://mar-1.itrcweb.org/managed-aquifer-recharge-overview/ "ITRC Managed Aquifer Recharge Overview, accessed 2026"

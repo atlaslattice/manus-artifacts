@@ -1,0 +1,99 @@
+{
+  "status": "REVIEWED_PUBLIC_CANDIDATE_NON_CANON",
+  "canon": false,
+  "deployment": false,
+  "authority": "none",
+  "proof": false,
+  "review_date": "2026-10-08",
+  "sources": [
+    {
+      "id": "POLICY-CIRCULAR-2026",
+      "status": "OFFICIAL_POLICY",
+      "date": "2026-07-03",
+      "url": "https://www.ndrc.gov.cn/xxgk/jd/jd/202607/t20260703_1406254_ext.html",
+      "finding": "State Council-approved plan issued June 30. 2030 goals include approximately 16% productivity increase over 2025, 4.5 billion t/y bulk solid waste utilization, 510 million t/y recycled resources and CNY 8 trillion industry output.",
+      "boundary": "National policy; no project endorsement, awarded funding or operating performance."
+    },
+    {
+      "id": "POLICY-DESAL-2026",
+      "status": "OFFICIAL_POLICY",
+      "date": "2026-07-16",
+      "url": "https://www.ndrc.gov.cn/xxgk/zcfb/tz/202607/P020260716718844739347.pdf",
+      "finding": "Action plan signed July 2; 2030 desal capacity at least 4.5 million t/day. Explicit salt, bromine and potassium brine-recovery demonstrations; lithium and uranium extraction research.",
+      "boundary": "National prospective targets; not realized production or Dongjiakou permits."
+    },
+    {
+      "id": "LNG-CONSTRUCTION-2026",
+      "status": "PRIMARY_GOVERNMENT_PROJECT_STATUS",
+      "date": "2026-06-03",
+      "url": "https://www.xihaian.gov.cn/ywdt/tsxq/202606/t20260603_10624706.shtml",
+      "finding": "Qingdao LNG cold-energy cascade reported entering design/construction.",
+      "boundary": "No commissioning or measured generation receipt."
+    },
+    {
+      "id": "LNG-OUTPUT-REFERENCE",
+      "status": "PRIMARY_LOCAL_REPORTING",
+      "date": "2026-06-02",
+      "url": "https://epaper.qingdaonews.com/qdrb/html/2026-06/02/content_144591_3494474.htm",
+      "finding": "Projected 26 GWh/y generation and 8 GWh/y avoided grid electricity for cooling; CNY108 million projected investment.",
+      "boundary": "Separate projected effects; zero current credit."
+    },
+    {
+      "id": "K-PILOT-2026",
+      "status": "INSTITUTE_SELF_REPORT",
+      "date": "2026-09-24",
+      "url": "https://www.isdmu.com.cn/snyw/4004.html",
+      "finding": "Institute reports stable pilot potassium extraction and readiness to move toward engineering scale.",
+      "boundary": "Search-retrieved institute statement, full-page fetch unavailable in this review. No verified local yield, purity, energy or economics."
+    },
+    {
+      "id": "K-PILOT-CONTEXT",
+      "status": "OFFICIAL_PORTAL_REPORTING",
+      "date": "2026-07-21",
+      "url": "https://www.teda.gov.cn/contents/13/112306.html",
+      "finding": "Reports Qingdao pilot seawater potassium extraction work.",
+      "boundary": "Geographic adjacency does not establish R01 installation or allocated Dongjiakou feed."
+    },
+    {
+      "id": "K-RESIDUE-PAPER",
+      "status": "PEER_REVIEWED_MODEL",
+      "date": "2026",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0378429026001462",
+      "doi": "10.1016/j.fcr.2026.110470",
+      "finding": "Feng et al. modeled residue return of 9.25 Mt elemental K in 2020 in major cereal systems.",
+      "boundary": "Historical modeled nutrient recycling, not new merchant potash supply; not K2O or KCl. Soil return competes with extraction allocation."
+    },
+    {
+      "id": "PG-DESIGN-CONTRACT",
+      "status": "PUBLIC_PROCUREMENT_DESIGN_AWARD",
+      "date": "2026-07-01",
+      "url": "https://ggzy.sc.yichang.gov.cn/ydweb/jyxx/003001/003001007/20260701/0e707121-f120-4125-a8b7-2e52976b67d3.html",
+      "finding": "ChuXing phosphogypsum resource-use project design contract documented; 1 Mt/y feed design.",
+      "boundary": "Design award is not commissioning; acid grade, feed moisture and measured conversion unknown."
+    },
+    {
+      "id": "PG-CHUXING-EIA",
+      "status": "OFFICIAL_EIA_DESIGN_NOTICE",
+      "date": "2026-03-27",
+      "url": "https://hbj.yichang.gov.cn/content-42531-996867-1.html",
+      "finding": "ChuXing: design feed approximately1 Mt/y phosphogypsum, industrial acid400 kt/y.",
+      "boundary": "Search-retrieved official notice; design, not measured output. Acid concentration and wet/dry feed basis unknown."
+    },
+    {
+      "id": "PG-YIHUA-SEPARATE-EIA",
+      "status": "OFFICIAL_EIA_DESIGN_NOTICE",
+      "date": "2026-04-09",
+      "url": "https://hbj.yichang.gov.cn/content-42531-996929-1.html",
+      "finding": "Separate Yihua Environmental Technology project: design feed1 Mt/y, industrial acid400 kt/y, silicate coproduct430 kt/y.",
+      "boundary": "Do not merge entities. Design and acid/feed bases require technical qualification."
+    },
+    {
+      "id": "LAOS-COMPANY-Q1",
+      "status": "COMPANY_AUTHORED_QUARTERLY_REPORT",
+      "date": "2026-04-28",
+      "url": "https://paper.cnstock.com/html/2026-04/28/content_2207901.htm",
+      "finding": "Company reports2025 potash production2.0115 Mt and sales2.0457 Mt; third1 Mt/y project trial feeding December2025.",
+      "boundary": "Company-reported operational comparator; capacity and steady output are distinct. National customs totals quoted by company are not primary customs evidence here."
+    }
+  ]
+}

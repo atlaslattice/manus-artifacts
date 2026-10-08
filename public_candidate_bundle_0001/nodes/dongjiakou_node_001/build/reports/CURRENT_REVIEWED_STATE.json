@@ -1,0 +1,818 @@
+{
+  "classification": "REVIEWED_PUBLIC_CANDIDATE_NON_CANON",
+  "source_package": "recovered historical Manus ZIP plus reviewed Notion overlay; not the unavailable latest Manus source",
+  "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+  "nodes": {
+    "W01": "Water / desalination (UF+RO, 100,000 m3/day nameplate)",
+    "C01": "Compute + ORCS advisory lattice (a load, never a source)",
+    "P01": "Port / rail / logistics metabolism",
+    "E01": "Grid / wind / PV / storage",
+    "E02": "LNG cold-energy cascade and air separation",
+    "R01": "Resource extraction from brine (Li, D, Mg/Ca/K/Br, trace)",
+    "BIO01": "Organics / wastewater / nutrients",
+    "M01": "Additive manufacturing / 3D print (a load; material credit only for assayed contracted output)",
+    "MAT01": "Steel slag / tires / construction materials",
+    "CHEM01": "Chemical-park process streams",
+    "AGR01": "Grain / food / controlled-environment agriculture",
+    "CARB01": "CO2 capture / utilization / mineralization",
+    "ECO01": "Coastal and ecological monitoring",
+    "GOV01": "Provenance / contracts / vetoes",
+    "EXT01": "External boundary \u2014 current sink or fate not established at subnode level",
+    "QSS01": "Qingdao Special Steel",
+    "JNC01": "Jinneng Chemical",
+    "BTN01": "Bangtuo New Materials",
+    "LDC01": "Louis Dreyfus food park"
+  },
+  "node_meta": {
+    "W01": {
+      "node_kind": "PROCESS_ASSET",
+      "asset_status": "OPERATIONAL",
+      "functional_roles": [
+        "Water / desalination (UF+RO, 100,000 m3/day nameplate)"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "C01": {
+      "node_kind": "PROCESS_ASSET",
+      "asset_status": "UNKNOWN",
+      "functional_roles": [
+        "Compute + ORCS advisory lattice (a load, never a source)"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "P01": {
+      "node_kind": "PROCESS_ASSET",
+      "asset_status": "OPERATIONAL",
+      "functional_roles": [
+        "Port / rail / logistics metabolism"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "E01": {
+      "node_kind": "PROCESS_ASSET",
+      "asset_status": "UNKNOWN",
+      "functional_roles": [
+        "Grid / wind / PV / storage"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "E02": {
+      "node_kind": "PROCESS_ASSET",
+      "asset_status": "UNDER_CONSTRUCTION",
+      "functional_roles": [
+        "LNG cold-energy cascade and air separation"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "R01": {
+      "node_kind": "PROCESS_ASSET",
+      "asset_status": "UNKNOWN",
+      "functional_roles": [
+        "Resource extraction from brine (Li, D, Mg/Ca/K/Br, trace)"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "BIO01": {
+      "node_kind": "PROCESS_ASSET",
+      "asset_status": "UNKNOWN",
+      "functional_roles": [
+        "Organics / wastewater / nutrients"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "M01": {
+      "node_kind": "PROCESS_ASSET",
+      "asset_status": "UNKNOWN",
+      "functional_roles": [
+        "Additive manufacturing / 3D print (a load; material credit only for assayed contracted output)"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "MAT01": {
+      "node_kind": "PROCESS_ASSET",
+      "asset_status": "UNKNOWN",
+      "functional_roles": [
+        "Steel slag / tires / construction materials"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "CHEM01": {
+      "node_kind": "PROCESS_ASSET",
+      "asset_status": "UNKNOWN",
+      "functional_roles": [
+        "Chemical-park process streams"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "AGR01": {
+      "node_kind": "PROCESS_ASSET",
+      "asset_status": "UNKNOWN",
+      "functional_roles": [
+        "Grain / food / controlled-environment agriculture"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "CARB01": {
+      "node_kind": "PROCESS_ASSET",
+      "asset_status": "UNKNOWN",
+      "functional_roles": [
+        "CO2 capture / utilization / mineralization"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "ECO01": {
+      "node_kind": "GOVERNANCE",
+      "asset_status": "OPERATIONAL",
+      "functional_roles": [
+        "Coastal and ecological monitoring"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "GOV01": {
+      "node_kind": "GOVERNANCE",
+      "asset_status": "OPERATIONAL",
+      "functional_roles": [
+        "Provenance / contracts / vetoes"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "EXT01": {
+      "node_kind": "EXTERNAL_BOUNDARY",
+      "asset_status": "NOT_APPLICABLE",
+      "functional_roles": [
+        "External boundary \u2014 current sink or fate not established at subnode level"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "QSS01": {
+      "node_kind": "FACILITY_ASSET",
+      "asset_status": "OPERATIONAL",
+      "functional_roles": [
+        "Qingdao Special Steel"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "JNC01": {
+      "node_kind": "FACILITY_ASSET",
+      "asset_status": "OPERATIONAL",
+      "functional_roles": [
+        "Jinneng Chemical"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "BTN01": {
+      "node_kind": "FACILITY_ASSET",
+      "asset_status": "OPERATIONAL",
+      "functional_roles": [
+        "Bangtuo New Materials"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    },
+    "LDC01": {
+      "node_kind": "FACILITY_ASSET",
+      "asset_status": "UNDER_CONSTRUCTION",
+      "functional_roles": [
+        "Louis Dreyfus food park"
+      ],
+      "source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2"
+    }
+  },
+  "streams": [
+    {
+      "stream_id": "S-W01-IND-01",
+      "source_subnode": "W01",
+      "sink_subnode": null,
+      "material_or_energy": "product water to contracted industrial offtakers",
+      "quantity": "17,930,000 m3/year actual (2025); 70,000 m3/day contractual take-or-pay minimum",
+      "quality_composition": "desalinated UF+RO permeate, treatment fee CNY 4.25/m3",
+      "temperature_pressure": "ambient, low pressure",
+      "time_profile": "PPP guaranteed minimum volume; daily profile UNKNOWN",
+      "ownership": "\u9752\u5c9b\u6c34\u52a1\u6d77\u6c34\u6de1\u5316\u6709\u9650\u516c\u53f8 (operator); PPP signed 2015",
+      "contract_status": "PPP 2015: CNY 4.25/m3, 70,000 m3/day take-or-pay minimum. Dongjiakou Water Supply Co buys at 4.25 and resells at 4.00, a policy-driven loss subsidised by the district government.",
+      "evidence_class": "REPORTED",
+      "edge_state": "REPORTED_PHYSICAL",
+      "conversion_losses": "distribution losses UNKNOWN",
+      "residual_fate": "n/a",
+      "vetoes": [],
+      "primary_credit_owner": "W01",
+      "candidate_allocation_owner": "NONE",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "QSS01",
+        "JNC01",
+        "BTN01"
+      ],
+      "sink_disaggregated": false,
+      "quantity_total_m3_y": 17930000,
+      "quantity_year": 2025,
+      "contract_minimum_m3_day": 70000,
+      "quantity_by_sink": null,
+      "boundary_crossing": "UNKNOWN_MIXED",
+      "internal_quantity": null,
+      "external_quantity": null,
+      "additional_buyer": "West Coast Water Affairs: location and downstream allocation UNKNOWN"
+    },
+    {
+      "stream_id": "S-W01-EXT-02",
+      "source_subnode": "W01",
+      "sink_subnode": "EXT01",
+      "material_or_energy": "reject-equivalent brine / concentrate",
+      "quantity": "21,914,444 m3/year at 45% recovery; 17,930,000 at 50%",
+      "quality_composition": "brine chemistry UNKNOWN",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "follows product demand; profile UNKNOWN",
+      "ownership": "UNKNOWN",
+      "contract_status": "UNKNOWN",
+      "evidence_class": "MODELED",
+      "edge_state": "REPORTED_PHYSICAL",
+      "conversion_losses": "n/a",
+      "residual_fate": "ecologically bounded discharge; discharge point UNKNOWN",
+      "vetoes": [
+        "INV-19"
+      ],
+      "primary_credit_owner": "W01",
+      "candidate_allocation_owner": "NONE",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "EXT01"
+      ]
+    },
+    {
+      "stream_id": "S-P01-EXT-01",
+      "source_subnode": "P01",
+      "sink_subnode": "EXT01",
+      "material_or_energy": "port throughput and logistics metabolism",
+      "quantity": "30 berths operating; first 400,000 t ore terminal handled >40 Mt in 2024 at ~90% utilisation",
+      "quality_composition": "bulk ore, liquid chemicals, grain, containers",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "UNKNOWN",
+      "ownership": "Qingdao Port",
+      "contract_status": "UNKNOWN",
+      "evidence_class": "OPERATIONAL",
+      "edge_state": "REPORTED_PHYSICAL",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "UNKNOWN",
+      "vetoes": [],
+      "primary_credit_owner": "P01",
+      "candidate_allocation_owner": "NONE",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "EXT01"
+      ]
+    },
+    {
+      "stream_id": "S-MAT01-EXT-02",
+      "source_subnode": "MAT01",
+      "sink_subnode": "EXT01",
+      "material_or_energy": "steel slag and water slag to building materials",
+      "quantity": "operational processing link at Qingdao Special Steel",
+      "quality_composition": "slag chemistry UNKNOWN",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "UNKNOWN",
+      "ownership": "Qingdao Runyi Fengtai New Materials",
+      "contract_status": "UNKNOWN",
+      "evidence_class": "OPERATIONAL",
+      "edge_state": "REPORTED_PHYSICAL",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "residual fate UNKNOWN",
+      "vetoes": [],
+      "primary_credit_owner": "MAT01",
+      "candidate_allocation_owner": "NONE",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "EXT01"
+      ],
+      "allocation_owner": "NONE"
+    },
+    {
+      "stream_id": "S-MAT01-EXT-03",
+      "source_subnode": "MAT01",
+      "sink_subnode": "EXT01",
+      "material_or_energy": "waste tire pyrolysis products",
+      "quantity": "operational demonstration base; oil, carbon black, steel wire, gas",
+      "quality_composition": "carbon black grade UNKNOWN",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "UNKNOWN",
+      "ownership": "Doublestar Exista",
+      "contract_status": "UNKNOWN",
+      "evidence_class": "OPERATIONAL",
+      "edge_state": "REPORTED_PHYSICAL",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "claimed zero residue, unverified here",
+      "vetoes": [],
+      "primary_credit_owner": "MAT01",
+      "candidate_allocation_owner": "NONE",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "EXT01"
+      ],
+      "allocation_owner": "NONE"
+    },
+    {
+      "stream_id": "S-E02-GRID-01",
+      "source_subnode": "E02",
+      "sink_subnode": "E01",
+      "material_or_energy": "LNG cold-energy power generation",
+      "quantity": "26,000,000 kWh/year PROJECTED at commissioning",
+      "quality_composition": "electrical",
+      "temperature_pressure": "cryogenic source",
+      "time_profile": "follows LNG send-out; profile UNKNOWN",
+      "ownership": "Sinopec Qingdao LNG / project SPV",
+      "contract_status": "bid completed Jun 2026; detailed design and construction",
+      "evidence_class": "VERIFIED_PROJECT",
+      "edge_state": "UNDER_CONSTRUCTION",
+      "conversion_losses": "conversion losses UNKNOWN",
+      "residual_fate": "cold rejection to environment",
+      "vetoes": [],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "E02",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "E01"
+      ]
+    },
+    {
+      "stream_id": "S-E02-P01-01",
+      "source_subnode": "E02",
+      "sink_subnode": "P01",
+      "material_or_energy": "LNG cold-energy cooling service, avoiding external grid consumption",
+      "quantity": "8,000,000 kWh/year avoided PROJECTED",
+      "quality_composition": "cooling service",
+      "temperature_pressure": "cryogenic to chilled water",
+      "time_profile": "UNKNOWN",
+      "ownership": "UNKNOWN",
+      "contract_status": "under detailed design",
+      "evidence_class": "VERIFIED_PROJECT",
+      "edge_state": "UNDER_CONSTRUCTION",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "UNKNOWN",
+      "vetoes": [],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "E02",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "P01"
+      ]
+    },
+    {
+      "stream_id": "S-E02-CHEM01-01",
+      "source_subnode": "E02",
+      "sink_subnode": "CHEM01",
+      "material_or_energy": "cold-energy air separation output (LN2, LO2, LAr)",
+      "quantity": "~660 t/day air separation unit",
+      "quality_composition": "liquid nitrogen, oxygen, argon",
+      "temperature_pressure": "cryogenic",
+      "time_profile": "UNKNOWN",
+      "ownership": "Sichuan Air Separation Group",
+      "contract_status": "signed 2025-09-02, CNY 230M",
+      "evidence_class": "VERIFIED_PROJECT",
+      "edge_state": "UNDER_CONSTRUCTION",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "UNKNOWN",
+      "vetoes": [],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "E02",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "CHEM01"
+      ]
+    },
+    {
+      "stream_id": "S-AGR01-BIO01-01",
+      "source_subnode": "AGR01",
+      "sink_subnode": "BIO01",
+      "material_or_energy": "food-processing residues and wastewater",
+      "quantity": "1.5 Mt/yr feed protein, 370 kt/yr refined oil, 15 kt/yr lecithin planned from 2027",
+      "quality_composition": "composition UNKNOWN",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "UNKNOWN",
+      "ownership": "Louis Dreyfus Company",
+      "contract_status": "UNKNOWN",
+      "evidence_class": "UNDER_CONSTRUCTION",
+      "edge_state": "UNDER_CONSTRUCTION",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "UNKNOWN",
+      "vetoes": [],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "AGR01",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "BIO01"
+      ]
+    },
+    {
+      "stream_id": "S-E01-C01-01",
+      "source_subnode": "E01",
+      "sink_subnode": "C01",
+      "material_or_energy": "regional wind and PV allocation",
+      "quantity": "~214 MW wind + ~81 MW PV proposed; node allocation UNKNOWN",
+      "quality_composition": "electrical",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "hourly profile UNKNOWN",
+      "ownership": "Qingdao Port Green Transformation Action Plan 2026-2028",
+      "contract_status": "plan only, no PPA or meter",
+      "evidence_class": "PLANNED",
+      "edge_state": "PLANNED",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "UNKNOWN",
+      "vetoes": [],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "E01",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "C01"
+      ]
+    },
+    {
+      "stream_id": "S-S01-C01-01",
+      "source_subnode": "E01",
+      "sink_subnode": "C01",
+      "material_or_energy": "on-site rooftop PV (S01_A / S01_B) technical sensitivity",
+      "quantity": "2.70619355 / 2.917982611 GWh/year MODELED; panels not installed",
+      "quality_composition": "electrical",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "hourly overlap UNKNOWN",
+      "ownership": "node (proposed)",
+      "contract_status": "no installation contract",
+      "evidence_class": "MODELED",
+      "edge_state": "CANDIDATE_COUPLING",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "n/a",
+      "vetoes": [],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "E01/S01",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "C01"
+      ]
+    },
+    {
+      "stream_id": "S-C01-W01-C1",
+      "source_subnode": "C01",
+      "sink_subnode": "W01",
+      "material_or_energy": "compute waste heat to CIP thermal duty",
+      "quantity": "UNKNOWN",
+      "quality_composition": "low-grade heat, temperature UNKNOWN",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "UNKNOWN",
+      "ownership": "UNKNOWN",
+      "contract_status": "UNKNOWN",
+      "evidence_class": "UNKNOWN",
+      "edge_state": "CANDIDATE_COUPLING",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "UNKNOWN",
+      "vetoes": [
+        "INV-19"
+      ],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "NONE",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "W01"
+      ]
+    },
+    {
+      "stream_id": "S-BIO01-W01-C1",
+      "source_subnode": "BIO01",
+      "sink_subnode": "W01",
+      "material_or_energy": "reclaimed water displacing product water",
+      "quantity": "UNKNOWN",
+      "quality_composition": "UNKNOWN",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "UNKNOWN",
+      "ownership": "UNKNOWN",
+      "contract_status": "UNKNOWN",
+      "evidence_class": "UNKNOWN",
+      "edge_state": "CANDIDATE_COUPLING",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "treatment residuals UNKNOWN",
+      "vetoes": [
+        "INV-19"
+      ],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "NONE",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "W01"
+      ]
+    },
+    {
+      "stream_id": "S-W01-P01-C1",
+      "source_subnode": "W01",
+      "sink_subnode": "P01",
+      "material_or_energy": "product water routed to port demand",
+      "quantity": "candidate: portion of 17.93 Mm3/year, allocation UNKNOWN. REVIEW ROUND 1 EVIDENCE AGAINST: the named PPP offtakers are Qingdao Special Steel, Jinneng Chemical, Bangtuo New Materials and West Coast Water Affairs. The port is NOT among them.",
+      "quality_composition": "desalinated permeate",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "UNKNOWN",
+      "ownership": "UNKNOWN",
+      "contract_status": "no port water supply contract located; and the port is absent from the contracted offtaker list",
+      "evidence_class": "UNKNOWN",
+      "edge_state": "CANDIDATE_COUPLING",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "UNKNOWN",
+      "vetoes": [],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "P01",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "P01"
+      ]
+    },
+    {
+      "stream_id": "S-W01-R01-C1",
+      "source_subnode": "W01",
+      "sink_subnode": "R01",
+      "material_or_energy": "reject-equivalent brine routed to resource extraction",
+      "quantity": "candidate: portion of 21.914 Mm3/year, allocation UNKNOWN",
+      "quality_composition": "brine chemistry UNKNOWN",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "UNKNOWN",
+      "ownership": "UNKNOWN",
+      "contract_status": "UNKNOWN",
+      "evidence_class": "UNKNOWN",
+      "edge_state": "CANDIDATE_COUPLING",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "spent brine and eluate fate UNKNOWN",
+      "vetoes": [
+        "INV-19"
+      ],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "R01",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "R01"
+      ]
+    },
+    {
+      "stream_id": "S-CHEM01-CARB01-01",
+      "source_subnode": "CHEM01",
+      "sink_subnode": "CARB01",
+      "material_or_energy": "CO2 from chemical and LNG processes",
+      "quantity": "UNKNOWN",
+      "quality_composition": "concentration UNKNOWN",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "UNKNOWN",
+      "ownership": "UNKNOWN",
+      "contract_status": "UNKNOWN",
+      "evidence_class": "UNKNOWN",
+      "edge_state": "CANDIDATE_COUPLING",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "UNKNOWN",
+      "vetoes": [],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "NONE",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "CARB01"
+      ]
+    },
+    {
+      "stream_id": "S-CARB01-M01-01",
+      "source_subnode": "CARB01",
+      "sink_subnode": "M01",
+      "material_or_energy": "CO2 to 3D-printed concrete curing",
+      "quantity": "UNKNOWN",
+      "quality_composition": "purity UNKNOWN",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "UNKNOWN",
+      "ownership": "UNKNOWN",
+      "contract_status": "UNKNOWN",
+      "evidence_class": "UNKNOWN",
+      "edge_state": "CANDIDATE_COUPLING",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "mineralized carbon; durability UNKNOWN",
+      "vetoes": [
+        "CARB-01"
+      ],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "CARB01",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "M01"
+      ]
+    },
+    {
+      "stream_id": "S-CARB01-AGR01-01",
+      "source_subnode": "CARB01",
+      "sink_subnode": "AGR01",
+      "material_or_energy": "CO2 enrichment for controlled-environment agriculture",
+      "quantity": "UNKNOWN",
+      "quality_composition": "UNKNOWN",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "UNKNOWN",
+      "ownership": "UNKNOWN",
+      "contract_status": "UNKNOWN",
+      "evidence_class": "UNKNOWN",
+      "edge_state": "CANDIDATE_COUPLING",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "UNKNOWN",
+      "vetoes": [
+        "CARB-01"
+      ],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "NONE",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "AGR01"
+      ]
+    },
+    {
+      "stream_id": "S-MAT01-M01-C1",
+      "source_subnode": "MAT01",
+      "sink_subnode": "M01",
+      "material_or_energy": "construction waste to additive manufacturing feedstock \u2014 CAPABILITY GAP, NOT SURPLUS",
+      "quantity": "candidate: the zone has no processing capacity of its own. A Qingdao planning document identifies Dongjiakou and its surroundings as LACKING construction waste resource-utilisation enterprises, and recommends siting one to two facilities there.",
+      "quality_composition": "composition UNKNOWN",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "UNKNOWN",
+      "ownership": "UNKNOWN",
+      "contract_status": "no waste supply contract and no allocation. The relationship is inverted from our prior assumption: this is not waste seeking a sink, it is a missing processing capability the city plans to fill.",
+      "evidence_class": "UNKNOWN",
+      "edge_state": "CANDIDATE_COUPLING",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "UNKNOWN",
+      "vetoes": [],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "M01",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "M01"
+      ],
+      "review_note": "Construction waste processing capability gap; outsourced service is not a dedicated processing facility."
+    },
+    {
+      "stream_id": "S-P01-C01-01",
+      "source_subnode": "P01",
+      "sink_subnode": "C01",
+      "material_or_energy": "shore power and port electrical demand",
+      "quantity": "UNKNOWN",
+      "quality_composition": "UNKNOWN",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "UNKNOWN",
+      "ownership": "UNKNOWN",
+      "contract_status": "UNKNOWN",
+      "evidence_class": "UNKNOWN",
+      "edge_state": "CANDIDATE_COUPLING",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "UNKNOWN",
+      "vetoes": [],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "NONE",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "C01"
+      ]
+    },
+    {
+      "stream_id": "S-CHEM01-AGR01-01",
+      "source_subnode": "CHEM01",
+      "sink_subnode": "AGR01",
+      "material_or_energy": "industrial waste heat to greenhouses",
+      "quantity": "68 C class heat \u2014 reference from Xinfa Liaocheng, a DIFFERENT site",
+      "quality_composition": "heat at ~68 C (reference system only)",
+      "temperature_pressure": "~68 C (reference)",
+      "time_profile": "UNKNOWN",
+      "ownership": "UNKNOWN",
+      "contract_status": "UNKNOWN",
+      "evidence_class": "SECONDARY",
+      "edge_state": "REFERENCE_ONLY",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "not applicable to this locality",
+      "vetoes": [],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "NONE",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "AGR01"
+      ]
+    },
+    {
+      "stream_id": "S-MAT01-M01-C2",
+      "source_subnode": "MAT01",
+      "sink_subnode": "M01",
+      "material_or_energy": "construction waste to additive manufacturing feedstock \u2014 CAPABILITY GAP, NOT SURPLUS",
+      "quantity": "UNKNOWN",
+      "quality_composition": "composition UNKNOWN",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "UNKNOWN",
+      "ownership": "UNKNOWN",
+      "contract_status": "no waste supply contract and no allocation. The relationship is inverted from our prior assumption: this is not waste seeking a sink, it is a missing processing capability the city plans to fill.",
+      "evidence_class": "UNKNOWN",
+      "edge_state": "CANDIDATE_COUPLING",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "UNKNOWN",
+      "vetoes": [],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "M01",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "M01"
+      ],
+      "review_note": "Tire-derived carbon black to AM: quality, trial and offtake UNKNOWN."
+    },
+    {
+      "stream_id": "S-MAT01-M01-C3",
+      "source_subnode": "MAT01",
+      "sink_subnode": "M01",
+      "material_or_energy": "construction waste to additive manufacturing feedstock \u2014 CAPABILITY GAP, NOT SURPLUS",
+      "quantity": "UNKNOWN",
+      "quality_composition": "composition UNKNOWN",
+      "temperature_pressure": "UNKNOWN",
+      "time_profile": "UNKNOWN",
+      "ownership": "UNKNOWN",
+      "contract_status": "no waste supply contract and no allocation. The relationship is inverted from our prior assumption: this is not waste seeking a sink, it is a missing processing capability the city plans to fill.",
+      "evidence_class": "UNKNOWN",
+      "edge_state": "CANDIDATE_COUPLING",
+      "conversion_losses": "UNKNOWN",
+      "residual_fate": "UNKNOWN",
+      "vetoes": [],
+      "primary_credit_owner": "NONE",
+      "candidate_allocation_owner": "M01",
+      "realized_credit": 0,
+      "review_source": "https://www.notion.so/3f20c1de73d9811491b5fd911ff37fa2",
+      "sink_nodes": [
+        "M01"
+      ],
+      "review_note": "Slag to AM: existing cement/material use does not establish surplus."
+    }
+  ],
+  "counts": {
+    "boundary_units": 19,
+    "internal_units": 18,
+    "streams": 23,
+    "physical": 5,
+    "opportunity": 18
+  },
+  "vetoes": {
+    "INV-19": {
+      "definition": "Downstream water quality must not deteriorate. A facility may not claim net positive while it does.",
+      "state": "UNRESOLVED",
+      "why": "Review round 1 advanced this without resolving it. The outfall is now located with coordinates (119\u00b044'33.10\"E, 35\u00b034'47.17\"N, between the west breakwater and the eastern trestle section) and an approval instrument exists (\u9c81\u6d77\u6e14\u51fd[2015]330\u53f7). A 2024 peer-reviewed study finds impact confined within 200 m of the outfall. But that study is a SECONDARY analysis, and no discharge permit number or permitted limits were located. A secondary summary may never be promoted to a primary ecological receipt.",
+      "stream_identity_match": "SUPPORTED_SECONDARY",
+      "evidence_basis": "SECONDARY_ONLY",
+      "permit_limits": null,
+      "primary_monitoring": null,
+      "veto_clearance": "INSUFFICIENT"
+    },
+    "ECO-01": {
+      "definition": "Coastal and ecological status must be measured at primary level, not inferred from secondary summaries.",
+      "state": "UNRESOLVED",
+      "why": "Confirmed as a genuine gap, not a search failure. Review round 1 searched directly for the 2017 and 2022 Ocean University of China station-level series and returned NULL. Only secondary summaries are publicly available. This remains the critical path for the node."
+    },
+    "CERT-01": {
+      "definition": "MARINE and PRESSURE-BOUNDARY components must be certified. An uncertified printed part is a safety problem, not a saving. SCOPE NARROWED in review round 1: concrete structural printing DOES have a current Chinese standards path (T/CBMF 378-2026 / T/CCPA 90-2026 printers, effective 2026-09-06; T/CCPA 85-2025 / T/CBMF 366-2025 premix; and a national qualification standard in development based on ISO/ASTM 52939:2023). No classification-society or pressure-vessel code pathway was found.",
+      "state": "UNRESOLVED",
+      "why": "Narrowed, but still unresolved. Concrete structural AM has a current standards path, so the veto does not block material reuse or structural printing. It blocks additively manufactured MARINE and PRESSURE-BOUNDARY components, for which no classification-society or pressure-vessel code pathway was located. This makes the veto sharper, not softer: it now names exactly what cannot be cleared."
+    },
+    "CARB-01": {
+      "definition": "Transferred CO2 may be counted once. CO2 used in curing cannot also be claimed as permanent removal.",
+      "state": "UNRESOLVED",
+      "why": "No CO2 flow is metered and no transfer ledger entry exists yet."
+    },
+    "GRID-01": {
+      "definition": "Renewable attributes may not be claimed by node, generator and PPA buyer simultaneously.",
+      "state": "UNRESOLVED",
+      "why": "The POLICY route is now confirmed but node participation is not. The Qingdao Port Green Transformation Three-Year Action Plan (2026-2028) is official and names roughly 214 MW wind and 81 MW PV around Qianwan and Dongjiakou with dedicated transmission lines. National 2026 green-direct rules allow multi-user park projects and give PRIORITY support to compute facilities at >=60% self-consumption and >=30% load share. No document names this node as an enrolled user, and no PPA, meter or allocation exists. A plan is not an allocation."
+    },
+    "INV-20": {
+      "state": "UNRESOLVED",
+      "definition": "Marine discharge earns no net-positive credit without measured ecosystem benefit.",
+      "current_evidence_class": "NO_MEASURABLE_HARM",
+      "meets_net_positive_standard": false
+    }
+  },
+  "locality_clearance": "NOT_ESTABLISHED",
+  "realized_credit": 0,
+  "lng": {
+    "project_status": "UNDER_CONSTRUCTION_REPORTED_2026_06",
+    "projected_generation_GWh_y": 26,
+    "projected_avoided_cooling_grid_GWh_y": 8,
+    "combined_electrical_system_impact_GWh_y": 34,
+    "current_credit": 0,
+    "rule": "Separate generation and avoided consumption; do not call the sum a delivered energy stream.",
+    "source": "https://epaper.qingdaonews.com/qdrb/html/2026-06/02/content_144591_3494474.htm"
+  }
+}

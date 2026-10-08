@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atlaslattice.invalid/dongjiakou_node_001/build/schemas/source_manifest.schema.json",
+  "title": "Node-001 source manifest",
+  "type": "object",
+  "required": ["manifest_id", "hash_algorithm", "read_only", "artifacts"],
+  "properties": {
+    "manifest_id": {"const": "DJK-NODE-001-SOURCE-MANIFEST"},
+    "hash_algorithm": {"const": "sha256"},
+    "read_only": {"const": true},
+    "node_directory": {"type": "string"},
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["artifact_key", "filename", "sha256", "bytes"],
+        "properties": {
+          "artifact_key": {"type": "string"},
+          "filename": {"type": "string"},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "bytes": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "source_record_deltas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["filename", "sha256", "bytes"],
+        "properties": {
+          "filename": {"type": "string"},
+          "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "bytes": {"type": "integer", "minimum": 0}
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

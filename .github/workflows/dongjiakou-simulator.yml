@@ -1,0 +1,31 @@
+name: Dongjiakou simulator validation
+on:
+  push:
+    paths:
+      - 'public_candidate_bundle_0001/nodes/dongjiakou_node_001/**'
+      - '.github/workflows/dongjiakou-simulator.yml'
+  pull_request:
+    paths:
+      - 'public_candidate_bundle_0001/nodes/dongjiakou_node_001/**'
+      - '.github/workflows/dongjiakou-simulator.yml'
+permissions:
+  contents: read
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: public_candidate_bundle_0001/nodes/dongjiakou_node_001/build
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m pytest tests -q
+      - run: python simulator.py reproduce
+      - run: python simulator.py validate
+      - run: python simulator.py current > reports/CURRENT_REVIEWED_STATE.json
+      - run: python simulator.py gap resource_gap/examples/dongjiakou_unknown.json
+      - run: python simulator.py gap resource_gap/examples/synthetic_gypsum_acid.json
+      - run: python simulator.py gap resource_gap/examples/synthetic_biological_P.json

@@ -1,5 +1,14 @@
 # Manus Artifacts
 
+## China circular economy research and simulation / 中国循环经济研究与模拟
+
+**[Run or fork the Dongjiakou simulator](./public_candidate_bundle_0001/nodes/dongjiakou_node_001/build/README.md)** · **[Evidence appendix](./public_candidate_bundle_0001/nodes/dongjiakou_node_001/build/review/EVIDENCE_APPENDIX.md)** · **[China research archive](./public_candidate_bundle_0001/china_research/README.md)**
+
+Keywords: **China · Dongjiakou / 董家口 · Qingdao · sulfuric acid · sulfur / sulphur · gypsum / phosphogypsum · circular economy / 循环经济 · biological resource recovery · seawater potassium · LNG cold energy · agriculture · nutrients**.
+
+Runnable Manus-derived open-source candidate, with an additive reviewed locality snapshot, generalized biological/hybrid resource-gap scenarios, citations and 23 unresolved plant-specific data requests. Policy, construction, pilot, prediction and measured operation are labeled separately; all realized credits remain zero. [MIT license scoped to the simulator build](./public_candidate_bundle_0001/nodes/dongjiakou_node_001/build/LICENSE).
+
+
 **Atlas Lattice / Rainbow Yin Yang Lattice — Public Candidate Materialization Surface**
 
 **CANON: NO | DEPLOYMENT: NO | AUTHORITY: NONE**

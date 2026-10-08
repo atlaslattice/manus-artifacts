@@ -1,0 +1,154 @@
+{
+  "status": "REVIEWED_PUBLIC_CANDIDATE_NON_CANON",
+  "original_manifest": "manifests/DATA_ACQUISITION_MANIFEST.json",
+  "unknowns": [
+    {
+      "receipt_id": "DAR-001",
+      "closes_unknown": "effective_current_electricity_tariff_CNY_kWh",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-002",
+      "closes_unknown": "whole_site_SEC_kWh_m3",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-003",
+      "closes_unknown": "delta_aux_kWh_m3",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-004",
+      "closes_unknown": "current_measured_recovery_fraction",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-005",
+      "closes_unknown": "current_feed_and_reject_stream_map",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-006",
+      "closes_unknown": "current_brine_composition",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-007",
+      "closes_unknown": "fouling_rate_and_cleaning_frequency",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-008",
+      "closes_unknown": "current_CIP_and_additive_chemistry",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-009",
+      "closes_unknown": "current_ecological_monitoring_primary_data",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-010",
+      "closes_unknown": "hydraulic_unused_head_profile",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-011",
+      "closes_unknown": "roof_structural_and_interconnection_limits",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-012",
+      "closes_unknown": "actual_PUE",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-013",
+      "closes_unknown": "WUE",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-014",
+      "closes_unknown": "compute_cooling_water_source",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-015",
+      "closes_unknown": "hourly_solar_compute_overlap",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-016",
+      "closes_unknown": "PV_curtailment",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-017",
+      "closes_unknown": "useful_heat_capture_fraction, coolant_supply_return_temperature, CIP_temperature_setpoint, CIP_thermal_demand, heat_pump_COP",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-018",
+      "closes_unknown": "model_service_benefit",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-019",
+      "closes_unknown": "node_allocation_MW_MWh, contract_price, eligible_load_set",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-020",
+      "closes_unknown": "food_waste_feed_tonnes_day, biogas_m3_year, methane_energy_credit",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-021",
+      "closes_unknown": "P_product_yield, N_recovery, compost_tonnes_year, reclaimed_water_m3_year",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-022",
+      "closes_unknown": "eligible_wastewater_stream_selection",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    },
+    {
+      "receipt_id": "DAR-023",
+      "closes_unknown": "operational_technology_integration_approval",
+      "review_status": "OUTSTANDING",
+      "reason": "New policy/project/comparator evidence is not the requested plant-specific primary measurement receipt."
+    }
+  ],
+  "original_DAR_count": 23,
+  "DAR_closed_by_this_review": 0,
+  "additional_requirements": [
+    "LATEST_MANUS_SOURCE_PACKAGE",
+    "current sulfur requirement and secure domestic supply",
+    "reserve stock target and build horizon",
+    "P02 feed chemistry/moisture/contract/delivery/acceptance",
+    "measured K selectivity/yield/energy/reagents/product/residual/offtake",
+    "INV-20 receiving-ecosystem net-positive evidence"
+  ]
+}

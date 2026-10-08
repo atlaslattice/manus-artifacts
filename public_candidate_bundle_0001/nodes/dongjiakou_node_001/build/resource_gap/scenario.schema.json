@@ -1,0 +1,1378 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "0.1"
+      ]
+    },
+    "scenario_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "resource_basis": {
+      "type": "string",
+      "minLength": 1
+    },
+    "demand": {
+      "type": "object",
+      "properties": {
+        "basis": {
+          "enum": [
+            "VERIFIED_NEED",
+            "STRESS_PROXY",
+            "SYNTHETIC"
+          ]
+        },
+        "requirement": {
+          "type": "object",
+          "properties": {
+            "low": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "high": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "unit": {
+              "enum": [
+                "t_product/y"
+              ]
+            },
+            "status": {
+              "enum": [
+                "UNKNOWN",
+                "REFERENCE",
+                "MEASURED",
+                "MODELED",
+                "SYNTHETIC"
+              ]
+            },
+            "source": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "low",
+            "high",
+            "unit",
+            "status",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        "secure_domestic_supply": {
+          "type": "object",
+          "properties": {
+            "low": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "high": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "unit": {
+              "enum": [
+                "t_product/y"
+              ]
+            },
+            "status": {
+              "enum": [
+                "UNKNOWN",
+                "REFERENCE",
+                "MEASURED",
+                "MODELED",
+                "SYNTHETIC"
+              ]
+            },
+            "source": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "low",
+            "high",
+            "unit",
+            "status",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        "reserve_stock": {
+          "type": "object",
+          "properties": {
+            "low": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "high": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "unit": {
+              "enum": [
+                "t_product"
+              ]
+            },
+            "status": {
+              "enum": [
+                "UNKNOWN",
+                "REFERENCE",
+                "MEASURED",
+                "MODELED",
+                "SYNTHETIC"
+              ]
+            },
+            "source": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "low",
+            "high",
+            "unit",
+            "status",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        "reserve_build_years": {
+          "type": "number",
+          "minimum": 1e-06
+        }
+      },
+      "required": [
+        "basis",
+        "requirement",
+        "secure_domestic_supply",
+        "reserve_stock",
+        "reserve_build_years"
+      ],
+      "additionalProperties": false
+    },
+    "routes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "stream_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "product_basis": {
+            "type": "string",
+            "minLength": 1
+          },
+          "pathway_kind": {
+            "enum": [
+              "BIOLOGICAL",
+              "HYBRID",
+              "PHYSICAL_CHEMICAL"
+            ]
+          },
+          "feed": {
+            "type": "object",
+            "properties": {
+              "mass": {
+                "type": "object",
+                "properties": {
+                  "low": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "high": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "unit": {
+                    "enum": [
+                      "t_feed_as_received/y"
+                    ]
+                  },
+                  "status": {
+                    "enum": [
+                      "UNKNOWN",
+                      "REFERENCE",
+                      "MEASURED",
+                      "MODELED",
+                      "SYNTHETIC"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "low",
+                  "high",
+                  "unit",
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "dry_fraction": {
+                "type": "object",
+                "properties": {
+                  "low": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "high": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "unit": {
+                    "enum": [
+                      "fraction"
+                    ]
+                  },
+                  "status": {
+                    "enum": [
+                      "UNKNOWN",
+                      "REFERENCE",
+                      "MEASURED",
+                      "MODELED",
+                      "SYNTHETIC"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "low",
+                  "high",
+                  "unit",
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "allocated_fraction": {
+                "type": "object",
+                "properties": {
+                  "low": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "high": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "unit": {
+                    "enum": [
+                      "fraction"
+                    ]
+                  },
+                  "status": {
+                    "enum": [
+                      "UNKNOWN",
+                      "REFERENCE",
+                      "MEASURED",
+                      "MODELED",
+                      "SYNTHETIC"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "low",
+                  "high",
+                  "unit",
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "delivered_fraction": {
+                "type": "object",
+                "properties": {
+                  "low": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "high": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "unit": {
+                    "enum": [
+                      "fraction"
+                    ]
+                  },
+                  "status": {
+                    "enum": [
+                      "UNKNOWN",
+                      "REFERENCE",
+                      "MEASURED",
+                      "MODELED",
+                      "SYNTHETIC"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "low",
+                  "high",
+                  "unit",
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "accepted_fraction": {
+                "type": "object",
+                "properties": {
+                  "low": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "high": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "unit": {
+                    "enum": [
+                      "fraction"
+                    ]
+                  },
+                  "status": {
+                    "enum": [
+                      "UNKNOWN",
+                      "REFERENCE",
+                      "MEASURED",
+                      "MODELED",
+                      "SYNTHETIC"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "low",
+                  "high",
+                  "unit",
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "mass",
+              "dry_fraction",
+              "allocated_fraction",
+              "delivered_fraction",
+              "accepted_fraction"
+            ],
+            "additionalProperties": false
+          },
+          "process": {
+            "type": "object",
+            "properties": {
+              "conservation_ceiling": {
+                "type": "object",
+                "properties": {
+                  "low": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "high": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "unit": {
+                    "enum": [
+                      "t_product/t_dry_accepted_feed"
+                    ]
+                  },
+                  "status": {
+                    "enum": [
+                      "UNKNOWN",
+                      "REFERENCE",
+                      "MEASURED",
+                      "MODELED",
+                      "SYNTHETIC"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "low",
+                  "high",
+                  "unit",
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "energy_intensity": {
+                "type": "object",
+                "properties": {
+                  "low": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "high": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "unit": {
+                    "enum": [
+                      "MWh/t_dry_accepted_feed"
+                    ]
+                  },
+                  "status": {
+                    "enum": [
+                      "UNKNOWN",
+                      "REFERENCE",
+                      "MEASURED",
+                      "MODELED",
+                      "SYNTHETIC"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "low",
+                  "high",
+                  "unit",
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "hub_capacity": {
+                "type": "object",
+                "properties": {
+                  "low": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "high": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "unit": {
+                    "enum": [
+                      "t_product/y"
+                    ]
+                  },
+                  "status": {
+                    "enum": [
+                      "UNKNOWN",
+                      "REFERENCE",
+                      "MEASURED",
+                      "MODELED",
+                      "SYNTHETIC"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "low",
+                  "high",
+                  "unit",
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "yield": {
+                "type": "object",
+                "properties": {
+                  "low": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "high": {
+                    "anyOf": [
+                      {
+                        "type": "number",
+                        "minimum": 0
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "unit": {
+                    "enum": [
+                      "t_product/t_dry_accepted_feed"
+                    ]
+                  },
+                  "status": {
+                    "enum": [
+                      "UNKNOWN",
+                      "REFERENCE",
+                      "MEASURED",
+                      "MODELED",
+                      "SYNTHETIC"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "low",
+                  "high",
+                  "unit",
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "yield",
+              "conservation_ceiling",
+              "energy_intensity",
+              "hub_capacity"
+            ],
+            "additionalProperties": false
+          },
+          "market_ceiling": {
+            "type": "object",
+            "properties": {
+              "low": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "high": {
+                "anyOf": [
+                  {
+                    "type": "number",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "unit": {
+                "enum": [
+                  "t_product/y"
+                ]
+              },
+              "status": {
+                "enum": [
+                  "UNKNOWN",
+                  "REFERENCE",
+                  "MEASURED",
+                  "MODELED",
+                  "SYNTHETIC"
+                ]
+              },
+              "source": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "low",
+              "high",
+              "unit",
+              "status",
+              "source"
+            ],
+            "additionalProperties": false
+          },
+          "module_receipts": {
+            "type": "object",
+            "properties": {
+              "yield": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "FAIL",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "selectivity": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "FAIL",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "energy": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "FAIL",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "reagents": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "FAIL",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "material_life": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "FAIL",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "residual_fate": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "FAIL",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "market_ceiling": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "FAIL",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "ecology": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "FAIL",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "yield",
+              "selectivity",
+              "energy",
+              "reagents",
+              "material_life",
+              "residual_fate",
+              "market_ceiling",
+              "ecology"
+            ],
+            "additionalProperties": false
+          },
+          "loop_receipts": {
+            "type": "object",
+            "properties": {
+              "source": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "FAIL",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "mass": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "FAIL",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "quality": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "FAIL",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "right_to_transfer": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "FAIL",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "time": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "FAIL",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "displacement": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "FAIL",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "residual_fate": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "FAIL",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              },
+              "allocation": {
+                "type": "object",
+                "properties": {
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "FAIL",
+                      "UNKNOWN"
+                    ]
+                  },
+                  "source": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [
+                  "status",
+                  "source"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "source",
+              "mass",
+              "quality",
+              "right_to_transfer",
+              "time",
+              "displacement",
+              "residual_fate",
+              "allocation"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "id",
+          "stream_id",
+          "product_basis",
+          "pathway_kind",
+          "feed",
+          "process",
+          "market_ceiling",
+          "module_receipts",
+          "loop_receipts"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "resource_basis",
+    "demand",
+    "routes"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/atlaslattice/manus-artifacts/resource-gap-scenario-v0.1",
+  "title": "Needs-matched biological and hybrid resource recovery scenario"
+}

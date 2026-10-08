@@ -1,0 +1,118 @@
+{
+  "manifest_id": "DJK-NODE-001-SOURCE-MANIFEST",
+  "node_directory": "manus-artifacts/public_candidate_bundle_0001/nodes/dongjiakou_node_001",
+  "hash_algorithm": "sha256",
+  "read_only": true,
+  "artifacts": [
+    {
+      "artifact_key": "RUN_0",
+      "filename": "RUN_0_BASELINE_v0_1.json",
+      "sha256": "b4c5bbd7ea59c86b2d25f117cae425bf74ed9a8135e292a540cfb1d7a4427f41",
+      "bytes": 2408
+    },
+    {
+      "artifact_key": "RUN_0.2",
+      "filename": "RUN_0_OPERATING_2025_v0_2.json",
+      "sha256": "432ada9219adce4b1bc261ee3f75a7955cb8020f22300dd5a524ced595fecbce",
+      "bytes": 1543
+    },
+    {
+      "artifact_key": "RUN_1",
+      "filename": "RUN_1_SOLAR_v0_1.json",
+      "sha256": "e48e85b7d12481b7698c1b0267b4417edbd02816918767ebdd244370e3753695",
+      "bytes": 2340
+    },
+    {
+      "artifact_key": "RUN_2",
+      "filename": "RUN_2_HYDRO_v0_1.json",
+      "sha256": "e120951fcba095a6733dcbf8bcede26372b7200f505afe7da457237174e6dadf",
+      "bytes": 2245
+    },
+    {
+      "artifact_key": "RUN_3",
+      "filename": "RUN_3_COMPUTE_v0_2.json",
+      "sha256": "8cfd7f4e6f72665aea1ec4b6bc744c44e106b06e0f4a713bbfd5c9b8eb38bfeb",
+      "bytes": 6042
+    },
+    {
+      "artifact_key": "RUN_4A",
+      "filename": "RUN_4A_BIOMETABOLIC_v0_1.json",
+      "sha256": "28b939c94c0f12ae80c1add646a3c3f9c5925981a1f7264d4bc23296cb3a284c",
+      "bytes": 2972
+    },
+    {
+      "artifact_key": "S02",
+      "filename": "S02_BESS_TRANSFER_FUNCTION_v0_1.json",
+      "sha256": "444b64e31f718ee0fd6310f248698aac2bdb3c2649c0edd0fc56dc643a808a53",
+      "bytes": 1435
+    },
+    {
+      "artifact_key": "NODE_001_PROFILE",
+      "filename": "NODE_001_PROFILE_v0_2.json",
+      "sha256": "62c4756a9a19da872f2426b18574cfca74914400ea4d10d5dae2e2c8969918ca",
+      "bytes": 2237
+    },
+    {
+      "artifact_key": "INTEGRATED_NODE_PROFILE",
+      "filename": "INTEGRATED_NODE_PROFILE_v0_2.json",
+      "sha256": "8a1b18294ee274ba27b1884b3069c346ae2e9358e5c6c10e6c976d6cd5f19f28",
+      "bytes": 8825
+    },
+    {
+      "artifact_key": "C01_MODEL_ROUTING_POLICY",
+      "filename": "C01_MODEL_ROUTING_POLICY_v0_2.json",
+      "sha256": "dd137037f59e0a27acf375e0b22f29d989ad73b8755fe19f069b6b981dcba276",
+      "bytes": 4658
+    },
+    {
+      "artifact_key": "C01_MODEL_SOURCE_SNAPSHOT",
+      "filename": "C01_MODEL_SOURCE_SNAPSHOT_v0_2.json",
+      "sha256": "7dfa023f167667e7dba2bcfd7b0d55a736687ad4369f50917f324966d8420f35",
+      "bytes": 1415
+    },
+    {
+      "artifact_key": "DOWNSTREAM_SYMBIOSIS_COMPONENTS",
+      "filename": "DOWNSTREAM_SYMBIOSIS_COMPONENTS_v0_1.json",
+      "sha256": "b9e40013a885bc67e763744577bb82d39350660b1d08c62fb0ead11cd46a65a1",
+      "bytes": 3461
+    },
+    {
+      "artifact_key": "SOURCE_RECORD_CHAIN",
+      "filename": "SOURCE_RECORD_CHAIN_v0_1.json",
+      "sha256": "897127f9e5dea33da33fe0eea72badbda74284d15343bb06552ee01734dfd10e",
+      "bytes": 9011
+    }
+  ],
+  "source_record_deltas": [
+    {
+      "filename": "SOURCE_RECORD_DELTA_v0_2.json",
+      "sha256": "562b709d47e5ade523901d59e3e606edbc2c5adcff1c0e4ce762aaa811fd61b1",
+      "bytes": 6063
+    },
+    {
+      "filename": "SOURCE_RECORD_DELTA_v0_3.json",
+      "sha256": "28b0eaa721fa5c18e0541dd93177d0dc3e0066495a059553e53c7217e8a3a2ef",
+      "bytes": 6609
+    },
+    {
+      "filename": "SOURCE_RECORD_DELTA_v0_4.json",
+      "sha256": "ba2d22f3cc55faf1f9e74fe7c54eafbbefb86b8b4345a902c3f6b951f673da18",
+      "bytes": 5393
+    },
+    {
+      "filename": "SOURCE_RECORD_DELTA_v0_5.json",
+      "sha256": "1580dc83c88d8d2f4c1cbde9b4ffe7b9d6312b0a2eb3d3328cc3dfe1a384129a",
+      "bytes": 4573
+    },
+    {
+      "filename": "SOURCE_RECORD_DELTA_v0_6.json",
+      "sha256": "b49c15698d34e0a4192c3f5852745edd287d6618452eb97c5593d413948d1cfd",
+      "bytes": 5648
+    },
+    {
+      "filename": "SOURCE_RECORD_DELTA_v0_7.json",
+      "sha256": "db19cb36ea1335d8a9d41125f43da723feb46abaa441c1a449bd4d0f3f22183a",
+      "bytes": 6532
+    }
+  ]
+}

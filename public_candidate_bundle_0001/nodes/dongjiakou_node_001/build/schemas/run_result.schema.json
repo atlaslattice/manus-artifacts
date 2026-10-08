@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atlaslattice.invalid/dongjiakou_node_001/build/schemas/run_result.schema.json",
+  "title": "Node-001 run result",
+  "description": "Common envelope for every deterministic Node-001 run artifact.",
+  "type": "object",
+  "required": ["artifact_id", "status"],
+  "properties": {
+    "artifact_id": {
+      "type": "string",
+      "pattern": "^DJK-NODE-001-"
+    },
+    "status": {
+      "type": "string",
+      "description": "Execution status label. NON_CANON must appear on every candidate artifact.",
+      "pattern": "NON_CANON$"
+    },
+    "study_classification": {
+      "type": "string",
+      "enum": ["TECHNICAL_FEASIBILITY_PLUS_CONDITIONAL_ECONOMICS"]
+    },
+    "execution_mode": {
+      "type": "string",
+      "description": "Must state that execution is deterministic and performs no UNKNOWN imputation."
+    },
+    "baseline_credit": {
+      "description": "Explicit zero-credit declaration for a run whose products have no receipt yet.",
+      "oneOf": [
+        {"type": "number"},
+        {"type": "object"}
+      ]
+    },
+    "retrofit_credit": {
+      "type": "object",
+      "description": "Explicit zero-credit block for retrofit measures.",
+      "additionalProperties": {"type": ["number", "string"]}
+    },
+    "guardrails": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "reason": {"type": "string"},
+    "warning": {"type": "string"},
+    "note": {"type": "string"}
+  },
+  "additionalProperties": true
+}

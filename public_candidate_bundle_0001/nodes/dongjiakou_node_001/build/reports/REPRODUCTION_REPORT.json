@@ -1,0 +1,1509 @@
+{
+  "artifact_id": "DJK-NODE-001-REPRODUCTION-REPORT",
+  "status": "ALL_RUNS_REPRODUCED",
+  "generated_at": "2026-10-08T13:07:39+00:00",
+  "reference_head": "4756036f9c428fa3aa1d4cea552ae03367523fb5",
+  "totals": {
+    "runs": 7,
+    "checks": 155,
+    "matched": 154,
+    "mismatched": 0,
+    "annotated": 1
+  },
+  "runs": [
+    {
+      "run_id": "RUN_0",
+      "title": "Desalination nameplate baseline",
+      "artifact_file": "RUN_0_BASELINE_v0_1.json",
+      "model": "run0.baseline",
+      "checks": [
+        {
+          "path": "artifact_id",
+          "expected": "DJK-NODE-001-RUN-0-v0.1",
+          "actual": "DJK-NODE-001-RUN-0-v0.1",
+          "tol": 0,
+          "rel_diff": null,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "coefficients_per_U.annual_product_m3",
+          "expected": 36500000,
+          "actual": 36500000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "coefficients_per_U.annual_process_train_energy_GWh",
+          "expected": 80.3,
+          "actual": 80.3,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "coefficients_per_U.annual_chemical_cost_CNY_upper_bound",
+          "expected": 5475000,
+          "actual": 5475000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "mass_balance[\"0.45\"].feed_m3_day",
+          "expected": 222222.22222222222,
+          "actual": 222222.22222222222,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "mass_balance[\"0.45\"].product_m3_day",
+          "expected": 100000,
+          "actual": 100000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "mass_balance[\"0.45\"].reject_equivalent_m3_day",
+          "expected": 122222.22222222222,
+          "actual": 122222.22222222222,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "mass_balance[\"0.45\"].annual_feed_m3_per_U",
+          "expected": 81111111.1111111,
+          "actual": 81111111.1111111,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "mass_balance[\"0.45\"].annual_reject_equivalent_m3_per_U",
+          "expected": 44611111.11111111,
+          "actual": 44611111.11111111,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "mass_balance[\"0.50\"].feed_m3_day",
+          "expected": 200000,
+          "actual": 200000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "mass_balance[\"0.50\"].reject_equivalent_m3_day",
+          "expected": 100000,
+          "actual": 100000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "mass_balance[\"0.50\"].annual_feed_m3_per_U",
+          "expected": 73000000,
+          "actual": 73000000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "mass_balance[\"0.50\"].annual_reject_equivalent_m3_per_U",
+          "expected": 36500000,
+          "actual": 36500000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "U1_reference_not_operating_claim.annual_product_m3",
+          "expected": 36500000,
+          "actual": 36500000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "U1_reference_not_operating_claim.annual_process_train_energy_GWh",
+          "expected": 80.3,
+          "actual": 80.3,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "U1_reference_not_operating_claim.annual_chemical_cost_CNY_upper_bound",
+          "expected": 5475000,
+          "actual": 5475000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "retrofit_credit.S01_solar",
+          "expected": 0,
+          "actual": 0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "retrofit_credit.C01_compute",
+          "expected": 0,
+          "actual": 0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "retrofit_credit.resource_recovery",
+          "expected": 0,
+          "actual": 0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        }
+      ],
+      "matched": 19,
+      "annotated": 0,
+      "divergent": 0,
+      "checked": 19,
+      "status": "REPRODUCED"
+    },
+    {
+      "run_id": "RUN_0.2",
+      "title": "Dated 2025 operating-volume calibration",
+      "artifact_file": "RUN_0_OPERATING_2025_v0_2.json",
+      "model": "run0.operating_2025",
+      "checks": [
+        {
+          "path": "artifact_id",
+          "expected": "DJK-NODE-001-RUN-0-OPERATING-2025-v0.2",
+          "actual": "DJK-NODE-001-RUN-0-OPERATING-2025-v0.2",
+          "tol": 0,
+          "rel_diff": null,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "reported_product_supply_m3",
+          "expected": 17930000,
+          "actual": 17930000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "derived_utilization_U",
+          "expected": 0.4912328767,
+          "actual": 0.4912328767123288,
+          "tol": 1e-08,
+          "rel_diff": 2.509767816513087e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "derived_process_train_energy_GWh",
+          "expected": 39.446,
+          "actual": 39.446,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "derived_annual_chemical_cost_CNY_upper_bound",
+          "expected": 2689500,
+          "actual": 2689500.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "mass_balance_using_reported_technology_recovery_range[\"0.45\"].annual_feed_m3",
+          "expected": 39844444.4444,
+          "actual": 39844444.44444444,
+          "tol": 1e-08,
+          "rel_diff": 1.1154055196482313e-12,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "mass_balance_using_reported_technology_recovery_range[\"0.45\"].annual_product_m3",
+          "expected": 17930000,
+          "actual": 17930000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "mass_balance_using_reported_technology_recovery_range[\"0.45\"].annual_reject_equivalent_m3",
+          "expected": 21914444.4444,
+          "actual": 21914444.44444444,
+          "tol": 1e-08,
+          "rel_diff": 2.027840043265069e-12,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "mass_balance_using_reported_technology_recovery_range[\"0.50\"].annual_feed_m3",
+          "expected": 35860000,
+          "actual": 35860000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "mass_balance_using_reported_technology_recovery_range[\"0.50\"].annual_reject_equivalent_m3",
+          "expected": 17930000,
+          "actual": 17930000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "economics.historical_2018_2020_tariff_CNY_kWh",
+          "expected": 0.555,
+          "actual": 0.555,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "economics.historical_tariff_counterfactual_only_CNY_for_2025_process_energy",
+          "expected": 21892530,
+          "actual": 21892530.000000004,
+          "tol": 1e-12,
+          "rel_diff": 1.7016262160937605e-16,
+          "status": "MATCH",
+          "annotation": null
+        }
+      ],
+      "matched": 12,
+      "annotated": 0,
+      "divergent": 0,
+      "checked": 12,
+      "status": "REPRODUCED"
+    },
+    {
+      "run_id": "RUN_1",
+      "title": "Rooftop PV technical sensitivity",
+      "artifact_file": "RUN_1_SOLAR_v0_1.json",
+      "model": "run1_solar.run",
+      "checks": [
+        {
+          "path": "artifact_id",
+          "expected": "DJK-NODE-001-RUN-1-SOLAR-v0.1",
+          "actual": "DJK-NODE-001-RUN-1-SOLAR-v0.1",
+          "tol": 0,
+          "rel_diff": null,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "site_inputs.desalination_workshop_footprint_m2",
+          "expected": 17474.32,
+          "actual": 17474.32,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "site_inputs.effective_active_module_coverage_fraction",
+          "expected": 0.6,
+          "actual": 0.6,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "site_inputs.active_module_area_m2",
+          "expected": 10484.592,
+          "actual": 10484.591999999999,
+          "tol": 1e-12,
+          "rel_diff": 1.7349167268939567e-16,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "local_generation_reference.reference_capacity_MWp",
+          "expected": 12.4956,
+          "actual": 12.4956,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "local_generation_reference.reference_generation_MWh_year",
+          "expected": 14022.86,
+          "actual": 14022.86,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "local_generation_reference.derived_yield_kWh_per_kWp_year",
+          "expected": 1122.223823,
+          "actual": 1122.2238227856205,
+          "tol": 1e-08,
+          "rel_diff": 1.9103096269355066e-10,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "cases.S01_A.module_efficiency_fraction",
+          "expected": 0.23,
+          "actual": 0.23,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "cases.S01_A.DC_capacity_MWp",
+          "expected": 2.41145616,
+          "actual": 2.4114561599999997,
+          "tol": 1e-08,
+          "rel_diff": 1.8415811044645431e-16,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "cases.S01_A.annual_generation_GWh",
+          "expected": 2.70619355,
+          "actual": 2.7061935503551324,
+          "tol": 1e-08,
+          "rel_diff": 1.312294783611332e-10,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "cases.S01_A.fraction_of_2025_UF_RO_process_energy",
+          "expected": 0.0686050183,
+          "actual": 0.0686050182618043,
+          "tol": 1e-08,
+          "rel_diff": 5.567478524463808e-10,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "cases.S01_A.historical_0_555_tariff_counterfactual_CNY",
+          "expected": 1501937.42,
+          "actual": 1501937.4204470986,
+          "tol": 1e-08,
+          "rel_diff": 2.976812650947188e-10,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "cases.S01_A.location_based_CO2_avoided_tonnes_using_2023_Shandong_factor",
+          "expected": 1675.4,
+          "actual": 1675.4044270248623,
+          "tol": 1e-05,
+          "rel_diff": 2.64236192219799e-06,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "cases.S01_B_SEA_SHIELD.module_efficiency_fraction",
+          "expected": 0.248,
+          "actual": 0.248,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "cases.S01_B_SEA_SHIELD.DC_capacity_MWp",
+          "expected": 2.600178816,
+          "actual": 2.6001788159999997,
+          "tol": 1e-08,
+          "rel_diff": 1.707917959785665e-16,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "cases.S01_B_SEA_SHIELD.annual_generation_GWh",
+          "expected": 2.917982611,
+          "actual": 2.9179826108177083,
+          "tol": 1e-08,
+          "rel_diff": 6.247176200738953e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "cases.S01_B_SEA_SHIELD.fraction_of_2025_UF_RO_process_energy",
+          "expected": 0.0739741066,
+          "actual": 0.07397410664751074,
+          "tol": 1e-08,
+          "rel_diff": 6.422616455043303e-10,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "cases.S01_B_SEA_SHIELD.historical_0_555_tariff_counterfactual_CNY",
+          "expected": 1619480.35,
+          "actual": 1619480.3490038281,
+          "tol": 1e-08,
+          "rel_diff": 6.151182769644696e-10,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "cases.S01_B_SEA_SHIELD.location_based_CO2_avoided_tonnes_using_2023_Shandong_factor",
+          "expected": 1806.52,
+          "actual": 1806.523034357243,
+          "tol": 1e-05,
+          "rel_diff": 1.6796670650121154e-06,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "carbon_boundary.Shandong_2023_average_grid_factor_kgCO2_kWh",
+          "expected": 0.6191,
+          "actual": 0.6191,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        }
+      ],
+      "matched": 20,
+      "annotated": 0,
+      "divergent": 0,
+      "checked": 20,
+      "status": "REPRODUCED"
+    },
+    {
+      "run_id": "RUN_2",
+      "title": "Unused-head hydro parametric sensitivity",
+      "artifact_file": "RUN_2_HYDRO_v0_1.json",
+      "model": "run2_hydro.run",
+      "checks": [
+        {
+          "path": "artifact_id",
+          "expected": "DJK-NODE-001-RUN-2-HYDRO-v0.1",
+          "actual": "DJK-NODE-001-RUN-2-HYDRO-v0.1",
+          "tol": 0,
+          "rel_diff": null,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "stream_basis.annual_volume_m3",
+          "expected": 17930000,
+          "actual": 17930000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "stream_basis.average_flow_m3_s",
+          "expected": 0.56855619,
+          "actual": 0.568556570268899,
+          "tol": 1e-08,
+          "rel_diff": 6.688321249305895e-07,
+          "status": "ANNOTATED_DIVERGENCE",
+          "annotation": {
+            "path": "stream_basis.average_flow_m3_s",
+            "kind": "DEFECT_IN_COMMITTED_ARTIFACT",
+            "committed": 0.56855619,
+            "reproduced": 0.568556570268899,
+            "rel_diff": 6.688321249305895e-07,
+            "detail": "The committed value implies 17,929,988.0 m3/year rather than the stated 17,930,000 m3/year stream basis. The correct quotient 17930000 / (365*24*3600) = 0.568556570268899 rounds to 0.56855657 at eight decimals, so 0.56855619 appears to be a digit-transposition slip (19 vs 57).",
+            "resolution": "Preserve both values; do not overwrite the committed artifact. The divergence is isolated: the Run 2 sensitivity table is computed from the annual volume and head directly and does not consume this field, so no downstream figure is affected. Flagged for S10/GPT confirmation and recorded in the failure ledger."
+          }
+        },
+        {
+          "path": "physics.rho_kg_m3",
+          "expected": 1000,
+          "actual": 1000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "physics.g_m_s2",
+          "expected": 9.80665,
+          "actual": 9.80665,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "physics.ideal_energy_GWh_per_m_head_at_eta_1",
+          "expected": 0.0488425651,
+          "actual": 0.04884256513888889,
+          "tol": 1e-08,
+          "rel_diff": 7.962090442216823e-10,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "physics.illustrative_energy_GWh_per_m_head_at_eta_0_8",
+          "expected": 0.0390740521,
+          "actual": 0.03907405211111111,
+          "tol": 1e-08,
+          "rel_diff": 2.843603729363151e-10,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "physics.illustrative_average_power_kW_per_m_head_at_eta_0_8",
+          "expected": 4.46050823,
+          "actual": 4.460508231861999,
+          "tol": 1e-08,
+          "rel_diff": 4.1744089654199356e-10,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "physics.illustrative_process_energy_fraction_per_m_head_at_eta_0_8",
+          "expected": 0.0009905707,
+          "actual": 0.0009905707070707072,
+          "tol": 1e-08,
+          "rel_diff": 7.138013504335387e-09,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "illustrative_eta_0_8_sensitivity[0].H_m",
+          "expected": 1,
+          "actual": 1.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "illustrative_eta_0_8_sensitivity[0].annual_energy_GWh",
+          "expected": 0.0390740521,
+          "actual": 0.03907405211111111,
+          "tol": 1e-08,
+          "rel_diff": 2.843603729363151e-10,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "illustrative_eta_0_8_sensitivity[0].average_power_kW",
+          "expected": 4.46050823,
+          "actual": 4.460508231861999,
+          "tol": 1e-08,
+          "rel_diff": 4.1744089654199356e-10,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "illustrative_eta_0_8_sensitivity[0].fraction_of_2025_UF_RO_process_energy",
+          "expected": 0.0009905707,
+          "actual": 0.0009905707070707072,
+          "tol": 1e-08,
+          "rel_diff": 7.138013504335387e-09,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "illustrative_eta_0_8_sensitivity[1].annual_energy_GWh",
+          "expected": 0.1953702606,
+          "actual": 0.19537026055555556,
+          "tol": 1e-08,
+          "rel_diff": 2.2748829829730117e-10,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "illustrative_eta_0_8_sensitivity[1].average_power_kW",
+          "expected": 22.30254116,
+          "actual": 22.302541159309996,
+          "tol": 1e-08,
+          "rel_diff": 3.0938380206668543e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "illustrative_eta_0_8_sensitivity[1].fraction_of_2025_UF_RO_process_energy",
+          "expected": 0.0049528535,
+          "actual": 0.004952853535353536,
+          "tol": 1e-08,
+          "rel_diff": 7.1380136356781165e-09,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "illustrative_eta_0_8_sensitivity[2].annual_energy_GWh",
+          "expected": 0.3907405211,
+          "actual": 0.3907405211111111,
+          "tol": 1e-08,
+          "rel_diff": 2.843603729363151e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "illustrative_eta_0_8_sensitivity[2].average_power_kW",
+          "expected": 44.60508232,
+          "actual": 44.60508231861999,
+          "tol": 1e-08,
+          "rel_diff": 3.0938380206668543e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "illustrative_eta_0_8_sensitivity[2].fraction_of_2025_UF_RO_process_energy",
+          "expected": 0.0099057071,
+          "actual": 0.009905707070707072,
+          "tol": 1e-08,
+          "rel_diff": 2.9571768237200866e-09,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "illustrative_eta_0_8_sensitivity[3].annual_energy_GWh",
+          "expected": 0.7814810422,
+          "actual": 0.7814810422222223,
+          "tol": 1e-08,
+          "rel_diff": 2.843603729363151e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "illustrative_eta_0_8_sensitivity[3].average_power_kW",
+          "expected": 89.21016464,
+          "actual": 89.21016463723998,
+          "tol": 1e-08,
+          "rel_diff": 3.0938380206668543e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "illustrative_eta_0_8_sensitivity[3].fraction_of_2025_UF_RO_process_energy",
+          "expected": 0.0198114141,
+          "actual": 0.019811414141414144,
+          "tol": 1e-08,
+          "rel_diff": 2.0904183140447478e-09,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "illustrative_eta_0_8_sensitivity[4].annual_energy_GWh",
+          "expected": 1.9537026056,
+          "actual": 1.9537026055555555,
+          "tol": 1e-08,
+          "rel_diff": 2.27488298343877e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "illustrative_eta_0_8_sensitivity[4].average_power_kW",
+          "expected": 223.02541159,
+          "actual": 223.02541159309996,
+          "tol": 1e-08,
+          "rel_diff": 1.389956339697244e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "illustrative_eta_0_8_sensitivity[4].fraction_of_2025_UF_RO_process_energy",
+          "expected": 0.0495285354,
+          "actual": 0.04952853535353535,
+          "tol": 1e-08,
+          "rel_diff": 9.381388780551691e-10,
+          "status": "MATCH",
+          "annotation": null
+        }
+      ],
+      "matched": 24,
+      "annotated": 1,
+      "divergent": 0,
+      "checked": 25,
+      "status": "REPRODUCED_WITH_ANNOTATED_DIVERGENCE"
+    },
+    {
+      "run_id": "RUN_3",
+      "title": "C01 compute facility transfer function",
+      "artifact_file": "RUN_3_COMPUTE_v0_2.json",
+      "model": "run3_compute.run",
+      "checks": [
+        {
+          "path": "artifact_id",
+          "expected": "DJK-NODE-001-RUN-3-COMPUTE-v0.2",
+          "actual": "DJK-NODE-001-RUN-3-COMPUTE-v0.2",
+          "tol": 0,
+          "rel_diff": null,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "supersedes",
+          "expected": "RUN_3_COMPUTE_v0_1.json",
+          "actual": "RUN_3_COMPUTE_v0_1.json",
+          "tol": 0,
+          "rel_diff": null,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "baseline.operating_year",
+          "expected": 2025,
+          "actual": 2025,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "baseline.UF_RO_process_energy_GWh",
+          "expected": 39.446,
+          "actual": 39.446,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "baseline.average_UF_RO_process_power_MW",
+          "expected": 4.5029680365,
+          "actual": 4.502968036529681,
+          "tol": 1e-08,
+          "rel_diff": 6.591265585352207e-12,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "baseline.S01_A_PV_GWh_year",
+          "expected": 2.70619355,
+          "actual": 2.70619355,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "baseline.S01_B_PV_GWh_year",
+          "expected": 2.917982611,
+          "actual": 2.917982611,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "reference_scenario.PUE",
+          "expected": 1.25,
+          "actual": 1.25,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "reference_scenario.load_factor_L",
+          "expected": 1,
+          "actual": 1,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[0].case_id",
+          "expected": "C01-PILOT-100",
+          "actual": "C01-PILOT-100",
+          "tol": 0,
+          "rel_diff": null,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[0].IT_capacity_kW",
+          "expected": 100,
+          "actual": 100.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[0].IT_energy_GWh_at_L1",
+          "expected": 0.876,
+          "actual": 0.876,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[0].facility_energy_GWh_at_L1_PUE1",
+          "expected": 0.876,
+          "actual": 0.876,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[0].facility_energy_GWh_at_L1_PUE1_25",
+          "expected": 1.095,
+          "actual": 1.095,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[0].process_energy_share_at_PUE1",
+          "expected": 0.0222075749,
+          "actual": 0.02220757491253866,
+          "tol": 1e-08,
+          "rel_diff": 5.646119007150475e-10,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[0].process_energy_share_at_PUE1_25",
+          "expected": 0.0277594686,
+          "actual": 0.027759468640673326,
+          "tol": 1e-08,
+          "rel_diff": 1.4652054887995803e-09,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[0].S01_A_annual_energy_ratio_to_facility_at_PUE1_25",
+          "expected": 2.4714096347,
+          "actual": 2.4714096347031966,
+          "tol": 1e-08,
+          "rel_diff": 1.293413316681773e-12,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[0].S01_B_annual_energy_ratio_to_facility_at_PUE1_25",
+          "expected": 2.6648243023,
+          "actual": 2.664824302283105,
+          "tol": 1e-08,
+          "rel_diff": 6.339978919043117e-12,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[0].grid_only_location_CO2_t_at_PUE1_25",
+          "expected": 677.9145,
+          "actual": 677.9145,
+          "tol": 1e-08,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[0].IT_heat_first_law_upper_bound_GWhth",
+          "expected": 0.876,
+          "actual": 0.876,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[1].case_id",
+          "expected": "C01-PILOT-250",
+          "actual": "C01-PILOT-250",
+          "tol": 0,
+          "rel_diff": null,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[1].IT_capacity_kW",
+          "expected": 250,
+          "actual": 250.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[1].IT_energy_GWh_at_L1",
+          "expected": 2.19,
+          "actual": 2.19,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[1].facility_energy_GWh_at_L1_PUE1_25",
+          "expected": 2.7375,
+          "actual": 2.7375,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[1].process_energy_share_at_PUE1",
+          "expected": 0.0555189373,
+          "actual": 0.05551893728134665,
+          "tol": 1e-08,
+          "rel_diff": 3.3598174974783663e-10,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[1].process_energy_share_at_PUE1_25",
+          "expected": 0.0693986716,
+          "actual": 0.06939867160168331,
+          "tol": 1e-08,
+          "rel_diff": 2.4255597885363915e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[1].S01_A_annual_energy_ratio_to_facility_at_PUE1_25",
+          "expected": 0.9885638539,
+          "actual": 0.9885638538812787,
+          "tol": 1e-08,
+          "rel_diff": 1.8937934786396124e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[1].S01_B_annual_energy_ratio_to_facility_at_PUE1_25",
+          "expected": 1.0659297209,
+          "actual": 1.065929720913242,
+          "tol": 1e-08,
+          "rel_diff": 1.2422819065373398e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[1].grid_only_location_CO2_t_at_PUE1_25",
+          "expected": 1694.78625,
+          "actual": 1694.78625,
+          "tol": 1e-08,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[2].case_id",
+          "expected": "C01-500",
+          "actual": "C01-500",
+          "tol": 0,
+          "rel_diff": null,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[2].IT_capacity_kW",
+          "expected": 500,
+          "actual": 500.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[2].facility_energy_GWh_at_L1_PUE1_25",
+          "expected": 5.475,
+          "actual": 5.475,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[2].process_energy_share_at_PUE1_25",
+          "expected": 0.1387973432,
+          "actual": 0.13879734320336662,
+          "tol": 1e-08,
+          "rel_diff": 2.4255597885363915e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[2].S01_A_annual_energy_ratio_to_facility_at_PUE1_25",
+          "expected": 0.4942819269,
+          "actual": 0.4942819269406393,
+          "tol": 1e-08,
+          "rel_diff": 8.221891803708576e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[2].S01_B_annual_energy_ratio_to_facility_at_PUE1_25",
+          "expected": 0.5329648605,
+          "actual": 0.532964860456621,
+          "tol": 1e-08,
+          "rel_diff": 8.139200409323039e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[2].grid_only_location_CO2_t_at_PUE1_25",
+          "expected": 3389.5725,
+          "actual": 3389.5725,
+          "tol": 1e-08,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[3].case_id",
+          "expected": "C01-1000",
+          "actual": "C01-1000",
+          "tol": 0,
+          "rel_diff": null,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[3].IT_capacity_kW",
+          "expected": 1000,
+          "actual": 1000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[3].facility_energy_GWh_at_L1_PUE1_25",
+          "expected": 10.95,
+          "actual": 10.95,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[3].process_energy_share_at_PUE1_25",
+          "expected": 0.2775946864,
+          "actual": 0.27759468640673324,
+          "tol": 1e-08,
+          "rel_diff": 2.4255597885363915e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[3].S01_A_annual_energy_ratio_to_facility_at_PUE1_25",
+          "expected": 0.2471409635,
+          "actual": 0.24714096347031966,
+          "tol": 1e-08,
+          "rel_diff": 1.2009478759617254e-10,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[3].S01_B_annual_energy_ratio_to_facility_at_PUE1_25",
+          "expected": 0.2664824302,
+          "actual": 0.2664824302283105,
+          "tol": 1e-08,
+          "rel_diff": 1.0623764223060185e-10,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "tiers[3].grid_only_location_CO2_t_at_PUE1_25",
+          "expected": 6779.145,
+          "actual": 6779.145,
+          "tol": 1e-08,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "anti_double_counting.existing_S01_PV_is_incremental_to_node",
+          "expected": false,
+          "actual": false,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "heat_credit.baseline_useful_heat_GWhth",
+          "expected": 0,
+          "actual": 0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "result.C01_is_energy_source",
+          "expected": false,
+          "actual": false,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "result.C01_net_positive",
+          "expected": "NOT_PROVEN",
+          "actual": "NOT_PROVEN",
+          "tol": 0,
+          "rel_diff": null,
+          "status": "MATCH",
+          "annotation": null
+        }
+      ],
+      "matched": 47,
+      "annotated": 0,
+      "divergent": 0,
+      "checked": 47,
+      "status": "REPRODUCED"
+    },
+    {
+      "run_id": "RUN_4A",
+      "title": "BIO01 organics and nutrient-recovery transfer functions",
+      "artifact_file": "RUN_4A_BIOMETABOLIC_v0_1.json",
+      "model": "run4a_biometabolic.run",
+      "checks": [
+        {
+          "path": "artifact_id",
+          "expected": "DJK-NODE-001-RUN-4A-BIOMETABOLIC-v0.1",
+          "actual": "DJK-NODE-001-RUN-4A-BIOMETABOLIC-v0.1",
+          "tol": 0,
+          "rel_diff": null,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "local_food_waste_reference.cumulative_food_waste_tonnes",
+          "expected": 260000,
+          "actual": 260000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "local_food_waste_reference.cumulative_biogas_m3",
+          "expected": 5260000,
+          "actual": 5260000.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "local_food_waste_reference.derived_reference_biogas_m3_tonne",
+          "expected": 20.2307692308,
+          "actual": 20.23076923076923,
+          "tol": 1e-08,
+          "rel_diff": 1.5209531986181614e-12,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "food_waste_transfer_function.illustrative_cases[0].feed_tonnes_day",
+          "expected": 1,
+          "actual": 1.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "food_waste_transfer_function.illustrative_cases[0].annual_feed_tonnes",
+          "expected": 365,
+          "actual": 365.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "food_waste_transfer_function.illustrative_cases[0].reference_biogas_m3_year",
+          "expected": 7384.23076923,
+          "actual": 7384.230769230769,
+          "tol": 1e-08,
+          "rel_diff": 1.0407624666884335e-13,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "food_waste_transfer_function.illustrative_cases[1].annual_feed_tonnes",
+          "expected": 1825,
+          "actual": 1825.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "food_waste_transfer_function.illustrative_cases[1].reference_biogas_m3_year",
+          "expected": 36921.1538462,
+          "actual": 36921.153846153844,
+          "tol": 1e-08,
+          "rel_diff": 1.2501958984450969e-12,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "food_waste_transfer_function.illustrative_cases[2].annual_feed_tonnes",
+          "expected": 3650,
+          "actual": 3650.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "food_waste_transfer_function.illustrative_cases[2].reference_biogas_m3_year",
+          "expected": 73842.3076923,
+          "actual": 73842.30769230769,
+          "tol": 1e-08,
+          "rel_diff": 1.0405161323767912e-13,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "food_waste_transfer_function.illustrative_cases[3].annual_feed_tonnes",
+          "expected": 9125,
+          "actual": 9125.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "food_waste_transfer_function.illustrative_cases[3].reference_biogas_m3_year",
+          "expected": 184605.769231,
+          "actual": 184605.76923076922,
+          "tol": 1e-08,
+          "rel_diff": 1.2501958984450969e-12,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "food_waste_transfer_function.illustrative_cases[4].annual_feed_tonnes",
+          "expected": 18250,
+          "actual": 18250.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "food_waste_transfer_function.illustrative_cases[4].reference_biogas_m3_year",
+          "expected": 369211.538462,
+          "actual": 369211.53846153844,
+          "tol": 1e-08,
+          "rel_diff": 1.2501958984450969e-12,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "wastewater_transfer_function.theoretical_methane_ceiling_STP_m3_per_kg_biodegradable_COD_removed",
+          "expected": 0.35,
+          "actual": 0.35,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "baseline_credit.food_waste_feed_tonnes_day",
+          "expected": 0,
+          "actual": 0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "baseline_credit.biogas_m3_year",
+          "expected": 0,
+          "actual": 0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "baseline_credit.struvite_credit",
+          "expected": 0,
+          "actual": 0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "baseline_credit.compost_credit",
+          "expected": 0,
+          "actual": 0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        }
+      ],
+      "matched": 20,
+      "annotated": 0,
+      "divergent": 0,
+      "checked": 20,
+      "status": "REPRODUCED"
+    },
+    {
+      "run_id": "S02",
+      "title": "BESS equivalence transfer function",
+      "artifact_file": "S02_BESS_TRANSFER_FUNCTION_v0_1.json",
+      "model": "s02_bess.run",
+      "checks": [
+        {
+          "path": "artifact_id",
+          "expected": "DJK-NODE-001-S02-BESS-v0.1",
+          "actual": "DJK-NODE-001-S02-BESS-v0.1",
+          "tol": 0,
+          "rel_diff": null,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "baseline_credit",
+          "expected": 0,
+          "actual": 0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "S01_annual_generation_GWh.A",
+          "expected": 2.70619355,
+          "actual": 2.70619355,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "S01_annual_generation_GWh.B",
+          "expected": 2.917982611,
+          "actual": 2.917982611,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "average_solar_energy_MWh_day.A",
+          "expected": 7.414228904,
+          "actual": 7.414228904109589,
+          "tol": 1e-08,
+          "rel_diff": 1.4780873899425513e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "average_solar_energy_MWh_day.B",
+          "expected": 7.994472907,
+          "actual": 7.994472906849315,
+          "tol": 1e-08,
+          "rel_diff": 1.8848622007425168e-11,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "intuitive_energy_only_equivalence[0].BESS_MWh",
+          "expected": 4,
+          "actual": 4.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "intuitive_energy_only_equivalence[0].days_of_average_S01_A",
+          "expected": 0.5395,
+          "actual": 0.5395031704217904,
+          "tol": 0.0001,
+          "rel_diff": 5.8765582192112466e-06,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "intuitive_energy_only_equivalence[0].days_of_average_S01_B",
+          "expected": 0.5003,
+          "actual": 0.5003456821490977,
+          "tol": 0.0001,
+          "rel_diff": 9.130117582210434e-05,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "intuitive_energy_only_equivalence[1].BESS_MWh",
+          "expected": 8,
+          "actual": 8.0,
+          "tol": 0,
+          "rel_diff": 0.0,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "intuitive_energy_only_equivalence[1].days_of_average_S01_A",
+          "expected": 1.079,
+          "actual": 1.0790063408435808,
+          "tol": 0.0001,
+          "rel_diff": 5.8765582192112466e-06,
+          "status": "MATCH",
+          "annotation": null
+        },
+        {
+          "path": "intuitive_energy_only_equivalence[1].days_of_average_S01_B",
+          "expected": 1.0007,
+          "actual": 1.0006913642981954,
+          "tol": 0.0001,
+          "rel_diff": 8.629661041808723e-06,
+          "status": "MATCH",
+          "annotation": null
+        }
+      ],
+      "matched": 12,
+      "annotated": 0,
+      "divergent": 0,
+      "checked": 12,
+      "status": "REPRODUCED"
+    }
+  ]
+}

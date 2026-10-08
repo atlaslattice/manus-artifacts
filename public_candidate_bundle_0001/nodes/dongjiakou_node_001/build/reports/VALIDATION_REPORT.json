@@ -1,0 +1,129 @@
+{
+  "artifact_id": "DJK-NODE-001-VALIDATION-REPORT",
+  "status": "VALIDATION_PASSED",
+  "generated_at": "2026-10-08T13:07:39+00:00",
+  "gate_count": 16,
+  "counts": {
+    "PASS": 15,
+    "WARN": 0,
+    "FAIL": 0,
+    "VETO": 0,
+    "NOT_APPLICABLE": 1
+  },
+  "ledger_entries": 18,
+  "ledger_violations": [],
+  "gates": [
+    {
+      "gate_id": "G01",
+      "title": "UNKNOWN cannot enter Monte Carlo",
+      "status": "NOT_APPLICABLE",
+      "detail": "No Monte Carlo execution was requested.",
+      "findings": []
+    },
+    {
+      "gate_id": "G02",
+      "title": "UNKNOWN cannot silently become zero",
+      "status": "PASS",
+      "detail": "Every zero-valued credit field is either an explicit baseline or justified.",
+      "findings": []
+    },
+    {
+      "gate_id": "G03",
+      "title": "Historical values cannot populate current state",
+      "status": "PASS",
+      "detail": "All current-state fields remain UNKNOWN; historical figures are labelled counterfactual.",
+      "findings": []
+    },
+    {
+      "gate_id": "G04",
+      "title": "Planned capacity cannot populate operating state",
+      "status": "PASS",
+      "detail": "Regional plan stays REPORTED with node access UNKNOWN and zero credit.",
+      "findings": []
+    },
+    {
+      "gate_id": "G05",
+      "title": "Feed-product residual cannot become marine discharge",
+      "status": "PASS",
+      "detail": "Reject-equivalent remains labelled modelled; no discharge quantity is claimed.",
+      "findings": []
+    },
+    {
+      "gate_id": "G06",
+      "title": "One PV kWh cannot receive two primary credits",
+      "status": "PASS",
+      "detail": "0 primary credit(s) on S01 PV; at most one is permitted.",
+      "findings": []
+    },
+    {
+      "gate_id": "G07",
+      "title": "One recovered mass cannot be double-credited",
+      "status": "PASS",
+      "detail": "No BIO01 recovered mass carries more than one primary credit.",
+      "findings": []
+    },
+    {
+      "gate_id": "G08",
+      "title": "Compute heat needs a measured sink",
+      "status": "PASS",
+      "detail": "Useful-heat credit is zero; the first-law bound is reported separately.",
+      "findings": []
+    },
+    {
+      "gate_id": "G09",
+      "title": "Service benefit needs before/after KPI evidence",
+      "status": "PASS",
+      "detail": "Model service benefit remains zero.",
+      "findings": []
+    },
+    {
+      "gate_id": "G10",
+      "title": "Ecological veto cannot be offset",
+      "status": "PASS",
+      "detail": "node_veto_rule is present and aggregate benefit cannot offset a failed veto.",
+      "findings": []
+    },
+    {
+      "gate_id": "G11",
+      "title": "LLM actuator authority is NONE",
+      "status": "PASS",
+      "detail": "No OT write credentials; recommendations pass a validator and operator approval before PLC/SCADA.",
+      "findings": []
+    },
+    {
+      "gate_id": "G12",
+      "title": "Model consensus is not evidence",
+      "status": "PASS",
+      "detail": "Routing policy states cross-model agreement is not evidence.",
+      "findings": []
+    },
+    {
+      "gate_id": "G13",
+      "title": "RO high-pressure head cannot be counted twice",
+      "status": "PASS",
+      "detail": "Pump head is explicitly excluded and no recovered head is claimed.",
+      "findings": []
+    },
+    {
+      "gate_id": "G14",
+      "title": "Existing S01 solar cannot be counted twice",
+      "status": "PASS",
+      "detail": "S01 PV is explicitly non-incremental and carries at most one credit.",
+      "findings": []
+    },
+    {
+      "gate_id": "G15",
+      "title": "Conservation and bound checks",
+      "status": "PASS",
+      "detail": "18 ledger entries; none exceed a resource bound.",
+      "findings": []
+    },
+    {
+      "gate_id": "G16",
+      "title": "Net-positive requires measured terms",
+      "status": "PASS",
+      "detail": "No net-positive operation is claimed.",
+      "findings": []
+    }
+  ]
+}

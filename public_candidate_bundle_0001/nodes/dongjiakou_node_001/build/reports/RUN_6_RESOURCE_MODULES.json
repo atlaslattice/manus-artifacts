@@ -1,0 +1,403 @@
+{
+  "artifact_id": "DJK-NODE-001-RUN-6-RESOURCES-v0.1",
+  "status": "EXECUTED_PARAMETRIC_TRANSFER_FUNCTION_NON_CANON",
+  "study_classification": "TECHNICAL_FEASIBILITY_PLUS_CONDITIONAL_ECONOMICS",
+  "governing_rule": "Every resource module needs yield, selectivity, energy, reagents, material life, residual fate, market ceiling and ecology before earning value.",
+  "required_questions": {
+    "yield": "Measured recovered quantity per unit of brine processed, at this site.",
+    "selectivity": "Measured separation factor against the dominant competing ions (Na, Mg, Ca, K, Cl, sulfate).",
+    "energy": "Measured net energy per unit of recovered product, including pumping, regeneration and thermal duty.",
+    "reagents": "Measured reagent consumption and its own supply chain, cost and residuals.",
+    "material_life": "Measured sorbent, membrane or electrode cycle life and replacement interval.",
+    "residual_fate": "Where the spent brine, eluate, reagent and exhausted material actually go, with a receipt.",
+    "market_ceiling": "Contracted or exchange-published offtake for the actual product grade, not a commodity headline price.",
+    "ecology": "Receiving-water and ecological status under INV-19. This one is a veto, not a score."
+  },
+  "veto_requirements": [
+    "ecology",
+    "residual_fate"
+  ],
+  "modules": {
+    "R01-Li@0.45": {
+      "module_id": "R01-Li",
+      "artifact_id": "DJK-NODE-001-RUN-6-R01-Li-v0.1",
+      "status": "EXECUTED_PARAMETRIC_TRANSFER_FUNCTION_NON_CANON",
+      "classification": "RESOURCE_INVENTORY_NOT_RECOVERY_YIELD",
+      "inputs": {
+        "feed_m3_year": 39844444.44444444,
+        "recovery": 0.45,
+        "feed_li_mg_l": 0.17,
+        "feed_li_source": "REPORTED seawater concentration ~0.17 ppm; site assay absent",
+        "feed_li_band_mg_l": [
+          0.1,
+          0.2
+        ]
+      },
+      "transfer_function": {
+        "concentration_factor_brine_to_feed": 1.8181818181818181,
+        "brine_volume_m3_year": 21914444.444444444,
+        "brine_li_mg_l": 0.3090909090909091,
+        "li_in_feed_t_year": 6.773555555555555,
+        "li_in_brine_t_year": 6.773555555555555,
+        "li_in_product_t_year": 0.0,
+        "fraction_li_to_product_assumed": 0.0,
+        "nf_brine_enrichment_reference": 10.0,
+        "brine_li_mg_l_after_nf_reference": 1.7000000000000002
+      },
+      "recovery": {
+        "module_id": "R01-Li",
+        "product": "lithium",
+        "requirements": {
+          "yield": {
+            "question": "Measured recovered quantity per unit of brine processed, at this site.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "selectivity": {
+            "question": "Measured separation factor against the dominant competing ions (Na, Mg, Ca, K, Cl, sulfate).",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "energy": {
+            "question": "Measured net energy per unit of recovered product, including pumping, regeneration and thermal duty.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "reagents": {
+            "question": "Measured reagent consumption and its own supply chain, cost and residuals.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "material_life": {
+            "question": "Measured sorbent, membrane or electrode cycle life and replacement interval.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "residual_fate": {
+            "question": "Where the spent brine, eluate, reagent and exhausted material actually go, with a receipt.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": true
+          },
+          "market_ceiling": {
+            "question": "Contracted or exchange-published offtake for the actual product grade, not a commodity headline price.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "ecology": {
+            "question": "Receiving-water and ecological status under INV-19. This one is a veto, not a score.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": true
+          }
+        },
+        "receipted_count": 0,
+        "required_count": 8,
+        "value_credit": 0,
+        "eligible_for_value": false,
+        "blocking_reason": "No receipt exists for any of the eight required questions."
+      },
+      "finding": "Lithium is genuinely concentrated by the desalination step, by the brine concentration factor. The inventory is therefore larger in the brine than in the feed, and a downstream nanofiltration step is reported to enrich it roughly tenfold further. This makes lithium a concentration-and-selectivity problem, which is the favourable case.",
+      "not_claimed": [
+        "No recovered lithium quantity.",
+        "No revenue, because no offtake grade or price is contracted.",
+        "No reduction in terrestrial lithium mining. That remains a POTENTIAL_DISPLACEMENT_HYPOTHESIS until yield, selectivity, energy, reagents, material life, markets, economics and ecology all close."
+      ]
+    },
+    "R01-D@0.45": {
+      "module_id": "R01-D",
+      "artifact_id": "DJK-NODE-001-RUN-6-R01-D-v0.1",
+      "status": "EXECUTED_PARAMETRIC_TRANSFER_FUNCTION_NON_CANON",
+      "classification": "RESOURCE_INVENTORY_NOT_RECOVERY_YIELD",
+      "inputs": {
+        "feed_m3_year": 39844444.44444444,
+        "recovery": 0.45,
+        "D_H_atom_ratio": 0.000156,
+        "D_abundance_band_ppm": [
+          89.0,
+          156.0
+        ],
+        "D_abundance_source": "REPORTED ~156 ppm of hydrogen in ocean water; literature band 89-156 ppm retained unresolved"
+      },
+      "transfer_function": {
+        "deuterium_mass_fraction_in_water": 3.4881932190227415e-05,
+        "deuterium_ppm_by_mass_of_water": 34.88193219022742,
+        "isotopic_enrichment_factor_by_RO": 1.0,
+        "d_in_feed_t_year": 1389.8512092683943,
+        "d_in_brine_t_year": 764.418165097617,
+        "brine_volume_m3_year": 21914444.444444444,
+        "d_in_product_t_year": 625.4330441707773,
+        "note_d_is_not_lost": "Deuterium leaving with the product water is not a loss; it is a different stream. The point is that no stream is enriched."
+      },
+      "recovery": {
+        "module_id": "R01-D",
+        "product": "deuterium",
+        "requirements": {
+          "yield": {
+            "question": "Measured recovered quantity per unit of brine processed, at this site.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "selectivity": {
+            "question": "Measured separation factor against the dominant competing ions (Na, Mg, Ca, K, Cl, sulfate).",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "energy": {
+            "question": "Measured net energy per unit of recovered product, including pumping, regeneration and thermal duty.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "reagents": {
+            "question": "Measured reagent consumption and its own supply chain, cost and residuals.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "material_life": {
+            "question": "Measured sorbent, membrane or electrode cycle life and replacement interval.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "residual_fate": {
+            "question": "Where the spent brine, eluate, reagent and exhausted material actually go, with a receipt.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": true
+          },
+          "market_ceiling": {
+            "question": "Contracted or exchange-published offtake for the actual product grade, not a commodity headline price.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "ecology": {
+            "question": "Receiving-water and ecological status under INV-19. This one is a veto, not a score.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": true
+          }
+        },
+        "receipted_count": 0,
+        "required_count": 8,
+        "value_credit": 0,
+        "eligible_for_value": false,
+        "blocking_reason": "No receipt exists for any of the eight required questions."
+      },
+      "finding": "Deuterium is abundant in mass and essentially absent as a concentration gradient. Every tonne of water at this site carries roughly the same deuterium fraction as the ocean, and the desalination step does not change it. The constraint is therefore isotopic separation energy, not resource availability and not brine concentration. This lane is architecturally unlike the lithium lane and must not be modelled as though a brine stream were an ore body.",
+      "architecture_consequence": "A deuterium lane should not be sited to exploit brine concentration, because there is none to exploit. If pursued, it is a heavy-water separation plant that happens to be co-located with a desalination plant, and it must be justified on separation energy and heat integration, not on feed enrichment.",
+      "not_claimed": [
+        "No heavy-water production rate.",
+        "No separation energy figure, because no process route is selected or measured.",
+        "No linkage to the deuteron spin ergotropy question, which is a separate and independent baseline test with its own result: thermal ergotropy is zero at 1 T / 300 K."
+      ]
+    },
+    "R01-Li@0.50": {
+      "module_id": "R01-Li",
+      "artifact_id": "DJK-NODE-001-RUN-6-R01-Li-v0.1",
+      "status": "EXECUTED_PARAMETRIC_TRANSFER_FUNCTION_NON_CANON",
+      "classification": "RESOURCE_INVENTORY_NOT_RECOVERY_YIELD",
+      "inputs": {
+        "feed_m3_year": 35860000.0,
+        "recovery": 0.5,
+        "feed_li_mg_l": 0.17,
+        "feed_li_source": "REPORTED seawater concentration ~0.17 ppm; site assay absent",
+        "feed_li_band_mg_l": [
+          0.1,
+          0.2
+        ]
+      },
+      "transfer_function": {
+        "concentration_factor_brine_to_feed": 2.0,
+        "brine_volume_m3_year": 17930000.0,
+        "brine_li_mg_l": 0.34,
+        "li_in_feed_t_year": 6.0962,
+        "li_in_brine_t_year": 6.0962,
+        "li_in_product_t_year": 0.0,
+        "fraction_li_to_product_assumed": 0.0,
+        "nf_brine_enrichment_reference": 10.0,
+        "brine_li_mg_l_after_nf_reference": 1.7000000000000002
+      },
+      "recovery": {
+        "module_id": "R01-Li",
+        "product": "lithium",
+        "requirements": {
+          "yield": {
+            "question": "Measured recovered quantity per unit of brine processed, at this site.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "selectivity": {
+            "question": "Measured separation factor against the dominant competing ions (Na, Mg, Ca, K, Cl, sulfate).",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "energy": {
+            "question": "Measured net energy per unit of recovered product, including pumping, regeneration and thermal duty.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "reagents": {
+            "question": "Measured reagent consumption and its own supply chain, cost and residuals.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "material_life": {
+            "question": "Measured sorbent, membrane or electrode cycle life and replacement interval.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "residual_fate": {
+            "question": "Where the spent brine, eluate, reagent and exhausted material actually go, with a receipt.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": true
+          },
+          "market_ceiling": {
+            "question": "Contracted or exchange-published offtake for the actual product grade, not a commodity headline price.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "ecology": {
+            "question": "Receiving-water and ecological status under INV-19. This one is a veto, not a score.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": true
+          }
+        },
+        "receipted_count": 0,
+        "required_count": 8,
+        "value_credit": 0,
+        "eligible_for_value": false,
+        "blocking_reason": "No receipt exists for any of the eight required questions."
+      },
+      "finding": "Lithium is genuinely concentrated by the desalination step, by the brine concentration factor. The inventory is therefore larger in the brine than in the feed, and a downstream nanofiltration step is reported to enrich it roughly tenfold further. This makes lithium a concentration-and-selectivity problem, which is the favourable case.",
+      "not_claimed": [
+        "No recovered lithium quantity.",
+        "No revenue, because no offtake grade or price is contracted.",
+        "No reduction in terrestrial lithium mining. That remains a POTENTIAL_DISPLACEMENT_HYPOTHESIS until yield, selectivity, energy, reagents, material life, markets, economics and ecology all close."
+      ]
+    },
+    "R01-D@0.50": {
+      "module_id": "R01-D",
+      "artifact_id": "DJK-NODE-001-RUN-6-R01-D-v0.1",
+      "status": "EXECUTED_PARAMETRIC_TRANSFER_FUNCTION_NON_CANON",
+      "classification": "RESOURCE_INVENTORY_NOT_RECOVERY_YIELD",
+      "inputs": {
+        "feed_m3_year": 35860000.0,
+        "recovery": 0.5,
+        "D_H_atom_ratio": 0.000156,
+        "D_abundance_band_ppm": [
+          89.0,
+          156.0
+        ],
+        "D_abundance_source": "REPORTED ~156 ppm of hydrogen in ocean water; literature band 89-156 ppm retained unresolved"
+      },
+      "transfer_function": {
+        "deuterium_mass_fraction_in_water": 3.4881932190227415e-05,
+        "deuterium_ppm_by_mass_of_water": 34.88193219022742,
+        "isotopic_enrichment_factor_by_RO": 1.0,
+        "d_in_feed_t_year": 1250.866088341555,
+        "d_in_brine_t_year": 625.4330441707775,
+        "brine_volume_m3_year": 17930000.0,
+        "d_in_product_t_year": 625.4330441707775,
+        "note_d_is_not_lost": "Deuterium leaving with the product water is not a loss; it is a different stream. The point is that no stream is enriched."
+      },
+      "recovery": {
+        "module_id": "R01-D",
+        "product": "deuterium",
+        "requirements": {
+          "yield": {
+            "question": "Measured recovered quantity per unit of brine processed, at this site.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "selectivity": {
+            "question": "Measured separation factor against the dominant competing ions (Na, Mg, Ca, K, Cl, sulfate).",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "energy": {
+            "question": "Measured net energy per unit of recovered product, including pumping, regeneration and thermal duty.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "reagents": {
+            "question": "Measured reagent consumption and its own supply chain, cost and residuals.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "material_life": {
+            "question": "Measured sorbent, membrane or electrode cycle life and replacement interval.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "residual_fate": {
+            "question": "Where the spent brine, eluate, reagent and exhausted material actually go, with a receipt.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": true
+          },
+          "market_ceiling": {
+            "question": "Contracted or exchange-published offtake for the actual product grade, not a commodity headline price.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": false
+          },
+          "ecology": {
+            "question": "Receiving-water and ecological status under INV-19. This one is a veto, not a score.",
+            "status": "UNKNOWN",
+            "receipt": "UNKNOWN",
+            "veto_bearing": true
+          }
+        },
+        "receipted_count": 0,
+        "required_count": 8,
+        "value_credit": 0,
+        "eligible_for_value": false,
+        "blocking_reason": "No receipt exists for any of the eight required questions."
+      },
+      "finding": "Deuterium is abundant in mass and essentially absent as a concentration gradient. Every tonne of water at this site carries roughly the same deuterium fraction as the ocean, and the desalination step does not change it. The constraint is therefore isotopic separation energy, not resource availability and not brine concentration. This lane is architecturally unlike the lithium lane and must not be modelled as though a brine stream were an ore body.",
+      "architecture_consequence": "A deuterium lane should not be sited to exploit brine concentration, because there is none to exploit. If pursued, it is a heavy-water separation plant that happens to be co-located with a desalination plant, and it must be justified on separation energy and heat integration, not on feed enrichment.",
+      "not_claimed": [
+        "No heavy-water production rate.",
+        "No separation energy figure, because no process route is selected or measured.",
+        "No linkage to the deuteron spin ergotropy question, which is a separate and independent baseline test with its own result: thermal ergotropy is zero at 1 T / 300 K."
+      ]
+    }
+  },
+  "summary": {
+    "modules_instantiated": 4,
+    "modules_eligible_for_value": 0,
+    "total_value_credit": 0,
+    "reason": "No module has a receipt for any of the eight required questions."
+  },
+  "sequence_rule": "Modules are evaluated one at a time. Stacking survivors is Run 7 and requires sequence-dependent interference edges, which cannot exist before individual modules have measured receipts.",
+  "unresolved": [
+    "Site lithium assay in feed, product and brine.",
+    "Site deuterium assay in feed, product and brine, to test the no-enrichment assumption rather than assert it.",
+    "Any sorbent, membrane or electrode performance at this brine chemistry.",
+    "Receiving-water and ecological status under INV-19."
+  ]
+}

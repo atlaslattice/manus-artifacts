@@ -1,0 +1,15 @@
+{
+  "status": "REVIEWED_PUBLIC_CANDIDATE_NON_CANON",
+  "recovered_bundle_head": "54d21990e891a54023d631b01f4de2c1a69a2110",
+  "artifacts": {
+    "manus_build.zip": "971b99d9c3efb0c8a9b3e64630f7bb7ed228483b394c0c2c5540dddc883dfbd9",
+    "manus.bundle": "5ee32a2a37322df4f5e288b41393d0d48f989be2717d899346966a3440e2d32e"
+  },
+  "source_count": 19,
+  "source_hashes_restored": true,
+  "recovered_core_tests": 226,
+  "latest_Notion_reported_tests": 316,
+  "latest_source_recovered": false,
+  "note": "316 is a Notion-reported count, not a test result for this recovered package. Original historical reports are preserved; current overlay is additive.",
+  "recovered_plus_review_extension_tests": 239
+}

@@ -1,0 +1,708 @@
+{
+  "summary": {
+    "rounds": 2,
+    "reviewer": "DeepSeek",
+    "questions_asked": 35,
+    "questions_answered": 37,
+    "round_1": {
+      "asked": 30,
+      "answered": 32,
+      "outcomes": {
+        "FOUND": 8,
+        "FOUND-CONTRADICTS": 2,
+        "NULL": 7,
+        "UNKNOWN-BUT-LEAD": 13,
+        "UNKNOWN": 2
+      }
+    },
+    "round_2": {
+      "asked": 5,
+      "answered": 5,
+      "outcomes": {
+        "FOUND": 2,
+        "FOUND-CONTRADICTS": 2,
+        "NULL": 1,
+        "UNKNOWN-BUT-LEAD": 0,
+        "UNKNOWN": 0
+      }
+    },
+    "outcomes": {
+      "FOUND": 10,
+      "FOUND-CONTRADICTS": 4,
+      "NULL": 8,
+      "UNKNOWN-BUT-LEAD": 13,
+      "UNKNOWN": 2
+    },
+    "found": [
+      "Q-A1",
+      "Q-B1",
+      "Q-E1",
+      "Q-F1",
+      "Q-F3",
+      "Q-F4",
+      "Q-G2",
+      "Q-H1",
+      "Q-H4-2",
+      "Q-C4-2"
+    ],
+    "contradictions": [
+      "Q-F2",
+      "Q-F5",
+      "Q-B1-2",
+      "Q-A1-2"
+    ],
+    "nulls": [
+      "Q-A2",
+      "Q-B3",
+      "Q-B4",
+      "Q-C3",
+      "Q-E3",
+      "Q-H2",
+      "Q-H4",
+      "Q-B3-2"
+    ],
+    "leads": [
+      "Q-A3",
+      "Q-B2",
+      "Q-C1",
+      "Q-C2",
+      "Q-C4",
+      "Q-D1",
+      "Q-D4",
+      "Q-E2",
+      "Q-G1",
+      "Q-G3",
+      "Q-H3",
+      "Q-I1",
+      "Q-I2"
+    ],
+    "interpretation": "The review CONFIRMED several real links (contracted water offtake, operational slag and tyre-pyrolysis reuse, the official 214 MW wind + 81 MW PV plan, the pilot base and its partial occupancy), EXFOUND one contradiction that corrected a working assumption (construction waste), NARROWED one veto's scope (CERT-01 applies to marine and pressure-boundary components, not to concrete structural printing, which has a current standards path), and left the single highest-value economic figure genuinely NULL (the 2026 electricity settlement). Nine NULLs are receipts of absence: those connections are not yet real.",
+    "discipline_note": "No finding was promoted on the strength of a model agreeing with another model. Findings are credited when a document is produced. A plan is not an allocation, an operator claim is not an independent measurement, and an expectation of commercial operation is not operation."
+  },
+  "receipts": [
+    {
+      "qid": "Q-A1",
+      "round": 1,
+      "tier": 1,
+      "question": "Circular-economy implementation plan",
+      "outcome": "FOUND",
+      "finding": "The zone completed compilation of a park circular-transformation implementation plan and advanced 20 key supporting projects totalling CNY 12.4bn (2024). A 2026 page confirms 30 circular-transformation projects landed, CNY 69.5bn total, cutting enterprise tailings treatment cost by over 80%. Targets: industrial water reuse rate >=94%, general industrial solid waste comprehensive utilisation >=90%. The publicly available documents do NOT enumerate enterprise-to-enterprise exchanges with partner names and quantities.",
+      "evidence_class": "REPORTED",
+      "source": "Dongjiakou Economic Zone government reporting (2024, 2026)",
+      "date": "",
+      "url": "",
+      "effect_on_register": "Plan EXISTS and sets two hard targets we can measure against. But the enterprise-level exchange list is NULL, so the 16 opportunity edges still cannot be confirmed or denied from this document alone. The >=94% water reuse and >=90% solid waste targets become new measurable commitments.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3\u7ecf\u6d4e\u533a \u5faa\u73af\u7ecf\u6d4e \u5b9e\u65bd\u65b9\u6848",
+        "\u8463\u5bb6\u53e3 \u56ed\u533a\u5faa\u73af\u5316\u6539\u9020"
+      ]
+    },
+    {
+      "qid": "Q-A2",
+      "round": 1,
+      "tier": 1,
+      "question": "Park utility map by plant",
+      "outcome": "NULL",
+      "finding": "No published steam, hot water, industrial gas or compressed-air utility map by plant and capacity was located. The zone is described as having achieved 'nine connections and one levelling' (\u4e5d\u901a\u4e00\u5e73) including centralised wastewater treatment, thermal power, substations and reclaimed-water networks, but the layout and capacities are not public.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "Heat layer has no physical stream and remains OPPORTUNITY_ONLY. The pipes may exist; we cannot see them.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3\u7ecf\u6d4e\u533a \u516c\u7528\u5de5\u7a0b \u7ba1\u7f51",
+        "\u8463\u5bb6\u53e3 \u84b8\u6c7d \u7ba1\u7f51"
+      ]
+    },
+    {
+      "qid": "Q-A3",
+      "round": 1,
+      "tier": 1,
+      "question": "Demonstration-zone reporting obligations",
+      "outcome": "UNKNOWN-BUT-LEAD",
+      "finding": "The national circular-economy demonstration designation carries reporting obligations, but the Dongjiakou annual report was not located. The zone is described as a national-level circular economy demonstration zone.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "A lead to pursue for the enterprise-level data that Q-A1 did not yield.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3 \u5faa\u73af\u7ecf\u6d4e\u793a\u8303\u56ed\u533a \u5e74\u5ea6\u62a5\u544a",
+        "\u9752\u5c9b\u897f\u6d77\u5cb8\u65b0\u533a \u5faa\u73af\u7ecf\u6d4e \u5e74\u5ea6\u62a5\u544a"
+      ]
+    },
+    {
+      "qid": "Q-B1",
+      "round": 1,
+      "tier": 1,
+      "question": "Water supply agreement \u2014 WHO ACTUALLY BUYS THE WATER",
+      "outcome": "FOUND",
+      "finding": "The plant operates under a PPP agreement signed in 2015. Terms: desalinated water treatment fee CNY 4.25/m3, with a GUARANTEED MINIMUM VOLUME of 70,000 m3/day; below that, payment is made at the guaranteed volume rate. Named offtakers: Qingdao Special Steel, Jinneng Chemical, Bangtuo New Materials, and West Coast Water Affairs Company (which further supplies Haiwan Chemical and Huicheng Environmental Protection). The Dongjiakou Water Supply Company buys at CNY 4.25/m3 and sells to industrial users at CNY 4.00/m3 \u2014 a policy-driven loss subsidised by the district government.",
+      "evidence_class": "REPORTED",
+      "source": "PPP agreement terms (2015) via government/utility reporting",
+      "date": "2015",
+      "url": "",
+      "effect_on_register": "DECISIVE. The product water's sink is now CONTRACTED to a named industrial cluster, not the port. The port candidacy for product water is not supported. Also gives us the first real price anchor in the entire build (CNY 4.25/m3 treatment fee, 70,000 m3/day guaranteed minimum) and reveals the tariff is subsidy-dependent, which is a financial-risk finding, not just an input.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3\u6d77\u6c34\u6de1\u5316 \u4f9b\u6c34\u534f\u8bae",
+        "\u9752\u5c9b\u6c34\u52a1\u6d77\u6c34\u6de1\u5316 \u4f9b\u6c34 \u5408\u540c"
+      ]
+    },
+    {
+      "qid": "Q-B2",
+      "round": 1,
+      "tier": 1,
+      "question": "Port and industrial water demand",
+      "outcome": "UNKNOWN-BUT-LEAD",
+      "finding": "The plant was designed to supply the zone's industrial water demand; a 2022 report states maximum daily supply reaches 100,000 t, 'fully able to meet the industrial water demand within the Dongjiakou Economic Zone'. Per-user demand figures are not published.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "Supports that the plant is demand-matched, not port-matched. No per-user split.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3 \u5de5\u4e1a\u7528\u6c34 \u9700\u6c42"
+      ]
+    },
+    {
+      "qid": "Q-B3",
+      "round": 1,
+      "tier": 1,
+      "question": "2026 effective electricity settlement",
+      "outcome": "NULL",
+      "finding": "Historical anchor CONFIRMED: CNY 0.555/kWh including tax for 2018-2020. Shandong policy confirms the demand/capacity charge waiver for qualifying two-part-tariff desalination power was in effect through the end of 2025. NO 2026 plant-specific effective tariff, bill, retail contract or market-settlement receipt was located.",
+      "evidence_class": "UNKNOWN",
+      "source": "Shandong preferential-tariff policy; no 2026 receipt",
+      "date": "",
+      "url": "",
+      "effect_on_register": "Progress, not closure. A 2020 anchor now exists but 2026 remains UNKNOWN, so every CNY line in Runs 0-3 remains unmeasurable. This stays the highest-value missing receipt. NOTE: the demand-charge waiver expiry at end-2025 means the 2018-2020 figure CANNOT be carried forward \u2014 the 2026 shape is genuinely unknown, not merely unpublished.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3\u6d77\u6c34\u6de1\u5316 \u7535\u4ef7",
+        "\u5c71\u4e1c \u6d77\u6c34\u6de1\u5316 \u7535\u4ef7 \u653f\u7b56 2026"
+      ]
+    },
+    {
+      "qid": "Q-B4",
+      "round": 1,
+      "tier": 1,
+      "question": "Whole-site energy audit",
+      "outcome": "NULL",
+      "finding": "No published energy audit (\u80fd\u6e90\u5ba1\u8ba1) or cleaner-production audit (\u6e05\u6d01\u751f\u4ea7\u5ba1\u6838) with a stated meter boundary. The 2.2 kWh/m3 figure remains process-train only.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "The true node energy baseline remains unmeasurable. UNKNOWN stays UNKNOWN.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3\u6d77\u6c34\u6de1\u5316 \u80fd\u6e90\u5ba1\u8ba1",
+        "\u9752\u5c9b\u6c34\u52a1\u6d77\u6c34\u6de1\u5316 \u6e05\u6d01\u751f\u4ea7\u5ba1\u6838"
+      ]
+    },
+    {
+      "qid": "Q-C1",
+      "round": 1,
+      "tier": 1,
+      "question": "Discharge permit",
+      "outcome": "UNKNOWN-BUT-LEAD",
+      "finding": "Outfall location documented: 'between the west breakwater of Dongjiakou Port and the eastern section of the trestle pier', at 119\u00b044'33.10\"E, 35\u00b034'47.17\"N. Zone wastewater is treated at the Zhongfa Water Treatment Plant (total capacity 43,000 m3/day) and discharged through the outfall after meeting standards. The permit number and permitted limits were not located in the national permit register.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "The outfall is now LOCATED with coordinates. INV-19 still lacks the permit receipt. A georeferenced discharge point is new and useful.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3\u6d77\u6c34\u6de1\u5316 \u6392\u6c61\u8bb8\u53ef\u8bc1",
+        "\u8463\u5bb6\u53e3 \u6392\u653e\u53e3"
+      ]
+    },
+    {
+      "qid": "Q-C2",
+      "round": 1,
+      "tier": 1,
+      "question": "Concentrate monitoring",
+      "outcome": "UNKNOWN-BUT-LEAD",
+      "finding": "A 2024 journal article in Salt Science & Chemical Engineering analysed the environmental impact of Dongjiakou's desalination concentrate discharge, finding the impact limited to within 200 m of the outfall and posing no major environmental risk to marine life in Langya Bay. This is a peer-reviewed SECONDARY analysis, not primary station data.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "A bounded-impact claim now exists \u2014 but the veto rule stands: a secondary summary may never be promoted to a primary ecological receipt. INV-19/ECO-01 remain UNRESOLVED. The 200 m figure is a hypothesis to test, not a clearance.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3 \u6d77\u6c34\u6de1\u5316 \u6d53\u76d0\u6c34 \u76d1\u6d4b"
+      ]
+    },
+    {
+      "qid": "Q-C3",
+      "round": 1,
+      "tier": 1,
+      "question": "Primary OUC monitoring data",
+      "outcome": "NULL",
+      "finding": "The 2017 and 2022 Ocean University of China monitoring summaries are referenced in secondary engineering reports, but the underlying primary station-level data was not located publicly. This remains the critical gap for ECO-01.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "ECO-01 stays UNRESOLVED. Confirmed that the gap is real and not a search failure.",
+      "search_terms": [
+        "\u4e2d\u56fd\u6d77\u6d0b\u5927\u5b66 \u8463\u5bb6\u53e3 \u76d1\u6d4b"
+      ]
+    },
+    {
+      "qid": "Q-C4",
+      "round": 1,
+      "tier": 1,
+      "question": "Brine diffusion model / outfall EIA",
+      "outcome": "UNKNOWN-BUT-LEAD",
+      "finding": "The outfall project received approval from the Shandong Provincial Ocean and Fisheries Department (\u9c81\u6d77\u6e14\u51fd[2015]330\u53f7). An EIA for the desalination project exists, but a specific brine-diffusion model or detailed outfall EIA was not located publicly.",
+      "evidence_class": "UNKNOWN",
+      "source": "\u9c81\u6d77\u6e14\u51fd[2015]330\u53f7",
+      "date": "2015",
+      "url": "",
+      "effect_on_register": "A named approval instrument now exists \u2014 a concrete target for a direct request.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3 \u6392\u653e\u53e3 \u73af\u8bc4",
+        "\u9c81\u6d77\u6e14\u51fd 2015 330"
+      ]
+    },
+    {
+      "qid": "Q-D1",
+      "round": 1,
+      "tier": 2,
+      "question": "LNG cascade EIA thermal specifications",
+      "outcome": "UNKNOWN-BUT-LEAD",
+      "finding": "The cascade project completed bidding in June 2026 and entered detailed design and construction, with the projected 26 GWh/year generation and 8 GWh/year avoided cooling we already carry. The EIA document with thermal output specifications, cold load and operating hours was not located.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "E02 edges stay UNDER_CONSTRUCTION with credit zero. The two projected figures remain projections with no stated operating profile.",
+      "search_terms": [
+        "\u5c71\u4e1c LNG\u51b7\u80fd\u68af\u7ea7\u5229\u7528 \u73af\u8bc4",
+        "\u9752\u5c9b \u8463\u5bb6\u53e3 LNG\u51b7\u80fd \u9879\u76ee \u516c\u793a"
+      ]
+    },
+    {
+      "qid": "Q-D2",
+      "round": 1,
+      "tier": 2,
+      "question": "Air-separation offtake agreements",
+      "outcome": "UNKNOWN",
+      "finding": "The 660 t/day air-separation project (CNY 230M, Sichuan Air Separation Group + Sinopec Qingdao LNG, signed 2025-09-02) exists, but liquid-gas offtake agreements and buyer identities were not located.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "E02 to CHEM01 stays UNDER_CONSTRUCTION; the product sink is unknown.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3 \u7a7a\u5206 \u6db2\u6c2e \u6db2\u6c27 \u4f9b\u5e94",
+        "\u9752\u5c9b \u7a7a\u5206 \u9879\u76ee \u4f9b\u6c14\u534f\u8bae"
+      ]
+    },
+    {
+      "qid": "Q-D3",
+      "round": 1,
+      "tier": 2,
+      "question": "CO2 liquefaction in scope",
+      "outcome": "UNKNOWN",
+      "finding": "No public document confirming or denying CO2 liquefaction in the cold-energy project scope.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "The E02 to CARB01 potential coupling stays closed. Note: CO2 liquefaction is a natural cold-energy use and would be a genuinely elegant link if in scope.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3 LNG\u51b7\u80fd \u4e8c\u6c27\u5316\u78b3 \u6db2\u5316",
+        "\u9752\u5c9b \u51b7\u80fd \u78b3\u6355\u96c6"
+      ]
+    },
+    {
+      "qid": "Q-D4",
+      "round": 1,
+      "tier": 2,
+      "question": "Is the cold energy incremental?",
+      "outcome": "UNKNOWN-BUT-LEAD",
+      "finding": "The Sinopec Qingdao LNG receiving station has been operational since 2014. The cascade project is described as Shandong's first such project, suggesting incremental recovery, but this was not definitively confirmed.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "Supports incrementality but does not prove it. If cold energy were already being used for vaporisation duty, the 26 GWh would not be additive.",
+      "search_terms": [
+        "\u4e2d\u77f3\u5316 \u9752\u5c9bLNG \u51b7\u80fd \u5229\u7528",
+        "\u8463\u5bb6\u53e3 LNG \u6c14\u5316 \u51b7\u80fd"
+      ]
+    },
+    {
+      "qid": "Q-E1",
+      "round": 1,
+      "tier": 1,
+      "question": "Port green transformation plan",
+      "outcome": "FOUND",
+      "finding": "The Qingdao Port Green Transformation Three-Year Action Plan (2026-2028) is confirmed. It proposes exploring green-direct connection and developing wind and solar around Qianwan and Dongjiakou port areas \u2014 approximately 214 MW wind and 81 MW PV \u2014 with dedicated transmission lines. Targets: 20.1 MW wind at Qianwan North by 2027 (>30 million kWh/year), >=15 MW new distributed PV, and one virtual power plant by 2028.",
+      "evidence_class": "REPORTED",
+      "source": "Qingdao Port Green Transformation Three-Year Action Plan 2026-2028",
+      "date": "2026-2028",
+      "url": "",
+      "effect_on_register": "E01 to C01 stays PLANNED but is now a NAMED official plan with dated, countable targets. The virtual power plant is a new element not previously registered. Node-001 access remains UNKNOWN \u2014 a plan is not an allocation.",
+      "search_terms": [
+        "\u9752\u5c9b\u6e2f \u7eff\u8272\u8f6c\u578b \u4e09\u5e74\u884c\u52a8\u65b9\u6848"
+      ]
+    },
+    {
+      "qid": "Q-E2",
+      "round": 1,
+      "tier": 2,
+      "question": "Green-direct eligibility for this node",
+      "outcome": "UNKNOWN-BUT-LEAD",
+      "finding": "National 2026 green-direct rules permit multi-user projects including industrial parks, with priority support for compute facilities, at thresholds of >=60% self-consumption and >=30% load share. NO document naming the Dongjiakou desalination plant or any compute facility as an enrolled user was located.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "The POLICY pathway is confirmed; Node-001 participation is UNKNOWN. GRID-01 stays UNRESOLVED. Critically: the rules name compute as a priority class, so the 40 MW scenario now has a policy route even with no project announced.",
+      "search_terms": [
+        "\u7eff\u7535\u76f4\u8fde \u5c71\u4e1c 2026",
+        "\u8463\u5bb6\u53e3 \u7eff\u7535 \u76f4\u8fde \u6570\u636e\u4e2d\u5fc3"
+      ]
+    },
+    {
+      "qid": "Q-E3",
+      "round": 1,
+      "tier": 2,
+      "question": "Incremental distribution licence",
+      "outcome": "NULL",
+      "finding": "No incremental distribution licence or energy-storage pilot at Dongjiakou was located.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "Nothing to register. GRID-01 unchanged.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3 \u589e\u91cf\u914d\u7535 \u8bb8\u53ef",
+        "\u9752\u5c9b \u589e\u91cf\u914d\u7535 \u8bd5\u70b9"
+      ]
+    },
+    {
+      "qid": "Q-F1",
+      "round": 1,
+      "tier": 2,
+      "question": "Pilot base tenant list",
+      "outcome": "FOUND",
+      "finding": "The New Materials Technological Innovation Base (200 mu, 8 pilot workshops, capacity for 30 concurrent projects) has 45 material projects in reserve, 9 expressing clear intent to move in, 12 high-potential projects under weekly tracking, and 4 confirmed for pilot workshops with equipment installation underway. A military-civilian special carbon fibre project has been signed. Projects in reserve include low-molecular-weight polyphenylene ether, carbon black coupling agent, and Shanghai Jiao Tong University high-end materials. The full tenant list with workshop assignments was NOT published.",
+      "evidence_class": "REPORTED",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "M01 is CONFIRMED to have a physical host with real occupancy. But only 4 of 30 slots are filled, so M01 capacity is mostly prospective. The carbon fibre and polyphenylene ether projects are new named tenants.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3\u65b0\u6750\u6599\u4e2d\u8bd5\u57fa\u5730 \u5165\u9a7b",
+        "\u8463\u5bb6\u53e3 \u4e2d\u8bd5\u57fa\u5730 \u9879\u76ee \u540d\u5355"
+      ]
+    },
+    {
+      "qid": "Q-F2",
+      "round": 1,
+      "tier": 1,
+      "question": "Construction waste allocation",
+      "outcome": "FOUND-CONTRADICTS",
+      "finding": "A Qingdao government planning document states explicitly: 'From the perspective of enterprise layout, the West Coast New Area's key future industrial development zone \u2014 Dongjiakou Economic Zone and its surrounding areas \u2014 LACKS construction waste resource utilisation enterprises.' It recommends arranging one to two reasonably sized processing facilities in or around the zone.",
+      "evidence_class": "REPORTED",
+      "source": "Qingdao construction waste resource utilisation planning document",
+      "date": "",
+      "url": "",
+      "effect_on_register": "THE REGISTER'S ASSUMPTION IS WRONG AND HAS BEEN CORRECTED. We assumed Dongjiakou had construction-waste feedstock flowing to M01. It does not \u2014 the zone is officially identified as a GAP in the city's processing network. The finding inverts the edge: this is not a feedstock surplus seeking a sink, it is a capability gap that the city plans to fill. Sited correctly, a node facility would be the processing enterprise the plan asks for. That is a genuine opportunity, but a different one from the one we registered.",
+      "search_terms": [
+        "\u9752\u5c9b \u5efa\u7b51\u5e9f\u5f03\u7269 \u8d44\u6e90\u5316\u5229\u7528 \u5e03\u5c40",
+        "\u8463\u5bb6\u53e3 \u5efa\u7b51\u5e9f\u5f03\u7269"
+      ]
+    },
+    {
+      "qid": "Q-F3",
+      "round": 1,
+      "tier": 2,
+      "question": "Special steel slag and ZLD",
+      "outcome": "FOUND",
+      "finding": "Qingdao Special Steel reports 100% comprehensive utilisation of steel slag through intelligent closed-loop processing, having invested CNY 76M in a solid slag processing line producing granular steel, granular iron, iron concentrate and \u5288\u94c1 for return to converter; slag is processed into cement additives and high-value building materials. For water, SUEZ/Zhongfa operates a 20,000 m3/day industrial wastewater plant with 100% reclaimed-water reuse for Special Steel production. Contracted volumes and independent ZLD verification were not located.",
+      "evidence_class": "REPORTED",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "MAT01 to M01 slag link strengthened to OPERATIONAL with a named investment. The ZLD claim is an OPERATOR CLAIM, not an independent measurement \u2014 it must not be promoted on the strength of the operator's own reporting.",
+      "search_terms": [
+        "\u9752\u5c9b\u7279\u94a2 \u94a2\u6e23 \u7efc\u5408\u5229\u7528",
+        "\u9752\u5c9b\u7279\u94a2 \u4e2d\u6c34\u56de\u7528"
+      ]
+    },
+    {
+      "qid": "Q-F4",
+      "round": 1,
+      "tier": 2,
+      "question": "Tyre pyrolysis carbon black",
+      "outcome": "FOUND",
+      "finding": "The Exista Green Ecological Recycling Demonstration Base at Dongjiakou processes 30,000 tonnes/year of waste tyres, producing primary oil, environmentally friendly carbon black, steel wire and combustible gas \u2014 described as 'zero pollution, zero residue, zero emissions, full utilisation'. Carbon black grade, offtake volumes and buyer identities were not located.",
+      "evidence_class": "REPORTED",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "MAT01 to M01 tyre-pyrolysis link confirmed OPERATIONAL at 30,000 t/year. Carbon black is a candidate 3D-printing composite feedstock, which is a NEW coupling not previously registered. The 'zero emissions' claim is unverified marketing language and is registered as such.",
+      "search_terms": [
+        "\u53cc\u661f \u5e9f\u65e7\u8f6e\u80ce \u88c2\u89e3 \u8463\u5bb6\u53e3"
+      ]
+    },
+    {
+      "qid": "Q-F5",
+      "round": 1,
+      "tier": 2,
+      "question": "3D-printing certification for marine/pressure parts",
+      "outcome": "FOUND-CONTRADICTS",
+      "finding": "China HAS established a concrete 3D-printing standards framework: T/CBMF 378-2026 / T/CCPA 90-2026 'General Technical Requirements for Concrete 3D Printers' (effective 2026-09-06); T/CCPA 85-2025 / T/CBMF 366-2025 '3D Printing Concrete Premix'; and a national standard under development, 'Additive Manufacturing in Construction \u2014 Qualification Principles \u2014 Structural and Infrastructure Components', based on ISO/ASTM 52939:2023. HOWEVER, no classification-society (\u8239\u7ea7\u793e) or pressure-vessel code pathway for additively manufactured marine or pressure-boundary components was located.",
+      "evidence_class": "REPORTED",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "SCOPE REFINEMENT, and a partial contradiction of our framing. CERT-01 is not blocking all additive manufacturing \u2014 concrete structural printing has a real and current standards path. The veto's true scope is NARROWER AND SHARPER: it applies to marine and pressure-boundary components only. CERT-01 remains UNRESOLVED for that narrower scope.",
+      "search_terms": [
+        "\u589e\u6750\u5236\u9020 \u8239\u7ea7\u793e \u8ba4\u8bc1",
+        "3D\u6253\u5370\u6df7\u51dd\u571f \u6807\u51c6 T/CBMF"
+      ]
+    },
+    {
+      "qid": "Q-G1",
+      "round": 1,
+      "tier": 2,
+      "question": "LDC wastewater and residues",
+      "outcome": "UNKNOWN-BUT-LEAD",
+      "finding": "The Louis Dreyfus Food Technology Park EIA is referenced in procurement notices, but wastewater volume and composition were not located publicly.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "AGR01 to BIO01 edge stays UNDER_CONSTRUCTION with composition UNKNOWN.",
+      "search_terms": [
+        "\u8def\u6613\u8fbe\u5b5a \u8463\u5bb6\u53e3 \u73af\u8bc4",
+        "\u8463\u5bb6\u53e3 \u98df\u54c1\u4ea7\u4e1a\u56ed \u5e9f\u6c34"
+      ]
+    },
+    {
+      "qid": "Q-G2",
+      "round": 1,
+      "tier": 2,
+      "question": "Wastewater treatment and reclaimed water",
+      "outcome": "FOUND",
+      "finding": "The Zhongfa Water Treatment Plant (SUEZ) serves Dongjiakou with 20,000 m3/day industrial wastewater treatment and 5,000 m3/day municipal treatment. 100% of treated water is reused by Qingdao Special Steel for production. The zone has a reclaimed-water reuse network as part of its 'nine connections and one levelling' infrastructure. Daily inflow to the main line is approximately 3,000-4,000 m3/day, and the secondary line 11,300-31,500 m3/day.",
+      "evidence_class": "REPORTED",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "BIO01 now has an OPERATIONAL treatment host with stated capacities, and a real reuse loop already exists (Special Steel at 100%). Note the loop is ALREADY CLAIMED by Special Steel \u2014 so a 100% reuse claim cannot also be attributed to another subnode. That is exactly the kind of double count the credit rule exists to prevent.",
+      "search_terms": [
+        "\u4e2d\u6cd5\u6c34\u52a1 \u8463\u5bb6\u53e3 \u6c61\u6c34\u5904\u7406",
+        "\u8463\u5bb6\u53e3 \u4e2d\u6c34\u56de\u7528"
+      ]
+    },
+    {
+      "qid": "Q-G3",
+      "round": 1,
+      "tier": 2,
+      "question": "Organic waste concession",
+      "outcome": "UNKNOWN-BUT-LEAD",
+      "finding": "The Zhongfa plant has a sludge composting project (\u697c\u5c71\u6cb3\u6c61\u6ce5\u5806\u80a5\u9879\u76ee) with civil works complete, and a 2014 QTV report describes a kitchen-waste pretreatment system producing biogas and fertiliser. No BIO01-contractable organic waste concession at Dongjiakou was identified.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "A lead only. No concession to contract into yet.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3 \u6709\u673a\u5e9f\u5f03\u7269 \u6536\u8fd0",
+        "\u9752\u5c9b \u9910\u53a8\u5783\u573e \u5904\u7406 \u7279\u8bb8\u7ecf\u8425"
+      ]
+    },
+    {
+      "qid": "Q-H1",
+      "round": 1,
+      "tier": 1,
+      "question": "Baifa lithium \u2014 real status",
+      "outcome": "FOUND",
+      "finding": "The Baifa seawater lithium extraction project (world's first) completed two pilot rounds processing 200,000 tonnes of seawater using a high-selectivity ion sieve effective at 0.17 ppm Li. A patent for a 'lithium ion sieve-based double-layer ultrafiltration membrane' was filed in August 2024 by the Qingdao Institute of Bioenergy and Bioprocess Technology (CAS) and Qingdao Baifa Seawater Desalination Co., and published February 2026. Commercial operation was expected by end of 2025. Actual 2026 operating status and product buyers were NOT confirmed.",
+      "evidence_class": "REPORTED",
+      "source": "CAS Qingdao Institute of Bioenergy and Bioprocess Technology + Qingdao Baifa patent, filed 2024-08, published 2026-02",
+      "date": "2024-2026",
+      "url": "",
+      "effect_on_register": "A credible proof-of-path with an identifiable IP holder and a named research partner \u2014 which is also a direct route to ask for the missing data. But the register still cannot promote R01: expectation of commercial operation is not operation, and 2026 status is unconfirmed. R01 credit stays zero.",
+      "search_terms": [
+        "\u767e\u53d1\u6d77\u6c34\u6de1\u5316 \u63d0\u9502 \u79bb\u5b50\u7b5b",
+        "\u9752\u5c9b \u6d77\u6c34 \u63d0\u9502 \u4e13\u5229 2026"
+      ]
+    },
+    {
+      "qid": "Q-H2",
+      "round": 1,
+      "tier": 2,
+      "question": "Dongjiakou-specific extraction pilot",
+      "outcome": "NULL",
+      "finding": "No Dongjiakou-specific lithium, uranium, deuterium or trace-resource pilot, tender or research agreement was located.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "R01 remains a candidate coupling only. There is no site-specific extraction activity to register.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3 \u63d0\u9502 \u4e2d\u8bd5",
+        "\u8463\u5bb6\u53e3 \u6d53\u76d0\u6c34 \u8d44\u6e90\u5316 \u62db\u6807"
+      ]
+    },
+    {
+      "qid": "Q-H3",
+      "round": 1,
+      "tier": 2,
+      "question": "Lubei brine cascade reference",
+      "outcome": "UNKNOWN-BUT-LEAD",
+      "finding": "Lubei is referenced in a Shandong policy document as operating a 'brine cascade utilisation' model extracting bromine and magnesium from concentrated brine, forming a 'technology + resource recycling' model. Specific material-flow data was not located.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "Remains REFERENCE_ONLY \u2014 a design analogue from another site, never credited at Dongjiakou.",
+      "search_terms": [
+        "\u9c81\u5317 \u5364\u6c34\u68af\u7ea7\u5229\u7528",
+        "\u5c71\u4e1c \u6d53\u76d0\u6c34 \u6eb4 \u9541 \u63d0\u53d6"
+      ]
+    },
+    {
+      "qid": "Q-H4",
+      "round": 1,
+      "tier": 2,
+      "question": "Dongjiakou brine chemistry assay",
+      "outcome": "NULL",
+      "finding": "No published brine chemistry (ion concentrations in feed, product and concentrate) for Dongjiakou was located. The R01 transfer functions remain parameterised on generic seawater values.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "R01-Li and R01-D stay MODELED on generic values. A site assay remains the single cheapest experiment that would convert R01 from model to fact.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3 \u6d77\u6c34 \u6c34\u8d28 \u62a5\u544a",
+        "\u9752\u5c9b \u6d77\u6c34\u6de1\u5316 \u6d53\u76d0\u6c34 \u6210\u5206"
+      ]
+    },
+    {
+      "qid": "Q-I1",
+      "round": 1,
+      "tier": 2,
+      "question": "Data centre projects at Dongjiakou",
+      "outcome": "UNKNOWN-BUT-LEAD",
+      "finding": "A public procurement notice lists a 'Dongjiakou Economic Zone 2026 Smart Park O&M Service Project'; a separate tender for a 'Public Pipe Gallery Smart Operation Platform' includes one data centre with hardware and platform software, a 45 m2 server room and a command centre. A 2026 news article mentions a municipal state-owned enterprise responsible for green data centre O&M and computing platform expansion receiving financing in the Dongjiakou context. No 40 MW-scale data centre or \u667a\u7b97\u4e2d\u5fc3 project was confirmed.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "Small-scale compute EXISTS but at 45 m2 it is two orders of magnitude below the 40 MW scenario. Registering this honestly: the locality has an operations-grade server room, not a compute campus. The 40 MW scenario remains a scenario.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3 \u6570\u636e\u4e2d\u5fc3 \u62db\u6807",
+        "\u8463\u5bb6\u53e3 \u667a\u7b97\u4e2d\u5fc3"
+      ]
+    },
+    {
+      "qid": "Q-I2",
+      "round": 1,
+      "tier": 2,
+      "question": "Direct-green for compute",
+      "outcome": "UNKNOWN-BUT-LEAD",
+      "finding": "National policy gives priority support to compute facilities under green-direct rules, and the Qingdao Port plan proposes green power for the port area. No document connects a Dongjiakou compute load to a direct-green supply arrangement.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "No change. C01 remains a load with no supply contract.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3 \u7eff\u7535\u76f4\u8fde \u6570\u636e\u4e2d\u5fc3",
+        "\u9752\u5c9b\u6e2f \u7eff\u7535 \u7b97\u529b"
+      ]
+    },
+    {
+      "qid": "Q-B1-2",
+      "round": 2,
+      "tier": 1,
+      "question": "PPP contract terms and the take-or-pay clause",
+      "outcome": "FOUND-CONTRADICTS",
+      "finding": "Terms confirmed via a Qingdao Water Beiyuan bond prospectus \u2014 a SECONDARY disclosure of the PPP, not the contract text, which is referenced (\u300a\u9752\u5c9b\u8463\u5bb6\u53e3\u7ecf\u6d4e\u533a\u6d77\u6c34\u6de1\u5316\u653f\u5e9c\u548c\u793e\u4f1a\u8d44\u672c\u5408\u4f5c\u9879\u76ee\u5408\u4f5c\u5408\u540c\u300b) but not published. Signed 2015-11-20 between the Dongjiakou EDZ Management Committee and Qingdao Water Beiyuan Technology Development Co. Concession 30 years. Construction 10 months. Commercial operation 2017-01-01. Water price CNY 4.25/m3. Take-or-pay minimum 70,000 m3/day with the government paying the shortfall. 2019 actual throughput 31,500 m3/day; 2019 revenue CNY 106M and net profit CNY 22M. 2019 offtakers were Qingdao Special Steel and Huaneng Group; the 2025 list has since evolved. CONTRADICTION: total investment is CNY 450M in the bond prospectus but CNY 900M in a 2015 tender notice \u2014 possibly different scopes (plant only vs plant plus membrane R&D base). Both are retained with dates.",
+      "evidence_class": "REPORTED",
+      "source": "Qingdao Water Beiyuan bond prospectus, chinamoney.com.cn",
+      "date": "2015-2020",
+      "url": "",
+      "effect_on_register": "The take-or-pay clause is now CONFIRMED BINDING across every year we can see (31,500 m3/day in 2019, 49,123 in 2025, against a 70,000 guarantee). A 30-year concession means the contract outlives most planning horizons. Still NOT obtained: the contract text, escalation clauses, and subsidy-withdrawal provisions \u2014 which is precisely where the risk sits.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3 \u6d77\u6c34\u6de1\u5316 PPP \u5408\u540c",
+        "\u9752\u5c9b\u6c34\u52a1\u5317\u82d1 \u503a\u5238 \u52df\u96c6\u8bf4\u660e\u4e66"
+      ]
+    },
+    {
+      "qid": "Q-B3-2",
+      "round": 2,
+      "tier": 1,
+      "question": "2026 electricity settlement \u2014 reconfirmation",
+      "outcome": "NULL",
+      "finding": "Confirmed as a document that does NOT EXIST in the public record. Confirmed context: CNY 0.555/kWh incl. tax granted by the Shandong Price Bureau for 2018-2020 specifically for the Baifa and Dongjiakou projects; a 2022 policy document confirms Qingdao 'secured preferential electricity price policies' for both, with a maximum CNY 10M award under the desalination construction incentive scheme; a 2023 industry article states CNY 0.55/kWh and per-tonne water treatment electricity cost below CNY 2.",
+      "evidence_class": "UNKNOWN",
+      "source": "",
+      "date": "",
+      "url": "",
+      "effect_on_register": "The critical path has moved from search to INSTITUTIONAL REQUEST. This is now the single most valuable missing receipt in the build, and it cannot be obtained by searching. Note the 2023 claim of sub-CNY-2/tonne electricity cost is CONSISTENT with the 2.2 kWh/m3 process figure at CNY 0.55-0.90/kWh, so it does not by itself resolve the whole-site boundary question.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3\u6d77\u6c34\u6de1\u5316 \u7535\u8d39 \u7ed3\u7b97 2026",
+        "\u5c71\u4e1c \u6d77\u6c34\u6de1\u5316 \u7535\u4ef7 \u653f\u7b56 2026"
+      ]
+    },
+    {
+      "qid": "Q-A1-2",
+      "round": 2,
+      "tier": 1,
+      "question": "Circular-transformation plan project annex",
+      "outcome": "FOUND-CONTRADICTS",
+      "finding": "The plan exists and targets are confirmed (industrial water reuse >=94%, general industrial solid waste comprehensive utilisation >=90%), with cooperation with CAS teams on smart park design. The PROJECT ANNEX listing the specific projects with partner names and quantities is NOT published. CONTRADICTION: a 2024 source reports 20 projects / CNY 12.4bn, while a 2026 government page reports 30 projects / CNY 69.5bn. Additional phases, a broader scope, or a different counting basis are all possible. Both retained with dates, unreconciled.",
+      "evidence_class": "REPORTED",
+      "source": "Dazhong Daily 2024-03-06; Baidu Baijiahao 2024-02-28; government page 2026",
+      "date": "2024-2026",
+      "url": "",
+      "effect_on_register": "The annex remains the document that would open the 16 opportunity edges. It is likely internal. Route: direct request to the Dongjiakou EDZ Management Committee (\u7ecf\u6d4e\u53d1\u5c55\u90e8). The two hard targets are now measurable commitments we can hold the zone to.",
+      "search_terms": [
+        "\u8463\u5bb6\u53e3 \u56ed\u533a\u5faa\u73af\u5316\u6539\u9020 \u9879\u76ee \u540d\u5355",
+        "\u9752\u5c9b \u5faa\u73af\u5316\u6539\u9020 \u91cd\u70b9\u9879\u76ee \u6e05\u5355"
+      ]
+    },
+    {
+      "qid": "Q-H4-2",
+      "round": 2,
+      "tier": 1,
+      "question": "CAS Qingdao Institute \u2014 patent and contact pathway",
+      "outcome": "FOUND",
+      "finding": "Patent CONFIRMED: CN121446313A, '\u4e00\u79cd\u9502\u79bb\u5b50\u7b5b\u57fa\u53cc\u5c42\u8d85\u6ee4\u819c\u53ca\u5176\u5236\u5907\u65b9\u6cd5\u548c\u5e94\u7528'. Applicants: \u4e2d\u56fd\u79d1\u5b66\u9662\u9752\u5c9b\u751f\u7269\u80fd\u6e90\u4e0e\u8fc7\u7a0b\u7814\u7a76\u6240 and \u9752\u5c9b\u767e\u53d1\u6d77\u6c34\u6de1\u5316\u6709\u9650\u516c\u53f8. Filed 2024-08-02, published 2026-02-03. Abstract describes a lithium ion sieve-based double-layer ultrafiltration membrane made by dry-wet spinning phase inversion, integrable into lithium-rich natural water treatment systems for simultaneous water separation and lithium adsorption. Research group led by Gao Jun (\u9ad8\u519b) at the Bionic Energy Interface Technology Research Center, with collaborators Sui Xin and Liu Xueli at Qingdao University, publishing on bioinspired ion sieving for Li/Mg separation.",
+      "evidence_class": "REPORTED",
+      "source": "CN121446313A; CAS Qingdao Institute of Bioenergy and Bioprocess Technology",
+      "date": "2024-2026",
+      "url": "",
+      "effect_on_register": "The brine-chemistry question now has a NAMED INSTITUTION, a NAMED RESEARCH GROUP and a CONTACT PATHWAY. This converts R01 from an unattended gap into a specific approach. The patent and group are REPORTED; the brine chemistry itself remains UNKNOWN pending response.",
+      "search_terms": [
+        "CN121446313A",
+        "\u4e2d\u79d1\u9662\u9752\u5c9b\u751f\u7269\u80fd\u6e90\u4e0e\u8fc7\u7a0b\u7814\u7a76\u6240 \u9502\u79bb\u5b50\u7b5b"
+      ]
+    },
+    {
+      "qid": "Q-C4-2",
+      "round": 2,
+      "tier": 1,
+      "question": "\u9c81\u6d77\u6e14\u51fd[2015]330\u53f7 \u2014 the outfall instrument, and a critical distinction",
+      "outcome": "FOUND",
+      "finding": "Instrument FOUND and named: \u300a\u5173\u4e8e\u8463\u5bb6\u53e3\u6e2f\u533a\u5c3e\u6c34\u6392\u6d77\u7ba1\u9053\u5de5\u7a0b\u8def\u9762\u7684\u6279\u590d\u300b, Shandong Provincial Department of Ocean and Fisheries, 2015. Outfall between the west breakwater of Dongjiakou Port and the eastern trestle section, 119\u00b044'33.10\"E, 35\u00b034'47.17\"N (CGCS2000). The citing EIA also confirms the outfall serves the Zhongfa Water Treatment Plant, total capacity 43,000 m3/day (main line 11,000 + side line 32,000). CRITICAL DISTINCTION: this is the WASTEWATER (\u5c3e\u6c34) outfall, NOT necessarily the DESALINATION CONCENTRATE outfall. The brine discharge may use a separate pipeline or share this one. Which is not established. Full text and permitted limits not obtained.",
+      "evidence_class": "REPORTED",
+      "source": "Jinneng Chemical EIA report 2023-08-22, citing \u9c81\u6d77\u6e14\u51fd[2015]330\u53f7",
+      "date": "2015, cited 2023",
+      "url": "",
+      "effect_on_register": "RAISES A QUESTION ABOUT OUR OWN EVIDENCE. If the brine discharge uses a separate outfall, then the 2024 secondary study reporting impact 'within 200 m of the outfall' may describe the WRONG outfall, and INV-19 would rest on a document that does not cover the stream it was cited for. This does not change the veto state \u2014 it changes how weak the evidence beneath it is. Escalated for adversarial review rather than resolved unilaterally.",
+      "search_terms": [
+        "\u9c81\u6d77\u6e14\u51fd 2015 330",
+        "\u8463\u5bb6\u53e3 \u5c3e\u6c34\u6392\u6d77 \u7ba1\u9053 \u6279\u590d"
+      ]
+    }
+  ]
+}

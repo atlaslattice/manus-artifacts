@@ -1,0 +1,502 @@
+{
+  "artifact_id": "DJK-LATTICE-CHINA-DESAL-NODE-REGISTER-v0.1",
+  "status": "PUBLIC_CANDIDATE_NON_CANON",
+  "generated_at": "2026-10-06T19:40:00Z",
+  "method": "The register was built from the 2025 National Seawater Utilization Report and official or authoritative government/utility disclosures, supplemented by Xinhua, People's Daily and sector reporting where the primary project page was not discoverable. A locality is included only when a source names the locality and documents a seawater-desalination project or a locality-specific plan; national or provincial totals are not converted into plant capacities. Where status, operator or capacity was not established at locality level, the field is explicitly UNKNOWN.",
+  "count_reconciliation": "The register contains 12 independently sourced candidate localities and is short of the 167-project discovery universe; it is intentionally not padded. Project count and locality count are different quantities and neither may be substituted for the other. target_locality_node_count is UNKNOWN.",
+  "source_documents": [
+    {
+      "title": "2025年全国海水利用报告",
+      "publisher": "自然资源部海洋战略规划与经济司",
+      "year": 2026,
+      "url": "https://www.hunan.gov.cn/zqt/zcsd/202606/33996572/files/2531a53343bb47f98eb2ce0f86968502.pdf"
+    },
+    {
+      "title": "国家发展改革委有关负责同志就《海水淡化利用发展行动计划（2021—2025年）》答记者问",
+      "publisher": "国家发展和改革委员会",
+      "year": 2021,
+      "url": "https://www.ndrc.gov.cn/xxgk/jd/jd/202105/t20210531_1282162.html"
+    },
+    {
+      "title": "青岛海水淡化：10年供水超2亿吨",
+      "publisher": "山东省人民政府",
+      "year": 2022,
+      "url": "http://gb.shandong.gov.cn/art/2022/10/28/art_116200_560581.html"
+    },
+    {
+      "title": "青岛市节水典型案例（海水淡化实践）",
+      "publisher": "青岛日报/观海新闻",
+      "year": 2025,
+      "url": "https://www.dailyqd.com/guanhai/424150_1.html"
+    },
+    {
+      "title": "淡化海水，如何用得起用得好？",
+      "publisher": "新华每日电讯/新华网",
+      "year": 2024,
+      "url": "https://www.news.cn/politics/20240325/052ef4ce79e14bccbe3490c21abfc681/c.html"
+    },
+    {
+      "title": "江苏最大海水淡化项目在连开工",
+      "publisher": "江苏中国新闻网/江苏省新闻",
+      "year": 2022,
+      "url": "http://zgjssw.jschina.com.cn/shixianchuanzhen/lianyungang/202208/t20220802_7640760.shtml"
+    },
+    {
+      "title": "辽宁省‘十四五’海洋经济发展规划",
+      "publisher": "辽宁省人民政府",
+      "year": 2022,
+      "url": "https://www.ln.gov.cn/web/zwgkx/zfwj/szfbgtwj/2022n/63E1B9695A0846FCA056B1FF9FBF34C0/index.shtml"
+    },
+    {
+      "title": "大连市积极利用海水替代淡水资源",
+      "publisher": "国家发展和改革委员会",
+      "year": 2007,
+      "url": "https://www.ndrc.gov.cn/fggz/hjyzy/sjyybh/200701/t20070119_1133546.html"
+    },
+    {
+      "title": "三沙西沙洲建设海水淡化厂",
+      "publisher": "海南省人民政府",
+      "year": 2015,
+      "url": "http://www.hainan.gov.cn/hainan/sxian/201507/d305214cf6524b87be181872c8fe7778.shtml"
+    },
+    {
+      "title": "从苦涩海水到清冽饮用水——记者探访海水淡化项目",
+      "publisher": "新华网",
+      "year": 2025,
+      "url": "http://www.news.cn/photo/20250608/625e66b035cf40608959da9f6be32b42/c.html"
+    }
+  ],
+  "nodes": [
+    {
+      "candidate_node_id": "DJK-LATTICE-NODE-001",
+      "locality_zh": "董家口（青岛市）",
+      "locality_en": "Dongjiakou, Qingdao",
+      "province": "山东省",
+      "coastal": true,
+      "status": "OPERATIONAL",
+      "design_capacity_m3_day": 100000,
+      "capacity_evidence_class": "REPORTED",
+      "notable_plants": [
+        {
+          "name": "青岛董家口海水淡化厂",
+          "operator": "青岛水务海水淡化有限公司",
+          "evidence_class": "REPORTED"
+        }
+      ],
+      "water_use_sector": [
+        "municipal",
+        "industrial",
+        "port"
+      ],
+      "sources": [
+        {
+          "url": "http://gb.shandong.gov.cn/art/2022/10/28/art_116200_560581.html",
+          "publisher": "山东省人民政府",
+          "year": 2022
+        },
+        {
+          "url": "https://www.dailyqd.com/guanhai/424150_1.html",
+          "publisher": "青岛日报/观海新闻",
+          "year": 2025
+        }
+      ],
+      "notes": "山东省政府报道明确将董家口项目列为青岛两座规模最大的海水淡化项目之一，产能10万立方米/日。",
+      "node_class": "LOCALITY_NODE",
+      "locality_boundary_status": "PENDING_BOUNDARY_SOURCE"
+    },
+    {
+      "candidate_node_id": "DJK-LATTICE-NODE-003",
+      "locality_zh": "天津滨海新区",
+      "locality_en": "Binhai New Area, Tianjin",
+      "province": "天津市",
+      "coastal": true,
+      "status": "OPERATIONAL",
+      "design_capacity_m3_day": 200000,
+      "capacity_evidence_class": "REPORTED",
+      "notable_plants": [
+        {
+          "name": "国投北疆海水淡化工程",
+          "operator": "天津国投津能发电有限公司（国投北疆）",
+          "evidence_class": "REPORTED"
+        }
+      ],
+      "water_use_sector": [
+        "municipal",
+        "industrial",
+        "power"
+      ],
+      "sources": [
+        {
+          "url": "https://www.news.cn/politics/20240325/052ef4ce79e14bccbe3490c21abfc681/c.html",
+          "publisher": "新华网",
+          "year": 2024
+        },
+        {
+          "url": "http://paper.people.com.cn/rmrbhwb/html/2021-06/22/content_3054771.htm",
+          "publisher": "人民日报",
+          "year": 2021
+        }
+      ],
+      "notes": "Xinhua reports 20万吨/日 and connection to the municipal network in 2010; People's Daily distinguishes design capacity from actual current production, so this field is design capacity, not observed output.",
+      "node_class": "LOCALITY_NODE",
+      "locality_boundary_status": "PENDING_BOUNDARY_SOURCE"
+    },
+    {
+      "candidate_node_id": "DJK-LATTICE-NODE-004",
+      "locality_zh": "唐山海港经济开发区",
+      "locality_en": "Tangshan Port Economic Development Zone",
+      "province": "河北省",
+      "coastal": true,
+      "status": "OPERATIONAL",
+      "design_capacity_m3_day": 300000,
+      "capacity_evidence_class": "REPORTED",
+      "notable_plants": [
+        {
+          "name": "申港海水淡化项目",
+          "operator": "申港海水淡化有限公司",
+          "evidence_class": "REPORTED"
+        }
+      ],
+      "water_use_sector": [
+        "industrial",
+        "steel",
+        "chemical",
+        "port"
+      ],
+      "sources": [
+        {
+          "url": "https://www.hunan.gov.cn/zqt/zcsd/202606/33996572/files/2531a53343bb47f98eb2ce0f86968502.pdf",
+          "publisher": "自然资源部海洋战略规划与经济司",
+          "year": 2026
+        }
+      ],
+      "notes": "The 2025 report says the project is designed in three phases totalling 30万吨/日; phase I 5万吨/日 was commissioned in 2023 and phase II 5万吨/日 completed trial operation in 2025. Phase III is demand-dependent and not operating; do not interpret the total design figure as current output.",
+      "node_class": "LOCALITY_NODE",
+      "locality_boundary_status": "PENDING_BOUNDARY_SOURCE"
+    },
+    {
+      "candidate_node_id": "DJK-LATTICE-NODE-005",
+      "locality_zh": "沧州渤海新区",
+      "locality_en": "Cangzhou Bohai New Area",
+      "province": "河北省",
+      "coastal": true,
+      "status": "OPERATIONAL",
+      "design_capacity_m3_day": 50000,
+      "capacity_evidence_class": "REPORTED",
+      "notable_plants": [
+        {
+          "name": "阿科凌新水源海水淡化工程",
+          "operator": "阿科凌新水源（operator name not otherwise established in the cited report）",
+          "evidence_class": "REPORTED"
+        }
+      ],
+      "water_use_sector": [
+        "industrial",
+        "chemical",
+        "port"
+      ],
+      "sources": [
+        {
+          "url": "https://www.hunan.gov.cn/zqt/zcsd/202606/33996572/files/2531a53343bb47f98eb2ce0f86968502.pdf",
+          "publisher": "自然资源部海洋战略规划与经济司",
+          "year": 2026
+        }
+      ],
+      "notes": "The 2025 report lists 河北沧州渤海新区阿科凌新水源海水淡化工程, RO, 50000吨/日, among projects newly completed at 10,000吨/日 or above. The exact corporate operator beyond the project/company name is not established; operator string is intentionally qualified.",
+      "node_class": "LOCALITY_NODE",
+      "locality_boundary_status": "PENDING_BOUNDARY_SOURCE"
+    },
+    {
+      "candidate_node_id": "DJK-LATTICE-NODE-006",
+      "locality_zh": "无棣县埕口镇鲁北高新技术开发区",
+      "locality_en": "Chengkou Town, Wudi County, Lubei High-tech Development Zone",
+      "province": "山东省",
+      "coastal": true,
+      "status": "OPERATIONAL",
+      "design_capacity_m3_day": 124000,
+      "capacity_evidence_class": "REPORTED",
+      "notable_plants": [
+        {
+          "name": "鲁北碧水源海水淡化有限公司一期、二期",
+          "operator": "鲁北碧水源海水淡化有限公司",
+          "evidence_class": "REPORTED"
+        },
+        {
+          "name": "鑫岳化工海水淡化项目",
+          "operator": "鑫岳化工集团有限公司",
+          "evidence_class": "REPORTED"
+        }
+      ],
+      "water_use_sector": [
+        "industrial",
+        "chemical"
+      ],
+      "sources": [
+        {
+          "url": "https://www.hunan.gov.cn/zqt/zcsd/202606/33996572/files/2531a53343bb47f98eb2ce0f86968502.pdf",
+          "publisher": "自然资源部海洋战略规划与经济司",
+          "year": 2026
+        }
+      ],
+      "notes": "The report states 5万+5万吨/日 for Lubei Biyuan phases I/II and 2.4万 for Xinyue, total 12.4万; this is a locality/development-zone aggregate, not one plant.",
+      "node_class": "LOCALITY_NODE",
+      "locality_boundary_status": "PENDING_BOUNDARY_SOURCE"
+    },
+    {
+      "candidate_node_id": "DJK-LATTICE-NODE-007",
+      "locality_zh": "龙口市",
+      "locality_en": "Longkou",
+      "province": "山东省",
+      "coastal": true,
+      "status": "OPERATIONAL",
+      "design_capacity_m3_day": 15800,
+      "capacity_evidence_class": "REPORTED",
+      "notable_plants": [
+        {
+          "name": "山东华电龙口发电有限公司海水淡化工程",
+          "operator": "山东华电龙口发电有限公司",
+          "evidence_class": "REPORTED"
+        }
+      ],
+      "water_use_sector": [
+        "power",
+        "industrial"
+      ],
+      "sources": [
+        {
+          "url": "https://www.hunan.gov.cn/zqt/zcsd/202606/33996572/files/2531a53343bb47f98eb2ce0f86968502.pdf",
+          "publisher": "自然资源部海洋战略规划与经济司",
+          "year": 2026
+        }
+      ],
+      "notes": "Listed in the 2025 report as newly completed, RO, 15,800吨/日.",
+      "node_class": "LOCALITY_NODE",
+      "locality_boundary_status": "PENDING_BOUNDARY_SOURCE"
+    },
+    {
+      "candidate_node_id": "DJK-LATTICE-NODE-008",
+      "locality_zh": "舟山市普陀区虾峙镇湖泥岛",
+      "locality_en": "Huni Island, Xiazhi Town, Putuo District, Zhoushan",
+      "province": "浙江省",
+      "coastal": true,
+      "status": "OPERATIONAL",
+      "design_capacity_m3_day": 10000,
+      "capacity_evidence_class": "REPORTED",
+      "notable_plants": [
+        {
+          "name": "虾峙镇湖泥岛海水淡化工程",
+          "operator": "舟山市自来水有限公司",
+          "evidence_class": "REPORTED"
+        }
+      ],
+      "water_use_sector": [
+        "municipal",
+        "industrial",
+        "port"
+      ],
+      "sources": [
+        {
+          "url": "https://www.hunan.gov.cn/zqt/zcsd/202606/33996572/files/2531a53343bb47f98eb2ce0f86968502.pdf",
+          "publisher": "自然资源部海洋战略规划与经济司",
+          "year": 2026
+        },
+        {
+          "url": "https://ex.chinadaily.com.cn/exchange/partners/82/rss/channel/cn/columns/sz8srm/stories/WS685a6a85a31009d21e5be5ac.html",
+          "publisher": "中国日报",
+          "year": 2025
+        }
+      ],
+      "notes": "The national report lists 10,000吨/日 as newly completed; China Daily identifies the municipal water company as builder/operator context.",
+      "node_class": "LOCALITY_NODE",
+      "locality_boundary_status": "PENDING_BOUNDARY_SOURCE"
+    },
+    {
+      "candidate_node_id": "DJK-LATTICE-NODE-009",
+      "locality_zh": "连云港市田湾",
+      "locality_en": "Tianwan, Lianyungang",
+      "province": "江苏省",
+      "coastal": true,
+      "status": "UNDER_CONSTRUCTION",
+      "design_capacity_m3_day": 45600,
+      "capacity_evidence_class": "PLANNED",
+      "notable_plants": [
+        {
+          "name": "田湾核电站海水淡化工程",
+          "operator": "江苏核电有限公司（项目业主/核电站）",
+          "evidence_class": "PLANNED"
+        }
+      ],
+      "water_use_sector": [
+        "power"
+      ],
+      "sources": [
+        {
+          "url": "http://zgjssw.jschina.com.cn/shixianchuanzhen/lianyungang/202208/t20220802_7640760.shtml",
+          "publisher": "江苏中国新闻网/江苏省新闻",
+          "year": 2022
+        }
+      ],
+      "notes": "The 2022 source says construction started and design capacity is 4.56万吨/日; no later operational confirmation was located, so status remains UNDER_CONSTRUCTION and capacity evidence is PLANNED.",
+      "node_class": "LOCALITY_NODE",
+      "locality_boundary_status": "PENDING_BOUNDARY_SOURCE"
+    },
+    {
+      "candidate_node_id": "DJK-LATTICE-NODE-010",
+      "locality_zh": "盐城市大丰港区",
+      "locality_en": "Dafeng Port Area, Yancheng",
+      "province": "江苏省",
+      "coastal": true,
+      "status": "OPERATIONAL",
+      "design_capacity_m3_day": "UNKNOWN",
+      "capacity_evidence_class": "UNKNOWN",
+      "notable_plants": [
+        {
+          "name": "江苏丰海新能源淡化海水发展有限公司海水淡化项目",
+          "operator": "江苏丰海新能源淡化海水发展有限公司",
+          "evidence_class": "REPORTED"
+        }
+      ],
+      "water_use_sector": [
+        "industrial",
+        "port"
+      ],
+      "sources": [
+        {
+          "url": "http://www.news.cn/photo/20250608/625e66b035cf40608959da9f6be32b42/c.html",
+          "publisher": "新华网",
+          "year": 2025
+        }
+      ],
+      "notes": "Xinhua identifies the operating/project location and company but the fetched report does not establish a design capacity; capacity is UNKNOWN by rule.",
+      "node_class": "LOCALITY_NODE",
+      "locality_boundary_status": "PENDING_BOUNDARY_SOURCE"
+    },
+    {
+      "candidate_node_id": "DJK-LATTICE-NODE-011",
+      "locality_zh": "营口仙人岛",
+      "locality_en": "Xianrendao, Yingkou",
+      "province": "辽宁省",
+      "coastal": true,
+      "status": "PLANNED",
+      "design_capacity_m3_day": 100000,
+      "capacity_evidence_class": "PLANNED",
+      "notable_plants": [
+        {
+          "name": "营口仙人岛海水淡化工程",
+          "operator": "UNKNOWN",
+          "evidence_class": "PLANNED"
+        }
+      ],
+      "water_use_sector": [
+        "industrial",
+        "petrochemical",
+        "port"
+      ],
+      "sources": [
+        {
+          "url": "https://www.ln.gov.cn/web/zwgkx/zfwj/szfbgtwj/2022n/63E1B9695A0846FCA056B1FF9FBF34C0/index.shtml",
+          "publisher": "辽宁省人民政府",
+          "year": 2022
+        }
+      ],
+      "notes": "The provincial 14th Five-Year marine-economy plan identifies a 100,000吨/日 project as a planned construction item. No operator or commissioning evidence was established.",
+      "node_class": "LOCALITY_NODE",
+      "locality_boundary_status": "PENDING_BOUNDARY_SOURCE"
+    },
+    {
+      "candidate_node_id": "DJK-LATTICE-NODE-012",
+      "locality_zh": "三沙市永兴岛/西沙洲",
+      "locality_en": "Yongxing Island / Xishazhou, Sansha",
+      "province": "海南省",
+      "coastal": true,
+      "status": "OPERATIONAL",
+      "design_capacity_m3_day": "UNKNOWN",
+      "capacity_evidence_class": "UNKNOWN",
+      "notable_plants": [
+        {
+          "name": "西沙洲海水淡化设备/厂",
+          "operator": "UNKNOWN",
+          "evidence_class": "REPORTED"
+        }
+      ],
+      "water_use_sector": [
+        "municipal",
+        "island"
+      ],
+      "sources": [
+        {
+          "url": "http://www.hainan.gov.cn/hainan/sxian/201507/d305214cf6524b87be181872c8fe7778.shtml",
+          "publisher": "海南省人民政府",
+          "year": 2015
+        },
+        {
+          "url": "https://news.hrbeu.edu.cn/info/1029/67536.htm",
+          "publisher": "哈尔滨工程大学",
+          "year": null
+        }
+      ],
+      "notes": "Hainan government reporting says desalination equipment had been installed at Xishazhou; the university source describes a mature desalination plant on Yongxing Island. No capacity or operator was established, so both remain UNKNOWN.",
+      "node_class": "LOCALITY_NODE",
+      "locality_boundary_status": "PENDING_BOUNDARY_SOURCE"
+    }
+  ],
+  "unresolved": [
+    "The 2025 national report gives 167 projects and province totals but not a complete public locality-by-locality plant register; the missing 155 candidates require the underlying Ministry survey/project annex or provincial project inventories.",
+    "Qingdao locality reporting conflicts between 34.5万立方米/日 for three backbone projects and 30万立方米/日 for two application bases. Both are retained; a current utility asset register would close the discrepancy.",
+    "Tangshan 申港 total design capacity includes a demand-dependent third phase; a current operating permit or utility dispatch record is needed to separate operating from planned capacity.",
+    "Operator identities and capacities remain UNKNOWN for Sansha and Yancheng; commissioning certificates, utility disclosures or environmental acceptance documents would close them.",
+    "Province-level totals for Guangdong and Guangxi are not converted into locality nodes because no locality-specific project evidence was established in this pass."
+  ],
+  "national_desal_project_discovery_count": 167,
+  "target_locality_node_count": "UNKNOWN",
+  "count_semantics": "167 is the national 2025 count of desalination ENGINEERING PROJECTS. It is a discovery universe from which non-overlapping locality nodes are constructed. Some localities contain multiple desal projects, so the locality node count is not 167 and is not yet established. The previous field name `target_node_count` conflated the two and has been removed.",
+  "superseded_fields": {
+    "target_node_count": 167,
+    "reason": "conflated project count with node count"
+  },
+  "regional_parents": [
+    {
+      "candidate_node_id": "DJK-LATTICE-REGION-001",
+      "locality_zh": "青岛市（区域母节点）",
+      "locality_en": "Qingdao municipality (regional parent)",
+      "province": "山东省",
+      "coastal": true,
+      "status": "OPERATIONAL",
+      "design_capacity_m3_day": 345000,
+      "capacity_evidence_class": "REPORTED",
+      "notable_plants": [
+        {
+          "name": "百发海水淡化厂及百发扩建项目",
+          "operator": "青岛水务海水淡化有限公司",
+          "evidence_class": "REPORTED"
+        }
+      ],
+      "water_use_sector": [
+        "municipal",
+        "industrial"
+      ],
+      "sources": [
+        {
+          "url": "https://www.dailyqd.com/guanhai/424150_1.html",
+          "publisher": "青岛日报/观海新闻",
+          "year": 2025
+        }
+      ],
+      "notes": "2025 disclosure states three large backbone projects in Qingdao (百发、百发扩建、董家口) have total capacity 34.5万立方米/日. This is a locality aggregate, not a single-plant capacity; it is retained as the Qingdao locality aggregate and should not be summed with Node-001. Disagreement: a 2025 Xinhua report describes two application bases at 30万立方米/日; both figures are recorded rather than silently reconciled.",
+      "node_class": "REGIONAL_PARENT",
+      "child_localities": [
+        "DJK-LATTICE-NODE-001"
+      ],
+      "geography_note": "This entry aggregates Qingdao municipality, which geographically CONTAINS DJK-LATTICE-NODE-001 (Dongjiakou). It is therefore a REGIONAL PARENT, not a peer locality node. Its capacity is an aggregate and must never be summed with any of its child localities.",
+      "aggregation_rule": "REGIONAL_PARENT totals are reporting-only. They may never be attributed back to a child node, and may never backfill a child node UNKNOWN."
+    }
+  ],
+  "sourced_locality_node_count": 11,
+  "ontology": {
+    "peer_unit": "LOCALITY_NODE — a non-overlapping geographic locality boundary",
+    "non_peer_unit": "REGIONAL_PARENT — an aggregate that contains one or more localities",
+    "rule": "A locality node may not geographically contain another locality node. Where a municipality contains its own localities, the municipality is a REGIONAL_PARENT and is not a peer of its children.",
+    "why": "If geography is solved correctly at nodes 1-12, overlapping water, carbon, energy and waste ledgers do not have to be untangled at node 120.",
+    "next_step": "Replace or subdivide the Qingdao regional parent with specific non-overlapping locality boundaries, for example a sourced Baifa service boundary, as each boundary is established."
+  }
+}

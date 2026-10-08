@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atlaslattice.invalid/dongjiakou_node_001/build/schemas/validation_report.schema.json",
+  "title": "Node-001 validation report",
+  "type": "object",
+  "required": ["artifact_id", "status", "gate_count", "counts", "gates"],
+  "properties": {
+    "artifact_id": {"const": "DJK-NODE-001-VALIDATION-REPORT"},
+    "status": {"enum": ["VALIDATION_PASSED", "VALIDATION_FAILED"]},
+    "generated_at": {"type": "string"},
+    "gate_count": {"type": "integer", "minimum": 1},
+    "counts": {
+      "type": "object",
+      "required": ["PASS", "WARN", "FAIL", "VETO", "NOT_APPLICABLE"],
+      "additionalProperties": {"type": "integer", "minimum": 0}
+    },
+    "ledger_entries": {"type": "integer", "minimum": 0},
+    "ledger_violations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "resource_id"],
+        "properties": {
+          "kind": {
+            "enum": [
+              "UNBOUNDED_RESOURCE",
+              "CREDIT_WITHOUT_ESTABLISHED_AVAILABILITY",
+              "BOUND_EXCEEDED",
+              "DOUBLE_PRIMARY_CREDIT"
+            ]
+          },
+          "resource_id": {"type": "string"},
+          "detail": {"type": "string"}
+        }
+      }
+    },
+    "gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["gate_id", "title", "status"],
+        "properties": {
+          "gate_id": {"type": "string", "pattern": "^G[0-9]{2}$"},
+          "title": {"type": "string"},
+          "status": {"enum": ["PASS", "WARN", "FAIL", "VETO", "NOT_APPLICABLE"]},
+          "detail": {"type": "string"},
+          "findings": {"type": "array", "items": {"type": "object"}}
+        }
+      }
+    }
+  },
+  "additionalProperties": true
+}

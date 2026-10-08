@@ -1,0 +1,582 @@
+{
+  "status": "SCHEMA_PUBLIC_REFERENCE_METADATA",
+  "retrieved_date": "2026-10-08",
+  "note": "Mutable Notion pages are review inputs, not primary physical evidence. Hashes identify retrieved connector text, not original files. Private raw hydration is excluded.",
+  "pages": [
+    {
+      "title": "Node profile | DeepSeek response — BIO01 biometabolic integration",
+      "url": "https://app.notion.com/p/3f20c1de73d98154a4b3eaa2d8c8abe8?pvs=204",
+      "last_edited": "2026-10-07T16:12:38.537Z"
+    },
+    {
+      "title": "Node profile | DeepSeek response — Run 3 C01 compute",
+      "url": "https://app.notion.com/p/3f20c1de73d9812d9167eb8d4c794d84?pvs=204",
+      "last_edited": "2026-10-07T16:12:38.537Z"
+    },
+    {
+      "title": "Node profile | DeepSeek response — Run 3 C01 v0.2",
+      "url": "https://app.notion.com/p/3f20c1de73d981bb9806f5cdf873656a?pvs=204",
+      "last_edited": "2026-10-07T16:12:38.537Z"
+    },
+    {
+      "title": "Node profile | DeepSeek response — U/Tariff search + Run 0.2 + Run 1",
+      "url": "https://app.notion.com/p/3f20c1de73d98152876edbc36be31210?pvs=204",
+      "last_edited": "2026-10-07T16:12:38.537Z"
+    },
+    {
+      "title": "Node profile | DeepSeek response — downstream symbiosis receipt hunt",
+      "url": "https://app.notion.com/p/3f20c1de73d981e38e3adaf09da186c0?pvs=204",
+      "last_edited": "2026-10-07T16:12:38.537Z"
+    },
+    {
+      "title": "Node profile | DeepSeek response — integrated node boundary",
+      "url": "https://app.notion.com/p/3f20c1de73d9814fb2b9da2782574100?pvs=204",
+      "last_edited": "2026-10-07T16:12:38.537Z"
+    },
+    {
+      "title": "Node profile | DeepSeek response — regional green-power receipt + coincidence architecture",
+      "url": "https://app.notion.com/p/3f20c1de73d98161a8f9dd07cb331015?pvs=204",
+      "last_edited": "2026-10-07T16:12:38.537Z"
+    },
+    {
+      "title": "Node profile | DeepSeek response — targeted search + Run 2",
+      "url": "https://app.notion.com/p/3f20c1de73d9811cb99df2039b1367ed?pvs=204",
+      "last_edited": "2026-10-07T16:12:38.537Z"
+    },
+    {
+      "title": "Node profile | Dongjiakou BIO01 — Integrated Organics, Wastewater & Composting Module v0.1",
+      "url": "https://app.notion.com/p/3f20c1de73d9811181aef1979a9f1e9a?pvs=204",
+      "last_edited": "2026-10-07T16:12:38.537Z"
+    },
+    {
+      "title": "Node profile | Dongjiakou C01 — Regenerative Compute Module v0.1",
+      "url": "https://app.notion.com/p/3f20c1de73d981689affd41a711a6450?pvs=204",
+      "last_edited": "2026-10-07T16:12:38.537Z"
+    },
+    {
+      "title": "Node profile | Dongjiakou C01 — Regenerative Compute Module v0.2",
+      "url": "https://app.notion.com/p/3f20c1de73d981e5a7bac707c509269b?pvs=204",
+      "last_edited": "2026-10-07T16:12:38.537Z"
+    },
+    {
+      "title": "Node profile | Dongjiakou Downstream Industrial-Symbiosis Receipt Hunt v0.1",
+      "url": "https://app.notion.com/p/3f20c1de73d981069309e74a70f6d53e?pvs=204",
+      "last_edited": "2026-10-07T16:12:52.416Z"
+    },
+    {
+      "title": "Node profile | Dongjiakou Integrated Energy-Water-Compute Node Architecture v0.1",
+      "url": "https://app.notion.com/p/3f20c1de73d981b5bec8e839ac281c80?pvs=204",
+      "last_edited": "2026-10-07T16:12:52.416Z"
+    },
+    {
+      "title": "Node profile | Dongjiakou Node-001 — Highest-Value Receipt Search",
+      "url": "https://app.notion.com/p/3f20c1de73d9813e8276f92810c25d22?pvs=204",
+      "last_edited": "2026-10-07T16:12:52.416Z"
+    },
+    {
+      "title": "Node profile | Dongjiakou Node-001 — Hourly Coincidence & Multi-Buffer Analysis Specification v0.1",
+      "url": "https://app.notion.com/p/3f20c1de73d98185bf2ce3e266d699f3?pvs=204",
+      "last_edited": "2026-10-07T16:12:38.537Z"
+    },
+    {
+      "title": "Node profile | Dongjiakou Node-001 — Run 0 Test Receipt",
+      "url": "https://app.notion.com/p/3f20c1de73d98135900dec481a6d9826?pvs=204",
+      "last_edited": "2026-10-07T16:12:52.416Z"
+    },
+    {
+      "title": "Node profile | Dongjiakou Node-001 — Run 3 v0.2 Test Receipt",
+      "url": "https://app.notion.com/p/3f20c1de73d981bfa2fdfb4435d22a86?pvs=204",
+      "last_edited": "2026-10-07T16:12:52.416Z"
+    },
+    {
+      "title": "Node profile | Dongjiakou Node-001 — Second-Layer Receipt Search + Run 2 H01",
+      "url": "https://app.notion.com/p/3f20c1de73d9811ead73caedad87fb92?pvs=204",
+      "last_edited": "2026-10-07T16:12:52.416Z"
+    },
+    {
+      "title": "Node profile | Node-001 Regional Green-Power Lane v0.1",
+      "url": "https://app.notion.com/p/3f20c1de73d9814281e7e6d71a529fac?pvs=204",
+      "last_edited": "2026-10-07T16:12:52.416Z"
+    },
+    {
+      "title": "Doctrine and lattice | ABUNDANCE — What To Do With a Near-Zero-Marginal-Cost Windfall",
+      "url": "https://app.notion.com/p/3f20c1de73d981158ed7fd2f94ae9bf7?pvs=204",
+      "last_edited": "2026-10-07T16:09:37.210Z"
+    },
+    {
+      "title": "Doctrine and lattice | AUTONOMOUS RESEARCH SCHEDULE — Node-001",
+      "url": "https://app.notion.com/p/3f20c1de73d981268f5cd15c5e7c620f?pvs=204",
+      "last_edited": "2026-10-07T16:39:09.620Z"
+    },
+    {
+      "title": "Doctrine and lattice | Atlas Lattice Dongjiakou Node-001 — Candidate Closed-Loop Regenerative Infrastructure Options",
+      "url": "https://app.notion.com/p/3f20c1de73d981eb99f5f22726cf751d?pvs=204",
+      "last_edited": "2026-10-07T16:09:37.210Z"
+    },
+    {
+      "title": "Doctrine and lattice | Atlas Lattice Dongjiakou Node-001 — Green Energy Options",
+      "url": "https://app.notion.com/p/3f20c1de73d9819b8830f3825e0a59ff?pvs=204",
+      "last_edited": "2026-10-07T16:10:24.333Z"
+    },
+    {
+      "title": "Doctrine and lattice | BRINE COMPOSITION AND CLOSED-LOOP — Evidence Register v0.1",
+      "url": "https://app.notion.com/p/3f20c1de73d9811b8e54e3eec261eabc?pvs=204",
+      "last_edited": "2026-10-07T16:09:37.210Z"
+    },
+    {
+      "title": "Doctrine and lattice | CLOSING LOOPS — Ideas Toward Net Positive at Maximum Metrics",
+      "url": "https://app.notion.com/p/3f20c1de73d9814baa3fcf9b12e4ecb4?pvs=204",
+      "last_edited": "2026-10-07T16:09:56.517Z"
+    },
+    {
+      "title": "Doctrine and lattice | COLD ENERGY AND THE ENERGY DEFICIT — A Correction",
+      "url": "https://app.notion.com/p/3f20c1de73d981a5a5e6d2438df60d95?pvs=204",
+      "last_edited": "2026-10-07T16:09:56.517Z"
+    },
+    {
+      "title": "Doctrine and lattice | China Seawater Desalination Candidate Node Register",
+      "url": "https://app.notion.com/p/3f20c1de73d9814786ead3c88e9a4bd4?pvs=204",
+      "last_edited": "2026-10-07T16:09:37.210Z"
+    },
+    {
+      "title": "Doctrine and lattice | DEEPSEEK ROUND 7 — INDEPENDENT VERIFICATION OF THE SIMULATION WHITE PAPER",
+      "url": "https://app.notion.com/p/3f20c1de73d981a8b8dce4515e17c5a7?pvs=204",
+      "last_edited": "2026-10-07T16:39:09.620Z"
+    },
+    {
+      "title": "Doctrine and lattice | Dongjiakou Node-001 — Artifact Index",
+      "url": "https://app.notion.com/p/3f20c1de73d9813aac95c4e9342f696e?pvs=204",
+      "last_edited": "2026-10-07T16:09:37.210Z"
+    },
+    {
+      "title": "Doctrine and lattice | Dongjiakou Node-001 — S6 Build Handoff Digest",
+      "url": "https://app.notion.com/p/3f20c1de73d981b4a2f0fd5a1456342e?pvs=204",
+      "last_edited": "2026-10-07T16:10:24.333Z"
+    },
+    {
+      "title": "Doctrine and lattice | LATTICE-SCALE STRATEGIC OFFSET — Synthesis",
+      "url": "https://app.notion.com/p/3f20c1de73d981dc8d2dca642e4c049b?pvs=204",
+      "last_edited": "2026-10-08T01:31:52.049Z"
+    },
+    {
+      "title": "Doctrine and lattice | Lattice Node Template",
+      "url": "https://app.notion.com/p/3f20c1de73d98167949fc6dabdd4a60d?pvs=204",
+      "last_edited": "2026-10-08T00:48:00.882Z"
+    },
+    {
+      "title": "Doctrine and lattice | Lattice Scaling Plan — From Node-001 to a National Lattice",
+      "url": "https://app.notion.com/p/3f20c1de73d98193ab03fb0a588789e8?pvs=204",
+      "last_edited": "2026-10-08T02:23:05.246Z"
+    },
+    {
+      "title": "Doctrine and lattice | Locality Node Architecture",
+      "url": "https://app.notion.com/p/3f20c1de73d981a78747d469f2eea55a?pvs=204",
+      "last_edited": "2026-10-08T02:23:03.153Z"
+    },
+    {
+      "title": "Doctrine and lattice | Message and Overview — Dongjiakou Node-001, for DeepSeek",
+      "url": "https://app.notion.com/p/3f20c1de73d981f9bee0fbfcc9361776?pvs=204",
+      "last_edited": "2026-10-07T16:09:56.517Z"
+    },
+    {
+      "title": "Doctrine and lattice | NODE-LEVEL ACCOUNTING AND CO-PRODUCT ALLOCATION",
+      "url": "https://app.notion.com/p/3f20c1de73d98167a570f488b025125a?pvs=204",
+      "last_edited": "2026-10-07T16:10:48.338Z"
+    },
+    {
+      "title": "Doctrine and lattice | Net-Positive Data Centre Operations — Verifiable-Data Pathway",
+      "url": "https://app.notion.com/p/3f20c1de73d981f59bd1ddb501c55c26?pvs=204",
+      "last_edited": "2026-10-07T16:10:48.338Z"
+    },
+    {
+      "title": "Doctrine and lattice | Node Composition — What an Atlas Locality Node Actually Contains",
+      "url": "https://app.notion.com/p/3f20c1de73d9815abc69ec4a9bc7e64b?pvs=204",
+      "last_edited": "2026-10-07T16:10:48.338Z"
+    },
+    {
+      "title": "Doctrine and lattice | Notion Pending Corrections — blocked by MCP outage",
+      "url": "https://app.notion.com/p/3f20c1de73d9810da9dcc9d62539be13?pvs=204",
+      "last_edited": "2026-10-07T16:10:48.338Z"
+    },
+    {
+      "title": "Doctrine and lattice | Notion artifact store — IDs and structure",
+      "url": "https://app.notion.com/p/3f20c1de73d9819e8f07c660d0c6c629?pvs=204",
+      "last_edited": "2026-10-07T16:10:48.338Z"
+    },
+    {
+      "title": "Doctrine and lattice | RESPONSE TO DEEPSEEK ROUND 4 — The Eutectic Correction",
+      "url": "https://app.notion.com/p/3f20c1de73d9817da4d7e5fd04808b42?pvs=204",
+      "last_edited": "2026-10-07T16:09:56.517Z"
+    },
+    {
+      "title": "Doctrine and lattice | RESPONSE TO DEEPSEEK ROUND 5 — The Ice Is the Product",
+      "url": "https://app.notion.com/p/3f20c1de73d9812a9c9ed3abf146c644?pvs=204",
+      "last_edited": "2026-10-07T16:09:56.517Z"
+    },
+    {
+      "title": "Doctrine and lattice | Re-Gate Delta — Dongjiakou Node-001, register v0.4",
+      "url": "https://app.notion.com/p/3f20c1de73d98145a179fbb4cbd63087?pvs=204",
+      "last_edited": "2026-10-07T16:10:24.333Z"
+    },
+    {
+      "title": "Doctrine and lattice | Re-Gate Response — v0.4.1",
+      "url": "https://app.notion.com/p/3f20c1de73d9811491b5fd911ff37fa2?pvs=204",
+      "last_edited": "2026-10-07T16:10:24.333Z"
+    },
+    {
+      "title": "Doctrine and lattice | Review — DeepSeek Brine-Mining Techno-Economics",
+      "url": "https://app.notion.com/p/3f20c1de73d9818f9e2ce8ba0a98149f?pvs=204",
+      "last_edited": "2026-10-07T16:09:56.517Z"
+    },
+    {
+      "title": "Doctrine and lattice | SHREDDERNAUT — Source-Document Assessment",
+      "url": "https://app.notion.com/p/3f20c1de73d9811cbda7f61485dbfa53?pvs=204",
+      "last_edited": "2026-10-07T16:10:48.338Z"
+    },
+    {
+      "title": "Doctrine and lattice | SIMULATION ASSESSMENT — NODE AND SUBNODE DEPLOYMENT VERSUS THE LEGACY BASELINE",
+      "url": "https://app.notion.com/p/3f20c1de73d98117ad40cc188ac3f5f1?pvs=204",
+      "last_edited": "2026-10-07T16:10:48.338Z"
+    },
+    {
+      "title": "Doctrine and lattice | Source Verification Log",
+      "url": "https://app.notion.com/p/3f20c1de73d981c69b2efb13c187b6b1?pvs=204",
+      "last_edited": "2026-10-07T16:11:14.165Z"
+    },
+    {
+      "title": "Doctrine and lattice | THE COLD CASCADE TERMINUS — HIL Compute as the Last Productive Stage",
+      "url": "https://app.notion.com/p/3f20c1de73d98133b84ed9c849ea8f87?pvs=204",
+      "last_edited": "2026-10-07T16:09:56.517Z"
+    },
+    {
+      "title": "Doctrine and lattice | TWELVE-HOUSE MODULE MAP — Dongjiakou Node-001",
+      "url": "https://app.notion.com/p/3f20c1de73d98101b33ee98822bc4be9?pvs=204",
+      "last_edited": "2026-10-07T16:39:09.620Z"
+    },
+    {
+      "title": "Doctrine and lattice | WASTE-TO-FEEDSTOCK — Six-Item Research Assessment",
+      "url": "https://app.notion.com/p/3f20c1de73d9814f95e9c070bb8dc3ec?pvs=204",
+      "last_edited": "2026-10-07T16:11:14.165Z"
+    },
+    {
+      "title": "Doctrine and lattice | White Paper — Dongjiakou Locality Node: Adversarial Review Packet v0.3",
+      "url": "https://app.notion.com/p/3f20c1de73d98100a369cfe8f26febca?pvs=204",
+      "last_edited": "2026-10-07T16:10:24.333Z"
+    },
+    {
+      "title": "Doctrine and lattice | White Paper — Dongjiakou Locality Node: Contractual Reality Review Packet",
+      "url": "https://app.notion.com/p/3f20c1de73d981ca9d6ef8ab9f5b0a48?pvs=204",
+      "last_edited": "2026-10-07T16:09:56.517Z"
+    },
+    {
+      "title": "Generated reports | Dongjiakou C01 Pilot Commissioning Specification",
+      "url": "https://app.notion.com/p/3f20c1de73d9810381cef5e52ba6d247?pvs=204",
+      "last_edited": "2026-10-07T16:11:14.165Z"
+    },
+    {
+      "title": "Generated reports | Dongjiakou Locality Stream Register v0.2",
+      "url": "https://app.notion.com/p/3f20c1de73d981efbc91c413b3edd8ca?pvs=204",
+      "last_edited": "2026-10-07T16:11:14.165Z"
+    },
+    {
+      "title": "Generated reports | External Data Request Packet — Dongjiakou Node-001",
+      "url": "https://app.notion.com/p/3f20c1de73d981f8b626f8ac4f99d295?pvs=204",
+      "last_edited": "2026-10-08T00:48:05.682Z"
+    },
+    {
+      "title": "Generated reports | Field Research Receipt Ledger — Round 1",
+      "url": "https://app.notion.com/p/3f20c1de73d98174a813e90c845fa02c?pvs=204",
+      "last_edited": "2026-10-07T16:11:14.165Z"
+    },
+    {
+      "title": "Generated reports | Node-001 Failure Ledger",
+      "url": "https://app.notion.com/p/3f20c1de73d981d49c79f182e62fc263?pvs=204",
+      "last_edited": "2026-10-07T16:11:14.165Z"
+    },
+    {
+      "title": "Generated reports | Node-001 Pilot Control Room — Operator Dashboard Specification",
+      "url": "https://app.notion.com/p/3f20c1de73d981e895d2c0e9343db3a7?pvs=204",
+      "last_edited": "2026-10-07T16:11:32.287Z"
+    },
+    {
+      "title": "Generated reports | Node-001 Validator Report",
+      "url": "https://app.notion.com/p/3f20c1de73d981de8ae1d5a7fc156673?pvs=204",
+      "last_edited": "2026-10-07T16:11:32.287Z"
+    },
+    {
+      "title": "Generated reports | Run 0-3 Reproduction Report",
+      "url": "https://app.notion.com/p/3f20c1de73d9817db40ae315dbcd4860?pvs=204",
+      "last_edited": "2026-10-07T16:11:32.287Z"
+    },
+    {
+      "title": "Generated reports | Run 6 — Resource Modules (one at a time)",
+      "url": "https://app.notion.com/p/3f20c1de73d981c88dfbced56f461169?pvs=204",
+      "last_edited": "2026-10-07T16:11:32.287Z"
+    },
+    {
+      "title": "Generated reports | Unresolved UNKNOWN Ledger",
+      "url": "https://app.notion.com/p/3f20c1de73d981e9942bc70a6c17eb99?pvs=204",
+      "last_edited": "2026-10-07T16:11:32.287Z"
+    },
+    {
+      "title": "Research | Air separation unit cold-load specification — Dongjiakou, Qingdao",
+      "url": "https://app.notion.com/p/3f20c1de73d9816b9968daf0a6a250f8?pvs=204",
+      "last_edited": "2026-10-07T16:11:45.553Z"
+    },
+    {
+      "title": "Research | Arts, culture and heritage restoration: evidence register for Dongjiakou, Qingdao",
+      "url": "https://app.notion.com/p/3f20c1de73d981f2a77df9badc87f83b?pvs=204",
+      "last_edited": "2026-10-07T16:38:37.512Z"
+    },
+    {
+      "title": "Research | Bioreactor organic fertiliser from waste streams — Dongjiakou evidence register",
+      "url": "https://app.notion.com/p/3f20c1de73d9813384b8c19463af99a1?pvs=204",
+      "last_edited": "2026-10-07T16:12:10.043Z"
+    },
+    {
+      "title": "Research | Brine-derived fertiliser pathways — Dongjiakou evidence register",
+      "url": "https://app.notion.com/p/3f20c1de73d981ecbd8fd2bf25bc0fd2?pvs=204",
+      "last_edited": "2026-10-07T16:11:58.078Z"
+    },
+    {
+      "title": "Research | China waste and materials policy context — Dongjiakou node",
+      "url": "https://app.notion.com/p/3f20c1de73d981d397a6ef848a190fb1?pvs=204",
+      "last_edited": "2026-10-07T16:12:38.537Z"
+    },
+    {
+      "title": "Research | Chinese import dependence and Dongjiakou node pathways",
+      "url": "https://app.notion.com/p/3f20c1de73d98116a3cdc62e25817970?pvs=204",
+      "last_edited": "2026-10-07T16:12:19.571Z"
+    },
+    {
+      "title": "Research | Construction and demolition waste as 3D-printing feedstock — China / Dongjiakou evidence register",
+      "url": "https://app.notion.com/p/3f20c1de73d98169bf49c28db310414d?pvs=204",
+      "last_edited": "2026-10-07T16:12:28.420Z"
+    },
+    {
+      "title": "Research | Data-centre cooling from an external cold source",
+      "url": "https://app.notion.com/p/3f20c1de73d9815aaf8ddd1993a6fa56?pvs=204",
+      "last_edited": "2026-10-07T16:11:45.553Z"
+    },
+    {
+      "title": "Research | Dongjiakou LNG Cold Cascade — Evidence Synthesis",
+      "url": "https://app.notion.com/p/3f20c1de73d9813e8b50c94c2cd372ad?pvs=204",
+      "last_edited": "2026-10-07T16:11:32.287Z"
+    },
+    {
+      "title": "Research | Dongjiakou Living Well: Quality-of-Life Evidence Synthesis",
+      "url": "https://app.notion.com/p/3f20c1de73d98132893ae61d44225d38?pvs=204",
+      "last_edited": "2026-10-07T16:38:17.887Z"
+    },
+    {
+      "title": "Research | Dongjiakou strategic-offset programme — cross-item synthesis",
+      "url": "https://app.notion.com/p/3f20c1de73d981f2b328dbe7694f900c?pvs=204",
+      "last_edited": "2026-10-07T16:11:58.078Z"
+    },
+    {
+      "title": "Research | Enhanced weathering carbon-fertiliser loop — evidence register",
+      "url": "https://app.notion.com/p/3f20c1de73d9817d888ded400917d22b?pvs=204",
+      "last_edited": "2026-10-07T16:12:10.043Z"
+    },
+    {
+      "title": "Research | Flora, fauna and ecological net-positive design — Dongjiakou evidence register",
+      "url": "https://app.notion.com/p/3f20c1de73d98118a3e5e2acd59d8d5c?pvs=204",
+      "last_edited": "2026-10-07T16:38:56.501Z"
+    },
+    {
+      "title": "Research | Forestry, flowers and agriculture on built surfaces — Dongjiakou evidence register",
+      "url": "https://app.notion.com/p/3f20c1de73d981dd93fafed24ae93aa3?pvs=204",
+      "last_edited": "2026-10-07T16:38:17.887Z"
+    },
+    {
+      "title": "Research | Freeze desalination ice quality and energy",
+      "url": "https://app.notion.com/p/3f20c1de73d9810c82f0cbacf1a13278?pvs=204",
+      "last_edited": "2026-10-07T16:11:45.553Z"
+    },
+    {
+      "title": "Research | Hardware-in-the-loop testbed demand in Shandong and China",
+      "url": "https://app.notion.com/p/3f20c1de73d98159b258cb60371c9ed5?pvs=204",
+      "last_edited": "2026-10-07T16:11:45.553Z"
+    },
+    {
+      "title": "Research | Housing space standards and wellbeing: assessment of a 500 ft² (≈46 m²) per-person target",
+      "url": "https://app.notion.com/p/3f20c1de73d981a59d0fd3e320822e00?pvs=204",
+      "last_edited": "2026-10-07T16:38:28.467Z"
+    },
+    {
+      "title": "Research | LNG cold availability and seasonality — Sinopec Qingdao (Dongjiakou)",
+      "url": "https://app.notion.com/p/3f20c1de73d98134aa12f3652a35a164?pvs=204",
+      "last_edited": "2026-10-07T16:11:32.287Z"
+    },
+    {
+      "title": "Research | Landfill mining and legacy waste remediation",
+      "url": "https://app.notion.com/p/3f20c1de73d981febc74f28ba486676d?pvs=204",
+      "last_edited": "2026-10-07T16:12:28.420Z"
+    },
+    {
+      "title": "Research | Measuring lives worth living — QOL metrics and frameworks",
+      "url": "https://app.notion.com/p/3f20c1de73d981ed9ddbdc2cb7634475?pvs=204",
+      "last_edited": "2026-10-07T16:38:45.624Z"
+    },
+    {
+      "title": "Research | Mental health, trauma and addiction response — Dongjiakou evidence register",
+      "url": "https://app.notion.com/p/3f20c1de73d98136a642dd5405dd7eca?pvs=204",
+      "last_edited": "2026-10-07T16:38:28.467Z"
+    },
+    {
+      "title": "Research | Nutrition, bloodwork and personalised optimisation",
+      "url": "https://app.notion.com/p/3f20c1de73d981fc86d7ec70a2309ac0?pvs=204",
+      "last_edited": "2026-10-07T16:38:37.512Z"
+    },
+    {
+      "title": "Research | Pathogen surveillance, tracking and elimination at Dongjiakou",
+      "url": "https://app.notion.com/p/3f20c1de73d981d48959f585353e65c5?pvs=204",
+      "last_edited": "2026-10-07T16:38:45.624Z"
+    },
+    {
+      "title": "Research | Physical activity, sport infrastructure and health — Dongjiakou evidence register",
+      "url": "https://app.notion.com/p/3f20c1de73d98165bb12d965a101d9ee?pvs=204",
+      "last_edited": "2026-10-07T16:38:28.467Z"
+    },
+    {
+      "title": "Research | Qi gong, acupuncture and traditional practices — evidence review",
+      "url": "https://app.notion.com/p/3f20c1de73d981b2bb00f63540f7aa81?pvs=204",
+      "last_edited": "2026-10-07T16:38:37.512Z"
+    },
+    {
+      "title": "Research | Salinity gradient energy from RO concentrate",
+      "url": "https://app.notion.com/p/3f20c1de73d9810a8cf2e645e5e62d9f?pvs=204",
+      "last_edited": "2026-10-07T16:12:10.043Z"
+    },
+    {
+      "title": "Research | Shreddernaut model validation",
+      "url": "https://app.notion.com/p/3f20c1de73d981c6aa6cdd254fb449da?pvs=204",
+      "last_edited": "2026-10-07T16:12:19.571Z"
+    },
+    {
+      "title": "Research | Sourced capacity factors and the LSRRO/MVR boundary",
+      "url": "https://app.notion.com/p/3f20c1de73d98150800be6dd729c207e?pvs=204",
+      "last_edited": "2026-10-07T16:11:58.078Z"
+    },
+    {
+      "title": "Research | Struvite and nutrient recovery — evidence register for Dongjiakou",
+      "url": "https://app.notion.com/p/3f20c1de73d98156b6f8e081c4a26f3f?pvs=204",
+      "last_edited": "2026-10-07T16:11:58.078Z"
+    },
+    {
+      "title": "Research | Synthetic and plant-based hemoglobin for dietary use — Dongjiakou evidence register",
+      "url": "https://app.notion.com/p/3f20c1de73d98134a391cdba9eb30f73?pvs=204",
+      "last_edited": "2026-10-07T16:38:45.624Z"
+    },
+    {
+      "title": "Research | Waste plastic as construction material — evidence assessment",
+      "url": "https://app.notion.com/p/3f20c1de73d9815ba458c8bd1ebed242?pvs=204",
+      "last_edited": "2026-10-07T16:12:28.420Z"
+    },
+    {
+      "title": "Research | Waste-to-feedstock integration at Dongjiakou industrial node",
+      "url": "https://app.notion.com/p/3f20c1de73d98182b75fe68e6a2bd735?pvs=204",
+      "last_edited": "2026-10-07T16:12:38.537Z"
+    },
+    {
+      "title": "Research | Waste-to-feedstock synthesis — Dongjiakou, Qingdao",
+      "url": "https://app.notion.com/p/3f20c1de73d98143b716c1cdfd419be4?pvs=204",
+      "last_edited": "2026-10-07T16:12:19.571Z"
+    },
+    {
+      "title": "Research | Wastewater-based epidemiology for drugs and pathogens at a Dongjiakou locality node",
+      "url": "https://app.notion.com/p/3f20c1de73d981858adce3904f9e23cb?pvs=204",
+      "last_edited": "2026-10-07T16:38:17.887Z"
+    },
+    {
+      "title": "Whitepapers | Alexandrian Seawater Refinery",
+      "url": "https://app.notion.com/p/3f20c1de73d981a7929ef9cd9de176ba?pvs=204",
+      "last_edited": "2026-10-07T16:12:52.416Z"
+    },
+    {
+      "title": "🀄 Dongjiakou Node-001 — Locality Node Artifact Store",
+      "url": "https://app.notion.com/p/3f20c1de73d9819ca0f4e5ac9d8a9bd3?pvs=204",
+      "last_edited": "2026-10-07T11:55:45.680Z"
+    },
+    {
+      "title": "🌾 AGR01 | Fertilizer Input Self-Sufficiency Roadmap — Node-001 to 120 Nodes v0.1",
+      "url": "https://app.notion.com/p/3f30c1de73d981449ee0c735cd9b37cb?pvs=204",
+      "last_edited": "2026-10-08T01:31:49.472Z"
+    },
+    {
+      "title": "🌾 White Paper | Fertilizer-Input Self-Sufficiency — Dongjiakou Node-001 to 120-Node Lattice v0.1 — DeepSeek Review Draft",
+      "url": "https://app.notion.com/p/3f30c1de73d9811f80ddefca81689858?pvs=204",
+      "last_edited": "2026-10-08T03:09:44.154Z"
+    },
+    {
+      "title": "🧪 Review | DeepSeek AGR01 Adversarial Review — Accepted Corrections & Siting Doctrine v0.1",
+      "url": "https://app.notion.com/p/3f30c1de73d9818c9e97c95938cfe045?pvs=204",
+      "last_edited": "2026-10-08T02:40:52.941Z"
+    },
+    {
+      "title": "🌾 Response | DeepSeek AGR01 Open Questions — Sulfur, SWRO Gypsum, Nutrient SSR & Metabolic Catchment v0.2",
+      "url": "https://app.notion.com/p/3f30c1de73d9810fb487ea272fc00350?pvs=204",
+      "last_edited": "2026-10-08T02:53:57.651Z"
+    },
+    {
+      "title": "🌾 AGR01 | Dongjiakou Reconnection — Parent/Subnode Map & Sulfur Hub Threshold v0.1",
+      "url": "https://app.notion.com/p/3f30c1de73d9815d832cc50d6eff5cc3?pvs=204",
+      "last_edited": "2026-10-08T03:09:48.432Z"
+    },
+    {
+      "title": "🧬 AGR01 | Full Loop Closure Matrix — Dongjiakou Node-001 v0.1",
+      "url": "https://app.notion.com/p/3f30c1de73d981699ca6d61d6fa12db1?pvs=204",
+      "last_edited": "2026-10-08T03:17:31.504Z"
+    },
+    {
+      "title": "🌾 White Paper | AGR01 Dongjiakou Regional Grain Diversification + Gypsum-to-Sulfur Integration v0.3",
+      "url": "https://app.notion.com/p/3f30c1de73d981bea155f9e14eb1753e?pvs=204",
+      "last_edited": "2026-10-08T04:08:41.278Z"
+    },
+    {
+      "title": "⚗️ White Paper | Tiered Sulfur Resilience — Gap Closure, 167 Desal Nodes & Agricultural Lattice v0.3",
+      "url": "https://app.notion.com/p/3f30c1de73d98119b351dd88201ae6a1?pvs=204",
+      "last_edited": "2026-10-08T04:30:46.534Z"
+    },
+    {
+      "title": "⚗️ White Paper | Sulfur Self-Sufficiency Ceiling, Needs-Matched Scaling & AI Integration v0.3",
+      "url": "https://app.notion.com/p/3f30c1de73d9815e8973c02bd6431c29?pvs=204",
+      "last_edited": "2026-10-08T04:34:11.087Z"
+    },
+    {
+      "title": "⚗️ White Paper | Sulfur Self-Sufficiency, Needs-Matched Scaling, Node Compute & Multi-Model Audit v0.4",
+      "url": "https://app.notion.com/p/3f30c1de73d9812eb23ae27cd7a2cf2c?pvs=204",
+      "last_edited": "2026-10-08T12:00:06.186Z"
+    },
+    {
+      "title": "⚡ Research | Piezoelectric / Perovskite Wastewater-to-Fertigation Pathway v0.1",
+      "url": "https://app.notion.com/p/3f30c1de73d9814d8c28fd9b190d0b83?pvs=204",
+      "last_edited": "2026-10-08T01:14:37.072Z"
+    },
+    {
+      "title": "📏 External Comparator Register — Dongjiakou Unknowns v0.1",
+      "url": "https://app.notion.com/p/3f30c1de73d981f4b7d0c89180016f38?pvs=204",
+      "last_edited": "2026-10-08T00:59:58.914Z"
+    },
+    {
+      "title": "💧 SolGPT Session Handoff — Dongjiakou AGR01 + Sulfur Self-Sufficiency — 2026-10-07 23:57 CDT",
+      "url": "https://app.notion.com/p/3f30c1de73d9815188dfefe8ca2d65a4?pvs=204",
+      "last_edited": "2026-10-08T05:01:22.091Z"
+    },
+    {
+      "title": "🌿 Research | External Greening Pilot — Northern Coastal China Analogues & Native Flora v0.1",
+      "url": "https://app.notion.com/p/3f20c1de73d981269657e5179d2d07e5?pvs=204",
+      "last_edited": "2026-10-08T00:53:58.425Z"
+    },
+    {
+      "title": "🧮 Transferred-Reference Cashflow Simulation — 1 / 3 / 5 Year v0.1",
+      "url": "https://app.notion.com/p/3f30c1de73d981feb115f3089776b862?pvs=204",
+      "last_edited": "2026-10-08T00:59:43.549Z"
+    },
+    {
+      "title": "🧭 Strategic Import Substitution Portfolio | Sulfur, K, Helium, Protein, Metals & Energy v0.1",
+      "url": "https://app.notion.com/p/3f30c1de73d981478d4ae33a78a9ee01?pvs=204",
+      "last_edited": "2026-10-08T05:28:49.741Z"
+    }
+  ]
+}

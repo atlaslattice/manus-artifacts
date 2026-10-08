@@ -1,0 +1,184 @@
+STATUS: ARCHIVE PUBLIC CANDIDATE | CANON: no | DEPLOYMENT: no | AUTHORITY: none | PROOF: no | PUBLIC_RELEASE: candidate
+
+Recovered historical Manus artifact. Current review decisions: [build/review/EVIDENCE_APPENDIX.md](https://github.com/atlaslattice/manus-artifacts/blob/master/public_candidate_bundle_0001/nodes/dongjiakou_node_001/build/review/EVIDENCE_APPENDIX.md).
+
+# Dongjiakou C01 Pilot Commissioning Specification
+
+**Document ID:** DJK-C01-PILOT-COMMISSIONING-SPEC-0001  
+**Status:** PUBLIC_CANDIDATE_NON_CANON  
+**Date:** 2026-10-06  
+**Repo:** public_candidate_bundle_0001 / nodes / dongjiakou_node_001  
+**Reference head:** 4756036f9c428fa3aa1d4cea552ae03367523fb5  
+**Study classification:** TECHNICAL_FEASIBILITY_PLUS_CONDITIONAL_ECONOMICS
+
+## 1. Purpose and scope
+
+This specification defines the evidence, interfaces, controls, measurements, and decision gates for a **C01 compute/control-plane pilot** at the Dongjiakou desalination node. It is a commissioning basis for a bounded, advisory compute service—not a construction package, operating permit, financial investment case, or authorization to alter physical plant controls.
+
+The pilot treats compute as an electrical load that must earn its place through measured plant service, regional service, resilience, flexibility, useful heat, or verified efficiency. The 2025 UF+RO process-energy baseline is **39.446 GWh/year**. The C01 figures below are full-load parametric cases at load factor `L=1`; actual load factor and Node-001 PUE are **UNKNOWN**. PUE=1.25 is a sector/policy reference, not a Node-001 receipt.
+
+Nothing in this document authorizes deployment to physical plant infrastructure. Any future implementation requires separate engineering design, cybersecurity review, permits, management of change, procurement, factory/site acceptance testing, and written operator approval.
+
+## 2. Tier structure and quantitative gates
+
+The **100 kW IT tier is the first commissioning tier**. The **250 kW IT tier is earned expansion** only after the pilot gates pass. **500 kW IT and 1 MW IT are gated scale cases** and may not be energized merely because capacity is available. Values are copied from `RUN_3_COMPUTE_v0_2.json`; shares are fractions of 2025 UF+RO process energy, and PV ratios use modeled annual S01 PV energy divided by facility energy at PUE=1.25.
+
+| Tier / role | IT capacity | IT energy at L=1 (GWh/y) | Facility energy at PUE=1 floor (GWh/y) | Facility energy at PUE=1.25 reference (GWh/y) | UF+RO share at PUE=1 | UF+RO share at PUE=1.25 | S01-A annual ratio at PUE=1.25 | S01-B annual ratio at PUE=1.25 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| C01-PILOT-100 — first commissioning tier | 100 kW | 0.876 | 0.876 | 1.095 | 0.0222075749 | 0.0277594686 | 2.4714096347 | 2.6648243023 |
+| C01-PILOT-250 — earned expansion tier | 250 kW | 2.19 | 2.19 | 2.7375 | 0.0555189373 | 0.0693986716 | 0.9885638539 | 1.0659297209 |
+| C01-500 — gated scale case | 500 kW | 4.38 | 4.38 | 5.475 | 0.1110378746 | 0.1387973432 | 0.4942819269 | 0.5329648605 |
+| C01-1000 — later gated scale case | 1 MW | 8.76 | 8.76 | 10.95 | 0.2220757491 | 0.2775946864 | 0.2471409635 | 0.2664824302 |
+
+The annual PV ratios do **not** demonstrate hourly self-powering, hourly overlap, storage, curtailment capture, or new generation. Existing S01 PV is a node asset and may receive only one primary credit; reallocating it to C01 changes attribution and does not make C01 electrically neutral.
+
+### 2.1 Tier decisions
+
+| Tier | Energisation decision | Minimum decision basis |
+|---|---|---|
+| 100 kW IT | First commissioning tier | All pre-energisation safety, cyber, water, metering, control-path, baseline, and rollback gates pass; energisation is limited to the approved pilot envelope. |
+| 250 kW IT | Earned expansion | Reproducible 100 kW evidence demonstrates service value, energy/water boundaries, failover, no downstream water-quality degradation, and acceptable measured economics; expansion review accepts the evidence package. |
+| 500 kW IT | Gated | Fresh scale review, capacity and thermal verification, expanded service receipts, verified energy strategy, cyber review, and all veto-bearing component gates pass. |
+| 1 MW IT | Gated | Same as 500 kW with demonstrated stability at the preceding tier, regional/service demand receipts if claimed, and explicit management-of-change approval. |
+
+## 3. Commissioning gate checklist
+
+Each item requires a dated, traceable receipt with meter identity, boundary, time interval, calibration/status, data-quality check, and responsible approver. A missing value is **UNKNOWN**, not an inferred pass. “Pass” means the acceptance criterion is approved for the particular tier; this specification does not invent numeric thresholds where the evidence base has not established them.
+
+### 3.1 Before energisation of each tier
+
+- [ ] **Scope and baseline:** approved tier, load envelope, operating hours, workload classes, 2025 UF+RO baseline, plant operating baseline, and rollback procedure are recorded.
+- [ ] **Electrical metering:** revenue/quality-grade measurement separates IT energy, cooling energy, power distribution, auxiliary energy, and total compute facility electricity. Load factor `L` and actual PUE are measured; neither is silently set to the reference case.
+- [ ] **PUE:** measured with an explicit numerator and denominator, time interval, exclusions, and meter map. PUE must meet the tier's approved acceptance limit; the limit is **UNKNOWN until approved by the commissioning authority**.
+- [ ] **WUE:** measured in a stated boundary, including source and destination of cooling water, make-up, blowdown, treatment, and losses. Cooling water source must be identified. WUE must meet the approved acceptance limit; limit is **UNKNOWN**.
+- [ ] **CUE:** measured with an explicit boundary covering emissions factors, imported electricity, on-site generation allocation, and any exclusions. CUE must meet the approved acceptance limit; limit and allocation protocol are **UNKNOWN**.
+- [ ] **Water veto:** demonstrate no deterioration of downstream water quality and no permit, discharge, or water-service failure. **INV-19 is a veto.** Cooling water must not quietly consume desalinated product water while a separate water benefit is claimed.
+- [ ] **Control-path test:** recommendation -> deterministic constraint validator -> operator approval -> PLC/SCADA is demonstrated in a test environment or approved read-only shadow mode. AI has no OT write credentials.
+- [ ] **Independence and failure test:** disconnect or fail the advisory/compute plane; plant operation, hard interlocks, and approved deterministic controls continue safely. Failover and rollback are tested and logged.
+- [ ] **Cyber and data boundary:** OT segmentation, read-only telemetry replica/approved broker, credential exclusion from model context, raw-OT-egress default denial, logging, and policy-gated external calls are verified.
+- [ ] **Meter and telemetry integrity:** synchronized clocks, historian retention, sensor range checks, calibration status, missing-data handling, and audit hashes are accepted.
+
+### 3.2 Pilot performance receipts required before expansion or continued credit
+
+| Receipt / KPI | Required measurement and acceptance evidence |
+|---|---|
+| Energy per validated task | IT kWh (and, where meaningful, joules/token) linked to a task class and a correctness verdict; compare with the cheaper deterministic/statistical alternative. |
+| Recommendation acceptance rate | Recommendations accepted by operators divided by eligible recommendations, with task class, reason, and operator disposition. No value before measurement. |
+| Recommendation correctness | Independent post-event validation against plant records, engineering review, and outcome; acceptance is not itself correctness. |
+| False-negative rate | Known anomaly/fault test set and live reviewed events; report misses, severity, denominator, and confidence intervals where applicable. |
+| Operator time saved | Before/after time study with defined task boundary and no double counting of avoided work. |
+| Verified plant kWh saved | Metered counterfactual or controlled before/after estimate with causal method, uncertainty, and no attribution to ordinary variation. |
+| Verified chemicals saved | Metered chemical mass and process-quality confirmation; no credit if treatment or compliance worsens. |
+| Membrane-life effect | Documented membrane condition, replacement interval, fouling/cleaning history, and controlled comparison; **UNKNOWN** until evidenced. |
+| Useful recovered heat delivered | Thermal meter, mass flow, supply/return temperatures, receiving-subsystem meter, and delivery interval; quantity alone earns no electric credit. |
+| Uptime | Compute, advisory service, telemetry, and plant-interface uptime separately, with planned/unplanned exclusions defined. |
+| Failover reliability | Successful failover, recovery time, data integrity, degraded-mode behavior, and no plant interruption across repeated tests. |
+| Latency | End-to-end and component latency by task class, including validator and operator handoff; compare with approved SLA. |
+| Regional service output | Delivered approved compute-hours/tasks, recipient, workload, data boundary, quality, and plant-priority compliance. |
+
+**Tokens/kWh alone is not a sufficient KPI.** Token volume, joules per token, or aggregate kWh may be reported, but expansion requires validated task quality and measured plant/operator outcomes alongside energy, water, carbon, reliability, and boundary evidence. Model consensus is not evidence.
+
+### 3.3 Decision rule
+
+A tier is **not energisable** when any required gate is FAIL, VETO, unmeasured where measurement is required, or dependent on an invented value. A WARN requires named owner, mitigation, due date, and commissioning-authority acceptance. INV-19, cybersecurity isolation failure, or an unapproved OT write path blocks the tier regardless of economic or carbon benefit.
+
+## 4. Control path and authority
+
+The only permitted recommendation path is:
+
+**AI recommendation -> deterministic constraint validator -> operator approval -> PLC/SCADA.**
+
+- **LLM actuator authority is NONE.** Models receive **no OT write credentials** and cannot directly actuate pumps, valves, membranes, chemical dosing, electrical switching, interlocks, or setpoints.
+- Existing PLC/SCADA, hard interlocks, and approved deterministic control remain authoritative.
+- The compute/advisory plane may fail, be isolated, or be powered down without preventing plant operation.
+- Model self-modification of control policy is **prohibited**. Model, routing, prompt, tool, and policy changes require signed manifest, canary test, rollback path, and operator change control.
+- Telemetry is read-only through a replica or approved broker. Raw OT egress is denied by default; credentials never enter model context; external calls are logged and policy-gated.
+- Disagreement escalates. Agreement among models still requires constraints, operator approval, and measured physical outcomes.
+
+## 5. Waste-heat coupling
+
+The current useful-heat credit is **ZERO**. The first-law IT-heat upper bound is not a useful-heat receipt and is not electric value.
+
+The candidate path is **compute cooling loop -> heat exchanger / heat pump if required -> CIP thermal subsystem**. No useful-heat credit is permitted until the following are measured and accepted:
+
+- coolant supply and return temperature, flow, pressure, and thermal meter readings;
+- recoverable thermal power and duration;
+- CIP target temperature and allowable operating range;
+- CIP schedule and actual temporal overlap;
+- CIP thermal duty and receiving-side meter;
+- heat-pump COP map at the measured source/sink temperatures;
+- controls, isolation, water chemistry, hygiene, safety, and maintenance interfaces.
+
+Use the following relations, with all factors receipted:
+
+```text
+Q_useful <= E_IT * f_capture * f_temperature_match * f_temporal_match
+E_HP_saved = min(Q_useful, Q_CIP_demand) / COP_HP
+```
+
+Until those receipts exist, `f_capture`, `f_temperature_match`, `f_temporal_match`, CIP demand, and COP remain **UNKNOWN**, while the credited useful heat and verified heat-pump electricity saved remain zero. Thermal quantity is not electric value: only measured displaced heat-pump electricity, or another verified displacement, may enter the energy ledger.
+
+## 6. Net-positive gate
+
+C01 may not claim net-positive operation unless all terms are measured and the following inequality passes:
+
+```text
+new incremental clean generation
++ verified plant electrical savings
++ verified heat-pump electrical savings
+>= compute facility electricity
+```
+
+Existing S01 PV does **not** become “new C01 generation” if it is reassigned from another node use. Any PV credit must satisfy:
+
+```text
+PV_credit_compute + PV_credit_desalination <= measured_PV_generation
+```
+
+Hourly solar overlap, storage, curtailment capture, regional green-power access, tariff, and contract price are **UNKNOWN** unless separately receipted. The current result is **C01 net-positive: NOT_PROVEN**.
+
+## 7. Invariant compliance
+
+This specification must not violate the following constraints:
+
+- **UNKNOWN remains UNKNOWN.** Do not backfill missing current-state, operating, tariff, recovery, SEC, chemistry, ecology, hydraulic, or service data from a sensitivity, historical value, aggregate, or plausible assumption.
+- No invented tariff, recovery rate, specific energy consumption, brine chemistry, ecology, hydraulic head, operating data, or regional allocation.
+- No sensitivity result may be promoted to a deployment claim or Node-001 receipt.
+- Do not double-count energy, heat, water, material, carbon, or revenue. One physical kWh, cubic metre, kilogram, or tonne receives at most one primary accounting credit.
+- RO high-pressure head supplied by the motor is not counted twice as recovered hydro energy.
+- Existing S01 solar is not counted twice and is not incremental C01 generation merely because routing changes.
+- **INV-19 downstream water quality is a veto.** A data centre cannot be called regenerative if downstream water quality deteriorates; a profitable or low-carbon component cannot offset a failed ecological veto.
+- Cooling water cannot quietly consume desalinated product water while claiming a separate water benefit. The cooling-water source and full WUE boundary must be measured.
+- Planned regional generation is not Node-001 access and earns zero node credit until access and allocation are receipted.
+- Model service benefit is zero until before/after KPI evidence exists. Agreement between models is not evidence.
+
+## 8. Model architecture and routing
+
+**DeepSeek** is the primary eligible local advisory family. **Qwen3** is the local challenger/failover. **OpenAI GPT** is an optional external adversarial audit lane, non-critical-path and data-egress gated, with redacted/aggregated data by default.
+
+These families are constitutional roles, not fixed versions. Do **not** hard-code model versions into constitutional architecture. The actual checkpoint, version, API, runtime, hardware/provider, prompt/template hash, data-boundary label, and deployment configuration must be pinned in a **dated deployment manifest** before use. Vendor/model routing must remain replaceable and benchmark-driven; no family is permanently privileged. Capability-weighted routing must respect the applicable single-vendor cap, and exact shares are measured rather than preassigned.
+
+The routing log shall retain timestamp, task class, boundary label, exact model/version/checkpoint, hardware or provider, prompt/template hash, input and output hashes, tool calls, latency, measurable energy, uncertainty, challenger result, operator disposition, and downstream physical outcome where applicable.
+
+### 8.1 Workload routing rule
+
+Keep the following out of LLMs when cheaper deterministic/statistical methods suffice: **mass balance, energy balance, numerical optimization, alarms, hard constraints, basic forecasting, and interlocks**. These belong in validated equations, optimization solvers, conventional forecasting, alarm logic, and PLC/SCADA control.
+
+LLMs may assist with **maintenance-record synthesis, fault explanation, complex diagnosis, planning, code/tool workflows, semantic retrieval, cross-domain synthesis, and operator explanation**, subject to validator checks, human approval, logging, data boundaries, and benchmark evidence. Spare capacity may serve approved regional workloads only after plant obligations are satisfied.
+
+## 9. What this specification does not authorize
+
+This specification does **not** authorize:
+
+- physical construction, rack installation, energisation, interconnection, cooling-loop tie-in, heat-exchanger or heat-pump installation, or any plant modification;
+- PLC/SCADA writes, bypasses of interlocks, automated chemical dosing, membrane control, pump/valve control, or LLM actuation;
+- use of product water for cooling without a separately engineered and approved water boundary;
+- a net-positive, regenerative, self-powered, carbon-neutral, water-positive, or economic-profit claim;
+- credit for useful heat, plant savings, chemicals, membrane life, regional service, new clean generation, or model benefit without the specified measured receipt;
+- treating PUE=1.25, full-load `L=1`, annual PV ratios, planned generation, or sensitivity outputs as current operating facts;
+- external model calls with raw OT data, secrets, credentials, or unapproved data egress;
+- model self-modification of control policy or permanent vendor lock-in;
+- expansion to 250 kW, 500 kW, or 1 MW without the applicable gate package, veto review, management of change, and written approval;
+- overriding environmental, water-quality, cybersecurity, safety, permit, contract, or operator requirements.
+
+**Commissioning principle:** compute must pay rent in measured service, recovered heat, flexibility, resilience, or verified efficiency—not in promises.
