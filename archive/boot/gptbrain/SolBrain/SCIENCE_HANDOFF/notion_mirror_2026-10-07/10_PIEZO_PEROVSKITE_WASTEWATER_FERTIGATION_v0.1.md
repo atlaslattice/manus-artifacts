@@ -1,0 +1,144 @@
+# Research | Piezoelectric / Perovskite Wastewater-to-Fertigation Pathway v0.1
+
+> Mirrored from Notion for SolBrain continuity.
+>
+> Notion page ID: `3f30c1de-73d9-814d-8c28-fd9b190d0b83`
+>
+> Live page: https://app.notion.com/p/3f30c1de73d9814d8c28fd9b190d0b83?pvs=204
+>
+> Last edited: 2026-10-08T01:14:37.072Z
+>
+> Verification state: unverified
+
+**Document ID:** DJK-PIEZO-PLASMA-FERTIGATION-v0.1
+**Status:** NON-CANON · RESEARCH LEAD · ZERO CREDIT
+<callout icon="⚡" color="purple_bg">
+	**Working finding:** the exact Dongjiakou chain — wastewater → perovskite/piezo material → mechanically activated chemistry → fertigation / crop-growth benefit — was not previously captured cleanly in the archive. However, multiple published lines of evidence now support the underlying mechanism strongly enough to justify a dedicated research lane.
+</callout>
+## 1. User-proposed chain and original intent
+**Original user intent:** the piezo/perovskite soak was proposed first as an **always-on sensing, energy-harvesting and AI-feedback layer** for continuous monitoring of the post-biological water stream. The agronomic / yield-enhancement pathway was **not part of the original premise**; it emerged later from DeepSeek's research as an unexpected secondary opportunity.
+Canonical sequence:
+**wastewater / organics → BIO01 bioreactor / anaerobic digestion → biogas + stabilized liquid/digestate stream → piezo/perovskite soak for continuous sensing + mechanical-energy harvesting + AI feedback → optional reactive chemistry / plasma polishing → optional fertigation / crop-response lane**
+This is currently a **PROPOSED integration**, not a Dongjiakou process claim.
+## 2. Important mechanism distinction
+Do not use **"plasma effect"** as a catch-all.
+There are at least three related but distinct mechanisms:
+1. **PIEZOCATALYSIS** — mechanical stress polarizes a piezoelectric material, separates charge carriers, and generates reactive species such as •OH, H₂O₂ and O₂•−. This is well established in water-remediation literature.
+2. **PIEZO-/PHOTO-CATALYTIC NITROGEN FIXATION** — piezoelectric polarization plus light / ultrasound can drive N₂ reduction toward ammonia under laboratory conditions.
+3. **COLD-PLASMA ACTIVATED WATER / WASTEWATER** — a true plasma discharge generates reactive oxygen and nitrogen species (RONS), nitrate/nitrite and other reactive species that can both treat water and influence plant growth.
+These pathways may be combined, but evidence from one must not be relabeled as another.
+## 3. Strong external comparators
+<table fit-page-width="true" header-row="true">
+<tr>
+<td>Evidence lane</td>
+<td>External result</td>
+<td>What it supports</td>
+<td>What it does NOT prove</td>
+</tr>
+<tr>
+<td>Piezoelectric perovskite nitrogen fixation</td>
+<td>2026 BaZrO₃ perovskite study: symmetry-broken piezo-photocatalyst produced ammonia at **424.98 μmol g⁻¹ h⁻¹**, 3.45× pristine material.</td>
+<td>Perovskite piezoelectric materials can drive nitrogen-reduction chemistry under controlled conditions.</td>
+<td>Does not prove wastewater compatibility, field fertilizer value or Dongjiakou-scale economics.</td>
+</tr>
+<tr>
+<td>Piezoelectric / photocatalytic ammonia → plant response</td>
+<td>2026 ZrFe-MOF study reported **7026.85 μmol L⁻¹ h⁻¹ g⁻¹** ammonia production under light + ultrasound; rice seedlings irrigated with the synthesized ammonia solution showed **32% greater plant height** and improved roots.</td>
+<td>Direct bridge from piezo-assisted nitrogen fixation to measurable plant-growth response exists in published experimental work.</td>
+<td>Seedling growth is not crop yield; not Dongjiakou; not proof of commercial fertilizer replacement.</td>
+</tr>
+<tr>
+<td>Cold-plasma wastewater valorization</td>
+<td>2026 programmed microbubble cold-plasma treatment of food-industry wastewater cut COD by \~**90%**, turbidity by \~**98%**, increased nitrogen availability, and in hydroponic tests produced \>**10%** higher germination, \>**1.6×** plant length and \>**1.9×** biomass than controls.</td>
+<td>Wastewater can be simultaneously treated and converted into a plant-useful fertigation medium through reactive nitrogen/oxygen chemistry.</td>
+<td>This is actual plasma, not piezocatalysis. Feedwater and crops differ from Dongjiakou.</td>
+</tr>
+<tr>
+<td>Piezoelectric water remediation</td>
+<td>Peer-reviewed reviews document piezocatalytic generation of reactive oxygen species for pollutant degradation, bacterial inactivation and heavy-metal treatment.</td>
+<td>Mechanical-energy-driven piezo chemistry is a credible wastewater-treatment mechanism.</td>
+<td>Does not by itself establish fertilizer or yield benefit.</td>
+</tr>
+<tr>
+<td>China agriculture sensing</td>
+<td>Chinese active patent literature includes flexible nano-piezoelectric self-powered agricultural sensing systems.</td>
+<td>China-specific piezo agriculture deployment/R&D context exists.</td>
+<td>Sensor patents do not prove agronomic growth enhancement.</td>
+</tr>
+</table>
+## 4. Why this may matter to Atlas
+The **primary function** is instrumentation and closed-loop control. A piezo/perovskite soak can be evaluated as a distributed sensing surface that continuously reports water-state changes to the node controller while potentially scavenging small amounts of mechanical energy from flow, vibration or pressure fluctuations.
+Possible monitored variables / inferred states include conductivity, pressure/vibration spectra, flow-state changes, fouling or deposition signatures, turbidity/particle events, and—where separate electrochemical/optical probes are integrated—pH, ORP, dissolved oxygen, nutrient species and contaminant proxies. Piezoelectric output alone must not be assumed to directly measure every chemical variable.
+The AI role is to fuse these continuous signals with conventional sensors, lab assays and process telemetry for anomaly detection, predictive maintenance, dosing/control decisions and adaptive sampling.
+**Secondary opportunity discovered later:** the same material/activation layer may also participate in catalytic pollutant degradation, nitrogen chemistry, or downstream fertigation enhancement. Those benefits are additive hypotheses, not required to justify the monitoring layer.
+The broader lane potentially closes several loops simultaneously:
+**wastewater / organic residuals**
+→ **anaerobic digestion / bioreactor treatment**
+→ **biogas to E01 + stabilized digestate / reclaimed-water stream**
+→ **mechanical-energy harvesting / piezo activation and/or plasma polishing**
+→ **reactive nitrogen generation or nitrogen conversion**
+→ **fertigation input**
+→ **agricultural production**
+This sequencing is important: the piezo/plasma stage is a **polishing and nutrient-chemistry layer after bulk biological treatment**, not a substitute for anaerobic digestion or biological wastewater treatment.
+Potential mechanical drivers to test include:
+- ultrasound;
+- vibration from industrial equipment;
+- pumps / pressure pulsation;
+- fluid turbulence;
+- wave / hydraulic vibration;
+- mechanically loaded piezo beds.
+The key Atlas question is not whether piezocatalysis works in a laboratory; it is whether **otherwise-wasted mechanical energy at a node can drive enough useful chemistry to improve the wastewater balance or reduce fertilizer demand at acceptable lifecycle cost**.
+## 5. Dongjiakou-specific unknowns
+- actual municipal / industrial wastewater composition and contaminant burden;
+- whether candidate piezo/perovskite materials remain stable in saline / industrial matrices;
+- catalyst leaching and toxicity;
+- catalyst recovery / lifetime;
+- mechanical-energy source and usable power density;
+- nitrogen-fixation rate in actual wastewater;
+- nitrate / nitrite / ammonium speciation;
+- crop-specific dose response;
+- Chinese fertilizer / reclaimed-water regulatory classification;
+- field yield, not just germination / seedling biomass;
+- parasitic energy relative to nutrient value;
+- whether plasma treatment and piezocatalysis are complementary or redundant at node scale.
+## 6. Proposed pilot architecture
+### 6.1 Instrumentation-first pilot
+Run the piezo/perovskite soak continuously beside conventional reference instrumentation before testing any agronomic claims.
+Measure:
+- piezoelectric signal stability and drift;
+- correlation with flow, pressure and vibration;
+- fouling / scaling signatures;
+- event detection against turbidity / conductivity / pH / ORP / DO reference sensors;
+- anomaly-detection precision / recall;
+- sensor-cleaning and recalibration burden;
+- harvested electrical energy, if any;
+- material leaching / attrition;
+- AI prediction error versus laboratory assays;
+- uptime and failure modes.
+Only after the monitoring layer is characterized should the chemical/agronomic branch run.
+### 6.2 Chemistry / agronomy pilot
+Run four matched treatment arms on the same characterized wastewater / reclaimed-water feed:
+1. **Control** — normal treatment / fertigation baseline.
+2. **Piezo-only** — mechanically activated piezo/perovskite material.
+3. **Cold-plasma-only** — plasma activated water/wastewater.
+4. **Piezo + plasma cascade** — test for synergy rather than assume it.
+Measure:
+- COD / TOC / turbidity;
+- pathogens;
+- nitrate, nitrite, ammonium, total N, P, K;
+- RONS / redox state;
+- metals / catalyst leachate;
+- energy input;
+- catalyst attrition / life;
+- germination;
+- root/shoot biomass;
+- chlorophyll;
+- nutrient uptake;
+- full-season crop yield;
+- fertilizer displacement;
+- residual water quality.
+## 7. Promotion rule
+No "piezo fertilizer" credit until the chain is demonstrated end-to-end:
+**actual waste stream → treatment → chemically characterized fertigation product → compliant application → measured crop response → lifecycle energy/material balance**
+Seedling growth, ammonia generation, pollutant removal and nitrogen fixation are separate receipts until that chain closes.
+> **The interesting finding is real: piezoelectric materials are not merely sensors. They can participate directly in environmental catalysis and nitrogen chemistry. But the archive should keep piezocatalysis, plasma chemistry and agronomic yield as distinct evidence layers until a combined pilot measures the whole loop.**
