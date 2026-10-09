@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/atlaslattice/manus-artifacts/blob/review/china-2-0-cross-draft-v0-7-20261009/public_candidate_bundle_0001/schemas/atlas_claim_measurement_v0.2.proposal.schema.json",
+  "title": "Atlas claim measurement normalization proposal v0.2",
+  "description": "Additive proposed contract for gas-volume normalization, agronomy intervention overlap and source receipts. No realized credit or simulator change.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["claim_id", "status", "evidence_class", "value_domain", "source_receipts", "realized_credit", "gas_volume_normalization", "agronomy_interventions"],
+  "properties": {
+    "claim_id": {"type": "string", "pattern": "^CLM-[0-9]{3,}$"},
+    "status": {"enum": ["PROPOSED", "SYNTHETIC", "UNKNOWN"]},
+    "evidence_class": {"enum": ["MEASURED", "OFFICIAL_POLICY", "REGULATORY_APPROVED", "PROJECT_REPORTED", "PEER_REVIEWED_MODEL", "MODELED", "SYNTHETIC", "PROPOSED", "UNKNOWN", "QUARANTINED"]},
+    "value_domain": {"enum": ["FINANCIAL", "RESILIENCE", "QOL", "ECOLOGY", "GRV", "RESOURCE", "GOVERNANCE"]},
+    "source_receipts": {"type": "array", "items": {"$ref": "#/$defs/receipt"}},
+    "realized_credit": {"const": 0},
+    "gas_volume_normalization": {"oneOf": [{"type": "null"}, {"$ref": "#/$defs/gas"}]},
+    "agronomy_interventions": {"type": "array", "items": {"$ref": "#/$defs/intervention_group"}}
+  },
+  "$defs": {
+    "receipt": {
+      "type": "object", "additionalProperties": false,
+      "required": ["receipt_id", "uri", "source_kind", "independence", "date_accessed"],
+      "properties": {
+        "receipt_id": {"type": "string", "minLength": 1},
+        "uri": {"type": "string", "format": "uri"},
+        "source_kind": {"enum": ["OFFICIAL", "PRIMARY_STUDY", "MEASUREMENT", "CONTRACT", "REGULATORY", "REPOSITORY", "OTHER"]},
+        "independence": {"enum": ["PRIMARY", "INDEPENDENT_REVIEW", "AUTHOR_REPORT", "UNKNOWN"]},
+        "date_accessed": {"type": "string", "format": "date"},
+        "sha256": {"type": ["string", "null"], "pattern": "^[a-fA-F0-9]{64}$"}
+      }
+    },
+    "gas": {
+      "type": "object", "additionalProperties": false,
+      "required": ["raw_quantity", "raw_unit", "standard_state", "gas_composition_basis", "composition", "density_kg_per_standard_m3", "normalized_standard_m3", "energy_lhv_mj", "conversion_method", "source_receipt_refs"],
+      "properties": {
+        "raw_quantity": {"type": ["number", "null"], "minimum": 0},
+        "raw_unit": {"enum": ["kg", "metric_tonne", "Nm3", "Sm3", "bcm", "unknown"]},
+        "standard_state": {"type": ["string", "null"]},
+        "gas_composition_basis": {"enum": ["mole_fraction", "mass_fraction", "not_applicable", "unknown"]},
+        "composition": {"type": "object", "additionalProperties": {"type": ["number", "null"], "minimum": 0}},
+        "density_kg_per_standard_m3": {"type": ["number", "null"], "exclusiveMinimum": 0},
+        "normalized_standard_m3": {"type": ["number", "null"], "minimum": 0},
+        "energy_lhv_mj": {"type": ["number", "null"], "minimum": 0},
+        "conversion_method": {"type": ["string", "null"]},
+        "source_receipt_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    },
+    "intervention_group": {
+      "type": "object", "additionalProperties": false,
+      "required": ["trial_set_id", "site_season_id", "intervention_ids", "overlap_group_id", "design", "interaction_effect_status", "receipt_refs"],
+      "properties": {
+        "trial_set_id": {"type": "string", "minLength": 1},
+        "site_season_id": {"type": "string", "minLength": 1},
+        "intervention_ids": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+        "overlap_group_id": {"type": "string", "minLength": 1},
+        "design": {"enum": ["FACTORIAL", "MULTI_ARM", "OBSERVATIONAL", "SINGLE_INTERVENTION", "UNKNOWN"]},
+        "interaction_effect_status": {"enum": ["MEASURED", "MODELED", "UNKNOWN"]},
+        "receipt_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
+      }
+    }
+  },
+  "x-atlas-invariants": [
+    "A mass import quantity cannot be expressed as standard gas volume without a declared gas basis and conversion receipt.",
+    "Nm3 and Sm3 definitions must be explicitly declared; bcm must specify standard state.",
+    "For mass-to-volume conversions, composition and density or equivalent validated equation are required.",
+    "Overlapping agronomy interventions share an overlap_group_id; combined gains require factorial or otherwise justified interaction evidence.",
+    "Source receipts are independent identifiers; links alone do not establish evidence quality.",
+    "Realized credit remains zero in this proposal schema."
+  ]
+}

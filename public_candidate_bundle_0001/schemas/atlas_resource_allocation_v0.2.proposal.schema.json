@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/atlaslattice/manus-artifacts/blob/review/china-2-0-cross-draft-v0-7-20261009/public_candidate_bundle_0001/schemas/atlas_resource_allocation_v0.2.proposal.schema.json",
+  "title": "Atlas waste-only resource allocation proposal v0.2",
+  "description": "Additive proposal fixture contract only; does not replace v0.1 or authorize deployment. Physical cross-record invariants require a validator.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "scenario_id", "status", "mass_basis", "time_period", "waste_only_base_case", "source_lots", "realized_credit_total"],
+  "properties": {
+    "schema_version": {"const": "0.2-proposal"},
+    "scenario_id": {"type": "string", "minLength": 1},
+    "status": {"enum": ["SYNTHETIC", "PROPOSED", "UNKNOWN"]},
+    "mass_basis": {"const": "dry_metric_tonnes"},
+    "time_period": {"type": "string", "minLength": 1},
+    "waste_only_base_case": {"const": true},
+    "realized_credit_total": {"const": 0},
+    "source_lots": {"type": "array", "items": {"$ref": "#/$defs/lot"}, "minItems": 1}
+  },
+  "$defs": {
+    "receipt": {
+      "type": "object", "additionalProperties": false,
+      "required": ["receipt_id", "uri", "source_type", "date_accessed"],
+      "properties": {
+        "receipt_id": {"type": "string", "minLength": 1},
+        "uri": {"type": "string", "format": "uri"},
+        "source_type": {"enum": ["OFFICIAL", "PRIMARY_STUDY", "MEASUREMENT", "CONTRACT", "REGULATORY", "OTHER"]},
+        "date_accessed": {"type": "string", "format": "date"},
+        "sha256": {"type": ["string", "null"], "pattern": "^[a-fA-F0-9]{64}$"}
+      }
+    },
+    "lot": {
+      "type": "object", "additionalProperties": false,
+      "required": ["source_lot_id", "source_type", "feedstock_class", "waste_only_eligibility", "dedicated_energy_crop", "source_boundary", "wet_mass_t", "dry_matter_fraction", "qualified_dry_mass_t", "current_use", "soil_ecological_reserve_t", "existing_obligations_t", "collection_losses_t", "allocatable_dry_mass_t", "allocations", "constituent_balances", "source_receipts", "ecological_gate", "rights_gate", "residual_fate", "sludge_ash_gate"],
+      "properties": {
+        "source_lot_id": {"type": "string", "minLength": 1},
+        "source_type": {"type": "string", "minLength": 1},
+        "feedstock_class": {"enum": ["WASTE", "RESIDUE", "BYPRODUCT", "DEDICATED_CROP", "UNKNOWN"]},
+        "waste_only_eligibility": {"enum": ["ELIGIBLE", "INELIGIBLE", "UNKNOWN"]},
+        "dedicated_energy_crop": {"type": "boolean"},
+        "source_boundary": {"type": "string", "minLength": 1},
+        "wet_mass_t": {"type": ["number", "null"], "minimum": 0},
+        "dry_matter_fraction": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "qualified_dry_mass_t": {"type": ["number", "null"], "minimum": 0},
+        "current_use": {
+          "type": "object", "additionalProperties": false,
+          "required": ["use_name", "quantity_dry_t", "evidence_class", "receipt_ref"],
+          "properties": {
+            "use_name": {"type": "string", "minLength": 1},
+            "quantity_dry_t": {"type": ["number", "null"], "minimum": 0},
+            "evidence_class": {"enum": ["MEASURED", "REPORTED", "MODELED", "SYNTHETIC", "UNKNOWN"]},
+            "receipt_ref": {"type": ["string", "null"]}
+          }
+        },
+        "soil_ecological_reserve_t": {"type": ["number", "null"], "minimum": 0},
+        "existing_obligations_t": {"type": ["number", "null"], "minimum": 0},
+        "collection_losses_t": {"type": ["number", "null"], "minimum": 0},
+        "allocatable_dry_mass_t": {"type": ["number", "null"], "minimum": 0},
+        "allocations": {
+          "type": "array",
+          "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["allocation_id", "route", "allocated_dry_mass_t", "status", "overlap_group"],
+            "properties": {
+              "allocation_id": {"type": "string", "minLength": 1},
+              "route": {"enum": ["SOIL_RETURN", "ANIMAL_FEED", "BIO01", "SAF01", "MAR01", "AGR01", "OTHER"]},
+              "allocated_dry_mass_t": {"type": ["number", "null"], "minimum": 0},
+              "status": {"enum": ["SYNTHETIC", "PROPOSED", "MODELED", "MEASURED", "UNKNOWN"]},
+              "overlap_group": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "constituent_balances": {
+          "type": "array", "items": {
+            "type": "object", "additionalProperties": false,
+            "required": ["constituent", "unit", "input", "products", "residuals", "emissions", "unaccounted", "basis"],
+            "properties": {
+              "constituent": {"enum": ["C", "N", "P", "K", "S", "WATER", "DRY_MATTER", "OTHER"]},
+              "unit": {"type": "string", "minLength": 1},
+              "input": {"type": ["number", "null"], "minimum": 0},
+              "products": {"type": ["number", "null"], "minimum": 0},
+              "residuals": {"type": ["number", "null"], "minimum": 0},
+              "emissions": {"type": ["number", "null"], "minimum": 0},
+              "unaccounted": {"type": ["number", "null"], "minimum": 0},
+              "basis": {"type": "string", "minLength": 1}
+            }
+          }
+        },
+        "source_receipts": {"type": "array", "items": {"$ref": "#/$defs/receipt"}},
+        "ecological_gate": {"enum": ["UNKNOWN", "BLOCKED", "PASSED"]},
+        "rights_gate": {"enum": ["UNKNOWN", "BLOCKED", "PASSED"]},
+        "residual_fate": {"type": ["string", "null"]},
+        "sludge_ash_gate": {
+          "type": "object", "additionalProperties": false,
+          "required": ["applicable", "treatment_status", "contaminant_assay_status", "leaching_test_status", "durability_status", "product_acceptance_status", "gate_status"],
+          "properties": {
+            "applicable": {"type": "boolean"},
+            "treatment_status": {"enum": ["NOT_APPLICABLE", "UNKNOWN", "UNTREATED", "TREATED"]},
+            "contaminant_assay_status": {"enum": ["UNKNOWN", "PASS", "FAIL"]},
+            "leaching_test_status": {"enum": ["UNKNOWN", "PASS", "FAIL"]},
+            "durability_status": {"enum": ["UNKNOWN", "PASS", "FAIL"]},
+            "product_acceptance_status": {"enum": ["UNKNOWN", "PASS", "FAIL"]},
+            "gate_status": {"enum": ["BLOCKED", "CONDITIONAL", "PASSED"]}
+          }
+        },
+        "agronomy_overlap_group": {"type": ["string", "null"]}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"dedicated_energy_crop": {"const": true}}, "required": ["dedicated_energy_crop"]},
+          "then": {
+            "properties": {
+              "feedstock_class": {"const": "DEDICATED_CROP"},
+              "waste_only_eligibility": {"const": "INELIGIBLE"},
+              "allocations": {"maxItems": 0}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"feedstock_class": {"const": "DEDICATED_CROP"}}, "required": ["feedstock_class"]},
+          "then": {"properties": {"waste_only_eligibility": {"const": "INELIGIBLE"}, "allocations": {"maxItems": 0}}}
+        }
+      ]
+    }
+  },
+  "x-atlas-invariants": [
+    "Dedicated energy crops are ineligible for waste_only_base_case=true.",
+    "Unknown quantities remain null; no default zero or positive credit.",
+    "Current use is descriptive; current-use quantities included in existing_obligations must not be subtracted twice.",
+    "Current use, soil/ecological reserve, obligations and losses are subtracted before allocation.",
+    "Sum of allocations may not exceed allocatable dry mass; cross-file uniqueness and arithmetic are validator responsibilities.",
+    "Constituent balances must state basis and reconcile input to products + residuals + emissions + unaccounted.",
+    "Any sludge/ash construction use is blocked until treatment, contaminant, leaching, durability and product-acceptance gates pass.",
+    "Source receipts must be independently resolvable; a URI is not itself verification.",
+    "Agronomy overlap groups identify potentially duplicated intervention credits and require trial-level interaction evidence."
+  ]
+}

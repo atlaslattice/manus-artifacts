@@ -1,0 +1,31 @@
+{
+  "claim_id": "CLM-TEST-001",
+  "status": "SYNTHETIC",
+  "evidence_class": "SYNTHETIC",
+  "value_domain": "RESOURCE",
+  "source_receipts": [],
+  "realized_credit": 0,
+  "gas_volume_normalization": {
+    "raw_quantity": 1000,
+    "raw_unit": "metric_tonne",
+    "standard_state": null,
+    "gas_composition_basis": "unknown",
+    "composition": {},
+    "density_kg_per_standard_m3": null,
+    "normalized_standard_m3": null,
+    "energy_lhv_mj": null,
+    "conversion_method": null,
+    "source_receipt_refs": []
+  },
+  "agronomy_interventions": [
+    {
+      "trial_set_id": "SYN_TRIAL_001",
+      "site_season_id": "SYN_SITE_2026",
+      "intervention_ids": ["intercrop", "rhizobia", "precision_nutrients"],
+      "overlap_group_id": "SYN_OVERLAP_001",
+      "design": "UNKNOWN",
+      "interaction_effect_status": "UNKNOWN",
+      "receipt_refs": []
+    }
+  ]
+}

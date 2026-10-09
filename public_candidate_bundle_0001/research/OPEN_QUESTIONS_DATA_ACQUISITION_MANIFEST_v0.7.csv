@@ -1,0 +1,39 @@
+request_id,domain,unknown_or_receipt,priority,evidence_needed,acceptance_rule,baseline_status
+DAR-001,energy,effective_current_electricity_tariff_CNY_kWh,HIGH,site invoice/tariff and applicable time window,primary dated bill or contract,OUTSTANDING
+DAR-002,energy,whole_site_SEC_kWh_m3,HIGH,site meter boundary and throughput,paired calibrated meters same period,OUTSTANDING
+DAR-003,energy,delta_aux_kWh_m3,HIGH,auxiliary load with same baseline and boundary,paired metering and method,OUTSTANDING
+DAR-004,water,current_measured_recovery_fraction,HIGH,feed/product/reject measured flows,calibrated flow and quality receipts,OUTSTANDING
+DAR-005,water,current_feed_and_reject_stream_map,HIGH,process flow diagram and operating rates,operator-approved current map,OUTSTANDING
+DAR-006,water,current_brine_composition,HIGH,full ionic assay with sampling protocol,accredited lab receipt and date,OUTSTANDING
+DAR-007,operations,fouling_rate_and_cleaning_frequency,MEDIUM,trend logs and cleaning records,primary operations log,OUTSTANDING
+DAR-008,operations,current_CIP_and_additive_chemistry,MEDIUM,chemical inventory and dose rates,operator-approved records and SDS,OUTSTANDING
+DAR-009,ecology,current_ecological_monitoring_primary_data,HIGH,receiving-water and habitat time series,original monitoring records plus method,OUTSTANDING
+DAR-010,energy,hydraulic_unused_head_profile,MEDIUM,site hydraulic measurements,dated engineering survey,OUTSTANDING
+DAR-011,infrastructure,roof_structural_and_interconnection_limits,MEDIUM,structural and grid studies,signed site engineering record,OUTSTANDING
+DAR-012,compute,actual_PUE,MEDIUM,IT and facility energy boundary,measured metering over representative period,OUTSTANDING
+DAR-013,compute,WUE,MEDIUM,water use and IT load denominator,measured definition and period,OUTSTANDING
+DAR-014,compute,compute_cooling_water_source,HIGH,source and quality of cooling water,site flow map and permit receipt,OUTSTANDING
+DAR-015,energy,hourly_solar_compute_overlap,MEDIUM,hourly generation and load time series,aligned interval data and boundary,OUTSTANDING
+DAR-016,energy,PV_curtailment,MEDIUM,curtailment logs and interval meter data,operator/grid receipt,OUTSTANDING
+DAR-017,thermal,useful_heat_capture_fraction_and_temperatures,HIGH,heat source/sink temperatures and demand,paired calibrated time series and method,OUTSTANDING
+DAR-018,economics,model_service_benefit,MEDIUM,service output and credible counterfactual,contract plus price and utilization receipt,OUTSTANDING
+DAR-019,electricity,node_allocation_MW_MWh_price_eligible_load,HIGH,contracted capacity/energy and eligible loads,executed contract and meter boundary,OUTSTANDING
+DAR-020,biomass,food_waste_feed_tonnes_day_biogas_m3_year_methane_credit,HIGH,qualified source inventory and metered output,feed receipt plus gas meter and composition,OUTSTANDING
+DAR-021,nutrients,P_product_yield_N_recovery_compost_reclaimed_water,HIGH,product quality and actual flow/yield,lab assays and calibrated meters,OUTSTANDING
+DAR-022,wastewater,eligible_wastewater_stream_selection,HIGH,source/quality/rights and treatment selection,operator/regulatory approval plus assay,OUTSTANDING
+DAR-023,governance,operational_technology_integration_approval,HIGH,authorized scope and safety review,signed operator and regulatory approval,OUTSTANDING
+NEW-001,biomass,waste-only feedstock inventory by locality and current use,HIGH,wet/dry quantity seasonal quality ownership existing uses,source-specific receipts and soil-retention protocol,OPEN
+NEW-002,biomass,biomass constituent and conversion balance,HIGH,C/N/P/K/S inputs product residual emission energy,declared basis with reconciled balance and uncertainty,OPEN
+NEW-003,sludge_ash,treatment and construction-use qualification,HIGH,origin assay treatment leaching durability product acceptance,end-use/regulatory approvals and independent test,OPEN
+NEW-004,agronomy,stacked intervention overlap and trial datasets,HIGH,site-season factors control yield quality water economics,independent factorial/multi-site evidence,OPEN
+NEW-005,gas,LNG pipeline import split and volume-energy normalization,HIGH,composition density reference conditions LHV/HHV split,official data plus declared conversion method,OPEN
+NEW-006,helium,Dongjiakou BOG helium concentration and flow,HIGH,representative feed assays flow profile purity and recovery,operator data and third-party lab receipt,OPEN
+NEW-007,helium,SHRU process recovery/purity/energy/safety boundaries,HIGH,feed pressure impurity mix recovery purity downtime and energy,vendor and independent test at comparable boundaries,OPEN
+NEW-008,ethane,LNG composition basis and extracted-output receipts,HIGH,mol/mol vs mass plant throughput and product split,primary cargo analyses and metered output,OPEN
+NEW-009,mycoprotein,local reactor TEA and feed/food qualification,HIGH,CAPEX OPEX substrate pretreatment RNA/safety species trials,plant budget and regulator/lab receipts,OPEN
+NEW-010,SAF,waste-derived feedstock and certified fuel balance,HIGH,UCO/residue mass allocation lifecycle hydrogen output and offtake,certified chain of custody and production/airport records,OPEN
+NEW-011,QOL,worker/community/environmental baseline,HIGH,air noise heat health safety access water ecology and distribution,independent baseline with consent and methodology,OPEN
+NEW-012,finance,incremental local value added and opportunity cost,MEDIUM,local purchase payroll imported inputs capital counterfactual,transparent input-output/value-added account,OPEN
+NEW-013,GRV,independent fork/reproduction/adopter receipt,MEDIUM,replication tests engineering hours adaptation cost and outcomes,independent adopter receipt and counterfactual,OPEN
+NEW-014,policy,verify circular-economy and current resource targets,HIGH,authentic text/date/official interpretation,official source and exact target base/period,OPEN
+NEW-015,provenance,model/source-to-claim lineage packet,HIGH,raw input version reviewer correction promotion decision,dated checksummed review record,OPEN

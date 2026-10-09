@@ -1,0 +1,56 @@
+{
+  "schema_version": "0.2-proposal",
+  "scenario_id": "SYNTHETIC_WASTE_ONLY_ALLOCATION",
+  "status": "SYNTHETIC",
+  "mass_basis": "dry_metric_tonnes",
+  "time_period": "illustrative year; not a locality",
+  "waste_only_base_case": true,
+  "realized_credit_total": 0,
+  "source_lots": [
+    {
+      "source_lot_id": "SYN_STRAW_001",
+      "source_type": "crop straw",
+      "feedstock_class": "RESIDUE",
+      "waste_only_eligibility": "ELIGIBLE",
+      "dedicated_energy_crop": false,
+      "source_boundary": "synthetic region; no site relevance",
+      "wet_mass_t": 1250,
+      "dry_matter_fraction": 0.8,
+      "qualified_dry_mass_t": 1000,
+      "current_use": {
+        "use_name": "existing livestock feed obligation",
+        "quantity_dry_t": 200,
+        "evidence_class": "SYNTHETIC",
+        "receipt_ref": null
+      },
+      "soil_ecological_reserve_t": 400,
+      "existing_obligations_t": 200,
+      "collection_losses_t": 100,
+      "allocatable_dry_mass_t": 300,
+      "allocations": [
+        {"allocation_id": "SYN_ALLOC_BIO", "route": "BIO01", "allocated_dry_mass_t": 150, "status": "SYNTHETIC", "overlap_group": "SYN_STRAW_001"},
+        {"allocation_id": "SYN_ALLOC_SAF", "route": "SAF01", "allocated_dry_mass_t": 100, "status": "SYNTHETIC", "overlap_group": "SYN_STRAW_001"},
+        {"allocation_id": "SYN_ALLOC_OTHER", "route": "OTHER", "allocated_dry_mass_t": 50, "status": "SYNTHETIC", "overlap_group": "SYN_STRAW_001"}
+      ],
+      "constituent_balances": [
+        {"constituent": "C", "unit": "t C", "input": 63, "products": 30, "residuals": 25, "emissions": 8, "unaccounted": 0, "basis": "synthetic carbon in 150 dry t assigned to BIO01"},
+        {"constituent": "DRY_MATTER", "unit": "dry t", "input": 300, "products": 90, "residuals": 195, "emissions": 15, "unaccounted": 0, "basis": "synthetic aggregate across all routes; mutually exclusive output fates"}
+      ],
+      "source_receipts": [],
+      "ecological_gate": "UNKNOWN",
+      "rights_gate": "UNKNOWN",
+      "residual_fate": "Synthetic unresolved residuals; fixture not evidence of safe use",
+      "sludge_ash_gate": {
+        "applicable": false,
+        "treatment_status": "NOT_APPLICABLE",
+        "contaminant_assay_status": "UNKNOWN",
+        "leaching_test_status": "UNKNOWN",
+        "durability_status": "UNKNOWN",
+        "product_acceptance_status": "UNKNOWN",
+        "gate_status": "BLOCKED"
+      },
+      "agronomy_overlap_group": "SYN_TRIAL_GROUP_01"
+    }
+  ],
+  "notes": "Synthetic arithmetic only. Current feed use is recorded descriptively and already included in existing obligations; do not subtract twice."
+}
