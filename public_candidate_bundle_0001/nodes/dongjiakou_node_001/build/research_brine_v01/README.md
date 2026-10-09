@@ -25,3 +25,19 @@ LNG regasification provides a useful **cold sink**, not an intrinsically free he
 
 ## Checks and missing receipts
 Baseline and scenarios share the exact same feed. Missing measurements: actual intake/RO recovery, brine by-source elemental lab panels, waste alkaline stream tons/assay, feed pretreatment and fouling, MgOH2 purity, bromine oxidation/handling costs, brine residual disposition, industrial salt/KCl purity, firm internal agriculture demand vs external offtake, heat profiles, installed CAPEX, real OPEX and wastewater flow receipts. Reconcile with [DJK-W01 mineral audit](https://app.notion.com/p/3f40c1de73d9814bb6b7fff1b2c4c475?pvs=204). **No project impact, capital funding, throughput, zero liquid discharge achievement or profit is claimed.**
+
+## AGR01/CHEM01 multi-decade allocation v0.1 (added October 9)
+Run from build root:
+```bash
+python3 research_brine_v01/gypsum_allocation.py research_brine_v01/allocation_synthetic.json > /tmp/gypsum_30y.json
+python3 -m unittest discover -s research_brine_v01 -p 'test_*.py' -v
+```
+This 30-year scenario explores reclamation-demand decay, industrial acceptance, annual storage, a conservative national-sulfur-shortfall agricultural allocation cap, and a separate no-double-counting ledger. Synthetic example: 70,000 t/y *hypothetical qualified dry gypsum*; neither the input nor any allocation is a measured Dongjiakou result. All soil-test, field-trial, agricultural-batch-assay, drainage/consent, industrial-assay and acid-hub acceptance gates default to **false or null**: first run therefore outputs **0 t/y agriculture, 0 t/y acid, 70,000 t increment to inventory each year**, reaching 2.1 million theoretical tonnes after 30 years. Storage capacity, costs and degradation are not modeled: this default demonstrates missing evidence, **not an actionable recommendation to accumulate material**. A physical implementation must cap storage and route unqualified residuals lawfully.
+
+Model constraints:
+- Agriculture **0 t/ha default**, with allocated tonnes only when *every* soil-test, batch-specific product assay, field-trial, drainage-plan and farm-consent gate passes. Applications depend on site-specific soil chemistry; trial inputs are synthetic and must NOT be issued as fertilizer rates.
+- An industrial acid-feed allocation requires **measured** batch purity/moisture *and* verified regional hub acceptance. The placeholder industry limits (85% purity, 10% moisture) are **not an actual EPC specification**. Ag-related GB 38400-2019 and NY/T 525 may not govern mineral-gypsum directly: specific applicable fertilizer/soil-amendment requirements must be confirmed with Chinese regulators and agronomic inspectors. Heavy metals Cd/Pb/As/Cr/Hg, chloride, sodium, boron and anti-scalant contamination require tested acceptance before a true agricultural pass.
+- A structural national sulfur shortfall does **not** automatically eliminate verified and essential soil-reclamation requirements; in the synthetic example a tunable `sulfur_shortfall_ag_cap_fraction=0.4` is an **illustrative GOV01 policy scenario**, not an adopted rule. Approved governance should balance actual soil/watershed benefit and national sulfur need, not blindly favor unqualified acid feed.
+- Production, crop-class demand, product quality, regulatory permits, real national balance and cold-energy access are independent evidence gates. National import elimination requires actual trade statistics; no modeled mass becomes verified import displacement.
+- Batch-level multi-product optimization, dynamic reserves, independent sampling receipt formats, actual projected multi-year national sulfur demand, storage costs, risk and process energy are **out of scope** for this research prototype.
+- Branch-only new module and tests; the original locality simulator remains intact. Tests are **authored but not verified executed**. Mandatory local/CI test and peer review before PR promotion.
