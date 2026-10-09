@@ -64,3 +64,32 @@ These requests supplement the23 existing plant-specific unknowns and eight QOL r
 - **S10:**2018Energy paper, [original publisher record](https://www.sciencedirect.com/science/article/pii/S0360544218307308), DOI10.1016/j.energy.2018.04.114. Upstream natural-gas/helium process analysis; not a Qingdao terminal assay.
 
 Access limitation/source lead:2025Ordos [economic analysis](http://syhgsj.sei.com.cn/EN/Y2025/V42/I1/1). No economics promoted from an inaccessible page. Third-party commercial "zero pollution" claims and numeric trade estimates remain unverified.
+
+
+## Semiconductor recovery and acoustic monitoring — follow-up review
+
+Added2026-10-09UTC / October8local. The user's subsequent DeepSeek handoff supplies additional candidate technology leads. Review separates recovery from detection, equipment performance from facility performance, and patent descriptions from field results.
+
+| Lead | Verified part | Scope/remaining uncertainty |
+|---|---|---|
+|Nanjing University Kagome sensor, DOI10.1063/5.0288849 |AIP's December2025 publisher report describes resonant acoustic corner-state shifts and laboratory2D leak orientation [S11] |Experimental sensor reference; portable/3D versions described as future work. No verified fab deployment, site leak threshold, helium-temperature cryogenic qualification or recovery improvement. Exact26°C to−34°C range was not independently recovered from the full paper here. |
+|Gadro helium charging/recovery |Manufacturer advertises ≥95% and up to98% recovery in workpiece leak-testing systems [S12] |Supplier performance claim for a bounded test cycle. Neither whole-fab CVD/etch exhaust performance nor independently established zero emissions. |
+|Samsung semiconductor exhaust recycling patent |KR20240172648A describes scrubber treatment, fractionation, downstream purification, composition checks and return to semiconductor equipment [S13] |Patent-described method, not a measured85–92% result. Claimed getter-bed temperatures/materials were not verified in this record. |
+|Lam plasma-processing gas recycling |JP2025528866A describes membrane-based recycling with a graphene He/H₂-containing fraction and temperature-control embodiments [S14] |Patent-described process option. This does not demonstrate a commercial graphene installation or establish pure-He selectivity againstH₂ and whole-process recovery. |
+|MSA Observer-i ultrasound detector |Manufacturer lists helium and detection of pressurized-gas leaks from2bar [S15] |Pressure-driven ultrasonic leak noise is different from the Kagome sensor's composition/resonance response. No blanket10⁻⁴–10⁻⁵cm³/s microleak threshold supported here. |
+
+**Citation correction:** the supplied `KR20240000001` resolves to [KR20240000001A: Headliner material for vehicles](https://patents.google.com/patent/KR20240000001A/en), not semiconductor helium recycling. Preserve this as a source mismatch; use the relevant Samsung record only for what it actually describes. Patent existence is not a license to implement or a performance receipt.
+
+**Scope of acoustic benefit:** detecting a leak can support earlier isolation or repair; the acoustic sensor alone does not recover gas. Measure leak onset, alarm/confirmation/isolation/repair times, before/after leak rates, false alarms, detection coverage and sensor downtime. Do not assign95% recovery because acoustic monitoring exists. Any avoided loss needs a measured rate/time comparison and remains zero-credit until documented.
+
+**Facility accounting:** eligible-use coverage, exhaust collection, separation recovery, purity-qualified reuse and distribution losses are separate factors. Equipment-level98% recovery cannot be substituted for all of them. For independent serial efficiency definitions, illustrative end-to-end return is collection × separation × qualified-reuse × delivery-retention; do not multiply again when a reported efficiency already covers the combined boundary. Use actual metered inventories and fresh make-up to validate the result. The proposed40% to85–95% whole-fab improvement, mandatory85% national threshold, semiconductor demand share and quoted pricing/market sizes remain unverified in this review.
+
+**Local applicability:** this is a downstream customer/recovery candidate, not proof that Dongjiakou produces helium. No current physical stream, graph count, local output or realized credit changes.
+
+Additional primary-source references:
+
+- **S11:** [AIP publisher research announcement](https://publishing.aip.org/publications/latest-content/using-sound-waves-to-detect-helium/), December17,2025; paper DOI10.1063/5.0288849. Full-paper retrieval failed in this session; use publisher description only for reviewed claims.
+- **S12:** [Gadro manufacturer product description](https://www.gadrodetection.com/helium-recovery-system/), retrievedOctober9,2026; leak-test workpiece recovery, supplier claims.
+- **S13:** [Samsung patent text KR20240172648A](https://patents.google.com/patent/KR20240172648A/en), publicationDecember10,2024; descriptive technical content, not independently verified operating performance or legal-status opinion.
+- **S14:** [Lam patent text JP2025528866A](https://patents.google.com/patent/JP2025528866A/en), publicationSeptember2,2025; translated embodiments, not deployment proof or legal-status opinion.
+- **S15:** [MSA Observer-i manufacturer description](https://us.msasafety.com/Fixed-Gas-%26-Flame-Detection/Leak-Detectors/Observer-i-Ultrasonic-Gas-Leak-Detector/p/000140006900001005), retrievedOctober9,2026; helium supported, pressure requirement and specified environmental range.

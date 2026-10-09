@@ -136,6 +136,66 @@
       "local_verified": false,
       "local_output": null,
       "realized_credit": 0
+    },
+    {
+      "claim_id": "HE-SENSOR-001",
+      "evidence_state": "PUBLISHED_LABORATORY_REFERENCE",
+      "sources": [
+        "https://publishing.aip.org/publications/latest-content/using-sound-waves-to-detect-helium/"
+      ],
+      "scope": "Kagome resonant composition sensor and2D orientation; no commercial fab recovery effect",
+      "reference_values": {},
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
+    },
+    {
+      "claim_id": "HE-RECOVERY-001",
+      "evidence_state": "SUPPLIER_EQUIPMENT_CLAIM",
+      "sources": [
+        "https://www.gadrodetection.com/helium-recovery-system/"
+      ],
+      "scope": "Workpiece leak-test recovery; ≥95% / up to98% manufacturer claims, not full-fab exhaust recovery",
+      "reference_values": {},
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
+    },
+    {
+      "claim_id": "HE-PATENT-001",
+      "evidence_state": "PATENT_DESCRIBED_METHOD",
+      "sources": [
+        "https://patents.google.com/patent/KR20240172648A/en"
+      ],
+      "scope": "Samsung process-exhaust recycling; no85–92% result established",
+      "reference_values": {},
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
+    },
+    {
+      "claim_id": "HE-PATENT-002",
+      "evidence_state": "PATENT_DESCRIBED_METHOD",
+      "sources": [
+        "https://patents.google.com/patent/JP2025528866A/en"
+      ],
+      "scope": "Lam membrane gas recycling embodiments; no commercial recovery percentage established",
+      "reference_values": {},
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
+    },
+    {
+      "claim_id": "HE-SENSOR-002",
+      "evidence_state": "MANUFACTURER_SPECIFICATION",
+      "sources": [
+        "https://us.msasafety.com/Fixed-Gas-%26-Flame-Detection/Leak-Detectors/Observer-i-Ultrasonic-Gas-Leak-Detector/p/000140006900001005"
+      ],
+      "scope": "Ultrasonic pressure-driven leak detection from2bar; no asserted universal microleak sensitivity",
+      "reference_values": {},
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
     }
   ],
   "requests": [
@@ -178,6 +238,11 @@
       "request_id": "SLUDGE-DR-02",
       "description": "Applicable standard edition, use scope and environmental/product acceptance",
       "state": "OPEN"
+    },
+    {
+      "request_id": "HE-DR-05",
+      "description": "Customer-process collection, purification, qualified reuse and distribution inventories; sensor detection and repair effectiveness",
+      "state": "OPEN"
     }
   ],
   "held_claims": [
@@ -188,7 +253,21 @@
     "Less-than3-year payback and quoted prices/CAPEX",
     "Crisis price/import statistics",
     "Zero pollution/zero waste",
-    "Local sludge qualification"
+    "Local sludge qualification",
+    "Whole-fab40% to85–95% improvement",
+    "National mandatory85% utilization target",
+    "Universal acoustic10^-4 to10^-5cm3/s leak sensitivity",
+    "Quoted KR20240000001 getter-bed/recovery results",
+    "Kagome commercial/3D or helium-cryogenic deployment"
   ],
-  "accounting_rule": "Conserve helium inventory; internal return is not new primary production. Avoided fresh makeup requires a matched baseline and nonduplicated transfer records."
+  "accounting_rule": "Conserve helium inventory; internal return is not new primary production. Avoided fresh makeup requires a matched baseline and nonduplicated transfer records.",
+  "source_mismatches": [
+    {
+      "supplied_identifier": "KR20240000001",
+      "resolved_identifier": "KR20240000001A",
+      "actual_subject": "Headliner material for vehicles",
+      "source": "https://patents.google.com/patent/KR20240000001A/en",
+      "helium_claim_supported": false
+    }
+  ]
 }
