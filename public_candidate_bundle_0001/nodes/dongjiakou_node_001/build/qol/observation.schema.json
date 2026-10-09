@@ -1,0 +1,503 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "0.1"
+      ]
+    },
+    "node_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "boundary_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "baseline_period_end": {
+      "type": "string",
+      "minLength": 1
+    },
+    "followup_period_end": {
+      "type": "string",
+      "minLength": 1
+    },
+    "comparison": {
+      "type": "object",
+      "properties": {
+        "design": {
+          "enum": [
+            "UNKNOWN",
+            "OBSERVATIONAL",
+            "CONTROLLED_ALIGNED"
+          ]
+        },
+        "source": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "design",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "minimum_public_cohort_n": {
+      "type": "integer",
+      "minimum": 10
+    },
+    "required_strata": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "gates": {
+      "type": "object",
+      "properties": {
+        "worker_safety": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "UNKNOWN",
+                "PASS",
+                "FAIL"
+              ]
+            },
+            "source": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        "ecological_protection": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "UNKNOWN",
+                "PASS",
+                "FAIL"
+              ]
+            },
+            "source": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        "privacy_and_consent": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "UNKNOWN",
+                "PASS",
+                "FAIL"
+              ]
+            },
+            "source": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        "access_and_non_displacement": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "UNKNOWN",
+                "PASS",
+                "FAIL"
+              ]
+            },
+            "source": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        "water_and_product_safety": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "UNKNOWN",
+                "PASS",
+                "FAIL"
+              ]
+            },
+            "source": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "source"
+          ],
+          "additionalProperties": false
+        },
+        "maintenance_and_lifecycle": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "enum": [
+                "UNKNOWN",
+                "PASS",
+                "FAIL"
+              ]
+            },
+            "source": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "status",
+            "source"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "worker_safety",
+        "ecological_protection",
+        "privacy_and_consent",
+        "access_and_non_displacement",
+        "water_and_product_safety",
+        "maintenance_and_lifecycle"
+      ],
+      "additionalProperties": false
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "indicator_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "stratum": {
+            "type": "string",
+            "minLength": 1
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1
+          },
+          "baseline": {
+            "type": "object",
+            "properties": {
+              "low": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "high": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "evidence_class": {
+                "enum": [
+                  "UNKNOWN",
+                  "MEASURED_LOCAL",
+                  "REPORTED_REFERENCE",
+                  "MODELED",
+                  "SYNTHETIC"
+                ]
+              },
+              "source": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "method": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "boundary_id": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "period_end": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "protocol_id": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "low",
+              "high",
+              "evidence_class",
+              "source",
+              "method",
+              "boundary_id",
+              "period_end",
+              "protocol_id"
+            ],
+            "additionalProperties": false
+          },
+          "followup": {
+            "type": "object",
+            "properties": {
+              "low": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "high": {
+                "anyOf": [
+                  {
+                    "type": "number"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "evidence_class": {
+                "enum": [
+                  "UNKNOWN",
+                  "MEASURED_LOCAL",
+                  "REPORTED_REFERENCE",
+                  "MODELED",
+                  "SYNTHETIC"
+                ]
+              },
+              "source": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "method": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "boundary_id": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "period_end": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "protocol_id": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "low",
+              "high",
+              "evidence_class",
+              "source",
+              "method",
+              "boundary_id",
+              "period_end",
+              "protocol_id"
+            ],
+            "additionalProperties": false
+          },
+          "sample_n": {
+            "anyOf": [
+              {
+                "type": "integer",
+                "minimum": 0
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "indicator_id",
+          "stratum",
+          "unit",
+          "baseline",
+          "followup",
+          "sample_n"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "node_id",
+    "boundary_id",
+    "baseline_period_end",
+    "followup_period_end",
+    "comparison",
+    "minimum_public_cohort_n",
+    "required_strata",
+    "gates",
+    "observations"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Aggregated QOL outcomes and safeguards; no individual health or location records"
+}

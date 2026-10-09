@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "enum": [
+        "0.1"
+      ]
+    },
+    "packet_type": {
+      "enum": [
+        "LOCALITY_REVIEW_SNAPSHOT"
+      ]
+    },
+    "node_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_class": {
+      "enum": [
+        "SIMULATED"
+      ]
+    },
+    "publication_status": {
+      "enum": [
+        "PUBLIC_REVIEW_CANDIDATE"
+      ]
+    },
+    "authority": {
+      "enum": [
+        "NONE"
+      ]
+    },
+    "source_revision": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 40
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "source_revision_verified": {
+      "enum": [
+        false
+      ]
+    },
+    "payload_sha256": {
+      "type": "string",
+      "minLength": 64
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "READ_PUBLIC_EVIDENCE",
+          "RUN_OFFLINE_SCENARIOS",
+          "EXPORT_REVIEW_PACKET"
+        ]
+      }
+    },
+    "actuator_authority": {
+      "enum": [
+        false
+      ]
+    },
+    "provider_calls": {
+      "enum": [
+        0
+      ]
+    },
+    "model_calls": {
+      "enum": [
+        0
+      ]
+    },
+    "invariant_namespace": {
+      "enum": [
+        "djk-locality-001"
+      ]
+    },
+    "payload": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "packet_type",
+    "node_id",
+    "evidence_class",
+    "publication_status",
+    "authority",
+    "source_revision",
+    "source_revision_verified",
+    "payload_sha256",
+    "capabilities",
+    "actuator_authority",
+    "provider_calls",
+    "model_calls",
+    "invariant_namespace",
+    "payload"
+  ],
+  "additionalProperties": false
+}

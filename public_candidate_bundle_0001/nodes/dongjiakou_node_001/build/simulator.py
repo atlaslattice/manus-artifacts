@@ -681,6 +681,10 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("locality", help="emit the Dongjiakou locality stream register")
     sub.add_parser("receipts", help="emit the field-research receipt ledger")
     sub.add_parser("all", help="manifest + reproduce + validate + unknowns")
+    packet_p = sub.add_parser("packet", help="offline OS integration review envelope")
+    packet_p.add_argument("--revision")
+    qol_p = sub.add_parser("qol", help="first-class human/ecological outcome vector")
+    qol_p.add_argument("scenario", nargs="?", type=Path)
     sub.add_parser("current", help="reviewed current locality overlay as JSON")
     gap_p = sub.add_parser("gap", help="needs-matched resource-gap scenario as JSON")
     gap_p.add_argument("scenario", type=Path)
@@ -690,6 +694,17 @@ def main(argv: list[str] | None = None) -> int:
 
     args = parser.parse_args(argv)
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+
+    if args.command == "packet":
+        from models.integration import packet
+        print(json.dumps(packet(args.revision),indent=2,allow_nan=False))
+        return 0
+
+    if args.command == "qol":
+        from models.qol import evaluate
+        case = json.loads(args.scenario.read_text()) if args.scenario else None
+        print(json.dumps(evaluate(case), indent=2, allow_nan=False))
+        return 0
 
     if args.command == "current":
         from models.current_state import run

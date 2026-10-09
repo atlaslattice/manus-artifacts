@@ -1,0 +1,43 @@
+{
+  "status": "SCHEMA_PUBLIC_REVIEW_CANDIDATE",
+  "review_date_utc": "2026-10-09",
+  "references": [
+    {
+      "repository": "atlaslattice/continuum-os",
+      "branch": "main",
+      "commit": "26e166a169036b03e4731ad5d5e283fc441ad586",
+      "review_depth": "README inspection; runtime not independently built or tested"
+    },
+    {
+      "repository": "atlaslattice/aluminum-os",
+      "branch": "master",
+      "commit": "562f80e05472005516f7532306a516f2fa30dfdb",
+      "review_depth": "README inspection; runtime not independently built or tested"
+    },
+    {
+      "repository": "atlaslattice/aluminum-os-v3",
+      "branch": "main",
+      "commit": "deb6dfc225e05082c5015cb32ba918e7a465c9ea",
+      "review_depth": "README inspection; runtime not independently built or tested"
+    },
+    {
+      "repository": "atlaslattice/uws",
+      "branch": "uws-universal",
+      "commit": "dbc89bd1a3d7727a04cf7cf30e1401ee9b118a0f",
+      "review_depth": "README inspection; runtime not independently built or tested"
+    }
+  ],
+  "additional_sources": [
+    {
+      "repository": "atlaslattice/manus-artifacts",
+      "commit": "85f06406c724067ef917c55761ba5ff4354409ef",
+      "path": "archive/forks/dragonseek-os/repo-seed/DRAGONSEEK_OS_FORK_SPEC_v0.1.md",
+      "status": "ARCHIVED_CANDIDATE_DIALECT_SPEC"
+    },
+    {
+      "name": "Atlas Intelligence",
+      "repository": null,
+      "status": "EXACT_RUNTIME_REPOSITORY_NOT_LOCATED_BY_FOCUSED_SEARCH"
+    }
+  ]
+}
