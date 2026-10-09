@@ -1,0 +1,78 @@
+{
+  "status": "SYNTHETIC_NON_CANON",
+  "intake_m3_day": 250000,
+  "days_year": 365,
+  "water_recovery_fraction": 0.4,
+  "intake_mg_l": {
+    "Mg": 1350,
+    "Br": 67,
+    "K": 390,
+    "NaCl": 27000
+  },
+  "baseline_opex_usd_m3_brine": 1.5,
+  "baseline_disposal_cost_usd_m3_brine": 0.2,
+  "products": {
+    "magnesium_hydroxide": {
+      "feed_element": "Mg",
+      "capture_fraction": 0.55,
+      "product_t_per_element_t": 2.3994651306315573,
+      "network_use_fraction": 0.8,
+      "external_price_usd_t": 650,
+      "production_and_delivery_cost_usd_t": 480
+    },
+    "bromine": {
+      "feed_element": "Br",
+      "capture_fraction": 0.55,
+      "product_t_per_element_t": 1,
+      "network_use_fraction": 0.2,
+      "external_price_usd_t": 2500,
+      "production_and_delivery_cost_usd_t": 1500
+    },
+    "potassium_chloride": {
+      "feed_element": "K",
+      "capture_fraction": 0.35,
+      "product_t_per_element_t": 1.9067727249475677,
+      "network_use_fraction": 0.8,
+      "external_price_usd_t": 320,
+      "production_and_delivery_cost_usd_t": 260
+    },
+    "sodium_chloride": {
+      "feed_element": "NaCl",
+      "capture_fraction": 0.4,
+      "product_t_per_element_t": 1,
+      "network_use_fraction": 0.7,
+      "external_price_usd_t": 48,
+      "production_and_delivery_cost_usd_t": 43
+    }
+  },
+  "scenarios": {
+    "A": {
+      "active_products": [],
+      "heat_saving_usd_m3_brine": 0,
+      "avoided_disposal_usd_m3_brine": 0,
+      "incremental_fixed_opex_usd_y": 0,
+      "incremental_capex_usd": 0
+    },
+    "B": {
+      "active_products": [
+        "magnesium_hydroxide"
+      ],
+      "heat_saving_usd_m3_brine": 0.12,
+      "avoided_disposal_usd_m3_brine": 0.05,
+      "incremental_fixed_opex_usd_y": 250000,
+      "incremental_capex_usd": 4500000
+    },
+    "C": {
+      "active_products": [
+        "magnesium_hydroxide",
+        "bromine",
+        "potassium_chloride",
+        "sodium_chloride"
+      ],
+      "heat_saving_usd_m3_brine": 0.35,
+      "avoided_disposal_usd_m3_brine": 0.12,
+      "incremental_fixed_opex_usd_y": 1500000,
+      "incremental_capex_usd": 35000000
+    }
+  }
+}
