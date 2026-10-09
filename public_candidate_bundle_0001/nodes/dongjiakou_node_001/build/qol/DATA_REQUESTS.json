@@ -1,0 +1,45 @@
+{
+  "status": "REVIEW_CANDIDATE",
+  "receipts": [
+    {
+      "id": "QOL-DAR-001",
+      "status": "OUTSTANDING",
+      "requirement": "Service-area/population/receptor boundary and denominators; separate residents, workers, migrants, shifts, disability and income strata without adding overlapping cohorts."
+    },
+    {
+      "id": "QOL-DAR-002",
+      "status": "OUTSTANDING",
+      "requirement": "Locally translated, cognitively tested voluntary survey; sampling, nonresponse and comparison protocol; privacy, consent, retention and health-only purpose limitation."
+    },
+    {
+      "id": "QOL-DAR-003",
+      "status": "OUTSTANDING",
+      "requirement": "Dated ambient air, receptor noise and heat series with calibration, exposure windows and matched meteorological/seasonal comparison."
+    },
+    {
+      "id": "QOL-DAR-004",
+      "status": "OUTSTANDING",
+      "requirement": "Current green/blue-space GIS, safe walking routes, barrier-free access and opening hours; park/industrial/residential land classification and applicable Qingdao standards."
+    },
+    {
+      "id": "QOL-DAR-005",
+      "status": "OUTSTANDING",
+      "requirement": "Housing affordability/crowding, decent-work/safety, food quality/access and education/culture access baselines and distribution."
+    },
+    {
+      "id": "QOL-DAR-006",
+      "status": "OUTSTANDING",
+      "requirement": "Local soil, irrigation water, wind, salt deposition, dust, runoff/leachate, native provenance and contamination screen before greening or food production."
+    },
+    {
+      "id": "QOL-DAR-007",
+      "status": "OUTSTANDING",
+      "requirement": "Full seasonal pilot/control comparison, survival, replacement, measured use/restorativeness and independent ecological condition series."
+    },
+    {
+      "id": "QOL-DAR-008",
+      "status": "OUTSTANDING",
+      "requirement": "Funding/stewardship owner, maintenance labor, irrigation load, lifecycle cost, failure/removal plan and non-displacement/affordable-access safeguards."
+    }
+  ]
+}
