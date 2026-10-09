@@ -41,7 +41,7 @@
         "density_kg_per_standard_m3": {"type": ["number", "null"], "exclusiveMinimum": 0},
         "normalized_standard_m3": {"type": ["number", "null"], "minimum": 0},
         "energy_lhv_mj": {"type": ["number", "null"], "minimum": 0},
-        "conversion_method": {"type": ["string", "null]},
+        "conversion_method": {"type": ["string", "null"]},
         "source_receipt_refs": {"type": "array", "items": {"type": "string"}, "uniqueItems": true}
       }
     },
