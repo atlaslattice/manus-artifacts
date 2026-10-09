@@ -1,0 +1,204 @@
+{
+  "specification": "SHRU",
+  "version": "0.1",
+  "status": "PUBLIC_REVIEW_CANDIDATE",
+  "canon": false,
+  "deployment": false,
+  "certified": false,
+  "industry_ratified": false,
+  "vendor_neutral": true,
+  "authority": "NONE",
+  "runtime_connected": false,
+  "realized_credit": 0,
+  "modules": [
+    {
+      "id": "M1",
+      "role": "Capture and conditioning",
+      "evidence_state": "FEED_SPECIFIC_DESIGN_REQUIRED",
+      "interfaces": [
+        "segregated_feed",
+        "abatement_boundary",
+        "collected_helium"
+      ]
+    },
+    {
+      "id": "M2",
+      "role": "Purification",
+      "evidence_state": "FEED_SPECIFIC_DESIGN_REQUIRED",
+      "interfaces": [
+        "conditioned_feed",
+        "qualified_product",
+        "reject",
+        "regeneration"
+      ]
+    },
+    {
+      "id": "M3",
+      "role": "Buffer and return",
+      "evidence_state": "CUSTOMER_ACCEPTANCE_REQUIRED",
+      "interfaces": [
+        "qualified_product",
+        "customer_return",
+        "fresh_makeup",
+        "stock"
+      ]
+    },
+    {
+      "id": "M4",
+      "role": "Monitoring and bounded control",
+      "evidence_state": "SITE_VALIDATION_REQUIRED",
+      "interfaces": [
+        "metered_inventory",
+        "quality",
+        "leak_alarm",
+        "review_receipt"
+      ]
+    },
+    {
+      "id": "R1",
+      "role": "Optional smart-seal research",
+      "evidence_state": "EXPERIMENTAL_NOT_PRODUCTION",
+      "interfaces": [
+        "coupon_measurements",
+        "proposed_trigger",
+        "post_repair_helium_test"
+      ]
+    }
+  ],
+  "feed_profiles": [],
+  "rated_envelope": {
+    "flow_Nm3_h": null,
+    "normal_reference_conditions": null,
+    "helium_fraction": null,
+    "pressure_bar_absolute": null,
+    "temperature_K": null,
+    "impurities": null,
+    "footprint": null
+  },
+  "performance": {
+    "eligible_use_coverage": null,
+    "collection_fraction": null,
+    "separation_recovery": null,
+    "purity_qualified_return": null,
+    "distribution_retention": null,
+    "whole_system_recovery": null,
+    "accepted_product_specification": null,
+    "annual_operating_hours": null,
+    "CAPEX": null,
+    "OPEX": null,
+    "payback_months": null
+  },
+  "accounting": {
+    "stock_change_required": true,
+    "baseline_recycling_required": true,
+    "internal_return_is_primary_production": false,
+    "recovery_boundary_required": true,
+    "impurity_specific_acceptance_required": true
+  },
+  "ai_interface": {
+    "permitted": [
+      "read_aggregate_telemetry",
+      "flag_anomaly",
+      "propose_maintenance",
+      "export_review_receipt"
+    ],
+    "actuator_authority": false,
+    "model_triggered_heating_allowed": false,
+    "model_triggered_agent_release_allowed": false
+  },
+  "research_extension": {
+    "smart_healing_product_verified": false,
+    "helium_tightness_verified": false,
+    "cryogenic_envelope_verified": false,
+    "capsule_injection_authorized": false,
+    "required_measurements": [
+      "pre_post_leak_rate",
+      "helium_permeability",
+      "outgassing_particles",
+      "temperature_pressure_vacuum_cycles",
+      "repeatability",
+      "repair_time",
+      "energy_and_thermal_load"
+    ]
+  },
+  "sources": [
+    {
+      "id": "SHRU-S01",
+      "state": "SUPPLIER_NATURAL_GAS_PRODUCT_DESCRIPTION",
+      "url": "https://advancedseparations.airliquide.com/sites/alas/files/2023-11/natural-gas-helium-brochure-en-02.22-sd-1.pdf"
+    },
+    {
+      "id": "SHRU-S02",
+      "state": "PATENT_DESCRIBED_SEAL_SENSOR",
+      "url": "https://patents.google.com/patent/US7180227B2/en"
+    },
+    {
+      "id": "SHRU-S03",
+      "state": "LABORATORY_SMART_HEALING_RESEARCH",
+      "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/adma.202513641"
+    },
+    {
+      "id": "SHRU-S04",
+      "state": "PRE_PROTOTYPE_DISCLOSURE",
+      "url": "https://www.tdcommons.org/dpubs_series/11509/"
+    },
+    {
+      "id": "SHRU-S05",
+      "state": "LABORATORY_PIB_PHOTOVOLTAIC_RESEARCH",
+      "url": "https://pubs.acs.org/doi/10.1021/am508096c"
+    }
+  ],
+  "open_receipts": [
+    {
+      "id": "SHRU-DR01",
+      "state": "OPEN",
+      "description": "Customer process and baseline recycling"
+    },
+    {
+      "id": "SHRU-DR02",
+      "state": "OPEN",
+      "description": "Segregated feed assays and variability"
+    },
+    {
+      "id": "SHRU-DR03",
+      "state": "OPEN",
+      "description": "Integration, abatement and pressure boundary"
+    },
+    {
+      "id": "SHRU-DR04",
+      "state": "OPEN",
+      "description": "Purification performance and impurity acceptance"
+    },
+    {
+      "id": "SHRU-DR05",
+      "state": "OPEN",
+      "description": "Balanced return, makeup and residual inventories"
+    },
+    {
+      "id": "SHRU-DR06",
+      "state": "OPEN",
+      "description": "Utilities, sizing, economics and maintenance"
+    },
+    {
+      "id": "SHRU-DR07",
+      "state": "OPEN",
+      "description": "Current standards and independent acceptance"
+    },
+    {
+      "id": "SHRU-DR08",
+      "state": "OPEN",
+      "description": "Optional smart-seal helium coupon and cycling data"
+    }
+  ],
+  "held_claims": [
+    "Universal fab plug-and-play",
+    "Pre-certified unit",
+    "Guaranteed90–98% whole-fab recovery",
+    "Universal5N–6N return quality",
+    "12–18month payback",
+    "China/Korea new-fab mandate and85% target",
+    "Commercial piezo O-ring proof from patent",
+    "Helium-impermeable self-healing polymer",
+    "ACTIS working cryogenic product"
+  ]
+}

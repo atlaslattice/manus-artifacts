@@ -61,3 +61,7 @@ Read [QOL_EDEN_STANDARD_v0.1](qol/QOL_EDEN_STANDARD_v0_1.md), the [schema](qol/o
 ## OS integration review seam
 
 `python simulator.py packet` exports a content-hashed offline locality/QOL envelope for future Continuum/Aluminum/UWS/DragonSeek consumers. It makes zero provider/model calls and grants no actuator authority. [Integration contract and component references](integration/OS_INTEGRATION_CONTRACT_v0_1.md). Connected adapters and AtlasSeek/DragonSeek2.0 model training remain proposed.
+
+## SHRU open interface candidate
+
+The proposed Symbiotic Helium Recovery Unit standardizes feed-specific capture, purification, qualified return and evidence interfaces. Read the [human-readable specification](shru/SHRU_SPEC_v0_1.md) and [machine-readable profile](shru/profile.json). Rated performance and certification remain unknown; smart-seal sensing/healing is a separate experimental extension. No physical connection or actuator authority is introduced.
