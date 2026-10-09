@@ -27,7 +27,8 @@ def run(d):
     deferred_ind=industrial["assay_measured"] is not True or industrial["hub_acceptance_verified"] is not True
     reserved=str(national["balance_s_equivalent_t_y"] is None)
     for y in range(1,years+1):
-        available=annual+inventory
+        opening_inventory=inventory
+        available=annual+opening_inventory
         justified=[]
         for z in classes:
             proven=(z["soil_test_measured"] is True and z["ag_product_batch_assay_pass"] is True
@@ -49,7 +50,7 @@ def run(d):
         remaining=available-alloc_ag
         alloc_acid=remaining if qualified_ind else 0.0
         inventory=remaining-alloc_acid
-        assert abs(annual+(output[-1]["closing_inventory_t"] if output else 0)-alloc_ag-alloc_acid-inventory)<1e-6
+        assert abs(annual+opening_inventory-alloc_ag-alloc_acid-inventory)<1e-6
         output.append({"year":y,"available_gypsum_t":round(available,3),
            "ag_assayed_soil_demand_t":round(total_ag_demand,3),
            "ag_allocated_t":round(alloc_ag,3),"ag_by_soil_class_t":ag_classes,
