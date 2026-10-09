@@ -38,6 +38,8 @@ Pure gypsum dihydrate has a theoretical H2SO4-equivalent ceiling of approximatel
 ## Review, citations and missing data
 
 - [Evidence appendix and promotion decisions](review/EVIDENCE_APPENDIX.md)
+- [Helium, two cold-energy projects and sludge: transcript review](review/HELIUM_COLD_SLUDGE_REVIEW_2026-10-09.md)
+- [Machine-readable helium/cold/sludge claims and open receipts](review/helium_cold_sludge_review_2026-10-09.json)
 - [Machine-readable evidence updates](review/evidence_updates_2026-10-08.json)
 - [23 original data requests, reconciled](review/unknown_reconciliation_2026-10-08.json)
 - [Notion retrieval reference index](review/notion_reference_index_2026-10-08.json)

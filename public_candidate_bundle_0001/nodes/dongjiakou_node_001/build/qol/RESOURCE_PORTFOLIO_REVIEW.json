@@ -32,7 +32,9 @@
         "energy/exergy and existing cold-allocation rights",
         "contract/offtake",
         "residual/methane leakage"
-      ]
+      ],
+      "technology_reference_state": "SUPPLIER_REPORTED_OPERATION_ELSEWHERE_AND_PUBLISHED_NUMERICAL_RESEARCH",
+      "review_register": "../review/helium_cold_sludge_review_2026-10-09.json"
     },
     {
       "resource": "phosphorus",
@@ -65,11 +67,21 @@
   ],
   "unverified_handoff_claims": [
     "iodine89–91%,8300t demand,900t output",
-    "helium85%,490% price rise and July2026 export halt",
+    "helium85%,490% price rise",
     "phosphate998100t,+30%,Egypt97.7% in May2026",
     "cobalt85–95%,DRC97%+,April98% decline",
     "chromium>99%,SouthAfrica80%",
     "copper77%"
   ],
-  "rule": "Neither node-candidate nor buffer-candidate status is proof of available feed, feasible conversion, supply or demand. No unverified trade numbers are engine inputs."
+  "rule": "Neither node-candidate nor buffer-candidate status is proof of available feed, feasible conversion, supply or demand. No unverified trade numbers are engine inputs.",
+  "verified_policy_references": [
+    {
+      "resource": "helium",
+      "status": "OFFICIAL_POLICY",
+      "announcement": "MOFCOM/Customs2026No.29",
+      "effective_date": "2026-07-10",
+      "scope": "Temporary export prohibition; no node feed/yield established",
+      "source": "https://www.mofcom.gov.cn/zcfb/zc/art/2026/art_ba9f7df9a0cb4c00aa1aa6f3b0741328.html"
+    }
+  ]
 }
