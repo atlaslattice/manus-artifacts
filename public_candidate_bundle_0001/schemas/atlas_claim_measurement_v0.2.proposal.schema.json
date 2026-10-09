@@ -35,7 +35,7 @@
       "properties": {
         "raw_quantity": {"type": ["number", "null"], "minimum": 0},
         "raw_unit": {"enum": ["kg", "metric_tonne", "Nm3", "Sm3", "bcm", "unknown"]},
-        "standard_state": {"type": ["string", "null]},
+        "standard_state": {"type": ["string", "null"]},
         "gas_composition_basis": {"enum": ["mole_fraction", "mass_fraction", "not_applicable", "unknown"]},
         "composition": {"type": "object", "additionalProperties": {"type": ["number", "null"], "minimum": 0}},
         "density_kg_per_standard_m3": {"type": ["number", "null"], "exclusiveMinimum": 0},
