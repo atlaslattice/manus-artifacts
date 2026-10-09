@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.2-proposal",
+  "scenario_id": "NEGATIVE_DEDICATED_CROP_WASTE_ONLY",
+  "status": "SYNTHETIC",
+  "mass_basis": "dry_metric_tonnes",
+  "time_period": "negative fixture",
+  "waste_only_base_case": true,
+  "realized_credit_total": 0,
+  "source_lots": [
+    {
+      "source_lot_id": "NEG_CROP_001",
+      "source_type": "purpose-grown fuel crop",
+      "feedstock_class": "DEDICATED_CROP",
+      "waste_only_eligibility": "INELIGIBLE",
+      "dedicated_energy_crop": true,
+      "source_boundary": "negative-test fixture only",
+      "wet_mass_t": 100,
+      "dry_matter_fraction": 0.9,
+      "qualified_dry_mass_t": 90,
+      "current_use": {"use_name": "cultivated for energy", "quantity_dry_t": 0, "evidence_class": "SYNTHETIC", "receipt_ref": null},
+      "soil_ecological_reserve_t": 0,
+      "existing_obligations_t": 0,
+      "collection_losses_t": 0,
+      "allocatable_dry_mass_t": 90,
+      "allocations": [
+        {"allocation_id": "NEG_ALLOC_001", "route": "SAF01", "allocated_dry_mass_t": 90, "status": "SYNTHETIC", "overlap_group": "NEG_CROP_001"}
+      ],
+      "constituent_balances": [],
+      "source_receipts": [],
+      "ecological_gate": "UNKNOWN",
+      "rights_gate": "UNKNOWN",
+      "residual_fate": null,
+      "sludge_ash_gate": {
+        "applicable": false,
+        "treatment_status": "NOT_APPLICABLE",
+        "contaminant_assay_status": "UNKNOWN",
+        "leaching_test_status": "UNKNOWN",
+        "durability_status": "UNKNOWN",
+        "product_acceptance_status": "UNKNOWN",
+        "gate_status": "BLOCKED"
+      },
+      "agronomy_overlap_group": null
+    }
+  ],
+  "notes": "Expected schema/domain rejection: dedicated crop cannot be allocated in the waste-only base case."
+}
