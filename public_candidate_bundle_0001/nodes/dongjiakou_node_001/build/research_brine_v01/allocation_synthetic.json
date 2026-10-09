@@ -1,0 +1,46 @@
+{
+  "years": 30,
+  "qualified_dry_gypsum_t_y": 70000,
+  "acid_t_per_dry_gypsum_t": 0.4,
+  "sulfur_shortfall_ag_cap_fraction": 0.4,
+  "national_sulfur": {
+    "balance_s_equivalent_t_y": -200000,
+    "imports_actual_zero_verified": false
+  },
+  "industrial_quality": {
+    "assay_measured": false,
+    "hub_acceptance_verified": false,
+    "measured_gypsum_purity": null,
+    "minimum_gypsum_purity": 0.85,
+    "measured_moisture_fraction": null,
+    "maximum_moisture_fraction": 0.1
+  },
+  "soil_classes": [
+    {
+      "name": "sodic_reclamation_trial",
+      "hectares": 1000,
+      "initial_t_ha": 20,
+      "maintenance_t_ha_y": 0.5,
+      "reclamation_decline_fraction_y": 0.2,
+      "reclamation_years": 10,
+      "soil_test_measured": false,
+      "ag_product_batch_assay_pass": false,
+      "field_trial_verified": false,
+      "approved_drainage_plan": false,
+      "farm_consent_verified": false
+    },
+    {
+      "name": "healthy_reference",
+      "hectares": 1000,
+      "initial_t_ha": 0,
+      "maintenance_t_ha_y": 0,
+      "reclamation_decline_fraction_y": 0,
+      "reclamation_years": 0,
+      "soil_test_measured": true,
+      "ag_product_batch_assay_pass": false,
+      "field_trial_verified": false,
+      "approved_drainage_plan": false,
+      "farm_consent_verified": false
+    }
+  ]
+}
