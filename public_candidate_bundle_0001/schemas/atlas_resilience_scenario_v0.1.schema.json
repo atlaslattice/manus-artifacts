@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/atlaslattice/manus-artifacts/tree/master/public_candidate_bundle_0001/schemas/atlas_resilience_scenario_v0.1.schema.json",
+  "title": "Atlas strategic-resilience stress scenario v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "evidence_class",
+    "probability",
+    "shock_duration_days",
+    "recovery_days",
+    "gdp_reference_usd",
+    "gdp_loss_fraction",
+    "gross_loss_usd",
+    "avoidable_fraction",
+    "annual_incremental_premium_usd",
+    "protected_services",
+    "interdependencies",
+    "counterfactual",
+    "realized_credit_usd"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "scenario_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_class": {
+      "enum": [
+        "MEASURED",
+        "OFFICIAL_POLICY",
+        "REGULATORY_APPROVED",
+        "PROJECT_REPORTED",
+        "PEER_REVIEWED_MODEL",
+        "MODELED",
+        "SYNTHETIC",
+        "PROPOSED",
+        "UNKNOWN",
+        "QUARANTINED"
+      ]
+    },
+    "probability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "probability_at_least_once",
+        "horizon_years",
+        "hazard_model",
+        "annual_hazard",
+        "source"
+      ],
+      "properties": {
+        "probability_at_least_once": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "horizon_years": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "hazard_model": {
+          "enum": [
+            "STATIONARY_INDEPENDENT_YEARS",
+            "SCENARIO_EXPERT_JUDGEMENT",
+            "UNKNOWN"
+          ]
+        },
+        "annual_hazard": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "shock_duration_days": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "recovery_days": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "gdp_reference_usd": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "gdp_loss_fraction": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "gross_loss_usd": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "avoidable_fraction": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "annual_incremental_premium_usd": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0
+    },
+    "protected_services": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "GAS",
+          "OIL",
+          "AVIATION",
+          "MARINE",
+          "FERTILIZER",
+          "WATER",
+          "ELECTRICITY",
+          "HEALTH",
+          "FOOD",
+          "CHEMICAL_FEEDSTOCK",
+          "OTHER"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "interdependencies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "counterfactual": {
+      "type": "string",
+      "minLength": 1
+    },
+    "realized_credit_usd": {
+      "const": 0
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "x-atlas-invariants": [
+    "Probabilities are specified with the horizon; do not treat decade and annual odds interchangeably.",
+    "Stationary annual hazard = 1 - (1 - period probability)^(1/horizon years).",
+    "GDP loss fraction describes severity if event occurs, not probability of event.",
+    "Expected benefit uses actual loss avoided, never gross exposed loss.",
+    "Correlated disruption scenarios cannot be summed as independent.",
+    "Alternative reserves, flexibility, imports and demand management require comparative baselines.",
+    "Synthetic stress examples produce zero realized credit."
+  ]
+}
