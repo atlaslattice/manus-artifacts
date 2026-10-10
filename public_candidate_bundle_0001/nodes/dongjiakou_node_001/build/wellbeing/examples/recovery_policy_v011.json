@@ -1,0 +1,34 @@
+{
+  "evidence_class": "SIMULATED",
+  "as_of": "2026-10-10",
+  "sectors": [
+    {
+      "sector": "unknown_local_sector",
+      "active_hours_day": null,
+      "break_hours_day": null,
+      "workdays_week": null,
+      "qualified_workforce_gap": null
+    },
+    {
+      "sector": "standard_hours_example",
+      "active_hours_day": 8,
+      "break_hours_day": 0,
+      "workdays_week": 5,
+      "qualified_workforce_gap": false
+    },
+    {
+      "sector": "qualification_gap_example",
+      "active_hours_day": 10,
+      "break_hours_day": 2,
+      "workdays_week": 5,
+      "qualified_workforce_gap": true
+    },
+    {
+      "sector": "historical_6_plus_2_plus_6",
+      "active_hours_day": 12,
+      "break_hours_day": 2,
+      "workdays_week": 5,
+      "qualified_workforce_gap": true
+    }
+  ]
+}
