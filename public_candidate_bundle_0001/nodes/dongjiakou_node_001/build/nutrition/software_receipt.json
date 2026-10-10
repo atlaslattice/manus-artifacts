@@ -1,0 +1,24 @@
+{
+  "artifact_id": "NUT01-SOFTWARE-RECEIPT-v01",
+  "status": "CANDIDATE",
+  "base_commit": "85f06406c724067ef917c55761ba5ff4354409ef",
+  "baseline_files_checked": 70,
+  "changed_baseline_files": [],
+  "baseline_tests": 239,
+  "final_tests": 258,
+  "reproduction": {
+    "checks": 155,
+    "matched": 154,
+    "mismatched": 0,
+    "annotated": 1
+  },
+  "validation": {
+    "PASS": 15,
+    "WARN": 0,
+    "FAIL": 0,
+    "VETO": 0,
+    "NOT_APPLICABLE": 1
+  },
+  "hosted_ci": "NOT_RUN",
+  "field_or_deployment_receipt": false
+}

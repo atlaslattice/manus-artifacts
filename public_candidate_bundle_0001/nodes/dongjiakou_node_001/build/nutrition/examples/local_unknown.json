@@ -1,0 +1,244 @@
+{
+  "scenario_id": "dongjiakou-local-unknown",
+  "scenario_kind": "LOCAL_UNKNOWN",
+  "inputs": {
+    "adoption": {
+      "value": null,
+      "unit": "fraction",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "adherence": {
+      "value": null,
+      "unit": "fraction",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "joint_eligible_prevalence": {
+      "value": null,
+      "unit": "fraction",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "correction_response": {
+      "value": null,
+      "unit": "fraction",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "protein_fraction_dry": {
+      "value": null,
+      "unit": "fraction",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "theanine_fraction": {
+      "value": 0.2,
+      "unit": "fraction",
+      "evidence_class": "OFFICIAL_REGULATORY_SOURCE",
+      "source_ids": [
+        "TEA2014"
+      ],
+      "basis": "Minimum specification scenario, not supplier assay."
+    },
+    "qualified_staff_fraction": {
+      "value": null,
+      "unit": "fraction",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "creatine_eligible_fraction": {
+      "value": null,
+      "unit": "fraction",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "task_output_effect": {
+      "value": null,
+      "unit": "fraction",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "creatine_test_effect": {
+      "value": null,
+      "unit": "fraction",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "population": {
+      "value": null,
+      "unit": "people",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "days": {
+      "value": null,
+      "unit": "days/year",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "protein_target_g": {
+      "value": 30,
+      "unit": "g/day",
+      "evidence_class": "PROPOSED",
+      "source_ids": [],
+      "basis": "Candidate daily supplementation target; not a complete meal."
+    },
+    "creatine_g_day": {
+      "value": 3,
+      "unit": "g/day",
+      "evidence_class": "MEASURED_STUDY",
+      "source_ids": [
+        "CREATINE3"
+      ],
+      "basis": "Ingredient study dose, not an effect size or category clearance."
+    },
+    "theanine_material_g_day": {
+      "value": 0.4,
+      "unit": "g/day",
+      "evidence_class": "OFFICIAL_REGULATORY_SOURCE",
+      "source_ids": [
+        "TEA2014"
+      ],
+      "basis": "Tea-derived authorization ceiling; exact supplier form still audited."
+    },
+    "minutes_saved_day": {
+      "value": null,
+      "unit": "minutes/day",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "daily_price_cny": {
+      "value": null,
+      "unit": "CNY/day",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "displaced_spend_cny": {
+      "value": null,
+      "unit": "CNY/day",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "equipment_servings_day": {
+      "value": null,
+      "unit": "servings/day",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "staff_hours_day": {
+      "value": null,
+      "unit": "hours/day",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "hours_per_serving": {
+      "value": null,
+      "unit": "hours/serving",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "stock_servings": {
+      "value": null,
+      "unit": "servings",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "emergency_people": {
+      "value": null,
+      "unit": "people",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "emergency_days": {
+      "value": null,
+      "unit": "days",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "energy_kwh_serving": {
+      "value": null,
+      "unit": "kWh/serving",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "substrate_kg_serving": {
+      "value": null,
+      "unit": "kg/serving",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "grid_kgco2_kwh": {
+      "value": null,
+      "unit": "kgCO2e/kWh",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "substrate_kgco2_kg": {
+      "value": null,
+      "unit": "kgCO2e/kg",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "other_kgco2_serving": {
+      "value": null,
+      "unit": "kgCO2e/serving",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "displaced_kgco2_serving": {
+      "value": null,
+      "unit": "kgCO2e/serving",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "ration_qualified": {
+      "value": null,
+      "unit": "boolean",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "shelf_life_qualified": {
+      "value": null,
+      "unit": "boolean",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "No local receipt; null is not zero."
+    },
+    "moisture_fraction": {
+      "value": null,
+      "unit": "fraction",
+      "evidence_class": "UNKNOWN",
+      "source_ids": [],
+      "basis": "Dry-basis specification is not an as-is supplier assay."
+    }
+  }
+}
+

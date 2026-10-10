@@ -1,0 +1,236 @@
+{
+  "artifact_id": "NUT01-MM135-SOURCES-v01",
+  "status": "CANDIDATE",
+  "canon": false,
+  "deployment": false,
+  "authority": "none",
+  "proof": false,
+  "public_release": "candidate",
+  "sources": [
+    {
+      "source_id": "MM135",
+      "evidence_class": "OFFICIAL_REGULATORY_SOURCE",
+      "source_surface": "public_primary_source",
+      "source_uri": "https://zwfw.nhc.gov.cn/kzx/tzgg/sptjjxpzsp_224/202605/t20260528_3275.html",
+      "applicability": "NHC 2026 No.5 interpretation, May 27; MM-135, fermentation/RNA removal/inactivation/filtration, >=50% dry protein; excludes infants/young children, pregnant/lactating people and edible-fungus allergy. This is the interpretation; full operative annex audit pending.",
+      "receipt_status": "partial_content",
+      "raw_export_status": "retrieved content in session; no independently archived source export in this package",
+      "missing_receipts": [
+        "source export and hash",
+        "independent applicability review"
+      ],
+      "review_lane": "nutrition/regulatory/economic as applicable"
+    },
+    {
+      "source_id": "WEST2023",
+      "evidence_class": "MEASURED_STUDY",
+      "source_surface": "public_primary_source",
+      "source_uri": "https://pubmed.ncbi.nlm.nih.gov/36172885/",
+      "applicability": "28g protein /38.2g study concentrate; not MM-135 supplier composition or finished-gel efficacy.",
+      "receipt_status": "partial_content",
+      "raw_export_status": "retrieved content in session; no independently archived source export in this package",
+      "missing_receipts": [
+        "source export and hash",
+        "independent applicability review"
+      ],
+      "review_lane": "nutrition/regulatory/economic as applicable"
+    },
+    {
+      "source_id": "TEA2014",
+      "evidence_class": "OFFICIAL_REGULATORY_SOURCE",
+      "source_surface": "public_primary_source",
+      "source_uri": "https://www.nhc.gov.cn/sps/c100088/201407/9bceee42235d4dcc934ddf3b3e580877.shtml",
+      "applicability": "Tea-derived material >=20% active, <=0.4g material/day; 80mg active at 20%, not universal maxactive. Exact higher-purity process/category review required.",
+      "receipt_status": "partial_content",
+      "raw_export_status": "retrieved content in session; no independently archived source export in this package",
+      "missing_receipts": [
+        "source export and hash",
+        "independent applicability review"
+      ],
+      "review_lane": "nutrition/regulatory/economic as applicable"
+    },
+    {
+      "source_id": "CORDY2014",
+      "evidence_class": "OFFICIAL_REGULATORY_SOURCE",
+      "source_surface": "public_primary_source",
+      "source_uri": "https://www.nhc.gov.cn/sps/c100088/201406/5c9cb658447b417e8b8195d1ea6c53e4.shtml",
+      "applicability": "Amendment notice retrieved; operative attachment unresolved. Do not import old 2g/day.",
+      "receipt_status": "partial_content",
+      "raw_export_status": "retrieved content in session; no independently archived source export in this package",
+      "missing_receipts": [
+        "source export and hash",
+        "independent applicability review"
+      ],
+      "review_lane": "nutrition/regulatory/economic as applicable"
+    },
+    {
+      "source_id": "LINGZHI2023",
+      "evidence_class": "OFFICIAL_REGULATORY_SOURCE",
+      "source_surface": "public_primary_source",
+      "source_uri": "https://www.nhc.gov.cn/sps/c100088/202311/5b062dd13fe646198b56c7d76a99aab4.shtml",
+      "applicability": "Food-medicine inclusion does not authorize every extract/process.",
+      "receipt_status": "partial_content",
+      "raw_export_status": "retrieved content in session; no independently archived source export in this package",
+      "missing_receipts": [
+        "source export and hash",
+        "independent applicability review"
+      ],
+      "review_lane": "nutrition/regulatory/economic as applicable"
+    },
+    {
+      "source_id": "LION2023",
+      "evidence_class": "MEASURED_STUDY",
+      "source_surface": "public_primary_source",
+      "source_uri": "https://pubmed.ncbi.nlm.nih.gov/38004235/",
+      "applicability": "1.8g trial preparation versus proposed1.2g not equivalent; exploratory outcomes.",
+      "receipt_status": "partial_content",
+      "raw_export_status": "retrieved content in session; no independently archived source export in this package",
+      "missing_receipts": [
+        "source export and hash",
+        "independent applicability review"
+      ],
+      "review_lane": "nutrition/regulatory/economic as applicable"
+    },
+    {
+      "source_id": "WOO2025",
+      "evidence_class": "MEASURED_STUDY",
+      "source_surface": "public_primary_source",
+      "source_uri": "https://www.sciencedirect.com/science/article/pii/S1756464625004451",
+      "applicability": "Liposomal B3/C/Zn/Fe exposure study; not gel, entire premix, or performance efficacy. Full text blocked.",
+      "receipt_status": "partial_content",
+      "raw_export_status": "retrieved content in session; no independently archived source export in this package",
+      "missing_receipts": [
+        "source export and hash",
+        "independent applicability review"
+      ],
+      "review_lane": "nutrition/regulatory/economic as applicable"
+    },
+    {
+      "source_id": "CREATINE3",
+      "evidence_class": "MEASURED_STUDY",
+      "source_surface": "public_primary_source",
+      "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2909923/",
+      "applicability": "3g/day28days small cyclist trial included null final-sprint advantage; dose is not population effect.",
+      "receipt_status": "partial_content",
+      "raw_export_status": "retrieved content in session; no independently archived source export in this package",
+      "missing_receipts": [
+        "source export and hash",
+        "independent applicability review"
+      ],
+      "review_lane": "nutrition/regulatory/economic as applicable"
+    },
+    {
+      "source_id": "IRON_WORK",
+      "evidence_class": "MEASURED_STUDY",
+      "source_surface": "public_primary_source",
+      "source_uri": "https://pubmed.ncbi.nlm.nih.gov/8147338/",
+      "applicability": "Beijing iron-deficient women workers,60/120mgFe trial; efficiency at same work, not generic output rise. Doses are not gel recommendations.",
+      "receipt_status": "partial_content",
+      "raw_export_status": "retrieved content in session; no independently archived source export in this package",
+      "missing_receipts": [
+        "source export and hash",
+        "independent applicability review"
+      ],
+      "review_lane": "nutrition/regulatory/economic as applicable"
+    },
+    {
+      "source_id": "IRON_FATIGUE",
+      "evidence_class": "MEASURED_STUDY",
+      "source_surface": "public_primary_source",
+      "source_uri": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3414597/",
+      "applicability": "80mgFe/day12weeks nonanemic women low ferritin: fatigue improvement, no QOL difference; not regional productivity coefficient.",
+      "receipt_status": "partial_content",
+      "raw_export_status": "retrieved content in session; no independently archived source export in this package",
+      "missing_receipts": [
+        "source export and hash",
+        "independent applicability review"
+      ],
+      "review_lane": "nutrition/regulatory/economic as applicable"
+    },
+    {
+      "source_id": "D_NULL",
+      "evidence_class": "MEASURED_STUDY",
+      "source_surface": "public_primary_source",
+      "source_uri": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0225600",
+      "applicability": "Low-vitamin-D adults: status improved without muscle-strength benefit; no universal performance credit.",
+      "receipt_status": "partial_content",
+      "raw_export_status": "retrieved content in session; no independently archived source export in this package",
+      "missing_receipts": [
+        "source export and hash",
+        "independent applicability review"
+      ],
+      "review_lane": "nutrition/regulatory/economic as applicable"
+    },
+    {
+      "source_id": "PLENITUDE",
+      "evidence_class": "MODELED",
+      "source_surface": "public_primary_source",
+      "source_uri": "https://jpbs.hapres.com/htmls/JSR_1939_Detail.html",
+      "applicability": "Electricity/substrate hotspots; supplier-affiliated inventory, not local environmental credit.",
+      "receipt_status": "partial_content",
+      "raw_export_status": "retrieved content in session; no independently archived source export in this package",
+      "missing_receipts": [
+        "source export and hash",
+        "independent applicability review"
+      ],
+      "review_lane": "nutrition/regulatory/economic as applicable"
+    },
+    {
+      "source_id": "RISNER",
+      "evidence_class": "MODELED",
+      "source_surface": "public_primary_source",
+      "source_uri": "https://www.frontiersin.org/journals/sustainable-food-systems/articles/10.3389/fsufs.2023.1204307/full",
+      "applicability": "USD3.55/kg wet and29.56/kgprotein in TEA assumptions, not MM135 dry quote.",
+      "receipt_status": "partial_content",
+      "raw_export_status": "retrieved content in session; no independently archived source export in this package",
+      "missing_receipts": [
+        "source export and hash",
+        "independent applicability review"
+      ],
+      "review_lane": "nutrition/regulatory/economic as applicable"
+    },
+    {
+      "source_id": "CREATINE_STABILITY",
+      "evidence_class": "MEASURED_STUDY",
+      "source_surface": "public_primary_source",
+      "source_uri": "https://pubmed.ncbi.nlm.nih.gov/19635041/",
+      "applicability": "Water-activity/temperature storage: dry-compartment rationale, no validated 5year finished pack.",
+      "receipt_status": "partial_content",
+      "raw_export_status": "retrieved content in session; no independently archived source export in this package",
+      "missing_receipts": [
+        "source export and hash",
+        "independent applicability review"
+      ],
+      "review_lane": "nutrition/regulatory/economic as applicable"
+    },
+    {
+      "source_id": "TERPENE",
+      "evidence_class": "MEASURED_STUDY",
+      "source_surface": "public_primary_source",
+      "source_uri": "https://www.nature.com/articles/s41467-018-03293-x",
+      "applicability": "Engineered brewing-yeast aroma proof of concept; not local contracted food-flavor supply.",
+      "receipt_status": "partial_content",
+      "raw_export_status": "retrieved content in session; no independently archived source export in this package",
+      "missing_receipts": [
+        "source export and hash",
+        "independent applicability review"
+      ],
+      "review_lane": "nutrition/regulatory/economic as applicable"
+    },
+    {
+      "source_id": "WHOQOL",
+      "evidence_class": "OFFICIAL_METHOD_RESOURCE",
+      "source_surface": "public_primary_source",
+      "source_uri": "https://www.who.int/tools/whoQoL",
+      "applicability": "Use QOL endpoints alongside fatigue, convenience, tolerability and household affordability.",
+      "receipt_status": "partial_content",
+      "raw_export_status": "retrieved content in session; no independently archived source export in this package",
+      "missing_receipts": [
+        "source export and hash",
+        "independent applicability review"
+      ],
+      "review_lane": "nutrition/regulatory/economic as applicable"
+    }
+  ]
+}
+
