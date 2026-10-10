@@ -1,0 +1,47 @@
+{
+  "years": 30,
+  "brine": {
+    "m3_day": 150000,
+    "calcium_mg_l": 680,
+    "sulfate_mg_l": 4500,
+    "days_year": 365,
+    "recovery_fraction": 0.6,
+    "lab_measured": false,
+    "batch_assay_pass": false
+  },
+  "shell": {
+    "wet_shell_t_y": 96000,
+    "dry_fraction": 1,
+    "caco3_fraction": 0.95,
+    "assay_pass": false,
+    "soil_acidic_test_pass": false,
+    "field_trial_pass": false,
+    "recovered_sulfuric_acid_t_y": 0,
+    "acid_assay_pass": false,
+    "conversion_qualified": false
+  },
+  "industrial": {
+    "measured_batch_assay_pass": false,
+    "hub_acceptance": false
+  },
+  "acid_t_per_brine_dry_gypsum_t": 0.4,
+  "national_sulfur": {
+    "balance_s_t_y": -200000
+  },
+  "ag_fraction_cap_when_short": 0.4,
+  "soil_classes": [
+    {
+      "ha": 2000,
+      "initial_t_ha": 20,
+      "decline": 0.2,
+      "reclamation_years": 10,
+      "maintenance_t_ha_y": 0.3,
+      "soil_measured": false,
+      "sodic_reclamation_verified": false,
+      "gypsum_batch_safe": false,
+      "trial_verified": false,
+      "drainage_safe": false,
+      "farm_consent": false
+    }
+  ]
+}
