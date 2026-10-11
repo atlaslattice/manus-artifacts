@@ -126,7 +126,7 @@ class ReceiptGraph:
 def cycle_plan(*, day=0, phase_hours=8) -> list[dict]:
     """Research schedule only. Does not launch jobs, train weights or represent real REM."""
     if not isinstance(day,int) or day<0 or phase_hours!=8: raise ValueError("8/8/8 requires day>=0")
-    phases=("PLAY","DREAM","WORK")
+    phases=("DREAM","PLAY","WORK")
     return [{"phase":p,"start_hour":day*24+i*8,"end_hour":day*24+(i+1)*8,
              "autonomous_execution":False,
              "output_status":"CANDIDATE" if p!="WORK" else "HUMAN_REVIEW_REQUIRED"}
