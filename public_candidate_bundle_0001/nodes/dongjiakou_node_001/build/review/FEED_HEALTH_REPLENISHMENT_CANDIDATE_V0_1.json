@@ -178,11 +178,26 @@
             "enum": [
               "first_party_source",
               "secondary_source",
+              "collaborator_reported",
               "user_supplied_unverified"
             ]
           },
           "review_note": {
             "type": "string"
+          },
+          "reported_by": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "independent_verification": {
+            "enum": [
+              "not_checked",
+              "corroborated",
+              "partially_corroborated",
+              "contradicted"
+            ]
           }
         }
       },
@@ -190,6 +205,45 @@
         "type": [
           "string",
           "null"
+        ]
+      },
+      "auth_strategy": {
+        "enum": [
+          "none",
+          "user_login",
+          "user_api_key",
+          "service_account",
+          "oauth_delegated",
+          "unknown"
+        ]
+      },
+      "auth_status": {
+        "enum": [
+          "not_configured",
+          "login_required",
+          "approval_required",
+          "ready",
+          "expired",
+          "blocked",
+          "unknown"
+        ]
+      },
+      "api_compatibility": {
+        "enum": [
+          "not_assessed",
+          "documented_rest",
+          "documented_download",
+          "browser_only",
+          "other_protocol",
+          "tested"
+        ]
+      },
+      "credential_storage": {
+        "enum": [
+          "no_credentials",
+          "user_local_secret_store",
+          "server_side_secret_store",
+          "pending_design"
         ]
       }
     }
@@ -208,7 +262,9 @@
     "provenance": {
       "source_citation": "MNR announcement 2026-06-08",
       "verification_level": "first_party_source",
-      "review_note": "Dataset API, license and access conditions unverified. No network ingestion."
+      "review_note": "Dataset API, license and access conditions unverified. No network ingestion.",
+      "independent_verification": "corroborated",
+      "reported_by": "DeepSeek collaborator; independently checked against MNR notice"
     },
     "last_observed_at": null,
     "last_checked_at": null,
@@ -221,6 +277,10 @@
     "freshness_sla_hours": null,
     "checksum": null,
     "monitoring_quality_protocol": null,
-    "failure_reason": null
+    "failure_reason": null,
+    "auth_strategy": "unknown",
+    "auth_status": "not_configured",
+    "api_compatibility": "not_assessed",
+    "credential_storage": "no_credentials"
   }
 }
