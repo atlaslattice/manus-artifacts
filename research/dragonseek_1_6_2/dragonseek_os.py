@@ -13,9 +13,33 @@ KINDS={"invariants":[f"invariants_{i:02d}.json" for i in range(1,4)],
 ARCHIVE_PARTS=[f"April2026_Complete_Doctrine_Invariant_Registry_v1.1.part{i:02d}.md" for i in range(1,9)]
 EXPECTED_COUNTS={"invariants":41,"doctrines":102}
 
+def verify_integrity():
+    """Compare local shipped files with immutable Git blob receipts (not signatures)."""
+    issues=[]
+    try:
+        manifest=json.loads((ROOT/"CONSTITUTION_INTEGRITY_MANIFEST.json").read_text(encoding="utf-8"))
+        records=manifest["files"]
+        if not records:raise ValueError("manifest empty")
+        for record in records:
+            name=record["path"]
+            candidate=ROOT/name
+            if candidate.resolve().is_relative_to(ROOT.resolve()) is False:
+                issues.append("unsafe manifest path: "+name);continue
+            try:
+                data=candidate.read_bytes()
+                header=("blob "+str(len(data))+"\\0").encode("utf-8")
+                actual=hashlib.sha1(header+data).hexdigest()
+                if actual!=record["git_blob_sha1"]:
+                    issues.append("integrity mismatch: "+name)
+            except OSError:
+                issues.append("integrity missing: "+name)
+    except (OSError,ValueError,KeyError,TypeError) as exc:
+        issues.append("integrity manifest unavailable or invalid: "+str(exc))
+    return issues
+
 def load():
     """Preserve raw registry, but apply the user's authorized active INV-0 choice."""
-    raw=[]; missing=[]; suspicious=[]
+    raw=[]; missing=verify_integrity(); suspicious=[]
     for kind,paths in KINDS.items():
         for filename in paths:
             p=ROOT/"registry"/filename
