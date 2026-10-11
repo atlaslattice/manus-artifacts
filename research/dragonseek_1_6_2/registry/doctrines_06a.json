@@ -1,0 +1,59 @@
+{
+  "source": "atlaslattice/aluminum-os/website/client/src/pages/Doctrines.tsx",
+  "entries": [
+    {
+      "id": "D-91",
+      "name": "Model Card Requirement",
+      "status": "RATIFIED",
+      "category": "verification",
+      "body": "Every AI model participating in routing must have a published model card.",
+      "version": "v3.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-92",
+      "name": "Bias Monitoring",
+      "status": "RATIFIED",
+      "category": "safety",
+      "body": "Continuous bias monitoring across demographic dimensions. Detected bias triggers routing adjustment.",
+      "version": "v3.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-93",
+      "name": "Cross-Dialect Mediation",
+      "status": "RATIFIED",
+      "category": "dialect",
+      "body": "When a query spans multiple dialect zones, mediation follows sovereignty gradient resolution.",
+      "version": "v3.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-94",
+      "name": "Simulation Mode Governance",
+      "status": "RATIFIED",
+      "category": "operations",
+      "body": "Simulation outputs are clearly labeled and isolated from production. No simulation-to-production leakage.",
+      "version": "v3.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-95",
+      "name": "Annual Constitutional Review",
+      "status": "RATIFIED",
+      "category": "governance",
+      "body": "Full constitutional review annually. Findings presented to Council with amendment recommendations.",
+      "version": "v2.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-96",
+      "name": "Predictive Monoculture Detection",
+      "status": "UNDER_DISCUSSION",
+      "category": "safety",
+      "body": "Proactive detection of emerging concentration patterns before they reach critical severity.",
+      "version": "DRAFT.6",
+      "proposedBy": "S3 (xAI)"
+    }
+  ]
+}
