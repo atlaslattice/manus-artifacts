@@ -3,12 +3,27 @@
   "as_of": "2026-10-11",
   "scope": "Versioned source files, offline browser and AI adapter",
   "algorithm": "git-blob-sha1",
-  "note": "SHA-1 Git blob parity; integrity only, not proof of authorship/signature/ratification. Manifest itself must be verified against Git history.",
+  "note": "Git blob parity for shipped assets including UWS/Sheldonbrain local adapters, dual-brain CLI, Dream registry, SHUGS data and Fabric UI. SHA-1 is for byte parity only; source signatures/approval not established. Tests live outside boot inventory.",
   "files": [
     {
       "path": "ai_bridge.py",
       "git_blob_sha1": "cdceff53e8a95ce2ef28a28fa157a8e026294144",
       "bytes": 4255
+    },
+    {
+      "path": "ATLAS_FABRIC_INTEGRATION.md",
+      "git_blob_sha1": "9d451ae3e43d908fc5e691f551ab7bb0f09eb9f6",
+      "bytes": 6991
+    },
+    {
+      "path": "atlas_fabric.py",
+      "git_blob_sha1": "5179a04f90d8d9caa68786ca798fd332f3c16f74",
+      "bytes": 9680
+    },
+    {
+      "path": "ATLAS_INTELLIGENCE_INTEGRATION.md",
+      "git_blob_sha1": "3d52e00984f4ae048a75b4edced72c0f5b95d97d",
+      "bytes": 4098
     },
     {
       "path": "constitutional_authority.json",
@@ -21,14 +36,54 @@
       "bytes": 7468
     },
     {
+      "path": "dream_protocols.json",
+      "git_blob_sha1": "85349b804693a3ceecc876474e1fc90cfd1a20a1",
+      "bytes": 2938
+    },
+    {
+      "path": "dual_brain.py",
+      "git_blob_sha1": "bfdd1e94b7940e7340cf3a0b691bffc07e4740d7",
+      "bytes": 5539
+    },
+    {
+      "path": "experimental/shugs_lattice_optimum_original.json",
+      "git_blob_sha1": "2ae08debcaa231fa4d0d79aead018213f29e3391",
+      "bytes": 8206
+    },
+    {
+      "path": "fabric.html",
+      "git_blob_sha1": "0e6ebe5f7979d3d2859aea96fa16942b91058ca0",
+      "bytes": 4263
+    },
+    {
+      "path": "GOVERNANCE_INTEGRATION.md",
+      "git_blob_sha1": "62298565674bb0893d72bdf748ef56b144ee9134",
+      "bytes": 2371
+    },
+    {
       "path": "governance.html",
       "git_blob_sha1": "92d64441508dcf342116c10641ee1a2e5627485e",
       "bytes": 5110
     },
     {
+      "path": "graph_bridge.py",
+      "git_blob_sha1": "0782fd406e6da1a521d5fdd83847f09a630a8d61",
+      "bytes": 3562
+    },
+    {
       "path": "index.html",
-      "git_blob_sha1": "d674f8a761f93dd8dbbe16d9d4d4ac93d079484c",
-      "bytes": 68098
+      "git_blob_sha1": "40794e378a826dbb193ae7b39634837760245bab",
+      "bytes": 68183
+    },
+    {
+      "path": "parser_bridge.py",
+      "git_blob_sha1": "d73c6d3a429a3146da5de1701a7a0aaf6a9eca00",
+      "bytes": 4059
+    },
+    {
+      "path": "README.md",
+      "git_blob_sha1": "ee36d5d947d63f43769f293ab0631451b108be52",
+      "bytes": 5309
     },
     {
       "path": "registry/doctrines_01.json",
