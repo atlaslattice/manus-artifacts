@@ -1,0 +1,32 @@
+[
+  {
+    "id": "SYN-ORB-001",
+    "kind": "orbital",
+    "label": "LEO public catalog congestion exercise",
+    "region": "Low Earth Orbit",
+    "event_provenance": "SYNTHETIC",
+    "classification": "GENERAL_PUBLIC",
+    "crs": "NONE_CELESTIAL",
+    "geometry_precision": "celestial-nonlocalized",
+    "timestamp": "2026-10-11T00:00:00+00:00",
+    "data_flow_authorization": "SIMULATED_DEMO",
+    "data_owner": "DragonSeek fictional exercise",
+    "jurisdiction": "PUBLIC_SYNTHETIC",
+    "scope": "LEO research context"
+  },
+  {
+    "id": "SYN-NEO-001",
+    "kind": "neo",
+    "label": "NEO close-approach assessment exercise (fictional)",
+    "region": "Earth-approach orbital space",
+    "event_provenance": "SYNTHETIC",
+    "classification": "GENERAL_PUBLIC",
+    "crs": "NONE_CELESTIAL",
+    "geometry_precision": "celestial-nonlocalized",
+    "timestamp": "2026-10-11T00:00:00+00:00",
+    "data_flow_authorization": "SIMULATED_DEMO",
+    "data_owner": "DragonSeek fictional exercise",
+    "jurisdiction": "PUBLIC_SYNTHETIC",
+    "scope": "NEO research context"
+  }
+]
