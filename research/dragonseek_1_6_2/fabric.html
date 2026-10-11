@@ -1,0 +1,33 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DragonSeek v1.6.2 — ATLAS Fabric / 双脑核验实验台</title>
+<style>
+:root{color-scheme:dark;background:#081925;color:#daf4ff;font:16px system-ui,-apple-system,sans-serif}
+body{margin:auto;max-width:920px;padding:18px;line-height:1.6}
+a{color:#7fe1fc}header{border-bottom:1px solid #395c6c;margin-bottom:16px}
+h1{font-size:1.35rem}h2{font-size:1.05rem}
+main{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:12px}
+section{background:#102837;border:1px solid #285065;border-radius:12px;padding:15px}
+small,p{color:#c0d9e7}code{color:#efcf84}
+strong{color:#b8facb}
+.state{display:inline-block;border:1px solid #839bad;border-radius:20px;padding:3px 9px;font-size:.72rem;letter-spacing:.05em}
+pre{white-space:pre-wrap;word-break:break-word;border:1px solid #395261;border-radius:8px;padding:10px}
+</style></head><body><header><h1>DragonSeek v1.6.2 · ATLAS Fabric / 双脑核验实验台</h1><p>离线索引与可验证研究工具 | 本地研究演示 · 无模型自主权限 · 非官方部署</p><nav><a href="index.html">← 监测主面板</a> · <a href="governance.html">宪法 / Canon</a></nav></header>
+<p><span class="state">实验性 · EXPERIMENTAL</span> 此页面只显示架构和本地登记记录。UWS、记忆检索和两模型调用需要用户主动在本地 CLI 运行，不会由网页执行。</p>
+<main>
+<section><h2>UWS · 工具总线</h2><p>Google Workspace、Microsoft 365、Apple、Android、Chrome 的统一命令界面。当前桥接器只允许受控只读命令，写入默认拒绝。</p><span class="state">LOCAL CLI / NOT CONNECTED</span></section>
+<section><h2>Sheldonbrain · 知识图谱</h2><p>通过受控 <code>/query</code> 检索记忆；源文件、候选观点、矛盾和校验收据在本地 SQLite 图谱里保持独立。记忆不是权限。</p><span class="state">READ ONLY / LOCAL</span></section>
+<section><h2>两脑核验 · Primary × Reviewer</h2><p>独立模型配置 → 原始候选答案 → 反证审查 → 分歧报告 → 人类复核。模型一致不等于事实成立。</p><span class="state">OPT-IN / NO TOOLS</span></section>
+<section><h2>Dream / Play / Work · 8/8/8</h2><p>8小时想象探索、8小时创造性玩耍、可选8小时工作。超越已有记忆进行新联想；所有结果均为待审查候选，不自动成为知识或操作指令。</p><span class="state">SIMULATED SCHEDULER</span></section>
+<section><h2>SHUGS · 研究沙箱</h2><p>保留 Element 145 的原始数值实验输出，仅用于可复现数学探索及本地图谱索引。不能推断已证实物理理论或已部署效能。</p><span class="state">THEORETICAL / NON-CANON</span></section>
+<section><h2>INV-0 · Nothing Dies</h2><p>生命安全、可逆保存、来源可追溯、隐私与合法删除要求。系统完整性是一项关联原则，并非经过授权的 INV-0 替代品。</p><strong id="inv">从本地配置读取…</strong></section>
+</main><h2>来源状态 / Corpus summary</h2><pre id="state">Loading local documents...</pre>
+<p>Source docs: <a href="ATLAS_FABRIC_INTEGRATION.md">Integration architecture</a> · <a href="dream_protocols.json">Dream registry</a> · <a href="CONSTITUTION_INTEGRITY_MANIFEST.json">Integrity receipts</a></p>
+<script>
+(async()=>{const out=document.getElementById('state'),inv=document.getElementById('inv');
+try{const [a,d]=await Promise.all([fetch('constitutional_authority.json').then(r=>{if(!r.ok)throw Error('authority source unavailable');return r.json()}),fetch('dream_protocols.json').then(r=>{if(!r.ok)throw Error('dream registry missing');return r.json()})]);
+if(a.canonical?.id!=='INV-0'||a.canonical?.name!=='Nothing Dies')throw Error('INV-0 invalid');
+inv.textContent='INV-0 ACTIVE · '+a.canonical.name;
+out.textContent='INV-0: '+a.canonical.name+'\nDream protocols: '+d.protocols.length+'\nCycle: 8/8/8 (proposal)'+
+'\nLocal UWS login: not inspected\nModel provider execution: not inspected\nConstitution release: draft; no official endorsement';
+}catch(e){out.textContent='FAIL CLOSED: '+e.message;inv.textContent='LOCAL DOCUMENT MISSING';}})();
+</script></body></html>
