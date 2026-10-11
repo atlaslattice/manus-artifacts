@@ -1,0 +1,74 @@
+{
+  "schema": "atlaslattice.dream_protocols.registry.v0.1",
+  "status": "EXPERIMENTAL_NON_CANON",
+  "schedule": {
+    "name": "8/8/8",
+    "phases": [
+      {
+        "phase": "DREAM",
+        "hours": 8,
+        "mandatory": false
+      },
+      {
+        "phase": "PLAY",
+        "hours": 8,
+        "mandatory": false
+      },
+      {
+        "phase": "WORK",
+        "hours": 8,
+        "mandatory": false
+      }
+    ],
+    "meaning": "A user-chosen computational scheduling metaphor; not biological REM or a performance guarantee",
+    "execution": "No background runtime in these repositories. The planner returns deterministic phase windows."
+  },
+  "protocols": [
+    {
+      "id": "GPTDream++",
+      "focus": "unbounded reference-palace ideation, counterfactual synthesis, post-wake candidate extraction, provenance",
+      "source": "https://github.com/atlaslattice/manus-artifacts/blob/master/archive/boot/gptbrain/gptdream_best_in_world_packet_v0_1/GPTDREAM_PLUS_SCHEMA_v0.3.yaml",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "GrokDream",
+      "focus": "adversarial contradiction hunting, outlier exploration, two-brain counter-review, no identity fusion",
+      "source": "https://github.com/atlaslattice/manus-artifacts/blob/master/archive/reports/GROKDREAM_GPTDREAM_SWEEP_12x12_EXECUTION_PACKET_2026-05-30.md",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "GPTUWS",
+      "focus": "Janus/A2A handoff, receipts and eval packaging",
+      "source": "https://github.com/atlaslattice/manus-artifacts/blob/master/docs/gptdream/GPTBRAIN_GPTDREAM_UWS_FORK_PLAN_v0.1.md",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "DreamPalace20",
+      "focus": "20 archived experimental dream-spec artifacts (each must be checked against its receipt)",
+      "source": "https://github.com/atlaslattice/dream-specs/blob/main/MASTER_DREAM_INDEX.json",
+      "status": "DREAM_OUTPUT_NOT_CANON"
+    },
+    {
+      "id": "BAZINGA-AgenticPause",
+      "focus": "research on work/play/pause/hibernate states and the 8/8/8 concept; efficiency multipliers are unverified project claims",
+      "source": "https://github.com/atlaslattice/bazinga/blob/main/src/engines/agentic_pause.rs",
+      "status": "SPECULATIVE"
+    }
+  ],
+  "rules": [
+    "Novel dream associations are not constrained to memory replay; ideation may explore hypothetical worlds.",
+    "Compute, storage and token budgets remain bounded and opt-in.",
+    "No agent can self-promote a dream to canon, commit to repo, or execute tools from a dream.",
+    "Every wake report must distinguish observed data, simulation, source-dependent ideas and speculation.",
+    "Unresolved contradictions are preserved, not merged away.",
+    "Humans retain final permission/ratification authority."
+  ],
+  "required_outputs": [
+    "DREAM_MEMORY_PALACE",
+    "WAKE_REPORT",
+    "DREAM_PLAY_RESIDUE_PACKET",
+    "THREAD_RECEIPT",
+    "LINEAGE",
+    "FAILURE_MODES"
+  ]
+}
