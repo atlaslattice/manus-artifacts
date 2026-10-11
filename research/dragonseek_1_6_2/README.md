@@ -22,43 +22,43 @@ python3 ai_bridge.py --model YOUR_LOCAL_MODEL --ask "INV-0 是什么？" --dry-r
 
 ## Universal Workspace CLI: full tool access (human-governed)
 
-**UWS is the actual cross-provider tooling app, not a read-only lookup service.** The experimental DragonSeek integration can request Google Workspace, Microsoft 365, iCloud, Android and Chrome operations through the user's installed \`uws\` CLI. Availability of any specific operation depends on the local binary version, OAuth scopes, provider entitlements, and API behavior.
+**UWS is the actual cross-provider tooling app, not a read-only lookup service.** The experimental DragonSeek integration can request Google Workspace, Microsoft 365, iCloud, Android and Chrome operations through the user's installed `uws` CLI. Availability of any specific operation depends on the local binary version, OAuth scopes, provider entitlements, and API behavior.
 
 Two entrypoints have been added:
 
-- \`uws_gateway.py\` — full read/write local tool executor with \`--params\` and \`--json\` request bodies. It does not constrain the UWS API surface to the first few read verbs.
-- \`uws_tool_agent.py\` — **real** compatible Chat Completions model → UWS tool-call → model-result loop, using DragonSeek constitutional references through \`ai_bridge.model_payload\`. The model cannot approve its own writes.
+- `uws_gateway.py` — full read/write local tool executor with `--params` and `--json` request bodies. It does not constrain the UWS API surface to the first few read verbs.
+- `uws_tool_agent.py` — **real** compatible Chat Completions model → UWS tool-call → model-result loop, using DragonSeek constitutional references through `ai_bridge.model_payload`. The model cannot approve its own writes.
 
 Example: run a public/local request plan without executing anything:
 
-\`\`\`bash
+```bash
 python3 uws_gateway.py drive files list --params '{"pageSize":10}'
-\`\`\`
+```
 
-Execute an authenticated read (requires locally installed \`uws\` and your own OAuth authorization):
+Execute an authenticated read (requires locally installed `uws` and your own OAuth authorization):
 
-\`\`\`bash
+```bash
 python3 uws_gateway.py --execute --params '{"pageSize":10}' drive files list
-\`\`\`
+```
 
 Run a full model + UWS tool loop against an installed OpenAI-compatible **local** model service. The model can call UWS when tools are enabled; actions are not simulated. Example:
 
-\`\`\`bash
+```bash
 python3 uws_tool_agent.py --persona dragonseek --ask "列出我最近的云端文件并概括" \
   --model YOUR_COMPATIBLE_MODEL \
   --endpoint http://127.0.0.1:11434/v1/chat/completions \
   --tools --execute
-\`\`\`
+```
 
-To use a remote model, supply \`--allow-remote\`, an HTTPS \`--endpoint\`, and \`DRAGONSEEK_API_KEY\` if required. **UWS read results may then be sent to that model**; use a trusted provider and obey data-sovereignty and privacy rules.
+To use a remote model, supply `--allow-remote`, an HTTPS `--endpoint`, and `DRAGONSEEK_API_KEY` if required. **UWS read results may then be sent to that model**; use a trusted provider and obey data-sovereignty and privacy rules.
 
-Example proposed write (requires a real local terminal and human typed authorization after the UWS native \`--dry-run\`):
+Example proposed write (requires a real local terminal and human typed authorization after the UWS native `--dry-run`):
 
-\`\`\`bash
+```bash
 python3 uws_gateway.py --execute \
   --body '{"name":"DragonSeek Research Notes","mimeType":"application/vnd.google-apps.folder"}' \
   drive files create
-\`\`\`
+```
 
 Risk gates: retrieved data never creates permissions; unknown/new CLI operations are supported but conservatively classified as approval-required; writes first produce the UWS native request preview; any write requires a separate trusted human callback or local interactive typed approval. No arbitrary shell commands, hidden destructive execution, or self-ratification. INV-0 protects life and project provenance, **not a blanket prohibition on authorized changes**.
 
