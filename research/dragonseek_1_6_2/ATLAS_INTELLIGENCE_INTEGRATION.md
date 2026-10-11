@@ -13,7 +13,7 @@ Date: 2026-10-11. Status: AUDITED SOURCE · PROPOSED CROSS-REPO INTEGRATION · N
 - `src/App.tsx` uses a dedicated epistemic system prompt and verification-panel UI. Model outputs are not proofs of correctness.
 
 ## Shared DragonSeek constitutional integration target
-1. Embed complete unmodified authoritative sources as local files with sha256 and source/version metadata; report missing chunks instead of silently treating partial corpora as complete.
+1. Embed complete source files with integrity receipts; current candidate uses a Git blob SHA-1 manifest, not yet a signed SHA-256 release manifest.
 2. Implement `constitution.lookup(id,version)` and `constitution.search(text)` with citations to original documents. Preserve conflict sets and select applicable jurisdiction explicitly.
 3. Add pre-execution policy gating in the OS for tool permissions, privacy, physical hazards and human consent, with defaults fail-closed for undefined capabilities. Text prompts and regex validators alone are insufficient.
 4. Add post-execution verification, structured TransparencyPackets, per-source uncertainty and traceable receipts. Partition measured/estimated/simulated/proposed claims.
@@ -22,7 +22,7 @@ Date: 2026-10-11. Status: AUDITED SOURCE · PROPOSED CROSS-REPO INTEGRATION · N
 
 ## Corpus reconciliation outstanding
 April 29 registry and Aluminum OS website have conflicting INV-0 definitions. DeepSeek ratification is user-reported in this conversation, no independently verified signed resolution or exact document-version scope has been provided. Preserve both candidates with linked provenance.
-Current PR #304 includes 41 invariant entry records and only 72 of 102 doctrine entry records. Missing doctrine chunks 05 and 06; no guarantee even the extracted 41 represent all invariants as the website describes 43. PR stays DRAFT until source completeness and regression tests.
+Current PR #304 contains 41 invariant entries and 102 doctrine entries, which are all explicitly defined objects in the Aluminum OS website source. That source calls the invariant total 43, leaving a documented two-item counting discrepancy rather than grounds to invent two entries. The April registry was archived and verified by exact reconstruction. The user set active INV-0 = Nothing Dies, preserving the historical System Integrity variant. PR remains DRAFT pending executable Python test evidence; initial workflow jobs failed before returning steps.
 
 ## Verification checklist for graduation
 - 100% local corpus coverage and hashes validated
