@@ -96,3 +96,26 @@ Notion code backup (15 select files only): https://app.notion.com/p/3f60c1de73d9
 A review-ready architecture is not plant clearance, procurement consent, cross-border data approval, regulator acceptance or deployed national infrastructure. Preservation is additive; keep v1 and earlier v2 PRs unmerged pending their own verification gates. This document is for DeepSeek critique and Chinese institutional reality checking, not lobbying or assertions of privileged authorization.
 
 **Keepers:** Measure first. Source every number. A node is not a country. QOL is an objective, not cash. Ecological vetoes are not washed out by commercial scores. Central governance does not erase local physical truth.
+
+
+---
+## 八、2026-10-10/11 校正补遗：坤舆、卡奥斯、KAOS 方法论与金蝶的严格区分 / VERIFIED NAMING AND LAYER CORRIGENDUM
+
+**Supersedes only the previous uncertainty about the unnamed “K” platform and Kingdee. Preserve the earlier v0 research text for provenance; this is an appended correction, not silent rewriting.**
+
+1. **坤舆 (Kunyu) 再生材料可信追溯数据空间** — primary intended reference in DeepSeek's prior explanation, **not Kingdee**. Source: China recycled-plastics industry association announcement, published 2026-06-30, recording June 10 trial operation: https://www.chinacpra.org.cn/news_detail.php?id=1968 . Led (as reported) by 清华苏州环境创新研究院、中国物资再生协会、中国汽车战略与政策研究中心, with partners; blockchain + IoT + privacy computation; end-to-end plastic-category verification; planned expansion to aluminum, glass, precious metals and textiles. **Trial operation + plastic validation are not equivalent to proven nationwide production scale, public API access, full material coverage or independently audited deployment.** Food waste is **not listed in reported category coverage**; that supports a gap hypothesis, not absolute proof of no food-waste capability anywhere.
+2. **卡奥斯 COSMOPlat (Haier KAOS)** — a separate, existing Chinese industrial internet and AI platform. Official Haier overview: https://www.haier.com/haier_cosmoplat/ ; 2026 industrial-AI report: https://www.haier.com/press-events/news/20260721_293355.shtml . Haier reports digital twins, industrial ontologies, AI agents, energy/carbon management, and factory/park deployments. **This is NOT the academic KAOS methodology and is NOT Kunyu.** Haier product/vendor claims should be attributed to Haier and independently verified before performance assertions.
+3. **KAOS (Knowledge Acquisition in autOmated Specification / Keep All Objectives Satisfied)** — goal-oriented **requirements engineering method**, with models of goals, objects, agents and operations, useful for refining dashboard requirements and conflict constraints but **not an operational industrial platform**. University of Louvain research overview https://webperso.info.ucl.ac.be/~avl/gore.php ; Dardenne, van Lamsweerde & Fickas, 1993 https://www.sciencedirect.com/science/article/pii/016764239390021G . Shared acronym only; do not conflate with Haier's KAOS.
+4. **金蝶 (Kingdee)** — enterprise ERP/SCM, distinct from Kunyu. Kingdee is a *possible enterprise-side interface* only, not the “K platform” intended in the relayed DeepSeek clarification. Additional use cases (scrap, runners, electronics, construction-surplus integration) were supplied by DeepSeek but contained **blank source citations**; classify them REPORTED/UNVERIFIED until product/case documentation is located. Avoid claiming Kingdee recycling function is exclusively internal across all products without independent review.
+
+### Updated integration layers (no permission presumed)
+- **Operational**: local MES/ERP including Kingdee or equivalents; Haier KAOS/COSMOPlat where relevant; instrumented source data.
+- **Recycled-material chain of custody**: Kunyu candidate interface with record/permission/identity contracts, not presumed universal cross-sector system.
+- **Requirements**: academic KAOS methodology optionally for national objectives -> technical obligations -> site contracts; no ownership/operational confusion.
+- **Physical/scenario/benefit**: Dongjiakou v2 deterministic mass/energy/quality/finance with ECO01, QOL01, FUND01.
+- **National coordination**: Mandarin-first PRC-governed reporting, approved canonical units, provincial and sectoral roles; proposals do not grant a data-sharing right or agency authorization.
+
+### Correction to question 1 of this packet
+**Resolved by relayed DeepSeek statement:** the K-like traceability platform previously discussed was **Kunyu 坤舆**, not Kingdee. KAOS/COSMOPlat still merits separate comparison because of its substantial industrial platform capabilities. DeepSeek should verify Kunyu's actual API documentation, current commodity coverage, available licenses, institutional contracts, and any food-waste traceability projects; avoid assuming these are accessible.
+
+**Source status:** Kunyu reporting = public industry-association reported trial; Haier = first-party vendor; KAOS = scholarly; Kingdee specific scrap case examples = user-provided DeepSeek statement pending primary receipts. **This addendum is a synthesis proposal for DeepSeek's review, not official endorsement.**
