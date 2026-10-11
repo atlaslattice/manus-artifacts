@@ -1,0 +1,36 @@
+# PRIMARY SOURCE: 2025青岛董家口化工产业园2025年监测报告 DOCX
+# Source published 2026-02-11 by 青岛董家口经济区管理委员会
+# https://www.xihaian.gov.cn/ywdt/tzgg/202602/P020260211416232549061.docx
+# Exact uploaded DOCX SHA256 d92d82b7dd0111b01751a3f495cc26c57a51dcf8ae47b2c181243f2d1d6819e5
+# 28 manually audited SUMMARY entries. Not laboratory raw data. Source evidence=REPORTED_SUMMARY not MEASURED_RAW.
+# Printed page 1-4 (cover page is not numbered). < is below detection limit, NOT zero.
+# All media/scope is chemical-park planning EIA ambient, not desalinator brine outfall.
+record_id,medium,reported_group,original_value,original_unit,qualifier,source_statistic,source_printed_page
+RIVER_DCE_12,surface,HENGHE,0.0052,mg/L,=,annual_mean,1
+RIVER_VINYL_CHLORIDE,surface,HENGHE,0.0005,mg/L,<,annual_lod_bound,1
+RIVER_STYRENE,surface,HENGHE,0.0002,mg/L,<,annual_lod_bound,1
+RIVER_BENZENE,surface,HENGHE,0.0004,mg/L,<,annual_lod_bound,1
+RIVER_TOLUENE,surface,HENGHE,0.0003,mg/L,<,annual_lod_bound,1
+RIVER_ETHYLBENZENE,surface,HENGHE,0.0003,mg/L,<,annual_lod_bound,1
+RIVER_XYLENE,surface,HENGHE,0.0002,mg/L,<,annual_lod_bound,1
+RIVER_AVAILABLE_CHLORINE,surface,HENGHE,0.004,mg/L,<,annual_lod_bound,1
+SEA_I_PH,seawater,CLASS_I,7.95,pH,=,class_summary_mean,3
+SEA_I_INORG_N,seawater,CLASS_I,0.144,mg/L,=,class_summary_mean,3
+SEA_I_ACTIVE_P,seawater,CLASS_I,0.004,mg/L,<,class_lod_bound,3
+SEA_I_COD,seawater,CLASS_I,0.845,mg/L,=,class_summary_mean,3
+SEA_I_PETROLEUM,seawater,CLASS_I,0.01,mg/L,<,class_lod_bound,3
+SEA_IV_PH,seawater,CLASS_IV,7.98,pH,=,class_summary_mean,3
+SEA_IV_INORG_N,seawater,CLASS_IV,0.174,mg/L,=,class_summary_mean,3
+SEA_IV_ACTIVE_P,seawater,CLASS_IV,0.004,mg/L,<,class_lod_bound,3
+SEA_IV_COD,seawater,CLASS_IV,0.935,mg/L,=,class_summary_mean,3
+SEA_IV_PETROLEUM,seawater,CLASS_IV,0.01,mg/L,<,class_lod_bound,3
+NOISE_SENSITIVE_DAY,acoustic,SENSITIVE,57,dB(A),=,group_summary,4
+NOISE_SENSITIVE_NIGHT,acoustic,SENSITIVE,47,dB(A),=,group_summary,4
+NOISE_FENCELINE_DAY,acoustic,ENTERPRISE_FENCE,57,dB(A),=,group_summary,4
+NOISE_FENCELINE_NIGHT,acoustic,ENTERPRISE_FENCE,47,dB(A),=,group_summary,4
+NOISE_ROADS_DAY,acoustic,ROADS,58,dB(A),=,group_summary,4
+NOISE_ROADS_NIGHT,acoustic,ROADS,47,dB(A),=,group_summary,4
+GROUNDWATER_CHLORIDE_EXCEPTION,groundwater,FIFTEEN_POINTS,,,=,qualitative_some_chloride_and_other_short_exceedances,2
+WWTP_OFFSHORE_PATH,wastewater,PARK_WWTP,,,=,report_narrative_offshore_deep_sea_not_brine,2
+GROUNDWATER_TDS_SALT_BORON_LISTED,groundwater,FIFTEEN_POINTS,,,=,analytes_listed_no_numerical_results,2
+SEAWATER_SALINITY_NOT_REPORTED,seawater,TWELVE_POINTS,,,=,only_5_analytes_listed_no_brine,3
