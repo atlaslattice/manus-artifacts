@@ -27,7 +27,7 @@ def verify_integrity():
                 issues.append("unsafe manifest path: "+name);continue
             try:
                 data=candidate.read_bytes()
-                header=("blob "+str(len(data))+"\\0").encode("utf-8")
+                header=("blob "+str(len(data))+"\0").encode("utf-8")
                 actual=hashlib.sha1(header+data).hexdigest()
                 if actual!=record["git_blob_sha1"]:
                     issues.append("integrity mismatch: "+name)
