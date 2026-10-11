@@ -1,6 +1,9 @@
 """Mock evidence validation for v0.7 semantics. NOT physical metrology or GitHub CI."""
 import unittest
 from decimal import Decimal
+import sys
+from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from semantic_contract_v07 import *
 BASE=dict(basis={'mass_basis':'as_reported_unknown_moisture'},period='2025-annual',boundary='municipal_generation',scope='QINGDAO_CITY',source_uri='https://www.qingdao.gov.cn/',evidence_class='REPORTED',statistic='annual_generated')
 class RegistryTests(unittest.TestCase):
