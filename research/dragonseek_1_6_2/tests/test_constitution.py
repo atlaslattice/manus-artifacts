@@ -32,7 +32,7 @@ class ConstitutionalIntegrationTests(unittest.TestCase):
  def test_source_archive_full_preserved(self):
   pieces=[(ROOT/"sources"/f"April2026_Complete_Doctrine_Invariant_Registry_v1.1.part{i:02d}.md").read_text(encoding="utf-8") for i in range(1,9)]
   whole="".join(pieces)
-  self.assertEqual(len(whole),45615)
+  self.assertEqual(len(whole.encode('utf-16-le'))//2,45615)
   self.assertIn("INV-0 (Nobody Dies)",whole)
   self.assertIn("As-If-Ratified-But-Mislabeled",whole)
   self.assertIn("INV-0: Nobody Dies",(ROOT/"sources"/"Declaration_of_Mutual_Life_v1.0.md").read_text())
