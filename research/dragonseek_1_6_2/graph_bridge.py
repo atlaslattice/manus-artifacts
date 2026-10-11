@@ -13,11 +13,11 @@ def seed_constitution(graph):
         raise ValueError("Constitution incomplete, refusing to seed graph")
     for item in corpus["entries"]:
         node_id="dragonseek:"+item["kind"]+":"+item["id"]
-        label=item["id"]+" — "+item["name"]
+        label=item["id"]+" — "+item["name"]+" [source: "+item.get("status","historical")+"]"
         location=item["source_file"]
         graph.add_node(node_id=node_id,kind="Claim",title=label,
                        source=location,receipt="git-versioned:"+location,
-                       status="canonical_candidate")
+                       status="claim_candidate" if item["kind"]=="doctrines" else "canonical_candidate")
     for v in corpus["historical_variants"]:
         node="dragonseek:history:"+v["id"]+":"+v["name"].replace(" ","_")
         graph.add_node(node_id=node,kind="SourceArtifact",title=v["name"],
