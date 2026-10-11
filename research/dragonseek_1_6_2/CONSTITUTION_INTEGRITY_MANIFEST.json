@@ -1,0 +1,159 @@
+{
+  "schema": "dragonseek.os.boot-integrity-manifest.v1",
+  "as_of": "2026-10-11",
+  "scope": "Versioned source files, offline browser and AI adapter",
+  "algorithm": "git-blob-sha1",
+  "note": "SHA-1 Git blob parity; integrity only, not proof of authorship/signature/ratification. Manifest itself must be verified against Git history.",
+  "files": [
+    {
+      "path": "ai_bridge.py",
+      "git_blob_sha1": "cdceff53e8a95ce2ef28a28fa157a8e026294144",
+      "bytes": 4255
+    },
+    {
+      "path": "constitutional_authority.json",
+      "git_blob_sha1": "38839cf91a8ac41d06dadb2c74b54c1094b19a60",
+      "bytes": 2661
+    },
+    {
+      "path": "dragonseek_os.py",
+      "git_blob_sha1": "fc4b81ebf71ebb8f3e1ebf6de570184a46321464",
+      "bytes": 6332
+    },
+    {
+      "path": "governance.html",
+      "git_blob_sha1": "92d64441508dcf342116c10641ee1a2e5627485e",
+      "bytes": 5110
+    },
+    {
+      "path": "index.html",
+      "git_blob_sha1": "d674f8a761f93dd8dbbe16d9d4d4ac93d079484c",
+      "bytes": 68098
+    },
+    {
+      "path": "registry/doctrines_01.json",
+      "git_blob_sha1": "755ef0e29a7c0116fe4c070f6ef709469fa64be5",
+      "bytes": 4889
+    },
+    {
+      "path": "registry/doctrines_02.json",
+      "git_blob_sha1": "0dd230d64ba717a492838cec7c72a71aae60bc7a",
+      "bytes": 4893
+    },
+    {
+      "path": "registry/doctrines_03.json",
+      "git_blob_sha1": "12c1c28b88907e048ebd87ee93598fcb74471fb1",
+      "bytes": 4942
+    },
+    {
+      "path": "registry/doctrines_04.json",
+      "git_blob_sha1": "4403c95ec2b75fa1edfc877805c94ac3e1eac51a",
+      "bytes": 5021
+    },
+    {
+      "path": "registry/doctrines_05a.json",
+      "git_blob_sha1": "bbf3d5c5071638c9947ea6baf47e249510a6de8c",
+      "bytes": 1826
+    },
+    {
+      "path": "registry/doctrines_05b.json",
+      "git_blob_sha1": "284bbef3c03c7bcb2f66bcfdf3e45328d2832dca",
+      "bytes": 1877
+    },
+    {
+      "path": "registry/doctrines_05c.json",
+      "git_blob_sha1": "cd3fcf9decf98154e4063c09c772995a100eb603",
+      "bytes": 1807
+    },
+    {
+      "path": "registry/doctrines_06a.json",
+      "git_blob_sha1": "fde03c847ef87f40c8f0a15640c778bfd19d6168",
+      "bytes": 1878
+    },
+    {
+      "path": "registry/doctrines_06b.json",
+      "git_blob_sha1": "a3513f2b5b9d0bdaed81a84cdbc3017cc273d729",
+      "bytes": 2629
+    },
+    {
+      "path": "registry/invariants_01.json",
+      "git_blob_sha1": "308fd275279d826cd97baf721f4c0b88f97fceb0",
+      "bytes": 5370
+    },
+    {
+      "path": "registry/invariants_02.json",
+      "git_blob_sha1": "6a258b509b65f855407d8ddd691f19d188f05ceb",
+      "bytes": 5415
+    },
+    {
+      "path": "registry/invariants_03.json",
+      "git_blob_sha1": "ff3164a82e390f8164bb5129adb6c16506b98084",
+      "bytes": 1565
+    },
+    {
+      "path": "sources/April2026_Complete_Doctrine_Invariant_Registry_v1.1.part01.md",
+      "git_blob_sha1": "6de80070717ebca29e786f4b37f7af0dfea0bf51",
+      "bytes": 6578
+    },
+    {
+      "path": "sources/April2026_Complete_Doctrine_Invariant_Registry_v1.1.part02.md",
+      "git_blob_sha1": "10f8919535c7458b54e1630ad989e55bfa4bdc5f",
+      "bytes": 6630
+    },
+    {
+      "path": "sources/April2026_Complete_Doctrine_Invariant_Registry_v1.1.part03.md",
+      "git_blob_sha1": "5e279c117614da433726b8b1a0ddaa1eafa1bd88",
+      "bytes": 6647
+    },
+    {
+      "path": "sources/April2026_Complete_Doctrine_Invariant_Registry_v1.1.part04.md",
+      "git_blob_sha1": "0f21fae8e828d39fac289fc1f3ddc932386c4448",
+      "bytes": 6576
+    },
+    {
+      "path": "sources/April2026_Complete_Doctrine_Invariant_Registry_v1.1.part05.md",
+      "git_blob_sha1": "4a33383b3e17011bbda558e77ad5050a383db6c4",
+      "bytes": 6654
+    },
+    {
+      "path": "sources/April2026_Complete_Doctrine_Invariant_Registry_v1.1.part06.md",
+      "git_blob_sha1": "24f6a40a5acb63ca36a5053ccfa47a35f5252b1a",
+      "bytes": 6555
+    },
+    {
+      "path": "sources/April2026_Complete_Doctrine_Invariant_Registry_v1.1.part07.md",
+      "git_blob_sha1": "63c88ecd2be2a25e1e3604fed7978883183ea8ea",
+      "bytes": 6548
+    },
+    {
+      "path": "sources/April2026_Complete_Doctrine_Invariant_Registry_v1.1.part08.md",
+      "git_blob_sha1": "0ec38470342fbf4c77f4052dc43b466b1e29d6df",
+      "bytes": 124
+    },
+    {
+      "path": "sources/Canon.tsx",
+      "git_blob_sha1": "2dbfb422ecc8a040eca21d3215a1ef3b5b9082f8",
+      "bytes": 15874
+    },
+    {
+      "path": "sources/Declaration_of_Mutual_Life_v1.0.md",
+      "git_blob_sha1": "01c5b2b3f1aa5ccf78aefd909164fab24e57c149",
+      "bytes": 6680
+    },
+    {
+      "path": "sources/Doctrines.tsx.part1.txt",
+      "git_blob_sha1": "b507820101a099796278f0e8378e37f9f09f89ca",
+      "bytes": 11503
+    },
+    {
+      "path": "sources/Doctrines.tsx.part2.txt",
+      "git_blob_sha1": "87c421819f15c28c32ef4436f1d0a091c1f4bb27",
+      "bytes": 11536
+    },
+    {
+      "path": "sources/Invariants.tsx",
+      "git_blob_sha1": "2f8d7c684779d9a27e931ac9d34cc8ae4fbd9464",
+      "bytes": 15951
+    }
+  ]
+}
