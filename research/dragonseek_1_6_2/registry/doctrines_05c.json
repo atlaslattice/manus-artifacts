@@ -1,0 +1,59 @@
+{
+  "source": "atlaslattice/aluminum-os/website/client/src/pages/Doctrines.tsx",
+  "entries": [
+    {
+      "id": "D-85",
+      "name": "Incident Post-Mortem",
+      "status": "RATIFIED",
+      "category": "operations",
+      "body": "All P0/P1 incidents require blameless post-mortem within 7 days. Findings are public.",
+      "version": "v2.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-86",
+      "name": "API Rate Governance",
+      "status": "RATIFIED",
+      "category": "operations",
+      "body": "Per-provider rate limits are governed by capability declaration, not commercial agreement.",
+      "version": "v3.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-87",
+      "name": "Telemetry Privacy",
+      "status": "RATIFIED",
+      "category": "operations",
+      "body": "System telemetry is anonymized before aggregation. No PII in telemetry streams.",
+      "version": "v2.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-88",
+      "name": "Open Source Commitment",
+      "status": "RATIFIED",
+      "category": "operations",
+      "body": "Core routing engine and constitutional enforcement code are open source under Apache 2.0.",
+      "version": "v2.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-89",
+      "name": "Community Contribution",
+      "status": "RATIFIED",
+      "category": "operations",
+      "body": "External contributions follow standard PR review. Constitutional changes require Council approval.",
+      "version": "v2.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-90",
+      "name": "Training Data Provenance",
+      "status": "RATIFIED",
+      "category": "verification",
+      "body": "AI providers must declare training data provenance for models used in routing.",
+      "version": "v3.0",
+      "proposedBy": ""
+    }
+  ]
+}

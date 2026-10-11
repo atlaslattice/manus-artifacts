@@ -1,0 +1,150 @@
+{
+  "source": "atlaslattice/aluminum-os website/client/src/pages/Doctrines.tsx",
+  "historical": true,
+  "entries": [
+    {
+      "id": "D-1",
+      "name": "Constitutional Primacy",
+      "status": "RATIFIED",
+      "category": "governance",
+      "body": "The constitutional framework takes precedence over all other governance instruments.",
+      "version": "v1.0"
+    },
+    {
+      "id": "D-2",
+      "name": "Human Sovereignty Guarantee",
+      "status": "RATIFIED",
+      "category": "governance",
+      "body": "Human decision-making authority is inviolable. AI systems advise; humans decide.",
+      "version": "v1.0"
+    },
+    {
+      "id": "D-3",
+      "name": "Multi-Vendor Architecture",
+      "status": "RATIFIED",
+      "category": "architecture",
+      "body": "The system must support multiple AI providers simultaneously. No single-vendor lock-in.",
+      "version": "v1.0"
+    },
+    {
+      "id": "D-4",
+      "name": "Open Ontology",
+      "status": "RATIFIED",
+      "category": "ontology",
+      "body": "The 12×12 lattice structure is publicly documented and freely implementable.",
+      "version": "v1.0"
+    },
+    {
+      "id": "D-5",
+      "name": "Adversarial Review Requirement",
+      "status": "RATIFIED",
+      "category": "governance",
+      "body": "Every major routing decision must be reviewable by at least one adversarial Council seat.",
+      "version": "v1.0"
+    },
+    {
+      "id": "D-6",
+      "name": "Dialect Sovereignty",
+      "status": "RATIFIED",
+      "category": "routing",
+      "body": "Each jurisdiction's dialect overlay has authority over its domain-specific routing rules.",
+      "version": "v1.0"
+    },
+    {
+      "id": "D-7",
+      "name": "Provenance Chain Mandate",
+      "status": "RATIFIED",
+      "category": "verification",
+      "body": "All knowledge claims must carry verifiable provenance from source to current state.",
+      "version": "v1.0"
+    },
+    {
+      "id": "D-8",
+      "name": "Zero Erasure Policy",
+      "status": "RATIFIED",
+      "category": "storage",
+      "body": "Committed knowledge artifacts are archived, never deleted. Superseded data remains accessible.",
+      "version": "v1.0"
+    },
+    {
+      "id": "D-9",
+      "name": "Council Quorum Rules",
+      "status": "RATIFIED",
+      "category": "governance",
+      "body": "0.67 quorum of active seats required for decisions. Provisional seats vote but don't count toward quorum.",
+      "version": "v1.0"
+    },
+    {
+      "id": "D-10",
+      "name": "Convenor Authority",
+      "status": "RATIFIED",
+      "category": "governance",
+      "body": "The Convenor (human) holds tie-break authority and final ratification power.",
+      "version": "v1.0"
+    },
+    {
+      "id": "D-11",
+      "name": "House Immutability",
+      "status": "RATIFIED",
+      "category": "ontology",
+      "body": "The 12 Houses are fixed. New knowledge domains are accommodated within existing Houses or as sub-spheres.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-12",
+      "name": "Sphere Addressing Standard",
+      "status": "RATIFIED",
+      "category": "ontology",
+      "body": "Every sphere has a canonical address: H{n}-S{nnn}. Sub-spheres use SS-{nnnn} notation.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-13",
+      "name": "VIP Element Registration",
+      "status": "RATIFIED",
+      "category": "ontology",
+      "body": "New VIP Elements require Council supermajority and demonstrated cross-House impact.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-14",
+      "name": "Sub-Sphere Expansion Protocol",
+      "status": "RATIFIED",
+      "category": "ontology",
+      "body": "Sub-spheres may be added by any Council seat with 0.67 quorum approval. No upper limit per sphere.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-15",
+      "name": "Cross-House Adjacency",
+      "status": "RATIFIED",
+      "category": "ontology",
+      "body": "Adjacency relationships between spheres in different Houses must be explicitly declared and versioned.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-16",
+      "name": "Ontology Migration Safety",
+      "status": "RATIFIED",
+      "category": "ontology",
+      "body": "Schema changes must be backward-compatible within a major version. Breaking changes require new major version.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-17",
+      "name": "Knowledge Node Completeness",
+      "status": "RATIFIED",
+      "category": "ontology",
+      "body": "Every sphere must have at least one active sub-sphere. Empty spheres are flagged for review.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-18",
+      "name": "Lattice Consistency Check",
+      "status": "RATIFIED",
+      "category": "ontology",
+      "body": "Automated consistency checks run on every schema change. Inconsistencies block deployment.",
+      "version": "v2.0"
+    }
+  ]
+}
