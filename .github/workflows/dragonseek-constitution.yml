@@ -1,0 +1,28 @@
+name: DragonSeek Constitutional Corpus Tests
+on:
+  pull_request:
+    paths:
+      - 'research/dragonseek_1_6_2/**'
+      - '.github/workflows/dragonseek-constitution.yml'
+  push:
+    branches:
+      - 'feature/dragonseek-v162-constitutional-registry-20261011'
+    paths:
+      - 'research/dragonseek_1_6_2/**'
+      - '.github/workflows/dragonseek-constitution.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  constitutional-registry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Python compile
+        run: python -m compileall -q research/dragonseek_1_6_2
+      - name: Constitutional tests
+        run: python -m unittest discover -s research/dragonseek_1_6_2/tests -v
