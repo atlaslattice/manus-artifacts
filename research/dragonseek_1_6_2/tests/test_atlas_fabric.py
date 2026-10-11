@@ -7,7 +7,7 @@ from atlas_fabric import (run_uws_readonly,query_sheldonbrain,ReceiptGraph,
 
 class FabricTests(unittest.TestCase):
     def test_uws_dry_run_and_write_denial(self):
-        self.assertEqual(run_uws_readonly(["drive","files","list"])["state"],"DRY_RUN")
+        self.assertEqual(run_uws_readonly(["drive","files","list"])["state"],"PLAN_ONLY")
         self.assertEqual(run_uws_readonly(["gmail","users","messages","send"],execute=True)["state"],"DENIED")
         self.assertEqual(run_uws_readonly(["drive","files","delete"],execute=True)["state"],"DENIED")
     def test_sheldonbrain_optin(self):
