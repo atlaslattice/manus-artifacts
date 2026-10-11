@@ -29,7 +29,7 @@ python3 ai_bridge.py --model YOUR_LOCAL_MODEL --ask "INV-0 是什么？" --dry-r
 - `sources/Canon.tsx`, `sources/Invariants.tsx`, `sources/Declaration_of_Mutual_Life_v1.0.md`: complete locally preserved historical source files.
 - `sources/April2026_Complete_Doctrine_Invariant_Registry_v1.1.part01..part08.md`: eight exact contiguous sections of the April 29 source; concatenation was verified equal to the Google Drive original.
 - [Original Aluminum OS Doctrines.tsx](https://github.com/atlaslattice/aluminum-os/blob/main/website/client/src/pages/Doctrines.tsx): original unchanged; all 102 doctrine records are now locally present as JSON, and first two partial .tsx source excerpts are also preserved.
-- `CONSTITUTION_INTEGRITY_MANIFEST.json`: Git-blob hash receipts for 30 shipped files. `dragonseek_os.py` blocks references if local file parity is broken. Hashes are integrity checks, not signatures or council-vote evidence.
+- `CONSTITUTION_INTEGRITY_MANIFEST.json`: Git-blob hash receipts for 41 shipped files. `dragonseek_os.py` blocks references if local file parity is broken. Hashes are integrity checks, not signatures or council-vote evidence.
 - `ai_bridge.py`: opt-in, compatible-model Chat Completions client, default loopback-only, no agent tools/physical actions; incorporates locally retrieved constitutional excerpts into AI request. No real model is installed, trained, fine-tuned, or automatically called.
 
 ## Constitutional interpretation
@@ -49,3 +49,9 @@ System Integrity from the Aluminum OS website remains searchable as a historical
 ## Source provenance
 
 [April registry v1.1](https://drive.google.com/file/d/1p1Cp3NnOFHQK_BIX5TkaH0uc3vCaG0-8/view) · [Founding Declaration](https://github.com/atlaslattice/atlas-lattice-foundation/blob/main/canon/Declaration_of_Mutual_Life.md) · [Aluminum OS Canon](https://github.com/atlaslattice/aluminum-os/blob/main/website/client/src/pages/Canon.tsx) · [Aluminum OS Invariants](https://github.com/atlaslattice/aluminum-os/blob/main/website/client/src/pages/Invariants.tsx) · [Aluminum OS Doctrines](https://github.com/atlaslattice/aluminum-os/blob/main/website/client/src/pages/Doctrines.tsx) · [Atlas Intelligence](https://github.com/atlaslattice/Atlas-Intelligence).
+
+## ATLAS Fabric dual-brain prototype (new in this branch)
+
+Open the [Mandarin-first Fabric Lab](fabric.html) from the monitoring dashboard, or read [ATLAS_FABRIC_INTEGRATION.md](ATLAS_FABRIC_INTEGRATION.md). Source-linked development modules include `atlas_fabric.py` (UWS read-only adapter, Sheldonbrain read-only search, SQLite KG and 8/8/8 planning), `parser_bridge.py` (local JSON export parsing and receipts), `graph_bridge.py` (143-record constitutional graph with preserved contradiction and separate SHUGS experimental packets), and `dual_brain.py` (explicitly configured primary/reviewer model comparison). A standalone [Atlas ARI draft PR](https://github.com/atlaslattice/Atlas-Intelligence/pull/1) carries separate U.S.-scoped counterparts; neither app's private services are silently connected.
+
+All cross-check outputs and dream residue are non-canon pending qualified human review; SHUGS data is theoretical/simulated rather than proof. These interfaces are non-autonomous by default and external writes are not authorized by graph retrieval or model output.
