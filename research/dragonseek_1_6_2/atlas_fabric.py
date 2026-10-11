@@ -100,6 +100,8 @@ class ReceiptGraph:
         """)
         self.db.execute("PRAGMA foreign_keys=ON")
     def add_node(self, *, node_id, kind, title, source, receipt, status="raw"):
+        if status in ("ratified", "canon"):
+            raise ValueError("Graph API cannot self-promote records to ratified or canon")
         if status not in GRAPH_STATES or not all([node_id,kind,title,source,receipt]):
             raise ValueError("Source, status, title, type and receipt required")
         digest=hashlib.sha256(json.dumps([kind,title,source,receipt,status],ensure_ascii=False).encode()).hexdigest()
