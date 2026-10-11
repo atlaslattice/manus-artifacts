@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""ATLAS Fabric v0.1: opt-in UWS read operations, Sheldonbrain retrieval,
+"""ATLAS Fabric v0.2: full opt-in UWS operations, Sheldonbrain retrieval,
 receipt-linked local KG, experimental 8/8/8 scheduling, and two-brain review.
 Stdlib-only. No provider connections, commands, or scheduling start on import.
 """
@@ -7,15 +7,8 @@ from __future__ import annotations
 import hashlib, json, os, shutil, sqlite3, subprocess, urllib.request
 from pathlib import Path
 from urllib.parse import urlsplit
+from uws_gateway import run_uws, proposal as uws_proposal
 
-UWS_READ_COMMANDS = {
-    ("drive", "files", "list"),
-    ("gmail", "users", "messages", "list"),
-    ("calendar", "events", "list"),
-    ("ms-mail", "messages", "list"),
-    ("auth", "status"),
-    ("ms-auth", "status"),
-}
 GRAPH_STATES = {"raw", "parsed", "claim_candidate", "review_pending",
                 "contradicted", "deferred", "rejected", "ratified",
                 "canonical_candidate", "canon"}
@@ -31,29 +24,11 @@ def endpoint_allowed(url: str, allow_remote: bool=False) -> bool:
 
 def run_uws_readonly(command: list[str], params: dict | None=None, *,
                      execute: bool=False, timeout: int=15) -> dict:
-    """Exact service/method allowlist. NEVER forwards arbitrary shell or write ops."""
-    if tuple(command) not in UWS_READ_COMMANDS:
-        return {"state":"DENIED", "reason":"UWS command not allowlisted as read-only"}
-    if params is not None and (not isinstance(params,dict) or len(json.dumps(params))>8000):
-        return {"state":"DENIED", "reason":"Invalid or oversized UWS query params"}
-    if not execute: return {"state":"DRY_RUN", "command":command,
-                            "params":params, "executed":False}
-    binary=os.environ.get("UWS_BINARY") or shutil.which("uws")
-    if not binary: return {"state":"UNAVAILABLE", "reason":"uws binary not installed"}
-    args=[binary,*command]
-    if params: args.extend(["--params",json.dumps(params)])
-    try:
-        p=subprocess.run(args,capture_output=True,text=True,timeout=min(timeout,30),
-                         check=False)
-    except (OSError,subprocess.TimeoutExpired):
-        return {"state":"ERROR", "reason":"UWS execution failed or timed out"}
-    if p.returncode:
-        return {"state":"ERROR","returncode":p.returncode,
-                "reason":"UWS returned nonzero exit; check local authentication"}
-    try: data=json.loads(p.stdout)
-    except ValueError: return {"state":"ERROR","reason":"Non-JSON UWS response"}
-    return {"state":"READ_ONLY_RESULT", "data":data,
-            "privacy":"private local response; never commit to public Git"}
+    """Legacy compatibility wrapper. Use run_uws for the full read/write bridge."""
+    plan=uws_proposal(command,params=params)
+    if plan.get("operation")!="READ":
+        return {"state":"DENIED","reason":"Legacy read-only wrapper; use run_uws with a trusted human approval callback for writes"}
+    return run_uws(command,params=params,execute=execute,timeout=timeout)
 
 def query_sheldonbrain(query: str, *, base_url="http://127.0.0.1:8080",
                        allow_remote=False, execute=False, top_k=5) -> dict:
