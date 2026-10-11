@@ -31,7 +31,7 @@ def add_shugs_packet(graph,packet,source_path,receipt):
     """A locally supplied simulation packet can be indexed, NOT canonized."""
     if not isinstance(packet,dict) or not source_path or not receipt:
         raise ValueError("SHUGS packet source/receipt required")
-    if not any(k in packet for k in ("N","n","results","lattice","metrics","parameters")):
+    if not any(k in packet for k in ("N","n","results","lattice","metrics","parameters","lattice_optimum","n_scaling")):
         raise ValueError("SHUGS data schema unrecognized")
     raw=json.dumps(packet,sort_keys=True,ensure_ascii=False)
     if len(raw)>200000:raise ValueError("Oversized research packet")
