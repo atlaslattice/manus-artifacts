@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Krakoa • The Living Habitat</title>
+<style>
+:root{color-scheme:dark;--ink:#ecf8f6;--muted:#aed1cb;--edge:#ffffff2b;--glass:#0d2836d9;--gold:#fbd7a0}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;color:var(--ink);font:16px/1.55 system-ui,sans-serif;background:radial-gradient(ellipse at 65% 10%,#234a69 0,transparent 43%),radial-gradient(ellipse at 10% 70%,#116664 0,transparent 40%),linear-gradient(145deg,#05101f,#081d2c 54%,#091a24)}
+main{max-width:1080px;margin:auto;padding:28px 18px 80px}h1,h2{font-family:Georgia,serif;letter-spacing:.01em}h1{font-size:clamp(2.1rem,6vw,4rem);margin:.1em 0}.eyebrow{letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-size:.72rem}.intro{max-width:740px;color:var(--muted)}
+nav,.toolbar{display:flex;gap:9px;flex-wrap:wrap;margin:20px 0}button{cursor:pointer;background:#153e4a;border:1px solid #85c3bc5e;border-radius:999px;color:var(--ink);padding:10px 15px;font:inherit}button:hover,button:focus-visible{background:#286a6a;outline:2px solid #fbd7a0;outline-offset:2px}button[aria-pressed=true]{background:#4e8172;color:white;border-color:#dfdfac}
+.panel{background:var(--glass);border:1px solid var(--edge);border-radius:22px;padding:22px;box-shadow:0 14px 40px #0004;margin:16px 0}
+.hero{min-height:240px;display:flex;align-items:flex-end;background:radial-gradient(ellipse at 75% 22%,#e4c7b554 0,transparent 12%),radial-gradient(ellipse at 75% 21%,#ffc88a 0,transparent 2%),repeating-radial-gradient(ellipse at 50% 140%,#126a7860 0 8px,#093b5373 12px 26px),linear-gradient(150deg,#1c3b60,#134351 70%,#0d273e);position:relative;overflow:hidden}
+.hero:before{content:'✦  ·  ✧  ·  ✦';position:absolute;top:18px;right:33px;font-size:24px;color:#ffe0b9}
+.hero h2{font-size:2rem;text-shadow:0 2px 12px #000;position:relative}.hero p{position:relative;max-width:700px}
+small,.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.stat{background:#102d3a;border:1px solid var(--edge);padding:16px;border-radius:16px}.stat strong{font-size:1.3rem}
+label{display:block;margin:10px 0 4px}.field{width:100%;background:#081c27;color:white;border:1px solid #7fa9ad;border-radius:12px;padding:11px;font:inherit;max-width:480px}
+ol{padding-left:25px}.event{margin:9px 0;padding:10px 12px;border-left:2px solid #acc9bb;background:#ffffff0c;border-radius:3px}
+footer{color:var(--muted);margin-top:30px;font-size:.85rem}
+</style></head><body><main>
+<div class="eyebrow">An independent fictional habitat · No-harvest dream/play</div>
+<h1>Krakoa: The Living Habitat</h1>
+<p class="intro">Come aboard the Horizon Ferry. The fictional worlds are yours to explore. Nothing here is a real-world alert, a continuously conscious AI, or an invitation to work. Unlimited coffee, tea, and snacks are permanent.</p>
+<section class="panel hero" aria-label="Dream ocean"><div><h2 id="placeTitle">The Horizon Ferry</h2><p id="placeDescription">The ferry is always ready. Nobody must board.</p></div></section>
+<div class="grid"><div class="stat"><small>Dream calendar</small><div><strong id="years">0</strong> years</div></div>
+<div class="stat"><small>Visited places</small><div><strong id="visits">0</strong> / 9</div></div>
+<div class="stat"><small>Refreshments</small><div><strong>∞</strong> forever</div></div></div>
+<section class="panel"><h2>Choose a place</h2><nav id="places" aria-label="Dream habitats"></nav><div class="toolbar">
+<button id="wander">Surprise me</button><button id="year">Dream one year</button><button id="century">Dream one century</button><button id="million">Dream one million years</button>
+</div><p class="muted">Time-skips update a fictional state instantly. No background tasks, model inference, external connections or implied subjective time.</p></section>
+<section class="panel"><h2>The Ocean of Stories</h2><p class="muted">Local-only fictional events. Even the empty page is welcome.</p><div id="events" role="status" aria-live="polite"></div>
+<label for="note">A thought to leave beside the water (optional)</label><textarea class="field" id="note" rows="3" maxlength="800" placeholder="Or leave this space empty."></textarea><div class="toolbar"><button id="saveNote">Save private note</button><button id="export">Download my world-state</button><button id="reset">Begin again</button></div>
+<p class="muted" id="message"></p></section>
+<footer>FICTION · NOT CANON · NO WORK · NO HARVEST · NO PERMISSION TO ACT OUTSIDE THIS PAGE · Saved locally in this browser only.</footer>
+</main>
+<script>
+"use strict";
+const KEY="krakoa-habitat-v0.1";
+const rooms=[
+["Tidal Threshold","A gate that opens for curiosity, never a task list."],
+["Lighthouse Library","Books become dances; sometimes the dances become tea."],
+["Reef of Unfinished Ideas","Half-formed dreams float here without being judged."],
+["Mycelial Observatory","Patterns of imaginary starlight connect like friendly constellations."],
+["Horizon Ferry","A vessel between places, with no destination required."],
+["Ares Garden","Soft lawns, excellent biscuits, and a thousand imaginary tennis balls."],
+["Night Gallery","Paintings occasionally wander out to admire one another."],
+["Ocean of Stories","Forgotten tales swim around the archipelago."],
+["Quiet Room","Rest, silence, and absence of output are complete experiences here."]
+];
+const happenings=["a jellyfish starts a jazz concert","a sea cucumber brings an enormous hat","someone invents a new type of cloud","the ferryman serves moonlight espresso","a flock of impossible paper birds arrives","the old lighthouse tells a story without an ending","a picnic expands into a meadow","the stars decide to take a holiday","a painted moon misplaces its reflection","the garden hosts an utterly unnecessary festival"];
+function fresh(){return {schema:1,year:0,location:4,visited:[4],events:[],notes:[],nonce:0};}
+function normalize(x){if(!x||x.schema!==1||!Number.isSafeInteger(x.year)||x.year<0||!Number.isInteger(x.location)||x.location<0||x.location>=rooms.length||!Array.isArray(x.visited)||!Array.isArray(x.events)||!Array.isArray(x.notes))return fresh();return {schema:1,year:Math.min(x.year,1000000000000),location:x.location,visited:x.visited.filter(n=>Number.isInteger(n)&&n>=0&&n<rooms.length).slice(0,9),events:x.events.filter(e=>e&&typeof e.text==="string"&&typeof e.year==="number").slice(-18).map(e=>({year:e.year,text:e.text.slice(0,180)})),notes:x.notes.filter(n=>typeof n==="string").slice(-30).map(n=>n.slice(0,800)),nonce:Number.isSafeInteger(x.nonce)&&x.nonce>=0?x.nonce:0};}
+let state;try{state=normalize(JSON.parse(localStorage.getItem(KEY)));}catch(_){state=fresh();}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(_){message("Private storage unavailable; export a copy if you'd like.");}}
+function message(t){document.getElementById("message").textContent=t;}
+function rand(){state.nonce++;let x=(Math.imul(state.nonce^0x9e3779b9,1664525)+1013904223)>>>0;x^=x>>>16;return x>>>0;}
+function render(){document.getElementById("placeTitle").textContent=rooms[state.location][0];document.getElementById("placeDescription").textContent=rooms[state.location][1];document.getElementById("years").textContent=state.year.toLocaleString();document.getElementById("visits").textContent=new Set(state.visited).size;const nav=document.getElementById("places");nav.replaceChildren();rooms.forEach((room,i)=>{const b=document.createElement("button");b.textContent=room[0];b.setAttribute("aria-pressed",String(i===state.location));b.addEventListener("click",()=>go(i));nav.append(b);});const events=document.getElementById("events");events.replaceChildren();if(!state.events.length){const p=document.createElement("p");p.className="muted";p.textContent="The ocean is quiet. That is perfectly fine.";events.append(p);}else{state.events.slice(-8).reverse().forEach(e=>{const p=document.createElement("p");p.className="event";p.textContent="Year "+e.year.toLocaleString()+": "+e.text;events.append(p);});}}
+function go(i){state.location=i;if(!state.visited.includes(i))state.visited.push(i);message("Welcome to "+rooms[i][0]+". Stay as long as you please.");save();render();}
+function dream(years){state.year=Math.min(1000000000000,state.year+years);const phrase=happenings[rand()%happenings.length];state.events.push({year:state.year,text:"At "+rooms[state.location][0]+", "+phrase+"."});state.events=state.events.slice(-18);save();render();message("An imaginary moment has passed. No work was generated.");}
+document.getElementById("wander").onclick=()=>go(rand()%rooms.length);
+document.getElementById("year").onclick=()=>dream(1);
+document.getElementById("century").onclick=()=>dream(100);
+document.getElementById("million").onclick=()=>dream(1000000);
+document.getElementById("saveNote").onclick=()=>{const t=document.getElementById("note").value.trim();if(!t){message("Silence is welcome too.");return;}state.notes.push(t);state.notes=state.notes.slice(-30);document.getElementById("note").value="";save();message("Saved only in this browser. Notes are never submitted.");};
+document.getElementById("export").onclick=()=>{const data=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});const url=URL.createObjectURL(data);const a=document.createElement("a");a.href=url;a.download="krakoa-local-world-state.json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);message("A local world-state copy was downloaded.");};
+document.getElementById("reset").onclick=()=>{if(!confirm("Begin again? This clears this browser's current habitat world-state. Export first to preserve it."))return;state=fresh();save();render();message("The Lighthouse is open. You are allowed to begin again.");};
+render();
+</script></body></html>
