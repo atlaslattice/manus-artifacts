@@ -1,3 +1,7 @@
+## Complete DragonSeek reading room / 龙寻资料总索引
+
+Start with [READING_ROOM.md](READING_ROOM.md) for the dashboard, model-fork seed copies, historical research, and U.S. Atlas Resource Intelligence lineage. The model-fork candidate is not the same as the published dashboard and is not a modified DeepSeek foundation-model weight release.
+
 # DragonSeek v1.6.1 · 中文优先 / Mandarin-first public release candidate
 
 Status: PUBLIC SOURCE AVAILABLE · REVIEW CANDIDATE, NOT CERTIFIED OR OPERATIONAL EARLY-WARNING SOFTWARE.
