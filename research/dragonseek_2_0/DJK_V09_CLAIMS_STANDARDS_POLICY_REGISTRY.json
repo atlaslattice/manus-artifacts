@@ -1,0 +1,497 @@
+{
+  "registry_id": "DRAGONSEEK-V09-SOURCES-20261011",
+  "date": "2026-10-11",
+  "note": "Primary publication verification and collaborator reporting are independent axes; no working interfaces authorized; statuses reflect evidence at research snapshot, not standards compliance.",
+  "claims": [
+    {
+      "claim_id": "STD-UNIT-47851",
+      "title": "GB/T 47851-2026 digital measurement unit identification",
+      "scope": "NATIONAL",
+      "modules": [
+        "UNIT-CONTRACT",
+        "C01"
+      ],
+      "evidence_class": "PRIMARY_GOV_RECORD",
+      "verification_state": "OFFICIAL_METADATA_OR_TEXT_READ",
+      "lifecycle": "PUBLISHED_NOT_YET_EFFECTIVE",
+      "source_url": "https://std.samr.gov.cn/",
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Formal clauses and identifiers; planned effective date 2026-11-01",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "STD-UNIT-3100-DRAFT",
+      "title": "Draft revised GB 3100 SI conventions including ppm and symbols",
+      "scope": "NATIONAL",
+      "modules": [
+        "UNIT-CONTRACT"
+      ],
+      "evidence_class": "COLLABORATOR_REPORTED",
+      "verification_state": "COLLABORATOR_ONLY",
+      "lifecycle": "DRAFT_CONSULTATION",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Draft text and promulgation record",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "STD-MON-212",
+      "title": "HJ 212-2025 automatic monitoring transmissions",
+      "scope": "NATIONAL",
+      "modules": [
+        "MONITORING-QUALITY-01",
+        "AUDIT-EVENT-01"
+      ],
+      "evidence_class": "PRIMARY_GOV_RECORD",
+      "verification_state": "OFFICIAL_METADATA_OR_TEXT_READ",
+      "lifecycle": "IN_FORCE",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Clause-level fields; lab LOD distinct; no existing authorized interface",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "STD-SOIL-166",
+      "title": "HJ 166-2026 soil monitoring specification",
+      "scope": "NATIONAL",
+      "modules": [
+        "SOIL01",
+        "ECO01"
+      ],
+      "evidence_class": "COLLABORATOR_REPORTED",
+      "verification_state": "COLLABORATOR_ONLY",
+      "lifecycle": "REPORTED_IN_FORCE",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Official catalog and soil monitoring procurement applicability",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "STD-PM-93",
+      "title": "HJ 93-2026 particulate matter sampler specification",
+      "scope": "NATIONAL",
+      "modules": [
+        "AIR01"
+      ],
+      "evidence_class": "COLLABORATOR_REPORTED",
+      "verification_state": "COLLABORATOR_ONLY",
+      "lifecycle": "REPORTED_IN_FORCE",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Official catalog, sampler-specific vs environmental limits",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "STD-DEV-47019",
+      "title": "GB/T 47019-2026 industrial device access data dictionary",
+      "scope": "NATIONAL",
+      "modules": [
+        "C01",
+        "DEVICE-DICTIONARY-01"
+      ],
+      "evidence_class": "PRIMARY_GOV_RECORD",
+      "verification_state": "OFFICIAL_METADATA_OR_TEXT_READ",
+      "lifecycle": "IN_FORCE",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Licensed manufacturer dictionary and standard clause crosswalk",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "STD-ECODE-47866",
+      "title": "GB/T 47866-2026 Ecode mapping",
+      "scope": "NATIONAL",
+      "modules": [
+        "ID-MAP-01",
+        "CIRC01"
+      ],
+      "evidence_class": "PRIMARY_GOV_RECORD",
+      "verification_state": "OFFICIAL_METADATA_OR_TEXT_READ",
+      "lifecycle": "PUBLISHED_NOT_YET_EFFECTIVE",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Effective 2026-11-01; operator-authorized external IDs",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "STD-SEC-44462-4",
+      "title": "GB/T 44462.4-2026 industrial internet enterprise data protection",
+      "scope": "NATIONAL",
+      "modules": [
+        "SEC-DATA-01",
+        "C01"
+      ],
+      "evidence_class": "PRIMARY_GOV_RECORD",
+      "verification_state": "OFFICIAL_METADATA_OR_TEXT_READ",
+      "lifecycle": "IN_FORCE",
+      "source_url": "https://std.samr.gov.cn/search/stdPage?q=44462",
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Clause-by-clause security and applicability; effective 2026-10-01",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "STD-CARB-32150",
+      "title": "GB/T 32150-2025 general GHG accounting",
+      "scope": "NATIONAL",
+      "modules": [
+        "CARB01"
+      ],
+      "evidence_class": "PRIMARY_GOV_RECORD",
+      "verification_state": "OFFICIAL_METADATA_OR_TEXT_READ",
+      "lifecycle": "IN_FORCE",
+      "source_url": "https://std.samr.gov.cn/gb/search/gbDetailed?id=473EBB99D6C3455EE06397BE0A0ABB9A",
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Published 2025-12-31, effective 2026-07-01; replaces 2015 edition",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "STD-CARB-32151-54",
+      "title": "GB/T 32151.54-2025 sulphuric acid industry GHG",
+      "scope": "NATIONAL",
+      "modules": [
+        "CARB01",
+        "CHEM01-S"
+      ],
+      "evidence_class": "PRIMARY_GOV_RECORD",
+      "verification_state": "OFFICIAL_METADATA_OR_TEXT_READ",
+      "lifecycle": "IN_FORCE",
+      "source_url": "https://openstd.samr.gov.cn/bzgk/std/std_list?p.p1=0&p.p2=GBT32150&p.p90=circulation_date&p.p91=desc",
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Effective 2026-05-01; verify DJK facility applicability and clauses",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "STD-RECYCLABLE-20253107",
+      "title": "20253107-Z-469 trustworthy recycled material traceability guidance",
+      "scope": "NATIONAL",
+      "modules": [
+        "CIRC01",
+        "AUDIT-EVENT-01"
+      ],
+      "evidence_class": "COLLABORATOR_REPORTED",
+      "verification_state": "COLLABORATOR_ONLY",
+      "lifecycle": "IN_DEVELOPMENT",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Finalized document and publication decision",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "STD-CIRCULAR-REVISIONS",
+      "title": "Proposed 2026 revisions of circular industrial management/performance standards",
+      "scope": "NATIONAL",
+      "modules": [
+        "CIRC01",
+        "ECO01"
+      ],
+      "evidence_class": "COLLABORATOR_REPORTED",
+      "verification_state": "COLLABORATOR_ONLY",
+      "lifecycle": "DRAFT_CONSULTATION",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Formal successor number and current standard replacement status",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "PLAN-NAT-WASTE-2026",
+      "title": "State Council comprehensive solid waste action plan 国发〔2025〕14号",
+      "scope": "NATIONAL",
+      "modules": [
+        "CIRC01",
+        "BIO01-E"
+      ],
+      "evidence_class": "PRIMARY_GOV_RECORD",
+      "verification_state": "OFFICIAL_METADATA_OR_TEXT_READ",
+      "lifecycle": "IN_FORCE",
+      "source_url": "https://app.xinhuanet.com/news/article.html?articleId=d9dec6786d6f47c0b6601589b24e5e83",
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "National 2030 targets 4.5 bn t bulk utilization and 0.51 bn t major recycled resources; never allocate to DJK",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "PLAN-WASTE-TEN",
+      "title": "固废十条 separate document identity reported",
+      "scope": "NATIONAL",
+      "modules": [
+        "CIRC01",
+        "BIO01-E"
+      ],
+      "evidence_class": "COLLABORATOR_REPORTED",
+      "verification_state": "COLLABORATOR_ONLY",
+      "lifecycle": "DOCUMENT_IDENTITY_PENDING",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Determine if shorthand for above plan; do not double-count targets",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "LAW-ECOCODE-2026",
+      "title": "PRC Ecological and Environmental Code",
+      "scope": "NATIONAL",
+      "modules": [
+        "ECO01",
+        "CIRC01"
+      ],
+      "evidence_class": "PRIMARY_GOV_RECORD",
+      "verification_state": "OFFICIAL_METADATA_OR_TEXT_READ",
+      "lifecycle": "IN_FORCE",
+      "source_url": "https://www.moe.gov.cn/jyb_xwfb/s6052/moe_838/202603/t20260313_1430758.html",
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Passed 2026-03-12; effective 2026-08-15; article-level legal mapping pending",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "PLAN-SOLID-39",
+      "title": "环固体〔2026〕39号 cited as Qingdao but nationally scoped",
+      "scope": "NATIONAL",
+      "modules": [
+        "CIRC01",
+        "BIO01-E"
+      ],
+      "evidence_class": "PRIMARY_GOV_RECORD",
+      "verification_state": "OFFICIAL_METADATA_OR_TEXT_READ",
+      "lifecycle": "SCOPE_CORRECTED",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Find exact six-ministry text and separate Qingdao implementer plan; avoid false city attribution",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "POL-SHANDONG-KITCHEN",
+      "title": "Shandong 2026 revised kitchen waste management",
+      "scope": "SHANDONG_PROVINCE",
+      "modules": [
+        "BIO01-E"
+      ],
+      "evidence_class": "COLLABORATOR_REPORTED",
+      "verification_state": "COLLABORATOR_ONLY",
+      "lifecycle": "REPORTED_IN_FORCE",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Effective date Aug 18 and exact waste classification and penalties",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "POL-QINGDAO-KITCHEN",
+      "title": "Qingdao 2026 revised kitchen waste management",
+      "scope": "QINGDAO_CITY",
+      "modules": [
+        "BIO01-E",
+        "CIRC01"
+      ],
+      "evidence_class": "COLLABORATOR_REPORTED",
+      "verification_state": "COLLABORATOR_ONLY",
+      "lifecycle": "REPORTED_IN_FORCE",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Formal amended provisions, license type and used-oil obligations",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "POL-QINGDAO-CONSTRUCTION",
+      "title": "Qingdao construction waste electronic transfer manifest policy",
+      "scope": "QINGDAO_CITY",
+      "modules": [
+        "CIRC01",
+        "AUDIT-EVENT-01"
+      ],
+      "evidence_class": "PRIMARY_GOV_RECORD",
+      "verification_state": "OFFICIAL_METADATA_OR_TEXT_READ",
+      "lifecycle": "IN_FORCE",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Manifest schema and lawful authorization; no API access",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "POL-PORT-GREEN-2028",
+      "title": "Qingdao 2026-2028 green port transformation plan",
+      "scope": "QINGDAO_PORTS_AGGREGATE",
+      "modules": [
+        "GREEN-PORT-01",
+        "E01",
+        "H2-01",
+        "CARB01"
+      ],
+      "evidence_class": "PRIMARY_GOV_RECORD",
+      "verification_state": "OFFICIAL_METADATA_OR_TEXT_READ",
+      "lifecycle": "IN_FORCE",
+      "source_url": "https://www.qingdao.gov.cn/zwgk/xxgk/jtys/gkml/gwfg/202609/t20260918_10733879.shtml",
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "214 MW wind and 81 MW PV multi-port plan, Dongjiakou ~5 MW PV proposed, all design/policy targets",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "DJK-PROJECT-YEAR",
+      "title": "Dongjiakou 12-task project breakthrough year plan",
+      "scope": "DJK_ECON_ZONE",
+      "modules": [
+        "C01",
+        "PROJECT-LEADS-01"
+      ],
+      "evidence_class": "COLLABORATOR_REPORTED",
+      "verification_state": "COLLABORATOR_ONLY",
+      "lifecycle": "REPORTED_PLAN",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Find March government plan, task list and owners",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "DJK-AIR-NETWORK",
+      "title": "Dongjiakou point-line-area atmospheric online monitoring",
+      "scope": "DJK_ECON_ZONE",
+      "modules": [
+        "AIR01",
+        "ECO01"
+      ],
+      "evidence_class": "COLLABORATOR_REPORTED",
+      "verification_state": "COLLABORATOR_ONLY",
+      "lifecycle": "REPORTED_OPERATING",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Monitoring sites and measurements + 50% emissions comparison baseline; access not known",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "DJK-MON-2026-27",
+      "title": "DJK 2026-2027 environmental monitoring tender/award",
+      "scope": "DJK_ECON_ZONE",
+      "modules": [
+        "MONITORING-QUALITY-01",
+        "ECO01"
+      ],
+      "evidence_class": "COLLABORATOR_REPORTED",
+      "verification_state": "COLLABORATOR_ONLY",
+      "lifecycle": "REPORTED_AWARD",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "July 5 tender July 14 award official numbers, winning contractor and dates",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "DJK-SMART-PARK-O&M",
+      "title": "Dongjiakou 2026 smart park operation and maintenance tender",
+      "scope": "DJK_ECON_ZONE",
+      "modules": [
+        "C01"
+      ],
+      "evidence_class": "COLLABORATOR_REPORTED",
+      "verification_state": "COLLABORATOR_ONLY",
+      "lifecycle": "REPORTED_TENDER",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Tender issuer, bidder, interfaces, award and data protection",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "WESTCOAST-STRAW",
+      "title": "2026 West Coast straw comprehensive use county tender",
+      "scope": "WEST_COAST_NEW_AREA",
+      "modules": [
+        "BIO01-E",
+        "AGRI01"
+      ],
+      "evidence_class": "COLLABORATOR_REPORTED",
+      "verification_state": "COLLABORATOR_ONLY",
+      "lifecycle": "REPORTED_TENDER",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Verify catchment, contracts, sustainable surplus and timing",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "EASTCITY-SLUDGE",
+      "title": "2026 September east city municipal sludge procurement",
+      "scope": "EAST_URBAN_DISTRICT_UNRESOLVED",
+      "modules": [
+        "CIRC01",
+        "BIO01-E"
+      ],
+      "evidence_class": "COLLABORATOR_REPORTED",
+      "verification_state": "COLLABORATOR_ONLY",
+      "lifecycle": "REPORTED_TENDER",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Resolve geography and dry/wet basis; not available to DJK by inference",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "BOLI-H2-PIPE-G204",
+      "title": "Boli Town hydrogen pipe crossing national road 204",
+      "scope": "BOLI_H2_PARK",
+      "modules": [
+        "H2-01",
+        "E01"
+      ],
+      "evidence_class": "COLLABORATOR_REPORTED",
+      "verification_state": "COLLABORATOR_ONLY",
+      "lifecycle": "REPORTED_CONSTRUCTION",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Formal construction/EIA/road crossing notices and commissioning; no measured flow",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "BOLI-H2-5-10",
+      "title": "Boli refueling Phase I 5t/day and two-phase 10t/day",
+      "scope": "BOLI_H2_PARK",
+      "modules": [
+        "H2-01",
+        "E01"
+      ],
+      "evidence_class": "PRIMARY_GOV_RECORD",
+      "verification_state": "OFFICIAL_METADATA_OR_TEXT_READ",
+      "lifecycle": "DESIGN_AND_TARGET",
+      "source_url": "https://www.xihaian.gov.cn/ywdt/jzdt/202604/t20260410_10558924.shtml",
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "2026 April start construction; NOT actual t/day delivered",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    },
+    {
+      "claim_id": "WATER-DESAL-UPDATE",
+      "title": "New desalination plan mentioned without plant/outfall numbers",
+      "scope": "DJK_ECON_ZONE",
+      "modules": [
+        "WATER01",
+        "ECO01"
+      ],
+      "evidence_class": "COLLABORATOR_REPORTED",
+      "verification_state": "COLLABORATOR_ONLY",
+      "lifecycle": "NO_NEW_NUMERIC_EVIDENCE",
+      "source_url": null,
+      "source_report": "DeepSeek 2026 updates forwarded by user (two reports, 2026-10-11)",
+      "next_receipt": "Ask DeepSeek for specific plant, permit and salt balance; brine chemistry UNKNOWN",
+      "site_access": "NOT_AUTHORIZED",
+      "implementation": "SPEC_MAPPING_ONLY"
+    }
+  ]
+}

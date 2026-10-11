@@ -1,0 +1,356 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/atlaslattice/manus-artifacts/research/dragonseek_2_0/DJK_V09_RESEARCH_INTERFACE_CONTRACT.schema.json",
+  "title": "DragonSeek v0.9 research-only federated standards-mapped event (not a certified GB/HJ adapter)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "event_id",
+    "standard_candidate_id",
+    "module_id",
+    "scope_id",
+    "source_original",
+    "source_evidence_class",
+    "verification_state",
+    "lifecycle",
+    "interface_access_state",
+    "applicability_state",
+    "read_only_research",
+    "source_reference",
+    "event_time"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "standard_candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "module_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "operator_entity_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "event_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "period_basis": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "standard_effective_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "source_reference": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_original": {
+      "type": "object",
+      "required": [
+        "raw_text",
+        "locale"
+      ],
+      "additionalProperties": true,
+      "properties": {
+        "raw_text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "locale": {
+          "type": "string",
+          "minLength": 2
+        },
+        "unit": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "source_evidence_class": {
+      "enum": [
+        "PRIMARY_GOV_RECORD",
+        "COLLABORATOR_REPORTED",
+        "COMPANY_REPORTED",
+        "MEASURED_RAW",
+        "MEASURED_REPORTED",
+        "OPERATOR_ENTERED",
+        "DESIGNED",
+        "SCENARIO",
+        "UNKNOWN",
+        "QUARANTINED"
+      ]
+    },
+    "verification_state": {
+      "enum": [
+        "PRIMARY_TEXT_READ",
+        "OFFICIAL_METADATA_MATCH",
+        "COLLABORATOR_ONLY",
+        "CLAUSE_MAPPING_PENDING",
+        "RAW_INSTRUMENT_VERIFIED",
+        "UNVERIFIED"
+      ]
+    },
+    "lifecycle": {
+      "enum": [
+        "DRAFT_CONSULTATION",
+        "IN_DEVELOPMENT",
+        "PUBLISHED_NOT_YET_EFFECTIVE",
+        "IN_FORCE",
+        "REPORTED_IN_FORCE",
+        "SCOPE_CORRECTED",
+        "DOCUMENT_IDENTITY_PENDING",
+        "UNKNOWN"
+      ]
+    },
+    "interface_access_state": {
+      "enum": [
+        "NOT_REQUESTED",
+        "NOT_AUTHORIZED",
+        "AUTHORIZED_DOCUMENTED",
+        "UNKNOWN"
+      ]
+    },
+    "applicability_state": {
+      "enum": [
+        "CANDIDATE",
+        "CLAUSE_MAPPING_PENDING",
+        "SITE_SPECIFIC_REVIEWED"
+      ]
+    },
+    "transformation_class": {
+      "enum": [
+        "IDENTITY",
+        "UNIT_DERIVED",
+        "BASIS_DERIVED",
+        "STATISTIC_DERIVED",
+        "MODELLED",
+        "UNKNOWN"
+      ]
+    },
+    "unit_recipe_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "raw_instrument_calibration_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "sampling_protocol_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "payload_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "data_value": {
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "value_relation": {
+      "enum": [
+        "EXACT",
+        "APPROXIMATE",
+        "CENSORED_LEFT",
+        "CENSORED_RIGHT",
+        "RANGE",
+        "UNKNOWN"
+      ]
+    },
+    "detection_limit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "canonical_unit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "legal_manifest_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "licensed_collector_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "site_contract_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_target_class": {
+      "enum": [
+        "POLICY_NATIONAL",
+        "POLICY_CITY",
+        "DESIGN_PLANNED",
+        "REPORTED_MONITORING_SUMMARY",
+        "MEASURED_ACTIVITY",
+        "SOURCE_CLAIM",
+        "UNKNOWN"
+      ]
+    },
+    "read_only_research": {
+      "const": true
+    },
+    "operator_authorization_document": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "source_evidence_class": {
+            "const": "MEASURED_RAW"
+          }
+        },
+        "required": [
+          "source_evidence_class"
+        ]
+      },
+      "then": {
+        "required": [
+          "raw_instrument_calibration_ref",
+          "sampling_protocol_ref"
+        ],
+        "properties": {
+          "raw_instrument_calibration_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sampling_protocol_ref": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "value_relation": {
+            "const": "CENSORED_LEFT"
+          }
+        },
+        "required": [
+          "value_relation"
+        ]
+      },
+      "then": {
+        "required": [
+          "data_value",
+          "detection_limit",
+          "canonical_unit"
+        ],
+        "properties": {
+          "data_value": {
+            "type": "null"
+          },
+          "detection_limit": {
+            "type": "string",
+            "minLength": 1
+          },
+          "canonical_unit": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "interface_access_state": {
+            "const": "AUTHORIZED_DOCUMENTED"
+          }
+        },
+        "required": [
+          "interface_access_state"
+        ]
+      },
+      "then": {
+        "required": [
+          "operator_authorization_document"
+        ],
+        "properties": {
+          "operator_authorization_document": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "lifecycle": {
+            "const": "PUBLISHED_NOT_YET_EFFECTIVE"
+          }
+        },
+        "required": [
+          "lifecycle"
+        ]
+      },
+      "then": {
+        "required": [
+          "standard_effective_date"
+        ],
+        "properties": {
+          "standard_effective_date": {
+            "type": "string",
+            "format": "date"
+          }
+        }
+      }
+    }
+  ],
+  "description": "Research-only proposed field contract. Actual GB/T47851, HJ212, local manifest/Ecode, enterprise security and carbon clauses require legal/technical crosswalk. This JSON schema does not grant interface access or demonstrate compliance."
+}
