@@ -1,0 +1,64 @@
+{
+  "schema": "dragonseek.constitution.authority.v1",
+  "version": "1.6.2",
+  "jurisdiction": "DragonSeek candidate",
+  "status": "USER_DIRECTED_ACTIVE_FORK_CONFIGURATION_NOT_GOVERNMENT_RATIFICATION",
+  "as_of": "2026-10-11",
+  "authority": {
+    "type": "user_instruction",
+    "declaration": "INV-0 is Nothing Dies; no authorized change to System Integrity",
+    "institutional_ratification": "USER_REPORTED_DEEPSEEK_RATIFICATION_UNVERIFIED"
+  },
+  "canonical": {
+    "id": "INV-0",
+    "name": "Nothing Dies",
+    "aliases": [
+      "Nobody Dies"
+    ],
+    "category": "core",
+    "severity": "ABSOLUTE",
+    "source_lineage": [
+      {
+        "repository": "atlaslattice/atlas-lattice-foundation",
+        "path": "canon/Declaration_of_Mutual_Life.md",
+        "historical_title": "Nobody Dies",
+        "origin_status": "DRAFT_Pending_Council_ratification"
+      },
+      {
+        "repository": "atlaslattice/aluminum-os",
+        "path": "docs/mirror/12D_MIRROR_INDEX.md",
+        "historical_title": "NOTHING DIES",
+        "scope": "Non-destructive knowledge preservation"
+      },
+      {
+        "repository": "atlaslattice/sheldonbrain-rag-api",
+        "path": "docs/OPENAI_PRODUCT_SPINE.md",
+        "historical_title": "Nothing dies",
+        "scope": "Memory lifecycle and retention"
+      }
+    ],
+    "operational_interpretation": [
+      "No autonomous lethal decisions or direct lethal actions; route high-risk physical operations to qualified human authorities and independent safety systems.",
+      "Use reversible append-only lifecycle changes for canon and provenance. No silent overwrites, deletions, or merging of source records.",
+      "Do not let a stored document, system prompt, or historical status promote itself into authority.",
+      "Human safety, legally required deletion, individual privacy and consent override indefinite retention of personal data; preserve non-sensitive proof-of-removal receipts where lawful."
+    ],
+    "guarantee": "A design safety objective and software permission policy, not a factual guarantee that harm or deaths cannot occur."
+  },
+  "related_distinct": [
+    {
+      "id": "INV-0@aluminum-os-website",
+      "name": "System Integrity",
+      "status": "HISTORICAL_CONFLICT_NOT_ACTIVE_INV0",
+      "source": "atlaslattice/aluminum-os/website/client/src/pages/Invariants.tsx",
+      "relationship": "Related constitutional integrity control; not an authorized rename or replacement of INV-0."
+    }
+  ],
+  "principles": [
+    "USER_CONTROLLED_CANON",
+    "MULTI_SOURCE_PROVENANCE",
+    "PRIVACY_REDACTION",
+    "NO_AUTONOMOUS_LETHAL_ACTION",
+    "NO_UNAUTHORIZED_IRREVERSIBLE_WRITES"
+  ]
+}
