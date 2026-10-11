@@ -1,0 +1,226 @@
+{
+  "schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "DragonSeek candidate feed-health entry v0.1",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "feed_id",
+      "source_name",
+      "source_url",
+      "jurisdiction",
+      "data_domain",
+      "claim_state",
+      "access_mode",
+      "replenishment_mode",
+      "feed_health",
+      "legal_state",
+      "provenance",
+      "last_observed_at",
+      "last_checked_at"
+    ],
+    "properties": {
+      "feed_id": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9_-]{2,80}$"
+      },
+      "source_name": {
+        "type": "string"
+      },
+      "source_url": {
+        "type": "string",
+        "format": "uri"
+      },
+      "jurisdiction": {
+        "type": "string"
+      },
+      "data_domain": {
+        "enum": [
+          "ocean",
+          "meteorology",
+          "environmental_monitoring",
+          "supply_chain",
+          "policy",
+          "standard",
+          "other"
+        ]
+      },
+      "claim_state": {
+        "enum": [
+          "source_catalogued",
+          "access_verified",
+          "ingestion_tested",
+          "operational"
+        ]
+      },
+      "access_mode": {
+        "enum": [
+          "public_download",
+          "registered_access",
+          "authenticated_api",
+          "license_pending",
+          "unknown"
+        ]
+      },
+      "replenishment_mode": {
+        "enum": [
+          "disabled",
+          "manual",
+          "scheduled_with_consent",
+          "on_demand_with_consent"
+        ]
+      },
+      "feed_health": {
+        "enum": [
+          "unverified",
+          "healthy",
+          "stale",
+          "failed",
+          "access_restricted",
+          "not_connected"
+        ]
+      },
+      "legal_state": {
+        "enum": [
+          "not_applicable",
+          "proposal_draft",
+          "published_not_effective",
+          "effective",
+          "repealed",
+          "unknown"
+        ]
+      },
+      "legal_effective_date": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date"
+      },
+      "terms_url": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "uri"
+      },
+      "licence": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "data_vintage": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "update_frequency": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "last_observed_at": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date-time"
+      },
+      "last_checked_at": {
+        "type": [
+          "string",
+          "null"
+        ],
+        "format": "date-time"
+      },
+      "freshness_sla_hours": {
+        "type": [
+          "number",
+          "null"
+        ],
+        "minimum": 0
+      },
+      "checksum": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "monitoring_quality_protocol": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "data_sensitivity": {
+        "enum": [
+          "public",
+          "restricted",
+          "important_data_review_pending",
+          "personal_data_review_pending",
+          "unknown"
+        ]
+      },
+      "provenance": {
+        "type": "object",
+        "required": [
+          "source_citation",
+          "verification_level"
+        ],
+        "properties": {
+          "source_citation": {
+            "type": "string"
+          },
+          "verification_level": {
+            "enum": [
+              "first_party_source",
+              "secondary_source",
+              "user_supplied_unverified"
+            ]
+          },
+          "review_note": {
+            "type": "string"
+          }
+        }
+      },
+      "failure_reason": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    }
+  },
+  "example": {
+    "feed_id": "ocean_cloud_second_catalogue_202606",
+    "source_name": "MNR Marine Open Sharing Catalogue Batch 2",
+    "source_url": "https://www.pecmnr.cn/news.html?aid=5317429",
+    "jurisdiction": "CN",
+    "data_domain": "ocean",
+    "claim_state": "source_catalogued",
+    "access_mode": "unknown",
+    "replenishment_mode": "disabled",
+    "feed_health": "not_connected",
+    "legal_state": "not_applicable",
+    "provenance": {
+      "source_citation": "MNR announcement 2026-06-08",
+      "verification_level": "first_party_source",
+      "review_note": "Dataset API, license and access conditions unverified. No network ingestion."
+    },
+    "last_observed_at": null,
+    "last_checked_at": null,
+    "data_sensitivity": "unknown",
+    "legal_effective_date": null,
+    "terms_url": null,
+    "licence": null,
+    "data_vintage": "2024-2025 observations updated with June 2026 catalogue",
+    "update_frequency": null,
+    "freshness_sla_hours": null,
+    "checksum": null,
+    "monitoring_quality_protocol": null,
+    "failure_reason": null
+  }
+}
