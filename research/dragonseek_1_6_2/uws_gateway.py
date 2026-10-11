@@ -79,7 +79,8 @@ def interactive_approval(plan):
     print("UWS external write request",file=sys.stderr)
     print("Operation:", " ".join(plan["command"]), file=sys.stderr)
     print("Risk:",plan["risk"],"ID:",plan["proposal_id"],file=sys.stderr)
-    print("Inspect --dry-run preview above before authorizing.",file=sys.stderr)
+    print("UWS native --dry-run preview:",file=sys.stderr)
+    print(plan.get("preflight_preview", "(empty)"),file=sys.stderr)
     return input("Type APPROVE "+plan["proposal_id"]+" to authorize: ").strip()==(
         "APPROVE "+plan["proposal_id"])
 
