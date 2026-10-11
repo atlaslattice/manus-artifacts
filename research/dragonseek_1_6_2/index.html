@@ -1,0 +1,912 @@
+<!doctype html><html lang="zh-CN" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DragonSeek v1.6.2 Constitutional Edition</title><style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#071622;color:#e0f4ff}*{box-sizing:border-box}body{margin:0}header{padding:22px;background:#10293c;border-bottom:1px solid #305569}h1{font-size:1.6rem;margin:0 0 5px}h2{font-size:1.05rem;margin-top:0}.note{color:#b6ccdb;font-size:.88rem}main{max-width:1300px;margin:auto;padding:16px;display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,1fr);gap:14px}.panel{padding:16px;background:#102333;border:1px solid #2a4a5d;border-radius:12px;margin-bottom:14px}button,select,input{font:inherit;color:#effaff;background:#173d50;border:1px solid #4b8494;border-radius:6px;padding:9px}button{cursor:pointer}button:disabled{opacity:.5}a{color:#8bd7f8}.status{display:inline-block;border:1px solid #967442;border-radius:5px;padding:4px 7px;color:#ffd59a;font-size:.75rem}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.metric{background:#173247;padding:10px;border-radius:8px}.metric b{display:block;font-size:1.3rem}.metric small{color:#abc9d9}#map{height:370px;position:relative;overflow:hidden;border-radius:8px;background:radial-gradient(ellipse at 64% 52%,#205c77,#0c314b 66%,#081c2c);border:1px solid #42627a}#map .grid{position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0,transparent calc(25% - 1px),#8baec322 25%),repeating-linear-gradient(0deg,transparent 0,transparent calc(25% - 1px),#8baec322 25%)}.dot{position:absolute;width:10px;height:10px;border-radius:50%;background:#ffbd79;border:1px solid white;transform:translate(-50%,-50%);cursor:pointer;z-index:1}.dot:focus{outline:2px solid white}.empty{font-size:.85rem;color:#b3c7d8;padding:8px 0}.events{max-height:250px;overflow-y:auto}.event{display:block;width:100%;margin:4px 0;text-align:left;font-size:.85rem}.feed{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:7px 0;border-bottom:1px solid #365063;font-size:.83rem}.feed strong{text-align:right}label{font-size:.8rem;display:block;margin-bottom:3px}.controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.controls input,.controls select{width:100%;min-width:0}table{width:100%;border-collapse:collapse;font-size:.83rem}td,th{padding:8px 5px;border-bottom:1px solid #355064;text-align:right}td:first-child,th:first-child{text-align:left}pre{white-space:pre-wrap;word-break:break-word;font-size:.78rem;background:#071b28;padding:9px;border-radius:5px;max-height:170px;overflow:auto}@media(max-width:850px){main{grid-template-columns:1fr}#map{height:290px}}@media(max-width:500px){.controls{grid-template-columns:repeat(2,minmax(0,1fr))}.metrics{grid-template-columns:1fr 1fr}}.rowbtn{display:flex;gap:7px;flex-wrap:wrap}.rowbtn button{flex:1}.keyinput{width:100%}.kp-bar{display:flex;gap:4px;margin:12px 0}.kp-seg{flex:1;min-width:0;height:17px;border:1px solid #325166;background:#1d3b4f;border-radius:4px}.kp-seg.active{background:#6fdc8c;border-color:#8ff0ad}.kp-seg.active.mild{background:#ffd479}.kp-seg.active.minor{background:#ffab66}.kp-seg.active.moderate{background:#ff8055}.kp-seg.active.strong{background:#ff5c4a}.kp-seg.active.severe{background:#d63d7a}.kp-seg.active.extreme{background:#8c3ac9}
+.region-caption{position:absolute;bottom:8px;left:8px;z-index:3;font-size:.7rem;color:#cee6f1;pointer-events:none}.locale-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0}.locale-controls select{padding:5px}.feed strong{overflow-wrap:anywhere;max-width:60%}[dir="rtl"] .region-caption{left:auto;right:8px}[dir="rtl"] .event{text-align:right}[dir="rtl"] .feed strong{text-align:left}[dir="rtl"] td,[dir="rtl"] th{text-align:left}[dir="rtl"] td:first-child,[dir="rtl"] th:first-child{text-align:right}.notice-error{color:#ffb09d;font-weight:650}.notice-warn{color:#ffcf89}
+</style></head><body>
+<header><h1 data-i18n="app.title">🐉 DragonSeek v1.6.0 · Portable Review Demo</h1><div class="note"><span data-i18n="app.tagline"></span> · <span class="status" data-i18n="app.badge"></span></div></header>
+<main><div>
+<section class="panel"><h2 data-i18n="usgs.h2"></h2><p class="note" data-i18n="usgs.note.authority"></p><p class="note" data-i18n="usgs.note.secure"></p><button id="fetch" data-i18n="usgs.btn.fetch"></button> <span id="fetchState" class="status"></span><div class="metrics" style="margin:12px 0"><div class="metric"><b id="num">0</b><small data-i18n="usgs.metric.valid"></small></div><div class="metric"><b id="inbounds">0</b><small data-i18n="usgs.metric.inwindow"></small></div><div class="metric"><b id="fresh">—</b><small data-i18n="usgs.metric.retrieved"></small></div></div><div id="map"><div id="mapRegionCaption" class="region-caption"></div><div class="grid"></div></div><p class="note" data-i18n="usgs.map.note"></p><div class="events" id="events"><div class="empty" data-i18n="usgs.events.empty"></div></div><h2 style="margin-top:16px" data-i18n="usgs.inspector.h2"></h2><div id="inspector" class="note"></div><p class="note"><span data-i18n="usgs.sha.label"></span> <code id="sha">NOT FETCHED</code></p><p class="note" id="err"></p></section>
+<section class="panel"><h2><span data-i18n="swpc.h2"></span> <span class="status" data-i18n="swpc.badge"></span></h2><p class="note" data-i18n="swpc.note"></p><button id="swpcFetch" data-i18n="swpc.btn.fetch"></button> <span class="status" id="swpcState"></span><div class="metrics" style="margin:12px 0"><div class="metric"><b id="kpVal">—</b><small data-i18n="swpc.metric.kp"></small></div><div class="metric"><b id="kpStorm">—</b><small data-i18n="swpc.metric.gscale"></small></div><div class="metric"><b id="kpTime">—</b><small data-i18n="swpc.metric.time"></small></div></div><div id="kpBar" role="img" class="kp-bar"></div><p class="note" id="kpInterpret"></p><h2 style="margin-top:15px" data-i18n="swpc.inspector.h2"></h2><pre id="swpcInspector"></pre><p class="note"><span data-i18n="swpc.retrieval.label"></span> <code id="swpcFetchTime">NEVER</code> · <span data-i18n="swpc.sha.label"></span> <code id="swpcSha">NO RECEIPT</code></p><div class="note" id="swpcError" role="status"></div></section>
+<section class="panel"><h2><span data-i18n="firms.h2"></span> <span class="status" data-i18n="firms.badge"></span></h2><p class="note" data-i18n="firms.note.about"></p><label for="firmsKey" data-i18n="firms.label.key"></label><input class="keyinput" id="firmsKey" type="password" autocomplete="off" /><div class="rowbtn" style="margin:8px 0"><button id="firmsFetch" data-i18n="firms.btn.fetch"></button><button id="firmsClear" data-i18n="firms.btn.clear"></button></div><p class="note" data-i18n-html="firms.note.register"></p><div class="metrics"><div class="metric"><b id="firmsCount">0</b><small data-i18n="firms.metric.count"></small></div><div class="metric"><b id="firmsState">NEEDS KEY</b><small data-i18n="firms.metric.state"></small></div><div class="metric"><b id="firmsTime">—</b><small data-i18n="firms.metric.time"></small></div></div><p class="note"><span data-i18n="firms.sha.label"></span> <code id="firmsSha">NO RECEIPT</code></p><div id="firmsError" class="note" role="status"></div><div id="firmsRows" class="events"></div></section>
+<section class="panel"><h2><span data-i18n="res.h2"></span> <span class="status" data-i18n="res.badge"></span></h2><p class="note" data-i18n="res.note"></p><div class="controls"><div><label data-i18n="res.label.load"></label><input id="load" type="number" min=".1" value="20"></div><div><label data-i18n="res.label.pv"></label><input id="pv" type="number" min="0" value="35"></div><div><label data-i18n="res.label.battery"></label><input id="battery" type="number" min="0" value="380"></div><div><label data-i18n="res.label.sun"></label><input id="cloud" type="number" min="0" max="1" step=".05" value=".85"></div><div><label data-i18n="res.label.regime"></label><select id="regime"><option value=".85" selected data-i18n="res.regime.normal"></option><option value=".35" data-i18n="res.regime.adverse"></option><option value=".10" data-i18n="res.regime.catastrophic"></option></select></div><div><label data-i18n="res.label.rte"></label><input id="rte" type="number" min=".5" max="1" step=".01" value=".92"></div></div><p><button id="simulate" data-i18n="res.btn.compare"></button></p><p id="modelError" class="notice-error" aria-live="polite"></p><table><thead><tr><th data-i18n="res.table.metric"></th><th data-i18n="res.table.storage"></th><th data-i18n="res.table.pv"></th></tr></thead><tbody id="results"></tbody></table><p class="note" data-i18n="res.note.model"></p></section>
+</div><aside>
+<section class="panel"><h2 data-i18n="health.h2"></h2><div id="feedHealth"></div><p class="note" data-i18n="health.note.1"></p><p class="note" data-i18n="health.note.2"></p></section>
+<section class="panel"><h2 data-i18n="prov.h2"></h2><p class="note" data-i18n-html="prov.note.collab"></p><div class="feed"><span data-i18n="feed.usgs"></span><strong data-i18n="prov.row.usgs"></strong></div><div class="feed"><span data-i18n="feed.cma"></span><strong data-i18n="prov.row.cma"></strong></div><div class="feed"><span data-i18n="feed.res07"></span><strong data-i18n="prov.row.res07"></strong></div><div class="feed"><span data-i18n="prov.row.reg.label"></span><strong data-i18n="prov.row.reg"></strong></div><p class="note" data-i18n="prov.note.censor"></p><pre id="receipt"></pre></section>
+<section class="panel"><h2 data-i18n="refs.h2"></h2><p><a href="https://github.com/atlaslattice/manus-artifacts/pull/302">DragonSeek v1.2 experimental PR #302</a></p><p><a href="https://github.com/atlaslattice/manus-artifacts/pull/301">Dongjiakou evidence PR #301</a></p><p><a href="https://earthquake.usgs.gov/earthquakes/feed/v1.0/">USGS earthquake feeds</a></p></section>
+</aside></main>
+<div class="locale-controls"><label for="regionSelect" data-i18n="locale.region"></label><select id="regionSelect"></select><label for="localeSelect" data-i18n="locale.language"></label><select id="localeSelect"><option value="en">English</option><option value="zh-CN" selected>简体中文</option><option value="es">Español</option><option value="ar">العربية</option></select><label for="timeZoneSelect" data-i18n="locale.timezone"></label><select id="timeZoneSelect"></select></div>
+<script>
+'use strict';
+
+/* =====================================================================
+   REGION PRESETS
+   ===================================================================== */
+const REGION_PRESETS={
+ china:{nameKey:'region.china',bbox:{west:72,south:0,east:151,north:56},primarySeismicAuthority:{name:'CENC',url:'https://www.cenc.ac.cn/'},timeZone:'Asia/Shanghai'},
+ global:{nameKey:'region.global',bbox:{west:-180,south:-85,east:180,north:85},primarySeismicAuthority:{name:'REGIONAL_AUTHORITY_REVIEW',url:null},timeZone:'UTC'},
+ south_america:{nameKey:'region.south_america',bbox:{west:-85,south:-60,east:-30,north:15},primarySeismicAuthority:{name:'REGIONAL_AUTHORITY_REVIEW',url:null},timeZone:'America/Sao_Paulo'},
+ arctic:{nameKey:'region.arctic',bbox:{west:-180,south:55,east:180,north:90},primarySeismicAuthority:{name:'REGIONAL_AUTHORITY_REVIEW',url:null},timeZone:'UTC'}
+};
+const INITIAL_REGION='china';
+const MAX_ADVISED_BBOX_AREA=30000; // deg^2; soft warning only
+
+/* =====================================================================
+   LABELS
+   NOTE: long safety/legal prose (keys *.note.*, prov.*) is a best-effort
+   translation. Native-speaker review required before any sovereign
+   deployment. Short UI strings are safe.
+   ===================================================================== */
+const LABELS={
+en:{
+ 'app.title':'🐉 DragonSeek v1.6.0 · Portable Review Demo',
+ 'app.tagline':'Public seismic observation + scientific source provenance + simulated 168-hour microgrid',
+ 'app.badge':'EXPERIMENTAL / NOT AN EARLY WARNING SYSTEM',
+
+ 'usgs.h2':'🌏 Observed earthquakes · USGS public feed',
+ 'usgs.note.authority':'Manual read-only fetch from the official USGS magnitude ≥ 2.5 last-day GeoJSON feed. Coordinates outside the regional map appear in the list, not on the map. USGS is not the primary national reporting authority for mainland China; check CENC.',
+ 'usgs.note.secure':'For portable file:// use: live fetch may work, but SHA-256 requires a secure context (https:// or localhost). If hashing is unavailable, the dashboard will show an explicit error without claiming a connection.',
+ 'usgs.btn.fetch':'Fetch live earthquakes',
+ 'usgs.metric.valid':'valid public observations',
+ 'usgs.metric.inwindow':'inside map window',
+ 'usgs.metric.retrieved':'retrieved',
+ 'usgs.map.note':'Map is a schematic coordinate grid, not a surveyed basemap. Map displays up to 60 strongest in-window observations. Total source observations and displayed map points are separately counted. Orange points are observed source positions if the fetch succeeds.',
+ 'usgs.events.empty':'No live earthquake records yet. Click Fetch.',
+ 'usgs.inspector.h2':'Observation inspector',
+ 'usgs.inspector.default':'Select a fetched event.',
+ 'usgs.sha.label':'Payload SHA-256:',
+ 'usgs.inbounds.template':'{total} total · {within} within · {plotted} plotted',
+
+ 'swpc.h2':'☀️ NOAA SWPC · Planetary Kp index',
+ 'swpc.badge':'OBSERVATION WHEN FETCHED · PUBLIC',
+ 'swpc.note':'Public NOAA Space Weather Prediction Center observations. Planetary Kp is a global geomagnetic indicator; it is NOT an earthquake, terrestrial weather measurement, or location marker.',
+ 'swpc.btn.fetch':'Fetch NOAA Kp',
+ 'swpc.metric.kp':'Kp index (displayed)',
+ 'swpc.metric.gscale':'NOAA G-scale category, interpretive',
+ 'swpc.metric.time':'Observation time',
+ 'swpc.inspector.h2':'Space weather inspector',
+ 'swpc.inspector.default':'No observation yet.',
+ 'swpc.retrieval.label':'Last retrieval:',
+ 'swpc.sha.label':'SHA-256:',
+ 'swpc.interpret.template':'Planetary estimated Kp {kp} ({cat}) at {utc} UTC. Observational index only; no locality-specific impact inference.',
+ 'swpc.interpret.default':'Kp measures global geomagnetic activity, not local impact, weather, earthquakes or wildfire risk. G1–G5 categories are indicative only and do not constitute an operational alert.',
+
+ 'firms.h2':'🔥 NASA FIRMS · Satellite fire detections',
+ 'firms.badge':'KEY REQUIRED · EXPERIMENTAL',
+ 'firms.note.about':'FIRMS area CSV requires a NASA MAP_KEY. Browser direct-access may be blocked by CORS. Detections are thermal anomalies, not verified wildfires, structures on fire, or certified alerts.',
+ 'firms.label.key':'FIRMS MAP_KEY (never saved in exported dashboard or GitHub)',
+ 'firms.btn.fetch':'Fetch regional fire detections',
+ 'firms.btn.clear':'Clear key & observations',
+ 'firms.note.register':'Register at <a target="_blank" rel="noopener noreferrer" href="https://firms.modaps.eosdis.nasa.gov/api/map_key/">NASA FIRMS MAP_KEY</a>. The key remains in this browser tab\'s memory only; direct FIRMS requests place it in an HTTPS URL visible to the provider and potentially in browser/network history. Do not enter a valuable institutional credential in an untrusted shared copy. Public deployment needs an approved server-side proxy.',
+ 'firms.metric.count':'valid detections',
+ 'firms.metric.state':'connection state',
+ 'firms.metric.time':'last fetch',
+ 'firms.sha.label':'Payload SHA-256:',
+ 'firms.bbox.template':'Query bbox {bbox} · {area} deg²',
+ 'firms.bbox.warn':'Query bbox is unusually large for a regional dashboard; expect slow responses and provider quota pressure.',
+
+ 'res.h2':'☀️ RES07 · Storage versus replenishment',
+ 'res.badge':'SYNTHETIC',
+ 'res.note':'Same load, battery, and 168-hour horizon in both runs. Only solar generation is enabled/disabled. Simplified sinusoidal daylight; not observed weather, a certified power-flow model, or resilience assurance.',
+ 'res.label.load':'Critical load (kW)',
+ 'res.label.pv':'PV capacity (kWp)',
+ 'res.label.battery':'Usable battery (kWh)',
+ 'res.label.sun':'Sun availability (0–1)',
+ 'res.label.regime':'Regime cap (maximum sun factor)',
+ 'res.regime.normal':'Normal',
+ 'res.regime.adverse':'Adverse',
+ 'res.regime.catastrophic':'Catastrophic',
+ 'res.label.rte':'Round-trip efficiency',
+ 'res.btn.compare':'Compare 168h',
+ 'res.table.metric':'Metric',
+ 'res.table.storage':'Storage only',
+ 'res.table.pv':'PV replenished',
+ 'res.row.served':'Hours served',
+ 'res.row.unserved':'Unserved (kWh)',
+ 'res.row.soc':'End SOC (kWh)',
+ 'res.row.pass':'Pass 168h',
+ 'res.pass':'PASS (synthetic)',
+ 'res.fail':'FAIL',
+ 'res.note.model':'Model: 0.25C charge/discharge, full initial state of charge, sqrt(round-trip efficiency) each way; no grid, thermal impacts, degradation or power electronics.',
+ 'res.error':'Invalid model input: check load, battery, PV, sun cap and efficiency.',
+
+ 'health.h2':'📡 Feed health and access',
+ 'health.note.1':'USGS row shows last retrieval and SHA-256 after a verified fetch; NOAA and NASA FIRMS are separate connectors; each is marked connected only following a validated successful fetch.',
+ 'health.note.2':'Catalogued ≠ connected. User login, lawful dataset entitlements and approved programmatic access are required for some Chinese sources. No credentials are stored or requested here.',
+
+ 'prov.h2':'🔎 Provenance contract',
+ 'prov.note.collab':'<b>COLLABORATOR_REPORTED</b> identifies DeepSeek-originated research contributions; independent corroboration and operational status are separate fields.',
+ 'prov.row.usgs':'PUBLIC SOURCE',
+ 'prov.row.cma':'STUB',
+ 'prov.row.res07':'SIMULATED',
+ 'prov.row.reg.label':'Regulatory status',
+ 'prov.row.reg':'REVIEW REQUIRED',
+ 'prov.note.censor':'Left-censored reported values must display &lt; limit; right-censored values &gt; limit. Missing uncertainty must be labeled ± UNKNOWN, not presented as certainty.',
+ 'prov.receipt.default':'No observed event receipt yet.',
+ 'refs.h2':'Research references',
+
+ 'feed.res07':'RES07 SIMULATION',
+  'feed.usgs':'USGS-EARTHQUAKE-FEED',
+ 'feed.cma':'CMA-PUBLIC-DATA',
+ 'feed.nsmc':'NSMC-FENGYUN',
+ 'feed.mnr':'MNR-OCEAN-CLOUD',
+ 'feed.noaa':'NOAA-SWPC-KP',
+ 'feed.firms':'NASA-FIRMS',
+ 'feed.celestrak':'CELESTRAK-GP',
+ 'feed.openmeteo':'OPEN-METEO',
+ 'feed.auth.noauth':'NO AUTH',
+ 'feed.auth.account':'ACCOUNT / APPROVAL',
+ 'feed.auth.key':'MAP_KEY REQUIRED',
+ 'feed.auth.catalogue':'CATALOGUE',
+ 'feed.auth.license':'LICENSE DEPENDENT',
+
+ 'locale.region':'Region',
+ 'locale.language':'Language',
+ 'locale.timezone':'Time zone',
+
+ 'state.connected_readonly':'Connected · read-only',
+ 'state.stale':'Stale · refresh needed',
+ 'state.stub':'Stub · not fetched',
+ 'state.needs_key':'Key required',
+ 'state.error':'Error',
+ 'state.not_connected':'Not connected',
+ 'state.fetching':'Fetching',
+
+ 'kp.g5':'G5 EXTREME','kp.g4':'G4 SEVERE','kp.g3':'G3 STRONG','kp.g2':'G2 MODERATE',
+ 'kp.g1':'G1 MINOR','kp.unsettled':'UNSETTLED','kp.quiet':'QUIET',
+
+ 'region.authority':'Primary seismic authority',
+  'region.china':'China / Western Pacific',
+ 'region.global':'Global',
+ 'region.south_america':'South America',
+ 'region.arctic':'Arctic',
+ 'region.caption.template':'{region} · {name} · EPSG:4326 · {bbox} · {authority}: {authorityName}',
+
+ 'err.fetch.prefix':'Fetch not established:',
+ 'err.swpc.prefix':'Unable to establish live NOAA feed:',
+ 'err.firms.key':'A provider-issued MAP_KEY is required.',
+ 'err.firms.format':'Unexpected MAP_KEY format (letters/digits/underscore/hyphen only).',
+ 'err.firms.cleared':'Key and in-memory detection list cleared.',
+ 'err.firms.proxy':'If a browser network/CORS error occurs, use an approved server-side proxy; never bypass provider authorization.',
+ 'err.firms.quota':'FIRMS_KEY_OR_QUOTA_ERROR'
+},
+'zh-CN':{
+ 'app.tagline':'公开地震观测 + 科学数据来源溯源 + 168 小时微电网模拟',
+ 'app.badge':'实验性 / 非预警系统',
+ 'usgs.h2':'🌏 观测到的地震 · USGS 公开数据源',
+ 'usgs.note.authority':'从官方 USGS 震级 ≥ 2.5 最近一天 GeoJSON 数据源手动只读获取。区域地图窗口外的坐标仅出现在列表中，不显示在地图上。USGS 并非中国大陆的主要国家报告机构；请核对 CENC。',
+ 'usgs.note.secure':'以 file:// 便携使用时：实时获取可能仍可用，但 SHA-256 需要安全上下文（https:// 或 localhost）。若无法哈希，仪表盘将明确显示错误，而不声称已连接。',
+ 'usgs.btn.fetch':'获取实时地震',
+ 'usgs.metric.valid':'有效公开观测',
+ 'usgs.metric.inwindow':'位于地图窗口内',
+ 'usgs.metric.retrieved':'获取时间',
+ 'usgs.map.note':'地图为示意坐标网格，并非测绘底图。地图最多显示窗口内 60 条最强观测。数据源观测总数与地图显示点数分别计数。橙色点表示获取成功时的观测源位置。',
+ 'usgs.events.empty':'尚无实时地震记录。请点击“获取”。',
+ 'usgs.inspector.h2':'观测检查器',
+ 'usgs.inspector.default':'请选择一条已获取的事件。',
+ 'usgs.sha.label':'负载 SHA-256：',
+ 'usgs.inbounds.template':'共 {total} · 窗口内 {within} · 已绘制 {plotted}',
+ 'swpc.h2':'☀️ NOAA SWPC · 行星 Kp 指数',
+ 'swpc.badge':'获取后为观测值 · 公开',
+ 'swpc.note':'NOAA 空间天气预报中心公开观测。行星 Kp 是全球地磁指标；它不是地震、地面天气测量或位置标记。',
+ 'swpc.btn.fetch':'获取 NOAA Kp',
+ 'swpc.metric.kp':'Kp 指数（显示值）',
+ 'swpc.metric.gscale':'NOAA G 级分类（解释性）',
+ 'swpc.metric.time':'观测时间',
+ 'swpc.inspector.h2':'空间天气检查器',
+ 'swpc.inspector.default':'尚无观测。',
+ 'swpc.retrieval.label':'最近获取：',
+ 'swpc.sha.label':'SHA-256：',
+ 'swpc.interpret.template':'行星估计 Kp {kp}（{cat}），观测于 {utc} UTC。仅为观测指数；不对特定地点作影响推断。',
+ 'swpc.interpret.default':'Kp 衡量全球地磁活动，而非局部影响、天气、地震或野火风险。G1–G5 分类仅供参考，不构成业务警报。',
+ 'firms.h2':'🔥 NASA FIRMS · 卫星火点探测',
+ 'firms.badge':'需要密钥 · 实验性',
+ 'firms.note.about':'FIRMS 区域 CSV 需要 NASA MAP_KEY。浏览器直连可能被 CORS 阻止。探测结果为热异常，并非已核实的野火、起火建筑或认证警报。',
+ 'firms.label.key':'FIRMS MAP_KEY（不会保存在导出的仪表盘或 GitHub 中）',
+ 'firms.btn.fetch':'获取区域火点',
+ 'firms.btn.clear':'清除密钥与观测',
+ 'firms.note.register':'请在 <a target="_blank" rel="noopener noreferrer" href="https://firms.modaps.eosdis.nasa.gov/api/map_key/">NASA FIRMS MAP_KEY</a> 注册。密钥仅保留在本浏览器标签页内存中；直连 FIRMS 请求会将密钥置于提供方可见的 HTTPS URL 中，并可能进入浏览器/网络历史。请勿在不受信任的共享副本中输入有价值的机构凭据。公开部署需要经批准的服务器端代理。',
+ 'firms.metric.count':'有效探测',
+ 'firms.metric.state':'连接状态',
+ 'firms.metric.time':'最近获取',
+ 'firms.sha.label':'负载 SHA-256：',
+ 'firms.bbox.template':'查询范围 {bbox} · {area} 平方度',
+ 'firms.bbox.warn':'查询范围对于区域仪表盘异常大；预计响应缓慢且提供方配额压力较大。',
+ 'res.h2':'☀️ RES07 · 储能与补给对比',
+ 'res.badge':'合成',
+ 'res.note':'两次运行使用相同的负荷、电池和 168 小时时段。仅启用/禁用太阳能发电。简化的正弦日照；并非实测天气、认证潮流模型或韧性保证。',
+ 'res.label.load':'关键负荷（kW）',
+ 'res.label.pv':'光伏容量（kWp）',
+ 'res.label.battery':'可用电池（kWh）',
+ 'res.label.sun':'日照可用度（0–1）',
+ 'res.label.regime':'情景上限（最大日照因子）',
+ 'res.regime.normal':'正常',
+ 'res.regime.adverse':'不利',
+ 'res.regime.catastrophic':'灾难性',
+ 'res.label.rte':'往返效率',
+ 'res.btn.compare':'比较 168 小时',
+ 'res.table.metric':'指标',
+ 'res.table.storage':'仅储能',
+ 'res.table.pv':'光伏补给',
+ 'res.row.served':'供电小时数',
+ 'res.row.unserved':'未供电（kWh）',
+ 'res.row.soc':'结束时 SOC（kWh）',
+ 'res.row.pass':'168 小时通过',
+ 'res.pass':'通过（合成）',
+ 'res.fail':'未通过',
+ 'res.note.model':'模型：0.25C 充放电，初始充满，往返效率开方后分别应用于充、放；不含电网、热影响、衰减或电力电子。',
+ 'res.error':'模型输入无效：请检查负荷、电池、光伏、日照上限和效率。',
+ 'health.h2':'📡 数据源健康状况与访问',
+ 'health.note.1':'USGS 行在验证获取后显示最近获取时间和 SHA-256；NOAA 与 NASA FIRMS 为独立连接器；仅在验证成功获取后才标记为已连接。',
+ 'health.note.2':'已编目 ≠ 已连接。部分中国数据源需要用户登录、合法数据授权和经批准的编程访问。此处不存储也不索取任何凭据。',
+ 'prov.h2':'🔎 溯源契约',
+ 'prov.note.collab':'<b>COLLABORATOR_REPORTED</b> 标识由 DeepSeek 产生的研究贡献；独立印证与业务状态为独立字段。',
+ 'prov.row.usgs':'公开来源',
+ 'prov.row.cma':'占位',
+ 'prov.row.res07':'模拟',
+ 'prov.row.reg.label':'监管状态',
+ 'prov.row.reg':'需要审核',
+ 'prov.note.censor':'左删失报告值必须显示 &lt; 限值；右删失值必须显示 &gt; 限值。缺失不确定度必须标注为 ± UNKNOWN，不得作为确定性呈现。',
+ 'prov.receipt.default':'尚无观测事件回执。',
+ 'refs.h2':'研究参考',
+ 'feed.auth.noauth':'无需认证',
+ 'feed.auth.account':'账户 / 审批',
+ 'feed.auth.key':'需要 MAP_KEY',
+ 'feed.auth.catalogue':'目录',
+ 'feed.auth.license':'许可证相关',
+ 'locale.region':'区域',
+ 'locale.language':'语言',
+ 'locale.timezone':'时区',
+ 'state.connected_readonly':'已连接 · 只读',
+ 'state.stale':'数据已过期',
+ 'state.stub':'占位 · 尚未获取',
+ 'state.needs_key':'需要密钥',
+ 'state.error':'错误',
+ 'state.not_connected':'未连接',
+ 'state.fetching':'正在获取',
+ 'kp.g5':'G5 极端','kp.g4':'G4 严重','kp.g3':'G3 强烈','kp.g2':'G2 中等',
+ 'kp.g1':'G1 轻微','kp.unsettled':'不稳定','kp.quiet':'平静',
+ 'region.authority':'主要地震报告机构',
+  'region.china':'中国 / 西太平洋',
+ 'region.global':'全球',
+ 'region.south_america':'南美洲',
+ 'region.arctic':'北极',
+ 'region.caption.template':'{region} · {name} · EPSG:4326 · {bbox} · {authority}：{authorityName}',
+ 'err.fetch.prefix':'未能建立获取：',
+ 'err.swpc.prefix':'无法建立实时 NOAA 数据源：',
+ 'err.firms.key':'需要提供方签发的 MAP_KEY。',
+ 'err.firms.format':'MAP_KEY 格式异常（仅限字母/数字/下划线/连字符）。',
+ 'err.firms.cleared':'密钥与内存中的探测列表已清除。',
+ 'err.firms.proxy':'若出现浏览器网络/CORS 错误，请使用经批准的服务器端代理；切勿绕过提供方授权。',
+ 'err.firms.quota':'FIRMS 密钥或配额错误'
+},
+es:{
+ 'app.tagline':'Observación sísmica pública + procedencia de fuentes científicas + microred simulada de 168 horas',
+ 'app.badge':'EXPERIMENTAL / NO ES UN SISTEMA DE ALERTA TEMPRANA',
+ 'usgs.h2':'🌏 Sismos observados · fuente pública USGS',
+ 'usgs.note.authority':'Consulta manual de solo lectura desde la fuente GeoJSON oficial de USGS de magnitud ≥ 2.5 del último día. Las coordenadas fuera de la ventana regional aparecen en la lista, no en el mapa. USGS no es la autoridad nacional primaria para China continental; consulte CENC.',
+ 'usgs.note.secure':'Para uso portátil con file://: la consulta en vivo puede funcionar, pero SHA-256 requiere contexto seguro (https:// o localhost). Si el hash no está disponible, el panel mostrará un error explícito sin afirmar conexión.',
+ 'usgs.btn.fetch':'Obtener sismos en vivo',
+ 'usgs.metric.valid':'observaciones públicas válidas',
+ 'usgs.metric.inwindow':'dentro de la ventana',
+ 'usgs.metric.retrieved':'obtenido',
+ 'usgs.map.note':'El mapa es una cuadrícula esquemática, no una base cartográfica levantada. Se muestran hasta 60 observaciones más fuertes dentro de la ventana. El total de observaciones de origen y los puntos dibujados se cuentan por separado. Los puntos naranjas son posiciones observadas si la consulta tiene éxito.',
+ 'usgs.events.empty':'Aún no hay registros sísmicos en vivo. Pulse Obtener.',
+ 'usgs.inspector.h2':'Inspector de observaciones',
+ 'usgs.inspector.default':'Seleccione un evento obtenido.',
+ 'usgs.sha.label':'SHA-256 de carga útil:',
+ 'usgs.inbounds.template':'{total} total · {within} dentro · {plotted} dibujados',
+ 'swpc.h2':'☀️ NOAA SWPC · índice Kp planetario',
+ 'swpc.badge':'OBSERVACIÓN AL OBTENER · PÚBLICO',
+ 'swpc.note':'Observaciones públicas del Centro de Predicción del Clima Espacial de NOAA. El Kp planetario es un indicador geomagnético global; NO es un sismo, medición meteorológica terrestre ni marcador de ubicación.',
+ 'swpc.btn.fetch':'Obtener Kp de NOAA',
+ 'swpc.metric.kp':'índice Kp (mostrado)',
+ 'swpc.metric.gscale':'categoría G de NOAA, interpretativa',
+ 'swpc.metric.time':'Hora de observación',
+ 'swpc.inspector.h2':'Inspector de clima espacial',
+ 'swpc.inspector.default':'Sin observación aún.',
+ 'swpc.retrieval.label':'Última obtención:',
+ 'swpc.sha.label':'SHA-256:',
+ 'swpc.interpret.template':'Kp planetario estimado {kp} ({cat}) a las {utc} UTC. Índice solo observacional; sin inferencia de impacto local.',
+ 'swpc.interpret.default':'El Kp mide actividad geomagnética global, no impacto local, clima, sismos ni riesgo de incendio. Las categorías G1–G5 son indicativas y no constituyen una alerta operativa.',
+ 'firms.h2':'🔥 NASA FIRMS · detecciones satelitales de fuego',
+ 'firms.badge':'REQUIERE CLAVE · EXPERIMENTAL',
+ 'firms.note.about':'El CSV de área de FIRMS requiere un MAP_KEY de NASA. El acceso directo desde el navegador puede bloquearse por CORS. Las detecciones son anomalías térmicas, no incendios verificados, estructuras en llamas ni alertas certificadas.',
+ 'firms.label.key':'MAP_KEY de FIRMS (nunca se guarda en el panel exportado ni en GitHub)',
+ 'firms.btn.fetch':'Obtener detecciones regionales',
+ 'firms.btn.clear':'Borrar clave y observaciones',
+ 'firms.note.register':'Regístrese en <a target="_blank" rel="noopener noreferrer" href="https://firms.modaps.eosdis.nasa.gov/api/map_key/">NASA FIRMS MAP_KEY</a>. La clave permanece solo en la memoria de esta pestaña; las solicitudes directas colocan la clave en una URL HTTPS visible para el proveedor y posiblemente en el historial del navegador/red. No introduzca credenciales institucionales valiosas en una copia compartida no confiable. El despliegue público requiere un proxy aprobado del lado del servidor.',
+ 'firms.metric.count':'detecciones válidas',
+ 'firms.metric.state':'estado de conexión',
+ 'firms.metric.time':'última obtención',
+ 'firms.sha.label':'SHA-256 de carga útil:',
+ 'firms.bbox.template':'BBox de consulta {bbox} · {area} deg²',
+ 'firms.bbox.warn':'El bbox de consulta es inusualmente grande para un panel regional; espere respuestas lentas y presión sobre la cuota del proveedor.',
+ 'res.h2':'☀️ RES07 · Almacenamiento vs reposición',
+ 'res.badge':'SINTÉTICO',
+ 'res.note':'Misma carga, batería y horizonte de 168 horas en ambas ejecuciones. Solo se habilita/deshabilita la generación solar. Luz diurna sinusoidal simplificada; no es clima observado, modelo certificado de flujo de potencia ni garantía de resiliencia.',
+ 'res.label.load':'Carga crítica (kW)',
+ 'res.label.pv':'Capacidad FV (kWp)',
+ 'res.label.battery':'Batería utilizable (kWh)',
+ 'res.label.sun':'Disponibilidad solar (0–1)',
+ 'res.label.regime':'Límite de régimen (factor solar máximo)',
+ 'res.regime.normal':'Normal',
+ 'res.regime.adverse':'Adverso',
+ 'res.regime.catastrophic':'Catastrófico',
+ 'res.label.rte':'Eficiencia de ida y vuelta',
+ 'res.btn.compare':'Comparar 168 h',
+ 'res.table.metric':'Métrica',
+ 'res.table.storage':'Solo almacenamiento',
+ 'res.table.pv':'Repuesto por FV',
+ 'res.row.served':'Horas servidas',
+ 'res.row.unserved':'No servido (kWh)',
+ 'res.row.soc':'SOC final (kWh)',
+ 'res.row.pass':'Aprobado 168 h',
+ 'res.pass':'APROBADO (sintético)',
+ 'res.fail':'FALLA',
+ 'res.note.model':'Modelo: carga/descarga 0.25C, estado inicial lleno, sqrt(eficiencia de ida y vuelta) en cada sentido; sin red, impactos térmicos, degradación ni electrónica de potencia.',
+ 'res.error':'Entrada de modelo inválida: revise carga, batería, FV, límite solar y eficiencia.',
+ 'health.h2':'📡 Salud de fuentes y acceso',
+ 'health.note.1':'La fila de USGS muestra la última obtención y SHA-256 tras una consulta verificada; NOAA y NASA FIRMS son conectores separados; cada uno se marca conectado solo tras una consulta válida y exitosa.',
+ 'health.note.2':'Catalogado ≠ conectado. Algunas fuentes chinas requieren inicio de sesión, derechos legales sobre los datos y acceso programático aprobado. Aquí no se almacenan ni solicitan credenciales.',
+ 'prov.h2':'🔎 Contrato de procedencia',
+ 'prov.note.collab':'<b>COLLABORATOR_REPORTED</b> identifica contribuciones de investigación originadas por DeepSeek; la corroboración independiente y el estado operativo son campos separados.',
+ 'prov.row.usgs':'FUENTE PÚBLICA',
+ 'prov.row.cma':'STUB',
+ 'prov.row.res07':'SIMULADO',
+ 'prov.row.reg.label':'Estado regulatorio',
+ 'prov.row.reg':'REQUIERE REVISIÓN',
+ 'prov.note.censor':'Los valores censurados por la izquierda deben mostrarse &lt; límite; los censurados por la derecha &gt; límite. La incertidumbre ausente debe etiquetarse ± UNKNOWN, no presentarse como certeza.',
+ 'prov.receipt.default':'Aún no hay recibo de evento observado.',
+ 'refs.h2':'Referencias de investigación',
+ 'feed.auth.noauth':'SIN AUTH',
+ 'feed.auth.account':'CUENTA / APROBACIÓN',
+ 'feed.auth.key':'REQUIERE MAP_KEY',
+ 'feed.auth.catalogue':'CATÁLOGO',
+ 'feed.auth.license':'SEGÚN LICENCIA',
+ 'locale.region':'Región',
+ 'locale.language':'Idioma',
+ 'locale.timezone':'Zona horaria',
+ 'state.connected_readonly':'Conectado · solo lectura',
+ 'state.stale':'Datos caducados',
+ 'state.stub':'Sin conexión aún',
+ 'state.needs_key':'Clave necesaria',
+ 'state.error':'Error',
+ 'state.not_connected':'No conectado',
+ 'state.fetching':'Consultando',
+ 'kp.g5':'G5 EXTREMO','kp.g4':'G4 SEVERO','kp.g3':'G3 FUERTE','kp.g2':'G2 MODERADO',
+ 'kp.g1':'G1 MENOR','kp.unsettled':'INQUIETO','kp.quiet':'QUIETO',
+ 'region.authority':'Autoridad sísmica principal',
+  'region.china':'China / Pacífico Occidental',
+ 'region.global':'Global',
+ 'region.south_america':'Sudamérica',
+ 'region.arctic':'Ártico',
+ 'region.caption.template':'{region} · {name} · EPSG:4326 · {bbox} · {authority}: {authorityName}',
+ 'err.fetch.prefix':'Consulta no establecida:',
+ 'err.swpc.prefix':'No se pudo establecer la fuente NOAA en vivo:',
+ 'err.firms.key':'Se requiere un MAP_KEY emitido por el proveedor.',
+ 'err.firms.format':'Formato de MAP_KEY inesperado (solo letras/dígitos/guion bajo/guion).',
+ 'err.firms.cleared':'Clave y lista de detecciones en memoria borradas.',
+ 'err.firms.proxy':'Si ocurre un error de red/CORS, use un proxy aprobado del lado del servidor; nunca eluda la autorización del proveedor.',
+ 'err.firms.quota':'Error de clave o cuota de FIRMS'
+},
+ar:{
+ 'app.tagline':'رصد زلزالي عام + إثبات مصدر علمي + شبكة مصغرة محاكاة لمدة 168 ساعة',
+ 'app.badge':'تجريبي / ليس نظام إنذار مبكر',
+ 'usgs.h2':'🌏 الزلازل المرصودة · مصدر USGS العام',
+ 'usgs.note.authority':'جلب يدوي للقراءة فقط من تغذية GeoJSON الرسمية لـ USGS بقوة ≥ 2.5 لليوم الأخير. الإحداثيات خارج نطاق الخريطة الإقليمي تظهر في القائمة لا على الخريطة. USGS ليست الجهة الوطنية الأساسية للإبلاغ في البر الرئيسي للصين؛ راجع CENC.',
+ 'usgs.note.secure':'للاستخدام المحمول عبر file://: قد يعمل الجلب المباشر، لكن SHA-256 يتطلب سياقًا آمنًا (https:// أو localhost). إذا تعذر التجزئة، ستظهر لوحة المعلومات خطأً صريحًا دون ادعاء الاتصال.',
+ 'usgs.btn.fetch':'جلب الزلازل المباشرة',
+ 'usgs.metric.valid':'أرصاد عامة صالحة',
+ 'usgs.metric.inwindow':'داخل نطاق الخريطة',
+ 'usgs.metric.retrieved':'وقت الجلب',
+ 'usgs.map.note':'الخريطة شبكة إحداثيات تخطيطية وليست قاعدة خرائط مساحية. تعرض الخريطة حتى 60 من أقوى الأرصاد داخل النطاق. يُحصى إجمالي أرصاد المصدر ونقاط الخريطة المعروضة كل على حدة. النقاط البرتقالية هي مواقع المرصد عند نجاح الجلب.',
+ 'usgs.events.empty':'لا توجد سجلات زلزالية مباشرة بعد. اضغط جلب.',
+ 'usgs.inspector.h2':'مفتش الرصد',
+ 'usgs.inspector.default':'اختر حدثًا مجلوبًا.',
+ 'usgs.sha.label':'SHA-256 للحمولة:',
+ 'usgs.inbounds.template':'{total} إجمالي · {within} داخل النطاق · {plotted} معروض',
+ 'swpc.h2':'☀️ NOAA SWPC · مؤشر Kp الكوكبي',
+ 'swpc.badge':'رصد عند الجلب · عام',
+ 'swpc.note':'أرصاد عامة من مركز NOAA للتنبؤ بالطقس الفضائي. مؤشر Kp الكوكبي مؤشر جيومغناطيسي عالمي؛ وليس زلزالًا أو قياس طقس أرضي أو علامة موقع.',
+ 'swpc.btn.fetch':'جلب Kp من NOAA',
+ 'swpc.metric.kp':'مؤشر Kp (المعروض)',
+ 'swpc.metric.gscale':'فئة G من NOAA، تفسيرية',
+ 'swpc.metric.time':'وقت الرصد',
+ 'swpc.inspector.h2':'مفتش الطقس الفضائي',
+ 'swpc.inspector.default':'لا يوجد رصد بعد.',
+ 'swpc.retrieval.label':'آخر جلب:',
+ 'swpc.sha.label':'SHA-256:',
+ 'swpc.interpret.template':'Kp الكوكبي المقدَّر {kp} ({cat}) عند {utc} UTC. مؤشر رصدي فقط؛ لا استنتاج لتأثير محلي.',
+ 'swpc.interpret.default':'يقيس Kp النشاط الجيومغناطيسي العالمي، وليس التأثير المحلي أو الطقس أو الزلازل أو مخاطر الحرائق. فئات G1–G5 إرشادية فقط ولا تشكل إنذارًا تشغيليًا.',
+ 'firms.h2':'🔥 NASA FIRMS · كشف الحرائق بالأقمار الصناعية',
+ 'firms.badge':'يتطلب مفتاحًا · تجريبي',
+ 'firms.note.about':'يتطلب CSV المنطقة من FIRMS مفتاح MAP_KEY من NASA. قد يُحظر الوصول المباشر من المتصفح بسبب CORS. الكشوف شذوذات حرارية وليست حرائق مؤكدة أو مبانٍ مشتعلة أو إنذارات معتمدة.',
+ 'firms.label.key':'MAP_KEY من FIRMS (لا يُحفظ أبدًا في اللوحة المصدَّرة أو GitHub)',
+ 'firms.btn.fetch':'جلب كشوف الحرائق الإقليمية',
+ 'firms.btn.clear':'مسح المفتاح والأرصاد',
+ 'firms.note.register':'سجّل في <a target="_blank" rel="noopener noreferrer" href="https://firms.modaps.eosdis.nasa.gov/api/map_key/">NASA FIRMS MAP_KEY</a>. يبقى المفتاح في ذاكرة هذا التبويب فقط؛ تضع طلبات FIRMS المباشرة المفتاح في رابط HTTPS مرئي للمزوّد وربما في سجل المتصفح/الشبكة. لا تُدخل بيانات اعتماد مؤسسية قيّمة في نسخة مشتركة غير موثوقة. يتطلب النشر العام وكيلًا معتمدًا من جهة الخادم.',
+ 'firms.metric.count':'كشوف صالحة',
+ 'firms.metric.state':'حالة الاتصال',
+ 'firms.metric.time':'آخر جلب',
+ 'firms.sha.label':'SHA-256 للحمولة:',
+ 'firms.bbox.template':'نطاق الاستعلام {bbox} · {area} درجة²',
+ 'firms.bbox.warn':'نطاق الاستعلام كبير بشكل غير معتاد للوحة إقليمية؛ توقّع استجابات بطيئة وضغطًا على حصة المزوّد.',
+ 'res.h2':'☀️ RES07 · التخزين مقابل التعويض',
+ 'res.badge':'اصطناعي',
+ 'res.note':'نفس الحمل والبطارية وأفق 168 ساعة في كلا التشغيلين. يُفعَّل/يُعطَّل التوليد الشمسي فقط. ضوء نهار جيبي مبسّط؛ ليس طقسًا مرصودًا ولا نموذج تدفق قدرة معتمدًا ولا ضمان مرونة.',
+ 'res.label.load':'الحمل الحرج (kW)',
+ 'res.label.pv':'قدرة الطاقة الشمسية (kWp)',
+ 'res.label.battery':'بطارية قابلة للاستخدام (kWh)',
+ 'res.label.sun':'توفر الشمس (0–1)',
+ 'res.label.regime':'سقف النظام (أقصى معامل شمسي)',
+ 'res.regime.normal':'طبيعي',
+ 'res.regime.adverse':'معاكس',
+ 'res.regime.catastrophic':'كارثي',
+ 'res.label.rte':'كفاءة الذهاب والإياب',
+ 'res.btn.compare':'قارن 168 ساعة',
+ 'res.table.metric':'المقياس',
+ 'res.table.storage':'تخزين فقط',
+ 'res.table.pv':'معوَّض بالطاقة الشمسية',
+ 'res.row.served':'ساعات التغذية',
+ 'res.row.unserved':'غير مغذّى (kWh)',
+ 'res.row.soc':'حالة الشحن النهائية (kWh)',
+ 'res.row.pass':'نجاح 168 ساعة',
+ 'res.pass':'نجاح (اصطناعي)',
+ 'res.fail':'فشل',
+ 'res.note.model':'النموذج: شحن/تفريغ 0.25C، حالة شحن ابتدائية كاملة، جذر تربيعي لكفاءة الذهاب والإياب في كل اتجاه؛ بدون شبكة أو تأثيرات حرارية أو تدهور أو إلكترونيات قدرة.',
+ 'res.error':'مدخل نموذج غير صالح: تحقق من الحمل والبطارية والطاقة الشمسية وسقف الشمس والكفاءة.',
+ 'health.h2':'📡 صحة المصادر والوصول',
+ 'health.note.1':'يعرض صف USGS آخر جلب وSHA-256 بعد جلب مُتحقَّق منه؛ NOAA وNASA FIRMS موصلان منفصلان؛ ولا يُوسم أي منهما متصلًا إلا بعد جلب ناجح مُتحقَّق منه.',
+ 'health.note.2':'مُفهرَس ≠ متصل. تتطلب بعض المصادر الصينية تسجيل دخول المستخدم واستحقاقات بيانات مشروعة ووصولًا برمجيًا معتمدًا. لا تُخزَّن أو تُطلب أي بيانات اعتماد هنا.',
+ 'prov.h2':'🔎 عقد الإثبات',
+ 'prov.note.collab':'يحدد <b>COLLABORATOR_REPORTED</b> المساهمات البحثية الصادرة عن DeepSeek؛ التحقق المستقل والحالة التشغيلية حقلان منفصلان.',
+ 'prov.row.usgs':'مصدر عام',
+ 'prov.row.cma':'عنصر نائب',
+ 'prov.row.res07':'محاكى',
+ 'prov.row.reg.label':'الحالة التنظيمية',
+ 'prov.row.reg':'يتطلب مراجعة',
+ 'prov.note.censor':'يجب عرض القيم الخاضعة للرقابة من اليسار بوصفها &lt; الحد؛ ومن اليمين &gt; الحد. يجب وسم عدم اليقين المفقود بـ ± UNKNOWN، لا تقديمه كيقين.',
+ 'prov.receipt.default':'لا يوجد إيصال حدث مرصود بعد.',
+ 'refs.h2':'مراجع بحثية',
+ 'feed.auth.noauth':'بدون مصادقة',
+ 'feed.auth.account':'حساب / موافقة',
+ 'feed.auth.key':'يتطلب MAP_KEY',
+ 'feed.auth.catalogue':'فهرس',
+ 'feed.auth.license':'حسب الترخيص',
+ 'locale.region':'المنطقة',
+ 'locale.language':'اللغة',
+ 'locale.timezone':'المنطقة الزمنية',
+ 'state.connected_readonly':'متصل · قراءة فقط',
+ 'state.stale':'بيانات قديمة',
+ 'state.stub':'غير مجلب',
+ 'state.needs_key':'المفتاح مطلوب',
+ 'state.error':'خطأ',
+ 'state.not_connected':'غير متصل',
+ 'state.fetching':'جارٍ الجلب',
+ 'kp.g5':'G5 شديد','kp.g4':'G4 حاد','kp.g3':'G3 قوي','kp.g2':'G2 متوسط',
+ 'kp.g1':'G1 طفيف','kp.unsettled':'غير مستقر','kp.quiet':'هادئ',
+ 'region.authority':'جهة الإبلاغ الزلزالي الأساسية',
+  'region.china':'الصين / غرب الهادئ',
+ 'region.global':'عالمي',
+ 'region.south_america':'أمريكا الجنوبية',
+ 'region.arctic':'القطب الشمالي',
+ 'region.caption.template':'{region} · {name} · EPSG:4326 · {bbox} · {authority}: {authorityName}',
+ 'err.fetch.prefix':'لم يتم إنشاء الجلب:',
+ 'err.swpc.prefix':'تعذّر إنشاء مصدر NOAA المباشر:',
+ 'err.firms.key':'يلزم مفتاح MAP_KEY صادر من المزوّد.',
+ 'err.firms.format':'تنسيق MAP_KEY غير متوقع (أحرف/أرقام/شرطة سفلية/شرطة فقط).',
+ 'err.firms.cleared':'تم مسح المفتاح وقائمة الكشوف من الذاكرة.',
+ 'err.firms.proxy':'في حال حدوث خطأ شبكة/CORS، استخدم وكيلًا معتمدًا من جهة الخادم؛ لا تتجاوز تفويض المزوّد أبدًا.',
+ 'err.firms.quota':'خطأ مفتاح أو حصة FIRMS'
+}
+};
+// feed.* labels are shared across locales (proper nouns / provider names); inherit from en.
+for(const lc of Object.keys(LABELS)){if(lc==='en')continue;for(const k of Object.keys(LABELS.en)){if(k.startsWith('feed.')&&!k.startsWith('feed.auth.')&&!(k in LABELS[lc])){LABELS[lc][k]=LABELS.en[k]}}}
+
+/* =====================================================================
+   STATE
+   ===================================================================== */
+let REGION=REGION_PRESETS[INITIAL_REGION];
+let LOCALE='zh-CN';
+let DISPLAY_ZONE=REGION.timeZone;
+let health={state:'STUB',retrieved:null,hash:null,records:[]};
+const swpcHealth={state:'STUB',retrieved:null,hash:null,record:null,displayKp:null};
+let firmsHealth={state:'NEEDS_KEY',retrieved:null,hash:null,records:[]};
+let lastInspector=null;
+
+const URL='https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson';
+const SWPC_URL='https://services.swpc.noaa.gov/json/planetary_k_index_1m.json';
+const FIRMS_HOST='firms.modaps.eosdis.nasa.gov';
+const csvHeaders=['latitude','longitude','acq_date','acq_time','confidence','frp','satellite','instrument'];
+
+/* =====================================================================
+   i18n HELPERS
+   ===================================================================== */
+function t(k,vars){
+ const s=LABELS[LOCALE]?.[k]??LABELS.en[k];
+ if(s===undefined)return '⟦'+k+'⟧';
+ if(!vars)return s;
+ return s.replace(/\{(\w+)\}/g,(_,n)=>n in vars?String(vars[n]):'⟦'+n+'⟧');
+}
+function stateLabel(v){return t('state.'+String(v).toLowerCase())}
+function nf(x,digits){try{return new Intl.NumberFormat(LOCALE,{maximumFractionDigits:digits??0,minimumFractionDigits:digits??0}).format(x)}catch{return String(x)}}
+function dtf(iso){if(!iso)return '—';try{return new Intl.DateTimeFormat(LOCALE,{timeZone:DISPLAY_ZONE,year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}).format(new Date(iso))}catch{return iso}}
+function utcStamp(iso){return iso?iso.slice(11,19)+'Z':'—'}
+function utc(t){let d=new Date(t);return Number.isFinite(d.getTime())?d.toISOString():null}
+
+/* =====================================================================
+   REGION HELPERS
+   ===================================================================== */
+function inRegion(lon,lat){const b=REGION.bbox;return lon>=b.west&&lon<=b.east&&lat>=b.south&&lat<=b.north}
+function placeCoords(lon,lat){const b=REGION.bbox;return {left:((lon-b.west)/(b.east-b.west)*100)+'%',top:((b.north-lat)/(b.north-b.south)*100)+'%'}}
+function areaBBox(){const b=REGION.bbox;return [b.west,b.south,b.east,b.north].join(',')}
+function bboxArea(){const b=REGION.bbox;return Math.abs((b.east-b.west)*(b.north-b.south))}
+
+/* =====================================================================
+   DOM HELPERS
+   ===================================================================== */
+const el=id=>document.getElementById(id);
+const text=(id,s)=>{const n=el(id);if(n)n.textContent=s};
+
+/* =====================================================================
+   RENDER — static
+   ===================================================================== */
+function renderStatic(){
+ document.querySelectorAll('[data-i18n]').forEach(n=>{n.textContent=t(n.getAttribute('data-i18n'))});
+ document.querySelectorAll('[data-i18n-html]').forEach(n=>{n.innerHTML=t(n.getAttribute('data-i18n-html'))});
+ document.title=t('app.title');
+ // locale + region + zone selects
+ const rs=el('regionSelect');rs.replaceChildren();
+ for(const key of Object.keys(REGION_PRESETS)){const o=document.createElement('option');o.value=key;o.textContent=t(REGION_PRESETS[key].nameKey);rs.append(o)}
+ rs.value=Object.keys(REGION_PRESETS).find(k=>REGION_PRESETS[k]===REGION)||INITIAL_REGION;
+ const zs=el('timeZoneSelect');zs.replaceChildren();
+ const zones=[...new Set(Object.values(REGION_PRESETS).map(r=>r.timeZone))];
+ if(!zones.includes(DISPLAY_ZONE))zones.unshift(DISPLAY_ZONE);
+ for(const z of zones){const o=document.createElement('option');o.value=z;o.textContent=z;zs.append(o)}
+ zs.value=DISPLAY_ZONE;
+ el('localeSelect').value=LOCALE;
+}
+
+/* =====================================================================
+   RENDER — region caption
+   ===================================================================== */
+function renderRegionCaption(){
+ const c=el('mapRegionCaption');if(!c)return;
+ c.textContent=t('region.caption.template',{region:t('locale.region'),name:t(REGION.nameKey),bbox:areaBBox(),authority:t('region.authority'),authorityName:REGION.primarySeismicAuthority.name});
+}
+
+/* =====================================================================
+   RENDER — feed health
+   ===================================================================== */
+const FEEDS=[
+ ['feed.usgs','feed.auth.noauth','usgs'],
+ ['feed.cma','feed.auth.account','none'],
+ ['feed.nsmc','feed.auth.account','none'],
+ ['feed.mnr','feed.auth.account','none'],
+ ['feed.noaa','feed.auth.noauth','swpc'],
+ ['feed.firms','feed.auth.key','firms'],
+ ['feed.celestrak','feed.auth.catalogue','none'],
+ ['feed.openmeteo','feed.auth.license','none']
+];
+function connFor(kind){
+ if(kind==='usgs')return health;
+ if(kind==='swpc')return swpcHealth;
+ if(kind==='firms')return firmsHealth;
+ return null;
+}
+function renderHealth(){
+ const root=el('feedHealth');root.replaceChildren();
+ for(const [nameKey,authKey,kind] of FEEDS){
+  const d=document.createElement('div');d.className='feed';
+  const a=document.createElement('span');a.textContent=t(nameKey)+' · '+t(authKey);
+  const b=document.createElement('strong');
+  const h=connFor(kind);
+  if(!h){b.textContent=stateLabel('NOT_CONNECTED')}
+  else{
+   b.textContent=stateLabel(h.state)+(h.retrieved?' · '+utcStamp(h.retrieved)+' · '+(h.hash||'').slice(0,12)+'…':'');
+   if(h.hash)b.title='last_fetch_utc: '+h.retrieved+' | payload_sha256: '+h.hash;
+  }
+  d.append(a,b);root.append(d);
+ }
+}
+
+/* =====================================================================
+   RENDER — USGS events + map
+   ===================================================================== */
+function renderEvents(){
+ const root=el('events'),map=el('map');
+ if(!health.records.length){root.replaceChildren();const e=document.createElement('div');e.className='empty';e.textContent=t('usgs.events.empty');root.append(e)}
+ else{
+  root.replaceChildren();
+  health.records.slice(0,60).forEach(q=>{
+   const b=document.createElement('button');b.className='event';
+   b.textContent='M'+nf(q.mag,1)+' · '+q.place+' · '+dtf(new Date(q.time).toISOString())+' ('+DISPLAY_ZONE+')';
+   b.onclick=()=>show(q);root.append(b);
+  });
+ }
+ map.querySelectorAll('.dot').forEach(n=>n.remove());
+ const inWindow=health.records.filter(q=>inRegion(q.lon,q.lat));
+ const selected=inWindow.slice().sort((a,b)=>b.mag-a.mag).slice(0,60);
+ for(const q of selected){
+  const b=document.createElement('button');b.className='dot';
+  Object.assign(b.style,placeCoords(q.lon,q.lat));
+  b.title='M'+q.mag+' '+q.place;b.setAttribute('aria-label',b.title);
+  b.onclick=()=>show(q);map.append(b);
+ }
+ text('num',nf(health.records.length));
+ text('inbounds',t('usgs.inbounds.template',{total:nf(health.records.length),within:nf(inWindow.length),plotted:nf(selected.length)}));
+ text('fresh',health.retrieved?dtf(health.retrieved)+' ('+DISPLAY_ZONE+')':'—');
+ text('sha',health.hash||'NOT FETCHED');
+ text('fetchState',health.state==='CONNECTED_READONLY'?stateLabel('CONNECTED_READONLY')+' · '+nf(health.records.length)+' observed':stateLabel(health.state));
+}
+function show(q){
+ lastInspector=q;
+ const data={source:'USGS',id:q.id,origin_utc:new Date(q.time).toISOString(),magnitude:q.mag,uncertainty:'UNKNOWN',longitude:q.lon,latitude:q.lat,depth_km:q.depth,place:q.place,original_event_url:q.url,receipt_sha256:health.hash};
+ text('inspector',q.place+' · M'+nf(q.mag,1)+' ± UNKNOWN · '+dtf(new Date(q.time).toISOString())+' ('+DISPLAY_ZONE+')');
+ text('receipt',JSON.stringify(data,null,2));
+}
+
+/* =====================================================================
+   RENDER — Kp bar
+   ===================================================================== */
+function kpCategoryKey(x){return x>=9?'kp.g5':x>=8?'kp.g4':x>=7?'kp.g3':x>=6?'kp.g2':x>=5?'kp.g1':x>=4?'kp.unsettled':'kp.quiet'}
+function kpClass(x){return x>=9?'extreme':x>=8?'severe':x>=7?'strong':x>=6?'moderate':x>=5?'minor':x>=4?'mild':''}
+function renderKpBar(){
+ const root=el('kpBar');root.replaceChildren();
+ const kp=swpcHealth.displayKp;
+ const active=Number.isFinite(kp)?Math.floor(kp):-1;
+ const cat=Number.isFinite(kp)?kpClass(kp):'';
+ root.setAttribute('aria-label',Number.isFinite(kp)?'Kp '+kp.toFixed(2)+'; '+t(kpCategoryKey(kp)):'Kp 0–9; no observation');
+ for(let i=0;i<=9;i++){const d=document.createElement('div');d.className='kp-seg';if(i<=active){d.classList.add('active');if(cat)d.classList.add(cat)}d.title='Kp '+i;root.append(d)}
+}
+function renderKpText(){
+ if(!swpcHealth.record||!Number.isFinite(swpcHealth.displayKp)){
+  text('kpVal','—');text('kpStorm','—');text('kpTime','—');
+  text('kpInterpret',t('swpc.interpret.default'));
+  text('swpcInspector',t('swpc.inspector.default'));
+  text('swpcFetchTime','NEVER');text('swpcSha','NO RECEIPT');
+  text('swpcState',stateLabel(swpcHealth.state));
+  return;
+ }
+ const q=swpcHealth.record,kp=swpcHealth.displayKp;
+ text('kpVal',kp.toFixed(2)+' ± UNKNOWN');
+ text('kpStorm',t(kpCategoryKey(kp)));
+ text('kpTime',DISPLAY_ZONE==='UTC'?dtf(q.t)+' (UTC)':dtf(q.t)+' ('+DISPLAY_ZONE+') · UTC '+q.t);
+ text('kpInterpret',t('swpc.interpret.template',{kp:kp.toFixed(2),cat:t(kpCategoryKey(kp)),utc:q.t}));
+ text('swpcState',stateLabel(swpcHealth.state));
+ text('swpcFetchTime',swpcHealth.retrieved?dtf(swpcHealth.retrieved)+' ('+DISPLAY_ZONE+')':'NEVER');
+ text('swpcSha',swpcHealth.hash||'NO RECEIPT');
+ text('swpcInspector',JSON.stringify({source:'NOAA SWPC',feed:SWPC_URL,retrieved_at:swpcHealth.retrieved,observation:{time_utc:q.t,kp_index:q.kp,estimated_kp:q.estimated,display_kp:kp,classification:t(kpCategoryKey(kp)),uncertainty:'UNKNOWN',provenance:'MEASURED_GEOMAGNETIC_OBSERVATION'},series_points_24h:swpcHealth.series?swpcHealth.series.length:0,payload_sha256:swpcHealth.hash},null,2));
+}
+
+/* =====================================================================
+   RENDER — FIRMS rows
+   ===================================================================== */
+function renderFirmsRows(){
+ const list=el('firmsRows');list.replaceChildren();
+ for(const fire of firmsHealth.records.slice(0,35)){
+  const d=document.createElement('div');d.className='feed';
+  d.textContent=fire.time_utc+' · '+fire.lat.toFixed(3)+','+fire.lon.toFixed(3)+' · '+fire.satellite+' · FRP '+(Number.isFinite(fire.frp_mw)?nf(fire.frp_mw,2):'UNKNOWN')+' MW ± UNKNOWN';
+  list.append(d);
+ }
+ text('firmsCount',nf(firmsHealth.records.length));
+ text('firmsState',stateLabel(firmsHealth.state));
+ text('firmsTime',firmsHealth.retrieved?dtf(firmsHealth.retrieved)+' ('+DISPLAY_ZONE+')':'—');
+ text('firmsSha',firmsHealth.hash||'NO RECEIPT');
+ const area=bboxArea();
+ if(area>MAX_ADVISED_BBOX_AREA){
+  el('firmsError').textContent=t('firms.bbox.warn')+' '+t('firms.bbox.template',{bbox:areaBBox(),area:nf(area)});
+ }
+}
+
+/* =====================================================================
+   RENDER — model
+   ===================================================================== */
+function renderModel(){doModel()}
+function doModel(){
+ const ids=['load','pv','battery','cloud','regime','rte'];
+ const [load,pv,battery,cloud,regime,rte]=ids.map(x=>Number(el(x).value));
+ const root=el('results');
+ if(![load,pv,battery,cloud,regime,rte].every(Number.isFinite)||load<=0||pv<0||battery<0||cloud<0||cloud>1||regime<=0||regime>1||rte<=0||rte>1){
+  text('modelError',t('res.error'));root.replaceChildren();return;
+ }
+ text('modelError','');
+ const a=simulate(false,load,pv,battery,cloud,regime,rte),b=simulate(true,load,pv,battery,cloud,regime,rte);
+ const rows=[
+  [t('res.row.served'),'served',x=>nf(x)+'/168'],
+  [t('res.row.unserved'),'unserved',x=>nf(x,2)],
+  [t('res.row.soc'),'soc',x=>nf(x,2)],
+  [t('res.row.pass'),'pass',x=>x?t('res.pass'):t('res.fail')]
+ ];
+ root.replaceChildren();
+ for(const [name,key,fmt] of rows){
+  const tr=document.createElement('tr');
+  for(const cell of [name,fmt(a[key]),fmt(b[key])]){const td=document.createElement('td');td.textContent=cell;tr.append(td)}
+  root.append(tr);
+ }
+}
+
+/* =====================================================================
+   RENDER — provenance receipt default
+   ===================================================================== */
+function renderReceipt(){
+ if(!lastInspector){el('receipt').textContent=t('prov.receipt.default')}
+}
+
+/* =====================================================================
+   STALENESS TICK (separate from render)
+   ===================================================================== */
+function tickStaleness(){
+ const now=Date.now();
+ for(const [h,ttl] of [[swpcHealth,300],[firmsHealth,900]]){
+  if(h.retrieved&&now-Date.parse(h.retrieved)>ttl*1000&&h.state==='CONNECTED_READONLY'){h.state='STALE'}
+ }
+ if(health.retrieved&&now-Date.parse(health.retrieved)>300000&&health.state==='CONNECTED_READONLY'){health.state='STALE'}
+}
+
+/* =====================================================================
+   RENDER ALL
+   ===================================================================== */
+function renderAll(){
+ tickStaleness();
+ renderStatic();
+ renderRegionCaption();
+ renderHealth();
+ renderEvents();
+ renderKpBar();
+ renderKpText();
+ renderFirmsRows();
+ renderReceipt();
+ renderModel();
+}
+
+/* =====================================================================
+   SIMULATION
+   ===================================================================== */
+function simulate(solarOn,load,pv,capacity,sun,regime,rte){
+ let soc=capacity,served=0,unserved=0,eff=Math.sqrt(rte),power=.25*capacity;
+ for(let h=0;h<168;h++){
+  const pvKw=solarOn?pv*Math.min(sun,regime)*Math.max(0,Math.sin(((h%24)-6)/12*Math.PI))*.85:0;
+  const direct=Math.min(load,pvKw),deficit=load-direct,surplus=Math.max(0,pvKw-load);
+  const charge=Math.min(surplus,power,(capacity-soc)/eff);soc+=charge*eff;
+  const dis=Math.min(deficit,power,soc*eff);soc-=dis/eff;
+  const miss=Math.max(0,deficit-dis);unserved+=miss;if(miss<1e-7)served++;
+ }
+ return {served,unserved,soc,pass:unserved<1e-7};
+}
+
+/* =====================================================================
+   CRYPTO / FETCH
+   ===================================================================== */
+function getDigest(s){if(!globalThis.crypto?.subtle)throw Error('SHA-256 unavailable: serve over HTTPS or localhost');return crypto.subtle.digest('SHA-256',new TextEncoder().encode(s)).then(b=>[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join(''))}
+async function verifiedRaw(url,ms){
+ const c=new AbortController(),timer=setTimeout(()=>c.abort(),ms);
+ try{
+  const r=await fetch(url,{signal:c.signal,cache:'no-store',redirect:'error'});
+  if(!r.ok)throw Error('HTTP '+r.status);
+  if(!r.url.startsWith('https://'))throw Error('non-HTTPS endpoint');
+  return await r.text();
+ }finally{clearTimeout(timer)}
+}
+
+/* =====================================================================
+   FETCH — USGS
+   ===================================================================== */
+async function doFetch(){
+ const btn=el('fetch');btn.disabled=true;text('err','');text('fetchState',stateLabel('FETCHING'));
+ const ctl=new AbortController(),timeout=setTimeout(()=>ctl.abort(),12000);
+ try{
+  const resp=await fetch(URL,{signal:ctl.signal,cache:'no-store',redirect:'error'});
+  if(!resp.ok)throw Error('HTTP '+resp.status);
+  const raw=await resp.text(),payload=JSON.parse(raw);
+  if(payload.type!=='FeatureCollection'||!Array.isArray(payload.features))throw Error('Unexpected source format');
+  if(!globalThis.crypto||!crypto.subtle)throw Error('SHA-256 unavailable in this context; use https:// or http://localhost.');
+  const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(raw));
+  const hash=[...new Uint8Array(digest)].map(x=>x.toString(16).padStart(2,'0')).join('');
+  const records=payload.features.filter(f=>f&&f.geometry&&f.geometry.type==='Point'&&Array.isArray(f.geometry.coordinates)&&f.properties&&Number.isFinite(f.properties.time)&&Number.isFinite(f.properties.mag)&&Number.isFinite(f.geometry.coordinates[0])&&Number.isFinite(f.geometry.coordinates[1])&&Math.abs(f.geometry.coordinates[0])<=180&&Math.abs(f.geometry.coordinates[1])<=90).map(f=>({id:String(f.id),lon:f.geometry.coordinates[0],lat:f.geometry.coordinates[1],depth:f.geometry.coordinates[2],mag:f.properties.mag,time:f.properties.time,place:f.properties.place||'unknown',url:typeof f.properties.url==='string'&&f.properties.url.startsWith('https://earthquake.usgs.gov/')?f.properties.url:'https://earthquake.usgs.gov/'}));
+  health={state:'CONNECTED_READONLY',retrieved:new Date().toISOString(),hash,records};
+ }catch(e){
+  health.state=health.retrieved?'STALE':'ERROR';
+  text('err',t('err.fetch.prefix')+' '+String(e));
+ }finally{clearTimeout(timeout);btn.disabled=false;renderAll()}
+}
+
+/* =====================================================================
+   FETCH — NOAA SWPC
+   ===================================================================== */
+async function fetchSWPC(){
+ const b=el('swpcFetch');b.disabled=true;text('swpcError','');text('swpcState',stateLabel('FETCHING'));
+ try{
+  const raw=await verifiedRaw(SWPC_URL,12000),hash=await getDigest(raw),data=JSON.parse(raw);
+  if(!Array.isArray(data))throw Error('Unexpected NOAA data format');
+  const rows=data.map(q=>({t:utc(q?.time_tag),kp:typeof q?.kp_index==='number'?q.kp_index:NaN,estimated:q?.estimated_kp??null}))
+   .filter(q=>q.t!==null&&Number.isFinite(q.kp)&&q.kp>=0&&q.kp<=9)
+   .sort((a,b)=>Date.parse(a.t)-Date.parse(b.t));
+  if(!rows.length)throw Error('NO_VALID_KP_RECORD');
+  const q=rows[rows.length-1],ret=new Date().toISOString();
+  const displayKp=Number.isFinite(Number(q.estimated))&&q.estimated!==null&&Number(q.estimated)>=0&&Number(q.estimated)<=9?Number(q.estimated):q.kp;
+  if(Date.parse(q.t)>Date.now()+300000)throw Error('OBSERVATION_TIMESTAMP_IN_FUTURE');
+  swpcHealth.state='CONNECTED_READONLY';
+  swpcHealth.hash=hash;swpcHealth.retrieved=ret;swpcHealth.record=q;swpcHealth.displayKp=displayKp;
+  swpcHealth.series=rows.filter(r=>Date.parse(r.t)>=Date.now()-86400000);
+ }catch(e){
+  swpcHealth.state=swpcHealth.retrieved?'STALE':'ERROR';
+  text('swpcError',t('err.swpc.prefix')+' '+String(e));
+ }finally{b.disabled=false;renderAll()}
+}
+
+/* =====================================================================
+   FETCH — NASA FIRMS
+   ===================================================================== */
+function parseCsvSafe(raw){
+ const rows=[];let field='',row=[],quoted=false;
+ for(let i=0;i<raw.length;i++){
+  const ch=raw[i];
+  if(ch==='"'){if(quoted&&raw[i+1]==='"'){field+='"';i++}else quoted=!quoted}
+  else if(ch===','&&!quoted){row.push(field);field=''}
+  else if((ch==='\n'||ch==='\r')&&!quoted){if(ch==='\r'&&raw[i+1]==='\n')i++;row.push(field);field='';if(row.some(x=>x.trim()))rows.push(row);row=[]}
+  else field+=ch;
+ }
+ if(quoted)throw Error('Malformed CSV quoting');
+ row.push(field);if(row.some(x=>x.trim()))rows.push(row);
+ if(!rows.length)throw Error('Empty FIRMS CSV');
+ const headings=rows.shift().map(x=>x.trim());
+ if(!csvHeaders.every(h=>headings.includes(h)))throw Error('FIRMS API response missing expected CSV headers');
+ const index=x=>headings.indexOf(x);
+ return rows.map(r=>{
+  const lat=Number(r[index('latitude')]),lon=Number(r[index('longitude')]);
+  const date=(r[index('acq_date')]||'').trim();
+  const rawTime=(r[index('acq_time')]||'').trim();
+  const time=/^\d{4}$/.test(rawTime)?rawTime:null;
+  const iso=time&&Number(time.slice(0,2))<24&&Number(time.slice(2,4))<60?utc(date+'T'+time.slice(0,2)+':'+time.slice(2,4)+':00Z'):null;
+  return {lat,lon,time_utc:iso,confidence:r[index('confidence')],frp_mw:Number(r[index('frp')]),satellite:r[index('satellite')],instrument:r[index('instrument')]};
+ }).filter(f=>Number.isFinite(f.lat)&&Math.abs(f.lat)<=90&&Number.isFinite(f.lon)&&Math.abs(f.lon)<=180&&f.time_utc!==null);
+}
+async function fetchFIRMS(){
+ const btn=el('firmsFetch');
+ const key=el('firmsKey').value.trim();el('firmsKey').value='';
+ if(!key){text('firmsError',t('err.firms.key'));firmsHealth.state='NEEDS_KEY';renderAll();return}
+ if(!/^[A-Za-z0-9_-]{8,200}$/.test(key)){text('firmsError',t('err.firms.format'));return}
+ btn.disabled=true;text('firmsError','');text('firmsState',stateLabel('FETCHING'));
+ const parsed=new URL('https://'+FIRMS_HOST+'/api/area/csv/'+encodeURIComponent(key)+'/VIIRS_SNPP_NRT/'+areaBBox()+'/1');
+ try{
+  if(parsed.hostname!==FIRMS_HOST||parsed.protocol!=='https:')throw Error('Host guard rejected endpoint');
+  const raw=await verifiedRaw(parsed.href,15000);
+  if(/Invalid MAP_KEY|exceeded|Error processing request/i.test(raw))throw Error(t('err.firms.quota'));
+  const hash=await getDigest(raw),fires=parseCsvSafe(raw),ret=new Date().toISOString();
+  firmsHealth={state:'CONNECTED_READONLY',hash,retrieved:ret,records:fires};
+ }catch(e){
+  firmsHealth.state=firmsHealth.retrieved?'STALE':'ERROR';
+  text('firmsError',String(e)+' · '+t('err.firms.proxy'));
+ }finally{btn.disabled=false;renderAll()}
+}
+function clearFIRMS(){
+ el('firmsKey').value='';
+ firmsHealth={state:'NEEDS_KEY',retrieved:null,hash:null,records:[]};
+ text('firmsError',t('err.firms.cleared'));
+ renderAll();
+}
+
+/* =====================================================================
+   WIRE UP
+   ===================================================================== */
+el('fetch').onclick=doFetch;
+el('swpcFetch').onclick=fetchSWPC;
+el('firmsFetch').onclick=fetchFIRMS;
+el('firmsClear').onclick=clearFIRMS;
+el('simulate').onclick=doModel;
+el('regionSelect').onchange=e=>{
+ REGION=REGION_PRESETS[e.target.value];
+ DISPLAY_ZONE=REGION.timeZone;
+ renderAll();
+};
+el('localeSelect').onchange=e=>{
+ LOCALE=e.target.value;
+ document.documentElement.lang=LOCALE;
+ document.documentElement.dir=LOCALE==='ar'?'rtl':'ltr';
+ renderAll();
+};
+el('timeZoneSelect').onchange=e=>{DISPLAY_ZONE=e.target.value;renderAll()};
+
+renderAll();
+setInterval(()=>{tickStaleness();renderAll()},60000);
+</script><aside style="position:fixed;right:12px;bottom:12px;background:#172638;color:white;padding:12px;border:1px solid #7bc;z-index:9999;border-radius:10px"><a style="color:#b8f1ff" href="./governance.html">治理 / Constitutional Registry →</a></aside></body></html>
