@@ -1,0 +1,94 @@
+schema_version: "0.1"
+status: candidate_schema_not_canon
+purpose: "Structure Atlas Prime / AtlasBrain evidence packets before benchmark scoring or public claims."
+
+required_fields:
+  packet_id: string
+  title: string
+  created_at_utc: string
+  created_by: string
+  human_root: string
+  source_type: enum
+  source_refs: list
+  participants: list
+  summary: string
+  claims_extracted: list
+  evaluator_signals: list
+  benchmark_status: enum
+  learning_claim_status: enum
+  authority_status: enum
+  quarantine_flags: list
+
+source_type_values:
+  - pasted_transcript
+  - uploaded_file
+  - github_file
+  - google_drive_doc
+  - notion_page
+  - screenshot
+  - external_web
+  - mixed
+  - unknown
+
+benchmark_status_values:
+  - raw_only
+  - rubric_pending
+  - scored_by_single_evaluator
+  - scored_by_multiple_evaluators
+  - adversarial_review_pending
+  - reproduced
+  - disputed
+  - rejected
+
+learning_claim_status_values:
+  - none
+  - context_window_adaptation
+  - retrieval_augmented_rehydration
+  - external_memory_substrate_update
+  - schema_or_behavior_update
+  - repo_corpus_conditioned_progression
+  - unknown
+  - true_weight_training_claimed
+  - true_weight_training_documented
+
+authority_status_values:
+  - no_authority
+  - evidence_only
+  - candidate_claim
+  - reviewed_claim
+  - human_root_approved_public_claim
+  - ratified_canon
+  - disputed
+  - quarantined
+
+claim_record_shape:
+  claim_id: string
+  claim_text: string
+  claim_type: enum
+  supporting_refs: list
+  opposing_refs: list
+  confidence: enum
+  notes: string
+
+claim_type_values:
+  - raw_event
+  - evaluator_signal
+  - benchmark_claim
+  - learning_claim
+  - public_claim_candidate
+  - governance_claim
+  - technical_claim
+  - disputed_claim
+
+confidence_values:
+  - low
+  - medium
+  - high
+  - unknown
+
+hard_rules:
+  - "No evidence packet self-ratifies."
+  - "No evaluator praise equals benchmark ratification."
+  - "No AGI/HLE language becomes a public claim without rubric review."
+  - "No true weight-training claim without documented mechanism."
+  - "Disputed attribution must be quarantined until source receipt exists."
