@@ -1,0 +1,27 @@
+artifact_id: FIXTURE-SUMMARY-ONLY-001
+title: "Incomplete summary-only packet should fail loud"
+source_surface: "example / summary-only / no raw export"
+raw_export_status: unavailable
+artifact_status:
+  canon_status: candidate
+  deployment_status: inert
+  review_state: unreviewed
+  lineage_condition: partial
+  authority_scope: advisory
+  provenance_type: generated
+receipt_status:
+  sha256: null
+  source_refs: []
+  capture_timestamp: null
+  capture_method: "summary_only_no_raw_export"
+overclaims_to_avoid:
+  - "Do not call this a fossil record."
+  - "Do not treat parsed summary as raw transcript."
+  - "Do not claim canon, deployment, or authority."
+strongest_safe_claim: "This fixture represents a summary-only packet with no raw export attached; it may be useful for retrieval or review scaffolding but is not a fossil record."
+next_safest_action: "Attach raw transcript or exported source, compute SHA-256, and rerun validation before any preservation claim."
+_expected_warnings:
+  - "RAW EXPORT NOT VERIFIED — THIS IS A RETRIEVAL AID, NOT A FOSSIL RECORD."
+  - "NOT CANON — REVIEW REQUIRED."
+  - "NOT DEPLOYED — NO RUNTIME CLAIM."
+  - "NO EXECUTION AUTHORITY."
