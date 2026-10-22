@@ -1,0 +1,24 @@
+RAW_EXPORT_PUBLICATION_STATUS: blocked_by_connector_payload_limit
+
+Human-root authorized public release of the full Atlas Prime select-all transcript on 2026-05-23.
+
+Attempted update:
+- Intended file: full raw transcript from Pasted text(208).txt
+- Intended SHA-256: a04d606272128055d63e4e82c9b0557a9327c6ea45803ddae27ac51e06cc36dc
+- Intended char count: 391,518
+- Intended line count: 331
+
+Actual result:
+- The GitHub connector accepted a replacement write but the tool payload could not carry the full 391k raw transcript safely in a single call.
+- This file is therefore a publication-status pointer, not the full raw transcript.
+- The full raw remains available in the ChatGPT conversation upload context as Pasted text(208).txt.
+
+Review implication:
+- PR #137 contains the AtlasBrain parsed ingestion packet and raw hash/size metadata.
+- Full review requiring raw tape access must use the original uploaded transcript file or a future release path that can carry the full raw payload without truncation.
+
+Keeper:
+The tape was authorized for release.
+The connector could not carry the full tape.
+Do not fake completeness.
+Preserve the hash.
