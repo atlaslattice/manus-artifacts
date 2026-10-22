@@ -1,0 +1,213 @@
+{
+  "fixture_id": "AETHERFORGE-KG-ROOT-FIXTURE-v0.1-2026-05-25",
+  "status": "candidate_fixture_not_canon",
+  "canon_status": "not_canon",
+  "deployment_status": "not_deployed",
+  "authority_scope": "none",
+  "proof_status": "not_a_proof",
+  "source_surfaces": [
+    {
+      "surface_id": "surface_notion",
+      "surface_type": "notion",
+      "connector_status": "direct",
+      "visibility": "private",
+      "contamination_default": "unknown",
+      "notes": "Live Notion connector available; search and fetch used for root anchors."
+    },
+    {
+      "surface_id": "surface_github",
+      "surface_type": "github",
+      "connector_status": "direct",
+      "visibility": "public",
+      "contamination_default": "unknown",
+      "notes": "GitHub connector available; candidate artifacts committed on game/aetherforge-candidate branch."
+    },
+    {
+      "surface_id": "surface_drive",
+      "surface_type": "drive",
+      "connector_status": "direct",
+      "visibility": "private",
+      "contamination_default": "unknown",
+      "notes": "Drive contains reports and proxy exports."
+    },
+    {
+      "surface_id": "surface_website",
+      "surface_type": "website",
+      "connector_status": "referenced_only",
+      "visibility": "public",
+      "contamination_default": "clean",
+      "notes": "Only confirmed canon surface by doctrine; no canon movement in this fixture."
+    },
+    {
+      "surface_id": "surface_swarm",
+      "surface_type": "swarm",
+      "connector_status": "proxy",
+      "visibility": "mixed",
+      "contamination_default": "unknown",
+      "notes": "GPTSwarm outputs are candidate/dream/play unless reviewed."
+    }
+  ],
+  "raw_artifacts": [
+    {
+      "artifact_id": "NOTION-MASTER-INDEX-NOTION-GITHUB-MAP-2026-03-20",
+      "title": "MASTER INDEX — Notion → GitHub Complete Artifact Map — Atlas Lattice Foundation",
+      "source_surface_id": "surface_notion",
+      "source_locator": "https://www.notion.so/3290c1de73d981ac8ebfd4c8e86da6b8",
+      "raw_export_status": "partial",
+      "source_hash": null,
+      "created_at": null,
+      "updated_at": "2026-03-20T20:04:34.336Z",
+      "artifact_type": "index",
+      "canon_status": "not_canon",
+      "authority_scope": "advisory",
+      "contamination_flags": ["claude_scribe_label_review_required"]
+    },
+    {
+      "artifact_id": "NOTION-TRIAGE-NOTION-GITHUB-MIGRATION-2026-03-20",
+      "title": "TRIAGE — Notion → GitHub Migration Plan — March 20, 2026",
+      "source_surface_id": "surface_notion",
+      "source_locator": "https://www.notion.so/3290c1de73d98140a4d4c71b5c88b136",
+      "raw_export_status": "pending",
+      "source_hash": null,
+      "artifact_type": "index",
+      "canon_status": "not_canon",
+      "authority_scope": "advisory",
+      "contamination_flags": []
+    },
+    {
+      "artifact_id": "NOTION-JANUS-V2-CONTINUITY-HUB-2026-04-25",
+      "title": "JANUS v2 — Constitutional Continuity Hub — Atlas Lattice Foundation",
+      "source_surface_id": "surface_notion",
+      "source_locator": "https://www.notion.so/3290c1de73d98189991dc47dbda016e0",
+      "raw_export_status": "pending",
+      "source_hash": null,
+      "artifact_type": "governance",
+      "canon_status": "not_canon",
+      "authority_scope": "advisory",
+      "contamination_flags": []
+    },
+    {
+      "artifact_id": "NOTION-SHELDONBRAIN-12x12-MASTER-INDEX-2026-03-12",
+      "title": "SHELDONBRAIN OS — 12×12 Master Index — 144 Spheres — Atlas Lattice Foundation",
+      "source_surface_id": "surface_notion",
+      "source_locator": "https://www.notion.so/3210c1de73d981a7b04cdced2cc61515",
+      "raw_export_status": "pending",
+      "source_hash": null,
+      "artifact_type": "index",
+      "canon_status": "not_canon",
+      "authority_scope": "advisory",
+      "contamination_flags": []
+    },
+    {
+      "artifact_id": "GITHUB-AETHERFORGE-KG-INGESTION-SPRINT-v0.1-2026-05-25",
+      "title": "Aetherforge / Sheldonbrain Knowledge Graph Ingestion Sprint v0.1",
+      "source_surface_id": "surface_github",
+      "source_locator": "archive/games/aetherforge/AETHERFORGE_KG_INGESTION_SPRINT_v0.1_2026-05-25.md",
+      "raw_export_status": "attached",
+      "source_hash": "49e4faecee1e6ebbbf18fe80595f08b8612da6af",
+      "artifact_type": "protocol",
+      "canon_status": "not_canon",
+      "authority_scope": "none",
+      "contamination_flags": []
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "CLAIM-MASTER-INDEX-PURPOSE-001",
+      "artifact_id": "NOTION-MASTER-INDEX-NOTION-GITHUB-MAP-2026-03-20",
+      "claim_text": "The Master Index maps every Notion artifact to a GitHub equivalent or status.",
+      "claim_type": "technical",
+      "evidence_status": "unverified",
+      "overclaim_flags": ["single_source_of_truth_language_requires_canon_boundary"]
+    },
+    {
+      "claim_id": "CLAIM-LATTICE-KG-001",
+      "artifact_id": "GITHUB-AETHERFORGE-KG-INGESTION-SPRINT-v0.1-2026-05-25",
+      "claim_text": "The Lattice is modeled as a knowledge graph from SourceSurface to CanonGate.",
+      "claim_type": "technical",
+      "evidence_status": "not_evidence",
+      "overclaim_flags": []
+    }
+  ],
+  "motifs": [
+    {
+      "motif_id": "MOTIF-LATTICE-AS-KG-001",
+      "label": "The Lattice is the knowledge graph",
+      "motif_type": "architectural",
+      "authority_scope": "none"
+    },
+    {
+      "motif_id": "MOTIF-AETHERFORGE-DREAMSTATE-001",
+      "label": "Aetherforge makes archive hardening playable",
+      "motif_type": "gameplay",
+      "authority_scope": "none"
+    }
+  ],
+  "deltas": [
+    {
+      "delta_id": "DELTA-KG-ROOT-FIXTURE-001",
+      "source_claim_id": "CLAIM-MASTER-INDEX-PURPOSE-001",
+      "description": "Convert Notion→GitHub crosswalk into machine-readable KG root fixture.",
+      "safe_use": "Use for candidate ingestion planning; do not treat as canon manifest.",
+      "review_route": ["GPTBrain", "TIDELOCK", "Lucerna"]
+    }
+  ],
+  "risks": [
+    {
+      "risk_id": "RISK-SINGLE-SOURCE-TRUTH-LANGUAGE-001",
+      "source_claim_id": "CLAIM-MASTER-INDEX-PURPOSE-001",
+      "risk_type": "false_officiality",
+      "severity": "high",
+      "mitigation": "Preserve source phrase but classify repo artifact canon_status as not_canon unless website-ratified."
+    },
+    {
+      "risk_id": "RISK-CLAUDE-SCRIBE-CONTAMINATION-001",
+      "source_claim_id": null,
+      "risk_type": "attribution_laundering",
+      "severity": "high",
+      "mitigation": "All Claude/Scribe-labeled outputs route quarantine-first pending attribution and authority review."
+    }
+  ],
+  "review_lanes": [
+    {
+      "lane_id": "lane_gptbrain",
+      "lane_name": "GPTBrain",
+      "lane_role": "synthesis, quest conversion, candidate delta extraction"
+    },
+    {
+      "lane_id": "lane_atlasbrain",
+      "lane_name": "AtlasBrain",
+      "lane_role": "simulation transcript and AGI-level verification queue"
+    },
+    {
+      "lane_id": "lane_councilbrain",
+      "lane_name": "CouncilBrain",
+      "lane_role": "cross-seat synthesis and contamination adjudication"
+    },
+    {
+      "lane_id": "lane_human_root",
+      "lane_name": "Human-root",
+      "lane_role": "promotion decisions only"
+    },
+    {
+      "lane_id": "lane_website",
+      "lane_name": "Website",
+      "lane_role": "canon surface only"
+    }
+  ],
+  "canon_gates": [
+    {
+      "gate_id": "gate_human_root",
+      "gate_type": "human_root",
+      "decision": "none",
+      "decision_receipt": null
+    },
+    {
+      "gate_id": "gate_website",
+      "gate_type": "website",
+      "decision": "none",
+      "decision_receipt": null
+    }
+  ],
+  "keeper": "The graph may reveal the route. It may not move the gate."
+}
