@@ -1,0 +1,36 @@
+{
+  "brine_m3_day": 150000,
+  "days_y": 365,
+  "calcium_mg_l": 680,
+  "sulfate_mg_l": 4500,
+  "direct_capture": 0.6,
+  "shell_wet_t_y": 96000,
+  "shell_dry_fraction": 1,
+  "shell_caco3_mass_fraction": 0.95,
+  "routes": {
+    "purchased_hcl_brine_sulfate": {
+      "activation": "hcl",
+      "sulfate_source": "brine",
+      "calcium_activation_fraction": 0.7,
+      "gypsum_capture_fraction": 0.65
+    },
+    "recovered_hcl_brine_sulfate": {
+      "activation": "hcl",
+      "sulfate_source": "brine",
+      "calcium_activation_fraction": 0.7,
+      "gypsum_capture_fraction": 0.65
+    },
+    "thermal_activation_brine_sulfate": {
+      "activation": "thermal",
+      "sulfate_source": "brine",
+      "calcium_activation_fraction": 0.7,
+      "gypsum_capture_fraction": 0.65
+    },
+    "sulfuric_acid_control": {
+      "activation": "sulfuric_acid",
+      "sulfate_source": "sulfuric_acid",
+      "calcium_activation_fraction": 0.7,
+      "gypsum_capture_fraction": 0.65
+    }
+  }
+}
