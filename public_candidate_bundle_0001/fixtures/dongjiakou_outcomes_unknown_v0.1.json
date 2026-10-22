@@ -1,0 +1,251 @@
+{
+  "schema_version": "0.1",
+  "node_id": "dongjiakou_node_001",
+  "as_of": "2026-10-09",
+  "baseline_commit": "85f06406c724067ef917c55761ba5ff4354409ef",
+  "status": "PUBLIC_CANDIDATE_NON_CANON",
+  "realized_credit_total": 0,
+  "metrics": [
+    {
+      "metric_id": "WORKER_HEAT_HOURS",
+      "domain": "QOL",
+      "indicator_name": "Heat stress exposure",
+      "unit": "person_hours/year",
+      "direction": "LOWER_BETTER",
+      "spatial_boundary": "Dongjiakou candidate locality; exact geometry UNKNOWN",
+      "time_period": "Baseline measurement not established",
+      "population_or_asset": "Site-specific denominator UNKNOWN",
+      "counterfactual": "Existing operations without proposed Atlas QOL/resilience extension; needs documented baseline",
+      "baseline_value": null,
+      "scenario_value": null,
+      "observed_value": null,
+      "evidence_class": "UNKNOWN",
+      "evidence_refs": [],
+      "primary_receipt": null,
+      "attribution_method": null,
+      "allocation_ref": null,
+      "gate": {
+        "status": "BLOCKED",
+        "reason": "No primary plant/site measurement or approved baseline",
+        "review_authority_ref": null
+      },
+      "credit": {
+        "amount": 0,
+        "unit": "person_hours/year",
+        "approved": false,
+        "approval_ref": null
+      }
+    },
+    {
+      "metric_id": "BEAUTY_BLOOM",
+      "domain": "QOL",
+      "indicator_name": "Months with native/adapted bloom",
+      "unit": "months/year",
+      "direction": "HIGHER_BETTER",
+      "spatial_boundary": "Dongjiakou candidate locality; exact geometry UNKNOWN",
+      "time_period": "Baseline measurement not established",
+      "population_or_asset": "Site-specific denominator UNKNOWN",
+      "counterfactual": "Existing operations without proposed Atlas QOL/resilience extension; needs documented baseline",
+      "baseline_value": null,
+      "scenario_value": null,
+      "observed_value": null,
+      "evidence_class": "UNKNOWN",
+      "evidence_refs": [],
+      "primary_receipt": null,
+      "attribution_method": null,
+      "allocation_ref": null,
+      "gate": {
+        "status": "BLOCKED",
+        "reason": "No primary plant/site measurement or approved baseline",
+        "review_authority_ref": null
+      },
+      "credit": {
+        "amount": 0,
+        "unit": "months/year",
+        "approved": false,
+        "approval_ref": null
+      }
+    },
+    {
+      "metric_id": "ECOLOGY_DISCHARGE",
+      "domain": "ECOLOGY",
+      "indicator_name": "Receiving ecosystem benefit score",
+      "unit": "score_0_100",
+      "direction": "HIGHER_BETTER",
+      "spatial_boundary": "Dongjiakou candidate locality; exact geometry UNKNOWN",
+      "time_period": "Baseline measurement not established",
+      "population_or_asset": "Site-specific denominator UNKNOWN",
+      "counterfactual": "Existing operations without proposed Atlas QOL/resilience extension; needs documented baseline",
+      "baseline_value": null,
+      "scenario_value": null,
+      "observed_value": null,
+      "evidence_class": "UNKNOWN",
+      "evidence_refs": [],
+      "primary_receipt": null,
+      "attribution_method": null,
+      "allocation_ref": null,
+      "gate": {
+        "status": "BLOCKED",
+        "reason": "No primary plant/site measurement or approved baseline",
+        "review_authority_ref": null
+      },
+      "credit": {
+        "amount": 0,
+        "unit": "score_0_100",
+        "approved": false,
+        "approval_ref": null
+      }
+    },
+    {
+      "metric_id": "WATER_RECLAIMED_SHARE",
+      "domain": "QOL",
+      "indicator_name": "Irrigation supplied by qualified reclaimed water",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "spatial_boundary": "Dongjiakou candidate locality; exact geometry UNKNOWN",
+      "time_period": "Baseline measurement not established",
+      "population_or_asset": "Site-specific denominator UNKNOWN",
+      "counterfactual": "Existing operations without proposed Atlas QOL/resilience extension; needs documented baseline",
+      "baseline_value": null,
+      "scenario_value": null,
+      "observed_value": null,
+      "evidence_class": "UNKNOWN",
+      "evidence_refs": [],
+      "primary_receipt": null,
+      "attribution_method": null,
+      "allocation_ref": null,
+      "gate": {
+        "status": "BLOCKED",
+        "reason": "No primary plant/site measurement or approved baseline",
+        "review_authority_ref": null
+      },
+      "credit": {
+        "amount": 0,
+        "unit": "percent",
+        "approved": false,
+        "approval_ref": null
+      }
+    },
+    {
+      "metric_id": "COMMUNITY_FARMER_INCOME",
+      "domain": "QOL",
+      "indicator_name": "Net incremental farmer income",
+      "unit": "CNY/household/year",
+      "direction": "HIGHER_BETTER",
+      "spatial_boundary": "Dongjiakou candidate locality; exact geometry UNKNOWN",
+      "time_period": "Baseline measurement not established",
+      "population_or_asset": "Site-specific denominator UNKNOWN",
+      "counterfactual": "Existing operations without proposed Atlas QOL/resilience extension; needs documented baseline",
+      "baseline_value": null,
+      "scenario_value": null,
+      "observed_value": null,
+      "evidence_class": "UNKNOWN",
+      "evidence_refs": [],
+      "primary_receipt": null,
+      "attribution_method": null,
+      "allocation_ref": null,
+      "gate": {
+        "status": "BLOCKED",
+        "reason": "No primary plant/site measurement or approved baseline",
+        "review_authority_ref": null
+      },
+      "credit": {
+        "amount": 0,
+        "unit": "CNY/household/year",
+        "approved": false,
+        "approval_ref": null
+      }
+    },
+    {
+      "metric_id": "RESILIENCE_AUTONOMY",
+      "domain": "RESILIENCE",
+      "indicator_name": "Firm supply autonomy",
+      "unit": "days",
+      "direction": "HIGHER_BETTER",
+      "spatial_boundary": "Dongjiakou candidate locality; exact geometry UNKNOWN",
+      "time_period": "Baseline measurement not established",
+      "population_or_asset": "Site-specific denominator UNKNOWN",
+      "counterfactual": "Existing operations without proposed Atlas QOL/resilience extension; needs documented baseline",
+      "baseline_value": null,
+      "scenario_value": null,
+      "observed_value": null,
+      "evidence_class": "UNKNOWN",
+      "evidence_refs": [],
+      "primary_receipt": null,
+      "attribution_method": null,
+      "allocation_ref": null,
+      "gate": {
+        "status": "BLOCKED",
+        "reason": "No primary plant/site measurement or approved baseline",
+        "review_authority_ref": null
+      },
+      "credit": {
+        "amount": 0,
+        "unit": "days",
+        "approved": false,
+        "approval_ref": null
+      }
+    },
+    {
+      "metric_id": "GRV_PHYSICAL_SITES",
+      "domain": "GRV",
+      "indicator_name": "Independently operating adaptations",
+      "unit": "sites",
+      "direction": "HIGHER_BETTER",
+      "spatial_boundary": "Dongjiakou candidate locality; exact geometry UNKNOWN",
+      "time_period": "Baseline measurement not established",
+      "population_or_asset": "Site-specific denominator UNKNOWN",
+      "counterfactual": "Existing operations without proposed Atlas QOL/resilience extension; needs documented baseline",
+      "baseline_value": null,
+      "scenario_value": null,
+      "observed_value": null,
+      "evidence_class": "UNKNOWN",
+      "evidence_refs": [],
+      "primary_receipt": null,
+      "attribution_method": null,
+      "allocation_ref": null,
+      "gate": {
+        "status": "BLOCKED",
+        "reason": "No primary plant/site measurement or approved baseline",
+        "review_authority_ref": null
+      },
+      "credit": {
+        "amount": 0,
+        "unit": "sites",
+        "approved": false,
+        "approval_ref": null
+      }
+    },
+    {
+      "metric_id": "TOURISM_VISITOR",
+      "domain": "QOL",
+      "indicator_name": "Audited distinct visitors",
+      "unit": "visitors/year",
+      "direction": "HIGHER_BETTER",
+      "spatial_boundary": "Dongjiakou candidate locality; exact geometry UNKNOWN",
+      "time_period": "Baseline measurement not established",
+      "population_or_asset": "Site-specific denominator UNKNOWN",
+      "counterfactual": "Existing operations without proposed Atlas QOL/resilience extension; needs documented baseline",
+      "baseline_value": null,
+      "scenario_value": null,
+      "observed_value": null,
+      "evidence_class": "UNKNOWN",
+      "evidence_refs": [],
+      "primary_receipt": null,
+      "attribution_method": null,
+      "allocation_ref": null,
+      "gate": {
+        "status": "BLOCKED",
+        "reason": "No primary plant/site measurement or approved baseline",
+        "review_authority_ref": null
+      },
+      "credit": {
+        "amount": 0,
+        "unit": "visitors/year",
+        "approved": false,
+        "approval_ref": null
+      }
+    }
+  ],
+  "notes": "Null-first research fixture; no fields signify measured Dongjiakou performance."
+}

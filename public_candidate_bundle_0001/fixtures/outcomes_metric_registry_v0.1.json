@@ -1,0 +1,1078 @@
+{
+  "schema_version": "0.1",
+  "status": "PROPOSED_METRIC_CATALOG_NON_CANON",
+  "as_of": "2026-10-09",
+  "note": "Registry defines indicators only; these are not Dongjiakou measurements. Methods, denominators and population sampling require local design.",
+  "metrics": [
+    {
+      "metric_id": "WORKER_INJURY_RATE",
+      "domain": "QOL",
+      "subdomain": "WORKER",
+      "indicator_name": "Worker recordable injury frequency",
+      "unit": "cases/200000_work_hours",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WORKER_NEAR_MISS",
+      "domain": "QOL",
+      "subdomain": "WORKER",
+      "indicator_name": "Reported near-miss frequency",
+      "unit": "cases/200000_work_hours",
+      "direction": "DESCRIPTIVE",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WORKER_HEAT_HOURS",
+      "domain": "QOL",
+      "subdomain": "WORKER",
+      "indicator_name": "Heat stress exposure",
+      "unit": "person_hours/year",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WORKER_NOISE",
+      "domain": "QOL",
+      "subdomain": "WORKER",
+      "indicator_name": "Worker noise exposure",
+      "unit": "dBA",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WORKER_DUST_EXPOSURE",
+      "domain": "QOL",
+      "subdomain": "WORKER",
+      "indicator_name": "PM2.5 personal exposure",
+      "unit": "ug/m3",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WORKER_RETENTION",
+      "domain": "QOL",
+      "subdomain": "WORKER",
+      "indicator_name": "Annual worker retention",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WORKER_ABSENTEEISM",
+      "domain": "QOL",
+      "subdomain": "WORKER",
+      "indicator_name": "Unplanned absence rate",
+      "unit": "percent",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WORKER_WAGES",
+      "domain": "QOL",
+      "subdomain": "WORKER",
+      "indicator_name": "Median real wages",
+      "unit": "CNY/year",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WORKER_TRAINING",
+      "domain": "QOL",
+      "subdomain": "WORKER",
+      "indicator_name": "Annual training hours",
+      "unit": "hours/worker/year",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WORKER_SATISFACTION",
+      "domain": "QOL",
+      "subdomain": "WORKER",
+      "indicator_name": "Worker satisfaction survey",
+      "unit": "score_0_100",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WORKER_SHADED_BREAK",
+      "domain": "QOL",
+      "subdomain": "WORKER",
+      "indicator_name": "Worker access to shaded breaks",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WORKER_GREEN_VIEW",
+      "domain": "QOL",
+      "subdomain": "WORKER",
+      "indicator_name": "Workspace green view access",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WORKER_HYDRATION",
+      "domain": "QOL",
+      "subdomain": "WORKER",
+      "indicator_name": "Safe hydration station access",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WORKER_COMMUTE",
+      "domain": "QOL",
+      "subdomain": "WORKER",
+      "indicator_name": "Median commute",
+      "unit": "minutes",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WORKER_SANITATION",
+      "domain": "QOL",
+      "subdomain": "WORKER",
+      "indicator_name": "Adequate sanitation access",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WORKER_REST_SPACE",
+      "domain": "QOL",
+      "subdomain": "WORKER",
+      "indicator_name": "Rest area proximity",
+      "unit": "meters",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "PUBLIC_HEALTH_PM25",
+      "domain": "QOL",
+      "subdomain": "PUBLIC_HEALTH",
+      "indicator_name": "Ambient PM2.5",
+      "unit": "ug/m3",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "PUBLIC_HEALTH_PM10",
+      "domain": "QOL",
+      "subdomain": "PUBLIC_HEALTH",
+      "indicator_name": "Ambient PM10",
+      "unit": "ug/m3",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "PUBLIC_HEALTH_SO2",
+      "domain": "QOL",
+      "subdomain": "PUBLIC_HEALTH",
+      "indicator_name": "Ambient SO2",
+      "unit": "ug/m3",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "PUBLIC_HEALTH_NOX",
+      "domain": "QOL",
+      "subdomain": "PUBLIC_HEALTH",
+      "indicator_name": "Ambient NOx",
+      "unit": "ug/m3",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "PUBLIC_HEALTH_ODOR",
+      "domain": "QOL",
+      "subdomain": "PUBLIC_HEALTH",
+      "indicator_name": "Verified odor complaint incidents",
+      "unit": "events/year",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "PUBLIC_HEALTH_NOISE",
+      "domain": "QOL",
+      "subdomain": "PUBLIC_HEALTH",
+      "indicator_name": "Nighttime noise",
+      "unit": "dBA",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "PUBLIC_HEALTH_HEAT_ISLAND",
+      "domain": "QOL",
+      "subdomain": "PUBLIC_HEALTH",
+      "indicator_name": "Paved surface heat delta",
+      "unit": "degC",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "PUBLIC_HEALTH_WATER_SAFETY",
+      "domain": "QOL",
+      "subdomain": "PUBLIC_HEALTH",
+      "indicator_name": "Drinking water compliance",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "PUBLIC_HEALTH_TRAFFIC",
+      "domain": "QOL",
+      "subdomain": "PUBLIC_HEALTH",
+      "indicator_name": "Pedestrian conflict events",
+      "unit": "events/year",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "PUBLIC_HEALTH_EMERGENCY_TIME",
+      "domain": "QOL",
+      "subdomain": "PUBLIC_HEALTH",
+      "indicator_name": "Emergency response time",
+      "unit": "minutes",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "PUBLIC_HEALTH_LIGHT_SPILL",
+      "domain": "QOL",
+      "subdomain": "PUBLIC_HEALTH",
+      "indicator_name": "Outdoor glare and light spill",
+      "unit": "lux",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "BEAUTY_CANOPY",
+      "domain": "QOL",
+      "subdomain": "BEAUTY",
+      "indicator_name": "Tree canopy cover",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "BEAUTY_BLOOM",
+      "domain": "QOL",
+      "subdomain": "BEAUTY",
+      "indicator_name": "Months with native/adapted bloom",
+      "unit": "months/year",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "BEAUTY_GREEN_CORRIDOR",
+      "domain": "QOL",
+      "subdomain": "BEAUTY",
+      "indicator_name": "Public and worker green corridors",
+      "unit": "km",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "BEAUTY_VIEWSHED",
+      "domain": "QOL",
+      "subdomain": "BEAUTY",
+      "indicator_name": "Independent viewshed improvement",
+      "unit": "score_0_100",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "BEAUTY_CLEANLINESS",
+      "domain": "QOL",
+      "subdomain": "BEAUTY",
+      "indicator_name": "Streetscape cleanliness audit",
+      "unit": "score_0_100",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "BEAUTY_LANDSCAPE",
+      "domain": "QOL",
+      "subdomain": "BEAUTY",
+      "indicator_name": "Functional landscape cover",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "BEAUTY_SHADED_ROUTES",
+      "domain": "QOL",
+      "subdomain": "BEAUTY",
+      "indicator_name": "Shaded pedestrian route coverage",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "BEAUTY_ACCESSIBILITY",
+      "domain": "QOL",
+      "subdomain": "BEAUTY",
+      "indicator_name": "Accessible public garden area",
+      "unit": "hectares",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "BEAUTY_NIGHT_LIGHTING",
+      "domain": "QOL",
+      "subdomain": "BEAUTY",
+      "indicator_name": "Safe low-glare night lighting compliance",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "BEAUTY_MAINTENANCE",
+      "domain": "QOL",
+      "subdomain": "BEAUTY",
+      "indicator_name": "Landscape maintenance cost",
+      "unit": "CNY/ha/year",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "ECOLOGY_NATIVE_RICHNESS",
+      "domain": "ECOLOGY",
+      "subdomain": "ECOLOGY",
+      "indicator_name": "Native species richness",
+      "unit": "species",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "ECOLOGY_POLLINATOR",
+      "domain": "ECOLOGY",
+      "subdomain": "ECOLOGY",
+      "indicator_name": "Pollinator occupancy",
+      "unit": "species/ha",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "ECOLOGY_BIRDS",
+      "domain": "ECOLOGY",
+      "subdomain": "ECOLOGY",
+      "indicator_name": "Bird occupancy",
+      "unit": "species/ha",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "ECOLOGY_CONNECTIVITY",
+      "domain": "ECOLOGY",
+      "subdomain": "ECOLOGY",
+      "indicator_name": "Ecological habitat linkage",
+      "unit": "km",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "ECOLOGY_WETLAND",
+      "domain": "ECOLOGY",
+      "subdomain": "ECOLOGY",
+      "indicator_name": "Protected and restored wetlands",
+      "unit": "hectares",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "ECOLOGY_SOIL_C",
+      "domain": "ECOLOGY",
+      "subdomain": "ECOLOGY",
+      "indicator_name": "Soil organic carbon",
+      "unit": "tC/ha",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "ECOLOGY_EROSION",
+      "domain": "ECOLOGY",
+      "subdomain": "ECOLOGY",
+      "indicator_name": "Erosion rate",
+      "unit": "t/ha/year",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "ECOLOGY_INVASIVE",
+      "domain": "ECOLOGY",
+      "subdomain": "ECOLOGY",
+      "indicator_name": "Invasive species cover",
+      "unit": "percent",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "ECOLOGY_PLANT_SURVIVAL",
+      "domain": "ECOLOGY",
+      "subdomain": "ECOLOGY",
+      "indicator_name": "Planting survival after 24 months",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "ECOLOGY_SOIL_SALT",
+      "domain": "ECOLOGY",
+      "subdomain": "ECOLOGY",
+      "indicator_name": "Soil salinity trend",
+      "unit": "dS/m",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "ECOLOGY_DISCHARGE",
+      "domain": "ECOLOGY",
+      "subdomain": "ECOLOGY",
+      "indicator_name": "Receiving ecosystem benefit score",
+      "unit": "score_0_100",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "ECOLOGY_PESTICIDES",
+      "domain": "ECOLOGY",
+      "subdomain": "ECOLOGY",
+      "indicator_name": "Landscape pesticide intensity",
+      "unit": "kg_active_ingredient/ha/year",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WATER_RECLAIMED_SHARE",
+      "domain": "QOL",
+      "subdomain": "WATER",
+      "indicator_name": "Irrigation supplied by qualified reclaimed water",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WATER_POTABLE_DISPLACEMENT",
+      "domain": "QOL",
+      "subdomain": "WATER",
+      "indicator_name": "Potable irrigation displacement",
+      "unit": "m3/year",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WATER_WATER_INTENSITY",
+      "domain": "QOL",
+      "subdomain": "WATER",
+      "indicator_name": "Landscape irrigation intensity",
+      "unit": "m3/ha/year",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WATER_STORM_CAPTURE",
+      "domain": "QOL",
+      "subdomain": "WATER",
+      "indicator_name": "Stormwater captured and reused",
+      "unit": "m3/year",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WATER_STORM_PEAK",
+      "domain": "QOL",
+      "subdomain": "WATER",
+      "indicator_name": "Peak runoff reduction",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WATER_SMART_IRRIGATION",
+      "domain": "QOL",
+      "subdomain": "WATER",
+      "indicator_name": "Monitored irrigation coverage",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WATER_QUALITY_COMPLIANCE",
+      "domain": "QOL",
+      "subdomain": "WATER",
+      "indicator_name": "Reclaimed irrigation water compliance",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WATER_DROUGHT_SURVIVAL",
+      "domain": "QOL",
+      "subdomain": "WATER",
+      "indicator_name": "Survival during drought",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WATER_MAINTENANCE_HOURS",
+      "domain": "QOL",
+      "subdomain": "WATER",
+      "indicator_name": "Landscape maintenance labor",
+      "unit": "hours/ha/year",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WATER_BORON",
+      "domain": "QOL",
+      "subdomain": "WATER",
+      "indicator_name": "Boron concentration in reuse irrigation",
+      "unit": "mg/L",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "WATER_SAR",
+      "domain": "QOL",
+      "subdomain": "WATER",
+      "indicator_name": "Reclaimed irrigation sodium adsorption ratio",
+      "unit": "ratio",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "CLIMATE_UTCI",
+      "domain": "QOL",
+      "subdomain": "CLIMATE",
+      "indicator_name": "Outdoor thermal comfort UTCI",
+      "unit": "degC",
+      "direction": "TARGET_RANGE",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "CLIMATE_SHADE_HOURS",
+      "domain": "QOL",
+      "subdomain": "CLIMATE",
+      "indicator_name": "Continuous pedestrian shade",
+      "unit": "hours/day",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "CLIMATE_WIND_COMFORT",
+      "domain": "QOL",
+      "subdomain": "CLIMATE",
+      "indicator_name": "Wind comfort safe-days",
+      "unit": "days/year",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "CLIMATE_COOL_ROOF",
+      "domain": "QOL",
+      "subdomain": "CLIMATE",
+      "indicator_name": "Cool and green roof area",
+      "unit": "m2",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "CLIMATE_REFUGES",
+      "domain": "QOL",
+      "subdomain": "CLIMATE",
+      "indicator_name": "Cooling refuge access",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "CLIMATE_WALK_LOOP",
+      "domain": "QOL",
+      "subdomain": "CLIMATE",
+      "indicator_name": "Accessible shaded walking routes",
+      "unit": "km",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "COMMUNITY_FARMER_INCOME",
+      "domain": "QOL",
+      "subdomain": "COMMUNITY",
+      "indicator_name": "Net incremental farmer income",
+      "unit": "CNY/household/year",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "COMMUNITY_LOCAL_VA",
+      "domain": "QOL",
+      "subdomain": "COMMUNITY",
+      "indicator_name": "Net incremental local value added",
+      "unit": "CNY/year",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "COMMUNITY_QUALITY_JOBS",
+      "domain": "QOL",
+      "subdomain": "COMMUNITY",
+      "indicator_name": "Durable living-wage jobs",
+      "unit": "FTE",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "COMMUNITY_BENEFIT_SHARE",
+      "domain": "QOL",
+      "subdomain": "COMMUNITY",
+      "indicator_name": "Community-owned surplus distribution",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "COMMUNITY_ENERGY_AFFORDABILITY",
+      "domain": "QOL",
+      "subdomain": "COMMUNITY",
+      "indicator_name": "Median energy burden",
+      "unit": "percent_household_income",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "COMMUNITY_ACCESS",
+      "domain": "QOL",
+      "subdomain": "COMMUNITY",
+      "indicator_name": "Accessible green amenities",
+      "unit": "m2/person",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "COMMUNITY_GRIEVANCE",
+      "domain": "QOL",
+      "subdomain": "COMMUNITY",
+      "indicator_name": "Median grievance resolution",
+      "unit": "days",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "COMMUNITY_PUBLIC_SAFETY",
+      "domain": "QOL",
+      "subdomain": "COMMUNITY",
+      "indicator_name": "Perceived public safety",
+      "unit": "score_0_100",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "COMMUNITY_COMMUNITY_VOTE",
+      "domain": "QOL",
+      "subdomain": "COMMUNITY",
+      "indicator_name": "Public participation in design",
+      "unit": "people/year",
+      "direction": "DESCRIPTIVE",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "COMMUNITY_SCHOOL",
+      "domain": "QOL",
+      "subdomain": "COMMUNITY",
+      "indicator_name": "Education partners",
+      "unit": "count",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "TOURISM_VISITOR",
+      "domain": "QOL",
+      "subdomain": "TOURISM",
+      "indicator_name": "Audited distinct visitors",
+      "unit": "visitors/year",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "TOURISM_REPEAT",
+      "domain": "QOL",
+      "subdomain": "TOURISM",
+      "indicator_name": "Repeat visitation rate",
+      "unit": "percent",
+      "direction": "DESCRIPTIVE",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "TOURISM_DWELL",
+      "domain": "QOL",
+      "subdomain": "TOURISM",
+      "indicator_name": "Median visitor dwell time",
+      "unit": "minutes",
+      "direction": "DESCRIPTIVE",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "TOURISM_SATISFACTION",
+      "domain": "QOL",
+      "subdomain": "TOURISM",
+      "indicator_name": "Visitor satisfaction",
+      "unit": "score_0_100",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "TOURISM_LOCAL_SPEND",
+      "domain": "QOL",
+      "subdomain": "TOURISM",
+      "indicator_name": "Net incremental local visitor spend",
+      "unit": "CNY/year",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "TOURISM_TOURS",
+      "domain": "QOL",
+      "subdomain": "TOURISM",
+      "indicator_name": "Industrial ecology tours delivered",
+      "unit": "tours/year",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "TOURISM_LEARNING",
+      "domain": "QOL",
+      "subdomain": "TOURISM",
+      "indicator_name": "Visitor learning improvement",
+      "unit": "score_0_100",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "RESILIENCE_AUTONOMY",
+      "domain": "RESILIENCE",
+      "subdomain": "RESILIENCE",
+      "indicator_name": "Firm supply autonomy",
+      "unit": "days",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "RESILIENCE_PROTECTED",
+      "domain": "RESILIENCE",
+      "subdomain": "RESILIENCE",
+      "indicator_name": "Essential demand protected",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "RESILIENCE_RECOVERY",
+      "domain": "RESILIENCE",
+      "subdomain": "RESILIENCE",
+      "indicator_name": "Time to essential service recovery",
+      "unit": "hours",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "RESILIENCE_OUTAGE",
+      "domain": "RESILIENCE",
+      "subdomain": "RESILIENCE",
+      "indicator_name": "Expected outage hours avoided",
+      "unit": "hours/year",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "RESILIENCE_TAIL",
+      "domain": "RESILIENCE",
+      "subdomain": "RESILIENCE",
+      "indicator_name": "Conditional expected shortfall reduction",
+      "unit": "CNY/year",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "RESILIENCE_DIVERSIFICATION",
+      "domain": "RESILIENCE",
+      "subdomain": "RESILIENCE",
+      "indicator_name": "Effective independent supply routes",
+      "unit": "count",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "RESILIENCE_INVENTORY",
+      "domain": "RESILIENCE",
+      "subdomain": "RESILIENCE",
+      "indicator_name": "Critical buffer inventory",
+      "unit": "days",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "RESILIENCE_WINTER_FIRM",
+      "domain": "RESILIENCE",
+      "subdomain": "RESILIENCE",
+      "indicator_name": "Winter firm gas capacity",
+      "unit": "m3/day",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "GRV_REPRODUCED",
+      "domain": "GRV",
+      "subdomain": "GRV",
+      "indicator_name": "Independent test reproductions",
+      "unit": "count",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "GRV_FORK_VERIFIED",
+      "domain": "GRV",
+      "subdomain": "GRV",
+      "indicator_name": "Public forks passing independent validation",
+      "unit": "count",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "GRV_PHYSICAL_SITES",
+      "domain": "GRV",
+      "subdomain": "GRV",
+      "indicator_name": "Independently operating adaptations",
+      "unit": "sites",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "GRV_ENGINEERING_SAVED",
+      "domain": "GRV",
+      "subdomain": "GRV",
+      "indicator_name": "Audited saved engineering hours",
+      "unit": "hours",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "GRV_PERMIT_TIME",
+      "domain": "GRV",
+      "subdomain": "GRV",
+      "indicator_name": "Time to compliant permitting reduction",
+      "unit": "days",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "GRV_ADAPTATION_COST",
+      "domain": "GRV",
+      "subdomain": "GRV",
+      "indicator_name": "Replicator adaptation cost",
+      "unit": "CNY/site",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "GRV_VERIFIED_QOL",
+      "domain": "GRV",
+      "subdomain": "GRV",
+      "indicator_name": "Replicated sites with audited QOL benefits",
+      "unit": "sites",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "GRV_TRANSLATIONS",
+      "domain": "GRV",
+      "subdomain": "GRV",
+      "indicator_name": "Maintained functional documentation translations",
+      "unit": "count",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "GRV_INDEPENDENT_CONTRIBUTORS",
+      "domain": "GRV",
+      "subdomain": "GRV",
+      "indicator_name": "Independent reviewed contributors",
+      "unit": "people",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "GRV_NEGATIVE_REPORTS",
+      "domain": "GRV",
+      "subdomain": "GRV",
+      "indicator_name": "Audited negative transfer outcomes",
+      "unit": "count",
+      "direction": "DESCRIPTIVE",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "GOVERNANCE_AUDIT",
+      "domain": "GOVERNANCE",
+      "subdomain": "GOVERNANCE",
+      "indicator_name": "Independent audits completed",
+      "unit": "count/year",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "GOVERNANCE_PERMITS",
+      "domain": "GOVERNANCE",
+      "subdomain": "GOVERNANCE",
+      "indicator_name": "Permit compliance",
+      "unit": "percent",
+      "direction": "HIGHER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "GOVERNANCE_VETO",
+      "domain": "GOVERNANCE",
+      "subdomain": "GOVERNANCE",
+      "indicator_name": "Unresolved ecological vetoes",
+      "unit": "count",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "GOVERNANCE_PRIVACY",
+      "domain": "GOVERNANCE",
+      "subdomain": "GOVERNANCE",
+      "indicator_name": "Unauthorized information transfers",
+      "unit": "count/year",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "GOVERNANCE_DATA_DELAY",
+      "domain": "GOVERNANCE",
+      "subdomain": "GOVERNANCE",
+      "indicator_name": "Public disclosure latency",
+      "unit": "days",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    },
+    {
+      "metric_id": "GOVERNANCE_CORRECTION",
+      "domain": "GOVERNANCE",
+      "subdomain": "GOVERNANCE",
+      "indicator_name": "Median time to correct error",
+      "unit": "days",
+      "direction": "LOWER_BETTER",
+      "default_evidence_class": "UNKNOWN",
+      "credit_status": "BLOCKED"
+    }
+  ]
+}

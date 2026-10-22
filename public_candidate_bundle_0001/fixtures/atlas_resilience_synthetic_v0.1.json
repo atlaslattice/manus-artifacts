@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.1",
+  "scenario_id": "SYNTHETIC_HORMUZ_CATASTROPHIC_GDP_5_PERCENT",
+  "evidence_class": "SYNTHETIC",
+  "probability": {
+    "probability_at_least_once": 0.05,
+    "horizon_years": 10,
+    "hazard_model": "STATIONARY_INDEPENDENT_YEARS",
+    "annual_hazard": 0.005116196891823743,
+    "source": "Illustrative assumption, not empirical probability"
+  },
+  "shock_duration_days": 180,
+  "recovery_days": null,
+  "gdp_reference_usd": 19500000000000,
+  "gdp_loss_fraction": 0.05,
+  "gross_loss_usd": 975000000000,
+  "avoidable_fraction": null,
+  "annual_incremental_premium_usd": null,
+  "protected_services": [
+    "GAS",
+    "OIL",
+    "AVIATION",
+    "MARINE",
+    "FERTILIZER",
+    "WATER",
+    "FOOD"
+  ],
+  "interdependencies": [
+    "Fossil gas and crude imports",
+    "Refining and industrial feedstocks",
+    "Road, marine and aviation fuels",
+    "Fertilizers, food prices and essential utilities"
+  ],
+  "counterfactual": "No additional resilience investment; establish independently and do not credit gross shock as avoidable",
+  "realized_credit_usd": 0,
+  "source_refs": [],
+  "notes": "Gross GDP exposure is 5% of $19.5T; 5% decadal event probability is distinct from 5% GDP-loss severity. No estimated mitigation fraction."
+}

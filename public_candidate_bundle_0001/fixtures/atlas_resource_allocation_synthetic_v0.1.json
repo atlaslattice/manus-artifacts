@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1",
+  "scenario_id": "SYNTHETIC_BIOMASS_ALLOCATIONS_TEST",
+  "status": "SYNTHETIC",
+  "mass_basis": "dry_metric_tonnes",
+  "time_period": "illustrative year only",
+  "realized_credit_total": 0,
+  "source_lots": [
+    {
+      "source_lot_id": "SYN_STRAW_001",
+      "source_type": "STRAW",
+      "source_boundary": "synthetic region; not Dongjiakou",
+      "wet_mass_t": 1250,
+      "dry_matter_fraction": 0.8,
+      "qualified_dry_mass_t": 1000,
+      "soil_ecological_reserve_t": 400,
+      "existing_obligations_t": 200,
+      "collection_losses_t": 100,
+      "allocatable_dry_mass_t": 300,
+      "allocations": [
+        {
+          "allocation_id": "ALLOC_001",
+          "route": "BIO01",
+          "allocated_dry_mass_t": 150,
+          "status": "SYNTHETIC"
+        },
+        {
+          "allocation_id": "ALLOC_002",
+          "route": "SAF01",
+          "allocated_dry_mass_t": 100,
+          "status": "SYNTHETIC"
+        },
+        {
+          "allocation_id": "ALLOC_003",
+          "route": "MAR01",
+          "allocated_dry_mass_t": 50,
+          "status": "SYNTHETIC"
+        }
+      ],
+      "measurement_receipt": null,
+      "ecological_gate": "UNKNOWN",
+      "rights_gate": "UNKNOWN",
+      "residual_fate": "UNKNOWN; not eligible for deployment",
+      "notes": "Arithmetic illustration only; ecology and rights are not validated."
+    }
+  ]
+}
