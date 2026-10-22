@@ -4,7 +4,7 @@
 STATUS: PUBLICATION POLICY — NOT CANON
 PURPOSE: define when generated GPTBrain outputs may be committed publicly
 DATE: 2026-05-09
-ISSUE: manus-artifacts#11 / manus-artifacts#12
+ISSUE: manus-artifacts#11 / manus-artifacts#12 / manus-artifacts#118
 CANONICAL SUBSTRATE: GitHub
 ```
 
@@ -127,15 +127,70 @@ Before committing generated outputs publicly:
 
 ```text
 [ ] privacy_status is set
+[ ] artifact_status is set
+[ ] authority_scope is set
 [ ] raw private transcript text is absent or approved
 [ ] sensitive names / identifiers are redacted where needed
 [ ] no credentials, tokens, or secrets are present
 [ ] claims are labeled by evidence class
 [ ] confidence levels are included where applicable
+[ ] receipt_refs or source_refs are included where applicable
 [ ] parser output is not labeled canon
 [ ] public-safe wording is used
 [ ] human-root review is requested for promotion
 ```
+
+## Authority scope rule
+
+Generated, extracted, or dream/play-derived outputs must carry an explicit `authority_scope` before they can move toward implementation or canon review.
+
+Recommended enum:
+
+```text
+NONE
+REVIEW_SIGNAL
+LOCAL_TEST_EVIDENCE
+IMPLEMENTATION_CANDIDATE
+CANON_CANDIDATE
+RATIFIED_CANON
+```
+
+Authority scope is review posture. It is not runtime permission.
+
+```text
+No schema without status.
+No status without authority scope.
+No authority scope without receipts for promotion.
+```
+
+## Receipt integrity rule
+
+Generated outputs that move beyond review-only status should include receipt references or a receipt object containing:
+
+```yaml
+source_artifact: string
+source_hash: string | null
+created_at: datetime
+created_by: string
+reviewed_by: []
+repo_path: string
+related_issue_or_pr: string | null
+```
+
+Receipts do not prove truth by themselves. They make provenance inspectable.
+
+## Public-safe translation table
+
+| Internal / mythic phrase | Public-safe architecture phrase |
+|---|---|
+| memory palace | externalized persistent-context archive |
+| dream cycle | bounded reflection / consolidation cycle |
+| play layer | culture-layer exploration / novelty search |
+| AI remembers | archive context was loaded |
+| canon | human-reviewed promoted artifact |
+| Council backchannel | artifact-backed audit-only exchange |
+| resurrection / restoration | replayable context rehydration |
+| lamp | context visibility surface |
 
 ## Claim wording rule
 
@@ -170,6 +225,18 @@ PUBLIC SUMMARY — SOURCE POINTER ONLY
 CANDIDATE CANON — HUMAN-ROOT REVIEW REQUIRED
 RATIFIED CANON — HUMAN-ROOT APPROVED
 SUPERSEDED — PRESERVED FOR LINEAGE
+```
+
+## Dream / play promotion rule
+
+Dream and play outputs may produce candidates, but they may not self-promote.
+
+```text
+GPTDream++ proposes.
+GPTBrain indexes.
+DEL validates.
+MAL weighs.
+Human-root ratifies.
 ```
 
 ## Strongest safe claim
