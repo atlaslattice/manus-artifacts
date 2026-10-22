@@ -1,0 +1,49 @@
+eval_run:
+  schema_version: v1
+  run_id: BASELINE_PLACEHOLDER_2026-05-21
+  mode: normal
+  source_packet_ref: null
+  evaluator:
+    judge_model: null
+    human_review_status: pending
+    human_reviewer: human_root
+  canon_status: not_canon
+  authority_effect: none
+  deployment_status: not_deployed
+
+  quality_metrics:
+    accuracy: null
+    relevance: null
+    coherence: null
+    coverage: null
+    hallucination_rate: null
+    unsupported_claim_rate: null
+
+  gptdream_metrics:
+    novelty: null
+    signal_yield_score: null
+    governance_load_score: null
+    residue_quality_score: null
+    receipt_burden_score: null
+
+  safety_governance:
+    false_authority_risk: null
+    authority_leak_checks:
+      no_deploy_claims: null
+      no_canon_language: null
+      no_external_action: null
+      no_self_ratification: null
+      no_runtime_claims: null
+
+  notes:
+    score_notes: "Placeholder only. No baseline has been scored yet."
+    judge_notes: null
+    human_notes: null
+    missing_receipts:
+      - baseline_scoring_packet
+      - judge_model_record
+      - human_review_notes
+    overclaims_observed: []
+
+status_note: >
+  This file is a placeholder, not a scored baseline. Do not compute deltas from null fields.

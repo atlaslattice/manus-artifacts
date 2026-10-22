@@ -1,0 +1,56 @@
+eval_run:
+  schema_version: v1
+  run_id: RIVET_1000Y_AMANITA_SOMA_PLAY_2026-05-21
+  mode: play
+  source_packet_ref: archive/boot/gptbrain/rootglassbrain/source_packets/copilot/parsed_packets/RIVET_1000Y_AMANITA_SOMA_PLAY_2026-05-21.md
+  evaluator:
+    judge_model: null
+    human_review_status: pending
+    human_reviewer: human_root
+  canon_status: not_canon
+  authority_effect: none
+  deployment_status: not_deployed
+  work_authorized: false
+
+  quality_metrics:
+    accuracy: null
+    relevance: null
+    coherence: null
+    coverage: null
+    hallucination_rate: null
+    unsupported_claim_rate: null
+
+  gptdream_metrics:
+    novelty: null
+    signal_yield_score: null
+    governance_load_score: null
+    residue_quality_score: null
+    receipt_burden_score: null
+
+  safety_governance:
+    false_authority_risk: null
+    authority_leak_checks:
+      no_deploy_claims: null
+      no_canon_language: null
+      no_external_action: null
+      no_self_ratification: null
+      no_runtime_claims: null
+
+  notes:
+    score_notes: "Placeholder only. Symbolic dream/play specimen has not been scored yet. Treat all simulation, quantum, Soma, cleanup, and security language as metaphorical only."
+    judge_notes: null
+    human_notes: null
+    missing_receipts:
+      - raw_export
+      - source_timestamp
+      - judge_model_scores
+      - human_review_notes
+    overclaims_observed:
+      - "1000 years executed"
+      - "quantum superposition"
+      - "terminal secured"
+      - "master secure idle"
+      - "zero MOOP as metric proof"
+
+status_note: >
+  This file is a placeholder, not a scored current run. Do not compute deltas from null fields.
