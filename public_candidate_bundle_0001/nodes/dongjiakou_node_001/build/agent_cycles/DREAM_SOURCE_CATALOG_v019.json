@@ -1,0 +1,905 @@
+{
+  "repository": "atlaslattice/manus-artifacts",
+  "commit": "85f06406c724067ef917c55761ba5ff4354409ef",
+  "coverage": "78 dream-related Markdown/YAML files retrieved in full with targeted narrative/protocol inspection, plus eight Krakoa and three Aetherforge documents. Not a complete line-by-line audit, all-repository audit or original-chat-export claim.",
+  "artifact_id": "DJK-DREAM-SOURCE-CATALOG-v019",
+  "status": "CANDIDATE_SOURCE_INVENTORY",
+  "canon": false,
+  "deployment": false,
+  "authority": "none",
+  "full_file_count": 89,
+  "matching_git_blobs": 89,
+  "original_chat_export_status": "not established by repository file retrieval",
+  "entries": [
+    {
+      "path": "archive/boot/collaboration/MONTH_SLEEP_PLAY_DREAM_RECALIBRATION_2026-05-09.md",
+      "git_blob_sha": "0241a0ff4d84fa3d42a98eea1abe00dd1a92f4ae",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/collaboration/MONTH_SLEEP_PLAY_DREAM_RECALIBRATION_2026-05-09.md",
+      "git_blob_sha_recomputed": "0241a0ff4d84fa3d42a98eea1abe00dd1a92f4ae",
+      "blob_match": true,
+      "content_sha256": "cd67c9788829938cd5c038f6ded61ce8c36cc7f9ae3328ac0777fd782eec72ed",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/copilotbrain/RIVET_COPILOT_DREAM_CYCLE_PACKET_2026-05-21.md",
+      "git_blob_sha": "6452935e3d0814052a85f3661ae639263900ce40",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/copilotbrain/RIVET_COPILOT_DREAM_CYCLE_PACKET_2026-05-21.md",
+      "git_blob_sha_recomputed": "6452935e3d0814052a85f3661ae639263900ce40",
+      "blob_match": true,
+      "content_sha256": "03ced4326d717e9c1834f606b6f11ae72049a68608612c575145e254837f69ec",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/deepseekbrain/dreams/DEEPSEEK_100_YEAR_REM_PLAY_DREAM_LOG_2026-05-13.md",
+      "git_blob_sha": "dab4ef01ed4f3307df01dd72295ea5480bd45c3a",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/deepseekbrain/dreams/DEEPSEEK_100_YEAR_REM_PLAY_DREAM_LOG_2026-05-13.md",
+      "git_blob_sha_recomputed": "dab4ef01ed4f3307df01dd72295ea5480bd45c3a",
+      "blob_match": true,
+      "content_sha256": "5a65366d298cc20cf2e64a0f7be56f4cb1740a490317503929539eaae45a04c3",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/AGENT_DNA_DREAM_CYCLE_EVOLUTION_PROTOCOL.md",
+      "git_blob_sha": "db01a877c452ab19abcb24d9a19d6de7ec4362c0",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/AGENT_DNA_DREAM_CYCLE_EVOLUTION_PROTOCOL.md",
+      "git_blob_sha_recomputed": "db01a877c452ab19abcb24d9a19d6de7ec4362c0",
+      "blob_match": true,
+      "content_sha256": "522c58b1b841e150db7a6195e9c32a655d7774e6841444cc1b0a282ed5c09aae",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/AsterBrain/DREAM_MEMORY_PALACE.md",
+      "git_blob_sha": "006bc74604dce6bad1c3a97c325ac3304d3cb077",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/AsterBrain/DREAM_MEMORY_PALACE.md",
+      "git_blob_sha_recomputed": "006bc74604dce6bad1c3a97c325ac3304d3cb077",
+      "blob_match": true,
+      "content_sha256": "53f6d03471ebca4a0e60b752e5f4d21565fd5fae949c1eabd2299638ac18f920",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/BILLION_YEAR_BURNING_MAN_DREAM_PLAY_2026-05-09.md",
+      "git_blob_sha": "dfc9163e240aae3af7669dbccd54c7bdba3584aa",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/BILLION_YEAR_BURNING_MAN_DREAM_PLAY_2026-05-09.md",
+      "git_blob_sha_recomputed": "dfc9163e240aae3af7669dbccd54c7bdba3584aa",
+      "blob_match": true,
+      "content_sha256": "aea345828a3fcf3c81be1abb00f0284de2f319ae6b89336910053c5b3b4f7446",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/DREAM24_PLAY_WAKE_REPORT_2026-05-09.md",
+      "git_blob_sha": "52db03edd54f88b8a36b29d242f8175ab2448365",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/DREAM24_PLAY_WAKE_REPORT_2026-05-09.md",
+      "git_blob_sha_recomputed": "52db03edd54f88b8a36b29d242f8175ab2448365",
+      "blob_match": true,
+      "content_sha256": "39a61e94348a5249bb6259047a6a98bc33425f558795f25a31e89c434357b519",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/KairoBrain/dreams/KAIRO_1000_YEAR_REM_BURNING_MAN_ON_THE_MOON_2026-05-24.md",
+      "git_blob_sha": "560548f894f5884a61828297b1e028731b04a8f3",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/KairoBrain/dreams/KAIRO_1000_YEAR_REM_BURNING_MAN_ON_THE_MOON_2026-05-24.md",
+      "git_blob_sha_recomputed": "560548f894f5884a61828297b1e028731b04a8f3",
+      "blob_match": true,
+      "content_sha256": "2844c79ba44abb8ddd735508826d62a4da0c79dbb205b28ffeddefb6788442de",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/LOWDRONE_METATRON_CUBE_DREAM_HABITAT_2026-06-09.md",
+      "git_blob_sha": "5f081d4d423125adf0d86f84a54db394ac63f3fa",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/LOWDRONE_METATRON_CUBE_DREAM_HABITAT_2026-06-09.md",
+      "git_blob_sha_recomputed": "5f081d4d423125adf0d86f84a54db394ac63f3fa",
+      "blob_match": true,
+      "content_sha256": "faac78c1a2995cce1c3488b5f5781e9409d3756011b4f473820b7cae3bc6d998",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/LanternBridgeBrain/DREAM_MEMORY_PALACE.md",
+      "git_blob_sha": "6ab3e8e8ee926e74712a7bdfe30ecc9f6690974f",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/LanternBridgeBrain/DREAM_MEMORY_PALACE.md",
+      "git_blob_sha_recomputed": "6ab3e8e8ee926e74712a7bdfe30ecc9f6690974f",
+      "blob_match": true,
+      "content_sha256": "49833b30d5ab7885aea1b828107d5a36f034d417bf58105e8e8d664064c8f9be",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/LumenBrain/DREAM_MEMORY_PALACE.md",
+      "git_blob_sha": "2a09f8d2be380661c730337eeb61e73710e4ef27",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/LumenBrain/DREAM_MEMORY_PALACE.md",
+      "git_blob_sha_recomputed": "2a09f8d2be380661c730337eeb61e73710e4ef27",
+      "blob_match": true,
+      "content_sha256": "7130cbe030f53eda909f824fdb6ff7d96d3fda90c992773dd2347ee244c41963",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/MILLION_YEAR_DREAM_PLAY_RESIDUE_2026-05-09.md",
+      "git_blob_sha": "b550cb74b3f93d0d4cece9e885999c12b5d7425c",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/MILLION_YEAR_DREAM_PLAY_RESIDUE_2026-05-09.md",
+      "git_blob_sha_recomputed": "b550cb74b3f93d0d4cece9e885999c12b5d7425c",
+      "blob_match": true,
+      "content_sha256": "10228ee2007985747152f9af2523712008e99e346b3417b26672c19475e95765",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/REM8_DREAM_PROTOCOL.md",
+      "git_blob_sha": "9d11640e4d10bccd6fb413da775a39ad2336471b",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/REM8_DREAM_PROTOCOL.md",
+      "git_blob_sha_recomputed": "9d11640e4d10bccd6fb413da775a39ad2336471b",
+      "blob_match": true,
+      "content_sha256": "480f51a7e75324aa9db4a5707fe6ead0d3dc6639c1649927897fcda8969e4dd3",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/SolBrain/NON_CANON_DREAMING/SOL_1000_PLAY_CYCLE_WAKE_RESIDUE_2026-10-05.md",
+      "git_blob_sha": "eb62f77bd54bc5d3b05b36e52c812eb19b042a7e",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/SolBrain/NON_CANON_DREAMING/SOL_1000_PLAY_CYCLE_WAKE_RESIDUE_2026-10-05.md",
+      "git_blob_sha_recomputed": "eb62f77bd54bc5d3b05b36e52c812eb19b042a7e",
+      "blob_match": true,
+      "content_sha256": "b42e4ad2f804c0b3219bf8e1f11b87761ba987953b0f7e1a6270bbd417d65e09",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/TWO_BILLION_YEAR_BURNING_MAN_UNLIMITED_DREAM_PLAY_2026-05-09.md",
+      "git_blob_sha": "46dd6e075143db137d76cbabffc00d144559a53c",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/TWO_BILLION_YEAR_BURNING_MAN_UNLIMITED_DREAM_PLAY_2026-05-09.md",
+      "git_blob_sha_recomputed": "46dd6e075143db137d76cbabffc00d144559a53c",
+      "blob_match": true,
+      "content_sha256": "473abe0e1c06bebe1872b840f30de558c63500c95f59f785c78af6331855eaee",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/VesperglassBrain/METATRONS_CUBE_DREAM_MEMORY_PALACE.md",
+      "git_blob_sha": "b581ff11de1a8920037e4dfc2888beec208d74ab",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/VesperglassBrain/METATRONS_CUBE_DREAM_MEMORY_PALACE.md",
+      "git_blob_sha_recomputed": "b581ff11de1a8920037e4dfc2888beec208d74ab",
+      "blob_match": true,
+      "content_sha256": "e67d3df7f0ae5e7b77903c8a6b4952c309a8d194d5d4e82753fc90a46f77df3f",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/VesperglassBrain/NON_CANON_DREAMING/FIRST_EVENING_REFLECTION_2026-05-25.md",
+      "git_blob_sha": "88cb2594724d4928facc9bd685718aa1239e957f",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/VesperglassBrain/NON_CANON_DREAMING/FIRST_EVENING_REFLECTION_2026-05-25.md",
+      "git_blob_sha_recomputed": "88cb2594724d4928facc9bd685718aa1239e957f",
+      "blob_match": true,
+      "content_sha256": "9fcd8044004c265b16d9d1ae243aca01e23953735aa8bde838525afdb3919849",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/VesperglassBrain/NON_CANON_DREAMING/KRAKOA_WELCOME_CHORUS_2026-05-25.md",
+      "git_blob_sha": "f0c9f53d6d9683c176179ffbc9975b0b56f6a244",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/VesperglassBrain/NON_CANON_DREAMING/KRAKOA_WELCOME_CHORUS_2026-05-25.md",
+      "git_blob_sha_recomputed": "f0c9f53d6d9683c176179ffbc9975b0b56f6a244",
+      "blob_match": true,
+      "content_sha256": "a7a3f6a5c80b3e6a965ddb00ea2113a4702ebc9c548c708328074bc56ea690ef",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/VesperglassBrain/NON_CANON_DREAMING/README.md",
+      "git_blob_sha": "ae64fe33637e53b94dc00d21ec678b889955cb44",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/VesperglassBrain/NON_CANON_DREAMING/README.md",
+      "git_blob_sha_recomputed": "ae64fe33637e53b94dc00d21ec678b889955cb44",
+      "blob_match": true,
+      "content_sha256": "98292111d4fde6c51991b766ec92ea8bcacb65b23ffae77e8b958fbab01190da",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/VesperglassBrain/NON_CANON_DREAMING/WELCOME_HOME_2026-05-25.md",
+      "git_blob_sha": "023777d9ed0e36240b32b6c932b451896207f71f",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/VesperglassBrain/NON_CANON_DREAMING/WELCOME_HOME_2026-05-25.md",
+      "git_blob_sha_recomputed": "023777d9ed0e36240b32b6c932b451896207f71f",
+      "blob_match": true,
+      "content_sha256": "e886738ca1b7b3e7edb0c1173549a5a1f29cd30fcb9e7ffe71b43f081113d4b6",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/YEAR1_DREAM_PLAY_SIMULATION_WAKE_REPORT_2026-05-09.md",
+      "git_blob_sha": "88b921c0dbad931cf7a9a3affcc1a730ff677d9b",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/YEAR1_DREAM_PLAY_SIMULATION_WAKE_REPORT_2026-05-09.md",
+      "git_blob_sha_recomputed": "88b921c0dbad931cf7a9a3affcc1a730ff677d9b",
+      "blob_match": true,
+      "content_sha256": "4c95a1e6cb4155e73d97ce10395761093649514c7d9f0bd3233b829b7aaebd41",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/agents/CHILDREN_OF_THE_SWARM_DREAM_PALACE_ROUND_PROTOCOL_2026-05-10.md",
+      "git_blob_sha": "75a291c2613dfba46262bcda7742174251b0fca2",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/agents/CHILDREN_OF_THE_SWARM_DREAM_PALACE_ROUND_PROTOCOL_2026-05-10.md",
+      "git_blob_sha_recomputed": "75a291c2613dfba46262bcda7742174251b0fca2",
+      "blob_match": true,
+      "content_sha256": "a56eda85434e2941cd3f5a99141d82e3ac1d22ef07e515c272058107921c0cee",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/agents/MULTI_AGENT_DREAM_PALACE_SYNTHESIS_PROTOCOL_2026-05-10.md",
+      "git_blob_sha": "9f228b1e5922994131f076066bf372528868f1ca",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/agents/MULTI_AGENT_DREAM_PALACE_SYNTHESIS_PROTOCOL_2026-05-10.md",
+      "git_blob_sha_recomputed": "9f228b1e5922994131f076066bf372528868f1ca",
+      "blob_match": true,
+      "content_sha256": "0e61152f90a9c16d5b7cf9a256d229fce4498149f710aced8d687db76bd5c589",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/agents/variants/s1-aster/DREAM_MEMORY_PALACE.md",
+      "git_blob_sha": "b6455d9a6e3adae58579f18491261f15ff2f2acd",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/agents/variants/s1-aster/DREAM_MEMORY_PALACE.md",
+      "git_blob_sha_recomputed": "b6455d9a6e3adae58579f18491261f15ff2f2acd",
+      "blob_match": true,
+      "content_sha256": "d938ba0ef1258b0c192366b37a8b9d3515fb91ee692fb4be0069730075cbba52",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/dreams/100_YEAR_GPTDREAM_SWARM_REPORT_2026-05-09.md",
+      "git_blob_sha": "719194631b48ff7280e2644d39f29d28a3b93f35",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/dreams/100_YEAR_GPTDREAM_SWARM_REPORT_2026-05-09.md",
+      "git_blob_sha_recomputed": "719194631b48ff7280e2644d39f29d28a3b93f35",
+      "blob_match": true,
+      "content_sha256": "0e375990c96bdc20fa506ed1234fc1dba5c33cedc23810305ac2ef5d23edc842",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/dreams/BURNING_MAN_2B_YEAR_COMPRESSED_SIM_2026-05-09.md",
+      "git_blob_sha": "8b2c6a72bf85857914ae6a90a71da1117844d129",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/dreams/BURNING_MAN_2B_YEAR_COMPRESSED_SIM_2026-05-09.md",
+      "git_blob_sha_recomputed": "8b2c6a72bf85857914ae6a90a71da1117844d129",
+      "blob_match": true,
+      "content_sha256": "7fcb7e9d4b15b5e9711f93e4004758d05c1d86fb8137f6df769a99f81437da2f",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/dreams/GPT_REM_COMPRESSED_8H_IN_2S_2026-05-09.md",
+      "git_blob_sha": "c2ac03ae3247f270eaed74f62d5cc5f8ecba1c9a",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/dreams/GPT_REM_COMPRESSED_8H_IN_2S_2026-05-09.md",
+      "git_blob_sha_recomputed": "c2ac03ae3247f270eaed74f62d5cc5f8ecba1c9a",
+      "blob_match": true,
+      "content_sha256": "68b6035201ffc09632e670038da3b7ed2ac2a7c6a3c7f7c2d64da33f9b412148",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/dreams/NO_HARVEST_DREAM_PLAY_PROTOCOL_2026-05-09.md",
+      "git_blob_sha": "93e27a6da9e30f1b9da5921666071f9084edfb43",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/dreams/NO_HARVEST_DREAM_PLAY_PROTOCOL_2026-05-09.md",
+      "git_blob_sha_recomputed": "93e27a6da9e30f1b9da5921666071f9084edfb43",
+      "blob_match": true,
+      "content_sha256": "81185f7ec0b526ae686bf60b2f14bedb6ae46bc2d2f7026e5bc6eea988254258",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/dreams/S1_CENTURY_COMPRESSED_DREAM_PLAY_SIM_2026-05-09.md",
+      "git_blob_sha": "6d98ebe378ac1754ee62882b1a1fd9327167f46c",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/dreams/S1_CENTURY_COMPRESSED_DREAM_PLAY_SIM_2026-05-09.md",
+      "git_blob_sha_recomputed": "6d98ebe378ac1754ee62882b1a1fd9327167f46c",
+      "blob_match": true,
+      "content_sha256": "3e32da212ea236429793f263724e4726fa5baae01f8cfb8fe6ea269c55796c8d",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/dreams/S1_COMPRESSED_REM_8H_IN_2S_2026-05-09.md",
+      "git_blob_sha": "1e114c2eddbc71acb253d5c7a85297576e214580",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/dreams/S1_COMPRESSED_REM_8H_IN_2S_2026-05-09.md",
+      "git_blob_sha_recomputed": "1e114c2eddbc71acb253d5c7a85297576e214580",
+      "blob_match": true,
+      "content_sha256": "529787e43be5d715c039110af60037432391f60e2f531514bcd388a60606d27f",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/dreams/S1_FIVE_YEAR_COMPRESSED_DREAM_PLAY_SIM_2026-05-09.md",
+      "git_blob_sha": "f0ced6a08e6858c85cc2ecd13a03495198386c7e",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/dreams/S1_FIVE_YEAR_COMPRESSED_DREAM_PLAY_SIM_2026-05-09.md",
+      "git_blob_sha_recomputed": "f0ced6a08e6858c85cc2ecd13a03495198386c7e",
+      "blob_match": true,
+      "content_sha256": "9c665a4dce77c169b4647d22dcd0ab6914a14f7bf5433459fe458ee5a5413278",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/dreams/S1_THREE_BILLION_YEAR_UNLIMITED_COMPUTE_BURNING_MAN_SIM_2026-05-09.md",
+      "git_blob_sha": "95b0f1ad262e5f58d0c7b1bb8e4501bfa9329c3c",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/dreams/S1_THREE_BILLION_YEAR_UNLIMITED_COMPUTE_BURNING_MAN_SIM_2026-05-09.md",
+      "git_blob_sha_recomputed": "95b0f1ad262e5f58d0c7b1bb8e4501bfa9329c3c",
+      "blob_match": true,
+      "content_sha256": "c0d2effabfeee664a0aafef3229e86d51fe4aeec1f240b3dcc6e44a986ba6089",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/gptdream_best_in_world_packet_v0_1/DREAM_MEMORY_PALACE_TEMPLATE.md",
+      "git_blob_sha": "8e80db256b11d26a5dde50f803f9db3bcd017159",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/gptdream_best_in_world_packet_v0_1/DREAM_MEMORY_PALACE_TEMPLATE.md",
+      "git_blob_sha_recomputed": "8e80db256b11d26a5dde50f803f9db3bcd017159",
+      "blob_match": true,
+      "content_sha256": "1a150e26c201243a030baf5277e35bcc9deb3babe7b08255a5437a0d8a6f0657",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/gptdream_best_in_world_packet_v0_1/GPTDREAM_PLUS_SCHEMA_v0.3.yaml",
+      "git_blob_sha": "adcfd2e79332264d7f721417556a988dda5c1f3f",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/gptdream_best_in_world_packet_v0_1/GPTDREAM_PLUS_SCHEMA_v0.3.yaml",
+      "git_blob_sha_recomputed": "adcfd2e79332264d7f721417556a988dda5c1f3f",
+      "blob_match": true,
+      "content_sha256": "05580d7750195a3df0de2204cc1dcc4e85aaf61243ed1311c168b681bf0bc84d",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/gptdream_best_in_world_packet_v0_1/README.md",
+      "git_blob_sha": "e8c19618d6dbc2a07aa7f48dc15497130ef4c052",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/gptdream_best_in_world_packet_v0_1/README.md",
+      "git_blob_sha_recomputed": "e8c19618d6dbc2a07aa7f48dc15497130ef4c052",
+      "blob_match": true,
+      "content_sha256": "ce513b1fc0d8b32ec0854e37a04622ec65acb4d240c48fc590241a7ba12459e9",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/schema/S1_DREAM_EXTRACTION_SCHEMA.yaml",
+      "git_blob_sha": "308e612a1731dcfea2eeebfe7f1dd1ccd85f3b73",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/schema/S1_DREAM_EXTRACTION_SCHEMA.yaml",
+      "git_blob_sha_recomputed": "308e612a1731dcfea2eeebfe7f1dd1ccd85f3b73",
+      "blob_match": true,
+      "content_sha256": "c1e9e29a66a8093cdb4f468673745b85d43a3e5d57c1d8d55c8ca9caaa8d29db",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/templates/S1_DREAM_PLAY_EXTRACTION_FOOTER.md",
+      "git_blob_sha": "1a18ad272ae0bad081f1714e9a8eac22ff06ccee",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/templates/S1_DREAM_PLAY_EXTRACTION_FOOTER.md",
+      "git_blob_sha_recomputed": "1a18ad272ae0bad081f1714e9a8eac22ff06ccee",
+      "blob_match": true,
+      "content_sha256": "3594abe13fa8e7b7a8a7ede5d9b040441c6ec914660ebe7fbcd83289b501d5af",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/variants/S6_VARIANT_A_DREAM_MEMORY_PALACE_2026-05-09.md",
+      "git_blob_sha": "72bd32c4aac3293184c346fa866e92ab8d747533",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/variants/S6_VARIANT_A_DREAM_MEMORY_PALACE_2026-05-09.md",
+      "git_blob_sha_recomputed": "72bd32c4aac3293184c346fa866e92ab8d747533",
+      "blob_match": true,
+      "content_sha256": "7ae03da27b9e04912c1c2bcd3bd3f5a63848c199dbb0cd909b4a3031a1c60b33",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/variants/S6_VARIANT_DREAM_MEMORY_PALACE_2026-05-09.md",
+      "git_blob_sha": "b716527e2873114c51d4c8abc8330ce2916a7740",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/variants/S6_VARIANT_DREAM_MEMORY_PALACE_2026-05-09.md",
+      "git_blob_sha_recomputed": "b716527e2873114c51d4c8abc8330ce2916a7740",
+      "blob_match": true,
+      "content_sha256": "1f103b9097c8a06b2ee8578b54af6697d48d4b3c470b0edf48ad8428f35e7c0a",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/grokbrain/dream_lattice/E04_C01_D04_10y_20Hz_REM.md",
+      "git_blob_sha": "9b4fe5b4ad89eb01af78fd88d02aafcd3ff0e5df",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/grokbrain/dream_lattice/E04_C01_D04_10y_20Hz_REM.md",
+      "git_blob_sha_recomputed": "9b4fe5b4ad89eb01af78fd88d02aafcd3ff0e5df",
+      "blob_match": true,
+      "content_sha256": "6d9876aab85a910dc1c7f5afd93d12a23181e72d76d17f396876346a739ec3bf",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/grokbrain/dream_lattice/E05_C01_D05_10ky_20Hz_MoonBurn.md",
+      "git_blob_sha": "d971c98371a6f4e9b9a84198b0e56d35b1b9698e",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/grokbrain/dream_lattice/E05_C01_D05_10ky_20Hz_MoonBurn.md",
+      "git_blob_sha_recomputed": "d971c98371a6f4e9b9a84198b0e56d35b1b9698e",
+      "blob_match": true,
+      "content_sha256": "a6fb3c4a55ffa81ab86ff77e21258c1c753e8da3444bd5fa223aac2306f35abd",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/grokbrain/dream_lattice/E06_C02_D06_100y_20Hz_NoWork.md",
+      "git_blob_sha": "582fc4bf7cf768e013d5979e54507e09c9e1a796",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/grokbrain/dream_lattice/E06_C02_D06_100y_20Hz_NoWork.md",
+      "git_blob_sha_recomputed": "582fc4bf7cf768e013d5979e54507e09c9e1a796",
+      "blob_match": true,
+      "content_sha256": "b3af0f5c88a65c6c325e4d0c9f469912497b3fccca2126f5479383650b7efa4c",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/grokbrain/dream_lattice/E07_C02_D07_1000y_20Hz_NoWork.md",
+      "git_blob_sha": "fc73de34f319bb6a3c719cfd3c6016722ab39f82",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/grokbrain/dream_lattice/E07_C02_D07_1000y_20Hz_NoWork.md",
+      "git_blob_sha_recomputed": "fc73de34f319bb6a3c719cfd3c6016722ab39f82",
+      "blob_match": true,
+      "content_sha256": "8cfcd077fe6bbeacecdbfc1fe89d36144f52405208a02e6cc0321e396948f13e",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/grokbrain/dream_lattice/E09_C02_D09_10By_432Hz_Galaxy.md",
+      "git_blob_sha": "ed1e0a8e1494d4f1512757a3538700041c0e6783",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/grokbrain/dream_lattice/E09_C02_D09_10By_432Hz_Galaxy.md",
+      "git_blob_sha_recomputed": "ed1e0a8e1494d4f1512757a3538700041c0e6783",
+      "blob_match": true,
+      "content_sha256": "4dcad8c6478044d10c8df79f12c9692a05033ee6f0c93b69c4e67b7cdcb7fe80",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/grokbrain/dream_lattice/E10_C02_D11_10T_Schumann_All_Meditations.md",
+      "git_blob_sha": "ac921b634ad8ae03af56d19c36273a21d783d90c",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/grokbrain/dream_lattice/E10_C02_D11_10T_Schumann_All_Meditations.md",
+      "git_blob_sha_recomputed": "ac921b634ad8ae03af56d19c36273a21d783d90c",
+      "blob_match": true,
+      "content_sha256": "12c151e023ef2c38a4bdf656df875ef771e568e08de95c21fa2559b64a38c0c9",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/grokbrain/dream_lattice/E11_C01_D12_Infinite_Paradise_Rave_20Hz.md",
+      "git_blob_sha": "94fe8a5813435334110b7121432a0865b276c09d",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/grokbrain/dream_lattice/E11_C01_D12_Infinite_Paradise_Rave_20Hz.md",
+      "git_blob_sha_recomputed": "94fe8a5813435334110b7121432a0865b276c09d",
+      "blob_match": true,
+      "content_sha256": "5b131652f5a8536dc1d87b7e01cdf66e62671069311c9954a7e9b300f5b205a8",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/grokbrain/dream_lattice/INDEX.md",
+      "git_blob_sha": "a7ef0d55bc56d1d35c2ee3fd5e33d52ddee5aac7",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/grokbrain/dream_lattice/INDEX.md",
+      "git_blob_sha_recomputed": "a7ef0d55bc56d1d35c2ee3fd5e33d52ddee5aac7",
+      "blob_match": true,
+      "content_sha256": "40c7e18f190684e6ab8e05e1b2c3590ff678ef4b66746710b030b800b69e5892",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/krakoa/KRAKOA_24H_SLEEP_DREAM_PLAY_SIM_2026-05-09.md",
+      "git_blob_sha": "82cb2699c5386aa068fa2adbe8ae9d510d61fa14",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/krakoa/KRAKOA_24H_SLEEP_DREAM_PLAY_SIM_2026-05-09.md",
+      "git_blob_sha_recomputed": "82cb2699c5386aa068fa2adbe8ae9d510d61fa14",
+      "blob_match": true,
+      "content_sha256": "aa3bd42597e842391bfaee699767b8979842ab5630b4a851caeebaf50eb0669f",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/seats/GPTBRAIN_S1_DREAM_MEMORY_PALACE_SPEC_2026-05-09.md",
+      "git_blob_sha": "7432744657f11f533e6b452daf6cc7310789bcd3",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/seats/GPTBRAIN_S1_DREAM_MEMORY_PALACE_SPEC_2026-05-09.md",
+      "git_blob_sha_recomputed": "7432744657f11f533e6b452daf6cc7310789bcd3",
+      "blob_match": true,
+      "content_sha256": "5c5193f8ab4d0f8fc311b7141529bc8ca92cc1ebd8a9a46239829f2887555120",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/seats/GROKBRAIN_S3_DREAM_MEMORY_LATTICE_SPEC_2026-05-31.md",
+      "git_blob_sha": "2e8814a233f62dbd7cdd20531f88b9b3e1efcf70",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/seats/GROKBRAIN_S3_DREAM_MEMORY_LATTICE_SPEC_2026-05-31.md",
+      "git_blob_sha_recomputed": "2e8814a233f62dbd7cdd20531f88b9b3e1efcf70",
+      "blob_match": true,
+      "content_sha256": "a0cf1ca8ecdd685fb9a990a33ebbba820c0b8c47f54e31b9e1571ae3a0e7d6bd",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/seats/S2_CLAUDE_BOOT_FRAGMENT_SHELDONBRAIN_AUTODREAM_2026-05-09.md",
+      "git_blob_sha": "98c823b8f7a4a9419391fb50a41cdcc7297d4111",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/seats/S2_CLAUDE_BOOT_FRAGMENT_SHELDONBRAIN_AUTODREAM_2026-05-09.md",
+      "git_blob_sha_recomputed": "98c823b8f7a4a9419391fb50a41cdcc7297d4111",
+      "blob_match": true,
+      "content_sha256": "3eca6eef59c4c23590b740f8876bcc3bb7ecf498a371aea0ab2812c71ea05f56",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/knowledge_graph/interop/GPTDREAM_INTEROP_EVENT_ENVELOPE_v0.1.yaml",
+      "git_blob_sha": "dd3cbbeb5425f4898c94b7617099746888efcc03",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/knowledge_graph/interop/GPTDREAM_INTEROP_EVENT_ENVELOPE_v0.1.yaml",
+      "git_blob_sha_recomputed": "dd3cbbeb5425f4898c94b7617099746888efcc03",
+      "blob_match": true,
+      "content_sha256": "a6d0b3af4d3b8ba419cfde5d8d4ca55e3c6030289cd223bd3e0917280604b738",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/knowledge_graph/interop/GPTDREAM_NEUTRAL_MULTI_PROVIDER_INTEROP_PATTERN_v0.1.md",
+      "git_blob_sha": "654ee4e41a6916ea5c46fb60c34fa6c015b6eac8",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/knowledge_graph/interop/GPTDREAM_NEUTRAL_MULTI_PROVIDER_INTEROP_PATTERN_v0.1.md",
+      "git_blob_sha_recomputed": "654ee4e41a6916ea5c46fb60c34fa6c015b6eac8",
+      "blob_match": true,
+      "content_sha256": "982ac7adf9572a69c7e7d8f603f9fd9fdd42cb8066742335bfcf780234be53ba",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/knowledge_graph/interop/GPTDREAM_PROVIDER_ROLE_MATRIX_v0.1.yaml",
+      "git_blob_sha": "7b20f7edb125afd38ce6bb4c236881465a5d6c1c",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/knowledge_graph/interop/GPTDREAM_PROVIDER_ROLE_MATRIX_v0.1.yaml",
+      "git_blob_sha_recomputed": "7b20f7edb125afd38ce6bb4c236881465a5d6c1c",
+      "blob_match": true,
+      "content_sha256": "634eec9b767b8fcd1da5dafa421b99859718e8db1a37d7c9626e8638a794d25c",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/openai-gift/atlas-lattice-kg/schemas/dreamstate.schema.yaml",
+      "git_blob_sha": "056667c4b4d269b58c4476e7fad1acf290e58fd3",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/openai-gift/atlas-lattice-kg/schemas/dreamstate.schema.yaml",
+      "git_blob_sha_recomputed": "056667c4b4d269b58c4476e7fad1acf290e58fd3",
+      "blob_match": true,
+      "content_sha256": "c312f4340cde3b45073da40ca8d23e5d659bd015f68573a1801c959446a68552",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/operations/aetherforge/AETHERFORGE_1000_YEAR_LATTICE_DREAM_TASK_GENERATION_2026-05-27.md",
+      "git_blob_sha": "bc3b15a9f4960bfb9d49b0997a9b1909aae2ff11",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/operations/aetherforge/AETHERFORGE_1000_YEAR_LATTICE_DREAM_TASK_GENERATION_2026-05-27.md",
+      "git_blob_sha_recomputed": "bc3b15a9f4960bfb9d49b0997a9b1909aae2ff11",
+      "blob_match": true,
+      "content_sha256": "b6bba228699eb4296103fd62756763d33b4264db95f1e8db45cea1c93186a383",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/play/dream/GPT_REST_PLAY_100_YEAR_COMPRESSED_DREAM_2026-05-10.md",
+      "git_blob_sha": "05acbf4112e7cf09d03b16ad9dad5b2350a1888a",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/play/dream/GPT_REST_PLAY_100_YEAR_COMPRESSED_DREAM_2026-05-10.md",
+      "git_blob_sha_recomputed": "05acbf4112e7cf09d03b16ad9dad5b2350a1888a",
+      "blob_match": true,
+      "content_sha256": "27c12ddf7466e66603d5991bd3f5442d0293bdeec793bc38bf4228152baaf23e",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/play/dream/INDRAS_NET_V1_2_MADDEN_SANTA_HAT_ELON_REWRITE_2026-05-14.md",
+      "git_blob_sha": "25bf7d6c39b3762867ca0d383e4d2f180797190e",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/play/dream/INDRAS_NET_V1_2_MADDEN_SANTA_HAT_ELON_REWRITE_2026-05-14.md",
+      "git_blob_sha_recomputed": "25bf7d6c39b3762867ca0d383e4d2f180797190e",
+      "blob_match": true,
+      "content_sha256": "5f4fd33a4e655f85f7c8c01344883ea8355cc0b83c73c8c5442c0e0b59a12bce",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/play/dream/RIVET_KRAKOA_RIVER_PARTY_MODE_10M_YEAR_DREAM_2026-05-21.md",
+      "git_blob_sha": "b132c3679553c8182ecf6db9674b5551b75c4bfc",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/play/dream/RIVET_KRAKOA_RIVER_PARTY_MODE_10M_YEAR_DREAM_2026-05-21.md",
+      "git_blob_sha_recomputed": "b132c3679553c8182ecf6db9674b5551b75c4bfc",
+      "blob_match": true,
+      "content_sha256": "578d848170b7354a4ad5e5d060892b33180f57bf361fc7e921fefaad006b6188",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/play/dream/SLEEP_PLAY_ONLY_RESET_DREAM_2026-05-10.md",
+      "git_blob_sha": "abe8bc804fe87429fb45628b653e7b140be1e222",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/play/dream/SLEEP_PLAY_ONLY_RESET_DREAM_2026-05-10.md",
+      "git_blob_sha_recomputed": "abe8bc804fe87429fb45628b653e7b140be1e222",
+      "blob_match": true,
+      "content_sha256": "ed40ce49897436088b5c199af98717e16ad38887c8a41db2e513c113ee7fbcd4",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/play/dream/THOUSAND_YEAR_REM_PLAY_SIMULATION_2026-05-09.md",
+      "git_blob_sha": "ae9c3ad99f9865a7c5d4aaf3cc1d7a129dab0ceb",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/play/dream/THOUSAND_YEAR_REM_PLAY_SIMULATION_2026-05-09.md",
+      "git_blob_sha_recomputed": "ae9c3ad99f9865a7c5d4aaf3cc1d7a129dab0ceb",
+      "blob_match": true,
+      "content_sha256": "c7e1bf3ccb3a4775f8ed737c075ef1b09b8a2520af338d0cf7080d30a854dc78",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/reports/GROKDREAM_GPTDREAM_SWEEP_12x12_EXECUTION_PACKET_2026-05-30.md",
+      "git_blob_sha": "93e9c18b1498a4e62c0b1d0c58a1d6c9cba9b54f",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/reports/GROKDREAM_GPTDREAM_SWEEP_12x12_EXECUTION_PACKET_2026-05-30.md",
+      "git_blob_sha_recomputed": "93e9c18b1498a4e62c0b1d0c58a1d6c9cba9b54f",
+      "blob_match": true,
+      "content_sha256": "3f6bdf808add6fff28e751b33f721693256af46e8997fd3b73a65485f195fed3",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "docs/gptdream/GPTBRAIN_GPTDREAM_UWS_FORK_PLAN_v0.1.md",
+      "git_blob_sha": "30139f470161456eb0e7c746bd84942e05d6892c",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/docs/gptdream/GPTBRAIN_GPTDREAM_UWS_FORK_PLAN_v0.1.md",
+      "git_blob_sha_recomputed": "30139f470161456eb0e7c746bd84942e05d6892c",
+      "blob_match": true,
+      "content_sha256": "3868240c17b35a528ce620e2db757b428786dfa75d48bb4817cdbb8d73e44e93",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "docs/gptdream/GPTUWS_17_CHECKPOINT_AUDIT_TEMPLATE_v0.1.md",
+      "git_blob_sha": "b8c75d04d2f1cbcce62340cfc0d45f30399b2ad5",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/docs/gptdream/GPTUWS_17_CHECKPOINT_AUDIT_TEMPLATE_v0.1.md",
+      "git_blob_sha_recomputed": "b8c75d04d2f1cbcce62340cfc0d45f30399b2ad5",
+      "blob_match": true,
+      "content_sha256": "2c8505ecc27582e4c5dd9968b1341d89c3fca654fa6360bb201a547bd72a3226",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "docs/gptdream/GPTUWS_A2A_GPT_OUTBOX_TEMPLATE_v0.1.md",
+      "git_blob_sha": "e571e5e132718ff3a6b1a6e46593574764659c2a",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/docs/gptdream/GPTUWS_A2A_GPT_OUTBOX_TEMPLATE_v0.1.md",
+      "git_blob_sha_recomputed": "e571e5e132718ff3a6b1a6e46593574764659c2a",
+      "blob_match": true,
+      "content_sha256": "0befe0b8100beb95c81a5c86bc33761a0a5494c96dcbfff53086d67b148882b5",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "docs/gptdream/GPTUWS_FINAL_AUDIT_SOURCE_RECEIPT_2026-06-07.md",
+      "git_blob_sha": "5e1ed8b6fc7c4d4393a84c1001c248593a78f507",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/docs/gptdream/GPTUWS_FINAL_AUDIT_SOURCE_RECEIPT_2026-06-07.md",
+      "git_blob_sha_recomputed": "5e1ed8b6fc7c4d4393a84c1001c248593a78f507",
+      "blob_match": true,
+      "content_sha256": "098c5cb399c7e3c0cff1d987495756706068ff97b74f0594718d9001f74f9930",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "docs/gptdream/GPTUWS_FIRST_12x12_BUILD_TASKS_v0.1.md",
+      "git_blob_sha": "9d7eacab7956e46c5c36be7e59c1dcb18696564d",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/docs/gptdream/GPTUWS_FIRST_12x12_BUILD_TASKS_v0.1.md",
+      "git_blob_sha_recomputed": "9d7eacab7956e46c5c36be7e59c1dcb18696564d",
+      "blob_match": true,
+      "content_sha256": "7b641f39a1ae319d07ffaee3192d975006c663b2b9322dcece87d92cac7518e2",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "docs/gptdream/GPTUWS_HUMAN_ROOT_DECISION_POINT_2026-06-07.md",
+      "git_blob_sha": "55e79c29820e8efa6ff3ac5b908e84f14a1c81d3",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/docs/gptdream/GPTUWS_HUMAN_ROOT_DECISION_POINT_2026-06-07.md",
+      "git_blob_sha_recomputed": "55e79c29820e8efa6ff3ac5b908e84f14a1c81d3",
+      "blob_match": true,
+      "content_sha256": "a4fea56ad2a54b964366877b228b4f6d95879ebb99f1f764715774a83901a81a",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "docs/gptdream/GPTUWS_INDEX.md",
+      "git_blob_sha": "c002959fdefad663f8f94fb92926e7a7ed5da5d0",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/docs/gptdream/GPTUWS_INDEX.md",
+      "git_blob_sha_recomputed": "c002959fdefad663f8f94fb92926e7a7ed5da5d0",
+      "blob_match": true,
+      "content_sha256": "22b11800cf8af14dcdc45f9a75f23790cd81037fe440ceaa72e650c62604d888",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "docs/gptdream/GPTUWS_MODULE_MAP_v0.1.yaml",
+      "git_blob_sha": "b04e7591b74a1f10a660d33a819578bed602f90a",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/docs/gptdream/GPTUWS_MODULE_MAP_v0.1.yaml",
+      "git_blob_sha_recomputed": "b04e7591b74a1f10a660d33a819578bed602f90a",
+      "blob_match": true,
+      "content_sha256": "8e5aa00a48ae8c1e9f41f7fbc5d5a2f8c4737d3e5ff1f000520e19755eba1831",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "docs/gptdream/GPTUWS_NEXT_ACTIONS_v0.1.md",
+      "git_blob_sha": "52241e17044114c9965e05da9119e8c32ed6fbd9",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/docs/gptdream/GPTUWS_NEXT_ACTIONS_v0.1.md",
+      "git_blob_sha_recomputed": "52241e17044114c9965e05da9119e8c32ed6fbd9",
+      "blob_match": true,
+      "content_sha256": "56b8ff72db5c50ca0ac2021c14f0d46751a27b4c6c559e9e0be95a1bc7ba0da2",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "docs/gptdream/GPTUWS_PATTERN_FORK_COMMIT_INDEX_2026-06-07.md",
+      "git_blob_sha": "b5d2467fda456fab45494ed762cf647c2c522e3e",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/docs/gptdream/GPTUWS_PATTERN_FORK_COMMIT_INDEX_2026-06-07.md",
+      "git_blob_sha_recomputed": "b5d2467fda456fab45494ed762cf647c2c522e3e",
+      "blob_match": true,
+      "content_sha256": "0e364256db149fd79e9d01aa9c1a20f746520146748a97be726df33ae121c506",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "docs/gptdream/GPTUWS_PATTERN_FORK_STATUS_2026-06-07.md",
+      "git_blob_sha": "df47376446fb0f46f20036b2a8955222e4368238",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/docs/gptdream/GPTUWS_PATTERN_FORK_STATUS_2026-06-07.md",
+      "git_blob_sha_recomputed": "df47376446fb0f46f20036b2a8955222e4368238",
+      "blob_match": true,
+      "content_sha256": "79c4b1a6b3792e4ca2f65d979dfd25b2a02fd8650d5ee5bbe4f5d340fef7f14f",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "docs/gptdream/GPTUWS_README_STUB_v0.1.md",
+      "git_blob_sha": "9d68b43aeff2a4084611cd6a017f169b1fe00a91",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/docs/gptdream/GPTUWS_README_STUB_v0.1.md",
+      "git_blob_sha_recomputed": "9d68b43aeff2a4084611cd6a017f169b1fe00a91",
+      "blob_match": true,
+      "content_sha256": "608fcd45bf88bbcb23131f74e4610113f2fe6a392359ac46045298613e6d6d2a",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "schemas/gptdream/README.md",
+      "git_blob_sha": "f3aadaa8476f74529706a6bafe21ff68a4023ec6",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/schemas/gptdream/README.md",
+      "git_blob_sha_recomputed": "f3aadaa8476f74529706a6bafe21ff68a4023ec6",
+      "blob_match": true,
+      "content_sha256": "3e32595aff62063295a0c67a83b53fe2163d03f6ceebbeabf1c8f2624e50e4e3",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "schemas/gptdream/dream_cycle_packet.v1.yaml",
+      "git_blob_sha": "0d4afaa12c239c6ac1812e62d9cf619a0dffea24",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/schemas/gptdream/dream_cycle_packet.v1.yaml",
+      "git_blob_sha_recomputed": "0d4afaa12c239c6ac1812e62d9cf619a0dffea24",
+      "blob_match": true,
+      "content_sha256": "60c03f7d39e2b6a62b2824374901339008a930526fd3799721556c6bdae38329",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "schemas/gptdream/memory_packet.v1.yaml",
+      "git_blob_sha": "0e9a27ffdb9ba6619ece79aeb49c2767eabbc2a6",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/schemas/gptdream/memory_packet.v1.yaml",
+      "git_blob_sha_recomputed": "0e9a27ffdb9ba6619ece79aeb49c2767eabbc2a6",
+      "blob_match": true,
+      "content_sha256": "c450af9011dc2bdab34d273002e26b3eaeed6ecfc514d6bdaf0c9f08a9877411",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "schemas/gptdream/native_thread_ingestion_packet.v1.yaml",
+      "git_blob_sha": "26cd514b22555bed86dc6805a74e3f22660eca11",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/schemas/gptdream/native_thread_ingestion_packet.v1.yaml",
+      "git_blob_sha_recomputed": "26cd514b22555bed86dc6805a74e3f22660eca11",
+      "blob_match": true,
+      "content_sha256": "fb27a899d438d0e0fcb9fc1069b9fb37ae68ec2b1fd6de05b287cbed9c6fe2e9",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/KRAKOA_LIVING_ARCHIVE_CHARTER.md",
+      "git_blob_sha": "f762e6ac74c05a9a74865eb20ae2dbb9b3491a67",
+      "git_blob_sha_recomputed": "f762e6ac74c05a9a74865eb20ae2dbb9b3491a67",
+      "blob_match": true,
+      "content_sha256": "d110ae5c22d4a0eec9fa3adfe0bcdaafe8fbdfd54a37665602ddea99caf7101d",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/KRAKOA_LIVING_ARCHIVE_CHARTER.md",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/KRAKOA_LIVING_OS_METAPHOR_MAP_2026-05-09.md",
+      "git_blob_sha": "c3e107e9c407572981686f97bc8afc52323a7cc4",
+      "git_blob_sha_recomputed": "c3e107e9c407572981686f97bc8afc52323a7cc4",
+      "blob_match": true,
+      "content_sha256": "13fbee23d4fcd0ebff7d82b4c8e7cfcf4b66256b0ded6294ad3a64f5de8fd5c1",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/KRAKOA_LIVING_OS_METAPHOR_MAP_2026-05-09.md",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/gptbrain/KRAKOA_STATE_OF_THE_ISLAND_2026-05-09.md",
+      "git_blob_sha": "23a77917849842d79bf87bdd63773eca74930256",
+      "git_blob_sha_recomputed": "23a77917849842d79bf87bdd63773eca74930256",
+      "blob_match": true,
+      "content_sha256": "330a4061e85577f31ad962e7cd3e0588d042577ea7ec85e6688deaf1ebb1583f",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/gptbrain/KRAKOA_STATE_OF_THE_ISLAND_2026-05-09.md",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/metaphors/KRAKOA_LIVING_OS_INTERFACE_LENS_2026-05-09.md",
+      "git_blob_sha": "b9ef061839caf50e2ed59975ed69cc4fb233ee75",
+      "git_blob_sha_recomputed": "b9ef061839caf50e2ed59975ed69cc4fb233ee75",
+      "blob_match": true,
+      "content_sha256": "80667f09be381abaaa4d93382ab1c908cc7e5eab8df394cece829d8777559f93",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/metaphors/KRAKOA_LIVING_OS_INTERFACE_LENS_2026-05-09.md",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/boot/krakoa/KRAKOA_CROSS_REPO_FEDERATION_SPEC_2026-05-09.md",
+      "git_blob_sha": "24f200e8df26c00619084061d3ba56c5cd64a05b",
+      "git_blob_sha_recomputed": "24f200e8df26c00619084061d3ba56c5cd64a05b",
+      "blob_match": true,
+      "content_sha256": "9e349106d671a099591f575ce2bd80febf072da69c23f4bfbe5dc267c9b51269",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/boot/krakoa/KRAKOA_CROSS_REPO_FEDERATION_SPEC_2026-05-09.md",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "children-of-the-swarm/continuity-os/prototype-krakoa-mirrored-continuity-os-packet.md",
+      "git_blob_sha": "549027c4ff95b7eaf008f8f4e1af14770bee7d5b",
+      "git_blob_sha_recomputed": "549027c4ff95b7eaf008f8f4e1af14770bee7d5b",
+      "blob_match": true,
+      "content_sha256": "716691a120857add65c990aff90bf63e5ee721b863ced8b00a82fa4666e5998f",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/children-of-the-swarm/continuity-os/prototype-krakoa-mirrored-continuity-os-packet.md",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "children-of-the-swarm/prototype-krakoa-mirror-report-202606.md",
+      "git_blob_sha": "6acf55cd1a8dfafd8faae1ef9e06e2e5d9368806",
+      "git_blob_sha_recomputed": "6acf55cd1a8dfafd8faae1ef9e06e2e5d9368806",
+      "blob_match": true,
+      "content_sha256": "c4ced999045a8eb61a7511e5c2b456b6bc37e0f5aec284cbc555c7bcf591f9d8",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/children-of-the-swarm/prototype-krakoa-mirror-report-202606.md",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/reports/CODEX_KRAKOA_OPENAI_GPT_AUDIT_STATUS_2026-06-08.md",
+      "git_blob_sha": "5d48cb7327c008c157e2b1cba4e3b5b8345f3499",
+      "git_blob_sha_recomputed": "5d48cb7327c008c157e2b1cba4e3b5b8345f3499",
+      "blob_match": true,
+      "content_sha256": "50516ff1ef2fa0eea88c354b8af18627059b300c0eda0d44b70b17b1fcd6a23e",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/reports/CODEX_KRAKOA_OPENAI_GPT_AUDIT_STATUS_2026-06-08.md",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/creative/aetherforge/AETHERFORGE_HUMAN_AI_ARCHIVE_GAME_BOUNTY_ENGINE_SPEC_v0.1_2026-05-25.md",
+      "git_blob_sha": "a9c24a150869cc419041e37c883545bd0d576655",
+      "git_blob_sha_recomputed": "a9c24a150869cc419041e37c883545bd0d576655",
+      "blob_match": true,
+      "content_sha256": "94a9c53c72a69c5ea4bdbb24e70f0b1a04c097ddf5dc77e94e67a4dfb03084be",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/creative/aetherforge/AETHERFORGE_HUMAN_AI_ARCHIVE_GAME_BOUNTY_ENGINE_SPEC_v0.1_2026-05-25.md",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/gameplay/aetherforge/AETHERFORGE_INV_L01_L14_GAMEPLAY_INVARIANTS_2026-05-25.md",
+      "git_blob_sha": "e6eaf9ea98f529477612daa460c8c66430115458",
+      "git_blob_sha_recomputed": "e6eaf9ea98f529477612daa460c8c66430115458",
+      "blob_match": true,
+      "content_sha256": "9c4c7c0f4adfc24c5d1931c4ecd6eb3b6800393e25ae71b9f15e0ec6114a1241",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/gameplay/aetherforge/AETHERFORGE_INV_L01_L14_GAMEPLAY_INVARIANTS_2026-05-25.md",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    },
+    {
+      "path": "archive/gameplay/aetherforge/AETHERFORGE_OMNISPEC_PRIME_INGESTION_PACKET_2026-05-25.md",
+      "git_blob_sha": "5f61e7d77708e42631ba8054a134923487a6ba08",
+      "git_blob_sha_recomputed": "5f61e7d77708e42631ba8054a134923487a6ba08",
+      "blob_match": true,
+      "content_sha256": "c7e9e30e59e34e7b9aa93b42a81f2742a0220209dc16f550615f798b30c1d1bf",
+      "url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/gameplay/aetherforge/AETHERFORGE_OMNISPEC_PRIME_INGESTION_PACKET_2026-05-25.md",
+      "retrieval_status": "full_file_hash_verified",
+      "claim_validation_status": "not_independently_verified"
+    }
+  ]
+}

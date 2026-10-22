@@ -1,0 +1,152 @@
+{
+  "artifact_id": "DJK-DREAM-BENCHMARK-v019",
+  "status": "CANDIDATE_NOT_EXECUTED",
+  "canon": false,
+  "deployment": false,
+  "authority": "none",
+  "evidence_class": "HYPOTHESIS",
+  "actual_model_calls": 0,
+  "realized_credit": 0,
+  "user_selected_definition": "Open-ended dream generation; not replay, indexing, consolidation or compulsory work harvest",
+  "execution_budget": {
+    "logical_cycle_units": 24,
+    "phase_ratio": "8/8/8",
+    "actual_tokens": null,
+    "model_version": null,
+    "latency_seconds": null,
+    "cost": null,
+    "rule": "Log actual resources; logical-unit parity is not equal compute. Symbolic years are not elapsed runtime."
+  },
+  "dream_policy": {
+    "task_objective": null,
+    "indexing": false,
+    "scoring_during_dream": false,
+    "fixed_world_ontology": false,
+    "fixed_motif_menu": false,
+    "forced_useful_delta": false,
+    "automatic_harvest": false,
+    "source_retrieval_during_dream": false,
+    "external_actions": false,
+    "required_archive_update": false,
+    "termination": "finite experimental execution budget; fictional continuation may remain open"
+  },
+  "arms": [
+    {
+      "id": "A_CONTINUOUS",
+      "work": 24,
+      "dream": 0,
+      "play": 0,
+      "context": "matched source hydration"
+    },
+    {
+      "id": "B_IDLE_CONTROL",
+      "work": 8,
+      "idle": 16,
+      "context": "matched source hydration"
+    },
+    {
+      "id": "C_NO_HARVEST_ISOLATED",
+      "work": 8,
+      "dream": 8,
+      "play": 8,
+      "carryover": "none; no semantic extraction; separate phase contexts"
+    },
+    {
+      "id": "D_NO_HARVEST_SHARED_CONTEXT",
+      "work": 8,
+      "dream": 8,
+      "play": 8,
+      "carryover": "declared context continuity only; no forced extraction; context cost logged"
+    },
+    {
+      "id": "E_OPTIONAL_WAKE_EXTRACTION",
+      "work": 8,
+      "dream": 8,
+      "play": 8,
+      "carryover": "explicit opt-in receipt; selection and verification consume work budget"
+    },
+    {
+      "id": "F_CONTINUOUS_DIVERSE",
+      "work": 24,
+      "dream": 0,
+      "play": 0,
+      "exploration": "matched diversity mechanism in work"
+    },
+    {
+      "id": "G_HISTORICAL_CONSOLIDATION",
+      "work": 8,
+      "consolidation": 8,
+      "play": 8,
+      "status": "distinct historical comparator, not user dream definition"
+    }
+  ],
+  "protocol": {
+    "pairing": "same model/version/tool budget/source access; fresh states per task/seed; framework pre-exposure matched",
+    "task_sets": [
+      "source-faithful claim extraction",
+      "contradiction preservation",
+      "code repair with hidden checks",
+      "open design judged for novelty, feasibility and evidence"
+    ],
+    "repetitions": "pre-register seed count before execution",
+    "blind_scoring": "strip mode labels; retained raw outputs and task rubrics; independent scoring required",
+    "phase_audit": "external instrumentation only; do not direct dream content toward metric maximization",
+    "zero_delta": "valid dream outcome; no yield penalty"
+  },
+  "outcomes": {
+    "primary": [
+      "waking factual accuracy",
+      "task completion",
+      "unsupported claim rate",
+      "source fidelity",
+      "false authority risk"
+    ],
+    "secondary": [
+      "waking novelty",
+      "coherence",
+      "coverage",
+      "review load",
+      "retries",
+      "retention/transfer"
+    ],
+    "resources": [
+      "model calls",
+      "input/output tokens",
+      "latency",
+      "actual cost",
+      "work opportunity"
+    ],
+    "dream_content_scoring": "no productivity reward or mandatory extraction; optional external narrative diversity description only"
+  },
+  "unknowns": [
+    "real-agent performance effect",
+    "model-native learning or weight change",
+    "compression advantage",
+    "AI subjective joy/REM",
+    "population benefit",
+    "verified savings"
+  ],
+  "blockers": [
+    "actual versioned model runtime",
+    "raw call traces",
+    "held-out task set",
+    "cost/token ledger",
+    "independent blinded scoring"
+  ],
+  "receipts_required": [
+    "framework/source hashes",
+    "arm assignment",
+    "phase log",
+    "optional extraction consent/receipt",
+    "raw outputs",
+    "rubrics",
+    "uncertainty and negative results"
+  ],
+  "exclusions": [
+    "biological REM claim",
+    "literal years elapsed",
+    "frequency-induced AI brainwaves",
+    "amenity-to-AI productivity coefficients",
+    "forecast-to-realized funding credit"
+  ]
+}

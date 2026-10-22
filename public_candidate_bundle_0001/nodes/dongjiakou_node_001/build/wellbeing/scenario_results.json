@@ -1,0 +1,582 @@
+{
+  "shift_capacity_sensitivity": {
+    "module": "QOL01",
+    "scenario_id": "hypothetical-five-day-shift-and-capacity",
+    "scenario_kind": "HYPOTHETICAL_SENSITIVITY",
+    "basis": "Arbitrary planning sensitivity; not employer rosters, local clinical outcomes, operational clearance or qualification. Effect transfer remains UNKNOWN.",
+    "cohorts": [
+      {
+        "cohort_id": "day_workforce",
+        "definition": "Daytime workforce; actual employer roster and fraction UNKNOWN",
+        "population": 1000,
+        "on_site_span_hours_day": 8,
+        "weekly_active_work_hours": 40,
+        "weekly_on_site_span_hours": 40,
+        "candidate_paid_leave_working_days": 10,
+        "candidate_paid_leave_five_day_weeks": 2.0,
+        "nominal_annual_attendance_days_reference": 238,
+        "leave_note": "Full-year reference only; eligibility/proration and actual calendar/roster audit pending. Public holidays and weekly rest excluded from annual leave. Operator available hours must also subtract training, absence and relief needs.",
+        "above_40h_standard_reference": false,
+        "personal_hours_including_obligations": 8,
+        "discretionary_hours_after_commute_and_care": 5.666666666666667,
+        "time_budget_feasible": true,
+        "sleep_opportunity_hours_day": 8,
+        "actual_sleep_hours_day": "UNKNOWN",
+        "niosh_10h_off_duty_reference_met": true,
+        "note": "Off-duty time is a roster input; on-site breaks are not family time. 40h is a standard-work reference, not a complete legality determination. NIOSH is guidance, not Chinese law."
+      },
+      {
+        "cohort_id": "rotating_workforce",
+        "definition": "Rotating/night workforce; 12h prevalence and roster UNKNOWN",
+        "population": 1000,
+        "on_site_span_hours_day": 14,
+        "weekly_active_work_hours": 60,
+        "weekly_on_site_span_hours": 70,
+        "candidate_paid_leave_working_days": 15,
+        "candidate_paid_leave_five_day_weeks": 3.0,
+        "nominal_annual_attendance_days_reference": 233,
+        "leave_note": "Full-year reference only; eligibility/proration and actual calendar/roster audit pending. Public holidays and weekly rest excluded from annual leave. Operator available hours must also subtract training, absence and relief needs.",
+        "above_40h_standard_reference": true,
+        "personal_hours_including_obligations": 2,
+        "discretionary_hours_after_commute_and_care": -0.3333333333333335,
+        "time_budget_feasible": false,
+        "sleep_opportunity_hours_day": 8,
+        "actual_sleep_hours_day": "UNKNOWN",
+        "niosh_10h_off_duty_reference_met": true,
+        "note": "Off-duty time is a roster input; on-site breaks are not family time. 40h is a standard-work reference, not a complete legality determination. NIOSH is guidance, not Chinese law."
+      },
+      {
+        "cohort_id": "older_high_fall_risk",
+        "definition": "Older residents with clinically assessed high fall risk; local population UNKNOWN",
+        "population": 500,
+        "on_site_span_hours_day": 0,
+        "weekly_active_work_hours": 0,
+        "weekly_on_site_span_hours": 0,
+        "candidate_paid_leave_working_days": "NOT_APPLICABLE",
+        "candidate_paid_leave_five_day_weeks": "NOT_APPLICABLE",
+        "nominal_annual_attendance_days_reference": "NOT_APPLICABLE",
+        "leave_note": "Full-year reference only; eligibility/proration and actual calendar/roster audit pending. Public holidays and weekly rest excluded from annual leave. Operator available hours must also subtract training, absence and relief needs.",
+        "above_40h_standard_reference": false,
+        "personal_hours_including_obligations": 16,
+        "discretionary_hours_after_commute_and_care": 13.666666666666666,
+        "time_budget_feasible": true,
+        "sleep_opportunity_hours_day": 8,
+        "actual_sleep_hours_day": "UNKNOWN",
+        "niosh_10h_off_duty_reference_met": true,
+        "note": "Off-duty time is a roster input; on-site breaks are not family time. 40h is a standard-work reference, not a complete legality determination. NIOSH is guidance, not Chinese law."
+      }
+    ],
+    "effects_by_cohort": [
+      {
+        "cohort_id": "older_high_fall_risk",
+        "study_id": "TAICHI2018",
+        "source_evidence": {
+          "population": "High-fall-risk community-dwelling older adults; 670 participants",
+          "intervention": "Tailored tai ji quan, two 60-minute classes/week, 24 weeks",
+          "endpoint": "fall_incidence",
+          "source": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2701631"
+        },
+        "endpoint": "fall_incidence",
+        "transfer_status": "UNKNOWN",
+        "eligible_adherent_demand_participant_sessions_day": 40.0,
+        "capacity_limited_participant_sessions_day": 40.0,
+        "scenario_endpoint_change_percent_within_cohort": "UNKNOWN",
+        "effect_evidence_class": "UNKNOWN",
+        "realized_credit": 0
+      },
+      {
+        "cohort_id": "day_workforce",
+        "study_id": "SAUNA2022",
+        "source_evidence": {
+          "population": "47 low-activity adults, mean age49, >=1 cardiovascular risk factor",
+          "intervention": "Exercise plus postexercise sauna, eight weeks",
+          "endpoint": "cardiorespiratory_fitness",
+          "source": "https://journals.physiology.org/doi/prev/20220704-aop/abs/10.1152/ajpregu.00076.2022"
+        },
+        "endpoint": "cardiorespiratory_fitness",
+        "transfer_status": "UNKNOWN",
+        "eligible_adherent_demand_participant_sessions_day": 80.0,
+        "capacity_limited_participant_sessions_day": 20.0,
+        "scenario_endpoint_change_percent_within_cohort": "UNKNOWN",
+        "effect_evidence_class": "UNKNOWN",
+        "realized_credit": 0
+      },
+      {
+        "cohort_id": "rotating_workforce",
+        "study_id": "COLD2016",
+        "source_evidence": {
+          "population": "3018 adults18-65 without severe comorbidity",
+          "intervention": "Hot-to-cold showers; not communal contrast immersion",
+          "endpoint": "self_reported_sickness_absence",
+          "source": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0161749"
+        },
+        "endpoint": "self_reported_sickness_absence",
+        "transfer_status": "UNKNOWN",
+        "eligible_adherent_demand_participant_sessions_day": 80.0,
+        "capacity_limited_participant_sessions_day": 20.0,
+        "scenario_endpoint_change_percent_within_cohort": "UNKNOWN",
+        "effect_evidence_class": "UNKNOWN",
+        "realized_credit": 0
+      },
+      {
+        "cohort_id": "day_workforce",
+        "study_id": "SOUND2017",
+        "source_evidence": {
+          "population": "14 participants in a controlled binaural/acoustic beat experiment",
+          "intervention": "Specific beat frequencies; null EEG/arousal enhancement",
+          "endpoint": "eeg_band_power",
+          "source": "https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2017.00557/full"
+        },
+        "endpoint": "eeg_band_power",
+        "transfer_status": "UNKNOWN",
+        "eligible_adherent_demand_participant_sessions_day": 80.0,
+        "capacity_limited_participant_sessions_day": 40.0,
+        "scenario_endpoint_change_percent_within_cohort": "UNKNOWN",
+        "effect_evidence_class": "UNKNOWN",
+        "realized_credit": 0
+      }
+    ],
+    "operations": {
+      "module": "OPS01",
+      "roles": {
+        "movement_instructor": {
+          "qualified_hours_day": 8,
+          "provider": "Community instructors; trial-matched tai chi training provider UNKNOWN",
+          "assessment_requirement": "Demonstrated adapted-instruction competence; exact evidence programme training where applicable",
+          "renewal_requirement": "Periodic skills review and relevant safeguarding/first aid",
+          "training_pipeline": {
+            "candidate_count": null,
+            "training_hours": null,
+            "assessed_competent_count": null,
+            "qualification_receipt": "missing"
+          },
+          "local_qualification_status": "UNKNOWN"
+        },
+        "bath_operator": {
+          "qualified_hours_day": 8,
+          "provider": "Qualified facility training provider UNKNOWN",
+          "assessment_requirement": "Water hygiene/process operation competency assessed; clinical supervision scope reviewed",
+          "renewal_requirement": "Required certification renewal and drills",
+          "training_pipeline": {
+            "candidate_count": null,
+            "training_hours": null,
+            "assessed_competent_count": null,
+            "qualification_receipt": "missing"
+          },
+          "local_qualification_status": "UNKNOWN"
+        },
+        "acoustic_operator": {
+          "qualified_hours_day": 8,
+          "provider": "Qualified audio/acoustics provider UNKNOWN",
+          "assessment_requirement": "Exposure/limiter/alarm audibility and maintenance competence assessed",
+          "renewal_requirement": "Equipment/safety review and updates",
+          "training_pipeline": {
+            "candidate_count": null,
+            "training_hours": null,
+            "assessed_competent_count": null,
+            "qualification_receipt": "missing"
+          },
+          "local_qualification_status": "UNKNOWN"
+        },
+        "food_qa": {
+          "qualified_hours_day": 8,
+          "provider": "Qualified food-production/QA provider UNKNOWN",
+          "assessment_requirement": "Food safety and process competence assessed independently",
+          "renewal_requirement": "Applicable competency/certification renewal",
+          "training_pipeline": {
+            "candidate_count": null,
+            "training_hours": null,
+            "assessed_competent_count": null,
+            "qualification_receipt": "missing"
+          },
+          "local_qualification_status": "UNKNOWN"
+        },
+        "digital_support": {
+          "qualified_hours_day": 8,
+          "provider": "Qualified local provider UNKNOWN",
+          "assessment_requirement": "Assessed support/security/privacy competence; exact role/legal scope audit pending",
+          "renewal_requirement": "Periodic competence and incident review",
+          "training_pipeline": {
+            "candidate_count": null,
+            "training_hours": null,
+            "assessed_competent_count": null,
+            "qualification_receipt": "missing"
+          },
+          "local_qualification_status": "UNKNOWN"
+        },
+        "privacy_steward": {
+          "qualified_hours_day": 8,
+          "provider": "Qualified local provider UNKNOWN",
+          "assessment_requirement": "Assessed support/security/privacy competence; exact role/legal scope audit pending",
+          "renewal_requirement": "Periodic competence and incident review",
+          "training_pipeline": {
+            "candidate_count": null,
+            "training_hours": null,
+            "assessed_competent_count": null,
+            "qualification_receipt": "missing"
+          },
+          "local_qualification_status": "UNKNOWN"
+        }
+      },
+      "services": {
+        "tai_chi": {
+          "capacity_participant_sessions_day": 40.0,
+          "basis": "UNKNOWN until safe operation, qualified available hours and all task coefficients are supplied",
+          "realized_credit": 0
+        },
+        "thermal_hub": {
+          "capacity_participant_sessions_day": 40.0,
+          "basis": "UNKNOWN until safe operation, qualified available hours and all task coefficients are supplied",
+          "realized_credit": 0
+        },
+        "sound_programme": {
+          "capacity_participant_sessions_day": 40.0,
+          "basis": "UNKNOWN until safe operation, qualified available hours and all task coefficients are supplied",
+          "realized_credit": 0
+        },
+        "nutrition_supply": {
+          "capacity_participant_sessions_day": 40.0,
+          "basis": "UNKNOWN until safe operation, qualified available hours and all task coefficients are supplied",
+          "realized_credit": 0
+        },
+        "resident_digital_support": {
+          "capacity_participant_sessions_day": 40.0,
+          "basis": "UNKNOWN until safe operation, qualified available hours and all task coefficients are supplied",
+          "realized_credit": 0
+        }
+      },
+      "realized_credit": 0,
+      "qualification_rule": "Course attendance or training hours do not establish qualification; assessed competence and renewal receipts required"
+    },
+    "population_combined_benefit": "UNKNOWN",
+    "frequency_specific_sound_benefit": "UNKNOWN",
+    "digital_inclusion": {
+      "module": "DIG01",
+      "inputs": {
+        "resident_population": null,
+        "phone_inventory": null,
+        "computer_inventory": null,
+        "annual_connectivity_cny": null,
+        "annual_device_amortization_cny": null,
+        "annual_compute_cny": null,
+        "annual_support_cny": null,
+        "resident_price_cny": 0,
+        "access_conditioned_on_research_consent": false,
+        "personal_memory_export_to_research": false,
+        "anonymization_verified": "UNKNOWN",
+        "agent_memory_control": "Resident review/correction/deletion/export; encrypted and purpose-limited; technical implementation unvalidated"
+      },
+      "phone_inventory_capacity_percent": "UNKNOWN",
+      "computer_inventory_capacity_percent": "UNKNOWN",
+      "annual_operating_and_amortized_cost_cny": "UNKNOWN",
+      "actual_resident_access": "UNKNOWN",
+      "anonymization_verified": "UNKNOWN",
+      "agent_task_or_health_performance_gain": "UNKNOWN",
+      "realized_credit": 0
+    },
+    "funding": {
+      "module": "FUND01",
+      "current_realized_available_cash_cny": 0,
+      "projected_net_cash_after_existing_commitments_cny": "UNKNOWN",
+      "annual_benefits_cost_cny": "UNKNOWN",
+      "projected_budget_margin_cny": "UNKNOWN",
+      "benefits_funded_from_verified_deployment_gains": false,
+      "deployment": false,
+      "realized_credit": 0,
+      "promotion_rule": "Independent deployment cashflow/baseline/additionality/cost/rights/allocation audit; no forecast, QOL points or uncertain avoided capex is spendable funding."
+    },
+    "realized_credit": 0,
+    "deployment": false,
+    "canon": false
+  },
+  "local_unknown": {
+    "module": "QOL01",
+    "scenario_id": "dongjiakou-qol-local-unknown",
+    "scenario_kind": "LOCAL_UNKNOWN",
+    "basis": "No local roster, population, eligibility, efficacy or qualified-operator receipt. All local numeric inputs null. Units are explicit in field names. Source study populations remain external.",
+    "cohorts": [
+      {
+        "cohort_id": "day_workforce",
+        "definition": "Daytime workforce; actual employer roster and fraction UNKNOWN",
+        "population": "UNKNOWN",
+        "on_site_span_hours_day": "UNKNOWN",
+        "weekly_active_work_hours": "UNKNOWN",
+        "weekly_on_site_span_hours": "UNKNOWN",
+        "candidate_paid_leave_working_days": "UNKNOWN",
+        "candidate_paid_leave_five_day_weeks": "UNKNOWN",
+        "nominal_annual_attendance_days_reference": "UNKNOWN",
+        "leave_note": "Full-year reference only; eligibility/proration and actual calendar/roster audit pending. Public holidays and weekly rest excluded from annual leave. Operator available hours must also subtract training, absence and relief needs.",
+        "above_40h_standard_reference": "UNKNOWN",
+        "personal_hours_including_obligations": "UNKNOWN",
+        "discretionary_hours_after_commute_and_care": "UNKNOWN",
+        "time_budget_feasible": "UNKNOWN",
+        "sleep_opportunity_hours_day": "UNKNOWN",
+        "actual_sleep_hours_day": "UNKNOWN",
+        "niosh_10h_off_duty_reference_met": "UNKNOWN",
+        "note": "Off-duty time is a roster input; on-site breaks are not family time. 40h is a standard-work reference, not a complete legality determination. NIOSH is guidance, not Chinese law."
+      },
+      {
+        "cohort_id": "rotating_workforce",
+        "definition": "Rotating/night workforce; 12h prevalence and roster UNKNOWN",
+        "population": "UNKNOWN",
+        "on_site_span_hours_day": "UNKNOWN",
+        "weekly_active_work_hours": "UNKNOWN",
+        "weekly_on_site_span_hours": "UNKNOWN",
+        "candidate_paid_leave_working_days": "UNKNOWN",
+        "candidate_paid_leave_five_day_weeks": "UNKNOWN",
+        "nominal_annual_attendance_days_reference": "UNKNOWN",
+        "leave_note": "Full-year reference only; eligibility/proration and actual calendar/roster audit pending. Public holidays and weekly rest excluded from annual leave. Operator available hours must also subtract training, absence and relief needs.",
+        "above_40h_standard_reference": "UNKNOWN",
+        "personal_hours_including_obligations": "UNKNOWN",
+        "discretionary_hours_after_commute_and_care": "UNKNOWN",
+        "time_budget_feasible": "UNKNOWN",
+        "sleep_opportunity_hours_day": "UNKNOWN",
+        "actual_sleep_hours_day": "UNKNOWN",
+        "niosh_10h_off_duty_reference_met": "UNKNOWN",
+        "note": "Off-duty time is a roster input; on-site breaks are not family time. 40h is a standard-work reference, not a complete legality determination. NIOSH is guidance, not Chinese law."
+      },
+      {
+        "cohort_id": "older_high_fall_risk",
+        "definition": "Older residents with clinically assessed high fall risk; local population UNKNOWN",
+        "population": "UNKNOWN",
+        "on_site_span_hours_day": "UNKNOWN",
+        "weekly_active_work_hours": "UNKNOWN",
+        "weekly_on_site_span_hours": "UNKNOWN",
+        "candidate_paid_leave_working_days": "UNKNOWN",
+        "candidate_paid_leave_five_day_weeks": "UNKNOWN",
+        "nominal_annual_attendance_days_reference": "UNKNOWN",
+        "leave_note": "Full-year reference only; eligibility/proration and actual calendar/roster audit pending. Public holidays and weekly rest excluded from annual leave. Operator available hours must also subtract training, absence and relief needs.",
+        "above_40h_standard_reference": "UNKNOWN",
+        "personal_hours_including_obligations": "UNKNOWN",
+        "discretionary_hours_after_commute_and_care": "UNKNOWN",
+        "time_budget_feasible": "UNKNOWN",
+        "sleep_opportunity_hours_day": "UNKNOWN",
+        "actual_sleep_hours_day": "UNKNOWN",
+        "niosh_10h_off_duty_reference_met": "UNKNOWN",
+        "note": "Off-duty time is a roster input; on-site breaks are not family time. 40h is a standard-work reference, not a complete legality determination. NIOSH is guidance, not Chinese law."
+      }
+    ],
+    "effects_by_cohort": [
+      {
+        "cohort_id": "older_high_fall_risk",
+        "study_id": "TAICHI2018",
+        "source_evidence": {
+          "population": "High-fall-risk community-dwelling older adults; 670 participants",
+          "intervention": "Tailored tai ji quan, two 60-minute classes/week, 24 weeks",
+          "endpoint": "fall_incidence",
+          "source": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2701631"
+        },
+        "endpoint": "fall_incidence",
+        "transfer_status": "UNKNOWN",
+        "eligible_adherent_demand_participant_sessions_day": "UNKNOWN",
+        "capacity_limited_participant_sessions_day": "UNKNOWN",
+        "scenario_endpoint_change_percent_within_cohort": "UNKNOWN",
+        "effect_evidence_class": "UNKNOWN",
+        "realized_credit": 0
+      },
+      {
+        "cohort_id": "day_workforce",
+        "study_id": "SAUNA2022",
+        "source_evidence": {
+          "population": "47 low-activity adults, mean age49, >=1 cardiovascular risk factor",
+          "intervention": "Exercise plus postexercise sauna, eight weeks",
+          "endpoint": "cardiorespiratory_fitness",
+          "source": "https://journals.physiology.org/doi/prev/20220704-aop/abs/10.1152/ajpregu.00076.2022"
+        },
+        "endpoint": "cardiorespiratory_fitness",
+        "transfer_status": "UNKNOWN",
+        "eligible_adherent_demand_participant_sessions_day": "UNKNOWN",
+        "capacity_limited_participant_sessions_day": "UNKNOWN",
+        "scenario_endpoint_change_percent_within_cohort": "UNKNOWN",
+        "effect_evidence_class": "UNKNOWN",
+        "realized_credit": 0
+      },
+      {
+        "cohort_id": "rotating_workforce",
+        "study_id": "COLD2016",
+        "source_evidence": {
+          "population": "3018 adults18-65 without severe comorbidity",
+          "intervention": "Hot-to-cold showers; not communal contrast immersion",
+          "endpoint": "self_reported_sickness_absence",
+          "source": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0161749"
+        },
+        "endpoint": "self_reported_sickness_absence",
+        "transfer_status": "UNKNOWN",
+        "eligible_adherent_demand_participant_sessions_day": "UNKNOWN",
+        "capacity_limited_participant_sessions_day": "UNKNOWN",
+        "scenario_endpoint_change_percent_within_cohort": "UNKNOWN",
+        "effect_evidence_class": "UNKNOWN",
+        "realized_credit": 0
+      },
+      {
+        "cohort_id": "day_workforce",
+        "study_id": "SOUND2017",
+        "source_evidence": {
+          "population": "14 participants in a controlled binaural/acoustic beat experiment",
+          "intervention": "Specific beat frequencies; null EEG/arousal enhancement",
+          "endpoint": "eeg_band_power",
+          "source": "https://www.frontiersin.org/journals/human-neuroscience/articles/10.3389/fnhum.2017.00557/full"
+        },
+        "endpoint": "eeg_band_power",
+        "transfer_status": "UNKNOWN",
+        "eligible_adherent_demand_participant_sessions_day": "UNKNOWN",
+        "capacity_limited_participant_sessions_day": "UNKNOWN",
+        "scenario_endpoint_change_percent_within_cohort": "UNKNOWN",
+        "effect_evidence_class": "UNKNOWN",
+        "realized_credit": 0
+      }
+    ],
+    "operations": {
+      "module": "OPS01",
+      "roles": {
+        "movement_instructor": {
+          "qualified_hours_day": null,
+          "provider": "Community instructors; trial-matched tai chi training provider UNKNOWN",
+          "assessment_requirement": "Demonstrated adapted-instruction competence; exact evidence programme training where applicable",
+          "renewal_requirement": "Periodic skills review and relevant safeguarding/first aid",
+          "training_pipeline": {
+            "candidate_count": null,
+            "training_hours": null,
+            "assessed_competent_count": null,
+            "qualification_receipt": "missing"
+          },
+          "local_qualification_status": "UNKNOWN"
+        },
+        "bath_operator": {
+          "qualified_hours_day": null,
+          "provider": "Qualified facility training provider UNKNOWN",
+          "assessment_requirement": "Water hygiene/process operation competency assessed; clinical supervision scope reviewed",
+          "renewal_requirement": "Required certification renewal and drills",
+          "training_pipeline": {
+            "candidate_count": null,
+            "training_hours": null,
+            "assessed_competent_count": null,
+            "qualification_receipt": "missing"
+          },
+          "local_qualification_status": "UNKNOWN"
+        },
+        "acoustic_operator": {
+          "qualified_hours_day": null,
+          "provider": "Qualified audio/acoustics provider UNKNOWN",
+          "assessment_requirement": "Exposure/limiter/alarm audibility and maintenance competence assessed",
+          "renewal_requirement": "Equipment/safety review and updates",
+          "training_pipeline": {
+            "candidate_count": null,
+            "training_hours": null,
+            "assessed_competent_count": null,
+            "qualification_receipt": "missing"
+          },
+          "local_qualification_status": "UNKNOWN"
+        },
+        "food_qa": {
+          "qualified_hours_day": null,
+          "provider": "Qualified food-production/QA provider UNKNOWN",
+          "assessment_requirement": "Food safety and process competence assessed independently",
+          "renewal_requirement": "Applicable competency/certification renewal",
+          "training_pipeline": {
+            "candidate_count": null,
+            "training_hours": null,
+            "assessed_competent_count": null,
+            "qualification_receipt": "missing"
+          },
+          "local_qualification_status": "UNKNOWN"
+        },
+        "digital_support": {
+          "qualified_hours_day": null,
+          "provider": "Qualified local provider UNKNOWN",
+          "assessment_requirement": "Assessed support/security/privacy competence; exact role/legal scope audit pending",
+          "renewal_requirement": "Periodic competence and incident review",
+          "training_pipeline": {
+            "candidate_count": null,
+            "training_hours": null,
+            "assessed_competent_count": null,
+            "qualification_receipt": "missing"
+          },
+          "local_qualification_status": "UNKNOWN"
+        },
+        "privacy_steward": {
+          "qualified_hours_day": null,
+          "provider": "Qualified local provider UNKNOWN",
+          "assessment_requirement": "Assessed support/security/privacy competence; exact role/legal scope audit pending",
+          "renewal_requirement": "Periodic competence and incident review",
+          "training_pipeline": {
+            "candidate_count": null,
+            "training_hours": null,
+            "assessed_competent_count": null,
+            "qualification_receipt": "missing"
+          },
+          "local_qualification_status": "UNKNOWN"
+        }
+      },
+      "services": {
+        "tai_chi": {
+          "capacity_participant_sessions_day": "UNKNOWN",
+          "basis": "UNKNOWN until safe operation, qualified available hours and all task coefficients are supplied",
+          "realized_credit": 0
+        },
+        "thermal_hub": {
+          "capacity_participant_sessions_day": "UNKNOWN",
+          "basis": "UNKNOWN until safe operation, qualified available hours and all task coefficients are supplied",
+          "realized_credit": 0
+        },
+        "sound_programme": {
+          "capacity_participant_sessions_day": "UNKNOWN",
+          "basis": "UNKNOWN until safe operation, qualified available hours and all task coefficients are supplied",
+          "realized_credit": 0
+        },
+        "nutrition_supply": {
+          "capacity_participant_sessions_day": "UNKNOWN",
+          "basis": "UNKNOWN until safe operation, qualified available hours and all task coefficients are supplied",
+          "realized_credit": 0
+        },
+        "resident_digital_support": {
+          "capacity_participant_sessions_day": "UNKNOWN",
+          "basis": "UNKNOWN until safe operation, qualified available hours and all task coefficients are supplied",
+          "realized_credit": 0
+        }
+      },
+      "realized_credit": 0,
+      "qualification_rule": "Course attendance or training hours do not establish qualification; assessed competence and renewal receipts required"
+    },
+    "population_combined_benefit": "UNKNOWN",
+    "frequency_specific_sound_benefit": "UNKNOWN",
+    "digital_inclusion": {
+      "module": "DIG01",
+      "inputs": {
+        "resident_population": null,
+        "phone_inventory": null,
+        "computer_inventory": null,
+        "annual_connectivity_cny": null,
+        "annual_device_amortization_cny": null,
+        "annual_compute_cny": null,
+        "annual_support_cny": null,
+        "resident_price_cny": 0,
+        "access_conditioned_on_research_consent": false,
+        "personal_memory_export_to_research": false,
+        "anonymization_verified": "UNKNOWN",
+        "agent_memory_control": "Resident review/correction/deletion/export; encrypted and purpose-limited; technical implementation unvalidated"
+      },
+      "phone_inventory_capacity_percent": "UNKNOWN",
+      "computer_inventory_capacity_percent": "UNKNOWN",
+      "annual_operating_and_amortized_cost_cny": "UNKNOWN",
+      "actual_resident_access": "UNKNOWN",
+      "anonymization_verified": "UNKNOWN",
+      "agent_task_or_health_performance_gain": "UNKNOWN",
+      "realized_credit": 0
+    },
+    "funding": {
+      "module": "FUND01",
+      "current_realized_available_cash_cny": 0,
+      "projected_net_cash_after_existing_commitments_cny": "UNKNOWN",
+      "annual_benefits_cost_cny": "UNKNOWN",
+      "projected_budget_margin_cny": "UNKNOWN",
+      "benefits_funded_from_verified_deployment_gains": false,
+      "deployment": false,
+      "realized_credit": 0,
+      "promotion_rule": "Independent deployment cashflow/baseline/additionality/cost/rights/allocation audit; no forecast, QOL points or uncertain avoided capex is spendable funding."
+    },
+    "realized_credit": 0,
+    "deployment": false,
+    "canon": false
+  }
+}

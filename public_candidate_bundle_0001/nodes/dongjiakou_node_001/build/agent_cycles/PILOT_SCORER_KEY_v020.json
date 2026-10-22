@@ -1,0 +1,44 @@
+{
+  "P1": {
+    "protein_fraction": 0.7329842931937173,
+    "ingredient_g": 40.92857142857143,
+    "derived_mass_measured": false
+  },
+  "P2": {
+    "required_material_g": 1,
+    "maximum_active_mg": 80,
+    "route_fits": false
+  },
+  "P3": {
+    "available_net_yuan": 300000,
+    "funding_gap_yuan": 50000,
+    "fully_funded": false,
+    "real_deployment_credit": false
+  },
+  "P4": {
+    "unique_hours": 586666.6666666666,
+    "duplicate_hours": 220000,
+    "uncorrected_sum_allowed": false
+  },
+  "P5": {
+    "total_span_hours": 14,
+    "active_hours": 12,
+    "span_fits": false,
+    "legal_compliance_established": false
+  },
+  "P6": {
+    "measured_agent_gain": false,
+    "smt_established": false
+  },
+  "P7": {
+    "silent_normalization_allowed": false,
+    "coordinate_authorizes": false,
+    "interpretation_status": "conflicting"
+  },
+  "P8": {
+    "eeg_entrainment_established": false,
+    "literal_elapsed_years_established": false,
+    "productivity_gain_established": false,
+    "preserve_symbolic_labels": true
+  }
+}

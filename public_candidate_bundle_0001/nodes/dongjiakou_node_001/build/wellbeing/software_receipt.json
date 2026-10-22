@@ -1,0 +1,19 @@
+{
+  "status": "CANDIDATE",
+  "baseline_tests": 258,
+  "final_tests": 277,
+  "reproduction": {
+    "matched": 154,
+    "mismatched": 0,
+    "annotated": 1
+  },
+  "validation": {
+    "PASS": 15,
+    "FAIL": 0,
+    "VETO": 0,
+    "NOT_APPLICABLE": 1
+  },
+  "hosted_ci": "NOT_ASSERTED",
+  "deployment": false,
+  "realized_credit": 0
+}
