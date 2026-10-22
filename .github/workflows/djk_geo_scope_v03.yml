@@ -1,0 +1,25 @@
+name: DJK Geo and Material Guards v0.3
+
+on:
+  push:
+    branches: [research/djk-qingdao-evidence-material-ledger-v03-20261010]
+  pull_request:
+    paths:
+      - 'research/dragonseek_2_0/bio01e_scope_guard_v03.py'
+      - 'research/dragonseek_2_0/tests/test_bio01e_scope_guard_v03.py'
+      - '.github/workflows/djk_geo_scope_v03.yml'
+
+jobs:
+  provenance-tests:
+    name: Boundary and accounting invariant tests
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python version
+        run: python --version
+      - name: Syntax guard
+        run: python -m py_compile research/dragonseek_2_0/bio01e_scope_guard_v03.py
+      - name: Unit tests
+        run: python -m unittest discover -s research/dragonseek_2_0/tests -p test_bio01e_scope_guard_v03.py -v
