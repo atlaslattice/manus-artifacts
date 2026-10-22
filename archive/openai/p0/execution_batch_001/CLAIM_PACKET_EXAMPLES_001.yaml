@@ -1,0 +1,55 @@
+artifact_id: CLAIM-PACKET-EXAMPLES-001-2026-05-30
+version: "0.1"
+status: candidate_examples
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+write_scope: staging_only
+examples:
+  - claim_packet_id: CP-OAI-001
+    claim_text: OpenAI preference does not grant OpenAI authority.
+    source_surface: github
+    raw_export_status: partial_raw
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_effect: none
+    review_route: [GPTBrain, Lucerna, Rootglass]
+    evidence_refs:
+      - archive/openai/p0/OPENAI_P0_SCHEMA_DELTA_PACKET_2026-05-30.md
+      - archive/openai/p0/OPENAI_ADJACENT_TOOL_MATRIX_2026-05-30.yaml
+    does_not_prove:
+      - does_not_prove_official_OpenAI_affiliation
+      - does_not_prove_OpenAI_authority
+      - does_not_prove_deployment
+      - does_not_prove_canon
+    negative_status_memory:
+      not_canon: true
+      not_deployed: true
+      no_authority: true
+      not_raw: false
+      not_reviewed: true
+      not_public: false
+
+  - claim_packet_id: CP-OAI-002
+    claim_text: Forked or present repositories are not necessarily integrated.
+    source_surface: github
+    raw_export_status: partial_raw
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_effect: none
+    review_route: [TIDELOCK, GPTBrain]
+    evidence_refs:
+      - archive/openai/p0/OPENAI_ADJACENT_GITHUB_TOOL_AUDIT_2026-05-30_v0_1.md
+      - archive/openai/p0/OPENAI_ADJACENT_TOOL_MATRIX_2026-05-30.yaml
+    does_not_prove:
+      - does_not_prove_active_integration
+      - does_not_prove_tests_passed
+      - does_not_prove_security_review
+      - does_not_prove_public_release_ready
+    negative_status_memory:
+      not_canon: true
+      not_deployed: true
+      no_authority: true
+      not_raw: false
+      not_reviewed: true
+      not_public: false

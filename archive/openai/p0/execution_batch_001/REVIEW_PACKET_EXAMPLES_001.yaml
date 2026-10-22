@@ -1,0 +1,56 @@
+artifact_id: REVIEW-PACKET-EXAMPLES-001-2026-05-31
+version: "0.1"
+status: candidate_examples
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+write_scope: staging_only
+examples:
+  - review_packet_id: RP-OAI-001
+    target_artifact: OPENAI_P0_SCHEMA_DELTA_PACKET_2026-05-30.md
+    review_summary: Candidate schema deltas are useful and coherent, but remain staging-only until implemented and tested.
+    source_surface: github
+    raw_export_status: partial_raw
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_effect: none
+    review_route: [GPTBrain, AtlasBrain, Lucerna, TIDELOCK]
+    findings:
+      - does_not_prove is a strong anti-overclaim field
+      - shared_status_spine reduces schema drift
+      - negative_status_memory preserves humility
+      - claude_origin_status preserves material while routing it for review
+    missing_receipts:
+      - machine-readable validators
+      - passing/failing fixtures
+      - implementation PR in active schema locations
+    does_not_prove:
+      - does_not_prove_canon
+      - does_not_prove_deployment
+      - does_not_prove_runtime_integration
+      - does_not_prove_schema_validation
+      - does_not_prove_public_release_ready
+    next_action: Add validators and fixtures.
+  - review_packet_id: RP-OAI-002
+    target_artifact: OPENAI_ADJACENT_TOOL_MATRIX_2026-05-30.yaml
+    review_summary: Matrix separates archived references from active candidate lanes; integration remains unproven until adapter and test receipts exist.
+    source_surface: github
+    raw_export_status: partial_raw
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_effect: none
+    review_route: [TIDELOCK, GPTBrain, Hashlight]
+    findings:
+      - Useful fork inventory exists
+      - Active lanes appear to be Sheldonbrain, UWS, and Aluminum OS
+      - Archived references should not be described as integrated
+    missing_receipts:
+      - source passports per repo
+      - adapter path inspection
+      - build/test receipts
+    does_not_prove:
+      - does_not_prove_integration
+      - does_not_prove_maintenance_status
+      - does_not_prove_security_review
+      - does_not_prove_OpenAI_affiliation
+    next_action: Create SourcePassports for P0 repos.

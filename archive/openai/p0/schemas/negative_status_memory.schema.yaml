@@ -1,0 +1,44 @@
+artifact_id: NEGATIVE-STATUS-MEMORY-SCHEMA-2026-05-30
+version: "0.1"
+status: candidate_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+write_scope: staging_only
+purpose: Ensure graph nodes preserve what they are not, preventing false completeness and authority laundering.
+
+field_group:
+  negative_status_memory:
+    applies_to:
+      - GraphNode
+      - SourceArtifact
+      - SynthesisArtifact
+    required: true
+    fields:
+      not_canon:
+        type: boolean
+        required: true
+      not_deployed:
+        type: boolean
+        required: true
+      no_authority:
+        type: boolean
+        required: true
+      not_raw:
+        type: boolean
+        required: true
+      not_reviewed:
+        type: boolean
+        required: true
+      not_public:
+        type: boolean
+        required: true
+
+rule: >
+  Negative status is not a failure. It is an explicit memory field that protects lineage and review boundaries.
+
+must_not_infer:
+  - high_connectivity_does_not_mean_authority
+  - graph_node_does_not_mean_truth
+  - negative_status_does_not_mean_delete
+  - incomplete_does_not_mean_useless

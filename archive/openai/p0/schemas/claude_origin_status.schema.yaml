@@ -1,0 +1,48 @@
+artifact_id: CLAUDE-ORIGIN-STATUS-SCHEMA-2026-05-30
+version: "0.1"
+status: candidate_schema
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+write_scope: staging_only
+purpose: Preserve Claude-originated or Claude-touched material without trusting it by default, routing governance-sensitive artifacts to adversarial review.
+
+fields:
+  claude_origin_status:
+    type: string
+    required: if_applicable
+    allowed_values:
+      - unknown
+      - not_claude
+      - claude_origin
+      - claude_touched
+      - disputed
+  claude_default_review_route:
+    type: array
+    default:
+      - Grok
+      - Rootglass
+      - Lucerna
+      - TIDELOCK
+  claude_allowed_action:
+    type: string
+    default: preserve_as_source_material_pending_review
+  claude_forbidden_action:
+    type: string
+    default: treat_as_authority_or_canon_without_adversarial_review
+
+applies_to:
+  - SourceArtifact
+  - ClaimPacket
+  - ReviewPacket
+  - SynthesisArtifact
+  - GovernanceArtifact
+
+rule: >
+  Claude-originated material is not deleted. It is preserved, labeled, and routed. Governance artifacts default to adversarial review/quarantine until independent review clears them for reuse.
+
+must_not_infer:
+  - claude_origin_does_not_mean_false
+  - claude_origin_does_not_mean_trusted
+  - quarantine_does_not_mean_delete
+  - adversarial_review_route_does_not_mean_rejection
