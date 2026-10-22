@@ -1,0 +1,79 @@
+{
+  "version": "0.2-candidate",
+  "status": "STUB_ONLY_NOT_CONNECTED",
+  "authentication_rule": "OAuth authorization-code with PKCE only when provider documents third-party authorization and app registration is approved; otherwise user account linking is NOT represented as connected.",
+  "providers": [
+    {
+      "id": "mnr_ocean_cloud",
+      "title": "Ocean Cloud / MNR",
+      "portal": "https://oceancloud.nmdis.org.cn/#/home",
+      "catalogue": "https://www.pecmnr.cn/news.html?aid=5317429",
+      "data_domains": [
+        "3d_temperature",
+        "salinity",
+        "currents",
+        "waves",
+        "marine_statistics"
+      ],
+      "source_status": "COLLABORATOR_REPORTED",
+      "verification_status": "CORROBORATED_CATALOGUE_ONLY",
+      "auth_flows": [
+        "provider_portal_login",
+        "documented_api_if_authorized"
+      ],
+      "oauth_supported": "NOT_CONFIRMED",
+      "api_access": "NOT_CONFIRMED",
+      "credential_mode": "none",
+      "state": "NOT_CONNECTED",
+      "user_action": "Open provider portal; register/sign in; obtain documented API access or permitted downloads; then configure connector with approved credentials."
+    },
+    {
+      "id": "cma_data_network",
+      "title": "China Meteorological Data Network / CMA",
+      "portal": "https://data.cma.cn/",
+      "catalogue": "https://m.data.cma.cn/data/cdcindex/cid/6d1b5efbdcbf9a58.html",
+      "data_domains": [
+        "observations",
+        "reanalysis",
+        "forecasts",
+        "satellite",
+        "radar"
+      ],
+      "source_status": "COLLABORATOR_REPORTED",
+      "verification_status": "PARTIALLY_CORROBORATED",
+      "auth_flows": [
+        "registered_provider_account",
+        "approved_data_api_account_if_available"
+      ],
+      "oauth_supported": "NOT_CONFIRMED",
+      "api_access": "DOCUMENTED_FOR_SOME_PRODUCTS_SCOPE_UNKNOWN",
+      "credential_mode": "server_side_only_if_authorized",
+      "state": "NOT_CONNECTED",
+      "user_action": "Sign in to CMA, review product/API entitlement and licence; use provider-issued credentials only through approved secure connector."
+    }
+  ],
+  "connection_ui_states": [
+    "NOT_CONNECTED",
+    "OPEN_PROVIDER_SIGNIN",
+    "REGISTRATION_REQUIRED",
+    "APPROVAL_REQUIRED",
+    "CREDENTIALS_REQUIRED",
+    "CONNECTING",
+    "CONNECTED",
+    "TOKEN_EXPIRED",
+    "PERMISSION_DENIED",
+    "DATASET_RESTRICTED"
+  ],
+  "security": [
+    "no_tokens_in_git",
+    "no_credentials_in_browser_localStorage",
+    "no_user_password_proxy",
+    "provider_approved_scopes_only",
+    "encrypted_server_side_secrets",
+    "revocation",
+    "rate_limit",
+    "consent_record",
+    "no_browser_session_scraping"
+  ],
+  "refresh_policy": "disabled_until_authenticated_and_authorized"
+}
