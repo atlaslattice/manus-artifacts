@@ -1,0 +1,528 @@
+{
+  "schema_version": "0.1",
+  "node_id": "SYNTHETIC-NOT-A-LOCAL-RECEIPT",
+  "qol_subnode": "QOL01",
+  "classification": "RESEARCH_CANDIDATE_NON_CANON",
+  "first_class_objective": true,
+  "composite_score": null,
+  "objective_vector": [
+    {
+      "indicator_id": "place_restorativeness",
+      "stratum": "residents",
+      "domain": "experience",
+      "claim_dimension": "EXPERIENTIAL_ENVIRONMENT",
+      "direction": "HIGHER_BETTER",
+      "unit": "score_0_10",
+      "change_interval": {
+        "low": 1.5,
+        "high": 2.5
+      },
+      "state": "REFERENCE_OR_SCENARIO_ONLY",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "affordable_nutritious_food_access",
+      "stratum": "residents",
+      "domain": "water_food",
+      "claim_dimension": "ACCESS",
+      "direction": "HIGHER_BETTER",
+      "unit": "percent",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "anxiety",
+      "stratum": "residents",
+      "domain": "experience",
+      "claim_dimension": "SUBJECTIVE_WELLBEING",
+      "direction": "LOWER_BETTER",
+      "unit": "score_0_10",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "cold_chain_compliance",
+      "stratum": "residents",
+      "domain": "water_food",
+      "claim_dimension": "SERVICE_QUALITY",
+      "direction": "HIGHER_BETTER",
+      "unit": "percent",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "culture_education_access",
+      "stratum": "residents",
+      "domain": "community",
+      "claim_dimension": "ACCESS",
+      "direction": "HIGHER_BETTER",
+      "unit": "percent",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "green_access_10min_walk",
+      "stratum": "residents",
+      "domain": "nature",
+      "claim_dimension": "ACCESS",
+      "direction": "HIGHER_BETTER",
+      "unit": "percent",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "green_access_800m",
+      "stratum": "residents",
+      "domain": "nature",
+      "claim_dimension": "ACCESS",
+      "direction": "HIGHER_BETTER",
+      "unit": "percent",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "green_area",
+      "stratum": "residents",
+      "domain": "nature",
+      "claim_dimension": "ECOLOGICAL_CONDITION",
+      "direction": "HIGHER_BETTER",
+      "unit": "ha",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "green_space_per_person",
+      "stratum": "residents",
+      "domain": "nature",
+      "claim_dimension": "ACCESS",
+      "direction": "HIGHER_BETTER",
+      "unit": "m2/person",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "happiness",
+      "stratum": "residents",
+      "domain": "experience",
+      "claim_dimension": "SUBJECTIVE_WELLBEING",
+      "direction": "HIGHER_BETTER",
+      "unit": "score_0_10",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "heat_island_delta",
+      "stratum": "residents",
+      "domain": "noise_heat",
+      "claim_dimension": "HUMAN_EXPOSURE",
+      "direction": "LOWER_BETTER",
+      "unit": "degC",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "heat_stress_hours",
+      "stratum": "residents",
+      "domain": "noise_heat",
+      "claim_dimension": "HUMAN_EXPOSURE",
+      "direction": "LOWER_BETTER",
+      "unit": "hours/person/year",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "housing_cost_burden",
+      "stratum": "residents",
+      "domain": "housing_work",
+      "claim_dimension": "DIGNITY_AND_CAPABILITY",
+      "direction": "LOWER_BETTER",
+      "unit": "percent_income",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "housing_crowding",
+      "stratum": "residents",
+      "domain": "housing_work",
+      "claim_dimension": "DIGNITY_AND_CAPABILITY",
+      "direction": "LOWER_BETTER",
+      "unit": "persons/room",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "irrigation_load",
+      "stratum": "residents",
+      "domain": "stewardship",
+      "claim_dimension": "LIFECYCLE_RESOURCE_BURDEN",
+      "direction": "LOWER_BETTER",
+      "unit": "m3/year",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "life_satisfaction",
+      "stratum": "residents",
+      "domain": "experience",
+      "claim_dimension": "SUBJECTIVE_WELLBEING",
+      "direction": "HIGHER_BETTER",
+      "unit": "score_0_10",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "maintenance_cost",
+      "stratum": "residents",
+      "domain": "stewardship",
+      "claim_dimension": "LIFECYCLE_RESOURCE_BURDEN",
+      "direction": "LOWER_BETTER",
+      "unit": "CNY/year",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "native_habitat_condition",
+      "stratum": "residents",
+      "domain": "ecology",
+      "claim_dimension": "ECOLOGICAL_CONDITION",
+      "direction": "HIGHER_BETTER",
+      "unit": "protocol_score_0_1",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "native_species_richness",
+      "stratum": "residents",
+      "domain": "ecology",
+      "claim_dimension": "ECOLOGICAL_CONDITION",
+      "direction": "HIGHER_BETTER",
+      "unit": "species_count",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "no2_annual",
+      "stratum": "residents",
+      "domain": "air",
+      "claim_dimension": "HUMAN_EXPOSURE",
+      "direction": "LOWER_BETTER",
+      "unit": "ug/m3",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "noise_day",
+      "stratum": "residents",
+      "domain": "noise_heat",
+      "claim_dimension": "HUMAN_EXPOSURE",
+      "direction": "LOWER_BETTER",
+      "unit": "dB_LAeq",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "noise_night",
+      "stratum": "residents",
+      "domain": "noise_heat",
+      "claim_dimension": "HUMAN_EXPOSURE",
+      "direction": "LOWER_BETTER",
+      "unit": "dB_LAeq",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "pm10_24h",
+      "stratum": "residents",
+      "domain": "air",
+      "claim_dimension": "HUMAN_EXPOSURE",
+      "direction": "LOWER_BETTER",
+      "unit": "ug/m3",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "pm25_24h",
+      "stratum": "residents",
+      "domain": "air",
+      "claim_dimension": "HUMAN_EXPOSURE",
+      "direction": "LOWER_BETTER",
+      "unit": "ug/m3",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "receiving_water_quality",
+      "stratum": "residents",
+      "domain": "ecology",
+      "claim_dimension": "ECOLOGICAL_CONDITION",
+      "direction": "HIGHER_BETTER",
+      "unit": "protocol_score_0_1",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "safe_blue_space_access",
+      "stratum": "residents",
+      "domain": "water_food",
+      "claim_dimension": "ACCESS",
+      "direction": "HIGHER_BETTER",
+      "unit": "percent",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "safe_drinking_water_access",
+      "stratum": "residents",
+      "domain": "water_food",
+      "claim_dimension": "ACCESS",
+      "direction": "HIGHER_BETTER",
+      "unit": "percent",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "secure_decent_work_access",
+      "stratum": "residents",
+      "domain": "housing_work",
+      "claim_dimension": "DIGNITY_AND_CAPABILITY",
+      "direction": "HIGHER_BETTER",
+      "unit": "percent",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "so2_24h",
+      "stratum": "residents",
+      "domain": "air",
+      "claim_dimension": "HUMAN_EXPOSURE",
+      "direction": "LOWER_BETTER",
+      "unit": "ug/m3",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "step_free_public_access",
+      "stratum": "residents",
+      "domain": "community",
+      "claim_dimension": "ACCESS",
+      "direction": "HIGHER_BETTER",
+      "unit": "percent",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "work_injury_rate",
+      "stratum": "residents",
+      "domain": "housing_work",
+      "claim_dimension": "HUMAN_HEALTH",
+      "direction": "LOWER_BETTER",
+      "unit": "injuries/200000_work_hours",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    },
+    {
+      "indicator_id": "worthwhile",
+      "stratum": "residents",
+      "domain": "experience",
+      "claim_dimension": "SUBJECTIVE_WELLBEING",
+      "direction": "HIGHER_BETTER",
+      "unit": "score_0_10",
+      "change_interval": null,
+      "state": "UNKNOWN_MISSING_BASELINE_AND_FOLLOWUP",
+      "realized_credit": 0
+    }
+  ],
+  "gates": {
+    "worker_safety": {
+      "status": "PASS",
+      "source": "synthetic test fixture; not independently reviewed"
+    },
+    "ecological_protection": {
+      "status": "PASS",
+      "source": "synthetic test fixture; not independently reviewed"
+    },
+    "privacy_and_consent": {
+      "status": "PASS",
+      "source": "synthetic test fixture; not independently reviewed"
+    },
+    "access_and_non_displacement": {
+      "status": "PASS",
+      "source": "synthetic test fixture; not independently reviewed"
+    },
+    "water_and_product_safety": {
+      "status": "PASS",
+      "source": "synthetic test fixture; not independently reviewed"
+    },
+    "maintenance_and_lifecycle": {
+      "status": "PASS",
+      "source": "synthetic test fixture; not independently reviewed"
+    }
+  },
+  "missing_indicator_strata": [
+    {
+      "indicator_id": "affordable_nutritious_food_access",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "anxiety",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "cold_chain_compliance",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "culture_education_access",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "green_access_10min_walk",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "green_access_800m",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "green_area",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "green_space_per_person",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "happiness",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "heat_island_delta",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "heat_stress_hours",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "housing_cost_burden",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "housing_crowding",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "irrigation_load",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "life_satisfaction",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "maintenance_cost",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "native_habitat_condition",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "native_species_richness",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "no2_annual",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "noise_day",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "noise_night",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "pm10_24h",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "pm25_24h",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "receiving_water_quality",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "safe_blue_space_access",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "safe_drinking_water_access",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "secure_decent_work_access",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "so2_24h",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "step_free_public_access",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "work_injury_rate",
+      "stratum": "residents"
+    },
+    {
+      "indicator_id": "worthwhile",
+      "stratum": "residents"
+    }
+  ],
+  "decision": "HOLD_MISSING_BASELINE_OR_RECEIPTS",
+  "realized_credit": 0,
+  "locality_clearance": "NOT_ESTABLISHED",
+  "limitations": [
+    "Supplied measurement and PASS assertions are not authenticated by this engine.",
+    "Change intervals are endpoint envelopes, not confidence intervals or causal effect estimates.",
+    "CONTROLLED_ALIGNED is a supplied design assertion, not an automatic statistical analysis.",
+    "No aesthetic, carbon, production or average gain compensates for a failed human/ecological gate.",
+    "Privacy thresholds are project safeguards, not claimed statutory minima.",
+    "Measured exposure, service availability and experienced QOL are separate outcomes."
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "status": "PUBLIC_REVIEW_CANDIDATE_NON_CANON",
+  "review_date_UTC": "2026-10-09",
+  "input_sha256": "8ad21a38df26681cebbf463ee917eee0de0689b1bfa6ded57e71e3ec49dbd941",
+  "input_is_world_evidence": false,
+  "graph_mutated": false,
+  "local_helium_output": null,
+  "serial_cascade_verified": false,
+  "local_zero_waste_verified": false,
+  "realized_credit": 0,
+  "claims": [
+    {
+      "claim_id": "HE-POLICY-001",
+      "evidence_state": "OFFICIAL_POLICY",
+      "sources": [
+        "https://www.mofcom.gov.cn/zcfb/zc/art/2026/art_ba9f7df9a0cb4c00aa1aa6f3b0741328.html"
+      ],
+      "scope": "Temporary helium export prohibition; not import or feed evidence",
+      "reference_values": {
+        "announcement": "2026 No.29",
+        "effective_date": "2026-07-10",
+        "hs_code": "2804290010"
+      },
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
+    },
+    {
+      "claim_id": "HE-REF-001",
+      "evidence_state": "SUPPLIER_REPORTED_OPERATION_ELSEWHERE",
+      "sources": [
+        "https://www.fullcryo-obdc.com/news/fullcryo-natural-gas-helium-recovery-project-successfully-commissioned/"
+      ],
+      "scope": "Inner Mongolia Tianyu Garden domestic LNG-BOG unit",
+      "reference_values": {
+        "notice_date": "2025-09-24",
+        "reported_stable_hours_min": 600,
+        "reported_purity_pct_min": 99.999,
+        "projected_capacity_m3_y": 166500
+      },
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
+    },
+    {
+      "claim_id": "HE-REF-002",
+      "evidence_state": "PUBLISHED_NUMERICAL_PROCESS_STUDY",
+      "sources": [
+        "https://pubs.acs.org/doi/10.1021/acs.iecr.5c03057"
+      ],
+      "scope": "Paper-specific low-temperature PSA comparison; not liquid-helium or local operation",
+      "reference_values": {
+        "published_online": "2026-02-17",
+        "modeled_purity_pct": 99.99,
+        "modeled_energy_kWh_m3": 6.54,
+        "modeled_energy_reduction_pct": 21.7,
+        "modeled_cold_utilization_improvement_pct": 21.6
+      },
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
+    },
+    {
+      "claim_id": "COLD-ASU-001",
+      "evidence_state": "PROJECT_AGREEMENT_SIGNED",
+      "sources": [
+        "https://www.dailyqd.com/guanhai/407396_1.html"
+      ],
+      "scope": "Dongjiakou air-separation project; current construction/commissioning not newly verified",
+      "reference_values": {
+        "signing_date": "2025-09-02",
+        "planned_capacity_t_day": 660,
+        "planned_investment_CNY": 230000000
+      },
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
+    },
+    {
+      "claim_id": "COLD-CASCADE-001",
+      "evidence_state": "DESIGN_AND_CONSTRUCTION_REPORTED",
+      "sources": [
+        "https://www.shpgx.com/html/xyzx/20260601/9290.html",
+        "https://epaper.qingdaonews.com/qdrb/html/2026-06/02/content_144591_3494474.htm"
+      ],
+      "scope": "Dongjiakou power and site cooling; outputs projected after commissioning",
+      "reference_values": {
+        "tender_date": "2026-05-19",
+        "projected_electric_generation_GWh_y": 26,
+        "projected_avoided_cooling_electricity_GWh_y": 8
+      },
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
+    },
+    {
+      "claim_id": "SLUDGE-REF-001",
+      "evidence_state": "LABORATORY_MATERIAL_REFERENCE",
+      "sources": [
+        "https://research.chalmers.se/publication/545710"
+      ],
+      "scope": "Precipitated/filtered reject-brine sludge; not municipal/industrial sludge interchangeability",
+      "reference_values": {
+        "doi": "10.1016/j.cemconcomp.2025.106051"
+      },
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
+    },
+    {
+      "claim_id": "SLUDGE-STD-001",
+      "evidence_state": "PUBLISHED_STANDARD_NOT_YET_EFFECTIVE",
+      "sources": [
+        "https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=E11A515208E82F1609EF0F63D8F2F550",
+        "https://openstd.samr.gov.cn/bzgk/std/std_list?p.p1=0&p.p2=GB%2FT25031&p.p90=circulation_date&p.p91=desc"
+      ],
+      "scope": "Municipal wastewater sludge for brick-making; local industrial sludge/mortar applicability unverified",
+      "reference_values": {
+        "standard": "GB/T25031-2026",
+        "published": "2026-07-02",
+        "effective": "2027-02-01",
+        "current_edition_on_review_date": "GB/T25031-2010"
+      },
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
+    },
+    {
+      "claim_id": "HE-FEED-001",
+      "evidence_state": "LOCAL_ASSAY_REQUIRED",
+      "sources": [
+        "https://www.sciencedirect.com/science/article/pii/S0360544218307308"
+      ],
+      "scope": "Upstream helium removal can deplete imported LNG; no generic BOG helium fraction asserted",
+      "reference_values": {},
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
+    },
+    {
+      "claim_id": "HE-SENSOR-001",
+      "evidence_state": "PUBLISHED_LABORATORY_REFERENCE",
+      "sources": [
+        "https://publishing.aip.org/publications/latest-content/using-sound-waves-to-detect-helium/"
+      ],
+      "scope": "Kagome resonant composition sensor and2D orientation; no commercial fab recovery effect",
+      "reference_values": {},
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
+    },
+    {
+      "claim_id": "HE-RECOVERY-001",
+      "evidence_state": "SUPPLIER_EQUIPMENT_CLAIM",
+      "sources": [
+        "https://www.gadrodetection.com/helium-recovery-system/"
+      ],
+      "scope": "Workpiece leak-test recovery; ≥95% / up to98% manufacturer claims, not full-fab exhaust recovery",
+      "reference_values": {},
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
+    },
+    {
+      "claim_id": "HE-PATENT-001",
+      "evidence_state": "PATENT_DESCRIBED_METHOD",
+      "sources": [
+        "https://patents.google.com/patent/KR20240172648A/en"
+      ],
+      "scope": "Samsung process-exhaust recycling; no85–92% result established",
+      "reference_values": {},
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
+    },
+    {
+      "claim_id": "HE-PATENT-002",
+      "evidence_state": "PATENT_DESCRIBED_METHOD",
+      "sources": [
+        "https://patents.google.com/patent/JP2025528866A/en"
+      ],
+      "scope": "Lam membrane gas recycling embodiments; no commercial recovery percentage established",
+      "reference_values": {},
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
+    },
+    {
+      "claim_id": "HE-SENSOR-002",
+      "evidence_state": "MANUFACTURER_SPECIFICATION",
+      "sources": [
+        "https://us.msasafety.com/Fixed-Gas-%26-Flame-Detection/Leak-Detectors/Observer-i-Ultrasonic-Gas-Leak-Detector/p/000140006900001005"
+      ],
+      "scope": "Ultrasonic pressure-driven leak detection from2bar; no asserted universal microleak sensitivity",
+      "reference_values": {},
+      "local_verified": false,
+      "local_output": null,
+      "realized_credit": 0
+    }
+  ],
+  "requests": [
+    {
+      "request_id": "HE-DR-01",
+      "description": "Terminal LNG/BOG He assays, flow variability and upstream removal history",
+      "state": "OPEN"
+    },
+    {
+      "request_id": "HE-DR-02",
+      "description": "BOG disposition, ownership, integration permissions and methane/purge fate",
+      "state": "OPEN"
+    },
+    {
+      "request_id": "COLD-DR-01",
+      "description": "Separate project phase, commissioning and metered performance receipts",
+      "state": "OPEN"
+    },
+    {
+      "request_id": "COLD-DR-02",
+      "description": "Coupled temperature/duty/exergy model and cold allocation rights",
+      "state": "OPEN"
+    },
+    {
+      "request_id": "HE-DR-03",
+      "description": "Recovery, purity, end-to-end losses and customer returns/consumption",
+      "state": "OPEN"
+    },
+    {
+      "request_id": "HE-DR-04",
+      "description": "Site CAPEX/OPEX, delivered-price basis, offtake and sensitivities",
+      "state": "OPEN"
+    },
+    {
+      "request_id": "SLUDGE-DR-01",
+      "description": "Separate residual assays, product/leaching/durability/lifecycle qualification",
+      "state": "OPEN"
+    },
+    {
+      "request_id": "SLUDGE-DR-02",
+      "description": "Applicable standard edition, use scope and environmental/product acceptance",
+      "state": "OPEN"
+    },
+    {
+      "request_id": "HE-DR-05",
+      "description": "Customer-process collection, purification, qualified reuse and distribution inventories; sensor detection and repair effectiveness",
+      "state": "OPEN"
+    }
+  ],
+  "held_claims": [
+    "Generic Qingdao BOG1% He",
+    "99% recovery and below1% total losses",
+    "Universal local TRL9",
+    "No competition/free residual cold",
+    "Less-than3-year payback and quoted prices/CAPEX",
+    "Crisis price/import statistics",
+    "Zero pollution/zero waste",
+    "Local sludge qualification",
+    "Whole-fab40% to85–95% improvement",
+    "National mandatory85% utilization target",
+    "Universal acoustic10^-4 to10^-5cm3/s leak sensitivity",
+    "Quoted KR20240000001 getter-bed/recovery results",
+    "Kagome commercial/3D or helium-cryogenic deployment"
+  ],
+  "accounting_rule": "Conserve helium inventory; internal return is not new primary production. Avoided fresh makeup requires a matched baseline and nonduplicated transfer records.",
+  "source_mismatches": [
+    {
+      "supplied_identifier": "KR20240000001",
+      "resolved_identifier": "KR20240000001A",
+      "actual_subject": "Headliner material for vehicles",
+      "source": "https://patents.google.com/patent/KR20240000001A/en",
+      "helium_claim_supported": false
+    }
+  ]
+}

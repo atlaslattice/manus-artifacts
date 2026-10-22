@@ -21,10 +21,11 @@ def validate_stream(stream, nodes):
 def run():
     nodes = {k: v for k, v in locality.SUBNODES.items() if k != 'IND01'}
     nodes.update(QSS01='Qingdao Special Steel', JNC01='Jinneng Chemical',
-                 BTN01='Bangtuo New Materials', LDC01='Louis Dreyfus food park')
+                 BTN01='Bangtuo New Materials', LDC01='Louis Dreyfus food park',
+                 QOL01='Human QOL / Eden outcome and stewardship register')
     meta = {}
     for node in nodes:
-        kind = ('FACILITY_ASSET' if node in ('QSS01', 'JNC01', 'BTN01', 'LDC01')
+        kind = ('FUNCTIONAL_AGGREGATE' if node == 'QOL01' else 'FACILITY_ASSET' if node in ('QSS01', 'JNC01', 'BTN01', 'LDC01')
                 else 'GOVERNANCE' if node in ('ECO01', 'GOV01')
                 else 'EXTERNAL_BOUNDARY' if node == 'EXT01' else 'PROCESS_ASSET')
         status = ('OPERATIONAL' if node in ('W01', 'P01', 'QSS01', 'JNC01', 'BTN01', 'ECO01', 'GOV01')
@@ -69,7 +70,10 @@ def run():
         definition='Marine discharge earns no net-positive credit without measured ecosystem benefit.',
         current_evidence_class='NO_MEASURABLE_HARM', meets_net_positive_standard=False)
     physical = sum(s['edge_state'] in locality.PHYSICAL_EDGE_STATES for s in streams)
-    return dict(classification='REVIEWED_PUBLIC_CANDIDATE_NON_CANON',
+    from .qol import evaluate
+    qol = evaluate()
+    observation_links = [dict(source_subnode=n,sink_subnode='QOL01',kind='PROPOSED_OBSERVATION_OR_SERVICE_LINK',material_flow=False,realized_credit=0) for n in ['ECO01','P01','E02','C01','W01']]
+    return dict(qol=qol, observation_links=observation_links, classification='REVIEWED_PUBLIC_CANDIDATE_NON_CANON',
         source_package='recovered historical Manus ZIP plus reviewed Notion overlay; not the unavailable latest Manus source',
         source=REVIEW_SOURCE, nodes=nodes, node_meta=meta, streams=streams,
         counts=dict(boundary_units=len(nodes), internal_units=len(nodes)-1,

@@ -1,0 +1,102 @@
+{
+  "profile_version": "0.1",
+  "status": "PUBLIC_REVIEW_CANDIDATE",
+  "canon": false,
+  "deployment": false,
+  "authority": "NONE",
+  "runtime_connected": false,
+  "design_basis": "USER_CLARIFICATION_2026-10-08_AMERICA_CHICAGO",
+  "architecture": {
+    "operating_layer": "AI reasoning and workflow proposals",
+    "tooling": "UWS",
+    "operating_fabric": [
+      "Continuum OS",
+      "Aluminum OS"
+    ],
+    "guardrails": "User-ratified canon",
+    "knowledge_base": "Alexandria 2.0 curated evidence",
+    "candidate_ai_consumer": [
+      "Atlas Prime",
+      "Lattice Guide"
+    ],
+    "candidate_localized_profile": [
+      "AtlasSeek",
+      "DragonSeek 2.0"
+    ]
+  },
+  "canon_binding": {
+    "source_document": null,
+    "version": null,
+    "sha256": null,
+    "ratification_receipt": null,
+    "verified": false,
+    "human_readable_original_required": true,
+    "parsed_rules_require_original_comparison": true,
+    "automatic_promotion": false
+  },
+  "corpus_record_required_fields": [
+    "claim_id",
+    "question_id",
+    "primary_source_url",
+    "publication_date",
+    "event_date",
+    "retrieval_date",
+    "evidence_class",
+    "technical_maturity",
+    "locality_applicability",
+    "verification_state",
+    "contradictions",
+    "supersedes"
+  ],
+  "intake_policy": {
+    "mode": "QUESTION_SCOPED_CURATED",
+    "prefer_recent_verified_advances": true,
+    "retain_foundational_and_negative_evidence": true,
+    "retain_superseded_versions": true,
+    "model_repetition_is_corroboration": false,
+    "maturity_classes": [
+      "THEORETICAL",
+      "MODELED",
+      "PILOT",
+      "IN_CONSTRUCTION",
+      "OPERATING"
+    ],
+    "digest_fields": [
+      "change",
+      "source",
+      "uncertainty",
+      "local_relevance"
+    ]
+  },
+  "training": {
+    "started": false,
+    "rights_review_required": true,
+    "private_logs_public_by_default": false,
+    "raw_source_pointer_and_sha256_required": true,
+    "evaluation_holdouts_separate": true,
+    "guardrails_only_in_weights": false
+  },
+  "atlas_prime": {
+    "user_reported_url": "https://atlaslatticebotv5.manus.space",
+    "session_live_access": "UNVERIFIED_ACCESS_BLOCKED",
+    "observed_browser_error": "net::ERR_BLOCKED_BY_CLIENT",
+    "assessment": "USER_REPORTED_TOP_TIER_GEOPOLITICAL_AI",
+    "comparative_evaluation_verified": false,
+    "raw_bot_logs_verified": false,
+    "archived_response_url": "https://github.com/atlaslattice/manus-artifacts/blob/85f06406c724067ef917c55761ba5ff4354409ef/archive/ops/ATLAS_PRIME_20_HARD_QUESTIONS_RESPONSE_CANDIDATE_2026-05-22.md",
+    "archived_response_class": "SUMMARY_ONLY_CANDIDATE",
+    "memory_source_lead": "https://github.com/atlaslattice/sheldonbrain-rag-api"
+  },
+  "qol_binding": {
+    "registry": "../qol/indicator_registry.json",
+    "hard_gate_override_allowed": false,
+    "realized_credits": 0
+  },
+  "next_verification": [
+    "Recover original canon snapshot and ratification receipt",
+    "Recover exact bot deployment manifest and raw task/tool receipts",
+    "Compare parsed canon rules with originals",
+    "Test offline locality packet consumer round trip",
+    "Evaluate source fidelity, geopolitical claims, contradictions and UNKNOWN preservation"
+  ]
+}
