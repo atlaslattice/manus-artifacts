@@ -178,3 +178,7 @@ Until then, the larger boundary is a useful architecture with zero unearned cros
 ## Keeper
 
 **Expand the node when the physical system genuinely spans more than one plant. Preserve component auditability. Never let an aggregate net-positive claim hide a component-level veto.**
+
+## October 23, 2026 — methodological crosswalk and cross-site continuity
+
+An additive [Water–Energy–Data / Atlas flywheel crosswalk](WED_ATLAS_FLYWHEEL_CROSSWALK_2026-10-23.md) connects arXiv:2610.23614 to the existing Dongjiakou ledgers and proposed Corpus Christi, Maui and Oʻahu applications. It is methodological support, not design validation; the paper review is abstract-level. No existing component result, canonical status or realized integration credit changes. A [DeepSeek continuity briefing](DEEPSEEK_WED_CROSS_SITE_BRIEFING_2026-10-23.md) provides source-linked context for a fresh conversation.
