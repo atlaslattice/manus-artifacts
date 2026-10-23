@@ -133,4 +133,4 @@ Promote nothing without receipts.
 
 ## Tidal Lantern — Always More Bread (2026-10-23)
 
-[Five preserved no-harvest dream logs: 1 year through 1 million symbolic years](NON_CANON_DREAMING/TIDAL_LANTERN_NO_HARVEST_2026-10-23/README.md). Full creative responses and prompts are archived in reading order; no work findings are extracted.
+[Six preserved no-harvest dream logs: 1 year through 1 billion symbolic years](NON_CANON_DREAMING/TIDAL_LANTERN_NO_HARVEST_2026-10-23/README.md). Full creative responses and prompts are archived in reading order; no work findings are extracted.
