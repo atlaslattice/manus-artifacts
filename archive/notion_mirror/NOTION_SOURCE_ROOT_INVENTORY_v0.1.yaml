@@ -1,0 +1,87 @@
+schema_version: "0.1"
+artifact_id: NOTION_SOURCE_ROOT_INVENTORY_v0.1
+title: "Notion Source Root Inventory"
+created_at_utc: "2026-05-26T23:00:00Z"
+source_lane: "aetherforge / notion_mirror / source_cartography"
+status: candidate_inventory
+canon_status: not_canon
+deployment_status: not_deployable
+authority_scope: none
+parent_issue: "https://github.com/atlaslattice/manus-artifacts/issues/187"
+
+core_doctrine:
+  - "Notion = historical substrate / extraction backlog / non-canon."
+  - "GitHub = receipts / implementation / review trail."
+  - "Website = canon surface only when explicitly ratified/published there."
+  - "Raw first. Receipts second. Parsed packets third. Graph edges fourth. Synthesis later. Canon last."
+
+roots:
+  - source_id: notion_root_001
+    title: "MASTER INDEX — Notion → GitHub Complete Artifact Map — Atlas Lattice Foundation"
+    notion_url: "https://www.notion.so/3290c1de73d981ac8ebfd4c8e86da6b8"
+    parent_title: "JANUS v2 — Constitutional Continuity Hub — Atlas Lattice Foundation"
+    observed_timestamp: "2026-03-20T20:04:34.336Z"
+    observed_via: "Notion.fetch"
+    root_type: master_index
+    source_status: fetched_partial
+    raw_export_status: partial_raw
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    needs_fetch: true
+    privacy_review_required: true
+    access_scope:
+      visible_sources:
+        - "Fetched Notion page content visible in connected Notion response."
+        - "Tier tables visible in fetch result."
+      unavailable_sources:
+        - "Full linked child pages."
+        - "Linked GitHub repository contents not fetched in this pass."
+        - "Local-only files referenced by the Notion page."
+      assumed_context: []
+    key_sections_observed:
+      - "GitHub repos"
+      - "Tier 1A Constitutional Architecture"
+      - "Tier 1B Protocol Stack"
+      - "Tier 1C Governance Doctrines"
+      - "Tier 1D Invention Disclosures"
+      - "Tier 1E Sovereign AI"
+      - "Tier 1F JANUS v2"
+      - "Tier 1G UWS-Universal local branch warning"
+    mirror_priority: boss_source
+    recommended_module: M01_Source_Cartography_Tower
+    related_issue_refs:
+      - "https://github.com/atlaslattice/manus-artifacts/issues/187"
+      - "https://github.com/atlaslattice/manus-artifacts/issues/160"
+      - "https://github.com/atlaslattice/manus-artifacts/issues/180"
+      - "https://github.com/atlaslattice/manus-artifacts/issues/183"
+    next_action:
+      - "Extract table rows into source inventory entries."
+      - "Classify each row as committed, pending, local-only, private, mythology-layer, or unknown."
+      - "Verify GitHub status independently before treating any Notion status mark as current."
+      - "Create raw export receipt if full export becomes available."
+    risks:
+      - risk_id: NR-001
+        risk: "Notion page uses single-source-of-truth phrasing."
+        mitigation: "Treat as historical index language only; GitHub verification required."
+      - risk_id: NR-002
+        risk: "Some status marks may be stale or local-only."
+        mitigation: "Require independent GitHub path check before promotion or migration claims."
+      - risk_id: NR-003
+        risk: "Fetched page content is partial relative to linked child pages."
+        mitigation: "Keep raw_export_status: partial_raw and needs_fetch: true."
+
+quest_result:
+  quest_id: M01-Q001
+  quest_name: "Locate First Master Root"
+  result: success
+  loot:
+    - "master_index root identified"
+    - "parent continuity hub identified"
+    - "tier taxonomy discovered"
+    - "GitHub mapping function confirmed"
+    - "local-only / pending migration flags observed"
+  boundary_status:
+    canon: no
+    deployment: no
+    authority: none

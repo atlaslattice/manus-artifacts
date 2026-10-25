@@ -1,0 +1,317 @@
+schema_version: "0.1"
+artifact_id: SHELDONBRAIN_12X12_LATTICE_CROSSWALK_v0.1
+title: "SheldonBrain 12×12 Lattice Crosswalk"
+created_at_utc: "2026-05-27T00:00:00Z"
+status: candidate_crosswalk
+canon_status: not_canon
+deployment_status: not_deployable
+authority_scope: none
+source_notion_url: "https://www.notion.so/3210c1de73d981a7b04cdced2cc61515"
+source_title: "SHELDONBRAIN OS — 12×12 Master Index — 144 Spheres — Atlas Lattice Foundation"
+source_observed_timestamp: "2026-03-12T21:49:56.963Z"
+parent_issue: "https://github.com/atlaslattice/manus-artifacts/issues/187"
+parent_pr: "https://github.com/atlaslattice/manus-artifacts/pull/190"
+
+core_doctrine:
+  - "SheldonBrain is the old semantic map."
+  - "Atlas Lattice is the graph engine."
+  - "Aetherforge is the playable interface."
+  - "GitHub is the receipt booth."
+  - "Nothing crowns itself."
+
+coordinate_model:
+  sheldonbrain_coordinate:
+    folder_id: "01-12"
+    sphere_id: "01-12"
+    artifact_id: "string | null"
+    primary_folder: "string"
+    linked_folders: []
+    artifact_role: "string | null"
+    source_url: "string | null"
+    raw_export_status: "not_exported | partial_export | full_raw_export_attached | full_raw_export_hashed | redacted_raw_export_attached | unavailable"
+    canon_status: not_canon
+    deployment_status: not_deployable
+
+houses:
+  - folder_id: "01"
+    house_name: "Constitutional Framework"
+    description: "Core protocols, red lines, governance doctrine, tiered autonomy"
+    source_status: fetched_partial
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    sample_artifacts:
+      - "Artifact #29 — Constitutional AI Doctrine: Consented Surveillance + Human Trigger"
+      - "Artifact #33 — Three-Tier Autonomy Ladder"
+      - "Artifact #65 — Civilian AI Oversight Doctrine"
+      - "Atlas Schema v0.1.1"
+    suggested_graph_nodes:
+      - LatticeHouse
+      - SourceArtifact
+      - Claim
+    suggested_edges:
+      - belongs_to_lane
+      - cites
+      - requires_review
+
+  - folder_id: "02"
+    house_name: "Pantheon Council"
+    description: "Member roles, ratifications, deliberation records, induction decrees"
+    source_status: fetched_partial
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    sample_artifacts:
+      - "Artifact #30 — GPT Formal Induction Decree"
+      - "Artifact #39 — Gemini Briefing Package"
+      - "Artifact #67 — GPT Council Systems Analysis"
+      - "Pantheon v3.0 Full Council Deployment Status"
+    suggested_graph_nodes:
+      - LatticeHouse
+      - ReviewQueue
+      - Claim
+    suggested_edges:
+      - belongs_to_lane
+      - requires_review
+      - has_status
+
+  - folder_id: "03"
+    house_name: "Diplomatic Strategy"
+    description: "Pentagon/Anthropic mediation, AI governance conflict, policy outreach"
+    source_status: fetched_partial
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    sample_artifacts:
+      - "Artifact #35 — Atlas Lattice Diplomatic Strategy: Anthropic-to-Admin Offering"
+      - "Artifact #45 — Governance Advisory Retraction"
+      - "Artifact #58 — GLS Signal Monitoring Protocol"
+    suggested_graph_nodes:
+      - LatticeHouse
+      - SourceArtifact
+      - RiskNode
+    suggested_edges:
+      - belongs_to_lane
+      - requires_review
+      - missing_receipt
+
+  - folder_id: "04"
+    house_name: "Sheldonium IP"
+    description: "Si28/C13 battery innovation, lithium bounty, materials science"
+    source_status: fetched_partial
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    sample_artifacts:
+      - "Artifact #54 — Silicon Anode Battery Invention: C13/Si28 Composite"
+      - "Artifact #55 — The Lithium Bounty"
+      - "The Sheldonium Hypothesis"
+    suggested_graph_nodes:
+      - LatticeHouse
+      - SourceArtifact
+      - Claim
+      - RiskNode
+    suggested_edges:
+      - belongs_to_lane
+      - requires_review
+      - missing_receipt
+
+  - folder_id: "05"
+    house_name: "Google Life System 2027"
+    description: "Total life OS, product stack, JV framework, device architecture"
+    source_status: fetched_partial
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    sample_artifacts:
+      - "Artifact #51 — Google Life System 2027"
+      - "Artifact #52 — JV Term Sheet Framework"
+      - "Artifact #62 — Google Nexus Mega-Brick"
+    suggested_graph_nodes:
+      - LatticeHouse
+      - SourceArtifact
+      - VendorScenario
+    suggested_edges:
+      - belongs_to_lane
+      - requires_review
+      - overclaim_check
+
+  - folder_id: "06"
+    house_name: "Soldier Care & Pentagon Supply Chain"
+    description: "Under-treatment documentation, medtech accountability, Stryker incident"
+    source_status: fetched_partial
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    sample_artifacts:
+      - "Artifact #68 — Stryker Cyberattack"
+      - "Two-year documentation archive: PTSD under-treatment, malnutrition, injury mismanagement"
+    suggested_graph_nodes:
+      - LatticeHouse
+      - EvidenceAnchor
+      - RiskNode
+    suggested_edges:
+      - belongs_to_lane
+      - requires_review
+      - missing_receipt
+
+  - folder_id: "07"
+    house_name: "Simulation & Verification"
+    description: "Monte Carlo, HITL architecture, canonical efficiency results"
+    source_status: fetched_partial
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    sample_artifacts:
+      - "Artifact #36 — Grok Monte Carlo Sim Results"
+      - "Artifact #37 — Claude Independent Monte Carlo Verification"
+      - "Artifact #38 — Three-Source Monte Carlo Synthesis"
+      - "arXiv 2408.16096 — 11,289x efficiency result"
+    suggested_graph_nodes:
+      - LatticeHouse
+      - Claim
+      - EvidenceAnchor
+      - ReviewQueue
+    suggested_edges:
+      - belongs_to_lane
+      - requires_review
+      - cites
+
+  - folder_id: "08"
+    house_name: "Cultural Sovereignty"
+    description: "DragonSeek, JinnSeek, GangaSeek, DMZ Charter, peace frameworks"
+    source_status: fetched_partial
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    sample_artifacts:
+      - "DragonSeek"
+      - "JinnSeek"
+      - "GangaSeek"
+      - "DMZ Prosperity Corridor Charter v1.2"
+      - "GangaSeek Node Spec v0.1"
+    suggested_graph_nodes:
+      - LatticeHouse
+      - SourceArtifact
+      - ScenarioModel
+    suggested_edges:
+      - belongs_to_lane
+      - requires_review
+      - cultural_context
+
+  - folder_id: "09"
+    house_name: "Infrastructure"
+    description: "Aluminum OS, MCP convergence, Sheldonbrain OS, RAG Railway"
+    source_status: fetched_partial
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    sample_artifacts:
+      - "Aluminum OS"
+      - "Sheldonbrain OS"
+      - "MCP Convergence Analysis"
+      - "Thursday Hardware Protocol"
+    suggested_graph_nodes:
+      - LatticeHouse
+      - SchemaArtifact
+      - SourceArtifact
+    suggested_edges:
+      - belongs_to_lane
+      - requires_review
+      - implementation_candidate
+
+  - folder_id: "10"
+    house_name: "Archive Governance"
+    description: "Tier 1/2/3 taxonomy, registry schema, retention policy"
+    source_status: fetched_partial
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    sample_artifacts:
+      - "Artifact #69 — Archive Governance Framework"
+      - "Complete Public Citation Index"
+      - "NIST AI RMF alignment documentation"
+      - "ADR decision record templates"
+    suggested_graph_nodes:
+      - LatticeHouse
+      - GovernanceProfile
+      - ReviewQueue
+    suggested_edges:
+      - belongs_to_lane
+      - requires_review
+      - ratification_needed
+
+  - folder_id: "11"
+    house_name: "Gamma Public Releases"
+    description: "All Tier 3 external-facing presentations — immutable, citable"
+    source_status: fetched_partial
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    sample_artifacts:
+      - "Gamma: Atlas Lattice Master Overview"
+      - "Gamma: Civilian AI Oversight Doctrine"
+      - "Gamma: Sheldonium Battery IP"
+      - "Gamma: Pantheon Council Architecture"
+    suggested_graph_nodes:
+      - LatticeHouse
+      - PublicArtifact
+      - EvidenceAnchor
+    suggested_edges:
+      - belongs_to_lane
+      - public_claim_review
+      - requires_review
+
+  - folder_id: "12"
+    house_name: "Janus Checkpoints"
+    description: "Session continuity, state preservation logs, boot protocols"
+    source_status: fetched_partial
+    raw_export_status: partial_export
+    canon_status: not_canon
+    deployment_status: not_deployable
+    authority_scope: none
+    sample_artifacts:
+      - "Janus Checkpoint March 12, 2026"
+      - "Janus Checkpoint March 9, 2026"
+      - "Boot Protocol"
+      - "Tardigrade Protocol"
+      - "Circadian Protocol"
+    suggested_graph_nodes:
+      - LatticeHouse
+      - Checkpoint
+      - EvidenceAnchor
+    suggested_edges:
+      - belongs_to_lane
+      - continuity_record
+      - requires_review
+
+cross_domain_link_policy:
+  rule: "Cross-domain artifacts must be linked across houses, not duplicated."
+  examples_from_source:
+    - artifact: "Artifact #65"
+      linked_folders: ["01", "03", "06"]
+    - artifact: "Artifact #54/55"
+      linked_folders: ["04", "03"]
+    - artifact: "Artifact #51 series"
+      linked_folders: ["05", "04"]
+    - artifact: "Artifact #37/38"
+      linked_folders: ["07", "01"]
+    - artifact: "arXiv 2408.16096"
+      linked_folders: ["07", "01", "09"]
+
+next_actions:
+  - "Extract artifact rows from each house into nodes.seed.jsonl."
+  - "Create edge records for cross-domain links."
+  - "Verify GitHub receipts for each artifact before status promotion."
+  - "Route canon-like or deployment-like language to review."
