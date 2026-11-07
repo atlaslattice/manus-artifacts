@@ -1,0 +1,81 @@
+name: "Review Route"
+description: "Route an artifact to a review seat (S2/S4/S6/human-root)"
+title: "[REVIEW ROUTE] "
+labels: ["review-route"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to formally route an artifact for review by a specific seat.
+        Nothing is ratified without explicit human-root approval.
+
+  - type: input
+    id: artifact_path
+    attributes:
+      label: "Artifact Path"
+      description: "Full path of the artifact to be reviewed"
+      placeholder: "archive/boot/seats/GPTBRAIN_S1_CANONICAL_CANDIDATE_SPEC_2026-05-09.md"
+    validations:
+      required: true
+
+  - type: input
+    id: artifact_status
+    attributes:
+      label: "Current Artifact Status"
+      placeholder: "CANONICAL_CANDIDATE — NOT YET RATIFIED"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: review_seat
+    attributes:
+      label: "Route To"
+      description: "Which seat should review this artifact?"
+      options:
+        - "S2 ClaudeBrain — Constitutional Scribe (canon/governance language)"
+        - "S4 GeminiBrain — Engineering Simulation (schema/validation/architecture)"
+        - "S6 ManusBrain — Execution Agent (continuity/archive hygiene)"
+        - "Human-root (final approval / ratification gate)"
+        - "Full Council"
+    validations:
+      required: true
+
+  - type: textarea
+    id: review_scope
+    attributes:
+      label: "Review Scope"
+      description: "What specifically needs to be reviewed? What questions need answers?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: source_refs
+    attributes:
+      label: "Source References"
+      description: "List related artifacts, prior reviews, issues, or PRs."
+      placeholder: |
+        - Issue #11
+        - PR #N
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: "Urgency"
+      options:
+        - low — background review
+        - medium — block next synthesis pass
+        - high — blocking PR merge
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: guardrails
+    attributes:
+      label: "Guardrails"
+      options:
+        - label: "This route does NOT constitute ratification."
+          required: true
+        - label: "Canon promotion requires explicit human-root approval."
+          required: true

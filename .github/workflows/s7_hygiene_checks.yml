@@ -1,0 +1,151 @@
+name: S7 Hygiene Checks
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master, "copilot/**"]
+
+jobs:
+  status-header-check:
+    name: Status Header Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check STATUS header in changed archive/boot markdown files
+        run: |
+          # Get list of changed .md files under archive/boot/
+          if git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
+            CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'archive/boot/**/*.md' 2>/dev/null || true)
+          else
+            # First commit — check all files
+            CHANGED=$(git ls-files 'archive/boot/**/*.md' 2>/dev/null || true)
+          fi
+
+          FAILED=0
+          for f in $CHANGED; do
+            if [ ! -f "$f" ]; then continue; fi
+            # Skip pure index/README files (they use STATUS: INDEX)
+            if grep -qiE '^# ' "$f" && grep -qiE 'STATUS:' "$f"; then
+              continue
+            fi
+            # All non-README candidate .md files should have STATUS:
+            if ! grep -qiE '^STATUS:' "$f"; then
+              echo "MISSING STATUS header: $f"
+              FAILED=1
+            fi
+          done
+
+          if [ "$FAILED" -eq 1 ]; then
+            echo ""
+            echo "ERROR: One or more changed archive/boot markdown files are missing a STATUS: header."
+            echo "Add a STATUS: line near the top of the file."
+            exit 1
+          fi
+          echo "Status header check: pass"
+
+  forbidden-canon-check:
+    name: Forbidden Canon Language Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check for accidental RATIFIED CANON language
+        run: |
+          # Check diff for new lines containing RATIFIED CANON
+          if git rev-parse --verify HEAD~1 >/dev/null 2>&1; then
+            DIFF=$(git diff HEAD~1 HEAD -- 'archive/boot/**' '.github/**' 2>/dev/null || true)
+          else
+            DIFF=""
+          fi
+
+          # Extract newly-added lines (lines starting with +, not the +++ header)
+          NEW_LINES=$(echo "$DIFF" | grep '^+' | grep -v '^+++' || true)
+
+          # Check for forbidden language (case-insensitive)
+          # Allow it only in files explicitly documenting the rule itself (e.g. CI workflow, PR template, review notes)
+          VIOLATIONS=$(echo "$NEW_LINES" | grep -i 'RATIFIED CANON' \
+            | grep -v '# S7\|RATIFIED_CANON\|ratified_canon\|CanonStatus\|canon_status\|promote_to_ratified_canon\|`RATIFIED CANON`\|"RATIFIED CANON"\|RATIFIED CANON.*language\|no.*RATIFIED CANON\|without.*RATIFIED CANON\|block.*RATIFIED CANON\|accidental.*RATIFIED CANON\|not.*ratified\|NOT CANON' \
+            || true)
+
+          if [ -n "$VIOLATIONS" ]; then
+            echo "ERROR: Accidental 'RATIFIED CANON' language detected in PR diff."
+            echo "Canon promotion requires explicit human-root approval."
+            echo ""
+            echo "Flagged lines:"
+            echo "$VIOLATIONS"
+            echo ""
+            echo "If this is intentional (e.g. documenting the ratification event after approval),"
+            echo "ensure the commit message includes [allow-canon-promotion] and human-root approval"
+            echo "is referenced."
+            exit 1
+          fi
+          echo "Forbidden canon language check: pass"
+
+  yaml-parse-check:
+    name: YAML Parse Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Parse all YAML files in archive/boot/
+        run: |
+          python - <<'PY'
+          import sys
+          import yaml
+          from pathlib import Path
+
+          failed = []
+          yaml_files = list(Path("archive/boot").rglob("*.yaml")) + list(Path("archive/boot").rglob("*.yml"))
+
+          for path in yaml_files:
+              try:
+                  with open(path, encoding="utf-8") as f:
+                      yaml.safe_load(f)
+              except yaml.YAMLError as e:
+                  failed.append((str(path), str(e)))
+
+          if failed:
+              print("ERROR: Invalid YAML files detected:")
+              for path, err in failed:
+                  print(f"  {path}: {err}")
+              sys.exit(1)
+
+          print(f"YAML parse check: {len(yaml_files)} files parsed OK")
+          PY
+
+      - name: Install PyYAML if needed
+        if: failure()
+        run: pip install pyyaml && python -c "import yaml; print('pyyaml available')"
+
+  reference-impl-tests:
+    name: Reference Implementation Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install pytest
+        run: pip install pytest
+
+      - name: Run reference implementation tests (direct)
+        working-directory: archive/boot/gptbrain/reference_impl
+        run: python -m pytest test_dream_memory_palace_reference_impl.py -v
+
+      - name: Run reference implementation tests (tests/ subdirectory)
+        working-directory: archive/boot/gptbrain/reference_impl
+        run: python -m pytest tests/ -v

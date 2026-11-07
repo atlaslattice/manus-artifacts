@@ -1,0 +1,112 @@
+name: "Candidate Artifact"
+description: "Submit a new candidate artifact for review (spec, variant, schema, reference impl, etc.)"
+title: "[CANDIDATE] "
+labels: ["candidate-artifact", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Guardrail:** Candidate artifacts are not canon. Nothing submitted here is ratified
+        without explicit human-root approval through the Council workflow.
+
+  - type: input
+    id: status
+    attributes:
+      label: "STATUS"
+      description: "Artifact status (e.g. CANDIDATE, VARIANT, DRAFT, REFERENCE IMPLEMENTATION)"
+      placeholder: "CANDIDATE — NOT CANON"
+    validations:
+      required: true
+
+  - type: input
+    id: artifact_path
+    attributes:
+      label: "Artifact Path"
+      description: "Full path in the repository"
+      placeholder: "archive/boot/seats/MY_ARTIFACT_2026-05-09.md"
+    validations:
+      required: true
+
+  - type: textarea
+    id: source_refs
+    attributes:
+      label: "Source References"
+      description: "List all source artifacts, issues, PRs, or external references this artifact is derived from."
+      placeholder: |
+        - Issue #11
+        - archive/boot/gptbrain/S1_VARIANT_SYNTHESIS_MATRIX_2026-05-09.md
+    validations:
+      required: true
+
+  - type: dropdown
+    id: runtime_label
+    attributes:
+      label: "Runtime Label"
+      description: "What kind of output is this?"
+      options:
+        - WORK_OUTPUT
+        - DREAM_OUTPUT
+        - PLAY_OUTPUT
+        - MODEL_ASSESSMENT
+        - CANDIDATE_CANON
+    validations:
+      required: true
+
+  - type: dropdown
+    id: claim_confidence
+    attributes:
+      label: "Claim Confidence"
+      description: "Highest claim confidence level applicable to this artifact."
+      options:
+        - C0_unsupported_do_not_claim
+        - C1_user_reported
+        - C2_source_artifact_exists
+        - C3_multiple_source_artifacts_converge
+        - C4_scored_or_reviewed_internally
+        - C5_independently_verified_or_operationally_demonstrated
+    validations:
+      required: true
+
+  - type: dropdown
+    id: canon_status
+    attributes:
+      label: "Canon Status"
+      description: "Current canon status of this artifact."
+      options:
+        - variant_not_canon
+        - candidate_canon
+        - canonical_candidate_not_yet_ratified
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: review_seats
+    attributes:
+      label: "Review Seats Required"
+      options:
+        - label: "S2 ClaudeBrain — Constitutional Scribe (canon/governance language)"
+        - label: "S4 GeminiBrain — Engineering Simulation (schema/validation/architecture)"
+        - label: "S6 ManusBrain — Execution Agent (continuity/archive hygiene)"
+        - label: "Human-root review required before any promotion"
+
+  - type: checkboxes
+    id: guardrails
+    attributes:
+      label: "Guardrails Acknowledgment"
+      options:
+        - label: "I confirm this is NOT ratified canon."
+          required: true
+        - label: "I confirm no variants were deleted."
+          required: true
+        - label: "I confirm no files were silently renamed."
+          required: true
+        - label: "I confirm canon promotion requires human-root approval."
+          required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "Summary"
+      description: "Describe the artifact and its purpose."
+    validations:
+      required: true
