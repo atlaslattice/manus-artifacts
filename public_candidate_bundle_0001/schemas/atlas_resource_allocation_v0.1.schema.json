@@ -1,0 +1,226 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/atlaslattice/manus-artifacts/tree/master/public_candidate_bundle_0001/schemas/atlas_resource_allocation_v0.1.schema.json",
+  "title": "Atlas resource allocation candidate v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "scenario_id",
+    "status",
+    "mass_basis",
+    "time_period",
+    "source_lots",
+    "realized_credit_total"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "scenario_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "MODELED",
+        "SYNTHETIC",
+        "UNKNOWN",
+        "PROPOSED"
+      ]
+    },
+    "mass_basis": {
+      "const": "dry_metric_tonnes"
+    },
+    "time_period": {
+      "type": "string",
+      "minLength": 1
+    },
+    "realized_credit_total": {
+      "const": 0
+    },
+    "source_lots": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/lot"
+      }
+    }
+  },
+  "$defs": {
+    "lot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_lot_id",
+        "source_type",
+        "source_boundary",
+        "wet_mass_t",
+        "dry_matter_fraction",
+        "qualified_dry_mass_t",
+        "soil_ecological_reserve_t",
+        "existing_obligations_t",
+        "collection_losses_t",
+        "allocatable_dry_mass_t",
+        "allocations",
+        "measurement_receipt",
+        "ecological_gate",
+        "rights_gate",
+        "residual_fate"
+      ],
+      "properties": {
+        "source_lot_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_type": {
+          "enum": [
+            "STRAW",
+            "MANURE",
+            "FOOD_WASTE",
+            "FORESTRY_RESIDUE",
+            "WASTEWATER_SOLIDS",
+            "WASTE_LIPIDS",
+            "OTHER"
+          ]
+        },
+        "source_boundary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "wet_mass_t": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "dry_matter_fraction": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "qualified_dry_mass_t": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "soil_ecological_reserve_t": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "existing_obligations_t": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "collection_losses_t": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "allocatable_dry_mass_t": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "allocations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "allocation_id",
+              "route",
+              "allocated_dry_mass_t",
+              "status"
+            ],
+            "properties": {
+              "allocation_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "route": {
+                "enum": [
+                  "SOIL_RETURN",
+                  "ANIMAL_FEED",
+                  "BIO01",
+                  "SAF01",
+                  "MAR01",
+                  "REN01",
+                  "AGR01",
+                  "OTHER"
+                ]
+              },
+              "allocated_dry_mass_t": {
+                "type": [
+                  "number",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "status": {
+                "enum": [
+                  "MODELED",
+                  "UNKNOWN",
+                  "MEASURED",
+                  "SYNTHETIC"
+                ]
+              }
+            }
+          }
+        },
+        "measurement_receipt": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ecological_gate": {
+          "enum": [
+            "UNKNOWN",
+            "BLOCKED",
+            "PASSED"
+          ]
+        },
+        "rights_gate": {
+          "enum": [
+            "UNKNOWN",
+            "BLOCKED",
+            "PASSED"
+          ]
+        },
+        "residual_fate": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "x-atlas-invariants": [
+    "Unique lot IDs and allocation IDs, validated across file.",
+    "dry_mass = wet_mass * dry_matter_fraction when available.",
+    "allocatable = max(0,qualified dry mass - ecological reserve - obligations - losses).",
+    "Sum allocations <= allocatable. JSON Schema cannot enforce sums: simulator adapter must.",
+    "A synthetic lot can test arithmetic but never justify a realized claim.",
+    "Soil nutrient content, contaminant acceptance, ownership and ecological vetoes require primary receipts."
+  ]
+}

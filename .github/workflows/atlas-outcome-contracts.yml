@@ -1,0 +1,30 @@
+name: Atlas outcomes schema contracts
+on:
+  pull_request:
+    paths:
+      - 'public_candidate_bundle_0001/schemas/atlas_*'
+      - 'public_candidate_bundle_0001/fixtures/*outcome*'
+      - 'public_candidate_bundle_0001/fixtures/*resilience*'
+      - 'public_candidate_bundle_0001/fixtures/*allocation*'
+      - 'public_candidate_bundle_0001/tests/test_outcome_contracts.py'
+      - '.github/workflows/atlas-outcome-contracts.yml'
+  push:
+    paths:
+      - 'public_candidate_bundle_0001/schemas/atlas_*'
+      - 'public_candidate_bundle_0001/fixtures/*outcome*'
+      - 'public_candidate_bundle_0001/fixtures/*resilience*'
+      - 'public_candidate_bundle_0001/fixtures/*allocation*'
+      - 'public_candidate_bundle_0001/tests/test_outcome_contracts.py'
+      - '.github/workflows/atlas-outcome-contracts.yml'
+permissions:
+  contents: read
+jobs:
+  schema-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pytest jsonschema
+      - run: python -m pytest public_candidate_bundle_0001/tests/test_outcome_contracts.py -q
