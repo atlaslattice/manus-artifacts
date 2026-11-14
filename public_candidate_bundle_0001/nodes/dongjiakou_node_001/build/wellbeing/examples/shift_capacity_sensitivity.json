@@ -1,0 +1,289 @@
+{
+  "scenario_id": "hypothetical-five-day-shift-and-capacity",
+  "scenario_kind": "HYPOTHETICAL_SENSITIVITY",
+  "basis": "Arbitrary planning sensitivity; not employer rosters, local clinical outcomes, operational clearance or qualification. Effect transfer remains UNKNOWN.",
+  "program_weekly_workdays_ceiling": 5,
+  "cohorts": [
+    {
+      "cohort_id": "day_workforce",
+      "definition": "Daytime workforce; actual employer roster and fraction UNKNOWN",
+      "population": 1000,
+      "work_hours_day": 8,
+      "on_site_break_hours_day": 0,
+      "workdays_week": 5,
+      "sleep_opportunity_hours_day": 8,
+      "actual_sleep_hours_day": null,
+      "commute_hours_day": 0.3333333333333333,
+      "care_chores_hours_day": 2,
+      "intershift_off_duty_hours": 16,
+      "statutory_leave_working_days": 5
+    },
+    {
+      "cohort_id": "rotating_workforce",
+      "definition": "Rotating/night workforce; 12h prevalence and roster UNKNOWN",
+      "population": 1000,
+      "work_hours_day": 12,
+      "on_site_break_hours_day": 2,
+      "workdays_week": 5,
+      "sleep_opportunity_hours_day": 8,
+      "actual_sleep_hours_day": null,
+      "commute_hours_day": 0.3333333333333333,
+      "care_chores_hours_day": 2,
+      "intershift_off_duty_hours": 10,
+      "statutory_leave_working_days": 15
+    },
+    {
+      "cohort_id": "older_high_fall_risk",
+      "definition": "Older residents with clinically assessed high fall risk; local population UNKNOWN",
+      "population": 500,
+      "work_hours_day": 0,
+      "on_site_break_hours_day": 0,
+      "workdays_week": 0,
+      "sleep_opportunity_hours_day": 8,
+      "actual_sleep_hours_day": null,
+      "commute_hours_day": 0.3333333333333333,
+      "care_chores_hours_day": 2,
+      "intershift_off_duty_hours": 16,
+      "statutory_leave_working_days": 0
+    }
+  ],
+  "operations": {
+    "roles": {
+      "movement_instructor": {
+        "qualified_hours_day": 8,
+        "provider": "Community instructors; trial-matched tai chi training provider UNKNOWN",
+        "assessment_requirement": "Demonstrated adapted-instruction competence; exact evidence programme training where applicable",
+        "renewal_requirement": "Periodic skills review and relevant safeguarding/first aid",
+        "training_pipeline": {
+          "candidate_count": null,
+          "training_hours": null,
+          "assessed_competent_count": null,
+          "qualification_receipt": "missing"
+        },
+        "local_qualification_status": "UNKNOWN"
+      },
+      "bath_operator": {
+        "qualified_hours_day": 8,
+        "provider": "Qualified facility training provider UNKNOWN",
+        "assessment_requirement": "Water hygiene/process operation competency assessed; clinical supervision scope reviewed",
+        "renewal_requirement": "Required certification renewal and drills",
+        "training_pipeline": {
+          "candidate_count": null,
+          "training_hours": null,
+          "assessed_competent_count": null,
+          "qualification_receipt": "missing"
+        },
+        "local_qualification_status": "UNKNOWN"
+      },
+      "acoustic_operator": {
+        "qualified_hours_day": 8,
+        "provider": "Qualified audio/acoustics provider UNKNOWN",
+        "assessment_requirement": "Exposure/limiter/alarm audibility and maintenance competence assessed",
+        "renewal_requirement": "Equipment/safety review and updates",
+        "training_pipeline": {
+          "candidate_count": null,
+          "training_hours": null,
+          "assessed_competent_count": null,
+          "qualification_receipt": "missing"
+        },
+        "local_qualification_status": "UNKNOWN"
+      },
+      "food_qa": {
+        "qualified_hours_day": 8,
+        "provider": "Qualified food-production/QA provider UNKNOWN",
+        "assessment_requirement": "Food safety and process competence assessed independently",
+        "renewal_requirement": "Applicable competency/certification renewal",
+        "training_pipeline": {
+          "candidate_count": null,
+          "training_hours": null,
+          "assessed_competent_count": null,
+          "qualification_receipt": "missing"
+        },
+        "local_qualification_status": "UNKNOWN"
+      },
+      "digital_support": {
+        "qualified_hours_day": 8,
+        "provider": "Qualified local provider UNKNOWN",
+        "assessment_requirement": "Assessed support/security/privacy competence; exact role/legal scope audit pending",
+        "renewal_requirement": "Periodic competence and incident review",
+        "training_pipeline": {
+          "candidate_count": null,
+          "training_hours": null,
+          "assessed_competent_count": null,
+          "qualification_receipt": "missing"
+        },
+        "local_qualification_status": "UNKNOWN"
+      },
+      "privacy_steward": {
+        "qualified_hours_day": 8,
+        "provider": "Qualified local provider UNKNOWN",
+        "assessment_requirement": "Assessed support/security/privacy competence; exact role/legal scope audit pending",
+        "renewal_requirement": "Periodic competence and incident review",
+        "training_pipeline": {
+          "candidate_count": null,
+          "training_hours": null,
+          "assessed_competent_count": null,
+          "qualification_receipt": "missing"
+        },
+        "local_qualification_status": "UNKNOWN"
+      }
+    },
+    "services": [
+      {
+        "service_id": "tai_chi",
+        "equipment_capacity_participant_sessions_day": 100,
+        "safe_operation_gate": true,
+        "requirements": [
+          {
+            "role_id": "movement_instructor",
+            "allocated_qualified_hours_day": 4,
+            "qualified_hours_per_participant_session": 0.1
+          }
+        ]
+      },
+      {
+        "service_id": "thermal_hub",
+        "equipment_capacity_participant_sessions_day": 100,
+        "safe_operation_gate": true,
+        "requirements": [
+          {
+            "role_id": "bath_operator",
+            "allocated_qualified_hours_day": 4,
+            "qualified_hours_per_participant_session": 0.1
+          }
+        ]
+      },
+      {
+        "service_id": "sound_programme",
+        "equipment_capacity_participant_sessions_day": 100,
+        "safe_operation_gate": true,
+        "requirements": [
+          {
+            "role_id": "acoustic_operator",
+            "allocated_qualified_hours_day": 4,
+            "qualified_hours_per_participant_session": 0.1
+          }
+        ]
+      },
+      {
+        "service_id": "nutrition_supply",
+        "equipment_capacity_participant_sessions_day": 100,
+        "safe_operation_gate": true,
+        "requirements": [
+          {
+            "role_id": "food_qa",
+            "allocated_qualified_hours_day": 4,
+            "qualified_hours_per_participant_session": 0.1
+          }
+        ]
+      },
+      {
+        "service_id": "resident_digital_support",
+        "equipment_capacity_participant_sessions_day": 100,
+        "safe_operation_gate": true,
+        "requirements": [
+          {
+            "role_id": "digital_support",
+            "allocated_qualified_hours_day": 4,
+            "qualified_hours_per_participant_session": 0.1
+          },
+          {
+            "role_id": "privacy_steward",
+            "allocated_qualified_hours_day": 4,
+            "qualified_hours_per_participant_session": 0.1
+          }
+        ]
+      }
+    ]
+  },
+  "effects": [
+    {
+      "cohort_id": "older_high_fall_risk",
+      "service_id": "tai_chi",
+      "study_id": "TAICHI2018",
+      "endpoint": "fall_incidence",
+      "eligible_fraction": 0.2,
+      "adoption": 0.5,
+      "adherence": 0.8,
+      "capacity_share": 1,
+      "relative_effect": null,
+      "effect_evidence_class": "UNKNOWN",
+      "transfer_status": "UNKNOWN"
+    },
+    {
+      "cohort_id": "day_workforce",
+      "service_id": "thermal_hub",
+      "study_id": "SAUNA2022",
+      "endpoint": "cardiorespiratory_fitness",
+      "eligible_fraction": 0.2,
+      "adoption": 0.5,
+      "adherence": 0.8,
+      "capacity_share": 0.5,
+      "relative_effect": null,
+      "effect_evidence_class": "UNKNOWN",
+      "transfer_status": "UNKNOWN"
+    },
+    {
+      "cohort_id": "rotating_workforce",
+      "service_id": "thermal_hub",
+      "study_id": "COLD2016",
+      "endpoint": "self_reported_sickness_absence",
+      "eligible_fraction": 0.2,
+      "adoption": 0.5,
+      "adherence": 0.8,
+      "capacity_share": 0.5,
+      "relative_effect": null,
+      "effect_evidence_class": "UNKNOWN",
+      "transfer_status": "UNKNOWN"
+    },
+    {
+      "cohort_id": "day_workforce",
+      "service_id": "sound_programme",
+      "study_id": "SOUND2017",
+      "endpoint": "eeg_band_power",
+      "eligible_fraction": 0.2,
+      "adoption": 0.5,
+      "adherence": 0.8,
+      "capacity_share": 1,
+      "relative_effect": null,
+      "effect_evidence_class": "UNKNOWN",
+      "transfer_status": "UNKNOWN"
+    }
+  ],
+  "contractual_paid_leave_floor_working_days": 10,
+  "digital_inclusion": {
+    "resident_population": null,
+    "phone_inventory": null,
+    "computer_inventory": null,
+    "annual_connectivity_cny": null,
+    "annual_device_amortization_cny": null,
+    "annual_compute_cny": null,
+    "annual_support_cny": null,
+    "resident_price_cny": 0,
+    "access_conditioned_on_research_consent": false,
+    "personal_memory_export_to_research": false,
+    "anonymization_verified": "UNKNOWN",
+    "agent_memory_control": "Resident review/correction/deletion/export; encrypted and purpose-limited; technical implementation unvalidated"
+  },
+  "funding": {
+    "annual_benefits_cost_cny": null,
+    "cost_evidence_class": "UNKNOWN",
+    "streams": [
+      {
+        "stream_id": "cross_sector_cashflow_receipts_pending",
+        "allocation_owner": "UNASSIGNED_PENDING_REVIEW",
+        "sector": "UNKNOWN",
+        "gross_cash_savings_cny": null,
+        "incremental_operating_cny": null,
+        "maintenance_reserve_cny": null,
+        "capital_renewal_cny": null,
+        "existing_commitments_cny": null,
+        "evidence_class": "UNKNOWN",
+        "source_receipt_id": null,
+        "receipt_status": "missing",
+        "current_realized_funding_credit_cny": 0
+      }
+    ]
+  }
+}
+

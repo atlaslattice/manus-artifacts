@@ -1,0 +1,1451 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NUT01 Candidate Scenario",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scenario_id",
+    "scenario_kind",
+    "inputs"
+  ],
+  "properties": {
+    "scenario_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scenario_kind": {
+      "enum": [
+        "LOCAL_UNKNOWN",
+        "HYPOTHETICAL_SENSITIVITY"
+      ]
+    },
+    "inputs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "adoption",
+        "adherence",
+        "joint_eligible_prevalence",
+        "correction_response",
+        "protein_fraction_dry",
+        "theanine_fraction",
+        "qualified_staff_fraction",
+        "creatine_eligible_fraction",
+        "task_output_effect",
+        "creatine_test_effect",
+        "population",
+        "days",
+        "protein_target_g",
+        "creatine_g_day",
+        "theanine_material_g_day",
+        "minutes_saved_day",
+        "daily_price_cny",
+        "displaced_spend_cny",
+        "equipment_servings_day",
+        "staff_hours_day",
+        "hours_per_serving",
+        "stock_servings",
+        "emergency_people",
+        "emergency_days",
+        "energy_kwh_serving",
+        "substrate_kg_serving",
+        "grid_kgco2_kwh",
+        "substrate_kgco2_kg",
+        "other_kgco2_serving",
+        "displaced_kgco2_serving",
+        "ration_qualified",
+        "shelf_life_qualified",
+        "moisture_fraction"
+      ],
+      "properties": {
+        "adoption": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "fraction"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "adherence": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "fraction"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "joint_eligible_prevalence": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "fraction"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "correction_response": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "fraction"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "protein_fraction_dry": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "fraction"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "theanine_fraction": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "fraction"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "qualified_staff_fraction": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "fraction"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "creatine_eligible_fraction": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "fraction"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "task_output_effect": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "fraction"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "creatine_test_effect": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "fraction"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "population": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "people"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "days": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "days/year"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "protein_target_g": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "g/day"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "creatine_g_day": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "g/day"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "theanine_material_g_day": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "g/day"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "minutes_saved_day": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "minutes/day"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "daily_price_cny": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "CNY/day"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "displaced_spend_cny": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "CNY/day"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "equipment_servings_day": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "servings/day"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "staff_hours_day": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "hours/day"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "hours_per_serving": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "hours/serving"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "stock_servings": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "servings"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "emergency_people": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "people"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "emergency_days": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "days"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "energy_kwh_serving": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "kWh/serving"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "substrate_kg_serving": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "kg/serving"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "grid_kgco2_kwh": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "kgCO2e/kWh"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "substrate_kgco2_kg": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "kgCO2e/kg"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "other_kgco2_serving": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "kgCO2e/serving"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "displaced_kgco2_serving": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "kgCO2e/serving"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "ration_qualified": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "boolean"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "shelf_life_qualified": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "boolean"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "moisture_fraction": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "value",
+            "unit",
+            "evidence_class",
+            "source_ids",
+            "basis"
+          ],
+          "properties": {
+            "value": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "unit": {
+              "const": "fraction"
+            },
+            "evidence_class": {
+              "enum": [
+                "UNKNOWN",
+                "SENSITIVITY",
+                "PROPOSED",
+                "OFFICIAL_REGULATORY_SOURCE",
+                "MEASURED_STUDY",
+                "MODELED"
+              ]
+            },
+            "source_ids": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "basis": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

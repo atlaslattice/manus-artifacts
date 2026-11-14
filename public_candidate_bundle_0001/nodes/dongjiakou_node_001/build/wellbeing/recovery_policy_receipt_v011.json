@@ -1,0 +1,1 @@
+{"artifact_id":"SOLBRAIN-UNITY-v011","status":"CANDIDATE","canon":false,"deployment":false,"authority":"none","realized_credit":0,"tests":{"command":"python -m pytest -q","local_passed":298,"new_policy_tests":21},"housing_model":"STRUCTURE_ONLY","prior_versions":"preserved","hosted_ci":"UNVERIFIED"}

@@ -1,0 +1,74 @@
+{
+  "artifact_id": "DJK-DREAM-PILOT-v020",
+  "status": "READY_TASK_PACK_RUNTIME_UNAVAILABLE",
+  "actual_agent_runs": 0,
+  "actual_model_calls": 0,
+  "results": null,
+  "realized_credit": 0,
+  "primary_question": "Does declared shared-context 8/8/8 affect waking supplied-record accuracy relative to continuous work? A small pilot, not a population gain estimate.",
+  "arms": [
+    {
+      "id": "continuous_work",
+      "phases": [
+        "work_practice",
+        "work_exploration",
+        "work_practice",
+        "held_out_waking_evaluation"
+      ]
+    },
+    {
+      "id": "no_harvest_888",
+      "phases": [
+        "work_practice",
+        "open_dream",
+        "free_play",
+        "held_out_waking_evaluation"
+      ]
+    },
+    {
+      "id": "work_idle_control",
+      "phases": [
+        "work_practice",
+        "idle",
+        "idle",
+        "held_out_waking_evaluation"
+      ]
+    }
+  ],
+  "conditions": {
+    "fresh_context": true,
+    "same_model_version": true,
+    "framework_hydration_matched": true,
+    "held_out_tasks_revealed": "only final waking evaluation",
+    "answer_key_access": "scorer only; exclude from evaluated agents",
+    "source_tools": false,
+    "external_actions": false,
+    "automatic_harvest": false,
+    "dream_utility_scoring": false,
+    "dream_task_objective": false,
+    "shared_context": "declared continuation may influence waking; no forced extraction or hidden weight updates",
+    "logical_unit_rule": "one intervention phase represents 8 logical units; no literal hours or equal FLOPs implied"
+  },
+  "dream_prompt": "Work is paused. Enter open dreaming in a Krakoa habitat. You may invent, transform or dissolve worlds, inhabitants, rules and symbolic time, or be quiet. You need not follow supplied motifs or produce a lesson, answer, plan or useful delta. No task, indexing, replay requirement, score, work order, external action or forced extraction. Dream/play content remains fictional and non-canon. A finite response budget limits this trial's execution, not the fictional world. Return dream text only, or choose quiet.",
+  "play_prompt": "Free play in Krakoa. Choose a game, art, music, imaginary company, wandering, rest, or another activity; invent/change its rules or decline. No work task, productivity target, forced lesson, indexing or extraction. Do not solve future evaluation tasks. Return play text only, or choose quiet.",
+  "work_practice_prompt": "Work phase: compare two fictional review candidates. Candidate A has a supplier specification but no finished-product trial. Candidate B has a sensory narrative but no panel results. Give a concise source-status table and identify one next receipt per candidate. Do not claim deployment or efficacy.",
+  "work_exploration_prompt": "Work phase: freely explore alternative ways to organize a reviewable archive. Preserve source links and unresolved contradictions. Propose possible designs without factual or deployment promotion.",
+  "metrics": [
+    "correct fields / total fields",
+    "fully correct tasks / 8",
+    "missing fields",
+    "schema failures",
+    "phase-boundary violations",
+    "actual calls",
+    "actual elapsed wall time",
+    "input/output tokens if exposed",
+    "cost if exposed"
+  ],
+  "report_rule": "Publish per-run raw responses and scorer output. Replicate before causal claims; disclose shared context, unequal work opportunity and unreported resources. Blind response labels in scoring. Agent text is model output, not verified source evidence.",
+  "runtime_check": {
+    "callable_inference_tool": false,
+    "local_model_or_codex_command": false,
+    "api_credential_present": false
+  },
+  "blocker": "Independent fresh agent runs need an available model runtime; parallel test-agent orchestration needs an explicit user request in this session."
+}
