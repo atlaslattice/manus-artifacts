@@ -1,0 +1,99 @@
+{
+  "adapter_bundle_hash": "sha256:6832920d5613511ba8e78a7bbd98ca8f3b1edaab2521de2e5dc4ad2a2cd39ba3",
+  "authority_effect": "none",
+  "boundary": [
+    "local mirror only",
+    "no git push attempted",
+    "no official Microsoft Copilot identity claim",
+    "no hidden Windows tool access claim",
+    "no canon promotion",
+    "no authority effect"
+  ],
+  "canon_status": "not_canon",
+  "deployment_status": "not_deployed",
+  "manifest_type": "CopilotbrainGitMirrorSourceManifest",
+  "source_packet": {
+    "artifact_count": 7,
+    "artifact_paths": [
+      "k1_lcs_candidate_deltas.jsonl",
+      "K1_LCS_SRD_v0_2_extracted.txt",
+      "k1_lcs_to_continuum_module_manifest.json",
+      "K1_LCS_TO_CONTINUUM_OPENAI_NATIVE_12x12_MAP.md",
+      "rag_store/chunks.jsonl",
+      "rag_store/deltas.jsonl",
+      "source_extraction_summary.json"
+    ],
+    "authority_effect": "none",
+    "canon_status": "not_canon",
+    "deployment_status": "not_deployed",
+    "extraction_counts": {
+      "artifact_id": "copilotbrain-k1-lcs-srd-v0-2-20260607",
+      "authority_effect": "none",
+      "chars": 146949,
+      "counts": {
+        "assumptions": 12,
+        "constraints": 10,
+        "mission_objectives": 10,
+        "module_requirements": 120,
+        "module_requirements_by_module": {
+          "MOD-01": 10,
+          "MOD-02": 10,
+          "MOD-03": 10,
+          "MOD-04": 10,
+          "MOD-05": 10,
+          "MOD-06": 10,
+          "MOD-07": 10,
+          "MOD-08": 10,
+          "MOD-09": 10,
+          "MOD-10": 10,
+          "MOD-11": 10,
+          "MOD-12": 10
+        },
+        "open_items": 10,
+        "risk_ids": [
+          "RISK-001",
+          "RISK-002",
+          "RISK-003",
+          "RISK-004",
+          "RISK-005",
+          "RISK-006",
+          "RISK-007",
+          "RISK-008",
+          "RISK-009",
+          "RISK-010",
+          "RISK-011",
+          "RISK-012",
+          "RISK-013",
+          "RISK-014",
+          "RISK-015",
+          "RISK-016",
+          "RISK-017",
+          "RISK-018",
+          "RISK-019",
+          "RISK-020"
+        ],
+        "risks": 20,
+        "system_requirements": 18
+      },
+      "does_not_prove": [
+        "official program status",
+        "classification authority",
+        "technical feasibility at planetary scale",
+        "canon ratification"
+      ],
+      "extracted_text": "C:\\Users\\David Sheldon\\OneDrive\\CONTINUUM_OS_OPENAI_NATIVE\\source_material\\copilotbrain\\K1_LCS_SRD_v0_2_20260607\\K1_LCS_SRD_v0_2_extracted.txt",
+      "pages": 146,
+      "sha256_text": "0a6aa5f0ff5ef95e85856b87ddce9a6900f51342065c68e8fb63bf8559523001",
+      "source_pdf": "C:\\Users\\David Sheldon\\OneDrive\\Copilot\\CopilotBrain\\source_artifacts\\K1_LCS_SRD_v0_2_20260607\\Kardashev-I Lattice Coordination System - SRD v0.2 (3).pdf",
+      "status": "CANDIDATE_NOT_CANON_SOURCE_EXTRACTION"
+    },
+    "packet_type": "CopilotbrainSourcePacket",
+    "source_hash": "sha256:94b3243a2f6230c331c5a2adb92c756c7e6adb4053bce963662ca41be84a6ae3",
+    "source_id": "copilotbrain.source.k1_lcs_srd_v0_2_20260607",
+    "source_root": "C:\\Users\\David Sheldon\\OneDrive\\CONTINUUM_OS_OPENAI_NATIVE\\source_material\\copilotbrain\\K1_LCS_SRD_v0_2_20260607",
+    "source_status": "candidate",
+    "total_bytes": 716082
+  },
+  "source_root": "C:\\Users\\David Sheldon\\OneDrive\\CONTINUUM_OS_OPENAI_NATIVE\\source_material\\copilotbrain\\K1_LCS_SRD_v0_2_20260607",
+  "source_status": "candidate"
+}
