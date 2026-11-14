@@ -1,0 +1,115 @@
+{
+  "schema_version": "maui_locality_research_v0.1",
+  "locality_id": "MAUI-LAHAINA-001",
+  "status": "PROPOSED_NON_CANON",
+  "realized_credit": 0,
+  "authority": "NONE",
+  "parent_build": "public_candidate_bundle_0001/nodes/dongjiakou_node_001/build",
+  "geography": {
+    "research_areas": [
+      "Lahaina",
+      "Olowalu",
+      "Central Maui",
+      "East Maui watersheds"
+    ],
+    "parcel_selected": false,
+    "private_residence_recorded": false
+  },
+  "modules": [
+    {
+      "id": "MAT01",
+      "streams": [
+        "clean_segregated_concrete",
+        "quarry_fines",
+        "mixed_fire_debris_excluded"
+      ]
+    },
+    {
+      "id": "W01",
+      "streams": [
+        "authorized_freshwater",
+        "reclaimed_water",
+        "instream_flow",
+        "stormwater_runoff"
+      ]
+    },
+    {
+      "id": "E01",
+      "streams": [
+        "measured_solar",
+        "BESS",
+        "critical_loads"
+      ]
+    },
+    {
+      "id": "AGR01",
+      "streams": [
+        "current_land_use",
+        "regenerative_rotation",
+        "qualified_residues"
+      ]
+    },
+    {
+      "id": "BIO01",
+      "streams": [
+        "clean_organics",
+        "digestate_only_if_qualified"
+      ]
+    },
+    {
+      "id": "ECO01",
+      "streams": [
+        "reef_sediment",
+        "coastal_water_quality",
+        "habitat"
+      ]
+    },
+    {
+      "id": "SOC01",
+      "streams": [
+        "affordability",
+        "local_ownership",
+        "cultural_stewardship",
+        "QOL",
+        "GRV"
+      ]
+    }
+  ],
+  "measured_inputs": {
+    "annual_clean_mineral_tonnes": null,
+    "hazardous_assay_results": null,
+    "material_reuse_yield": null,
+    "building_material_certification": null,
+    "site_water_rights": null,
+    "watershed_instream_flow_m3_s": null,
+    "water_consumption_m3_day": null,
+    "solar_ac_kw_hourly": null,
+    "critical_load_kw_hourly": null,
+    "bess_kwh": null,
+    "reef_sediment_mg_l": null,
+    "ownership_retention_pct": null,
+    "households_benefited": null
+  },
+  "gates": {
+    "M-ENV": "UNRESOLVED",
+    "M-WATER": "UNRESOLVED",
+    "M-LAND": "UNRESOLVED",
+    "M-STRUCT": "UNRESOLVED",
+    "M-COMMUNITY": "UNRESOLVED"
+  },
+  "proposed_outcomes": [
+    "financial_net_value",
+    "domestic_value_retention",
+    "service_resilience_hours",
+    "QOL",
+    "global_replication_value",
+    "resource_integrity",
+    "environmental_integrity"
+  ],
+  "sources": [
+    "https://app.notion.com/p/3f20c1de73d981b4a2f0fd5a1456342e",
+    "https://app.notion.com/p/3f30c1de73d981699ca6d61d6fa12db1",
+    "https://app.notion.com/p/3f40c1de73d981939166e243b043cb2b"
+  ],
+  "notes": "All unavailable measurements null. No direct structural reuse of wildfire debris; no inferred parcel right; no physical actuator control."
+}
