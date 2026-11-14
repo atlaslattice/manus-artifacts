@@ -1,0 +1,13 @@
+{
+  "brine_m3_day": 150000,
+  "days_year": 365,
+  "calcium_mg_l": 680,
+  "sulfate_mg_l": 4500,
+  "gypsum_purity": 0.9,
+  "recovered_fraction_of_limiting_reagent": 0.6,
+  "qualified_acid_t_per_dry_gypsum_t": 0.4,
+  "verified_qualified_domestic_acid_demand_t_year": null,
+  "actual_national_sulfur_import_t_year": 9600000,
+  "required_domestic_acid_reserve_t_year": null,
+  "site_actual_measurements": false
+}

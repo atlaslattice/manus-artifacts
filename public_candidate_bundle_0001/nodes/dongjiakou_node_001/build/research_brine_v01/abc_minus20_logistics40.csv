@@ -1,0 +1,4 @@
+route,brine_gypsum_t_y,extra_gypsum_t_y,total_gypsum_t_y,total_acid_potential_t_y,extra_acid_potential_t_y,hcl_solution_31pct_t_y,source_price_cny_t_solution,source_payment_cny_y,logistics_cny_y,incremental_acid_value_cny_y,incremental_contribution_pre_other_costs_cny_y,realized_credit_cny_y
+A brine only,95961.77,0,95961.77,38384.71,0,0,0,0,0,0,0,0
+B purchased HCl,95961.77,71381.98,167343.75,66937.5,28552.79,150041.74,195,29258139.68,6001669.68,42829188.0,7569378.65,0
+C byproduct HCl,95961.77,71381.98,167343.75,66937.5,28552.79,150041.74,-20,-3000834.84,6001669.68,42829188.0,39828353.16,0
