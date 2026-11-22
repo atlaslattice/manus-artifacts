@@ -1,0 +1,145 @@
+task_id,house,task,output,status,canon_status,deployment_status,authority_scope,review_flags,readiness_score
+H01-T01,H01 Strategy & Market,Define neutral-sector positioning statement,neutral-sector positioning statement,candidate,not_canon,not_deployed,none,,50
+H01-T02,H01 Strategy & Market,Map primary customer segments,primary customer segments,candidate,not_canon,not_deployed,none,,50
+H01-T03,H01 Strategy & Market,Estimate planetarium venue tiers,planetarium venue tiers,candidate,not_canon,not_deployed,none,,50
+H01-T04,H01 Strategy & Market,Draft buyer persona: small planetarium director,buyer persona: small planetarium director,candidate,not_canon,not_deployed,none,,50
+H01-T05,H01 Strategy & Market,Draft buyer persona: museum programmer,buyer persona: museum programmer,candidate,not_canon,not_deployed,none,,50
+H01-T06,H01 Strategy & Market,Draft buyer persona: mobile dome operator,buyer persona: mobile dome operator,candidate,not_canon,not_deployed,none,,50
+H01-T07,H01 Strategy & Market,Draft buyer persona: school district STEM lead,buyer persona: school district STEM lead,candidate,not_canon,not_deployed,none,,50
+H01-T08,H01 Strategy & Market,Create pricing hypothesis table,pricing hypothesis table,candidate,not_canon,not_deployed,none,,50
+H01-T09,H01 Strategy & Market,Define subscription versus license decision tree,subscription versus license decision tree,candidate,not_canon,not_deployed,none,legal,45
+H01-T10,H01 Strategy & Market,List first 50 discovery targets,first 50 discovery targets,candidate,not_canon,not_deployed,none,,50
+H01-T11,H01 Strategy & Market,Draft market risk register,market risk register,candidate,not_canon,not_deployed,none,,50
+H01-T12,H01 Strategy & Market,Create go/no-go validation criteria,go/no-go validation criteria,candidate,not_canon,not_deployed,none,,50
+H02-T01,H02 Customer Discovery,Draft interview script for planetarium directors,interview script for planetarium directors,candidate,not_canon,not_deployed,none,legal,70
+H02-T02,H02 Customer Discovery,Draft interview script for museum programmers,interview script for museum programmers,candidate,not_canon,not_deployed,none,legal,70
+H02-T03,H02 Customer Discovery,Draft interview script for school districts,interview script for school districts,candidate,not_canon,not_deployed,none,legal,70
+H02-T04,H02 Customer Discovery,Draft interview script for mobile dome operators,interview script for mobile dome operators,candidate,not_canon,not_deployed,none,legal,70
+H02-T05,H02 Customer Discovery,Draft outreach email template,outreach email template,candidate,not_canon,not_deployed,none,,85
+H02-T06,H02 Customer Discovery,Draft follow-up email template,follow-up email template,candidate,not_canon,not_deployed,none,,85
+H02-T07,H02 Customer Discovery,Define CRM fields,CRM fields,candidate,not_canon,not_deployed,none,,75
+H02-T08,H02 Customer Discovery,Create scoring rubric for buying intent,scoring rubric for buying intent,candidate,not_canon,not_deployed,none,,75
+H02-T09,H02 Customer Discovery,Define content-gap question set,content-gap question set,candidate,not_canon,not_deployed,none,,75
+H02-T10,H02 Customer Discovery,Define budget-validation question set,budget-validation question set,candidate,not_canon,not_deployed,none,,75
+H02-T11,H02 Customer Discovery,Define decision-cycle question set,decision-cycle question set,candidate,not_canon,not_deployed,none,,75
+H02-T12,H02 Customer Discovery,Create discovery synthesis template,discovery synthesis template,candidate,not_canon,not_deployed,none,,85
+H03-T01,H03 Product & Show Library,Define show format standard,show format standard,candidate,not_canon,not_deployed,none,,50
+H03-T02,H03 Product & Show Library,Define runtime bands,runtime bands,candidate,not_canon,not_deployed,none,,50
+H03-T03,H03 Product & Show Library,Define audience age bands,audience age bands,candidate,not_canon,not_deployed,none,,50
+H03-T04,H03 Product & Show Library,Create pilot one-page template,pilot one-page template,candidate,not_canon,not_deployed,none,,65
+H03-T05,H03 Product & Show Library,Create show Bible template,show Bible template,candidate,not_canon,not_deployed,none,,60
+H03-T06,H03 Product & Show Library,Create local module template,local module template,candidate,not_canon,not_deployed,none,,60
+H03-T07,H03 Product & Show Library,Create sponsor-safe module template,sponsor-safe module template,candidate,not_canon,not_deployed,none,sponsor,55
+H03-T08,H03 Product & Show Library,Define content rating rubric,content rating rubric,candidate,not_canon,not_deployed,none,,50
+H03-T09,H03 Product & Show Library,Define show refresh cadence,show refresh cadence,candidate,not_canon,not_deployed,none,,50
+H03-T10,H03 Product & Show Library,Draft first 12 candidate show titles,first 12 candidate show titles,candidate,not_canon,not_deployed,none,,50
+H03-T11,H03 Product & Show Library,Define season packaging logic,season packaging logic,candidate,not_canon,not_deployed,none,,50
+H03-T12,H03 Product & Show Library,Define library subscription tiers,library subscription tiers,candidate,not_canon,not_deployed,none,legal,45
+H04-T01,H04 Pilot: Rainbow Bridge,Create lead pilot logline,lead pilot logline,candidate,not_canon,not_deployed,none,,55
+H04-T02,H04 Pilot: Rainbow Bridge,Draft 5-act structure,5-act structure,candidate,not_canon,not_deployed,none,,50
+H04-T03,H04 Pilot: Rainbow Bridge,Define emotional arc,emotional arc,candidate,not_canon,not_deployed,none,,50
+H04-T04,H04 Pilot: Rainbow Bridge,Define science anchors,science anchors,candidate,not_canon,not_deployed,none,,50
+H04-T05,H04 Pilot: Rainbow Bridge,Define cultural collaboration placeholders,cultural collaboration placeholders,candidate,not_canon,not_deployed,none,cultural,45
+H04-T06,H04 Pilot: Rainbow Bridge,Define visual motif list,visual motif list,candidate,not_canon,not_deployed,none,,50
+H04-T07,H04 Pilot: Rainbow Bridge,Define soundtrack direction,soundtrack direction,candidate,not_canon,not_deployed,none,,50
+H04-T08,H04 Pilot: Rainbow Bridge,Define dome moment set pieces,dome moment set pieces,candidate,not_canon,not_deployed,none,,50
+H04-T09,H04 Pilot: Rainbow Bridge,Draft education companion outcomes,education companion outcomes,candidate,not_canon,not_deployed,none,,50
+H04-T10,H04 Pilot: Rainbow Bridge,Draft localization hooks,localization hooks,candidate,not_canon,not_deployed,none,,50
+H04-T11,H04 Pilot: Rainbow Bridge,Define minimum viable animatic,minimum viable animatic,candidate,not_canon,not_deployed,none,,50
+H04-T12,H04 Pilot: Rainbow Bridge,Define pilot review gates,pilot review gates,candidate,not_canon,not_deployed,none,,55
+H05-T01,H05 Cultural Participation,Rename partners as prospective until receipted,partners as prospective until receipted,candidate,not_canon,not_deployed,none,cultural|legal,45
+H05-T02,H05 Cultural Participation,Create cultural participation policy,cultural participation policy,candidate,not_canon,not_deployed,none,cultural|legal,45
+H05-T03,H05 Cultural Participation,Draft MOU outline,MOU outline,candidate,not_canon,not_deployed,none,cultural,45
+H05-T04,H05 Cultural Participation,Draft compensation model,compensation model,candidate,not_canon,not_deployed,none,,50
+H05-T05,H05 Cultural Participation,Draft revenue-share model,revenue-share model,candidate,not_canon,not_deployed,none,cultural,45
+H05-T06,H05 Cultural Participation,Create approval-rights matrix,approval-rights matrix,candidate,not_canon,not_deployed,none,legal,45
+H05-T07,H05 Cultural Participation,Define attribution rules,attribution rules,candidate,not_canon,not_deployed,none,,50
+H05-T08,H05 Cultural Participation,Define sacred-knowledge exclusion rule,sacred-knowledge exclusion rule,candidate,not_canon,not_deployed,none,cultural,45
+H05-T09,H05 Cultural Participation,Define no-impersonation AI narration rule,no-impersonation AI narration rule,candidate,not_canon,not_deployed,none,,50
+H05-T10,H05 Cultural Participation,Create partner review checklist,partner review checklist,candidate,not_canon,not_deployed,none,cultural,55
+H05-T11,H05 Cultural Participation,Create benefit-sharing ledger template,benefit-sharing ledger template,candidate,not_canon,not_deployed,none,,60
+H05-T12,H05 Cultural Participation,Create cultural-risk escalation path,cultural-risk escalation path,candidate,not_canon,not_deployed,none,cultural,45
+H06-T01,H06 Science & Education,Create science accuracy policy,science accuracy policy,candidate,not_canon,not_deployed,none,,50
+H06-T02,H06 Science & Education,Create source citation standard,source citation standard,candidate,not_canon,not_deployed,none,,50
+H06-T03,H06 Science & Education,Define NASA/ESA/public-domain asset rules,NASA/ESA/public-domain asset rules,candidate,not_canon,not_deployed,none,,50
+H06-T04,H06 Science & Education,Draft curriculum alignment map,curriculum alignment map,candidate,not_canon,not_deployed,none,,50
+H06-T05,H06 Science & Education,Create educator guide template,educator guide template,candidate,not_canon,not_deployed,none,,60
+H06-T06,H06 Science & Education,Define assessment prompt bank,assessment prompt bank,candidate,not_canon,not_deployed,none,,50
+H06-T07,H06 Science & Education,Define student activity template,student activity template,candidate,not_canon,not_deployed,none,,60
+H06-T08,H06 Science & Education,Create glossary template,glossary template,candidate,not_canon,not_deployed,none,,60
+H06-T09,H06 Science & Education,Define expert review workflow,expert review workflow,candidate,not_canon,not_deployed,none,,50
+H06-T10,H06 Science & Education,Create misconception-risk register,misconception-risk register,candidate,not_canon,not_deployed,none,,50
+H06-T11,H06 Science & Education,Define age-appropriate science bands,age-appropriate science bands,candidate,not_canon,not_deployed,none,,50
+H06-T12,H06 Science & Education,Draft standards-alignment tracker,standards-alignment tracker,candidate,not_canon,not_deployed,none,,50
+H07-T01,H07 Technical Fulldome,Define 4K fulldome delivery spec,4K fulldome delivery spec,candidate,not_canon,not_deployed,none,,50
+H07-T02,H07 Technical Fulldome,Define 8K fulldome delivery spec,8K fulldome delivery spec,candidate,not_canon,not_deployed,none,,50
+H07-T03,H07 Technical Fulldome,Define audio delivery spec,audio delivery spec,candidate,not_canon,not_deployed,none,,50
+H07-T04,H07 Technical Fulldome,Define flat-screen derivative spec,flat-screen derivative spec,candidate,not_canon,not_deployed,none,,50
+H07-T05,H07 Technical Fulldome,Define VR derivative spec,VR derivative spec,candidate,not_canon,not_deployed,none,,50
+H07-T06,H07 Technical Fulldome,Create asset folder taxonomy,asset folder taxonomy,candidate,not_canon,not_deployed,none,,50
+H07-T07,H07 Technical Fulldome,Create render pipeline checklist,render pipeline checklist,candidate,not_canon,not_deployed,none,legal,55
+H07-T08,H07 Technical Fulldome,Create projection test checklist,projection test checklist,candidate,not_canon,not_deployed,none,,60
+H07-T09,H07 Technical Fulldome,Create dome QC checklist,dome QC checklist,candidate,not_canon,not_deployed,none,,60
+H07-T10,H07 Technical Fulldome,Define file naming convention,file naming convention,candidate,not_canon,not_deployed,none,,50
+H07-T11,H07 Technical Fulldome,Define versioning convention,versioning convention,candidate,not_canon,not_deployed,none,,50
+H07-T12,H07 Technical Fulldome,Create minimal local preview harness,minimal local preview harness,candidate,not_canon,not_deployed,none,,50
+H08-T01,H08 Open Source Simulation,Create task matrix data model,task matrix data model,candidate,not_canon,not_deployed,none,,75
+H08-T02,H08 Open Source Simulation,Create scoring model for task readiness,scoring model for task readiness,candidate,not_canon,not_deployed,none,,75
+H08-T03,H08 Open Source Simulation,Create dependency model,dependency model,candidate,not_canon,not_deployed,none,,75
+H08-T04,H08 Open Source Simulation,Create simulation CLI,simulation CLI,candidate,not_canon,not_deployed,none,,80
+H08-T05,H08 Open Source Simulation,Create JSON export option,JSON export option,candidate,not_canon,not_deployed,none,,75
+H08-T06,H08 Open Source Simulation,Create CSV export option,CSV export option,candidate,not_canon,not_deployed,none,,75
+H08-T07,H08 Open Source Simulation,Create lane balance checker,lane balance checker,candidate,not_canon,not_deployed,none,,75
+H08-T08,H08 Open Source Simulation,Create risk flag checker,risk flag checker,candidate,not_canon,not_deployed,none,,75
+H08-T09,H08 Open Source Simulation,Create demo run documentation,demo run documentation,candidate,not_canon,not_deployed,none,,75
+H08-T10,H08 Open Source Simulation,Create fixture dataset,fixture dataset,candidate,not_canon,not_deployed,none,,75
+H08-T11,H08 Open Source Simulation,Create test plan,test plan,candidate,not_canon,not_deployed,none,,75
+H08-T12,H08 Open Source Simulation,Define future CI workflow,future CI workflow,candidate,not_canon,not_deployed,none,,75
+H09-T01,H09 Business Operations,Create operating budget skeleton,operating budget skeleton,candidate,not_canon,not_deployed,none,,50
+H09-T02,H09 Business Operations,Create production budget skeleton,production budget skeleton,candidate,not_canon,not_deployed,none,,50
+H09-T03,H09 Business Operations,Create licensing contract checklist,licensing contract checklist,candidate,not_canon,not_deployed,none,legal,55
+H09-T04,H09 Business Operations,Create sponsorship policy,sponsorship policy,candidate,not_canon,not_deployed,none,legal|sponsor,45
+H09-T05,H09 Business Operations,Create IP ownership policy,IP ownership policy,candidate,not_canon,not_deployed,none,legal,45
+H09-T06,H09 Business Operations,Create participant rights checklist,participant rights checklist,candidate,not_canon,not_deployed,none,legal,55
+H09-T07,H09 Business Operations,Create vendor list,vendor list,candidate,not_canon,not_deployed,none,,50
+H09-T08,H09 Business Operations,Create hiring plan,hiring plan,candidate,not_canon,not_deployed,none,,50
+H09-T09,H09 Business Operations,Create advisory board profile list,advisory board profile list,candidate,not_canon,not_deployed,none,,50
+H09-T10,H09 Business Operations,Create insurance/legal checklist,insurance/legal checklist,candidate,not_canon,not_deployed,none,legal,55
+H09-T11,H09 Business Operations,Create sales pipeline stages,sales pipeline stages,candidate,not_canon,not_deployed,none,legal,45
+H09-T12,H09 Business Operations,Create quarterly operating cadence,quarterly operating cadence,candidate,not_canon,not_deployed,none,,50
+H10-T01,H10 Marketing & Sales,Create website landing page outline,website landing page outline,candidate,not_canon,not_deployed,none,,50
+H10-T02,H10 Marketing & Sales,Draft one-line investor pitch,one-line investor pitch,candidate,not_canon,not_deployed,none,,50
+H10-T03,H10 Marketing & Sales,Draft one-line buyer pitch,one-line buyer pitch,candidate,not_canon,not_deployed,none,,50
+H10-T04,H10 Marketing & Sales,Draft pitch deck outline,pitch deck outline,candidate,not_canon,not_deployed,none,,50
+H10-T05,H10 Marketing & Sales,Create demo trailer storyboard,demo trailer storyboard,candidate,not_canon,not_deployed,none,,50
+H10-T06,H10 Marketing & Sales,Create case study template,case study template,candidate,not_canon,not_deployed,none,,60
+H10-T07,H10 Marketing & Sales,Create press kit checklist,press kit checklist,candidate,not_canon,not_deployed,none,,60
+H10-T08,H10 Marketing & Sales,Create school outreach package,school outreach package,candidate,not_canon,not_deployed,none,,50
+H10-T09,H10 Marketing & Sales,Create museum conference strategy,museum conference strategy,candidate,not_canon,not_deployed,none,,50
+H10-T10,H10 Marketing & Sales,Create sponsor pitch package,sponsor pitch package,candidate,not_canon,not_deployed,none,sponsor,45
+H10-T11,H10 Marketing & Sales,Create social proof tracker,social proof tracker,candidate,not_canon,not_deployed,none,,50
+H10-T12,H10 Marketing & Sales,Create launch event concept,launch event concept,candidate,not_canon,not_deployed,none,deployment,45
+H11-T01,H11 Governance & Transparency,Add non-canon status header to all specs,non-canon status header to all specs,candidate,not_canon,not_deployed,none,,50
+H11-T02,H11 Governance & Transparency,Create public/private release labels,public/private release labels,candidate,not_canon,not_deployed,none,,50
+H11-T03,H11 Governance & Transparency,Create attribution ledger fields,attribution ledger fields,candidate,not_canon,not_deployed,none,,50
+H11-T04,H11 Governance & Transparency,Create decision log template,decision log template,candidate,not_canon,not_deployed,none,,60
+H11-T05,H11 Governance & Transparency,Create review gate checklist,review gate checklist,candidate,not_canon,not_deployed,none,,60
+H11-T06,H11 Governance & Transparency,Create overclaim lint terms,overclaim lint terms,candidate,not_canon,not_deployed,none,,50
+H11-T07,H11 Governance & Transparency,Create partnership-claim lint terms,partnership-claim lint terms,candidate,not_canon,not_deployed,none,cultural|legal,45
+H11-T08,H11 Governance & Transparency,Create canon/deployment boundary note,canon/deployment boundary note,candidate,not_canon,not_deployed,none,deployment,45
+H11-T09,H11 Governance & Transparency,Create simulation-only badge,simulation-only badge,candidate,not_canon,not_deployed,none,,55
+H11-T10,H11 Governance & Transparency,Create audit trail template,audit trail template,candidate,not_canon,not_deployed,none,,60
+H11-T11,H11 Governance & Transparency,Create conflict-of-interest disclosure fields,conflict-of-interest disclosure fields,candidate,not_canon,not_deployed,none,,50
+H11-T12,H11 Governance & Transparency,Create transparency report outline,transparency report outline,candidate,not_canon,not_deployed,none,,50
+H12-T01,H12 Roadmap & Execution,Create 30-day roadmap,30-day roadmap,candidate,not_canon,not_deployed,none,,50
+H12-T02,H12 Roadmap & Execution,Create 90-day roadmap,90-day roadmap,candidate,not_canon,not_deployed,none,,50
+H12-T03,H12 Roadmap & Execution,Create 12-month roadmap,12-month roadmap,candidate,not_canon,not_deployed,none,,50
+H12-T04,H12 Roadmap & Execution,Create first 10 tasks for GitHub issues,first 10 tasks for GitHub issues,candidate,not_canon,not_deployed,none,,50
+H12-T05,H12 Roadmap & Execution,Create milestone definitions,milestone definitions,candidate,not_canon,not_deployed,none,,50
+H12-T06,H12 Roadmap & Execution,Create blocked/on-hold rules,blocked/on-hold rules,candidate,not_canon,not_deployed,none,,50
+H12-T07,H12 Roadmap & Execution,Create MVP definition,MVP definition,candidate,not_canon,not_deployed,none,,50
+H12-T08,H12 Roadmap & Execution,Create pilot launch criteria,pilot launch criteria,candidate,not_canon,not_deployed,none,deployment,50
+H12-T09,H12 Roadmap & Execution,Create customer discovery completion criteria,customer discovery completion criteria,candidate,not_canon,not_deployed,none,,50
+H12-T10,H12 Roadmap & Execution,Create simulation completion criteria,simulation completion criteria,candidate,not_canon,not_deployed,none,,55
+H12-T11,H12 Roadmap & Execution,Create investor readiness criteria,investor readiness criteria,candidate,not_canon,not_deployed,none,,50
+H12-T12,H12 Roadmap & Execution,Create best-in-world benchmark checklist,best-in-world benchmark checklist,candidate,not_canon,not_deployed,none,,60
