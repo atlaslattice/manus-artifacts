@@ -69,6 +69,36 @@ def build_artifact_card(candidate: dict[str, Any]) -> ArtifactCardResult:
     if errors:
         return ArtifactCardResult(ok=False, errors=errors)
 
+    # Fail closed before projecting untrusted governance fields into a card.
+    # A candidate label is never itself a signed human approval receipt.
+    if not isinstance(candidate.get("candidate_id"), str) or not candidate["candidate_id"].strip():
+        errors.append("invalid candidate_id")
+    if not isinstance(candidate.get("source_packet_id"), str) or not candidate["source_packet_id"].strip():
+        errors.append("invalid source_packet_id")
+    if candidate.get("canon_status") != "not_canon":
+        errors.append("non_candidate_canon_status")
+    if candidate.get("deployment_status") not in ("not_deployed", "not_deployable"):
+        errors.append("non_candidate_deployment_status")
+    if candidate.get("authority_scope") != "none":
+        errors.append("unverified_authority_claim")
+    sources = candidate.get("source_artifacts", [])
+    if not isinstance(sources, list) or any(not isinstance(item, str) for item in sources):
+        errors.append("invalid_source_artifacts")
+    for key in ("proposed_nodes", "proposed_edges", "missing_receipts", "review_required", "forbidden_claims", "contradictions_or_uncertainties"):
+        val = candidate.get(key, [])
+        if not isinstance(val, list):
+            errors.append("invalid_" + key)
+    nodes = candidate.get("proposed_nodes", [])
+    if isinstance(nodes, list):
+        for index, node in enumerate(nodes):
+            if not isinstance(node, dict):
+                errors.append(f"invalid_node_{index}")
+                continue
+            if node.get("canon_status") != "not_canon" or node.get("authority_scope") != "none" or node.get("deployment_status") not in ("not_deployed", "not_deployable"):
+                errors.append(f"non_candidate_node_{index}")
+    if errors:
+        return ArtifactCardResult(ok=False, errors=errors)
+
     source = _first_source(candidate)
     proposed_nodes = candidate.get("proposed_nodes") or []
     first_node = proposed_nodes[0] if proposed_nodes else {}
