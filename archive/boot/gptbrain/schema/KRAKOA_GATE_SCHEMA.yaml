@@ -1,0 +1,20 @@
+# Candidate record contract. This is NOT a deployed validation schema.
+schema_id: KRAKOA_GATE_INDEX_v0.1
+status: candidate_only
+canon: false
+deployed: false
+authority: none
+source_index: archive/boot/gptbrain/KRAKOA_GATE_INDEX.seed.jsonl
+source_git_blob: bdd29d3cd24d1a1f9e9f111104eb331ed297da06
+required: [gate_id, title, gate_type, source, allowed_runtime_labels, purpose, canon_authority, human_root_required, notes]
+gate_types: [issue, protocol_file, template_file, seed_index, code_anchor, governance_gate]
+allowed_runtime_labels: [WORK, PLAY, DREAM, MODEL_ASSESSMENT, CANDIDATE_CANON, RATIFIED_CANON]
+invariants:
+  human_root_required: true
+  authority_verified: false
+  source_rights_verified: false
+  private_body_read: false
+  executor_enabled: false
+  canon_authority_flag_rule: only governance_gate may assert true, yielding REVIEW_REQUIRED rather than approval
+  path_rule: relative repo source pointers only; do not dereference
+  no_private_mode_export: true
