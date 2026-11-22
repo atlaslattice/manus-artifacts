@@ -121,7 +121,7 @@ def remember(title: str, memory_type: str, summary: str, source: str, confidence
         raise ValueError("summary_too_long")
     if not isinstance(source, str) or source not in allowed_sources:
         raise ValueError("source_class_not_authorized_for_preview")
-    if confidence not in {"C0", "C1", "C2", "C3", "C4", "C5"}:
+    if not isinstance(confidence, str) or confidence not in {"C0", "C1", "C2", "C3", "C4", "C5"}:
         raise ValueError("unsupported_confidence")
     now = utc_now()
     candidate_id = "S1-UNSAVED-PREVIEW-" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%f")
