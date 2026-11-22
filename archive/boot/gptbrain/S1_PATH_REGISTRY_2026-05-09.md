@@ -117,3 +117,14 @@ with status:
 ```text
 CANONICAL CANDIDATE — NOT YET RATIFIED CANON
 ```
+
+
+---
+
+## 2026-11-22 dated-source and candidate status supplement
+
+Status and alias policy are documented in the linked crosswalk; no legacy path has been silently renamed.
+
+**Disposition:** Variant E — Continuity / Human-Intent Dashboard: source-preserved and integrated into the S1 canonical CANDIDATE; NOT independently ratified; human-root review remains required; NO runtime, canon, deployment, or execution authority effect.
+
+**Evidence / rollback:** `archive/boot/gptbrain/S1_VARIANT_E_AND_ALIAS_CROSSWALK_2026-11-22.md` (source-pinned status crosswalk). This addendum does not claim a live resident, deployed continuity system, or CANON. Preserve the May 9 original paragraphs and candidate versions.
