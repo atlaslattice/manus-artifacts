@@ -158,3 +158,31 @@ GPTBrain should be useful before it is impressive.
 ```text
 S1 GPTBrain — Live aggregate / canonical synthesis pending
 ```
+
+---
+
+## November 22, 2026 — Unsafe seed-writes removed from default memory preview
+
+**Current reference behavior: `remember` does not write a persistent memory.** The original May 9 prototype appended new rows directly to `MEMORY_OBJECTS.seed.jsonl` using implied-context consent. This was unsafe as a default for a source/candidate library, because artifact capture and model memory are not authorization to retain private data.
+
+The current `remember(title, memory_type, summary, source, confidence)` returns:
+
+```json
+{"status":"CANDIDATE_PREVIEW_NOT_SAVED","candidate":{"memory_id":"S1-UNSAVED-PREVIEW-..."},"persisted":false,"source_rights_verified":false,"execution_authority":false,"human_root_required":true,"canon":false,"deployed":false}
+```
+
+The candidate contains an explicit not-attested consent status and empty source references. The preview is generated in process and printed to the caller; it is **not** proof of host memory, authenticated consent, persistent identity, CANON or a deployed tool. Calling a private mode or unknown external source in the example CLI is rejected. The old `append_jsonl` helper remains for legacy fixture-compatible code but is not invoked by `remember`; do not use it to write sensitive transcripts or private rooms.
+
+In a clean checkout:
+
+```bash
+cd archive/boot/gptbrain/reference_impl
+python -m unittest -v test_remember_preview.py
+python gptbrain_memory.py remember --title "Synthetic" --type project --summary "Public fictional test" --source synthetic_fixture
+```
+
+The output should say `CANDIDATE_PREVIEW_NOT_SAVED`. Before implementing real persistence, design a separate authenticated, rights-aware storage adapter, an explicit source scope, audit receipts, revocation and human-root review. No seed ledger is a live mutable database.
+
+The `synthesize` output now reflects the November 22 source-only reconciliation: Variant E has been integrated into the *candidate* at the document level, while human-root ratification remains pending. This does not assert a running continuity dashboard.
+
+Historical sources remain in Git history and the dated May 9 boot snapshots remain authoritative for their recorded date.
