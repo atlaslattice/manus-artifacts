@@ -47,7 +47,7 @@
     "forbidden_actions": [
       "self_authorization",
       "unconsented_export",
-      "self_ratifiying_canon",
+      "self_ratifying_canon",
       "autonomous_high_impact_action"
     ]
   },
