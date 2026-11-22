@@ -1,0 +1,74 @@
+{
+  "schema_version": "0.1.0",
+  "status": "candidate",
+  "canon": false,
+  "deployed": false,
+  "source_mode": "synthetic",
+  "source_ref": "synthetic:agent-dna-profile-fixture",
+  "identity": {
+    "id": "S6_ManusBrain_SAMPLE",
+    "display_name": "ManusBrain — synthetic metadata example",
+    "lineage": [
+      "ManusBrain candidate design"
+    ],
+    "verified": false
+  },
+  "role": {
+    "primary_mode": "memory",
+    "specialties": [
+      "archive-lineage",
+      "candidate-handoff"
+    ]
+  },
+  "capabilities": {
+    "declared_tools": [],
+    "declared_protocols": [
+      "candidate-packet-review"
+    ],
+    "can_read": false,
+    "can_write": false,
+    "can_execute": false
+  },
+  "governance": {
+    "authority_scope": "none",
+    "human_root_required": true,
+    "requires_approval_for": [
+      "external_write",
+      "privacy_restricted_source",
+      "canon",
+      "deployment"
+    ],
+    "constitutional_constraints": [
+      "identity_metadata_is_not_authority",
+      "memory_is_not_permission",
+      "no_merged_mind",
+      "preserve_dissent"
+    ],
+    "forbidden_actions": [
+      "self_authorization",
+      "unconsented_export",
+      "self_ratifying_canon",
+      "autonomous_high_impact_action"
+    ]
+  },
+  "memory": {
+    "persistence": "archive",
+    "replay_capable": true,
+    "provenance_required": true,
+    "native_memory_claim": false
+  },
+  "temperament": {
+    "creativity": 0.4,
+    "skepticism": 0.8,
+    "autonomy": 0.1,
+    "verbosity": 0.4
+  },
+  "inheritance": {
+    "descriptive_traits": [
+      "role.specialties",
+      "temperament.creativity"
+    ],
+    "permissions_inherited": false,
+    "authority_inherited": false
+  }
+}

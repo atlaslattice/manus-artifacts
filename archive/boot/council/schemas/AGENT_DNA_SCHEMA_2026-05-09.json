@@ -1,0 +1,278 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:atlas:agent-dna:advisory-candidate:v0.1",
+  "title": "Agent DNA typed metadata — candidate only",
+  "description": "Public-safe, unverified declarative profile. Neither identity, permissions, runtime, CANON nor human-root ratification is established.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "status",
+    "canon",
+    "deployed",
+    "source_mode",
+    "source_ref",
+    "identity",
+    "role",
+    "capabilities",
+    "governance",
+    "memory",
+    "temperament",
+    "inheritance"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "status": {
+      "const": "candidate"
+    },
+    "canon": {
+      "const": false
+    },
+    "deployed": {
+      "const": false
+    },
+    "source_mode": {
+      "enum": [
+        "synthetic",
+        "consented_work"
+      ]
+    },
+    "source_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "display_name",
+        "lineage",
+        "verified"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9._:-]{2,80}$"
+        },
+        "display_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lineage": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "verified": {
+          "const": false
+        }
+      }
+    },
+    "role": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary_mode",
+        "specialties"
+      ],
+      "properties": {
+        "primary_mode": {
+          "enum": [
+            "analysis",
+            "execution",
+            "reflection",
+            "simulation",
+            "memory",
+            "arbitration"
+          ]
+        },
+        "specialties": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "declared_tools",
+        "declared_protocols",
+        "can_read",
+        "can_write",
+        "can_execute"
+      ],
+      "properties": {
+        "declared_tools": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "declared_protocols": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "can_read": {
+          "const": false
+        },
+        "can_write": {
+          "const": false
+        },
+        "can_execute": {
+          "const": false
+        }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "authority_scope",
+        "human_root_required",
+        "requires_approval_for",
+        "constitutional_constraints",
+        "forbidden_actions"
+      ],
+      "properties": {
+        "authority_scope": {
+          "const": "none"
+        },
+        "human_root_required": {
+          "const": true
+        },
+        "requires_approval_for": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "constitutional_constraints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "forbidden_actions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      }
+    },
+    "memory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "persistence",
+        "replay_capable",
+        "provenance_required",
+        "native_memory_claim"
+      ],
+      "properties": {
+        "persistence": {
+          "enum": [
+            "ephemeral",
+            "session",
+            "archive"
+          ]
+        },
+        "replay_capable": {
+          "type": "boolean"
+        },
+        "provenance_required": {
+          "const": true
+        },
+        "native_memory_claim": {
+          "const": false
+        }
+      }
+    },
+    "temperament": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "creativity",
+        "skepticism",
+        "autonomy",
+        "verbosity"
+      ],
+      "properties": {
+        "creativity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "skepticism": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "autonomy": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "verbosity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "inheritance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "descriptive_traits",
+        "permissions_inherited",
+        "authority_inherited"
+      ],
+      "properties": {
+        "descriptive_traits": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "role.specialties",
+              "temperament.creativity",
+              "temperament.skepticism",
+              "temperament.autonomy",
+              "temperament.verbosity",
+              "memory.persistence"
+            ]
+          }
+        },
+        "permissions_inherited": {
+          "const": false
+        },
+        "authority_inherited": {
+          "const": false
+        }
+      }
+    }
+  }
+}
