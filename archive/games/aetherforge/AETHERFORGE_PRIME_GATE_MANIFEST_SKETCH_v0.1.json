@@ -84,7 +84,7 @@
     "dissent_preservation_required": true,
     "no_automatic_promotion": true,
     "default_on_missing": "HOLD",
-    "deployment_is_separate": false
+    "deployment_is_separate": true
   },
   "release_checks": [
     "No source file receives authority merely because it is copied into the manifest",
