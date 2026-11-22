@@ -40,6 +40,7 @@ This repository contains research, health data, and system artifacts generated a
   ... (rest abbreviated for patch; original structure preserved)
 
 ### Lattice / Knowledge Graph
+- **[Noosphere public Atlas repository index](./docs/NOOSPHERE_PUBLIC_REGISTRY_POINTER_2026-11-22.md)** — read-only source pointer to public metadata, not runtime integration, publication clearance or CANON.
 - **[Docs Index](./docs/)** — Public-safe candidate explainers and review surfaces.
   - [Lattice Hypercube 12×12×12 Public Explainer](./docs/LATTICE_HYPERCUBE_12x12x12.md) — entry-level H-S-N coordinate surface for the broader 12D full-flywheel ontology.
   - [12D Flywheel Dimension Registry](./docs/LATTICE_12D_FLYWHEEL_DIMENSION_REGISTRY.md) — candidate registry for the fuller operating model.
