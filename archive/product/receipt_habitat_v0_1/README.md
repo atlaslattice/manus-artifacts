@@ -28,6 +28,20 @@ python -m receipt_habitat.review packet.yaml
 python -m receipt_habitat.status packet.yaml
 ```
 
+## Artifact Card offline demo (proposed; issue #239)
+
+The local [`graph_write_candidate` → Artifact Card renderer](src/receipt_habitat/artifact_card.py) is a read-only projection for review. A source cannot give itself canon, deployment, authority or `review_ready` status: untrusted promotion fields block the card. Rendered source text is kept on one visible line to prevent Markdown status/header spoofing.
+
+Synthetic, public-safe GangaSeek hash-gap [input](examples/gangaseek_artifact_candidate.json) is **summary only**. No original Drive documents, personal data, hash proofs or publisher permissions have been imported.
+
+```bash
+python tools/render_artifact_card.py examples/gangaseek_artifact_candidate.json --format json
+python tools/render_artifact_card.py examples/gangaseek_artifact_candidate.json --format markdown
+python -m pytest tests/test_artifact_card_v0_1.py -q
+```
+
+The CLI emits JSON or Markdown to stdout and refuses duplicate JSON keys, nonfinite constants and invalid candidate status. It performs **no graph mutation, outbound API calls, host actions or filesystem writes**. Tests were authored and code committed, but **exact GitHub Actions execution is not yet verified**. Keep PR #145 as a draft until a clean checkout run and privacy/security review succeed. A proper integration into the live hosted graph/agent fabric is still out of scope.
+
 ## Hard rules
 
 ```text
