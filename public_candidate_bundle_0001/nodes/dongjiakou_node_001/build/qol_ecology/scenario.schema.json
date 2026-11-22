@@ -1,0 +1,231 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DJK Portable QOL/Ecology Candidate Scenario v0.1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "locality_id",
+    "status",
+    "sources",
+    "programs",
+    "outfalls",
+    "finance"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "locality_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "const": "PROPOSED_NON_CANON"
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "uri",
+          "date",
+          "classification"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "uri": {
+            "type": "string",
+            "minLength": 1
+          },
+          "date": {
+            "type": "string"
+          },
+          "classification": {
+            "enum": [
+              "USER_DIRECTIVE",
+              "REPORTED",
+              "MEASURED",
+              "REFERENCE",
+              "PROPOSED",
+              "SENSITIVITY",
+              "UNKNOWN"
+            ]
+          }
+        }
+      }
+    },
+    "programs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "status",
+          "source_ids",
+          "measured_baseline",
+          "realized_credit"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "status": {
+            "enum": [
+              "PROPOSED",
+              "REPORTED",
+              "MEASURED",
+              "UNKNOWN"
+            ]
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "measured_baseline": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "realized_credit": {
+            "const": 0
+          },
+          "measurement_unit": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "outfalls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "receiving_body",
+          "flow_m3_day",
+          "nitrogen_mg_l",
+          "phosphorus_mg_l",
+          "source_ids",
+          "status",
+          "residual_fate_verified",
+          "realized_avoided_load_t_year"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "receiving_body": {
+            "type": "string"
+          },
+          "flow_m3_day": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "nitrogen_mg_l": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "phosphorus_mg_l": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "enum": [
+              "MEASURED",
+              "REPORTED",
+              "SENSITIVITY",
+              "UNKNOWN"
+            ]
+          },
+          "residual_fate_verified": {
+            "type": "boolean"
+          },
+          "realized_avoided_load_t_year": {
+            "const": 0
+          }
+        }
+      }
+    },
+    "finance": {
+      "type": "object",
+      "required": [
+        "total_cost",
+        "recovery_fraction",
+        "currency",
+        "cost_basis",
+        "status",
+        "source_ids"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "total_cost": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "recovery_fraction": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "currency": {
+          "type": "string"
+        },
+        "cost_basis": {
+          "enum": [
+            "TOTAL_PROJECT",
+            "ANNUALIZED",
+            "NET_PRESENT_VALUE",
+            "UNKNOWN"
+          ]
+        },
+        "status": {
+          "enum": [
+            "SENSITIVITY",
+            "UNKNOWN",
+            "MEASURED"
+          ]
+        },
+        "source_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
