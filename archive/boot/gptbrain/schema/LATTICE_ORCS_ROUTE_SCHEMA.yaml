@@ -1,0 +1,18 @@
+# Candidate-only route structure. Not a production route or provider grant.
+schema_id: LATTICE_ORCS_ROUTE_INDEX_v0.1
+status: candidate_only
+canon: false
+deployed: false
+authority: none
+source_index: archive/boot/gptbrain/LATTICE_ORCS_ROUTE_INDEX.seed.jsonl
+source_git_blob: cc3134840defb804dac731897752493cfda1b0af
+required: [artifact_id, title, project_domain, orcs_route_class, source_paths, claim_class, confidence, runtime_label, privacy_status, human_root_required, notes]
+invariants:
+  human_root_required: true
+  runtime_label: WORK_or_MODEL_ASSESSMENT_only
+  privacy_status: public_for_public_seed_pointers_only
+  source_rights_verified: false
+  source_paths_accessed: false
+  permission_granted: false
+  no_canon_deployment_authority: true
+  source_paths: nonempty_unique_relative_paths_no_traversal
