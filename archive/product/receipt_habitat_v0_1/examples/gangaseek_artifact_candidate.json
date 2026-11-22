@@ -1,0 +1,68 @@
+{
+  "candidate_id": "gwc-gangaseek-hash-gap-demo-001",
+  "generated_by": "synthetic offline reviewer example, not a live agent",
+  "source_packet_id": "source-summary-gangaseek-demo-001",
+  "source_artifacts": [
+    "archive/product/receipt_habitat_v0_1/examples/gangaseek_hash_gap_summary.md"
+  ],
+  "proposed_nodes": [
+    {
+      "node_id": "demo-source-summary-001",
+      "node_type": "SourceArtifact",
+      "title": "GangaSeek hash-gap — source summary only",
+      "status": "candidate",
+      "raw_export_status": "summary_only",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployed",
+      "authority_scope": "none",
+      "evidence_refs": []
+    },
+    {
+      "node_id": "demo-claim-001",
+      "node_type": "Claim",
+      "title": "Three candidate filenames were reported in a source summary; original exports not verified",
+      "status": "candidate",
+      "raw_export_status": "summary_only",
+      "canon_status": "not_canon",
+      "deployment_status": "not_deployed",
+      "authority_scope": "none",
+      "evidence_refs": []
+    }
+  ],
+  "proposed_edges": [
+    {
+      "edge_id": "demo-derived-from-001",
+      "edge_type": "derived_from",
+      "from_node": "demo-claim-001",
+      "to_node": "demo-source-summary-001",
+      "evidence_ref": null,
+      "status": "candidate"
+    }
+  ],
+  "contradictions_or_uncertainties": [
+    "A source-summary document is not a durable, hashed, rights-cleared raw export.",
+    "GangaSeek namespace 'ratification' remains a reported title, not independently verified canon."
+  ],
+  "missing_receipts": [
+    "SHA-256 for each original Drive source",
+    "Immutable raw-source export receipts",
+    "Git mirror paths and verified commit SHAs",
+    "Source rights and consent for public release",
+    "Independent reviewer sign-off"
+  ],
+  "review_required": [
+    "Hashlight / provenance review",
+    "Lucerna / rights and release review",
+    "Human owner decision for any public promotion"
+  ],
+  "strongest_safe_claim": "A public source-summary file records three GangaSeek candidate filenames and explicitly requests missing hash, raw export, and release review.",
+  "forbidden_claims": [
+    "GangaSeek corpus complete",
+    "GangaSeek namespace independently ratified",
+    "GangaSeek artifacts deployed",
+    "raw Drive sources independently verified"
+  ],
+  "canon_status": "not_canon",
+  "deployment_status": "not_deployed",
+  "authority_scope": "none"
+}
