@@ -1,5 +1,8 @@
 # S1 GPTBrain — Current State
 
+> **Historical convenience alias — NOT CANON / NOT PRIMARY BOOT SOURCE (verified November 22, 2026).** The authoritative pinned May 9 snapshot for this subject is `archive/boot/gptbrain/CURRENT_STATE_2026-05-09.md` (observed source blob `ea5e973ccd6799afced3482824d0a90500ff9442`). This existing bare file is **not byte-equivalent** to that dated snapshot and MUST NOT be treated as the latest automatically updated state. Read the dated snapshot first; preserve this alias body as historical reference. See `archive/boot/gptbrain/S1_VARIANT_E_AND_ALIAS_CROSSWALK_2026-11-22.md`.
+
+
 ```text
 STATUS: CURRENT STATE SNAPSHOT — NOT CANON
 DATE: 2026-05-09
