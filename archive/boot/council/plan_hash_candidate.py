@@ -88,6 +88,8 @@ def inspect_binding(plan_raw: bytes, execution: Any,
             errors.append("EXECUTION_PLAN_HASH_MISMATCH")
         if execution["dry_run_only"] is not True or execution["effects_executed"] is not False:
             errors.append("EXECUTION_NOT_DRY_RUN")
+        if type(execution["source_ref"]) is not str or not execution["source_ref"].strip():
+            errors.append("EXECUTION_SOURCE_REF_MISSING")
 
     for lane, packet in (("logic_verifier", logic_verifier),
                          ("security_verifier", security_verifier)):
