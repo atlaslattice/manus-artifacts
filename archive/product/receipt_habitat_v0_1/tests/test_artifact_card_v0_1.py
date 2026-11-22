@@ -158,3 +158,52 @@ def test_non_mapping_candidate_fails_without_throwing():
         assert not result.ok
         assert result.card is None
         assert "candidate_not_plain_dict" in result.errors
+
+
+def test_demo_card_cli_json_markdown():
+    import json
+    import subprocess
+    import sys
+    src = ROOT / "examples" / "gangaseek_artifact_candidate.json"
+    cli = ROOT / "tools" / "render_artifact_card.py"
+    j = subprocess.run([sys.executable, str(cli), str(src), "--format", "json"],
+                       capture_output=True, text=True, check=False)
+    assert j.returncode == 0, j.stderr
+    card = json.loads(j.stdout)
+    assert card["status_strip"]["raw_export_status"] == "summary_only"
+    assert card["status_strip"]["canon_status"] == "not_canon"
+    assert card["routing"]["public_release_status"] == "not_public_release_ready"
+    assert len(card["graph"]["missing_receipts"]) == 5
+    md = subprocess.run([sys.executable, str(cli), str(src), "--format", "markdown"],
+                        capture_output=True, text=True, check=False)
+    assert md.returncode == 0, md.stderr
+    assert "CANON_STATUS: not_canon" in md.stdout
+    assert "SHA-256 for each original Drive source" in md.stdout
+    assert "This card grants no authority." in md.stdout
+
+
+def test_card_cli_rejects_promoting_candidate(tmp_path):
+    import json
+    import subprocess
+    import sys
+    fixture = json.loads((ROOT / "examples" / "gangaseek_artifact_candidate.json").read_text())
+    fixture["canon_status"] = "ratified"
+    malicious = tmp_path / "spoofed.json"
+    malicious.write_text(json.dumps(fixture))
+    run = subprocess.run([sys.executable, str(ROOT / "tools" / "render_artifact_card.py"), str(malicious)],
+                         capture_output=True, text=True, check=False)
+    assert run.returncode == 2
+    assert not run.stdout.strip()
+    assert "BLOCKED_CANDIDATE_REVIEW" in run.stderr
+
+
+def test_card_cli_rejects_duplicate_json_keys(tmp_path):
+    import subprocess
+    import sys
+    malicious = tmp_path / "duplicate.json"
+    malicious.write_text('{"candidate_id":"first","candidate_id":"spoofed"}')
+    run = subprocess.run([sys.executable, str(ROOT / "tools" / "render_artifact_card.py"), str(malicious)],
+                         capture_output=True, text=True, check=False)
+    assert run.returncode == 2
+    assert not run.stdout.strip()
+    assert "BLOCKED_CANDIDATE_PARSE" in run.stderr
