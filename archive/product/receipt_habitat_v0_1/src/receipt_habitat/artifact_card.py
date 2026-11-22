@@ -153,6 +153,15 @@ def build_artifact_card(candidate: dict[str, Any]) -> ArtifactCardResult:
     return ArtifactCardResult(ok=True, card=card)
 
 
+def _safe_markdown_text(value: Any) -> str:
+    """Render source-provided values as one untrusted visible line.
+
+    Newlines must not inject fabricated headings or status fields, and source
+    text must not terminate the literal status fence with backtick triples.
+    """
+    return str(value).replace("\r", "\\r").replace("\n", "\\n").replace("```", "` ` `")
+
+
 def artifact_card_to_markdown(card: dict[str, Any]) -> str:
     """Render an artifact card as conservative Markdown."""
     status = card.get("status_strip", {})
@@ -162,31 +171,31 @@ def artifact_card_to_markdown(card: dict[str, Any]) -> str:
     routing = card.get("routing", {})
 
     lines = [
-        f"# Artifact Card: {card.get('title')}",
+        f"# Artifact Card: {_safe_markdown_text(card.get('title'))}",
         "",
         "```text",
-        f"ARTIFACT_ID: {card.get('artifact_id')}",
-        f"SURFACE: {card.get('surface')}",
-        f"SOURCE_TYPE: {card.get('source_type')}",
-        f"RAW_EXPORT_STATUS: {status.get('raw_export_status')}",
-        f"CANON_STATUS: {status.get('canon_status')}",
-        f"DEPLOYMENT_STATUS: {status.get('deployment_status')}",
-        f"AUTHORITY_SCOPE: {status.get('authority_scope')}",
-        f"REVIEW_STATE: {status.get('review_state')}",
+        f"ARTIFACT_ID: {_safe_markdown_text(card.get('artifact_id'))}",
+        f"SURFACE: {_safe_markdown_text(card.get('surface'))}",
+        f"SOURCE_TYPE: {_safe_markdown_text(card.get('source_type'))}",
+        f"RAW_EXPORT_STATUS: {_safe_markdown_text(status.get('raw_export_status'))}",
+        f"CANON_STATUS: {_safe_markdown_text(status.get('canon_status'))}",
+        f"DEPLOYMENT_STATUS: {_safe_markdown_text(status.get('deployment_status'))}",
+        f"AUTHORITY_SCOPE: {_safe_markdown_text(status.get('authority_scope'))}",
+        f"REVIEW_STATE: {_safe_markdown_text(status.get('review_state'))}",
         "```",
         "",
         "## Source",
         "",
-        f"- URL/path: {card.get('url_or_path')}",
-        f"- Stable ID: {evidence.get('stable_id')}",
-        f"- SHA-256: {evidence.get('sha256_if_available')}",
+        f"- URL/path: {_safe_markdown_text(card.get('url_or_path'))}",
+        f"- Stable ID: {_safe_markdown_text(evidence.get('stable_id'))}",
+        f"- SHA-256: {_safe_markdown_text(evidence.get('sha256_if_available'))}",
         "",
         "## Missing receipts",
         "",
     ]
     missing = graph.get("missing_receipts") or []
     if missing:
-        lines.extend([f"- {item}" for item in missing])
+        lines.extend([f"- {_safe_markdown_text(item)}" for item in missing])
     else:
         lines.append("- None recorded in this card.")
 
@@ -194,14 +203,14 @@ def artifact_card_to_markdown(card: dict[str, Any]) -> str:
         "",
         "## Strongest safe claim",
         "",
-        str(claims.get("strongest_safe_claim")),
+        _safe_markdown_text(claims.get("strongest_safe_claim")),
         "",
         "## Forbidden / risky claims",
         "",
     ])
     forbidden = claims.get("forbidden_claims") or []
     if forbidden:
-        lines.extend([f"- {item}" for item in forbidden])
+        lines.extend([f"- {_safe_markdown_text(item)}" for item in forbidden])
     else:
         lines.append("- None recorded in this card.")
 
@@ -212,7 +221,7 @@ def artifact_card_to_markdown(card: dict[str, Any]) -> str:
     ])
     lanes = routing.get("assigned_review_lanes") or []
     if lanes:
-        lines.extend([f"- {lane}" for lane in lanes])
+        lines.extend([f"- {_safe_markdown_text(lane)}" for lane in lanes])
     else:
         lines.append("- Review lane not assigned yet.")
 
