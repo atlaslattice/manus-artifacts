@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.2.2-candidate",
+  "status": "CANDIDATE_ONLY",
+  "canon": false,
+  "deployed": false,
+  "source_ref": "synthetic:gangaseek-fixture-only",
+  "raw_export_status": "raw_partial",
+  "header": {
+    "provenance_receipt": "synthetic:receipt-only",
+    "epistemic_label": "synthetic",
+    "authority_scope": "EXECUTION",
+    "tenancy_context": "RESEARCH",
+    "source_operator": "O_AI",
+    "target_operator": "O_GOOGLE",
+    "swa_mask": "0xC001",
+    "timestamp": "2026-11-22T00:00:00Z",
+    "coordinate": {
+      "notation": "HSN",
+      "house": 12,
+      "sphere": 1,
+      "node": 1
+    },
+    "tag_class": 3,
+    "state_plane": 11
+  },
+  "aead_envelope": {
+    "aead_algorithm": "CHACHA20_POLY1305",
+    "nonce_base64": "AAAAAAAAAAAAAAAA",
+    "aad_base64": "",
+    "ciphertext_base64": "AAAA",
+    "tag_base64": "AAAAAAAAAAAAAAAAAAAAAA==",
+    "padded_plaintext_bytes": 4096,
+    "encoded_ciphertext_base64_chars": 5464,
+    "synthetic_fixture": true
+  }
+}
