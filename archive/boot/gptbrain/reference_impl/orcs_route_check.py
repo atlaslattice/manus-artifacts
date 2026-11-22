@@ -38,7 +38,7 @@ def inspect_route(row: dict) -> dict:
         problems.append("INVALID_CLAIM_CLASS")
     if not isinstance(row.get("confidence"), str) or row["confidence"] not in CONFIDENCE:
         problems.append("INVALID_CONFIDENCE")
-    if row.get("runtime_label") not in RUNTIME:
+    if not isinstance(row.get("runtime_label"), str) or row["runtime_label"] not in RUNTIME:
         problems.append("PRIVATE_MODE_OR_UNKNOWN_RUNTIME")
     if row.get("privacy_status") != "public":
         problems.append("NON_PUBLIC_SOURCE_CANNOT_ENTER_PUBLIC_ROUTE")
