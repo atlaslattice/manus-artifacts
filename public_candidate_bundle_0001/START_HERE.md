@@ -65,6 +65,10 @@ PUBLIC-SAFE
 = release candidate
 ```
 
+## External reviewer path
+
+Start with the [cold-reviewer checklist](../docs/EXTERNAL_REVIEWER_CHECKLIST.md), which distinguishes this active public candidate scaffold from the separately preserved archived Bundle 0001, checks exact SHAs and rights, and provides missing-receipt and overclaim report templates. No automatic canon, release, publication or deployment authorization is implied.
+
 ## First path through this bundle
 
 1. Read `README.md`.
