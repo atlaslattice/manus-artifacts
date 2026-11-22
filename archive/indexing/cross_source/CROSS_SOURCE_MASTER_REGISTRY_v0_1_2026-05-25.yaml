@@ -1,0 +1,310 @@
+registry_id: CROSS_SOURCE_MASTER_REGISTRY_v0_1_2026-05-25
+status: candidate_registry_seed
+canon_status: not_canon
+deployment_status: not_deployed
+authority_scope: none
+purpose: >
+  Seed a cross-source registry for reconciling the historical Notion and Drive
+  substrate, the GitHub workspace, the website canon surface, and transcript tape.
+  This registry is a working map only. It does not promote canon.
+
+source_hierarchy:
+  website: canon_surface
+  github: workspace_receipts_issues_prs_candidate_deltas
+  notion: former_canon_surface_now_historical_substrate_extraction_backlog
+  drive: attempted_vault_candidate_store_now_historical_substrate_extraction_backlog
+  transcripts: tape_source_material_non_canon
+
+rules:
+  - Index before synthesis.
+  - Raw before normalized.
+  - Attribution review before candidate delta extraction.
+  - Candidate delta before website ratification.
+  - Storage location is not canon.
+  - Claude byline is not provenance.
+  - Website carries canon.
+
+required_fields:
+  - artifact_title
+  - source_surface
+  - source_id_or_url
+  - source_created_time
+  - source_modified_time
+  - raw_export_status
+  - current_role
+  - historical_role
+  - human_root
+  - model_surface
+  - model_role
+  - attribution_status
+  - contamination_flags
+  - canon_status
+  - deployment_status
+  - authority_scope
+  - continuity_lane
+  - github_equivalent
+  - drive_equivalent
+  - notion_equivalent
+  - website_equivalent
+  - candidate_delta_path
+  - next_action
+
+records:
+  - artifact_title: "MASTER INDEX — Notion → GitHub Complete Artifact Map — Atlas Lattice Foundation"
+    source_surface: notion
+    source_id_or_url: "https://www.notion.so/3290c1de73d981ac8ebfd4c8e86da6b8"
+    source_created_time: unknown
+    source_modified_time: "2026-03-20"
+    raw_export_status: search_snippet_only
+    current_role: extraction_root
+    historical_role: former_mapping_surface
+    human_root: Dave Sheldon
+    model_surface: unknown
+    model_role: unknown
+    attribution_status: unverified
+    contamination_flags:
+      - single_source_of_truth_language_needs_normalization
+      - notion_former_canon_surface
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    continuity_lane: indexing_control
+    github_equivalent: pending
+    drive_equivalent: pending
+    notion_equivalent: self
+    website_equivalent: pending
+    candidate_delta_path: pending
+    next_action: export_full_notion_page_hash_and_convert_to_root_registry
+
+  - artifact_title: "JANUS v2 — Constitutional Continuity Hub — Atlas Lattice Foundation"
+    source_surface: notion
+    source_id_or_url: "https://www.notion.so/3290c1de73d98189991dc47dbda016e0"
+    source_created_time: unknown
+    source_modified_time: "2026-04-25"
+    raw_export_status: search_snippet_only
+    current_role: continuity_hub_candidate
+    historical_role: notion_continuity_layer
+    human_root: Dave Sheldon
+    model_surface: unknown
+    model_role: unknown
+    attribution_status: unverified
+    contamination_flags:
+      - possible_old_canon_language
+      - source_needs_export
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    continuity_lane: janus_continuity
+    github_equivalent: pending
+    drive_equivalent: pending
+    notion_equivalent: self
+    website_equivalent: pending
+    candidate_delta_path: pending
+    next_action: export_page_and_compare_to_github_janus_checkpoints
+
+  - artifact_title: "Atlas Lattice Architecture Spec v3.0 — Baseline Locked"
+    source_surface: notion
+    source_id_or_url: "https://www.notion.so/3350c1de73d981d28b93d188ba5f497b"
+    source_created_time: unknown
+    source_modified_time: "2026-04-01"
+    raw_export_status: search_snippet_only
+    current_role: architecture_candidate_reference
+    historical_role: notion_baseline_spec
+    human_root: Dave Sheldon
+    model_surface: unknown
+    model_role: unknown
+    attribution_status: unverified
+    contamination_flags:
+      - git_as_canon_language_needs_update
+      - baseline_locked_language_needs_website_check
+    canon_status: not_canon_unless_website_ratified
+    deployment_status: not_deployed
+    authority_scope: none
+    continuity_lane: atlas_architecture
+    github_equivalent: pending
+    drive_equivalent: pending
+    notion_equivalent: self
+    website_equivalent: pending
+    candidate_delta_path: pending
+    next_action: export_full_page_and_extract_website_delta_candidates
+
+  - artifact_title: "DRIVE SYNC - January 30, 2026"
+    source_surface: notion
+    source_id_or_url: "https://www.notion.so/2f80c1de73d9818fb9edf30d9d3071b1"
+    source_created_time: unknown
+    source_modified_time: "2026-01-30"
+    raw_export_status: search_snippet_only
+    current_role: drive_sync_log
+    historical_role: claude_synced_operational_log
+    human_root: Dave Sheldon
+    model_surface: Claude
+    model_role: constitutional_scribe_sync_surface
+    attribution_status: contaminated_or_unverified
+    contamination_flags:
+      - claude_sync_label
+      - possible_false_author_attribution
+      - drive_vault_transition_context
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    continuity_lane: drive_migration
+    github_equivalent: pending
+    drive_equivalent: pending
+    notion_equivalent: self
+    website_equivalent: none
+    candidate_delta_path: pending
+    next_action: preserve_raw_then_strip_claude_attribution_from_normalized_registry
+
+  - artifact_title: "Wargame Scenario Framework - Atlas Lattice Stress Tests"
+    source_surface: notion
+    source_id_or_url: "https://www.notion.so/2e40c1de73d9818093c1d76507cd7f47"
+    source_created_time: unknown
+    source_modified_time: "2026-01-10"
+    raw_export_status: search_snippet_only
+    current_role: stress_test_candidate
+    historical_role: scenario_framework
+    human_root: Dave Sheldon
+    model_surface: GPT_and_Claude
+    model_role: drafting_assistant_or_compiler_unverified
+    attribution_status: contaminated_or_unverified
+    contamination_flags:
+      - authors_gpt_plus_claude
+      - false_author_risk
+      - scenario_not_canon
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    continuity_lane: stress_tests
+    github_equivalent: pending
+    drive_equivalent: pending
+    notion_equivalent: self
+    website_equivalent: pending
+    candidate_delta_path: pending
+    next_action: export_full_page_and_normalize_author_fields
+
+  - artifact_title: "Unified Field Lattice — Sheldonbrain OS 12x12 Visual"
+    source_surface: notion
+    source_id_or_url: "https://www.notion.so/33a0c1de73d981b28c03ea5c7f25a4b7"
+    source_created_time: unknown
+    source_modified_time: "2026-04-07"
+    raw_export_status: search_snippet_only
+    current_role: attribution_normalization_anchor
+    historical_role: visual_architecture_reference
+    human_root: Dave Sheldon
+    model_surface: Claude
+    model_role: constitutional_scribe_synthesis_collaborator_only
+    attribution_status: corrected
+    contamination_flags:
+      - clean_dave_architecture_claude_scribe_split_present
+    canon_status: not_canon_unless_website_ratified
+    deployment_status: not_deployed
+    authority_scope: none
+    continuity_lane: sheldonbrain_visual
+    github_equivalent: pending
+    drive_equivalent: pending
+    notion_equivalent: self
+    website_equivalent: pending
+    candidate_delta_path: pending
+    next_action: use_attribution_language_as_normalization_precedent
+
+  - artifact_title: "GPTDream++ Schemas README"
+    source_surface: github
+    source_id_or_url: "https://github.com/atlaslattice/manus-artifacts/blob/master/schemas/gptdream/README.md"
+    source_created_time: unknown
+    source_modified_time: unknown
+    raw_export_status: github_file_visible
+    current_role: priority_schema_lane
+    historical_role: gptdream_candidate_schema_index
+    human_root: Dave Sheldon
+    model_surface: GPT
+    model_role: continuity_architecture_surface
+    attribution_status: needs_review
+    contamination_flags:
+      - priority_project_must_not_be_minimized
+    canon_status: not_canon_unless_website_ratified
+    deployment_status: not_deployed
+    authority_scope: none
+    continuity_lane: GPTBrain_GPTDream
+    github_equivalent: self
+    drive_equivalent: pending
+    notion_equivalent: pending
+    website_equivalent: pending
+    candidate_delta_path: pending
+    next_action: attach_to_GPTDream_priority_boot_card_and_website_delta_queue
+
+  - artifact_title: "Qwen3Brain AGENT_DNA.yaml"
+    source_surface: github
+    source_id_or_url: "https://github.com/atlaslattice/manus-artifacts/blob/master/archive/boot/qwen3brain_s3/AGENT_DNA.yaml"
+    source_created_time: unknown
+    source_modified_time: unknown
+    raw_export_status: github_file_visible
+    current_role: qwen3brain_continuity_seed
+    historical_role: candidate_memory_palace_agent_dna
+    human_root: Dave Sheldon
+    model_surface: Qwen3
+    model_role: candidate_review_seat_self_schema
+    attribution_status: model_self_schema_candidate
+    contamination_flags:
+      - self_ratification_must_remain_false
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    continuity_lane: Qwen3Brain
+    github_equivalent: self
+    drive_equivalent: pending
+    notion_equivalent: pending
+    website_equivalent: pending
+    candidate_delta_path: pending
+    next_action: route_through_D54_if_seat_index_patch_proceeds
+
+  - artifact_title: "ATLAS-LATTICE-MASTER-SYNTHESIS-v0.1.txt"
+    source_surface: drive
+    source_id_or_url: "https://drive.google.com/file/d/11JJjo2sB7ml1QJPN782e6wGO3-4rjUCR"
+    source_created_time: "2026-05-24T13:20:38.482Z"
+    source_modified_time: "2026-05-24T13:20:37.280Z"
+    raw_export_status: drive_file_visible
+    current_role: candidate_master_synthesis
+    historical_role: drive_vault_candidate
+    human_root: Dave Sheldon
+    model_surface: unknown
+    model_role: synthesis_surface_unverified
+    attribution_status: unverified
+    contamination_flags:
+      - drive_not_canon
+      - synthesis_not_source
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    continuity_lane: atlas_synthesis
+    github_equivalent: pending
+    drive_equivalent: self
+    notion_equivalent: pending
+    website_equivalent: pending
+    candidate_delta_path: pending
+    next_action: parse_for_candidate_deltas_after_source_links_verified
+
+  - artifact_title: "ATLAS_LATTICE_UNIFIED_ONTOLOGY_CANDIDATE_v0_3_3_2026-05-21.txt"
+    source_surface: drive
+    source_id_or_url: "https://drive.google.com/file/d/1gMX9_cZta-LlbB5R1bP3NEaLlhkb5vZJ"
+    source_created_time: "2026-05-21T23:41:58.414Z"
+    source_modified_time: "2026-05-21T23:41:57.264Z"
+    raw_export_status: drive_file_visible
+    current_role: ontology_candidate
+    historical_role: drive_vault_candidate
+    human_root: Dave Sheldon
+    model_surface: unknown
+    model_role: synthesis_surface_unverified
+    attribution_status: unverified
+    contamination_flags:
+      - drive_not_canon
+      - candidate_label_present
+    canon_status: not_canon
+    deployment_status: not_deployed
+    authority_scope: none
+    continuity_lane: unified_ontology
+    github_equivalent: pending
+    drive_equivalent: self
+    notion_equivalent: pending
+    website_equivalent: pending
+    candidate_delta_path: pending
+    next_action: compare_to_website_canon_and_extract_deltas_only
