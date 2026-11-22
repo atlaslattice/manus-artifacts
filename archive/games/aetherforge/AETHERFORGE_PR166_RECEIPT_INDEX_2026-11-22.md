@@ -45,7 +45,7 @@ The five marker positions are STATUS, CANON, DEPLOYMENT, SOURCE and REVIEW. Miss
 
 ## HOLD gates
 
-1. PR #166 is a draft; earlier check reported mergeable=false. Recheck source/base and CI before any readiness claim.
+1. PR #166 remains a draft. GitHub's computed mergeability fluctuated from false to true after this additive commit; either value is a branch-conflict snapshot, not approval. No passing CI, content-rights review or human merge gate has been established.
 2. The original human/creative-source export, licenses, consent, and intended-publication rights remain unverified.
 3. Vendor/game-studio names do not establish endorsement or official partnerships.
 4. Symbolic years, resident stories, simulations, XP and creative effects do not imply literally executed model turns, real money, agent identities, science validation or deployment.
