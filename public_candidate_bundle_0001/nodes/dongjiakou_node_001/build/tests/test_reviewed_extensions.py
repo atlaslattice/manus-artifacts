@@ -54,7 +54,7 @@ def test_invalid_allocation_and_dimensions_are_rejected(error):
 
 def test_reviewed_topology_never_collapses_water_buyer_sets():
     x=run()
-    assert x['counts']==dict(boundary_units=19, internal_units=18, streams=23, physical=5, opportunity=18)
+    assert x['counts']==dict(boundary_units=20, internal_units=19, streams=23, physical=5, opportunity=18)
     assert set(x['nodes'])==set(x['node_meta'])
     water=next(s for s in x['streams'] if s['stream_id']=='S-W01-IND-01')
     assert water['sink_subnode'] is None

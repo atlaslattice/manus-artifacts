@@ -29,3 +29,6 @@ jobs:
       - run: python simulator.py gap resource_gap/examples/dongjiakou_unknown.json
       - run: python simulator.py gap resource_gap/examples/synthetic_gypsum_acid.json
       - run: python simulator.py gap resource_gap/examples/synthetic_biological_P.json
+      - run: python simulator.py qol > reports/QOL_REVIEW_STATE.json
+      - run: python simulator.py qol qol/examples/synthetic_beautification.json
+      - run: python simulator.py packet > reports/OS_INTEGRATION_REVIEW_PACKET.json

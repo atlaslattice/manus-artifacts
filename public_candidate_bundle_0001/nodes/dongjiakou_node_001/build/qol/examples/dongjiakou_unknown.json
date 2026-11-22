@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1",
+  "node_id": "DONGJIAKOU-NODE-001",
+  "boundary_id": "SERVICE_AND_RECEPTOR_BOUNDARY_UNKNOWN",
+  "baseline_period_end": "2026-10-08",
+  "followup_period_end": "2027-10-08",
+  "comparison": {
+    "design": "UNKNOWN",
+    "source": null
+  },
+  "minimum_public_cohort_n": 10,
+  "required_strata": [
+    "residents",
+    "workers",
+    "migrant_workers",
+    "shift_workers",
+    "disabled_people",
+    "low_income_households"
+  ],
+  "gates": {
+    "worker_safety": {
+      "status": "UNKNOWN",
+      "source": null
+    },
+    "ecological_protection": {
+      "status": "UNKNOWN",
+      "source": null
+    },
+    "privacy_and_consent": {
+      "status": "UNKNOWN",
+      "source": null
+    },
+    "access_and_non_displacement": {
+      "status": "UNKNOWN",
+      "source": null
+    },
+    "water_and_product_safety": {
+      "status": "UNKNOWN",
+      "source": null
+    },
+    "maintenance_and_lifecycle": {
+      "status": "UNKNOWN",
+      "source": null
+    }
+  },
+  "observations": []
+}

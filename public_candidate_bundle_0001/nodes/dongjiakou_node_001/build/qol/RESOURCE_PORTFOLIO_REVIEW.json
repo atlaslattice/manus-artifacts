@@ -1,0 +1,87 @@
+{
+  "status": "REVIEW_CANDIDATE_NON_CANON",
+  "realized_credit": 0,
+  "lanes": [
+    {
+      "resource": "iodine",
+      "classification": "FEED_ASSAY_GATED_RECOVERY_CANDIDATE",
+      "basis": "Brine-specific concentration/speciation and recoverable inventory required; seawater concentrate is not an oilfield brine.",
+      "import_dependence": null,
+      "demand_t_y": null,
+      "node_output": null,
+      "required_receipts": [
+        "iodine speciation and concentration",
+        "feed allocation",
+        "selectivity/purity",
+        "yield and energy/reagents",
+        "residual fate",
+        "accepted product/offtake"
+      ]
+    },
+    {
+      "resource": "helium",
+      "classification": "FEED_ASSAY_GATED_RECOVERY_CANDIDATE",
+      "basis": "Cold energy assists separation but does not supply He. Liquefaction often removes He into upstream flash/NRU streams. Imported LNG/BOG at Qingdao requires a local composition assay and recoverable feed inventory.",
+      "import_dependence": null,
+      "node_output": null,
+      "source": "https://www.sciencedirect.com/science/article/pii/S0360544218307308",
+      "required_receipts": [
+        "actual LNG and BOG He concentration/flow",
+        "upstream helium-removal history",
+        "purification/process design",
+        "energy/exergy and existing cold-allocation rights",
+        "contract/offtake",
+        "residual/methane leakage"
+      ],
+      "technology_reference_state": "SUPPLIER_REPORTED_OPERATION_ELSEWHERE_AND_PUBLISHED_NUMERICAL_RESEARCH",
+      "review_register": "../review/helium_cold_sludge_review_2026-10-09.json"
+    },
+    {
+      "resource": "phosphorus",
+      "classification": "BIOLOGICAL_HYBRID_NUTRIENT_RECOVERY_CANDIDATE",
+      "basis": "Recover P already present in qualified wastewater/residues. Elemental P, phosphate rock and struvite are distinct product bases. Product qualification decides substitutable application.",
+      "import_dependence": null,
+      "node_output": null
+    },
+    {
+      "resource": "cobalt",
+      "classification": "CIRCULAR_RECOVERY_SUBSTITUTION_AND_BUFFER",
+      "basis": "No biological creation of the metal. Assayed local scrap may support physical/chemical or bio-assisted recycling; otherwise diversify, substitute application and reserve. Availability and output unknown.",
+      "import_dependence": null,
+      "node_output": null
+    },
+    {
+      "resource": "chromium",
+      "classification": "CIRCULAR_RECOVERY_SUBSTITUTION_AND_BUFFER",
+      "basis": "No biological creation of the metal. Assayed local scrap may support physical/chemical or bio-assisted recycling; otherwise diversify, substitute application and reserve. Availability and output unknown.",
+      "import_dependence": null,
+      "node_output": null
+    },
+    {
+      "resource": "copper",
+      "classification": "CIRCULAR_RECOVERY_SUBSTITUTION_AND_BUFFER",
+      "basis": "No biological creation of the metal. Assayed local scrap may support physical/chemical or bio-assisted recycling; otherwise diversify, substitute application and reserve. Availability and output unknown.",
+      "import_dependence": null,
+      "node_output": null
+    }
+  ],
+  "unverified_handoff_claims": [
+    "iodine89–91%,8300t demand,900t output",
+    "helium85%,490% price rise",
+    "phosphate998100t,+30%,Egypt97.7% in May2026",
+    "cobalt85–95%,DRC97%+,April98% decline",
+    "chromium>99%,SouthAfrica80%",
+    "copper77%"
+  ],
+  "rule": "Neither node-candidate nor buffer-candidate status is proof of available feed, feasible conversion, supply or demand. No unverified trade numbers are engine inputs.",
+  "verified_policy_references": [
+    {
+      "resource": "helium",
+      "status": "OFFICIAL_POLICY",
+      "announcement": "MOFCOM/Customs2026No.29",
+      "effective_date": "2026-07-10",
+      "scope": "Temporary export prohibition; no node feed/yield established",
+      "source": "https://www.mofcom.gov.cn/zcfb/zc/art/2026/art_ba9f7df9a0cb4c00aa1aa6f3b0741328.html"
+    }
+  ]
+}

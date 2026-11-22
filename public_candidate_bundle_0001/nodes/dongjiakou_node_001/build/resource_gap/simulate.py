@@ -196,7 +196,8 @@ def simulate(case, input_sha256=None):
                   max(0, req[1] + reserve[1] / years - supply[0]))
     remaining = None if total is None or target is None else (
         max(0, target[0] - total[1]), max(0, target[1] - total[0]))
-    return {'schema_version': '0.1', 'scenario_id': case['scenario_id'],
+    from models.qol import evaluate
+    return {'human_ecological_objectives': evaluate(), 'schema_version': '0.1', 'scenario_id': case['scenario_id'],
         'classification': 'SIMULATED_NON_CANON', 'input_sha256': input_sha256,
         'resource_basis': case['resource_basis'], 'demand_basis': d['basis'],
         'routes': results, 'evidence_gated_total_t_y': exported(total),
@@ -230,4 +231,6 @@ def main():
 
 
 if __name__ == '__main__':
+    import sys
+    sys.path.insert(0, str(ROOT.parent))
     main()

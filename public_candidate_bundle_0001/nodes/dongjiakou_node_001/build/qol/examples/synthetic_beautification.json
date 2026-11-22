@@ -1,0 +1,69 @@
+{
+  "schema_version": "0.1",
+  "node_id": "SYNTHETIC-NOT-A-LOCAL-RECEIPT",
+  "boundary_id": "synthetic-test-boundary",
+  "baseline_period_end": "2026-10-08",
+  "followup_period_end": "2027-10-08",
+  "comparison": {
+    "design": "CONTROLLED_ALIGNED",
+    "source": "synthetic test; no measured comparison"
+  },
+  "minimum_public_cohort_n": 10,
+  "required_strata": [
+    "residents"
+  ],
+  "gates": {
+    "worker_safety": {
+      "status": "PASS",
+      "source": "synthetic test fixture; not independently reviewed"
+    },
+    "ecological_protection": {
+      "status": "PASS",
+      "source": "synthetic test fixture; not independently reviewed"
+    },
+    "privacy_and_consent": {
+      "status": "PASS",
+      "source": "synthetic test fixture; not independently reviewed"
+    },
+    "access_and_non_displacement": {
+      "status": "PASS",
+      "source": "synthetic test fixture; not independently reviewed"
+    },
+    "water_and_product_safety": {
+      "status": "PASS",
+      "source": "synthetic test fixture; not independently reviewed"
+    },
+    "maintenance_and_lifecycle": {
+      "status": "PASS",
+      "source": "synthetic test fixture; not independently reviewed"
+    }
+  },
+  "observations": [
+    {
+      "indicator_id": "place_restorativeness",
+      "stratum": "residents",
+      "unit": "score_0_10",
+      "sample_n": 100,
+      "baseline": {
+        "low": 4,
+        "high": 4.5,
+        "evidence_class": "SYNTHETIC",
+        "source": "synthetic fixture",
+        "method": "synthetic",
+        "boundary_id": "synthetic-test-boundary",
+        "period_end": "2026-10-08",
+        "protocol_id": "synthetic-example"
+      },
+      "followup": {
+        "low": 6,
+        "high": 6.5,
+        "evidence_class": "SYNTHETIC",
+        "source": "synthetic fixture",
+        "method": "synthetic",
+        "boundary_id": "synthetic-test-boundary",
+        "period_end": "2027-10-08",
+        "protocol_id": "synthetic-example"
+      }
+    }
+  ]
+}
