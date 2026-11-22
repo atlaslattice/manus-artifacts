@@ -68,7 +68,7 @@ def check_packet(packet: Any) -> dict[str, Any]:
         complain("source_ref_required")
     if not isinstance(packet.get("raw_export_status"), str) or packet.get("raw_export_status") not in ALLOWED_STATUS:
         complain("invalid_raw_export_status")
-    if packet.get("raw_export_status") in {"raw_complete_hashed", "raw_complete_unhashed"}:
+    if isinstance(packet.get("raw_export_status"), str) and packet.get("raw_export_status") in {"raw_complete_hashed", "raw_complete_unhashed"}:
         complain("source_completeness_not_verified_by_synthetic_packet")
 
     h = packet.get("header")
