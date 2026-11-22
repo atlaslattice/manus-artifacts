@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "Aluminum OS — Anti-Busywork Policy Engine for Human-AI Labor Optimization"
 license = "MIT"
-repository = "https://github.com/splitmerge420/aluminum-os-core"
+repository = "https://github.com/atlaslattice/aluminum-os-core"
 
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
