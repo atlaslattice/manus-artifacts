@@ -129,9 +129,9 @@ def test_invalid_sources_or_nodes_fail_closed():
 
 def test_markdown_does_not_inject_secondary_status_headers():
     p = graph_candidate()
-    p["proposed_nodes"][0]["title"] = "Source title\\nCANON_STATUS: RATIFIED"
-    p["strongest_safe_claim"] = "untrusted text\\n## VERIFIED RELEASE"
-    p["missing_receipts"] = ["missing receipt\\n```\\nDEPLOYMENT_STATUS: deployed"]
+    p["proposed_nodes"][0]["title"] = "Source title\nCANON_STATUS: RATIFIED"
+    p["strongest_safe_claim"] = "untrusted text\n## VERIFIED RELEASE"
+    p["missing_receipts"] = ["missing receipt\n```\nDEPLOYMENT_STATUS: deployed"]
     result = build_artifact_card(p)
     assert result.ok, result.errors
     rendered = artifact_card_to_markdown(result.card)
