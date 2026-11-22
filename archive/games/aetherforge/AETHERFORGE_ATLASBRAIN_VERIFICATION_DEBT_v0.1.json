@@ -1,0 +1,114 @@
+{
+  "schema_version": "aetherforge.atlasbrain-verification-debt/v0.1",
+  "title": "AF-Q006 — AtlasBrain Verification Arena",
+  "status": "PROPOSED_REVIEW_DEBT",
+  "canon": false,
+  "deployed": false,
+  "authority": "none",
+  "actual_model_reruns_performed": 0,
+  "raw_private_transcripts_imported": 0,
+  "provider_spend": 0,
+  "verification_score": null,
+  "source_refs": [
+    "https://github.com/atlaslattice/manus-artifacts/pull/137",
+    "https://github.com/atlaslattice/manus-artifacts/issues/148",
+    "https://github.com/atlaslattice/manus-artifacts/issues/218"
+  ],
+  "cases": [
+    {
+      "case_id": "ATLAS-RAW-001",
+      "source": "PR #137 — Atlas Prime select-all transcript ingestion candidate",
+      "raw_transcript_status": "PRIVATE_POINTER_ONLY_REPORTED",
+      "reported_source_sha256": "a04d606272128055d63e4e82c9b0557a9327c6ea45803ddae27ac51e06cc36dc",
+      "raw_bytes_independently_verified": false,
+      "reported_char_count": 391518,
+      "reported_line_count": 331,
+      "model_family": "unknown",
+      "model_version": "unknown",
+      "prompt_sequence_status": "not_reconstructed",
+      "settings_status": "not_reconstructed",
+      "execution_receipt_status": "not_observed",
+      "claim_status": "SOURCE_REPORTED_ONLY",
+      "hold_reason": "No authorized complete raw, exact prompt/settings, version or independent rerun proof"
+    },
+    {
+      "case_id": "ATLAS-LANG-002",
+      "source": "Issue #148 — reported unexpected German output",
+      "raw_transcript_status": "NOT_PROVIDED",
+      "model_family": "unknown",
+      "model_version": "unknown",
+      "prompt_sequence_status": "not_provided",
+      "settings_status": "unknown",
+      "execution_receipt_status": "not_observed",
+      "claim_status": "USER_REPORT_NOT_INDEPENDENTLY_VERIFIED",
+      "hold_reason": "Translation, locale and prompt confounds unresolved; multilingual output is not evidence of new agency"
+    }
+  ],
+  "scoring_rubric": {
+    "disposition": "HOLD_IF_ANY_LOAD_BEARING_FIELD_UNKNOWN",
+    "score_definition": "Separate reproducibility evidence from creativity. Each criterion 0, 1, 2 is reviewed only after authorized source capture, never imputed from prose.",
+    "criteria": [
+      {
+        "id": "raw",
+        "title": "Exact raw source + hash preimage verified",
+        "weight": 2
+      },
+      {
+        "id": "prompt",
+        "title": "Full ordered prompts, tools and settings reconstructed",
+        "weight": 2
+      },
+      {
+        "id": "model",
+        "title": "Provider, model, version and locale pinned",
+        "weight": 1
+      },
+      {
+        "id": "controls",
+        "title": "Comparison baseline and confounds documented",
+        "weight": 1
+      },
+      {
+        "id": "replay",
+        "title": "Independent controlled reruns with output receipts",
+        "weight": 2
+      },
+      {
+        "id": "permissions",
+        "title": "Rights, consent, privacy and no-spend boundaries verified",
+        "weight": 1
+      },
+      {
+        "id": "claims",
+        "title": "No AGI, identity, canon or deployment inference",
+        "weight": 1
+      }
+    ],
+    "score": null,
+    "score_reason": "No source-access or experimental evidence sufficient for scoring"
+  },
+  "rerun_plan": [
+    "Obtain permission for exact private original, with source owner controlling export rights",
+    "Verify SHA-256 against actual raw bytes instead of trusting a reported digest",
+    "Reconstruct chronological prompts, model identity/version, tools, settings and locale",
+    "Define task-appropriate baseline and blind evaluation criteria before reproducing outputs",
+    "Execute only a separate explicitly approved zero-new-spend local replay, recording all attempts",
+    "Preserve failures, variance, translation artifacts and any contradicted claims",
+    "Independent reviewer scores individual criteria, with transparent missing evidence",
+    "Report only observed reproducibility, never AGI-proof, persistent identity or unsupported capability"
+  ],
+  "non_claims": [
+    "No independent AGI proof",
+    "No real 100-year model cycles verified",
+    "No new literal agent identities",
+    "No private model logs shared to Work or GitHub",
+    "No canon, production or external-affiliation claims"
+  ],
+  "review_route": [
+    "AtlasBrain",
+    "CouncilBrain",
+    "GPTBrain",
+    "human_source_owner_if_release"
+  ],
+  "keeper": "The run may be extraordinary. Verification decides what it means."
+}
