@@ -3,20 +3,23 @@
 schema_id: S1_DREAM_EXTRACTION_SCHEMA
 status: SCHEMA_DRAFT_NOT_CANON
 issue: manus-artifacts#12
-version: 0.1.0
+version: 0.1.1
 seat: S1
 seat_name: GPTBrain
 purpose: >
   Convert DREAM / PLAY artifacts into typed extraction candidates without
   upgrading metaphor, reflection, or model-originated synthesis into fact,
-  canon, or implementation authority.
+  canon, implementation authority, or deployment authority.
 
 required_fields:
   - extraction_id
   - artifact_type
   - artifact_status
+  - authority_scope
+  - epistemic_label
   - source_artifact
   - generated_at
+  - receipt_refs
   - items
   - human_root_required
 
@@ -43,12 +46,70 @@ fields:
       - rejected
       - superseded
 
+  authority_scope:
+    type: enum
+    values:
+      - NONE
+      - REVIEW_SIGNAL
+      - LOCAL_TEST_EVIDENCE
+      - IMPLEMENTATION_CANDIDATE
+      - CANON_CANDIDATE
+      - RATIFIED_CANON
+    default: NONE
+    description: >
+      Indicates review posture only. It never grants runtime permissions,
+      execution authority, canon authority, or deployment authority by itself.
+
+  epistemic_label:
+    type: enum
+    values:
+      - CREATIVE_OVERLAY
+      - NOT_VERIFIED
+      - DESIGN_CHOICE
+      - EVALUATOR_SIGNAL
+      - LOCAL_RECEIPT_ONLY
+      - VERIFIABLE
+      - COMPUTED
+      - HUMAN_RATIFIED
+    default: CREATIVE_OVERLAY
+
   source_artifact:
     type: string
     description: Repo path or source reference for the dream/play artifact.
 
   generated_at:
     type: datetime
+
+  receipt_refs:
+    type: array
+    items: string
+    description: Issue, PR, audit event, hash, or review receipt references.
+
+  receipts:
+    type: object
+    required:
+      - source_artifact
+      - created_at
+      - created_by
+      - repo_path
+    properties:
+      source_artifact:
+        type: string
+      source_hash:
+        type: string
+        nullable: true
+      created_at:
+        type: datetime
+      created_by:
+        type: string
+      reviewed_by:
+        type: array
+        items: string
+      repo_path:
+        type: string
+      related_issue_or_pr:
+        type: string
+        nullable: true
 
   human_root_required:
     type: boolean
@@ -78,6 +139,7 @@ fields:
             - schema_candidate
             - ui_candidate
             - governance_candidate
+            - role_candidate
             - test_candidate
             - code_candidate
             - action_candidate
@@ -92,12 +154,14 @@ fields:
         claim_status:
           type: enum
           values:
+            - metaphor
             - hypothesis
             - evaluator_signal
             - candidate_task
             - candidate_wording
             - candidate_schema
             - candidate_test
+            - implementation_candidate
         confidence:
           type: enum
           values: [C0, C1, C2, C3, C4, C5]
@@ -109,6 +173,9 @@ fields:
           type: boolean
           default: true
         source_refs:
+          type: array
+          items: string
+        receipt_refs:
           type: array
           items: string
         risks:
@@ -126,5 +193,7 @@ invariants:
   - Play output is not plan.
   - Extraction candidate is not implementation approval.
   - Candidate canon is not ratified canon.
+  - Authority scope is review posture, not execution permission.
+  - No dream/play extraction may exceed REVIEW_SIGNAL authority_scope by default.
   - Human-root review is required for canon-impacting promotion.
   - Sensitive concepts such as emotional_context_signal require privacy review before implementation.
