@@ -108,29 +108,45 @@ def list_memories(query: str | None = None, memory_type: str | None = None) -> l
 
 
 def remember(title: str, memory_type: str, summary: str, source: str, confidence: str = "C1") -> dict[str, Any]:
-    rows = load_jsonl(MEMORY_OBJECTS)
-    memory_id = f"S1-MEM-{datetime.now(timezone.utc).strftime('%Y-%m%d-%H%M%S')}-{len(rows)+1:04d}"
+    """Preview an unsaved source-labeled memory candidate; never mutate seed ledgers.
+
+    Unlike the original S1 prototype, no file is written and no inferred
+    consent is assigned. This is a local proposal, not a memory persistence API.
+    """
+    allowed_sources = {"manual_entry", "user_message", "synthetic_fixture", "public_source_pointer"}
+    for label, value in (("title", title), ("memory_type", memory_type), ("summary", summary)):
+        if not isinstance(value, str) or not value.strip():
+            raise ValueError(label + "_must_be_nonempty_text")
+    if len(summary) > 10000:
+        raise ValueError("summary_too_long")
+    if not isinstance(source, str) or source not in allowed_sources:
+        raise ValueError("source_class_not_authorized_for_preview")
+    if confidence not in {"C0", "C1", "C2", "C3", "C4", "C5"}:
+        raise ValueError("unsupported_confidence")
     now = utc_now()
+    candidate_id = "S1-UNSAVED-PREVIEW-" + datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%f")
     row = {
-        "memory_id": memory_id,
+        "memory_id": candidate_id,
         "title": title,
         "type": memory_type,
         "summary": summary,
-        "epistemic_status": "user_claim" if source == "user_message" else "artifact",
+        "epistemic_status": "user_claim" if source == "user_message" else "candidate",
         "confidence": confidence,
         "provenance": {
             "source_type": source,
             "source_refs": [],
             "sha256": None,
             "captured_at": now,
+            "raw_export_status": "not_provided",
+            "source_rights_verified": False,
         },
-        "ontology": {"sphere_tags": ["S144"], "primary_house": None, "secondary_houses": []},
+        "ontology": {"sphere_tags": [], "primary_house": None, "secondary_houses": []},
         "permissions": {
-            "access_class": "assistant_context",
-            "consent_level": "implicit_context",
+            "access_class": "preview_only",
+            "consent_level": "not_attested",
             "executable": False,
         },
-        "retention": {"status": "active", "review_after": None},
+        "retention": {"status": "not_saved", "review_after": None},
         "links": {
             "related_memory_ids": [],
             "contradicts": [],
@@ -140,17 +156,24 @@ def remember(title: str, memory_type: str, summary: str, source: str, confidence
         },
         "payload": {},
         "review": {
-            "canon_status": "raw",
+            "canon_status": "not_canon",
             "human_root_required": True,
             "reviewer": None,
-            "review_notes": "Created by local reference implementation; not canon.",
+            "review_notes": "Local candidate preview only. No source rights, consent, identity or storage grant.",
         },
         "created_at": now,
         "updated_at": now,
     }
-    append_jsonl(MEMORY_OBJECTS, row)
-    return row
-
+    return {
+        "status": "CANDIDATE_PREVIEW_NOT_SAVED",
+        "candidate": row,
+        "persisted": False,
+        "source_rights_verified": False,
+        "execution_authority": False,
+        "human_root_required": True,
+        "canon": False,
+        "deployed": False,
+    }
 
 def trace_claim(claim_id: str) -> dict[str, Any]:
     claim = find_one(load_jsonl(CLAIM_LEDGER), "claim_id", claim_id)
@@ -279,7 +302,7 @@ def synthesize(scope: str) -> dict[str, Any]:
             "Human-root review is required for ratified canon.",
         ],
         "next_actions": [
-            "Patch canonical candidate to integrate Variant E directly.",
+            "Variant E is integrated in the S1 candidate; human-root ratification remains pending.",
             "Add tests for claim challenge and memory trace behavior.",
             "Promote this scaffold only through issue-linked review.",
         ],
