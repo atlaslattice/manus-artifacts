@@ -140,3 +140,21 @@ def test_markdown_does_not_inject_secondary_status_headers():
     assert "missing receipt\\n` ` `\\nDEPLOYMENT_STATUS: deployed" in rendered
     assert "\nCANON_STATUS: RATIFIED" not in rendered
     assert "\nDEPLOYMENT_STATUS: deployed" not in rendered
+
+
+def test_empty_reported_gaps_do_not_mean_reviewed():
+    p = graph_candidate()
+    p["missing_receipts"] = []
+    p["review_required"] = []
+    card = build_artifact_card(p)
+    assert card.ok, card.errors
+    assert card.card["status_strip"]["review_state"] == "needs_review"
+    assert card.card["routing"]["public_release_status"] == "not_public_release_ready"
+
+
+def test_non_mapping_candidate_fails_without_throwing():
+    for value in (None, [], 42, "fake-canon"):
+        result = build_artifact_card(value)
+        assert not result.ok
+        assert result.card is None
+        assert "candidate_not_plain_dict" in result.errors
