@@ -1,0 +1,165 @@
+{
+  "schema_version": "aetherforge.vendor-officiality-audit/v0.1",
+  "title": "AF-Q001 + AF-Q009 — Vendor Capture Hydra and False Officiality Boss Fight",
+  "status": "SOURCE_LINKED_REVIEW_CANDIDATE",
+  "canon": false,
+  "deployed": false,
+  "authority": "none",
+  "actual_external_verifications": 0,
+  "actual_partner_contacts": 0,
+  "real_money_spent": 0,
+  "source_branch": "game/aetherforge-candidate",
+  "source_pr": "https://github.com/atlaslattice/manus-artifacts/pull/166",
+  "review_issues": [
+    "https://github.com/atlaslattice/manus-artifacts/issues/210",
+    "https://github.com/atlaslattice/manus-artifacts/issues/224"
+  ],
+  "entries": [
+    {
+      "id": "AF-VC-001",
+      "file": "archive/games/aetherforge/AETHERFORGE_INVARIANT_ENGINE_CANDIDATE_v0.1_2026-05-25.md",
+      "git_blob_sha": "d1ae8a384742a7cbc7267e9a51bb8a0ab2fc9603",
+      "source_line": 15,
+      "claim_type": "conceptual vendor-platform fusion language",
+      "risk": "High—could be read as actual integration",
+      "original_claim_status": "SOURCE_DRAFT_NOT_VERIFIED",
+      "safe_replacement": "Aetherforge is a candidate fictional game/OS metaphor inspired by general cloud and game-platform concepts; no Microsoft, Xbox or xAI integration, approval or partnership is established.",
+      "quarantine_action": "BLOCK_OFFICIALITY_PROMOTION",
+      "review_route": [
+        "GPTBrain",
+        "CouncilBrain",
+        "TIDELOCK",
+        "human_owner"
+      ]
+    },
+    {
+      "id": "AF-VC-002",
+      "file": "archive/games/aetherforge/AETHERFORGE_INVARIANT_ENGINE_CANDIDATE_v0.1_2026-05-25.md",
+      "git_blob_sha": "d1ae8a384742a7cbc7267e9a51bb8a0ab2fc9603",
+      "source_line": 101,
+      "claim_type": "Sovereign Dividend reward-economy proposal",
+      "risk": "High—economic/game fiction could imply material payments",
+      "original_claim_status": "DESIGN_CHOICE_NOT_COMMERCIAL_PRODUCT",
+      "safe_replacement": "The Sovereign Dividend is a proposed fictional cooperative reward mechanic, not revenue, yield, tax entitlement, investment return or compensation.",
+      "quarantine_action": "HOLD_UNTIL_FINANCIAL_AND_RIGHTS_REVIEW",
+      "review_route": [
+        "GPTBrain",
+        "CouncilBrain",
+        "human_owner"
+      ]
+    },
+    {
+      "id": "AF-VC-003",
+      "file": "archive/games/aetherforge/AETHERFORGE_HUMAN_AI_BOUNTY_GAME_SPEC_v0_1_2026-05-25.md",
+      "git_blob_sha": "9ed0946094f51adbb18db8bd509b6a455eff87bb",
+      "source_line": 48,
+      "claim_type": "bounty-to-real-money bridge suggestion",
+      "risk": "High—may sound like an offer or funded paid-work program",
+      "original_claim_status": "UNFUNDED_CANDIDATE_DESIGN",
+      "safe_replacement": "Any future real-money bounty program would require a separate opt-in legal contract, budget approval, labor and IP review, payout infrastructure and recorded participant consent. None exists or is offered by this draft.",
+      "quarantine_action": "NO_PAYMENT_OR_OFFER_FROM_PLAY",
+      "review_route": [
+        "CouncilBrain",
+        "TIDELOCK",
+        "human_owner"
+      ]
+    },
+    {
+      "id": "AF-VC-004",
+      "file": "archive/games/aetherforge/AETHERFORGE_OFFICIALITY_VENDOR_GUARDRAIL_v0.1_2026-05-25.md",
+      "git_blob_sha": "93272affabab72b126bc2a868eaa634c5c0ef92a",
+      "source_line": 40,
+      "claim_type": "vendor named in placeholder mapping table",
+      "risk": "Medium—downstream excerpts could drop the table's placeholder qualifier",
+      "original_claim_status": "EXPLICITLY_CANDIDATE_ALREADY_NEGATED",
+      "safe_replacement": "Microsoft/Azure/Xbox and other trademarks are external references or creative genre placeholders only; no license, affiliation, endorsement or hosted capability is asserted.",
+      "quarantine_action": "PRESERVE_NEGATION_WITH_QUOTE",
+      "review_route": [
+        "GPTBrain",
+        "TIDELOCK",
+        "human_owner"
+      ]
+    },
+    {
+      "id": "AF-VC-005",
+      "file": "archive/games/aetherforge/AETHERFORGE_GAMEPLAY_RESONANCE_ANOMALY_PACKET_2026-05-25.md",
+      "git_blob_sha": "2e2db330f34127957e468639c9fd2c9cdc6c4580",
+      "source_line": 58,
+      "claim_type": "Microsoft game ecosystem candidate reference",
+      "risk": "Medium—possible officiality or hidden memory misinterpretation",
+      "original_claim_status": "CREATIVE_OVERLAY_NOT_EVIDENCE",
+      "safe_replacement": "These are user-authored candidate fiction motifs and references, not proof of official support, private model foresight, hidden memory, shared machine identity or commissioned development.",
+      "quarantine_action": "BLOCK_REAL_WORLD_INFERENCE",
+      "review_route": [
+        "GPTBrain",
+        "CouncilBrain",
+        "human_owner"
+      ]
+    },
+    {
+      "id": "AF-VC-006",
+      "file": "archive/games/aetherforge/AETHERFORGE_12x12_EXECUTION_BUNDLE_v0.1_2026-05-25.md",
+      "git_blob_sha": "ee1f53e2dfa3518c2dadb7bb6494c5bde31711ff",
+      "source_line": 275,
+      "claim_type": "conditional vendor benefit",
+      "risk": "Low to medium—can overstate actual vendor adoption",
+      "original_claim_status": "CONDITIONAL_DESIGN_RATIONALE",
+      "safe_replacement": "A vendor could hypothetically benefit from interoperable receipts; this does not establish contact, adoption, partnership, ownership, funding or endorsement.",
+      "quarantine_action": "PRESERVE_AS_HYPOTHETICAL",
+      "review_route": [
+        "GPTBrain",
+        "TIDELOCK"
+      ]
+    },
+    {
+      "id": "AF-VC-007",
+      "file": "archive/games/aetherforge/AETHERFORGE_OFFICIALITY_VENDOR_GUARDRAIL_v0.1_2026-05-25.md",
+      "git_blob_sha": "93272affabab72b126bc2a868eaa634c5c0ef92a",
+      "source_line": 50,
+      "claim_type": "explicit list of prohibited officiality claims",
+      "risk": "False positive if quoted as actual claim",
+      "original_claim_status": "NEGATED_PROHIBITION_NOT_AFFIRMATIVE_CLAIM",
+      "safe_replacement": "The source already flags these named claims as prohibited. Keep this negative context attached in summaries and classifiers.",
+      "quarantine_action": "NO_EXTRA_QUARANTINE_ON_NEGATION",
+      "review_route": [
+        "CouncilBrain",
+        "TIDELOCK"
+      ]
+    }
+  ],
+  "external_verification_queue": [
+    {
+      "topic": "Any Microsoft/Azure/Xbox/Mojang/Blizzard/Activision license, integration or official support",
+      "status": "NO_PARTNER_RECEIPT",
+      "required_evidence": "dated official authorization or independent rights/licensing review"
+    },
+    {
+      "topic": "Any xAI/Tesla robotics or AI agent product integration",
+      "status": "NO_PARTNER_RECEIPT",
+      "required_evidence": "official permission, API capability and safety/rights review"
+    },
+    {
+      "topic": "Any paid bounty, real-money contracts or tokens",
+      "status": "NO_BUDGET_OR_CONTRACT",
+      "required_evidence": "specific opt-in legal terms, funding source, consent and regulatory review"
+    },
+    {
+      "topic": "Any government, military, diplomatic, sovereign or economic benefit claim",
+      "status": "NO_OFFICIAL_AUTHORITY_EVIDENCE",
+      "required_evidence": "primary dated evidence and human/domain authorization"
+    },
+    {
+      "topic": "Upstream game/creative content use and trademarks",
+      "status": "SOURCE_RIGHTS_UNVERIFIED",
+      "required_evidence": "source-owner consent, license review and release-safe paraphrase"
+    }
+  ],
+  "quarantine_policy": "Keep original public candidate source intact; quarantine only unsupported external-authority inference or attempted promotion. Do not label a negated example as an affirmative claim.",
+  "nonclaims": [
+    "No proof of endorsement, provider affiliation, commercial readiness or real-money payouts",
+    "No external service called, no official contact or real provider spending",
+    "No private Play/Imagine source ingested",
+    "No evidence that a creative simulation is an executed hosted model"
+  ],
+  "keeper": "Clean tape benefits the quarterback; it does not transfer ownership of the stadium. Big claims require bigger receipts."
+}
