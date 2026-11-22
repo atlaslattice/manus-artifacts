@@ -1,0 +1,207 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:atlas:gangaseek:packet:candidate-v0.2.2",
+  "title": "GANGASEEK packet v0.2.2 offline structural candidate",
+  "description": "No authority or cryptographic authenticity is established by passing structural validation. No live execution, CANON, deployment, source rights or signed identity.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "status",
+    "canon",
+    "deployed",
+    "source_ref",
+    "raw_export_status",
+    "header",
+    "aead_envelope"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.2.2-candidate"
+    },
+    "status": {
+      "const": "CANDIDATE_ONLY"
+    },
+    "canon": {
+      "const": false
+    },
+    "deployed": {
+      "const": false
+    },
+    "source_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "raw_export_status": {
+      "enum": [
+        "raw_missing",
+        "raw_partial",
+        "raw_complete_unhashed",
+        "raw_complete_hashed",
+        "raw_source_unavailable"
+      ]
+    },
+    "header": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provenance_receipt",
+        "epistemic_label",
+        "authority_scope",
+        "tenancy_context",
+        "source_operator",
+        "target_operator",
+        "swa_mask",
+        "timestamp",
+        "coordinate",
+        "tag_class",
+        "state_plane"
+      ],
+      "properties": {
+        "provenance_receipt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "epistemic_label": {
+          "enum": [
+            "synthetic",
+            "unverified",
+            "derived",
+            "reviewed_candidate"
+          ]
+        },
+        "authority_scope": {
+          "enum": [
+            "NONE",
+            "ADVISORY"
+          ],
+          "description": "No RATIFICATION, EXECUTION or real host grants expressible in this candidate packet"
+        },
+        "tenancy_context": {
+          "enum": [
+            "SOVEREIGN",
+            "ENTERPRISE",
+            "PUBLIC",
+            "PRIVATE",
+            "RESEARCH"
+          ]
+        },
+        "source_operator": {
+          "enum": [
+            "O_AI",
+            "O_MS",
+            "O_GOOGLE",
+            "O_STARLINK",
+            "O_ALPHA",
+            "O_X"
+          ]
+        },
+        "target_operator": {
+          "enum": [
+            "O_AI",
+            "O_MS",
+            "O_GOOGLE",
+            "O_STARLINK",
+            "O_ALPHA",
+            "O_X"
+          ]
+        },
+        "swa_mask": {
+          "type": "string",
+          "pattern": "^0x[0-9A-Fa-f]{4}$"
+        },
+        "timestamp": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coordinate": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "notation",
+            "house",
+            "sphere",
+            "node"
+          ],
+          "properties": {
+            "notation": {
+              "const": "HSN"
+            },
+            "house": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 12
+            },
+            "sphere": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 12
+            },
+            "node": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 12
+            }
+          }
+        },
+        "tag_class": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3,
+          "description": "Wire handling class (TAG), independent from state_plane"
+        },
+        "state_plane": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 15,
+          "description": "Lattice Z state plane; 11 (0x0B) must not be conflated with TAG 0b11"
+        }
+      }
+    },
+    "aead_envelope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "aead_algorithm",
+        "nonce_base64",
+        "aad_base64",
+        "ciphertext_base64",
+        "tag_base64",
+        "padded_plaintext_bytes",
+        "encoded_ciphertext_base64_chars",
+        "synthetic_fixture"
+      ],
+      "properties": {
+        "aead_algorithm": {
+          "const": "CHACHA20_POLY1305"
+        },
+        "nonce_base64": {
+          "type": "string",
+          "minLength": 16
+        },
+        "aad_base64": {
+          "type": "string"
+        },
+        "ciphertext_base64": {
+          "type": "string",
+          "minLength": 5464,
+          "maxLength": 5464
+        },
+        "tag_base64": {
+          "type": "string",
+          "minLength": 24
+        },
+        "padded_plaintext_bytes": {
+          "const": 4096
+        },
+        "encoded_ciphertext_base64_chars": {
+          "const": 5464
+        },
+        "synthetic_fixture": {
+          "const": true,
+          "description": "This reference schema accepts only synthetic fixtures; not live cryptographic packets"
+        }
+      }
+    }
+  }
+}
