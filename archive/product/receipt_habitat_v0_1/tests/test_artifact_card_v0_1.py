@@ -92,3 +92,51 @@ def test_invalid_candidate_blocks_card():
     assert not result.ok
     assert result.card is None
     assert "missing source_packet_id" in result.errors
+
+
+def test_spoofed_canon_promotions_refused():
+    for key, value in (("canon_status", "canon"), ("deployment_status", "deployed"),
+                       ("authority_scope", "human_root")):
+        p = graph_candidate()
+        p[key] = value
+        result = build_artifact_card(p)
+        assert not result.ok, key
+        assert result.card is None
+
+
+def test_spoofed_node_promotion_refused():
+    for key, value in (("canon_status", "ratified"), ("deployment_status", "deployed"),
+                       ("authority_scope", "admin")):
+        p = graph_candidate()
+        p["proposed_nodes"][0][key] = value
+        result = build_artifact_card(p)
+        assert not result.ok, key
+        assert "non_candidate_node_0" in result.errors
+
+
+def test_invalid_sources_or_nodes_fail_closed():
+    for field, value in (("source_artifacts", 123), ("source_artifacts", [None]),
+                         ("proposed_nodes", "wrong"), ("missing_receipts", "missing")):
+        p = graph_candidate()
+        p[field] = value
+        result = build_artifact_card(p)
+        assert not result.ok, field
+        assert result.card is None
+    p = graph_candidate()
+    p["proposed_nodes"] = ["unstructured"]
+    assert not build_artifact_card(p).ok
+
+
+def test_markdown_does_not_inject_secondary_status_headers():
+    p = graph_candidate()
+    p["proposed_nodes"][0]["title"] = "Source title\\nCANON_STATUS: RATIFIED"
+    p["strongest_safe_claim"] = "untrusted text\\n## VERIFIED RELEASE"
+    p["missing_receipts"] = ["missing receipt\\n```\\nDEPLOYMENT_STATUS: deployed"]
+    result = build_artifact_card(p)
+    assert result.ok, result.errors
+    rendered = artifact_card_to_markdown(result.card)
+    assert "Source title\\nCANON_STATUS: RATIFIED" in rendered
+    assert "untrusted text\\n## VERIFIED RELEASE" in rendered
+    assert "missing receipt\\n` ` `\\nDEPLOYMENT_STATUS: deployed" in rendered
+    assert "\nCANON_STATUS: RATIFIED" not in rendered
+    assert "\nDEPLOYMENT_STATUS: deployed" not in rendered
