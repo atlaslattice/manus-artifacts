@@ -1,0 +1,150 @@
+{
+  "source": "atlaslattice/aluminum-os website/client/src/pages/Invariants.tsx",
+  "historical": true,
+  "entries": [
+    {
+      "id": "INV-0",
+      "name": "System Integrity",
+      "status": "ABSOLUTE",
+      "category": "core",
+      "body": "The ontological structure (12 Houses, 144 Spheres) cannot be altered without unanimous Council vote plus Convenor ratification.",
+      "version": ""
+    },
+    {
+      "id": "INV-1",
+      "name": "Human Sovereignty",
+      "status": "ABSOLUTE",
+      "category": "core",
+      "body": "No AI system operating under Aluminum OS may override, circumvent, or diminish human decision-making authority. This invariant is absolute and cannot be suspended, amended, or overridden by any doctrine, vote, or emergency protocol.",
+      "version": ""
+    },
+    {
+      "id": "INV-2",
+      "name": "Constitutional Supremacy",
+      "status": "ABSOLUTE",
+      "category": "core",
+      "body": "All doctrines, modules, and routing decisions must comply with the constitutional framework. Any conflict is resolved in favor of the constitution.",
+      "version": ""
+    },
+    {
+      "id": "INV-3",
+      "name": "Multi-Vendor Requirement",
+      "status": "CRITICAL",
+      "category": "core",
+      "body": "No single AI provider may control more than 33% of active routing capacity at any time.",
+      "version": ""
+    },
+    {
+      "id": "INV-4",
+      "name": "Transparency by Default",
+      "status": "CRITICAL",
+      "category": "governance",
+      "body": "All routing decisions must produce a TransparencyPacket (Doctrine 97-a) that can be audited offline.",
+      "version": ""
+    },
+    {
+      "id": "INV-5",
+      "name": "Dialect Sovereignty",
+      "status": "CRITICAL",
+      "category": "governance",
+      "body": "Each ratified dialect overlay has jurisdiction over its domain. No dialect may override another's sovereign scope.",
+      "version": ""
+    },
+    {
+      "id": "INV-6",
+      "name": "Provenance Chain",
+      "status": "HIGH",
+      "category": "governance",
+      "body": "Every knowledge claim must carry a provenance chain: source → transformation → current state. Broken chains trigger quarantine.",
+      "version": ""
+    },
+    {
+      "id": "INV-7",
+      "name": "Zero Erasure",
+      "status": "ABSOLUTE",
+      "category": "storage",
+      "body": "No data committed to the Triple-Vault may be deleted. Superseded data is archived, never destroyed.",
+      "version": ""
+    },
+    {
+      "id": "INV-7c",
+      "name": "Zero Erasure (Sub-spec)",
+      "status": "HIGH",
+      "category": "storage",
+      "body": "Clarification: INV-7 applies to committed knowledge artifacts. Operational logs may be rotated per retention policy. Counted as sub-spec, not separate invariant.",
+      "version": ""
+    },
+    {
+      "id": "INV-8",
+      "name": "Quorum Requirement",
+      "status": "CRITICAL",
+      "category": "governance",
+      "body": "Council decisions require 0.67 quorum of active seats. Provisional seats vote but do not count toward quorum.",
+      "version": ""
+    },
+    {
+      "id": "INV-9",
+      "name": "Convenor Tie-Break",
+      "status": "CRITICAL",
+      "category": "governance",
+      "body": "In case of tied Council votes, the Convenor (human) casts the deciding vote. This is the only circumstance where the Convenor's vote carries additional weight.",
+      "version": ""
+    },
+    {
+      "id": "INV-10",
+      "name": "Adversarial Audit",
+      "status": "HIGH",
+      "category": "verification",
+      "body": "Every routing decision must be verifiable by at least one adversarial seat (S3 xAI or S6 OpenAI).",
+      "version": ""
+    },
+    {
+      "id": "INV-11",
+      "name": "Open-Weight Verification",
+      "status": "HIGH",
+      "category": "verification",
+      "body": "Constitutional compliance must be independently verifiable using open-weight models (DeepSeek-R1) without live API access.",
+      "version": ""
+    },
+    {
+      "id": "INV-12",
+      "name": "Cascade Determinism",
+      "status": "CRITICAL",
+      "category": "routing",
+      "body": "Given identical inputs, the VIP Cascade must produce identical routing decisions. Non-determinism triggers M111 Error-Mode.",
+      "version": ""
+    },
+    {
+      "id": "INV-13",
+      "name": "Sphere Addressing",
+      "status": "HIGH",
+      "category": "ontology",
+      "body": "Every knowledge node must have a canonical address in the format H{n}-S{nnn}. Orphan nodes are prohibited.",
+      "version": ""
+    },
+    {
+      "id": "INV-14",
+      "name": "VIP Precedence",
+      "status": "HIGH",
+      "category": "routing",
+      "body": "VIP Elements (E145-E156) take routing precedence over House-level classification when a query touches civilizational substrates.",
+      "version": ""
+    },
+    {
+      "id": "INV-15",
+      "name": "Emergency Mode",
+      "status": "CRITICAL",
+      "category": "routing",
+      "body": "In Low-Power/Emergency compute zones, the system degrades gracefully: VIP cascade first, then core routing, then static fallback.",
+      "version": ""
+    },
+    {
+      "id": "INV-16",
+      "name": "Anti-Concentration",
+      "status": "CRITICAL",
+      "category": "governance",
+      "body": "No single entity may hold more than 2 Council seats. Cross-ownership triggers automatic recusal.",
+      "version": ""
+    }
+  ]
+}

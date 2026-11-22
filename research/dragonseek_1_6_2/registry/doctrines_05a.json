@@ -1,0 +1,59 @@
+{
+  "source": "atlaslattice/aluminum-os/website/client/src/pages/Doctrines.tsx",
+  "entries": [
+    {
+      "id": "D-73",
+      "name": "Environmental Impact",
+      "status": "RATIFIED",
+      "category": "safety",
+      "body": "Compute-intensive routing must account for carbon footprint via E148 (Energy substrate).",
+      "version": "v3.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-74",
+      "name": "Accessibility",
+      "status": "RATIFIED",
+      "category": "safety",
+      "body": "All system interfaces must meet WCAG 2.1 AA standards. Routing decisions must not discriminate by ability.",
+      "version": "v2.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-75",
+      "name": "Child Safety",
+      "status": "RATIFIED",
+      "category": "safety",
+      "body": "Enhanced protections for queries identified as originating from or about minors.",
+      "version": "v2.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-76",
+      "name": "Deployment Pipeline",
+      "status": "RATIFIED",
+      "category": "operations",
+      "body": "Shadow Mode → Canary → Staged Rollout → Full Production. No direct-to-production deployments.",
+      "version": "v2.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-77",
+      "name": "Rollback Protocol",
+      "status": "RATIFIED",
+      "category": "operations",
+      "body": "Every deployment must have a tested rollback path. Rollback time target: < 5 minutes.",
+      "version": "v2.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-78",
+      "name": "Monitoring & Alerting",
+      "status": "RATIFIED",
+      "category": "operations",
+      "body": "24/7 monitoring with automated alerting for constitutional violations, performance degradation, and security events.",
+      "version": "v2.0",
+      "proposedBy": ""
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "source": "atlaslattice/aluminum-os/website/client/src/pages/Doctrines.tsx",
+  "entries": [
+    {
+      "id": "D-79",
+      "name": "Capacity Planning",
+      "status": "RATIFIED",
+      "category": "operations",
+      "body": "Quarterly capacity reviews aligned with provider capability declarations and projected query growth.",
+      "version": "v2.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-80",
+      "name": "Documentation Standard",
+      "status": "RATIFIED",
+      "category": "operations",
+      "body": "All modules, doctrines, and invariants must have human-readable documentation and machine-readable schemas.",
+      "version": "v2.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-81",
+      "name": "Naming Convention",
+      "status": "RATIFIED",
+      "category": "operations",
+      "body": "Sovereign deployments follow {Cultural}Seek pattern: DragonSeek (CN), GangaSeek (IN), JinnSeek (GCC), EagleSeek (US).",
+      "version": "v3.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-82",
+      "name": "Version Lineage",
+      "status": "RATIFIED",
+      "category": "operations",
+      "body": "Every version must declare its lineage: predecessor version, change summary, and ratification record.",
+      "version": "v2.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-83",
+      "name": "Interoperability Testing",
+      "status": "RATIFIED",
+      "category": "operations",
+      "body": "Cross-provider interoperability tests run weekly. Failures block affected routing paths.",
+      "version": "v2.0",
+      "proposedBy": ""
+    },
+    {
+      "id": "D-84",
+      "name": "Security Baseline",
+      "status": "RATIFIED",
+      "category": "operations",
+      "body": "All components meet NIST CSF baseline. Sovereign zones may impose additional requirements.",
+      "version": "v2.0",
+      "proposedBy": ""
+    }
+  ]
+}

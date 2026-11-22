@@ -1,0 +1,150 @@
+{
+  "source": "atlaslattice/aluminum-os website/client/src/pages/Doctrines.tsx",
+  "historical": true,
+  "entries": [
+    {
+      "id": "D-37",
+      "name": "Compliance Reporting",
+      "status": "RATIFIED",
+      "category": "verification",
+      "body": "Regular compliance reports are generated for each dialect overlay's regulatory requirements.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-38",
+      "name": "Incident Response",
+      "status": "RATIFIED",
+      "category": "verification",
+      "body": "Constitutional violations trigger immediate incident response: isolate, investigate, remediate, report.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-39",
+      "name": "Third-Party Audit",
+      "status": "RATIFIED",
+      "category": "verification",
+      "body": "External auditors may request TransparencyPackets for any routing decision within retention period.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-40",
+      "name": "Regression Testing",
+      "status": "RATIFIED",
+      "category": "verification",
+      "body": "74 integration tests must pass before any routing module deployment. No exceptions.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-41",
+      "name": "Triple-Vault Architecture",
+      "status": "RATIFIED",
+      "category": "storage",
+      "body": "All committed artifacts exist in 3 tiers: Local, Cloud, Archival. Single-tier storage is prohibited.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-42",
+      "name": "Data Residency",
+      "status": "RATIFIED",
+      "category": "storage",
+      "body": "Sovereign-tagged data must be processed within the designated jurisdiction's compute zone.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-43",
+      "name": "Encryption at Rest",
+      "status": "RATIFIED",
+      "category": "storage",
+      "body": "All stored data is encrypted at rest using jurisdiction-appropriate cryptographic standards.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-44",
+      "name": "Key Management",
+      "status": "RATIFIED",
+      "category": "storage",
+      "body": "Cryptographic keys are managed per-dialect. No single key authority spans multiple sovereign zones.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-45",
+      "name": "Retention Policy",
+      "status": "RATIFIED",
+      "category": "storage",
+      "body": "Knowledge artifacts: indefinite retention. Operational logs: domain-specific retention per INV-7c.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-46",
+      "name": "Seat Assignment Protocol",
+      "status": "RATIFIED",
+      "category": "governance",
+      "body": "Council seats are assigned based on substrate archetype, not commercial relationship.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-47",
+      "name": "Provisional Seat Review",
+      "status": "RATIFIED",
+      "category": "governance",
+      "body": "Provisional seats are reviewed every 6 months. Promotion to active requires 0.67 quorum.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-48",
+      "name": "Conflict of Interest",
+      "status": "RATIFIED",
+      "category": "governance",
+      "body": "Council members must declare conflicts. Cross-ownership triggers automatic recusal.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-49",
+      "name": "Amendment Process",
+      "status": "RATIFIED",
+      "category": "governance",
+      "body": "Doctrine amendments require proposer, version number, ratification timestamp. Undated amendments are invalid.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-50",
+      "name": "Emergency Session",
+      "status": "RATIFIED",
+      "category": "governance",
+      "body": "The Convenor may call emergency Council sessions with 24-hour notice. Quorum reduced to 0.50 for emergencies.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-51",
+      "name": "Functional Role Assignment",
+      "status": "RATIFIED",
+      "category": "governance",
+      "body": "8 functional oversight roles (Safety, Sovereignty, Compute, etc.) are assigned to seats. Roles are not seats.",
+      "version": "v4.0"
+    },
+    {
+      "id": "D-52",
+      "name": "Veto Authority",
+      "status": "RATIFIED",
+      "category": "governance",
+      "body": "Only the Convenor may exercise veto. Veto requires written justification and 72-hour review period.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-53",
+      "name": "Ghost Seat Protocol",
+      "status": "RATIFIED",
+      "category": "governance",
+      "body": "S144 is permanently reserved. It cannot be assigned, voted on, or used for quorum calculation.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-54",
+      "name": "Ratification Workflow",
+      "status": "RATIFIED",
+      "category": "governance",
+      "body": "Proposals → Discussion (7 days) → Vote (72 hours) → Ratification (Convenor) → Implementation.",
+      "version": "v2.0"
+    }
+  ]
+}

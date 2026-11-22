@@ -1,0 +1,150 @@
+{
+  "source": "atlaslattice/aluminum-os website/client/src/pages/Invariants.tsx",
+  "historical": true,
+  "entries": [
+    {
+      "id": "INV-17",
+      "name": "Triple-Vault Storage",
+      "status": "ABSOLUTE",
+      "category": "storage",
+      "body": "All committed artifacts must exist in at least 3 storage tiers: Local, Cloud, and Archival. Single-tier storage is prohibited.",
+      "version": ""
+    },
+    {
+      "id": "INV-18",
+      "name": "Doctrine Versioning",
+      "status": "HIGH",
+      "category": "governance",
+      "body": "Every doctrine amendment must carry a version number, proposer, and ratification timestamp. Undated doctrines are invalid.",
+      "version": ""
+    },
+    {
+      "id": "INV-19",
+      "name": "Water Sovereignty",
+      "status": "CRITICAL",
+      "category": "domain",
+      "body": "Water-related routing decisions must account for indigenous water rights, ecological flow requirements, and transboundary obligations before commercial optimization.",
+      "version": ""
+    },
+    {
+      "id": "INV-20",
+      "name": "Neural Sovereignty",
+      "status": "ABSOLUTE",
+      "category": "domain",
+      "body": "Brain-computer interface and neural data routing must enforce informed consent, reversibility, and cognitive liberty protections.",
+      "version": ""
+    },
+    {
+      "id": "INV-21",
+      "name": "Orbital Sovereignty",
+      "status": "HIGH",
+      "category": "domain",
+      "body": "Space infrastructure routing must comply with the Outer Space Treaty, debris mitigation standards, and equitable spectrum allocation.",
+      "version": ""
+    },
+    {
+      "id": "INV-22",
+      "name": "Dialect Isolation",
+      "status": "CRITICAL",
+      "category": "routing",
+      "body": "Dialect-specific routing rules cannot leak across dialect boundaries. CN dialect rules do not affect US routing and vice versa.",
+      "version": ""
+    },
+    {
+      "id": "INV-23",
+      "name": "Module Idempotency",
+      "status": "HIGH",
+      "category": "routing",
+      "body": "Routing modules must be idempotent: repeated execution with the same input produces the same output without side effects.",
+      "version": ""
+    },
+    {
+      "id": "INV-24",
+      "name": "Graceful Degradation",
+      "status": "CRITICAL",
+      "category": "routing",
+      "body": "If a Council seat becomes unavailable, routing continues with remaining seats. No single seat failure may halt the system.",
+      "version": ""
+    },
+    {
+      "id": "INV-25",
+      "name": "Schema Migration Safety",
+      "status": "HIGH",
+      "category": "ontology",
+      "body": "Ontology schema changes must be backward-compatible. Breaking changes require a new major version and Council supermajority.",
+      "version": ""
+    },
+    {
+      "id": "INV-26",
+      "name": "Audit Trail Immutability",
+      "status": "ABSOLUTE",
+      "category": "verification",
+      "body": "Audit logs cannot be modified after creation. Append-only storage with cryptographic chaining.",
+      "version": ""
+    },
+    {
+      "id": "INV-27",
+      "name": "Cross-Seat Communication",
+      "status": "HIGH",
+      "category": "routing",
+      "body": "Inter-seat communication must use the Federation Bridge (E145.03). Direct seat-to-seat channels are prohibited.",
+      "version": ""
+    },
+    {
+      "id": "INV-28",
+      "name": "Capability Declaration",
+      "status": "HIGH",
+      "category": "routing",
+      "body": "Every AI provider must declare its capability matrix before participating in routing. Undeclared capabilities are excluded.",
+      "version": ""
+    },
+    {
+      "id": "INV-29",
+      "name": "Constitutional Amendment Threshold",
+      "status": "ABSOLUTE",
+      "category": "governance",
+      "body": "Amending invariants requires 0.90 supermajority of all seats (including provisional) plus Convenor ratification.",
+      "version": ""
+    },
+    {
+      "id": "INV-30",
+      "name": "Harm Intervention",
+      "status": "ABSOLUTE",
+      "category": "governance",
+      "body": "The Convenor may invoke EHIP (Doctrine 101) to suspend any routing decision that poses extreme harm. Suspension is immediate; review follows within 72 hours.",
+      "version": ""
+    },
+    {
+      "id": "INV-31",
+      "name": "Knowledge Freshness",
+      "status": "MEDIUM",
+      "category": "ontology",
+      "body": "Knowledge claims older than their domain's refresh cycle must be flagged as potentially stale. Refresh cycles are domain-specific.",
+      "version": ""
+    },
+    {
+      "id": "INV-32",
+      "name": "Sovereign Data Residency",
+      "status": "CRITICAL",
+      "category": "routing",
+      "body": "Data tagged with a sovereign dialect must be processed within that jurisdiction's compute zone. Cross-border routing requires explicit consent.",
+      "version": ""
+    },
+    {
+      "id": "INV-33",
+      "name": "Model Diversity",
+      "status": "HIGH",
+      "category": "routing",
+      "body": "For any given query class, at least 2 distinct model lineages must be available for routing. Single-lineage routing triggers a warning.",
+      "version": ""
+    },
+    {
+      "id": "INV-34",
+      "name": "Constitutional Boot",
+      "status": "ABSOLUTE",
+      "category": "core",
+      "body": "The system must verify constitutional integrity on every boot. Failed verification prevents system start.",
+      "version": ""
+    }
+  ]
+}

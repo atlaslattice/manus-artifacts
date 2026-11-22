@@ -1,0 +1,150 @@
+{
+  "source": "atlaslattice/aluminum-os website/client/src/pages/Doctrines.tsx",
+  "historical": true,
+  "entries": [
+    {
+      "id": "D-19",
+      "name": "VIP Cascade Priority",
+      "status": "RATIFIED",
+      "category": "routing",
+      "body": "When a query touches multiple VIP Elements, the cascade resolves priority based on sovereignty gradient.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-20",
+      "name": "Module Registration",
+      "status": "RATIFIED",
+      "category": "routing",
+      "body": "New routing modules must be registered with capability declaration before activation.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-21",
+      "name": "Cascade Determinism",
+      "status": "RATIFIED",
+      "category": "routing",
+      "body": "Identical inputs must produce identical routing decisions. Non-determinism triggers error mode.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-22",
+      "name": "Provider Capability Matrix",
+      "status": "RATIFIED",
+      "category": "routing",
+      "body": "Every AI provider must declare capabilities. Undeclared capabilities are excluded from routing.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-23",
+      "name": "Graceful Degradation",
+      "status": "RATIFIED",
+      "category": "routing",
+      "body": "System degrades gracefully under load: VIP cascade first, then core routing, then static fallback.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-24",
+      "name": "Compute Zone Classification",
+      "status": "RATIFIED",
+      "category": "routing",
+      "body": "Three compute zones: Standard, Mixed-Compliance, and Contested. Zone determines available providers.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-25",
+      "name": "Emergency Mode Protocol",
+      "status": "RATIFIED",
+      "category": "routing",
+      "body": "Low-Power/Emergency mode activates when compute resources fall below threshold. Essential routing only.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-26",
+      "name": "Federation Protocol",
+      "status": "RATIFIED",
+      "category": "routing",
+      "body": "Cross-seat communication uses the Federation Bridge. Direct seat-to-seat channels are prohibited.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-27",
+      "name": "Load Balancing",
+      "status": "RATIFIED",
+      "category": "routing",
+      "body": "Routing load is distributed across available providers based on capability match, not cost optimization.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-28",
+      "name": "Query Classification",
+      "status": "RATIFIED",
+      "category": "routing",
+      "body": "Every query is classified by House, Sphere, and VIP relevance before routing begins.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-29",
+      "name": "Response Synthesis",
+      "status": "RATIFIED",
+      "category": "routing",
+      "body": "Multi-source responses are synthesized with conflict resolution and citation requirements.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-30",
+      "name": "Rate Limiting",
+      "status": "RATIFIED",
+      "category": "routing",
+      "body": "Per-user and per-application rate limits. Overflow triggers queuing, not rejection.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-31",
+      "name": "Audit Trail Immutability",
+      "status": "RATIFIED",
+      "category": "verification",
+      "body": "Audit logs are append-only with cryptographic chaining. No modification after creation.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-32",
+      "name": "Open-Weight Verification",
+      "status": "RATIFIED",
+      "category": "verification",
+      "body": "Constitutional compliance must be verifiable using open-weight models without live API access.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-33",
+      "name": "TransparencyPacket Standard",
+      "status": "RATIFIED",
+      "category": "verification",
+      "body": "Every routing decision produces a TransparencyPacket with decision trace, provenance, and hash.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-34",
+      "name": "Error Reporting",
+      "status": "RATIFIED",
+      "category": "verification",
+      "body": "Routing errors include human-readable explanation and TransparencyPacket reference.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-35",
+      "name": "Drift Detection",
+      "status": "RATIFIED",
+      "category": "verification",
+      "body": "Automated drift detection monitors for ontology drift, routing bias, and capability degradation.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-36",
+      "name": "Performance Metrics",
+      "status": "RATIFIED",
+      "category": "verification",
+      "body": "Query latency, routing accuracy, and provider availability are continuously monitored.",
+      "version": "v2.0"
+    }
+  ]
+}

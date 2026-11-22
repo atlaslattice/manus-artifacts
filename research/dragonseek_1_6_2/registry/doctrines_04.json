@@ -1,0 +1,150 @@
+{
+  "source": "atlaslattice/aluminum-os website/client/src/pages/Doctrines.tsx",
+  "historical": true,
+  "entries": [
+    {
+      "id": "D-55",
+      "name": "Council Communication",
+      "status": "RATIFIED",
+      "category": "governance",
+      "body": "All Council deliberations are logged. Closed sessions require 0.67 vote and are summarized publicly.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-56",
+      "name": "Dialect Registration",
+      "status": "RATIFIED",
+      "category": "dialect",
+      "body": "New dialect overlays require Council approval and a named sovereign deployment pathway.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-57",
+      "name": "Dialect Isolation",
+      "status": "RATIFIED",
+      "category": "dialect",
+      "body": "Dialect-specific rules cannot leak across boundaries. Strict isolation between sovereign zones.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-58",
+      "name": "CN Dialect Specification",
+      "status": "RATIFIED",
+      "category": "dialect",
+      "body": "DragonSeek configuration: PIPL compliance, Great Firewall compatibility, Mandarin-first routing.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-59",
+      "name": "US Dialect Specification",
+      "status": "RATIFIED",
+      "category": "dialect",
+      "body": "EagleSeek configuration: First Amendment protections, CLOUD Act compliance, English-primary routing.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-60",
+      "name": "EU Dialect Specification",
+      "status": "RATIFIED",
+      "category": "dialect",
+      "body": "EU AI Act compliance, GDPR data handling, multilingual routing, digital sovereignty requirements.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-61",
+      "name": "GCC-High Dialect",
+      "status": "RATIFIED",
+      "category": "dialect",
+      "body": "JinnSeek configuration: Sharia-compliant content filtering, Arabic-first routing, data residency in GCC.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-62",
+      "name": "JP Dialect Specification",
+      "status": "RATIFIED",
+      "category": "dialect",
+      "body": "Japanese regulatory compliance, APPI data protection, Japanese-primary routing.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-63",
+      "name": "Global Dialect (Default)",
+      "status": "RATIFIED",
+      "category": "dialect",
+      "body": "Fallback dialect when no sovereign overlay applies. Minimal constraints, maximum interoperability.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-64",
+      "name": "9-Layer Architecture",
+      "status": "RATIFIED",
+      "category": "architecture",
+      "body": "Canonical stack: Host OS → Switzerland Layer → VIP Substrate → Routing Engine → Constitutional OS → Triple-Vault → Telemetry → Federation → Boot.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-65",
+      "name": "Switzerland Layer Neutrality",
+      "status": "RATIFIED",
+      "category": "architecture",
+      "body": "The Switzerland Layer provides provider-neutral gateway. No vendor-specific code in this layer.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-66",
+      "name": "Module Versioning",
+      "status": "RATIFIED",
+      "category": "architecture",
+      "body": "Routing modules use semantic versioning. Breaking changes require new major version.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-67",
+      "name": "API Contract Stability",
+      "status": "RATIFIED",
+      "category": "architecture",
+      "body": "Public APIs maintain backward compatibility for at least one major version cycle.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-68",
+      "name": "Boot Manifest",
+      "status": "RATIFIED",
+      "category": "architecture",
+      "body": "System initialization follows the Boot Manifest: dependency resolution, health checks, constitutional verification.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-69",
+      "name": "SHUGS Enforcement",
+      "status": "RATIFIED",
+      "category": "safety",
+      "body": "Sovereignty, Humility, Utility, Growth, Stewardship — the five operational principles enforced at routing time.",
+      "version": "v2.0"
+    },
+    {
+      "id": "D-70",
+      "name": "Anti-Monoculture",
+      "status": "RATIFIED",
+      "category": "safety",
+      "body": "Concentration risk monitoring with 5 severity levels. Automatic alerts at Level 3+.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-71",
+      "name": "Indigenous Knowledge Protection",
+      "status": "RATIFIED",
+      "category": "safety",
+      "body": "Indigenous knowledge routing respects FPIC (Free, Prior, Informed Consent) and traditional governance.",
+      "version": "v3.0"
+    },
+    {
+      "id": "D-72",
+      "name": "Labour Impact Assessment",
+      "status": "RATIFIED",
+      "category": "safety",
+      "body": "Routing decisions affecting employment must include labour impact assessment via E155 (Work substrate).",
+      "version": "v3.0"
+    }
+  ]
+}

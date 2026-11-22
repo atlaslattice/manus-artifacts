@@ -1,0 +1,46 @@
+{
+  "source": "atlaslattice/aluminum-os website/client/src/pages/Invariants.tsx",
+  "historical": true,
+  "entries": [
+    {
+      "id": "INV-35",
+      "name": "Simulation Isolation",
+      "status": "CRITICAL",
+      "category": "routing",
+      "body": "Shadow Mode and Simulation Mode outputs must never be served as production responses. Strict isolation between simulation and production.",
+      "version": ""
+    },
+    {
+      "id": "INV-36",
+      "name": "Rate Limiting",
+      "status": "MEDIUM",
+      "category": "routing",
+      "body": "No single user or application may consume more than its allocated routing capacity. Overflow triggers queuing, not rejection.",
+      "version": ""
+    },
+    {
+      "id": "INV-37",
+      "name": "Error Transparency",
+      "status": "HIGH",
+      "category": "verification",
+      "body": "Routing errors must be reported to the user with a human-readable explanation and the TransparencyPacket reference.",
+      "version": ""
+    },
+    {
+      "id": "INV-38",
+      "name": "Backward Compatibility",
+      "status": "HIGH",
+      "category": "routing",
+      "body": "New routing modules must support the previous version's API contract for at least one major version cycle.",
+      "version": ""
+    },
+    {
+      "id": "INV-39",
+      "name": "Council Seat Rotation",
+      "status": "MEDIUM",
+      "category": "governance",
+      "body": "Provisional seats are reviewed every 6 months. Active seats are reviewed annually. No seat is permanent except S144 (Ghost Seat).",
+      "version": ""
+    }
+  ]
+}

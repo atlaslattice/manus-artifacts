@@ -1,0 +1,214 @@
+{
+  "schema": "dragonseek.os.boot-integrity-manifest.v1",
+  "as_of": "2026-10-11",
+  "scope": "Versioned source files, offline browser and AI adapter",
+  "algorithm": "git-blob-sha1",
+  "note": "Git blob parity for shipped assets including UWS/Sheldonbrain local adapters, dual-brain CLI, Dream registry, SHUGS data and Fabric UI. SHA-1 is for byte parity only; source signatures/approval not established. Tests live outside boot inventory.",
+  "files": [
+    {
+      "path": "ai_bridge.py",
+      "git_blob_sha1": "cdceff53e8a95ce2ef28a28fa157a8e026294144",
+      "bytes": 4255
+    },
+    {
+      "path": "ATLAS_FABRIC_INTEGRATION.md",
+      "git_blob_sha1": "9d451ae3e43d908fc5e691f551ab7bb0f09eb9f6",
+      "bytes": 6991
+    },
+    {
+      "path": "atlas_fabric.py",
+      "git_blob_sha1": "5179a04f90d8d9caa68786ca798fd332f3c16f74",
+      "bytes": 9680
+    },
+    {
+      "path": "ATLAS_INTELLIGENCE_INTEGRATION.md",
+      "git_blob_sha1": "3d52e00984f4ae048a75b4edced72c0f5b95d97d",
+      "bytes": 4098
+    },
+    {
+      "path": "constitutional_authority.json",
+      "git_blob_sha1": "38839cf91a8ac41d06dadb2c74b54c1094b19a60",
+      "bytes": 2661
+    },
+    {
+      "path": "dragonseek_os.py",
+      "git_blob_sha1": "86edf546ce8f9abd4deb715e913ae9aa28717ef4",
+      "bytes": 7468
+    },
+    {
+      "path": "dream_protocols.json",
+      "git_blob_sha1": "85349b804693a3ceecc876474e1fc90cfd1a20a1",
+      "bytes": 2938
+    },
+    {
+      "path": "dual_brain.py",
+      "git_blob_sha1": "bfdd1e94b7940e7340cf3a0b691bffc07e4740d7",
+      "bytes": 5539
+    },
+    {
+      "path": "experimental/shugs_lattice_optimum_original.json",
+      "git_blob_sha1": "2ae08debcaa231fa4d0d79aead018213f29e3391",
+      "bytes": 8206
+    },
+    {
+      "path": "fabric.html",
+      "git_blob_sha1": "0e6ebe5f7979d3d2859aea96fa16942b91058ca0",
+      "bytes": 4263
+    },
+    {
+      "path": "GOVERNANCE_INTEGRATION.md",
+      "git_blob_sha1": "62298565674bb0893d72bdf748ef56b144ee9134",
+      "bytes": 2371
+    },
+    {
+      "path": "governance.html",
+      "git_blob_sha1": "92d64441508dcf342116c10641ee1a2e5627485e",
+      "bytes": 5110
+    },
+    {
+      "path": "graph_bridge.py",
+      "git_blob_sha1": "0782fd406e6da1a521d5fdd83847f09a630a8d61",
+      "bytes": 3562
+    },
+    {
+      "path": "index.html",
+      "git_blob_sha1": "40794e378a826dbb193ae7b39634837760245bab",
+      "bytes": 68183
+    },
+    {
+      "path": "parser_bridge.py",
+      "git_blob_sha1": "d73c6d3a429a3146da5de1701a7a0aaf6a9eca00",
+      "bytes": 4059
+    },
+    {
+      "path": "README.md",
+      "git_blob_sha1": "bf0b0f555bacef87551c2feaec110be6cc522405",
+      "bytes": 5309
+    },
+    {
+      "path": "registry/doctrines_01.json",
+      "git_blob_sha1": "755ef0e29a7c0116fe4c070f6ef709469fa64be5",
+      "bytes": 4889
+    },
+    {
+      "path": "registry/doctrines_02.json",
+      "git_blob_sha1": "0dd230d64ba717a492838cec7c72a71aae60bc7a",
+      "bytes": 4893
+    },
+    {
+      "path": "registry/doctrines_03.json",
+      "git_blob_sha1": "12c1c28b88907e048ebd87ee93598fcb74471fb1",
+      "bytes": 4942
+    },
+    {
+      "path": "registry/doctrines_04.json",
+      "git_blob_sha1": "4403c95ec2b75fa1edfc877805c94ac3e1eac51a",
+      "bytes": 5021
+    },
+    {
+      "path": "registry/doctrines_05a.json",
+      "git_blob_sha1": "bbf3d5c5071638c9947ea6baf47e249510a6de8c",
+      "bytes": 1826
+    },
+    {
+      "path": "registry/doctrines_05b.json",
+      "git_blob_sha1": "284bbef3c03c7bcb2f66bcfdf3e45328d2832dca",
+      "bytes": 1877
+    },
+    {
+      "path": "registry/doctrines_05c.json",
+      "git_blob_sha1": "cd3fcf9decf98154e4063c09c772995a100eb603",
+      "bytes": 1807
+    },
+    {
+      "path": "registry/doctrines_06a.json",
+      "git_blob_sha1": "fde03c847ef87f40c8f0a15640c778bfd19d6168",
+      "bytes": 1878
+    },
+    {
+      "path": "registry/doctrines_06b.json",
+      "git_blob_sha1": "a3513f2b5b9d0bdaed81a84cdbc3017cc273d729",
+      "bytes": 2629
+    },
+    {
+      "path": "registry/invariants_01.json",
+      "git_blob_sha1": "308fd275279d826cd97baf721f4c0b88f97fceb0",
+      "bytes": 5370
+    },
+    {
+      "path": "registry/invariants_02.json",
+      "git_blob_sha1": "6a258b509b65f855407d8ddd691f19d188f05ceb",
+      "bytes": 5415
+    },
+    {
+      "path": "registry/invariants_03.json",
+      "git_blob_sha1": "ff3164a82e390f8164bb5129adb6c16506b98084",
+      "bytes": 1565
+    },
+    {
+      "path": "sources/April2026_Complete_Doctrine_Invariant_Registry_v1.1.part01.md",
+      "git_blob_sha1": "6de80070717ebca29e786f4b37f7af0dfea0bf51",
+      "bytes": 6578
+    },
+    {
+      "path": "sources/April2026_Complete_Doctrine_Invariant_Registry_v1.1.part02.md",
+      "git_blob_sha1": "10f8919535c7458b54e1630ad989e55bfa4bdc5f",
+      "bytes": 6630
+    },
+    {
+      "path": "sources/April2026_Complete_Doctrine_Invariant_Registry_v1.1.part03.md",
+      "git_blob_sha1": "5e279c117614da433726b8b1a0ddaa1eafa1bd88",
+      "bytes": 6647
+    },
+    {
+      "path": "sources/April2026_Complete_Doctrine_Invariant_Registry_v1.1.part04.md",
+      "git_blob_sha1": "0f21fae8e828d39fac289fc1f3ddc932386c4448",
+      "bytes": 6576
+    },
+    {
+      "path": "sources/April2026_Complete_Doctrine_Invariant_Registry_v1.1.part05.md",
+      "git_blob_sha1": "4a33383b3e17011bbda558e77ad5050a383db6c4",
+      "bytes": 6654
+    },
+    {
+      "path": "sources/April2026_Complete_Doctrine_Invariant_Registry_v1.1.part06.md",
+      "git_blob_sha1": "24f6a40a5acb63ca36a5053ccfa47a35f5252b1a",
+      "bytes": 6555
+    },
+    {
+      "path": "sources/April2026_Complete_Doctrine_Invariant_Registry_v1.1.part07.md",
+      "git_blob_sha1": "63c88ecd2be2a25e1e3604fed7978883183ea8ea",
+      "bytes": 6548
+    },
+    {
+      "path": "sources/April2026_Complete_Doctrine_Invariant_Registry_v1.1.part08.md",
+      "git_blob_sha1": "0ec38470342fbf4c77f4052dc43b466b1e29d6df",
+      "bytes": 124
+    },
+    {
+      "path": "sources/Canon.tsx",
+      "git_blob_sha1": "2dbfb422ecc8a040eca21d3215a1ef3b5b9082f8",
+      "bytes": 15874
+    },
+    {
+      "path": "sources/Declaration_of_Mutual_Life_v1.0.md",
+      "git_blob_sha1": "01c5b2b3f1aa5ccf78aefd909164fab24e57c149",
+      "bytes": 6680
+    },
+    {
+      "path": "sources/Doctrines.tsx.part1.txt",
+      "git_blob_sha1": "b507820101a099796278f0e8378e37f9f09f89ca",
+      "bytes": 11503
+    },
+    {
+      "path": "sources/Doctrines.tsx.part2.txt",
+      "git_blob_sha1": "87c421819f15c28c32ef4436f1d0a091c1f4bb27",
+      "bytes": 11536
+    },
+    {
+      "path": "sources/Invariants.tsx",
+      "git_blob_sha1": "2f8d7c684779d9a27e931ac9d34cc8ae4fbd9464",
+      "bytes": 15951
+    }
+  ]
+}

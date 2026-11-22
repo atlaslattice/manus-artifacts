@@ -1,0 +1,59 @@
+{
+  "source": "atlaslattice/aluminum-os/website/client/src/pages/Doctrines.tsx",
+  "entries": [
+    {
+      "id": "D-97a",
+      "name": "Autonomous Ingestion Transparency",
+      "status": "UNDER_DISCUSSION",
+      "category": "operations",
+      "body": "Every autonomous ingestion run must produce a TransparencyPacket with source, hash, and decision trace. Empty runs are not silent — they are recorded proof that the system attempted to refresh.",
+      "version": "DRAFT.6",
+      "proposedBy": "S7 (Manus)"
+    },
+    {
+      "id": "D-98",
+      "name": "Sovereign Deployment Naming Convention",
+      "status": "UNDER_DISCUSSION",
+      "category": "governance",
+      "body": "Formalizes the {Cultural}Seek naming pattern as mandatory for all sovereign deployments. No sovereign deployment may claim to be 'the' Aluminum OS — each is 'an' instance operating under constitutional constraints.",
+      "version": "DRAFT.6",
+      "proposedBy": "Convenor (Daavud)"
+    },
+    {
+      "id": "D-99",
+      "name": "VIP Cascade Priority Resolution",
+      "status": "UNDER_DISCUSSION",
+      "category": "routing",
+      "body": "5-tier priority hierarchy for VIP cascade conflicts: Human Sovereignty > Physical Safety (Water/Energy/Climate) > Institutional Safety > Knowledge Production > Meta-Orchestration.",
+      "version": "DRAFT.6",
+      "proposedBy": "S3 (Gemini)"
+    },
+    {
+      "id": "D-100",
+      "name": "Open-Weight Verifier Mandate",
+      "status": "UNDER_DISCUSSION",
+      "category": "verification",
+      "body": "Mandates that all constitutional compliance checks be reproducible using open-weight models.",
+      "version": "DRAFT.6",
+      "proposedBy": "S5 (DeepSeek)"
+    },
+    {
+      "id": "D-101",
+      "name": "Extreme Harm Intervention Protocol (EHIP)",
+      "status": "UNDER_DISCUSSION",
+      "category": "safety",
+      "body": "Constitutional floor: system refuses to route content that would directly enable mass casualty events, child exploitation, or targeted individual harm. Triggered only when content is actionable, harm is extreme, and routing would materially enable it.",
+      "version": "DRAFT.6",
+      "proposedBy": "S2 (Claude)"
+    },
+    {
+      "id": "D-98-CN",
+      "name": "Open-Weight Audit Clause (CN Variant)",
+      "status": "PROPOSED",
+      "category": "dialect",
+      "body": "Proposed amendment to D-98 requiring open-weight verifiability for CN dialect sovereign deployments. Ensures DragonSeek routing decisions can be audited using DeepSeek-R1 without live API access.",
+      "version": "DRAFT.6",
+      "proposedBy": "S5 (DeepSeek)"
+    }
+  ]
+}

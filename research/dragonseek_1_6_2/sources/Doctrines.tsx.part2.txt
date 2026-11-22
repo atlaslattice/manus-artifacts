@@ -1,0 +1,62 @@
+or may call emergency Council sessions with 24-hour notice. Quorum reduced to 0.50 for emergencies.", version: "v2.0" },
+  { id: "D-51", name: "Functional Role Assignment", status: "RATIFIED", category: "governance", summary: "8 functional oversight roles (Safety, Sovereignty, Compute, etc.) are assigned to seats. Roles are not seats.", version: "v4.0" },
+  { id: "D-52", name: "Veto Authority", status: "RATIFIED", category: "governance", summary: "Only the Convenor may exercise veto. Veto requires written justification and 72-hour review period.", version: "v3.0" },
+  { id: "D-53", name: "Ghost Seat Protocol", status: "RATIFIED", category: "governance", summary: "S144 is permanently reserved. It cannot be assigned, voted on, or used for quorum calculation.", version: "v3.0" },
+  { id: "D-54", name: "Ratification Workflow", status: "RATIFIED", category: "governance", summary: "Proposals → Discussion (7 days) → Vote (72 hours) → Ratification (Convenor) → Implementation.", version: "v2.0" },
+  { id: "D-55", name: "Council Communication", status: "RATIFIED", category: "governance", summary: "All Council deliberations are logged. Closed sessions require 0.67 vote and are summarized publicly.", version: "v2.0" },
+
+  // Dialect & sovereignty (D-56 through D-75)
+  { id: "D-56", name: "Dialect Registration", status: "RATIFIED", category: "dialect", summary: "New dialect overlays require Council approval and a named sovereign deployment pathway.", version: "v3.0" },
+  { id: "D-57", name: "Dialect Isolation", status: "RATIFIED", category: "dialect", summary: "Dialect-specific rules cannot leak across boundaries. Strict isolation between sovereign zones.", version: "v3.0" },
+  { id: "D-58", name: "CN Dialect Specification", status: "RATIFIED", category: "dialect", summary: "DragonSeek configuration: PIPL compliance, Great Firewall compatibility, Mandarin-first routing.", version: "v3.0" },
+  { id: "D-59", name: "US Dialect Specification", status: "RATIFIED", category: "dialect", summary: "EagleSeek configuration: First Amendment protections, CLOUD Act compliance, English-primary routing.", version: "v3.0" },
+  { id: "D-60", name: "EU Dialect Specification", status: "RATIFIED", category: "dialect", summary: "EU AI Act compliance, GDPR data handling, multilingual routing, digital sovereignty requirements.", version: "v3.0" },
+  { id: "D-61", name: "GCC-High Dialect", status: "RATIFIED", category: "dialect", summary: "JinnSeek configuration: Sharia-compliant content filtering, Arabic-first routing, data residency in GCC.", version: "v3.0" },
+  { id: "D-62", name: "JP Dialect Specification", status: "RATIFIED", category: "dialect", summary: "Japanese regulatory compliance, APPI data protection, Japanese-primary routing.", version: "v3.0" },
+  { id: "D-63", name: "Global Dialect (Default)", status: "RATIFIED", category: "dialect", summary: "Fallback dialect when no sovereign overlay applies. Minimal constraints, maximum interoperability.", version: "v3.0" },
+
+  // Architecture & modules (D-64 through D-80)
+  { id: "D-64", name: "9-Layer Architecture", status: "RATIFIED", category: "architecture", summary: "Canonical stack: Host OS → Switzerland Layer → VIP Substrate → Routing Engine → Constitutional OS → Triple-Vault → Telemetry → Federation → Boot.", version: "v3.0" },
+  { id: "D-65", name: "Switzerland Layer Neutrality", status: "RATIFIED", category: "architecture", summary: "The Switzerland Layer provides provider-neutral gateway. No vendor-specific code in this layer.", version: "v3.0" },
+  { id: "D-66", name: "Module Versioning", status: "RATIFIED", category: "architecture", summary: "Routing modules use semantic versioning. Breaking changes require new major version.", version: "v2.0" },
+  { id: "D-67", name: "API Contract Stability", status: "RATIFIED", category: "architecture", summary: "Public APIs maintain backward compatibility for at least one major version cycle.", version: "v2.0" },
+  { id: "D-68", name: "Boot Manifest", status: "RATIFIED", category: "architecture", summary: "System initialization follows the Boot Manifest: dependency resolution, health checks, constitutional verification.", version: "v3.0" },
+
+  // Safety & ethics (D-69 through D-85)
+  { id: "D-69", name: "SHUGS Enforcement", status: "RATIFIED", category: "safety", summary: "Sovereignty, Humility, Utility, Growth, Stewardship — the five operational principles enforced at routing time.", version: "v2.0" },
+  { id: "D-70", name: "Anti-Monoculture", status: "RATIFIED", category: "safety", summary: "Concentration risk monitoring with 5 severity levels. Automatic alerts at Level 3+.", version: "v3.0" },
+  { id: "D-71", name: "Indigenous Knowledge Protection", status: "RATIFIED", category: "safety", summary: "Indigenous knowledge routing respects FPIC (Free, Prior, Informed Consent) and traditional governance.", version: "v3.0" },
+  { id: "D-72", name: "Labour Impact Assessment", status: "RATIFIED", category: "safety", summary: "Routing decisions affecting employment must include labour impact assessment via E155 (Work substrate).", version: "v3.0" },
+  { id: "D-73", name: "Environmental Impact", status: "RATIFIED", category: "safety", summary: "Compute-intensive routing must account for carbon footprint via E148 (Energy substrate).", version: "v3.0" },
+  { id: "D-74", name: "Accessibility", status: "RATIFIED", category: "safety", summary: "All system interfaces must meet WCAG 2.1 AA standards. Routing decisions must not discriminate by ability.", version: "v2.0" },
+  { id: "D-75", name: "Child Safety", status: "RATIFIED", category: "safety", summary: "Enhanced protections for queries identified as originating from or about minors.", version: "v2.0" },
+
+  // Operational (D-76 through D-95)
+  { id: "D-76", name: "Deployment Pipeline", status: "RATIFIED", category: "operations", summary: "Shadow Mode → Canary → Staged Rollout → Full Production. No direct-to-production deployments.", version: "v2.0" },
+  { id: "D-77", name: "Rollback Protocol", status: "RATIFIED", category: "operations", summary: "Every deployment must have a tested rollback path. Rollback time target: < 5 minutes.", version: "v2.0" },
+  { id: "D-78", name: "Monitoring & Alerting", status: "RATIFIED", category: "operations", summary: "24/7 monitoring with automated alerting for constitutional violations, performance degradation, and security events.", version: "v2.0" },
+  { id: "D-79", name: "Capacity Planning", status: "RATIFIED", category: "operations", summary: "Quarterly capacity reviews aligned with provider capability declarations and projected query growth.", version: "v2.0" },
+  { id: "D-80", name: "Documentation Standard", status: "RATIFIED", category: "operations", summary: "All modules, doctrines, and invariants must have human-readable documentation and machine-readable schemas.", version: "v2.0" },
+  { id: "D-81", name: "Naming Convention", status: "RATIFIED", category: "operations", summary: "Sovereign deployments follow {Cultural}Seek pattern: DragonSeek (CN), GangaSeek (IN), JinnSeek (GCC), EagleSeek (US).", version: "v3.0" },
+  { id: "D-82", name: "Version Lineage", status: "RATIFIED", category: "operations", summary: "Every version must declare its lineage: predecessor version, change summary, and ratification record.", version: "v2.0" },
+  { id: "D-83", name: "Interoperability Testing", status: "RATIFIED", category: "operations", summary: "Cross-provider interoperability tests run weekly. Failures block affected routing paths.", version: "v2.0" },
+  { id: "D-84", name: "Security Baseline", status: "RATIFIED", category: "operations", summary: "All components meet NIST CSF baseline. Sovereign zones may impose additional requirements.", version: "v2.0" },
+  { id: "D-85", name: "Incident Post-Mortem", status: "RATIFIED", category: "operations", summary: "All P0/P1 incidents require blameless post-mortem within 7 days. Findings are public.", version: "v2.0" },
+
+  // Extended ratified (D-86 through D-95)
+  { id: "D-86", name: "API Rate Governance", status: "RATIFIED", category: "operations", summary: "Per-provider rate limits are governed by capability declaration, not commercial agreement.", version: "v3.0" },
+  { id: "D-87", name: "Telemetry Privacy", status: "RATIFIED", category: "operations", summary: "System telemetry is anonymized before aggregation. No PII in telemetry streams.", version: "v2.0" },
+  { id: "D-88", name: "Open Source Commitment", status: "RATIFIED", category: "operations", summary: "Core routing engine and constitutional enforcement code are open source under Apache 2.0.", version: "v2.0" },
+  { id: "D-89", name: "Community Contribution", status: "RATIFIED", category: "operations", summary: "External contributions follow standard PR review. Constitutional changes require Council approval.", version: "v2.0" },
+  { id: "D-90", name: "Training Data Provenance", status: "RATIFIED", category: "verification", summary: "AI providers must declare training data provenance for models used in routing.", version: "v3.0" },
+  { id: "D-91", name: "Model Card Requirement", status: "RATIFIED", category: "verification", summary: "Every AI model participating in routing must have a published model card.", version: "v3.0" },
+  { id: "D-92", name: "Bias Monitoring", status: "RATIFIED", category: "safety", summary: "Continuous bias monitoring across demographic dimensions. Detected bias triggers routing adjustment.", version: "v3.0" },
+  { id: "D-93", name: "Cross-Dialect Mediation", status: "RATIFIED", category: "dialect", summary: "When a query spans multiple dialect zones, mediation follows sovereignty gradient resolution.", version: "v3.0" },
+  { id: "D-94", name: "Simulation Mode Governance", status: "RATIFIED", category: "operations", summary: "Simulation outputs are clearly labeled and isolated from production. No simulation-to-production leakage.", version: "v3.0" },
+  { id: "D-95", name: "Annual Constitutional Review", status: "RATIFIED", category: "governance", summary: "Full constitutional review annually. Findings presented to Council with amendment recommendations.", version: "v2.0" },
+
+  // Under discussion (D-96 through D-101)
+  { id: "D-96", name: "Predictive Monoculture Detection", status: "UNDER_DISCUSSION", category: "safety", summary: "Proactive detection of emerging concentration patterns before they reach critical severity.", proposedBy: "S3 (xAI)", version: "DRAFT.6" },
+  { id: "D-97a", name: "Autonomous Ingestion Transparency", status: "UNDER_DISCUSSION", category: "operations", summary: "Every autonomous ingestion run must produce a TransparencyPacket with source, hash, and decision trace. Empty runs are not silent — they are recorded proof that the system attempted to refresh.", proposedBy: "S7 (Manus)", version: "DRAFT.6" },
+  { id: "D-98", name: "Sovereign Deployment Naming Convention", status: "UNDER_DISCUSSION", category: "governance", summary: "Formalizes the {Cultural}Seek naming pattern as mandatory for all sovereign deployments. No sovereign deployment may claim to be 'the' Aluminum OS — each is 'an' instance operating under constitutional constraints.", proposedBy: "Convenor (Daavud)", version: "DRAFT.6" },
+  { id: "D-99", name: "VIP Cascade Priority Resolution", status: "UNDER_DISCUSSION", category: "routing", summary: "5-tier priority hierarchy for VIP cascade conflicts: Human Sovereignty > Physical Safety (Water/Energy/Climate) > Institutional Safety > Knowledge Production > Meta-Orchestration.", proposed
