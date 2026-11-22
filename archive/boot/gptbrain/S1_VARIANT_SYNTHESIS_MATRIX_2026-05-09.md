@@ -174,3 +174,14 @@ Variant E = continuity/human-intent dashboard layer.
 ```
 
 Final canon should be a layered synthesis, not a majority vote.
+
+
+---
+
+## 2026-11-22 candidate integration status (not ratification)
+
+Matrix still describes historical variants; the status below is the current source-based disposition.
+
+**Disposition:** Variant E — Continuity / Human-Intent Dashboard: source-preserved and integrated into the S1 canonical CANDIDATE; NOT independently ratified; human-root review remains required; NO runtime, canon, deployment, or execution authority effect.
+
+**Evidence / rollback:** `archive/boot/gptbrain/S1_VARIANT_E_AND_ALIAS_CROSSWALK_2026-11-22.md` (source-pinned status crosswalk). This addendum does not claim a live resident, deployed continuity system, or CANON. Preserve the May 9 original paragraphs and candidate versions.

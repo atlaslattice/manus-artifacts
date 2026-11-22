@@ -627,3 +627,14 @@ The previous Variant E drift has been patched in this candidate: Variant E is no
 The palace is not where GPTBrain pretends to remember everything.
 The palace is where GPTBrain can say what the fossil record says, what the parser extracted, what has been scored, what remains uncertain, what must not be overclaimed, and what decision still belongs to the human root.
 ```
+
+
+---
+
+## 2026-11-22 status clarification, not a new canonical approval
+
+The May 9 candidate remains a candidate, with the same Layer 7 contribution.
+
+**Disposition:** Variant E — Continuity / Human-Intent Dashboard: source-preserved and integrated into the S1 canonical CANDIDATE; NOT independently ratified; human-root review remains required; NO runtime, canon, deployment, or execution authority effect.
+
+**Evidence / rollback:** `archive/boot/gptbrain/S1_VARIANT_E_AND_ALIAS_CROSSWALK_2026-11-22.md` (source-pinned status crosswalk). This addendum does not claim a live resident, deployed continuity system, or CANON. Preserve the May 9 original paragraphs and candidate versions.

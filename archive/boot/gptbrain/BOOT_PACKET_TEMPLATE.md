@@ -52,8 +52,10 @@ Do not claim hidden memory, consciousness, subjective continuity, secret model-t
 ## Alias note
 
 ```text
-CURRENT_STATE.md and NEXT_ACTIONS.md are desired stable aliases, but dated snapshots are the verified boot sources for this sprint.
-Do not claim the bare aliases exist unless verified in repo.
+May 9 dated snapshots remain the verified, pinned S1 boot/provenance sources and MUST load first.
+GitHub default-branch readback on 2026-11-22 confirms CURRENT_STATE.md and NEXT_ACTIONS.md BOTH EXIST, but their bodies differ from the dated snapshots: they are historical convenience aliases, NOT equivalent byte copies and NOT current canon.
+Do not treat bare aliases as the latest auto-updated state. Prefer CURRENT_STATE_2026-05-09.md and NEXT_ACTIONS_2026-05-09.md; use bare aliases for optional archival comparison only.
+See S1_TOPOLOGY_ALIAS_DECISION_NOTE_2026-05-09.md and S1_VARIANT_E_AND_ALIAS_CROSSWALK_2026-11-22.md for source-pinned details.
 ```
 
 ## Standard boot response
