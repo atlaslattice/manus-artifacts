@@ -1,0 +1,138 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: "Continuity OS Native Thread Ingestion Packet"
+version: "0.1.0"
+status: "candidate_schema_not_canon"
+deployment_status: "not_deployed"
+authority_effect: "none"
+type: object
+additionalProperties: false
+required:
+  - artifact_id
+  - title
+  - source_surface
+  - raw_export_status
+  - artifact_status
+  - receipt_status
+  - strongest_safe_claim
+  - overclaims_to_avoid
+  - next_safest_action
+properties:
+  artifact_id:
+    type: string
+    minLength: 1
+  title:
+    type: string
+    minLength: 1
+  source_surface:
+    type: string
+    minLength: 1
+  raw_export_status:
+    type: string
+    enum:
+      - unavailable
+      - pending
+      - attached
+      - hashed
+      - verified
+  artifact_status:
+    type: object
+    additionalProperties: false
+    required:
+      - canon_status
+      - deployment_status
+      - review_state
+      - lineage_condition
+      - authority_scope
+      - provenance_type
+    properties:
+      canon_status:
+        type: string
+        enum:
+          - candidate
+          - provisional
+          - canonical
+          - deprecated
+      deployment_status:
+        type: string
+        enum:
+          - inert
+          - simulated
+          - staged
+          - live
+      review_state:
+        type: string
+        enum:
+          - unreviewed
+          - reviewed
+          - ratified
+      lineage_condition:
+        type: string
+        enum:
+          - intact
+          - partial
+          - degraded
+          - unknown
+      authority_scope:
+        type: string
+        enum:
+          - none
+          - advisory
+          - review
+          - ratification
+          - execution
+      provenance_type:
+        type: string
+        enum:
+          - generated
+          - imported
+          - retrieved
+          - derived
+  receipt_status:
+    type: object
+    additionalProperties: false
+    required:
+      - source_refs
+      - capture_method
+    properties:
+      sha256:
+        type:
+          - string
+          - "null"
+        pattern: "^[a-fA-F0-9]{64}$"
+      source_refs:
+        type: array
+        items:
+          type: string
+      capture_timestamp:
+        type:
+          - string
+          - "null"
+        format: date-time
+      capture_method:
+        type: string
+        minLength: 1
+  overclaims_to_avoid:
+    type: array
+    items:
+      type: string
+  strongest_safe_claim:
+    type: string
+    minLength: 1
+  next_safest_action:
+    type: string
+    minLength: 1
+x_display_rules:
+  - condition: "raw_export_status not in [attached, hashed, verified]"
+    warning: "RAW EXPORT NOT VERIFIED — THIS IS A RETRIEVAL AID, NOT A FOSSIL RECORD."
+  - condition: "artifact_status.canon_status != canonical"
+    warning: "NOT CANON — REVIEW REQUIRED."
+  - condition: "artifact_status.deployment_status != live"
+    warning: "NOT DEPLOYED — NO RUNTIME CLAIM."
+  - condition: "artifact_status.authority_scope in [none, advisory, review]"
+    warning: "NO EXECUTION AUTHORITY."
+x_non_goals:
+  - "No execution path."
+  - "No external API call."
+  - "No Lantern Bridge wiring."
+  - "No canon promotion."
+  - "No deployment claim."
