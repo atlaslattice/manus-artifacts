@@ -1,0 +1,154 @@
+{
+  "schema_version": "0.1",
+  "locality_id": "DJK-001",
+  "status": "PROPOSED_NON_CANON",
+  "sources": [
+    {
+      "id": "QOL09",
+      "uri": "https://app.notion.com/p/3f50c1de73d981c0bfdac34f11c0e373",
+      "date": "2026-10-09",
+      "classification": "PROPOSED"
+    },
+    {
+      "id": "QOL15",
+      "uri": "https://app.notion.com/p/3f50c1de73d981ccb63affc1a2fc89ac",
+      "date": "2026-10-09",
+      "classification": "PROPOSED"
+    },
+    {
+      "id": "W01",
+      "uri": "https://app.notion.com/p/3f40c1de73d98130a203fa148fd32d18",
+      "date": "2026-10-09",
+      "classification": "PROPOSED"
+    },
+    {
+      "id": "USER10",
+      "uri": "conversation:2026-10-10:user-approved-qol-additions",
+      "date": "2026-10-10",
+      "classification": "USER_DIRECTIVE"
+    },
+    {
+      "id": "HAWAII",
+      "uri": "https://app.notion.com/p/3f40c1de73d98148b74ed6bcc24aac1c",
+      "date": "2026-10-09",
+      "classification": "SENSITIVITY"
+    }
+  ],
+  "programs": [
+    {
+      "id": "RIGHT_TO_DISCONNECT",
+      "description": "Predictable shifts, protected free time and adequate staffing",
+      "status": "PROPOSED",
+      "source_ids": [
+        "USER10"
+      ],
+      "measured_baseline": null,
+      "realized_credit": 0
+    },
+    {
+      "id": "FREE_CAFE_COMMONS",
+      "description": "Free gourmet coffee, tea, snacks and no-purchase gathering areas",
+      "status": "PROPOSED",
+      "source_ids": [
+        "USER10"
+      ],
+      "measured_baseline": null,
+      "realized_credit": 0
+    },
+    {
+      "id": "COASTAL_STEWARDSHIP",
+      "description": "Accessible coastal nature areas with port safety and habitat safeguards",
+      "status": "PROPOSED",
+      "source_ids": [
+        "USER10"
+      ],
+      "measured_baseline": null,
+      "realized_credit": 0
+    },
+    {
+      "id": "LIFESPAN_ACCESS",
+      "description": "Accessible care, disability services, transport and intergenerational support",
+      "status": "PROPOSED",
+      "source_ids": [
+        "USER10"
+      ],
+      "measured_baseline": null,
+      "realized_credit": 0
+    },
+    {
+      "id": "INDEPENDENT_ECO_OBSERVATORY",
+      "description": "Independent monitoring of loads, habitats, noise and receiving waters",
+      "status": "PROPOSED",
+      "source_ids": [
+        "USER10"
+      ],
+      "measured_baseline": null,
+      "realized_credit": 0
+    },
+    {
+      "id": "TIME_8_8_8",
+      "description": "Protected work, personal time and sleep opportunity",
+      "status": "PROPOSED",
+      "source_ids": [
+        "QOL09"
+      ],
+      "measured_baseline": null,
+      "realized_credit": 0
+    },
+    {
+      "id": "CULTURE_EVENTS",
+      "description": "Voluntary weekly culture and monthly festivals",
+      "status": "PROPOSED",
+      "source_ids": [
+        "QOL15"
+      ],
+      "measured_baseline": null,
+      "realized_credit": 0
+    },
+    {
+      "id": "HOUSEHOLD_BACKUP",
+      "description": "Essential-power design, measured autonomy not assumed",
+      "status": "PROPOSED",
+      "source_ids": [
+        "QOL15"
+      ],
+      "measured_baseline": null,
+      "realized_credit": 0
+    },
+    {
+      "id": "HVAC_HEPA",
+      "description": "Room-suitable filtered-air access and maintenance",
+      "status": "PROPOSED",
+      "source_ids": [
+        "QOL15"
+      ],
+      "measured_baseline": null,
+      "realized_credit": 0
+    }
+  ],
+  "outfalls": [
+    {
+      "id": "DJK-OUTFALLS-UNINVENTORIED",
+      "receiving_body": "UNKNOWN",
+      "flow_m3_day": null,
+      "nitrogen_mg_l": null,
+      "phosphorus_mg_l": null,
+      "source_ids": [
+        "W01"
+      ],
+      "status": "UNKNOWN",
+      "residual_fate_verified": false,
+      "realized_avoided_load_t_year": 0
+    }
+  ],
+  "finance": {
+    "total_cost": null,
+    "recovery_fraction": 0.4,
+    "currency": "CNY",
+    "cost_basis": "UNKNOWN",
+    "status": "SENSITIVITY",
+    "source_ids": [
+      "USER10"
+    ]
+  }
+}
