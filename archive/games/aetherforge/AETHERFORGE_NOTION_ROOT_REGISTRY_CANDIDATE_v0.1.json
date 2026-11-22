@@ -1,0 +1,113 @@
+{
+  "schema_version": "aetherforge.notion-root-registry-candidate/v0.1",
+  "title": "Search Fog Clearing — Notion Root Registry (schema only)",
+  "status": "PROPOSED_CANDIDATE",
+  "canon": false,
+  "deployed": false,
+  "authority": "none",
+  "actual_notion_roots_inspected": 0,
+  "private_notion_bodies_imported": 0,
+  "source_coverage_complete": false,
+  "source_refs": [
+    "https://github.com/atlaslattice/manus-artifacts/issues/222",
+    "https://github.com/atlaslattice/manus-artifacts/issues/221"
+  ],
+  "required_fields": {
+    "source_root_id": "Stable provider-scoped root ID, obtained from an authorized connector read",
+    "source_surface": "notion",
+    "source_url_or_path": "Original Notion page URL, private unless export rights permit",
+    "expected_parent_id": "Optional canonical parent ID from provider metadata",
+    "raw_export_status": [
+      "raw_missing",
+      "raw_partial",
+      "raw_complete_unhashed",
+      "raw_complete_hashed",
+      "raw_source_unavailable"
+    ],
+    "hash_method": [
+      "sha256",
+      "not_computed"
+    ],
+    "source_hash_sha256": "Null until raw export byte coverage verified",
+    "export_receipt_ref": "Null until independently verified source export receipt",
+    "rights_status": [
+      "unknown",
+      "consented_private",
+      "public_release_reviewed",
+      "restricted"
+    ],
+    "scope": [
+      "root_only",
+      "direct_children",
+      "full_descendants",
+      "unknown"
+    ],
+    "child_count_verified": "Null until all provider pages/cursors exhausted",
+    "provider_modified_time": "Observed timestamp, not inferred",
+    "classification": [
+      "candidate",
+      "quarantined",
+      "reviewed"
+    ],
+    "review_lane": [
+      "Rootglass",
+      "Lucerna",
+      "GPTBrain",
+      "human_owner"
+    ],
+    "public_release": false,
+    "canon": false,
+    "authority": "none"
+  },
+  "fixtures": [
+    {
+      "root_id": "synthetic:notion-root-demo-001",
+      "source_surface": "synthetic",
+      "raw_export_status": "raw_missing",
+      "hash_method": "not_computed",
+      "source_hash_sha256": null,
+      "export_receipt_ref": null,
+      "rights_status": "unknown",
+      "scope": "root_only",
+      "child_count_verified": null,
+      "public_release": false,
+      "canon": false,
+      "authority": "none",
+      "warning": "SYNTHETIC EXAMPLE ONLY; NO ACTUAL NOTION PAGE"
+    }
+  ],
+  "warning_labels": {
+    "search_hit": "SEARCH_ONLY_NOT_FULL_SOURCE",
+    "snippet": "PROXY_SUMMARY_NOT_RAW",
+    "paginated_listing": "PARTIAL_UNTIL_ALL_CURSORS_EXHAUSTED",
+    "provider_denied": "NO_ACCESS_NOT_NO_CONTENT",
+    "raw_complete_unhashed": "DO_NOT_CLAIM_VERIFIED_SOURCE_COVERAGE",
+    "raw_complete_hashed": "HASH_RECORDED_RECOMPUTE_BEFORE_VERIFICATION",
+    "no_consent": "PRIVATE_DO_NOT_EXPORT"
+  },
+  "crawl_sequence": [
+    "Explicitly select a permitted Notion root; do not infer consent from a search hit",
+    "Read provider metadata for exact page ID, parent, title, rights and modified timestamp",
+    "Check user and workspace grants, child-page scope and source classification",
+    "Enumerate child pages and blocks, following every returned cursor to exhaustion",
+    "Preserve inaccessible/denied pages as unknown or missing-access pointers, never claim they do not exist",
+    "Export original bytes only if authorized; record actual scope and raw_export_status",
+    "Compute SHA-256 over captured exact bytes and retain export-path and provider timestamp evidence",
+    "Cross-check counts, child IDs, duplicates, attachments, and parent-child consistency",
+    "Route sensitive and contradictory source claims to private human review",
+    "Create only candidate graph links; never infer canon, deployment, shared identity or source-of-truth authority"
+  ],
+  "review_routes": {
+    "primary": "Rootglass",
+    "secondary": [
+      "Lucerna",
+      "GPTBrain"
+    ],
+    "owner_gate": "human_root_for_external_release"
+  },
+  "non_claims": [
+    "No live Notion fetch or private account interrogation occurred",
+    "No inferred completeness or data-rights permissions",
+    "No automatic movement of private Social/Play/Imagine/Dream/Quiet bodies into Work"
+  ]
+}
