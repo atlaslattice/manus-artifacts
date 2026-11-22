@@ -66,7 +66,7 @@ def check_packet(packet: Any) -> dict[str, Any]:
         complain("authority_or_deployment_inflation")
     if not isinstance(packet.get("source_ref"), str) or not packet["source_ref"].strip():
         complain("source_ref_required")
-    if packet.get("raw_export_status") not in ALLOWED_STATUS:
+    if not isinstance(packet.get("raw_export_status"), str) or packet.get("raw_export_status") not in ALLOWED_STATUS:
         complain("invalid_raw_export_status")
     if packet.get("raw_export_status") in {"raw_complete_hashed", "raw_complete_unhashed"}:
         complain("source_completeness_not_verified_by_synthetic_packet")
@@ -75,13 +75,13 @@ def check_packet(packet: Any) -> dict[str, Any]:
     if fields(h, HEADER_FIELDS, "header"):
         if not isinstance(h.get("provenance_receipt"), str) or not h["provenance_receipt"].strip():
             complain("missing_provenance_receipt")
-        if h.get("epistemic_label") not in EPISTEMIC:
+        if not isinstance(h.get("epistemic_label"), str) or h.get("epistemic_label") not in EPISTEMIC:
             complain("invalid_epistemic_label")
-        if h.get("authority_scope") not in {"NONE", "ADVISORY"}:
+        if not isinstance(h.get("authority_scope"), str) or h.get("authority_scope") not in {"NONE", "ADVISORY"}:
             complain("inferred_authority_forbidden")
-        if h.get("tenancy_context") not in TENANCY:
+        if not isinstance(h.get("tenancy_context"), str) or h.get("tenancy_context") not in TENANCY:
             complain("unknown_tenancy")
-        if h.get("source_operator") not in OPERATORS or h.get("target_operator") not in OPERATORS:
+        if not all(isinstance(h.get(k), str) and h.get(k) in OPERATORS for k in ("source_operator", "target_operator")):
             complain("unknown_operator")
         mask = h.get("swa_mask")
         if not isinstance(mask, str) or re.fullmatch(r"0x[0-9A-Fa-f]{4}", mask) is None:
