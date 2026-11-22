@@ -56,6 +56,8 @@ def _infer_source_type(path: str | None) -> str:
 
 def build_artifact_card(candidate: dict[str, Any]) -> ArtifactCardResult:
     """Build an artifact_card.v0.1 from a graph_write_candidate.v0.1 packet."""
+    if type(candidate) is not dict:
+        return ArtifactCardResult(ok=False, errors=["candidate_not_plain_dict"])
     required = [
         "candidate_id",
         "source_packet_id",
@@ -120,7 +122,7 @@ def build_artifact_card(candidate: dict[str, Any]) -> ArtifactCardResult:
             "canon_status": candidate.get("canon_status", "not_canon"),
             "deployment_status": candidate.get("deployment_status", "not_deployed"),
             "authority_scope": candidate.get("authority_scope", "none"),
-            "review_state": "needs_review" if review_required or missing_receipts else "review_ready",
+            "review_state": "needs_review",  # candidate source cannot self-declare review-ready
         },
         "evidence": {
             "stable_id": candidate.get("candidate_id"),
