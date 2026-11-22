@@ -1,0 +1,67 @@
+name: "Planetarium Revival — candidate task"
+description: "One of 12 source-listed starter tasks; review first, no authority or partnership implied"
+title: "[PLANETARIUM] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a non-canon, non-deployed Planetarium Revival simulation/workflow task.
+        Source: archive/simulations/planetarium-revival/PLANETARIUM_144_TASK_MATRIX_v0.1_2026-05-27.md
+        Do not infer partner consent, cultural authority, real customers, funds, or deployed tools from a task row.
+  - type: dropdown
+    id: source-task
+    attributes:
+      label: "Source task (12 initial candidates)"
+      description: "Choose one source-verified item; do not use this form for general Atlas work"
+      options:
+      - "H08-T01 — Create task matrix data model"
+      - "H08-T04 — Create simulation CLI"
+      - "H08-T07 — Create lane balance checker"
+      - "H02-T01 — Draft interview script for planetarium directors"
+      - "H02-T05 — Draft outreach email template"
+      - "H03-T04 — Create pilot one-page template"
+      - "H04-T01 — Create lead pilot logline"
+      - "H05-T02 — Create cultural participation policy"
+      - "H06-T01 — Create science accuracy policy"
+      - "H07-T12 — Create minimal local preview harness"
+      - "H10-T02 — Draft one-line investor pitch"
+      - "H11-T06 — Create overclaim lint terms"
+    validations:
+      required: true
+  - type: input
+    id: source-evidence
+    attributes:
+      label: "Source/receipt locator"
+      placeholder: "exact public repo path or permitted source URL"
+    validations:
+      required: true
+  - type: dropdown
+    id: rights-status
+    attributes:
+      label: "Source and data rights"
+      options:
+        - "synthetic / no personal information"
+        - "public, attribution needed"
+        - "private / review required, do not publish"
+        - "unknown / HOLD"
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-output
+    attributes:
+      label: "Specific deliverable and acceptance test"
+      description: "Define a reversible artifact and a deterministic or reviewer test"
+    validations:
+      required: true
+  - type: textarea
+    id: blockers
+    attributes:
+      label: "Open claims, blockers and dissent"
+      description: "A source row is not proof of work completion or rights; preserve negative results"
+    validations:
+      required: false
+  - type: markdown
+    attributes:
+      value: |
+        Status: CANDIDATE / NOT CANON / NOT DEPLOYED / AUTHORITY NONE.
+        No external outreach, contracts, payments, endorsement, distribution or live automation by filing this issue.

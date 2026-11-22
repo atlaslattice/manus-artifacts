@@ -1,0 +1,103 @@
+{
+  "schema_version": "planetarium.overclaim-review-patterns/v0.1",
+  "status": "CANDIDATE_REVIEW_TOOL",
+  "source": "archive/simulations/planetarium-revival/PLANETARIUM_144_TASK_MATRIX_v0.1_2026-05-27.md",
+  "canon": false,
+  "deployed": false,
+  "authority": "none",
+  "automatic_rejection": false,
+  "review_required": true,
+  "description": "Lexical flags for a human reviewer. A match is not an affirmative claim or a legal determination.",
+  "rules": [
+    {
+      "id": "official_vendor_claim",
+      "risk": "high",
+      "patterns": [
+        "\\b(?:official|endorsed|certified|authorized)\\b",
+        "\\b(?:NASA|ESA|Smithsonian|Microsoft|Google|OpenAI)\\s+(?:partner|approved|certified|sponsored)\\b"
+      ],
+      "safe_action": "Request dated primary license/partnership receipt or rewrite as independent candidate"
+    },
+    {
+      "id": "partner_or_contract",
+      "risk": "high",
+      "patterns": [
+        "\\b(?:partnered with|partnership secured|contracted by|signed agreement)\\b",
+        "\\b(?:MOU signed|sponsor confirmed)\\b"
+      ],
+      "safe_action": "Separate prospect, outreach, letter of intent and signed contract; do not present as achieved"
+    },
+    {
+      "id": "science_certainty",
+      "risk": "medium",
+      "patterns": [
+        "\\b(?:proven|scientifically verified|100% accurate|guaranteed learning)\\b"
+      ],
+      "safe_action": "Require independent scientific and educational review plus limited scope"
+    },
+    {
+      "id": "cultural_authority",
+      "risk": "high",
+      "patterns": [
+        "\\b(?:Indigenous approved|community endorsed|traditional knowledge license)\\b"
+      ],
+      "safe_action": "Require community-specific consent/credit, rights and power-sharing evidence"
+    },
+    {
+      "id": "deployment",
+      "risk": "high",
+      "patterns": [
+        "\\b(?:live deployment|production ready|installed worldwide|available at every dome)\\b"
+      ],
+      "safe_action": "Request exact environment, tests and actual installation acceptance receipt"
+    },
+    {
+      "id": "financial_promise",
+      "risk": "high",
+      "patterns": [
+        "\\b(?:guaranteed revenue|payback assured|investor returns|profitable from day one)\\b"
+      ],
+      "safe_action": "Label forecasts as conditional and disclose assumptions, costs and nonmonetized impact"
+    },
+    {
+      "id": "customer_evidence",
+      "risk": "medium",
+      "patterns": [
+        "\\b(?:50 paying customers|validated customer demand|market proven|waitlist full)\\b"
+      ],
+      "safe_action": "Require consented records, date window, sample size and selection bias notes"
+    },
+    {
+      "id": "licensing_rights",
+      "risk": "high",
+      "patterns": [
+        "\\b(?:royalty free for all|unrestricted rights|public domain footage)\\b"
+      ],
+      "safe_action": "Verify content licenses, authorship, music and exhibition permissions"
+    },
+    {
+      "id": "safety_or_accessibility",
+      "risk": "medium",
+      "patterns": [
+        "\\b(?:fully accessible|zero risk|safe for all ages)\\b"
+      ],
+      "safe_action": "Specify test methods, age/audience scope and independent venue safety review"
+    },
+    {
+      "id": "education_privacy",
+      "risk": "high",
+      "patterns": [
+        "\\b(?:student data collected|automatic child profiles|tracked student identities)\\b"
+      ],
+      "safe_action": "Block unapproved child-data intake and route for privacy review"
+    }
+  ],
+  "false_positive_handling": [
+    "Check whether source explicitly negates or quotes the phrase as prohibited",
+    "Disentangle fiction, simulation, roadmap, third-party claims and real deployment",
+    "Require primary evidence; do not treat grep coverage as factual certification",
+    "Keep dissent and original quote with attribution and review scope",
+    "No automatic public release, partner contact, de-identification claim or code execution"
+  ],
+  "strongest_safe_claim": "Planetarium Revival is an exploratory simulation and audience-discovery workstream; no production installations, partners, financial results, or cultural permissions are represented by this fixture."
+}
