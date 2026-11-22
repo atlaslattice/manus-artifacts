@@ -30,7 +30,7 @@ This bundle is not:
 
 ## External independent review
 
-Use the [current cold-reviewer checklist](../../../../docs/EXTERNAL_REVIEWER_CHECKLIST.md) alongside this preserved bundle's [original external reviewer checklist](docs/EXTERNAL_REVIEWER_CHECKLIST.md). The two bundle directories are historical/current review surfaces, **not** a verified byte-identical mirror. Inspect cited paths and SHAs before claiming source parity.
+Use the [current cold-reviewer checklist](../../../docs/EXTERNAL_REVIEWER_CHECKLIST.md) alongside this preserved bundle's [original external reviewer checklist](docs/EXTERNAL_REVIEWER_CHECKLIST.md). The two bundle directories are historical/current review surfaces, **not** a verified byte-identical mirror. Inspect cited paths and SHAs before claiming source parity.
 
 ## Start here
 
