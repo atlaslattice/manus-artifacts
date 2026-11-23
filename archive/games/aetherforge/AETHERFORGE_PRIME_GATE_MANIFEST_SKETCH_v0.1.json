@@ -1,0 +1,107 @@
+{
+  "schema_version": "aetherforge.prime-gate-manifest-proposal/v0.1",
+  "title": "Prime Gate Manifest Sketch",
+  "classification": "CANDIDATE_SCHEMA_SKETCH",
+  "canon_status": "not_canon",
+  "deployment_status": "not_deployed",
+  "authority_scope": "none",
+  "host_installed": false,
+  "ratification_verified": false,
+  "signer_identity_verified": false,
+  "source": {
+    "review_quest": "https://github.com/atlaslattice/manus-artifacts/issues/219",
+    "proposal_branch": "game/aetherforge-candidate",
+    "source_scope": "public_candidate_pr",
+    "raw_export_status": "partial",
+    "source_rights_status": "review_required"
+  },
+  "manifest_files": [
+    {
+      "name": "canon.json",
+      "proposed_fields": [
+        "schema_version",
+        "edition",
+        "entry_id",
+        "source_refs",
+        "review_refs",
+        "human_decision_receipt",
+        "ratified_at",
+        "ratified_by",
+        "hash"
+      ],
+      "actual_entries": [],
+      "status": "placeholder_only"
+    },
+    {
+      "name": "invariants.yaml",
+      "proposed_fields": [
+        "invariant_id",
+        "definition",
+        "source_refs",
+        "scope",
+        "test_cases",
+        "review_status",
+        "ratification_ref"
+      ],
+      "actual_entries": [],
+      "status": "placeholder_only"
+    },
+    {
+      "name": "doctrines.yaml",
+      "proposed_fields": [
+        "doctrine_id",
+        "edition",
+        "source_refs",
+        "non_claims",
+        "conflicts",
+        "review_status",
+        "ratification_ref"
+      ],
+      "actual_entries": [],
+      "status": "placeholder_only"
+    },
+    {
+      "name": "hash_manifest.json",
+      "proposed_fields": [
+        "path",
+        "sha256",
+        "bytes",
+        "hash_method",
+        "source_edition",
+        "verified_by",
+        "verification_receipt"
+      ],
+      "actual_entries": [],
+      "status": "placeholder_only"
+    }
+  ],
+  "gates": {
+    "human_root_review_required": true,
+    "source_rights_review_required": true,
+    "original_raw_export_required": true,
+    "independent_hash_recomputation_required": true,
+    "signature_verification_required": true,
+    "dissent_preservation_required": true,
+    "no_automatic_promotion": true,
+    "default_on_missing": "HOLD",
+    "deployment_is_separate": true
+  },
+  "release_checks": [
+    "No source file receives authority merely because it is copied into the manifest",
+    "No high-graph-centrality candidate becomes canon",
+    "No privately shared Play/Imagine/Dream body is imported as Work automatically",
+    "Do not treat a signer label as cryptographically verified identity",
+    "Every ratification action requires separate authenticated decision evidence",
+    "CANON and DEPLOYED require distinct, independently verifiable gates",
+    "Contradicted and superseded source records remain addressable",
+    "No external provider spend or execution in this sketch"
+  ],
+  "example_gate_result": {
+    "status": "HOLD",
+    "reason": "no_authenticated_human_root_decision_or_source_rights_proof",
+    "canon": false,
+    "deployed": false,
+    "authority": "none",
+    "receipt": null
+  }
+}

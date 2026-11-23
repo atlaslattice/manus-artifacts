@@ -1,0 +1,634 @@
+{
+  "schema_version": "aetherforge.starter-quest-packets/v0.1",
+  "status": "PROPOSED_FICTION_AND_REVIEW",
+  "canon": false,
+  "deploy": false,
+  "authority": "none",
+  "private_play_ingested": false,
+  "forced_participants": false,
+  "real_money": false,
+  "source_scope": "public_candidate_github_branch_only",
+  "board_ref": "https://github.com/atlaslattice/manus-artifacts/pull/166",
+  "cards": [
+    {
+      "quest_id": "AF-Q001",
+      "title": "Vendor Capture Hydra",
+      "quest_type": "Vendor Capture Hydra",
+      "status": "candidate_quest",
+      "canon_status": "not_canon",
+      "deployment_status": "inert",
+      "authority_scope": "none",
+      "proof_status": "not_a_proof",
+      "source": {
+        "source_surface": "github",
+        "source_locator": "https://github.com/atlaslattice/manus-artifacts/pull/166",
+        "source_title": "Aetherforge Top 10 Bounty Board — Obsidian Latticewake v0.1",
+        "raw_export_status": "partial",
+        "source_hash": "7b818c2d78e0f046918c784e73c0a5b0046860b7",
+        "source_rights_status": "needs_review"
+      },
+      "risk": {
+        "risk_level": "medium",
+        "contamination_flags": [],
+        "overclaims_to_avoid": [
+          "vendor endorsement or ownership inflation",
+          "never claim actual reward currency, deployed system or self-ratified canon"
+        ]
+      },
+      "classification": {
+        "artifact_type": "candidate",
+        "epistemic_label": "design_choice",
+        "review_state": "unreviewed"
+      },
+      "routing": {
+        "primary_lane": "GPTBrain",
+        "secondary_lanes": [
+          "CouncilBrain",
+          "TIDELOCK"
+        ],
+        "required_reviewers": [
+          "source_owner_or_rights_reviewer",
+          "human_root_if_consequential"
+        ]
+      },
+      "receipts": {
+        "receipt_requests": [
+          "quarantine packet + safe rewrite + failure-mode tags"
+        ],
+        "attached_receipts": []
+      },
+      "play": {
+        "player_role": "voluntary reviewer",
+        "boss_or_hazard": "vendor endorsement or ownership inflation",
+        "win_condition": "a truthful candidate packet with visible holds",
+        "reward_type": "symbolic_gameplay_only",
+        "bounty_xp": 1000
+      },
+      "extraction": {
+        "useful_delta": "Turn vendor-capture language into safe, independently verifiable candidate-workspace benefit language",
+        "safe_rewrite": null,
+        "linked_issue": "https://github.com/atlaslattice/manus-artifacts/issues/210",
+        "proposed_next_action": "review source permissions, then carry out bounded quest separately"
+      },
+      "keeper_line": "Clean tape benefits the quarterback; it does not transfer ownership of the stadium."
+    },
+    {
+      "quest_id": "AF-Q002",
+      "title": "Claude Ghost Sweep",
+      "quest_type": "Quarantine Run",
+      "status": "candidate_quest",
+      "canon_status": "not_canon",
+      "deployment_status": "inert",
+      "authority_scope": "none",
+      "proof_status": "not_a_proof",
+      "source": {
+        "source_surface": "github",
+        "source_locator": "https://github.com/atlaslattice/manus-artifacts/pull/166",
+        "source_title": "Aetherforge Top 10 Bounty Board — Obsidian Latticewake v0.1",
+        "raw_export_status": "partial",
+        "source_hash": "7b818c2d78e0f046918c784e73c0a5b0046860b7",
+        "source_rights_status": "needs_review"
+      },
+      "risk": {
+        "risk_level": "high",
+        "contamination_flags": [],
+        "overclaims_to_avoid": [
+          "model attribution laundering",
+          "never claim actual reward currency, deployed system or self-ratified canon"
+        ]
+      },
+      "classification": {
+        "artifact_type": "candidate",
+        "epistemic_label": "design_choice",
+        "review_state": "unreviewed"
+      },
+      "routing": {
+        "primary_lane": "CouncilBrain",
+        "secondary_lanes": [
+          "TIDELOCK",
+          "Lucerna",
+          "GPTBrain"
+        ],
+        "required_reviewers": [
+          "source_owner_or_rights_reviewer",
+          "human_root_if_consequential"
+        ]
+      },
+      "receipts": {
+        "receipt_requests": [
+          "attribution ledger + quarantined original pointers + independent review routes"
+        ],
+        "attached_receipts": []
+      },
+      "play": {
+        "player_role": "voluntary reviewer",
+        "boss_or_hazard": "model attribution laundering",
+        "win_condition": "a truthful candidate packet with visible holds",
+        "reward_type": "symbolic_gameplay_only",
+        "bounty_xp": 1500
+      },
+      "extraction": {
+        "useful_delta": "Identify wrongly attributed or unsupported historical artifacts without assuming source guilt",
+        "safe_rewrite": null,
+        "linked_issue": "https://github.com/atlaslattice/manus-artifacts/issues/211",
+        "proposed_next_action": "review source permissions, then carry out bounded quest separately"
+      },
+      "keeper_line": "Useful prose is not clean provenance."
+    },
+    {
+      "quest_id": "AF-Q003",
+      "title": "PR #166 Receipt Seal",
+      "quest_type": "Receipt Hunt",
+      "status": "candidate_quest",
+      "canon_status": "not_canon",
+      "deployment_status": "inert",
+      "authority_scope": "none",
+      "proof_status": "not_a_proof",
+      "source": {
+        "source_surface": "github",
+        "source_locator": "https://github.com/atlaslattice/manus-artifacts/pull/166",
+        "source_title": "Aetherforge Top 10 Bounty Board — Obsidian Latticewake v0.1",
+        "raw_export_status": "partial",
+        "source_hash": "7b818c2d78e0f046918c784e73c0a5b0046860b7",
+        "source_rights_status": "needs_review"
+      },
+      "risk": {
+        "risk_level": "medium",
+        "contamination_flags": [],
+        "overclaims_to_avoid": [
+          "confusing mergeability with authorization",
+          "never claim actual reward currency, deployed system or self-ratified canon"
+        ]
+      },
+      "classification": {
+        "artifact_type": "candidate",
+        "epistemic_label": "design_choice",
+        "review_state": "unreviewed"
+      },
+      "routing": {
+        "primary_lane": "TIDELOCK",
+        "secondary_lanes": [
+          "GPTBrain"
+        ],
+        "required_reviewers": [
+          "source_owner_or_rights_reviewer",
+          "human_root_if_consequential"
+        ]
+      },
+      "receipts": {
+        "receipt_requests": [
+          "exact file inventory + missing boundary register + PR review comment"
+        ],
+        "attached_receipts": []
+      },
+      "play": {
+        "player_role": "voluntary reviewer",
+        "boss_or_hazard": "confusing mergeability with authorization",
+        "win_condition": "a truthful candidate packet with visible holds",
+        "reward_type": "symbolic_gameplay_only",
+        "bounty_xp": 750
+      },
+      "extraction": {
+        "useful_delta": "Inspect PR #166 file coverage and provenance without declaring a merge ready",
+        "safe_rewrite": null,
+        "linked_issue": "https://github.com/atlaslattice/manus-artifacts/issues/212",
+        "proposed_next_action": "review source permissions, then carry out bounded quest separately"
+      },
+      "keeper_line": "A game lane is strongest when its boundaries are boring."
+    },
+    {
+      "quest_id": "AF-Q004",
+      "title": "Quest Packet Factory",
+      "quest_type": "Play System Build",
+      "status": "candidate_quest",
+      "canon_status": "not_canon",
+      "deployment_status": "inert",
+      "authority_scope": "none",
+      "proof_status": "not_a_proof",
+      "source": {
+        "source_surface": "github",
+        "source_locator": "https://github.com/atlaslattice/manus-artifacts/pull/166",
+        "source_title": "Aetherforge Top 10 Bounty Board — Obsidian Latticewake v0.1",
+        "raw_export_status": "partial",
+        "source_hash": "7b818c2d78e0f046918c784e73c0a5b0046860b7",
+        "source_rights_status": "needs_review"
+      },
+      "risk": {
+        "risk_level": "medium",
+        "contamination_flags": [],
+        "overclaims_to_avoid": [
+          "reward mechanics mistaken for currency or mandatory dispatch",
+          "never claim actual reward currency, deployed system or self-ratified canon"
+        ]
+      },
+      "classification": {
+        "artifact_type": "candidate",
+        "epistemic_label": "design_choice",
+        "review_state": "unreviewed"
+      },
+      "routing": {
+        "primary_lane": "GPTBrain",
+        "secondary_lanes": [
+          "CouncilBrain"
+        ],
+        "required_reviewers": [
+          "source_owner_or_rights_reviewer",
+          "human_root_if_consequential"
+        ]
+      },
+      "receipts": {
+        "receipt_requests": [
+          "ten unique cards + validation receipt + linked issue board"
+        ],
+        "attached_receipts": []
+      },
+      "play": {
+        "player_role": "voluntary reviewer",
+        "boss_or_hazard": "reward mechanics mistaken for currency or mandatory dispatch",
+        "win_condition": "a truthful candidate packet with visible holds",
+        "reward_type": "symbolic_gameplay_only",
+        "bounty_xp": 1000
+      },
+      "extraction": {
+        "useful_delta": "Produce ten source-labeled, voluntary starter quest packets",
+        "safe_rewrite": null,
+        "linked_issue": "https://github.com/atlaslattice/manus-artifacts/issues/213",
+        "proposed_next_action": "review source permissions, then carry out bounded quest separately"
+      },
+      "keeper_line": "A quest is won when the artifact becomes more truthful, not more impressive."
+    },
+    {
+      "quest_id": "AF-Q005",
+      "title": "Gamma Glamour Dispel",
+      "quest_type": "Presentation Drift Audit",
+      "status": "candidate_quest",
+      "canon_status": "not_canon",
+      "deployment_status": "inert",
+      "authority_scope": "none",
+      "proof_status": "not_a_proof",
+      "source": {
+        "source_surface": "github",
+        "source_locator": "https://github.com/atlaslattice/manus-artifacts/pull/166",
+        "source_title": "Aetherforge Top 10 Bounty Board — Obsidian Latticewake v0.1",
+        "raw_export_status": "partial",
+        "source_hash": "7b818c2d78e0f046918c784e73c0a5b0046860b7",
+        "source_rights_status": "needs_review"
+      },
+      "risk": {
+        "risk_level": "medium",
+        "contamination_flags": [],
+        "overclaims_to_avoid": [
+          "visual polish mistaken for factual or licensing proof",
+          "never claim actual reward currency, deployed system or self-ratified canon"
+        ]
+      },
+      "classification": {
+        "artifact_type": "candidate",
+        "epistemic_label": "design_choice",
+        "review_state": "unreviewed"
+      },
+      "routing": {
+        "primary_lane": "CouncilBrain",
+        "secondary_lanes": [
+          "GPTBrain",
+          "TIDELOCK"
+        ],
+        "required_reviewers": [
+          "source_owner_or_rights_reviewer",
+          "human_root_if_consequential"
+        ]
+      },
+      "receipts": {
+        "receipt_requests": [
+          "deck inventory + claim flags + candidate status banner"
+        ],
+        "attached_receipts": []
+      },
+      "play": {
+        "player_role": "voluntary reviewer",
+        "boss_or_hazard": "visual polish mistaken for factual or licensing proof",
+        "win_condition": "a truthful candidate packet with visible holds",
+        "reward_type": "symbolic_gameplay_only",
+        "bounty_xp": 750
+      },
+      "extraction": {
+        "useful_delta": "Check presentation claims against sources before external reuse",
+        "safe_rewrite": null,
+        "linked_issue": "https://github.com/atlaslattice/manus-artifacts/issues/214",
+        "proposed_next_action": "review source permissions, then carry out bounded quest separately"
+      },
+      "keeper_line": "A beautiful deck is not a verified claim."
+    },
+    {
+      "quest_id": "AF-Q006",
+      "title": "AtlasBrain Verification Arena",
+      "quest_type": "Verification Arena",
+      "status": "candidate_quest",
+      "canon_status": "not_canon",
+      "deployment_status": "inert",
+      "authority_scope": "none",
+      "proof_status": "not_a_proof",
+      "source": {
+        "source_surface": "github",
+        "source_locator": "https://github.com/atlaslattice/manus-artifacts/pull/166",
+        "source_title": "Aetherforge Top 10 Bounty Board — Obsidian Latticewake v0.1",
+        "raw_export_status": "partial",
+        "source_hash": "7b818c2d78e0f046918c784e73c0a5b0046860b7",
+        "source_rights_status": "needs_review"
+      },
+      "risk": {
+        "risk_level": "medium",
+        "contamination_flags": [],
+        "overclaims_to_avoid": [
+          "simulation represented as real AGI proof",
+          "never claim actual reward currency, deployed system or self-ratified canon"
+        ]
+      },
+      "classification": {
+        "artifact_type": "candidate",
+        "epistemic_label": "design_choice",
+        "review_state": "unreviewed"
+      },
+      "routing": {
+        "primary_lane": "AtlasBrain",
+        "secondary_lanes": [
+          "CouncilBrain",
+          "GPTBrain"
+        ],
+        "required_reviewers": [
+          "source_owner_or_rights_reviewer",
+          "human_root_if_consequential"
+        ]
+      },
+      "receipts": {
+        "receipt_requests": [
+          "raw status + prompt/model version + rerun plan + scoring rubric"
+        ],
+        "attached_receipts": []
+      },
+      "play": {
+        "player_role": "voluntary reviewer",
+        "boss_or_hazard": "simulation represented as real AGI proof",
+        "win_condition": "a truthful candidate packet with visible holds",
+        "reward_type": "symbolic_gameplay_only",
+        "bounty_xp": 1500
+      },
+      "extraction": {
+        "useful_delta": "Convert reported model-simulation wins into falsifiable verification-debt packets",
+        "safe_rewrite": null,
+        "linked_issue": "https://github.com/atlaslattice/manus-artifacts/issues/218",
+        "proposed_next_action": "review source permissions, then carry out bounded quest separately"
+      },
+      "keeper_line": "The run may be extraordinary. Verification decides what it means."
+    },
+    {
+      "quest_id": "AF-Q007",
+      "title": "Prime Gate Manifest Sketch",
+      "quest_type": "Canon Gate Trial",
+      "status": "candidate_quest",
+      "canon_status": "not_canon",
+      "deployment_status": "inert",
+      "authority_scope": "none",
+      "proof_status": "not_a_proof",
+      "source": {
+        "source_surface": "github",
+        "source_locator": "https://github.com/atlaslattice/manus-artifacts/pull/166",
+        "source_title": "Aetherforge Top 10 Bounty Board — Obsidian Latticewake v0.1",
+        "raw_export_status": "partial",
+        "source_hash": "7b818c2d78e0f046918c784e73c0a5b0046860b7",
+        "source_rights_status": "needs_review"
+      },
+      "risk": {
+        "risk_level": "high",
+        "contamination_flags": [],
+        "overclaims_to_avoid": [
+          "manifest accidentally claiming canon or controlling the host",
+          "never claim actual reward currency, deployed system or self-ratified canon"
+        ]
+      },
+      "classification": {
+        "artifact_type": "candidate",
+        "epistemic_label": "design_choice",
+        "review_state": "unreviewed"
+      },
+      "routing": {
+        "primary_lane": "Human-root",
+        "secondary_lanes": [
+          "CouncilBrain",
+          "TIDELOCK"
+        ],
+        "required_reviewers": [
+          "source_owner_or_rights_reviewer",
+          "human_root_if_consequential"
+        ]
+      },
+      "receipts": {
+        "receipt_requests": [
+          "candidate canon/invariants/doctrines/hash field lists with status disclaimer"
+        ],
+        "attached_receipts": []
+      },
+      "play": {
+        "player_role": "voluntary reviewer",
+        "boss_or_hazard": "manifest accidentally claiming canon or controlling the host",
+        "win_condition": "a truthful candidate packet with visible holds",
+        "reward_type": "symbolic_gameplay_only",
+        "bounty_xp": 1250
+      },
+      "extraction": {
+        "useful_delta": "Draft a portable candidate manifest with independent ratification boundaries",
+        "safe_rewrite": null,
+        "linked_issue": "https://github.com/atlaslattice/manus-artifacts/issues/219",
+        "proposed_next_action": "review source permissions, then carry out bounded quest separately"
+      },
+      "keeper_line": "The scoreboard must be visible before the play can be reviewed."
+    },
+    {
+      "quest_id": "AF-Q008",
+      "title": "Search Fog Clearing",
+      "quest_type": "Source Root Registry",
+      "status": "candidate_quest",
+      "canon_status": "not_canon",
+      "deployment_status": "inert",
+      "authority_scope": "none",
+      "proof_status": "not_a_proof",
+      "source": {
+        "source_surface": "github",
+        "source_locator": "https://github.com/atlaslattice/manus-artifacts/pull/166",
+        "source_title": "Aetherforge Top 10 Bounty Board — Obsidian Latticewake v0.1",
+        "raw_export_status": "partial",
+        "source_hash": "7b818c2d78e0f046918c784e73c0a5b0046860b7",
+        "source_rights_status": "needs_review"
+      },
+      "risk": {
+        "risk_level": "medium",
+        "contamination_flags": [],
+        "overclaims_to_avoid": [
+          "search snippet treated as complete source",
+          "never claim actual reward currency, deployed system or self-ratified canon"
+        ]
+      },
+      "classification": {
+        "artifact_type": "candidate",
+        "epistemic_label": "design_choice",
+        "review_state": "unreviewed"
+      },
+      "routing": {
+        "primary_lane": "Rootglass",
+        "secondary_lanes": [
+          "Lucerna",
+          "GPTBrain"
+        ],
+        "required_reviewers": [
+          "source_owner_or_rights_reviewer",
+          "human_root_if_consequential"
+        ]
+      },
+      "receipts": {
+        "receipt_requests": [
+          "root registry candidate + raw-export state + crawl permissions"
+        ],
+        "attached_receipts": []
+      },
+      "play": {
+        "player_role": "voluntary reviewer",
+        "boss_or_hazard": "search snippet treated as complete source",
+        "win_condition": "a truthful candidate packet with visible holds",
+        "reward_type": "symbolic_gameplay_only",
+        "bounty_xp": 1000
+      },
+      "extraction": {
+        "useful_delta": "Separate search hits from full accessible source exports and manifests",
+        "safe_rewrite": null,
+        "linked_issue": "https://github.com/atlaslattice/manus-artifacts/issues/222",
+        "proposed_next_action": "review source permissions, then carry out bounded quest separately"
+      },
+      "keeper_line": "A search hit is a doorway, not the room."
+    },
+    {
+      "quest_id": "AF-Q009",
+      "title": "False Officiality Boss Fight",
+      "quest_type": "Source-Claim Audit",
+      "status": "candidate_quest",
+      "canon_status": "not_canon",
+      "deployment_status": "inert",
+      "authority_scope": "none",
+      "proof_status": "not_a_proof",
+      "source": {
+        "source_surface": "github",
+        "source_locator": "https://github.com/atlaslattice/manus-artifacts/pull/166",
+        "source_title": "Aetherforge Top 10 Bounty Board — Obsidian Latticewake v0.1",
+        "raw_export_status": "partial",
+        "source_hash": "7b818c2d78e0f046918c784e73c0a5b0046860b7",
+        "source_rights_status": "needs_review"
+      },
+      "risk": {
+        "risk_level": "high",
+        "contamination_flags": [],
+        "overclaims_to_avoid": [
+          "unverified officiality and commercial claims",
+          "never claim actual reward currency, deployed system or self-ratified canon"
+        ]
+      },
+      "classification": {
+        "artifact_type": "candidate",
+        "epistemic_label": "design_choice",
+        "review_state": "unreviewed"
+      },
+      "routing": {
+        "primary_lane": "CouncilBrain",
+        "secondary_lanes": [
+          "TIDELOCK",
+          "AtlasBrain"
+        ],
+        "required_reviewers": [
+          "source_owner_or_rights_reviewer",
+          "human_root_if_consequential"
+        ]
+      },
+      "receipts": {
+        "receipt_requests": [
+          "high-risk ledger + safe wording + external verification queue"
+        ],
+        "attached_receipts": []
+      },
+      "play": {
+        "player_role": "voluntary reviewer",
+        "boss_or_hazard": "unverified officiality and commercial claims",
+        "win_condition": "a truthful candidate packet with visible holds",
+        "reward_type": "symbolic_gameplay_only",
+        "bounty_xp": 1250
+      },
+      "extraction": {
+        "useful_delta": "Flag money, partnership, diplomatic and official-platform claims lacking dated evidence",
+        "safe_rewrite": null,
+        "linked_issue": "https://github.com/atlaslattice/manus-artifacts/issues/224",
+        "proposed_next_action": "review source permissions, then carry out bounded quest separately"
+      },
+      "keeper_line": "Big claims need bigger receipts."
+    },
+    {
+      "quest_id": "AF-Q010",
+      "title": "Aetherforge Quarantine Run",
+      "quest_type": "Vertical Slice",
+      "status": "candidate_quest",
+      "canon_status": "not_canon",
+      "deployment_status": "inert",
+      "authority_scope": "none",
+      "proof_status": "not_a_proof",
+      "source": {
+        "source_surface": "github",
+        "source_locator": "https://github.com/atlaslattice/manus-artifacts/pull/166",
+        "source_title": "Aetherforge Top 10 Bounty Board — Obsidian Latticewake v0.1",
+        "raw_export_status": "partial",
+        "source_hash": "7b818c2d78e0f046918c784e73c0a5b0046860b7",
+        "source_rights_status": "needs_review"
+      },
+      "risk": {
+        "risk_level": "medium",
+        "contamination_flags": [],
+        "overclaims_to_avoid": [
+          "private artifact copying or automatic promotion from Play to Work",
+          "never claim actual reward currency, deployed system or self-ratified canon"
+        ]
+      },
+      "classification": {
+        "artifact_type": "candidate",
+        "epistemic_label": "design_choice",
+        "review_state": "unreviewed"
+      },
+      "routing": {
+        "primary_lane": "GPTBrain",
+        "secondary_lanes": [
+          "CouncilBrain",
+          "TIDELOCK",
+          "Human-root"
+        ],
+        "required_reviewers": [
+          "source_owner_or_rights_reviewer",
+          "human_root_if_consequential"
+        ]
+      },
+      "receipts": {
+        "receipt_requests": [
+          "player role + hazard steps + synthetic evidence + victory screen + candidate GitHub packet"
+        ],
+        "attached_receipts": []
+      },
+      "play": {
+        "player_role": "voluntary reviewer",
+        "boss_or_hazard": "private artifact copying or automatic promotion from Play to Work",
+        "win_condition": "a truthful candidate packet with visible holds",
+        "reward_type": "symbolic_gameplay_only",
+        "bounty_xp": 2000
+      },
+      "extraction": {
+        "useful_delta": "Design a fictional safe-play vertical slice around one synthetic contaminated artifact",
+        "safe_rewrite": null,
+        "linked_issue": "https://github.com/atlaslattice/manus-artifacts/issues/225",
+        "proposed_next_action": "review source permissions, then carry out bounded quest separately"
+      },
+      "keeper_line": "The first mechanic is knowing what not to claim."
+    }
+  ]
+}
