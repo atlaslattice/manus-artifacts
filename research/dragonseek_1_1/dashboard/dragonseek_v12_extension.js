@@ -13,7 +13,22 @@ const FEED_V12=[
 ];
 function precisionV12(p){if(!p)return 'UNKNOWN';if(p.relation==='CENSORED_LEFT')return '< '+p.limit+' '+p.unit+' (below detection)';if(p.relation==='CENSORED_RIGHT')return '> '+p.limit+' '+p.unit+' (above range)';return String(p.value??'UNKNOWN')+' '+(p.unit||'')+' ± '+(p.uncertainty??'UNKNOWN')}
 function receiptV12(text){return crypto.subtle.digest('SHA-256',new TextEncoder().encode(text)).then(b=>Array.from(new Uint8Array(b),n=>n.toString(16).padStart(2,'0')).join(''))}
-function verifiedUSGSV12(f){const p=f&&f.properties,c=f&&f.geometry&&f.geometry.coordinates;return f&&typeof f.id==='string'&&f.geometry.type==='Point'&&p&&Number.isFinite(p.mag)&&Number.isFinite(p.time)&&Number.isFinite(p.updated)&&Array.isArray(c)&&Number.isFinite(c[0])&&Number.isFinite(c[1])&&Math.abs(c[0])<=180&&Math.abs(c[1])<=90}
+function verifiedUSGSV12(f){
+ const g=f?.geometry,p=f?.properties,c=g?.coordinates;
+ const validTime=t=>Number.isFinite(t)&&Number.isFinite(new Date(t).getTime());
+ return Boolean(f?.type==='Feature'&&typeof f.id==='string'&&f.id.trim()&&g?.type==='Point'&&p&&Number.isFinite(p.mag)&&validTime(p.time)&&validTime(p.updated)&&Array.isArray(c)&&Number.isFinite(c[0])&&Number.isFinite(c[1])&&Math.abs(c[0])<=180&&Math.abs(c[1])<=90&&(p.place==null||typeof p.place==='string'));
+}
+function validatedFeaturesV12(data){
+ if(data?.type!=='FeatureCollection'||!Array.isArray(data.features))throw Error('Malformed USGS payload');
+ // An empty valid collection is distinct from a malformed nonempty collection.
+ // Reject the entire update rather than silently advertising partial data as fresh.
+ const ids=new Set();
+ for(const feature of data.features){
+  if(!verifiedUSGSV12(feature)||ids.has(feature.id))throw Error('Malformed or duplicate USGS feature');
+  ids.add(feature.id);
+ }
+ return data.features;
+}
 function displayRealV12(){
  const host=$('usgsEventRowsV12'),layer=$('usgsOverlayV12');if(!host||!layer)return;host.replaceChildren();layer.replaceChildren();
  const inArea=USGS_V12.events.filter(e=>e.lon>=72&&e.lon<=151&&e.lat>=0&&e.lat<=56);
@@ -44,9 +59,9 @@ async function fetchUSGSV12(){
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),12000);
  try{
  const response=await fetch(USGS_V12_URL,{signal:controller.signal,cache:'no-store'});if(!response.ok)throw Error('HTTP '+response.status);
- const txt=await response.text(),data=JSON.parse(txt);if(data.type!=='FeatureCollection'||!Array.isArray(data.features))throw Error('Malformed USGS payload');
+ const txt=await response.text(),data=JSON.parse(txt),features=validatedFeaturesV12(data);
  const hash=await receiptV12(txt);
- const events=data.features.filter(verifiedUSGSV12).map(f=>({id:f.id,lon:f.geometry.coordinates[0],lat:f.geometry.coordinates[1],mag:f.properties.mag,time:f.properties.time,label:'M'+f.properties.mag+' · '+(f.properties.place||'unknown'),url:typeof f.properties.url==='string'&&f.properties.url.startsWith('https://earthquake.usgs.gov/')?f.properties.url:'https://earthquake.usgs.gov/'}));
+ const events=features.map(f=>({id:f.id,lon:f.geometry.coordinates[0],lat:f.geometry.coordinates[1],mag:f.properties.mag,time:f.properties.time,label:'M'+f.properties.mag+' · '+(f.properties.place||'unknown'),url:typeof f.properties.url==='string'&&f.properties.url.startsWith('https://earthquake.usgs.gov/')?f.properties.url:'https://earthquake.usgs.gov/'}));
  USGS_V12.events=events;USGS_V12.hash=hash;USGS_V12.last_success=new Date().toISOString();USGS_V12.status='CONNECTED_READONLY';USGS_V12.last_error=null;displayRealV12();
  btn.textContent='Refresh USGS';$('usgsErrorV12').textContent='Retrieved '+data.features.length+' features, accepted '+events.length+'. Rolling feed changes over time.';
  }catch(error){USGS_V12.last_error=String(error);USGS_V12.status=USGS_V12.last_success?'STALE':'ERROR';$('usgsErrorV12').textContent='Fetch failed: '+USGS_V12.last_error;btn.textContent='Retry USGS';}
